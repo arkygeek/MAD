@@ -25,7 +25,8 @@ FORMS    += mamainform.ui \
     maaddmodel.ui \
     mafileparser.ui
 
-OTHER_FILES +=
+OTHER_FILES += \
+    settings.pro
 
 RESOURCES += \
     macsuradapter.qrc
