@@ -32,7 +32,7 @@ DESIGNER=false
 ALLOW_EXPERIMENTAL=true
 #whether to use to qgis mapping component
 #at the moment it only builds on linux & windows :-(
-#USE_QGIS=true #changed from true by JJ for MA
+USE_QGIS=false #changed from true by JJ for MA
 #linux-g++:USE_QGIS=true
 
 ##################################################################
@@ -231,15 +231,15 @@ macx{
   #fixme should not need the next line
   #INCLUDEPATH += /Users/timsutton/dev/cpp/om/src
   FRAMEWORKSDIR=$${DESTDIR}/$${APP_NAME}.app/Contents/Frameworks
-  message (Checking if $${FRAMEWORKSDIR}/gdal.framework/gdal exists)
-  exists( $${FRAMEWORKSDIR}/gdal.framework/gdal )
-  {
-    message(Gdal framework already in the bundle...skipping copy)
-  }else{
-   system(mkdir -p $${FRAMEWORKSDIR})
-    system(cp -RP /Library/Frameworks/gdal.framework $${FRAMEWORKSDIR}/)
-    message(Gdal framework copied into the bundle)
-  }
+  #message (Checking if $${FRAMEWORKSDIR}/gdal.framework/gdal exists)
+  #exists( $${FRAMEWORKSDIR}/gdal.framework/gdal )
+  #{
+  #  message(Gdal framework already in the bundle...skipping copy)
+  #}else{
+  system(mkdir -p $${FRAMEWORKSDIR})
+  #  system(cp -RP /Library/Frameworks/gdal.framework $${FRAMEWORKSDIR}/)
+  #  message(Gdal framework copied into the bundle)
+  #}
   system(cp mac/Info.plist $${DESTDIR}/bin/$${APP_NAME}.app/Contents)
 }
 
