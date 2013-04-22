@@ -13,15 +13,15 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        mamainform.cpp \
+        gui/mamainform.cpp \
 
-HEADERS  += mamainform.h \
+HEADERS  += gui/mamainform.h \
 
-FORMS    += mamainformbase.ui \
+FORMS    += ui/mamainformbase.ui \
 
 OTHER_FILES += \
     settings.pro \
-    codingStandards.pdf
+    docs/codingStandards.pdf
 
 RESOURCES += \
-    macsuradapter.qrc
+    resources/macsuradapter.qrc
