@@ -41,15 +41,18 @@ QT += gui core
 #INCLUDEPATH += ../lib
 #################################################################
 
-FORMS += ../ui/mamainformbase.ui \
+FORMS += mamainformbase.ui \
+    mafileinputmanagerbase.ui
 
 HEADERS += mamainform.h \
+    mafileinputmanager.h
 
 SOURCES += main.cpp \
            mamainform.cpp \
+    mafileinputmanager.cpp
 
 CONFIG += warn_on
 
-INCLUDEPATH += ../ui/
+#INCLUDEPATH += ../ui/
 
 
