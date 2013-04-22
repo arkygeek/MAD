@@ -18,63 +18,27 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-
 #include "mamainform.h"
-#include "ui_mamainform.h"
+#include "ui_mamainformbase.h"
 
-// Qt includes
-#include <QFile>
-#include <QTextStream>
-
-
-mamainform::mamainform(QWidget *parent) :
+MaMainForm::MaMainForm(QWidget *parent) :
     QMainWindow(parent),
-    ui(new Ui::mamainform)
+    ui(new Ui::MaMainForm)
 {
     ui->setupUi(this);
-    loadTextFile();
 }
 
-mamainform::~mamainform()
+MaMainForm::~MaMainForm()
 {
     delete ui;
 }
 
-void mamainform::changeEvent(QEvent *e)
+void MaMainForm::on_actionQuit_triggered()
 {
-    QMainWindow::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        ui->retranslateUi(this);
-        break;
-    default:
-        break;
-    }
+    exit(0);
 }
 
-void mamainform::on_findButton_clicked()
- {
-     QString searchString = ui->lineEdit->text();
-     ui->textEdit->find(searchString, QTextDocument::FindWholeWords);
- }
-void mamainform::loadTextFile()
- {
-     QFile inputFile(":/input.txt");
-     inputFile.open(QIODevice::ReadOnly);
-
-     QTextStream in(&inputFile);
-     QString line = in.readAll();
-     inputFile.close();
-
-     ui->textEdit->setPlainText(line);
-     QTextCursor cursor = ui->textEdit->textCursor();
-     cursor.movePosition(QTextCursor::Start, QTextCursor::MoveAnchor, 1);
- }
-
-
-
-
-void mamainform::on_checkBox_2_clicked()
+void MaMainForm::on_actionInput_File_triggered()
 {
 
 }

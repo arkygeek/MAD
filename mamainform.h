@@ -25,28 +25,24 @@
 #include <QMainWindow>
 
 namespace Ui {
-class mamainform;
+class MaMainForm;
 }
 
-class mamainform : public QMainWindow
+class MaMainForm : public QMainWindow
 {
     Q_OBJECT
-    
-public:
-    explicit mamainform(QWidget *parent = 0);
-    ~mamainform();
-    
-protected:
-    void changeEvent(QEvent *e);
-    
-private slots:
-    void on_findButton_clicked();
 
-    void on_checkBox_2_clicked();
+public:
+    explicit MaMainForm(QWidget *parent = 0);
+    ~MaMainForm();
+
+private slots:
+    void on_actionQuit_triggered();
+
+    void on_actionInput_File_triggered();
 
 private:
-    Ui::mamainform *ui;
-    void loadTextFile();
+    Ui::MaMainForm *ui;
 };
 
 #endif // MAMAINFORM_H

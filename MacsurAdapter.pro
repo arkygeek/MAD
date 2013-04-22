@@ -14,16 +14,10 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         mamainform.cpp \
-    maaddmodel.cpp \
-    mafileparser.cpp
 
 HEADERS  += mamainform.h \
-    maaddmodel.h \
-    mafileparser.h
 
-FORMS    += mamainform.ui \
-    maaddmodel.ui \
-    mafileparser.ui
+FORMS    += mamainformbase.ui \
 
 OTHER_FILES += \
     settings.pro \
