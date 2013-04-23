@@ -42,17 +42,13 @@ QT += gui core
 #################################################################
 
 FORMS += mamainformbase.ui \
-    mafileinputmanagerbase.ui
 
 HEADERS += mamainform.h \
-    mafileinputmanager.h
 
 SOURCES += main.cpp \
            mamainform.cpp \
-    mafileinputmanager.cpp
 
 CONFIG += warn_on
 
-#INCLUDEPATH += ../ui/
 
 

@@ -1,11 +1,11 @@
 #################################################################
 #
 #              QMAKE Project File for Macsur Adapter
-# 
+#
 #                     Jason Jorgenson 2013
-#      A version of this file was originally put together by 
-#          Tim Sutton in 2006 for use with Landuse Analyst 
-#                 
+#      A version of this file was originally put together by
+#          Tim Sutton in 2006 for use with Landuse Analyst
+#
 #
 #################################################################
 message(******************** settings.pro ***********************)
@@ -27,7 +27,7 @@ TESTS=false
 CONSOLE=false
 #whether to build the qt designer plugins
 DESIGNER=false
-#whether to show experimental features to the user (set to true to hide 
+#whether to show experimental features to the user (set to true to hide
 #experimental features when making a release
 ALLOW_EXPERIMENTAL=true
 #whether to use to qgis mapping component
@@ -46,7 +46,7 @@ USE_QGIS=false #changed from true by JJ for MA
 #create both debug and relase makefiles
 #CONFIG += debug_and_release
 #build both release and debug targets when make is run
-#CONFIG += build_all 
+#CONFIG += build_all
 
 #
 # Building release only version
@@ -64,7 +64,7 @@ CONFIG += release
 ## General compilation settings and defines
 ##
 #################################################################
-CONFIG += warn_off 
+CONFIG += warn_off
 LANGUAGE  = C++
 CONFIG += exceptions
 # Require that there are no undefined symbols in any libs!
@@ -82,9 +82,9 @@ QT += widgets
 # Where binary exes and libs should be placed when built
 CONFIG(debug, debug|release){
   message(DEBUG?       : yes)
-  # for ifdefs in code that should run only 
+  # for ifdefs in code that should run only
   # when debug support is enabled
-  DEBUGMODE=true 
+  DEBUGMODE=true
   DEFINES += $${APP_NAME}DEBUG=1
   APP_NAME=$${APP_NAME}-debug
   win32:CONFIG+=console
@@ -134,7 +134,7 @@ message(PLUGINDIR : $${PLUGINDIR})
 #  QGISCORELIBADD=$$member(QGISCORELIBADD, 0)-debug
 #}
 
-#not currently used since I had to incorporate composer into gui lib due to 
+#not currently used since I had to incorporate composer into gui lib due to
 #cyclical dependency issues
 #QGISCOMPOSERLIBADD=-lqgis_composer
 #CONFIG(debug, debug|release){
@@ -182,7 +182,7 @@ macx:LIBS+=-L/usr/local/lib
 #  macx:QGISSRCDIR=/Users/timsutton/dev/cpp/qgis/src
 #  linux-g++:QGISSRCDIR=/home/timlinux/dev/cpp/qgis/src
 #  win32:QGISSRCDIR=c:/dev/cpp/qgis/src
-  
+
 #  unix:INCLUDEPATH += $${QGISDIR}/include/qgis
 #  win32:INCLUDEPATH += $${QGISSRCDIR}
 #  win32:INCLUDEPATH += c:/mingw/include
@@ -195,25 +195,25 @@ macx:LIBS+=-L/usr/local/lib
 #}
 
 #
-#   windows platform (MinGW) 
+#   windows platform (MinGW)
 #
 
 win32{
   message(Installing for windows!)
-  INCLUDEPATH += . 
+  INCLUDEPATH += .
   INCLUDEPATH += C:/msys/local/include
 }
-INCLUDEPATH += $${OBJDIR}/ui 
+INCLUDEPATH += $${OBJDIR}/ui
 
 #################################################################
 #
-#   windows platform (MinGW) 
+#   windows platform (MinGW)
 #
 #################################################################
 
 win32{
   message(Installing for windows!)
-  #add any win specific rules here 
+  #add any win specific rules here
   INCLUDEPATH += c:/msys/local/include
   GEOSINCADD = c:/msys/local/include/geos
   #PYTHONINCLUDE =  c:/Python25/include
@@ -231,15 +231,15 @@ macx{
   #fixme should not need the next line
   #INCLUDEPATH += /Users/timsutton/dev/cpp/om/src
   FRAMEWORKSDIR=$${DESTDIR}/$${APP_NAME}.app/Contents/Frameworks
-  #message (Checking if $${FRAMEWORKSDIR}/gdal.framework/gdal exists)
-  #exists( $${FRAMEWORKSDIR}/gdal.framework/gdal )
-  #{
-  #  message(Gdal framework already in the bundle...skipping copy)
-  #}else{
-  system(mkdir -p $${FRAMEWORKSDIR})
-  #  system(cp -RP /Library/Frameworks/gdal.framework $${FRAMEWORKSDIR}/)
-  #  message(Gdal framework copied into the bundle)
-  #}
+  message (Checking if $${FRAMEWORKSDIR}/gdal.framework/gdal exists)
+  exists( $${FRAMEWORKSDIR}/gdal.framework/gdal )
+  {
+    message(Gdal framework already in the bundle...skipping copy)
+  }else{
+   system(mkdir -p $${FRAMEWORKSDIR})
+    system(cp -RP /Library/Frameworks/gdal.framework $${FRAMEWORKSDIR}/)
+    message(Gdal framework copied into the bundle)
+  }
   system(cp mac/Info.plist $${DESTDIR}/bin/$${APP_NAME}.app/Contents)
 }
 
