@@ -72,7 +72,7 @@ QMAKE_LFLAGS_SHLIB *= --no-undefined
 #clear all qt modules - each pro should specify exactly which qt modules it wants
 QT =
 QT  += core gui
-QT += widgets
+#QT += widgets
 #################################################################
 ##
 ## Destination dir

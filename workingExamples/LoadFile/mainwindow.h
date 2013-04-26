@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  mafileinputmanager.h created: 23/04/2013                                    *
- *   Class info: MaFileInputManager                                               *
+ *   File:  mainwindow.h created: 24/04/2013                                    *
+ *   Class info: MainWindow                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,28 +19,44 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MAFILEINPUTMANAGER_H
-#define MAFILEINPUTMANAGER_H
+#ifndef MAINWINDOW_H
+#define MAINWINDOW_H
 
-#include <QtGui/QWidget>
+#include <QtGui>
+#include <QMainWindow>
+#include <QFileDialog>
+#include <newformclass.h>
 
 namespace Ui {
-class MaFileInputManager;
+class MainWindow;
 }
 
-class MaFileInputManager : public QWidget
+class MainWindow : public QMainWindow
 {
     Q_OBJECT
     
 public:
-    explicit MaFileInputManager(QWidget *parent = 0);
-    ~MaFileInputManager();
+    explicit MainWindow(QWidget *parent = 0);
+    ~MainWindow();
     
 protected:
     void changeEvent(QEvent *e);
     
+private slots:
+
+    void on_pbSelectFile_clicked();
+
+
+    void on_pbLoadFile_clicked();
+
+    void on_pbOpenDialog_clicked();
+
+
 private:
-    Ui::MaFileInputManager *ui;
+    Ui::MainWindow *ui;
+    NewFormClass * ptr;
 };
 
-#endif // MAFILEINPUTMANAGER_H
+#endif // MAINWINDOW_H
+
+

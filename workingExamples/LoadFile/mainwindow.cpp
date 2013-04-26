@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  mafileinputmanager.cpp created: 23/04/2013                                    *
- *   Class info: MaFileInputManager                                               *
+ *   File:  mainwindow.cpp created: 24/04/2013                                    *
+ *   Class info: MainWindow                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,24 +19,26 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#include "mafileinputmanager.h"
-#include "ui_mafileinputmanagerbase.h"
+#include "mainwindow.h"
+#include "ui_mainwindow.h"
+#include <QFileDialog>
+#include <QFile>
 
-MaFileInputManager::MaFileInputManager(QWidget *parent) :
-    QWidget(parent),
-    ui(new Ui::MaFileInputManager)
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
 }
 
-MaFileInputManager::~MaFileInputManager()
+MainWindow::~MainWindow()
 {
     delete ui;
 }
 
-void MaFileInputManager::changeEvent(QEvent *e)
+void MainWindow::changeEvent(QEvent *e)
 {
-    QWidget::changeEvent(e);
+    QMainWindow::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
         ui->retranslateUi(this);
@@ -44,4 +46,39 @@ void MaFileInputManager::changeEvent(QEvent *e)
     default:
         break;
     }
+}
+
+void MainWindow::on_pbSelectFile_clicked()
+{
+    QString filters("Music (*.mp3);;Text (*.txt);;All (*.*)");
+        QString defaultFilter("Text (*.txt)");
+
+        /* Static method approach */
+        QString myFileName = QFileDialog::getOpenFileName
+                (0, "Save file", QDir::currentPath(),
+                filters, &defaultFilter);
+        ui->ledFileToLoad->setText(myFileName);
+}
+
+
+
+void MainWindow::on_pbLoadFile_clicked()
+{
+    QString myFileToLoad = ui->ledFileToLoad->text();
+    QFile myInputFile(myFileToLoad);
+    myInputFile.open(QIODevice::ReadOnly);
+    QTextStream in(&myInputFile);
+    QString myLine = in.readAll();
+    myInputFile.close();
+
+    ui->tedDisplaysFile->setText(myLine);
+
+}
+
+
+
+void MainWindow::on_pbOpenDialog_clicked()
+{
+    ptr = new NewFormClass;
+    ptr->show();
 }

@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  mafileinputmanager.h created: 23/04/2013                                    *
- *   Class info: MaFileInputManager                                               *
+ *   File:  newformclass.h created: 24/04/2013                                    *
+ *   Class info: NewFormClass                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,28 +19,28 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MAFILEINPUTMANAGER_H
-#define MAFILEINPUTMANAGER_H
+#ifndef NEWFORMCLASS_H
+#define NEWFORMCLASS_H
 
 #include <QtGui/QWidget>
 
 namespace Ui {
-class MaFileInputManager;
+class NewFormClass;
 }
 
-class MaFileInputManager : public QWidget
+class NewFormClass : public QWidget
 {
     Q_OBJECT
     
 public:
-    explicit MaFileInputManager(QWidget *parent = 0);
-    ~MaFileInputManager();
+    explicit NewFormClass(QWidget *parent = 0);
+    ~NewFormClass();
     
 protected:
     void changeEvent(QEvent *e);
     
 private:
-    Ui::MaFileInputManager *ui;
+    Ui::NewFormClass *ui;
 };
 
-#endif // MAFILEINPUTMANAGER_H
+#endif // NEWFORMCLASS_H

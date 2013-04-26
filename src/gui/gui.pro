@@ -36,17 +36,20 @@ message("Building $${TARGET} (exe) into $${DESTDIR}")
 RESOURCES = ../resources/macsuradapter.qrc
 
 #QT += network
-QT += gui core
+#QT += gui core
 
 #INCLUDEPATH += ../lib
 #################################################################
 
-FORMS += mamainformbase.ui \
+FORMS   +=  mamainformbase.ui \
+#    mafileinputmanagerbase.ui \
 
-HEADERS += mamainform.h \
+HEADERS +=  mamainform.h \
+#    mafileinputmanager.h \
 
-SOURCES += main.cpp \
-           mamainform.cpp \
+SOURCES +=  main.cpp \
+            mamainform.cpp \
+#    mafileinputmanager.cpp \
 
 CONFIG += warn_on
 
