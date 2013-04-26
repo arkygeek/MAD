@@ -1,0 +1,6 @@
+QFile file("import.csv");
+if (!file.open(QIODevice::ReadOnly | QIODevice::Text)){
+	qDebug()<< "cannot read file!";     
+}
+CSV csv(&file);
+qDebug() << csv.parseLine();
