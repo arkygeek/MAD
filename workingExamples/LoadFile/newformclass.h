@@ -37,7 +37,6 @@ public:
     ~NewFormClass();
     
 protected:
-    void changeEvent(QEvent *e);
     
 private:
     Ui::NewFormClass *mUi;

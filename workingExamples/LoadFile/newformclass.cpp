@@ -34,14 +34,3 @@ NewFormClass::~NewFormClass()
     delete mUi;
 }
 
-void NewFormClass::changeEvent(QEvent *e)
-{
-    QWidget::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        mUi->retranslateUi(this);
-        break;
-    default:
-        break;
-    }
-}

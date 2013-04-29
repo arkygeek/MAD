@@ -40,7 +40,6 @@ public:
     ~MainWindow();
     
 protected:
-    void changeEvent(QEvent *e);
     
 private slots:
 

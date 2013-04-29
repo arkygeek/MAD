@@ -36,18 +36,6 @@ MainWindow::~MainWindow()
     delete mpUi;
 }
 
-void MainWindow::changeEvent(QEvent *thepChange)
-{
-    QMainWindow::changeEvent(thepChange);
-    switch (thepChange->type()) {
-    case QEvent::LanguageChange:
-        mpUi->retranslateUi(this);
-        break;
-    default:
-        break;
-    }
-}
-
 void MainWindow::on_pbSelectFile_clicked()
 {
     QString filters("Music (*.mp3);;Text (*.txt);;All (*.*)");
