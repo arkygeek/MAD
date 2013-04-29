@@ -24,24 +24,24 @@
 #include <QFileDialog>
 #include <QFile>
 
-MainWindow::MainWindow(QWidget *parent) :
-    QMainWindow(parent),
-    ui(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *thepParent) :
+    QMainWindow(thepParent),
+    mpUi(new Ui::MainWindow)
 {
-    ui->setupUi(this);
+    mpUi->setupUi(this);
 }
 
 MainWindow::~MainWindow()
 {
-    delete ui;
+    delete mpUi;
 }
 
-void MainWindow::changeEvent(QEvent *e)
+void MainWindow::changeEvent(QEvent *thepChange)
 {
-    QMainWindow::changeEvent(e);
-    switch (e->type()) {
+    QMainWindow::changeEvent(thepChange);
+    switch (thepChange->type()) {
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
+        mpUi->retranslateUi(this);
         break;
     default:
         break;
@@ -57,28 +57,27 @@ void MainWindow::on_pbSelectFile_clicked()
         QString myFileName = QFileDialog::getOpenFileName
                 (0, "Save file", QDir::currentPath(),
                 filters, &defaultFilter);
-        ui->ledFileToLoad->setText(myFileName);
+        mpUi->ledFileToLoad->setText(myFileName);
 }
 
 
 
 void MainWindow::on_pbLoadFile_clicked()
 {
-    QString myFileToLoad = ui->ledFileToLoad->text();
+    QString myFileToLoad = mpUi->ledFileToLoad->text();
     QFile myInputFile(myFileToLoad);
     myInputFile.open(QIODevice::ReadOnly);
     QTextStream in(&myInputFile);
     QString myLine = in.readAll();
     myInputFile.close();
 
-    ui->tedDisplaysFile->setText(myLine);
-
+    mpUi->tedDisplaysFile->setText(myLine);
 }
 
 
 
 void MainWindow::on_pbOpenDialog_clicked()
 {
-    ptr = new NewFormClass;
-    ptr->show();
+    mpNewForm = new NewFormClass;
+    mpNewForm->show();
 }

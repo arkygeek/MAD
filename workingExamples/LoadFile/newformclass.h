@@ -40,7 +40,7 @@ protected:
     void changeEvent(QEvent *e);
     
 private:
-    Ui::NewFormClass *ui;
+    Ui::NewFormClass *mUi;
 };
 
 #endif // NEWFORMCLASS_H

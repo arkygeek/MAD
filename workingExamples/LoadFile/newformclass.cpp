@@ -24,14 +24,14 @@
 
 NewFormClass::NewFormClass(QWidget *parent) :
     QWidget(parent),
-    ui(new Ui::NewFormClass)
+    mUi(new Ui::NewFormClass)
 {
-    ui->setupUi(this);
+    mUi->setupUi(this);
 }
 
 NewFormClass::~NewFormClass()
 {
-    delete ui;
+    delete mUi;
 }
 
 void NewFormClass::changeEvent(QEvent *e)
@@ -39,7 +39,7 @@ void NewFormClass::changeEvent(QEvent *e)
     QWidget::changeEvent(e);
     switch (e->type()) {
     case QEvent::LanguageChange:
-        ui->retranslateUi(this);
+        mUi->retranslateUi(this);
         break;
     default:
         break;

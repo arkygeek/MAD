@@ -53,8 +53,8 @@ private slots:
 
 
 private:
-    Ui::MainWindow *ui;
-    NewFormClass * ptr;
+    Ui::MainWindow *mpUi;
+    NewFormClass *mpNewForm;
 };
 
 #endif // MAINWINDOW_H
