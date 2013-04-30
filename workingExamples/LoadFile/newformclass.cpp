@@ -35,3 +35,9 @@ NewFormClass::~NewFormClass()
     delete mUi;
 }
 
+void NewFormClass::processText()
+{
+    QString text = mainWindow->textEdit()->toPlainText();
+//    mUi->twidDisplaysText->
+    mUi->teDisplaysText->setText(text);
+}

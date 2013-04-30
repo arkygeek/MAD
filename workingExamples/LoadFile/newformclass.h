@@ -37,10 +37,13 @@ class NewFormClass : public QWidget
 public:
     explicit NewFormClass(QWidget *parent = 0);
     ~NewFormClass();
-    const QString& getText(QWidget *parent, const QString & myLine);
+    QMainWindow* mainWindow();
     
 protected:
     
+private slots:
+    void processText();
+
 private:
     Ui::NewFormClass *mUi;
 };

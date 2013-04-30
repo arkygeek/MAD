@@ -27,6 +27,7 @@
 #include <QFileDialog>
 #include <newformclass.h>
 #include <QLabel>
+#include <QTextEdit>
 
 namespace Ui {
 class MainWindow;
@@ -39,9 +40,10 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+     QTextEdit* textEdit();
 
-public slots:
-    void setTextValue(const QString& myLine);
+//public slots:
+//    void setTextValue(const QString& myLine);
     
 protected:
     

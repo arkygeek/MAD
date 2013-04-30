@@ -69,3 +69,8 @@ void MainWindow::on_pbOpenDialog_clicked()
     mpNewForm = new NewFormClass;
     mpNewForm->show();
 }
+
+QTextEdit* MainWindow::textEdit()
+{
+    return mpUi->tedDisplaysFile;
+}
