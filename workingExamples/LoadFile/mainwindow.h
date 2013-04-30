@@ -26,6 +26,7 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <newformclass.h>
+#include <QLabel>
 
 namespace Ui {
 class MainWindow;
@@ -38,13 +39,15 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
+
+public slots:
+    void setTextValue(const QString& myLine);
     
 protected:
     
 private slots:
 
     void on_pbSelectFile_clicked();
-
 
     void on_pbLoadFile_clicked();
 

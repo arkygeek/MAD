@@ -27,6 +27,7 @@ NewFormClass::NewFormClass(QWidget *parent) :
     mUi(new Ui::NewFormClass)
 {
     mUi->setupUi(this);
+    mUi->twidDisplaysText->getText(myLine);
 }
 
 NewFormClass::~NewFormClass()

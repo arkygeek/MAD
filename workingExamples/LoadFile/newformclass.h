@@ -22,7 +22,9 @@
 #ifndef NEWFORMCLASS_H
 #define NEWFORMCLASS_H
 
-#include <QtGui/QWidget>
+#include <QtGui>
+#include <QWidget>
+#include <QInputDialog>
 
 namespace Ui {
 class NewFormClass;
@@ -35,6 +37,7 @@ class NewFormClass : public QWidget
 public:
     explicit NewFormClass(QWidget *parent = 0);
     ~NewFormClass();
+    const QString& getText(QWidget *parent, const QString & myLine);
     
 protected:
     
