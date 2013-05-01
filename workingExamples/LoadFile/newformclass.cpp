@@ -24,20 +24,17 @@
 
 NewFormClass::NewFormClass(QWidget *parent) :
     QWidget(parent),
-    mUi(new Ui::NewFormClass)
+    ui(new Ui::NewFormClass)
 {
-    mUi->setupUi(this);
-    mUi->twidDisplaysText->getText(myLine);
+    ui->setupUi(this);
 }
 
 NewFormClass::~NewFormClass()
 {
-    delete mUi;
+    delete ui;
 }
 
-void NewFormClass::processText()
+void NewFormClass::setText(const QString &t)
 {
-    QString text = mainWindow->textEdit()->toPlainText();
-//    mUi->twidDisplaysText->
-    mUi->teDisplaysText->setText(text);
+    ui->tedDisplaysNewText->setText(t);
 }

@@ -24,16 +24,17 @@
 #include <QFileDialog>
 #include <QFile>
 
-MainWindow::MainWindow(QWidget *thepParent) :
-    QMainWindow(thepParent),
-    mpUi(new Ui::MainWindow)
+MainWindow::MainWindow(QWidget *parent) :
+    QMainWindow(parent),
+    ui(new Ui::MainWindow)
 {
-    mpUi->setupUi(this);
+    ui->setupUi(this);
+    form = new NewFormClass(this);
 }
 
 MainWindow::~MainWindow()
 {
-    delete mpUi;
+    delete ui;
 }
 
 void MainWindow::on_pbSelectFile_clicked()
@@ -45,32 +46,27 @@ void MainWindow::on_pbSelectFile_clicked()
         QString myFileName = QFileDialog::getOpenFileName
                 (0, "Save file", QDir::currentPath(),
                 filters, &defaultFilter);
-        mpUi->ledFileToLoad->setText(myFileName);
+        ui->ledFileToLoad->setText(myFileName);
 }
 
 
 
 void MainWindow::on_pbLoadFile_clicked()
 {
-    QString myFileToLoad = mpUi->ledFileToLoad->text();
+    QString myFileToLoad = ui->ledFileToLoad->text();
     QFile myInputFile(myFileToLoad);
     myInputFile.open(QIODevice::ReadOnly);
     QTextStream in(&myInputFile);
     QString myLine = in.readAll();
     myInputFile.close();
 
-    mpUi->tedDisplaysFile->setText(myLine);
+    ui->tedDisplaysFile->setText(myLine);
 }
 
 
 
 void MainWindow::on_pbOpenDialog_clicked()
 {
-    mpNewForm = new NewFormClass;
-    mpNewForm->show();
-}
-
-QTextEdit* MainWindow::textEdit()
-{
-    return mpUi->tedDisplaysFile;
+    form->setText(ui->centralWidget->QWidget.);
+    form->setVisible(true);
 }

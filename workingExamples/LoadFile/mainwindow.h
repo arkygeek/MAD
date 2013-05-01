@@ -26,8 +26,6 @@
 #include <QMainWindow>
 #include <QFileDialog>
 #include <newformclass.h>
-#include <QLabel>
-#include <QTextEdit>
 
 namespace Ui {
 class MainWindow;
@@ -40,25 +38,17 @@ class MainWindow : public QMainWindow
 public:
     explicit MainWindow(QWidget *parent = 0);
     ~MainWindow();
-     QTextEdit* textEdit();
-
-//public slots:
-//    void setTextValue(const QString& myLine);
     
 protected:
     
 private slots:
-
     void on_pbSelectFile_clicked();
-
     void on_pbLoadFile_clicked();
-
     void on_pbOpenDialog_clicked();
 
-
 private:
-    Ui::MainWindow *mpUi;
-    NewFormClass *mpNewForm;
+    Ui::MainWindow *ui;
+    NewFormClass* form;
 };
 
 #endif // MAINWINDOW_H
