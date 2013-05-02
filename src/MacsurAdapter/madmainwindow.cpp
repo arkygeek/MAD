@@ -18,7 +18,12 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
+//Qt includes
+#include <QModelIndex>
+#include <QDebug>
+#include <QTreeView>
 
+//Local includes
 #include "madmainwindow.h"
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
@@ -38,3 +43,13 @@ void MadMainWindow::changeEvent(QEvent *e)
         break;
     }
 }
+
+void MadMainWindow::on_trvwCurrentInventory_clicked(const QModelIndex &index)
+{
+    qDebug() << index; //the tree viewer was clicked
+}
+
+//void MadMainWindow::loadModels(MadModelMap *theModelMap);
+//{
+  //
+//}

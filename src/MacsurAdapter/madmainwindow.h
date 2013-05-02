@@ -22,17 +22,54 @@
 #ifndef MADMAINWINDOW_H
 #define MADMAINWINDOW_H
 
+//Qt includes
+#include <QModelIndex>
+
+
+//Local includes
 #include "ui_madmainwindowbase.h"
+
+/**
+ * This is the main GUI class
+ * @author Jason Jorgenson
+ */
 
 class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
 {
-    Q_OBJECT
-    
-public:
+  Q_OBJECT
+  public:
+  /**
+   * This is the main form GUI of MAD (Macsur ADapter)
+   * It sets up the required slot connections
+   * and initialises the GUI
+   * @param parent
+   */
     explicit MadMainWindow(QWidget *parent = 0);
-    
-protected:
+
+  public slots:
+    // examples listed below
+    // void on_checkBox_clicked(bool theBool)
+    // void on_pushButton_clicked();
+    /**
+     * @brief loadModels
+     * Refreshes the list of known models
+     */
+    //void loadModels();
+
+  protected:
+    /**
+     * @brief changeEvent for translations in the future
+     * @param e
+     */
     void changeEvent(QEvent *e);
+
+  private slots:
+    /**
+     * @brief on_trvwCurrentInventory_clicked
+     * triggers loading of model details for display
+     * @param index
+     */
+    void on_trvwCurrentInventory_clicked(const QModelIndex &index);
 };
 
 #endif // MADMAINWINDOW_H
