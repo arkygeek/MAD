@@ -18,6 +18,7 @@ SOURCES += main.cpp\
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
-    lib/mad.h
+    lib/mad.h \
+    lib/version.h
 
 FORMS    += madmainwindowbase.ui
