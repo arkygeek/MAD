@@ -35,6 +35,7 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
 
 }
 
+
 void MadMainWindow::changeEvent(QEvent *e)
 {
     QMainWindow::changeEvent(e);
