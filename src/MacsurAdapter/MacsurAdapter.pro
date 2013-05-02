@@ -13,8 +13,11 @@ TEMPLATE = app
 
 
 SOURCES += main.cpp\
-        madmainwindow.cpp
+        madmainwindow.cpp \
+    lib/madmodel.cpp
 
-HEADERS  += madmainwindow.h
+HEADERS  += madmainwindow.h \
+    lib/madmodel.h \
+    lib/mad.h
 
 FORMS    += madmainwindowbase.ui
