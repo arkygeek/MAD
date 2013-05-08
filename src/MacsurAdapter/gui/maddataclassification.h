@@ -35,6 +35,7 @@ protected:
     void changeEvent(QEvent *e);
 private slots:
     void on_groupBox_clicked();
+    void on_cbExamples_currentIndexChanged(const QString &arg1);
 };
 
 #endif // MADDATACLASSIFICATION_H

@@ -26,6 +26,7 @@
 //Local includes
 #include "madmainwindow.h"
 #include "lib/madversion.h"
+#include "gui/maddataclassification.h"
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -61,3 +62,11 @@ void MadMainWindow::on_trvwCurrentInventory_clicked(const QModelIndex &index)
 //{
   //
 //}
+
+void MadMainWindow::on_pbClassification_clicked()
+{
+    // launch classification form
+    MadDataClassification myMadDataClassification;
+    myMadDataClassification.setModal(true);
+    myMadDataClassification.exec();
+}

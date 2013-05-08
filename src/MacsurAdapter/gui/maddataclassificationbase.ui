@@ -372,9 +372,16 @@
        <widget class="QSpinBox" name="sbTillage"/>
       </item>
       <item row="0" column="2">
-       <widget class="QLabel" name="label">
+       <widget class="QLabel" name="lblLayers">
         <property name="text">
          <string>Layers</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblExample">
+        <property name="text">
+         <string>Example</string>
         </property>
        </widget>
       </item>
@@ -392,6 +399,44 @@
      <property name="text">
       <string>Display example of:</string>
      </property>
+    </widget>
+    <widget class="QComboBox" name="cbExamples">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>560</x>
+       <y>40</y>
+       <width>111</width>
+       <height>26</height>
+      </rect>
+     </property>
+     <item>
+      <property name="text">
+       <string>Examples</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Platinum</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Gold</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Silver</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Bronze</string>
+      </property>
+     </item>
     </widget>
    </widget>
    <widget class="QWidget" name="tabPhenology">
@@ -429,39 +474,6 @@
      <string>State Vars</string>
     </attribute>
    </widget>
-  </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="enabled">
-    <bool>true</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>240</x>
-     <y>430</y>
-     <width>111</width>
-     <height>26</height>
-    </rect>
-   </property>
-   <item>
-    <property name="text">
-     <string>Platinum</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Gold</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Silver</string>
-    </property>
-   </item>
-   <item>
-    <property name="text">
-     <string>Bronze</string>
-    </property>
-   </item>
   </widget>
  </widget>
  <resources/>

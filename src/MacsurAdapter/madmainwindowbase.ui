@@ -15,10 +15,10 @@
   </property>
   <widget class="QWidget" name="centralWidget">
    <layout class="QGridLayout" name="gridLayout_2">
-    <item row="1" column="0">
+    <item row="0" column="0" colspan="2">
      <widget class="QTabWidget" name="tabwidMainWin">
       <property name="currentIndex">
-       <number>0</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="tabMain">
        <attribute name="title">
@@ -330,6 +330,19 @@
           <string>Other</string>
          </property>
         </item>
+       </widget>
+       <widget class="QPushButton" name="pbClassification">
+        <property name="geometry">
+         <rect>
+          <x>90</x>
+          <y>120</y>
+          <width>114</width>
+          <height>32</height>
+         </rect>
+        </property>
+        <property name="text">
+         <string>Classification</string>
+        </property>
        </widget>
       </widget>
      </widget>

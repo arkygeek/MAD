@@ -70,6 +70,7 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
      * @param index
      */
     void on_trvwCurrentInventory_clicked(const QModelIndex &index);
+    void on_pbClassification_clicked();
 };
 
 #endif // MADMAINWINDOW_H

@@ -25,6 +25,10 @@ MadDataClassification::MadDataClassification(QWidget *parent) :
     QDialog(parent)
 {
     setupUi(this);
+    groupBox->setChecked(false);
+    cbExamples->setEnabled(true);
+    lblExample->setVisible(true);
+    lblExample->setText("Select Example");
 }
 
 void MadDataClassification::changeEvent(QEvent *e)
@@ -46,10 +50,26 @@ void MadDataClassification::on_groupBox_clicked()
 
     if (groupBox->isChecked())
     {
-        comboBox->setDisabled(true);
+        lblExample->setVisible(false);
+        cbExamples->setDisabled(true);
     }
     else
     {
-        comboBox->setEnabled(true);
+        cbExamples->setEnabled(true);
+        lblExample->setVisible(true);
+    }
+}
+
+void MadDataClassification::on_cbExamples_currentIndexChanged(const QString &arg1)
+{
+    // if enabled, set values for corresponding classification
+    // options are: Platinum, Gold, Silver, Bronze
+    if (cbExamples->currentText()!="Examples")
+    {
+        lblExample->setText(arg1);
+    }
+    else
+    {
+        lblExample->setText("Select Example");
     }
 }
