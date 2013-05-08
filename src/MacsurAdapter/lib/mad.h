@@ -19,6 +19,10 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
+/**
+ * @file mad.h
+ */
+
 #ifndef MAD_H
 #define MAD_H
 
@@ -43,7 +47,6 @@ typedef QPair <QPair<QString,QString>, QPair<QString,QString> > MadModelInfo;
  */
 typedef QMap < QString, MADModel > MadModelMap;
 //typedef QMap <QString,QPair<QString,float> > MadReportMap;
-
 /**
  * @brief The ModelTheme enum
  */
@@ -68,5 +71,9 @@ enum FileType {CSV, TAB, OtherDelimited, Binary};
  * @brief The EnergyType enum
  */
 enum EnergyType {KCalories, TDN};
+/**
+ * @brief The DataClass enum
+ */
+enum DataClass {Platinum, Gold, Silver, Bronze};
 
 #endif // MAD_H

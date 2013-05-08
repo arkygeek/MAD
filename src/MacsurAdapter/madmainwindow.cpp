@@ -65,8 +65,12 @@ void MadMainWindow::on_trvwCurrentInventory_clicked(const QModelIndex &index)
 
 void MadMainWindow::on_pbClassification_clicked()
 {
-    // launch classification form
-    MadDataClassification myMadDataClassification;
-    myMadDataClassification.setModal(true);
-    myMadDataClassification.exec();
+    // launch classification form (modal method)
+    //MadDataClassification myMadDataClassification;
+    //myMadDataClassification.setModal(true);
+    //myMadDataClassification.exec();
+
+    // launch classification form (modal-less method)
+    pMadDataClassification = new MadDataClassification(this);
+    pMadDataClassification->show();
 }

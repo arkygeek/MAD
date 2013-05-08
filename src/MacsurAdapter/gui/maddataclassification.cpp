@@ -19,7 +19,11 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
+//Qt includes
+
+//Local includes
 #include "maddataclassification.h"
+#include "lib/mad.h"
 
 MadDataClassification::MadDataClassification(QWidget *parent) :
     QDialog(parent)
@@ -72,4 +76,25 @@ void MadDataClassification::on_cbExamples_currentIndexChanged(const QString &arg
     {
         lblExample->setText("Select Example");
     }
+
+    // I want to make it work somethig like this, but can't remember how
+    //
+    /*DataClass myDataClass = cbExamples->currentText();
+    switch (myDataClass) {
+    case Platinum:
+        lblExample->setText("Platinum");
+        break;
+    case Gold:
+        lblExample->setText("Gold");
+        break;
+    case Silver:
+        lblExample->setText("Silver");
+        break;
+    case Bronze:
+        lblExample->setText("Bronze");
+        break;
+    default:
+        lblExample->setText("Select Example");
+        break;
+    }*/
 }

@@ -21,6 +21,7 @@
 
 #ifndef MADMAINWINDOW_H
 #define MADMAINWINDOW_H
+#include "gui/maddataclassification.h" //this is only needed if non-modal
 
 //Qt includes
 #include <QModelIndex>
@@ -45,6 +46,9 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
    * @param parent
    */
     explicit MadMainWindow(QWidget *parent = 0);
+
+  private:
+    MadDataClassification *pMadDataClassification;
 
   public slots:
     // examples listed below
