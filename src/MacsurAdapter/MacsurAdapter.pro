@@ -14,11 +14,16 @@ TEMPLATE = app
 
 SOURCES += main.cpp\
         madmainwindow.cpp \
-    lib/madmodel.cpp
+    lib/madmodel.cpp \
+    lib/madutils.cpp \
+    gui/maddataclassification.cpp
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
     lib/mad.h \
-    lib/version.h
+    lib/madutils.h \
+    gui/maddataclassification.h \
+    lib/madversion.h
 
-FORMS    += madmainwindowbase.ui
+FORMS    += madmainwindowbase.ui \
+    gui/maddataclassificationbase.ui \

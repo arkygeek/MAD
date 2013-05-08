@@ -18,9 +18,21 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-
-#include "madmainwindow.h"
+//Qt includes
 #include <QApplication>
+
+/*  Local includes
+ *
+ ***********
+ *  NOTE!  *
+ **************************************************************
+ *  you must specify the relative path if not located in src  *
+ *  example:  #include "./gui/theHeader.h"                    *
+ **************************************************************/
+#include "madmainwindow.h"
+#include "./lib/madmodel.h"
+#include "./lib/mad.h"
+#include "./lib/madversion.h"
 
 int main(int argc, char *argv[])
 {

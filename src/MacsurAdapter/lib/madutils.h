@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madmainwindow.cpp created: 01/05/2013                                    *
- *   Class info: MadMainWindow                                               *
+ *   File:  madutils.h created: 06/05/2013                                    *
+ *   Class info: MadUtils                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -18,46 +18,14 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
-//Qt includes
-#include <QModelIndex>
-#include <QDebug>
-#include <QTreeView>
 
-//Local includes
-#include "madmainwindow.h"
-#include "lib/madversion.h"
+#ifndef MADUTILS_H
+#define MADUTILS_H
 
-MadMainWindow::MadMainWindow(QWidget *parent) :
-    QMainWindow(parent)
+class MadUtils
 {
-    setupUi(this);
-    lblVersion->setText(
-                         QString("Version: %1").arg(VERSION)
-                         + " "
-                         + QString("$Revision: 34 $").replace("$","")
-                       );
+public:
+    MadUtils();
+};
 
-}
-
-
-void MadMainWindow::changeEvent(QEvent *e)
-{
-    QMainWindow::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        retranslateUi(this);
-        break;
-    default:
-        break;
-    }
-}
-
-void MadMainWindow::on_trvwCurrentInventory_clicked(const QModelIndex &index)
-{
-    qDebug() << index; //the tree viewer was clicked
-}
-
-//void MadMainWindow::loadModels(MadModelMap *theModelMap);
-//{
-  //
-//}
+#endif // MADUTILS_H

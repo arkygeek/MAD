@@ -28,7 +28,7 @@
 #include <QString>
 
 //Local includes
-#include <madmodel.h>
+#include <./lib/madmodel.h>
 
 /**
  * @brief MadTripleMap

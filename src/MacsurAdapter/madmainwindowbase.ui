@@ -64,7 +64,7 @@
             <item>
              <widget class="QLabel" name="lblVersion">
               <property name="text">
-               <string>TextLabel</string>
+               <string>Version Label</string>
               </property>
               <property name="alignment">
                <set>Qt::AlignCenter</set>
