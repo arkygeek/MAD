@@ -32,6 +32,8 @@ class QStringList;
 //QtIncludes
 #include <QHash>
 #include <QMap>
+#include <QString>
+#include <QStringList>
 
 
 
@@ -105,6 +107,12 @@ public:
      **/
     static MadUtils::ModelMap getAvailableModels();
 
+    /**
+     * @brief getModel
+     * Get a MadModel given its GUID.
+     * If no matching model is found, a blank one is
+     * returned.
+     */
     static MadModel getModel(QString theGuid);
 
     /** @brief sortList
@@ -154,7 +162,17 @@ public:
      */
     static QString getStandardCss();
 
-    QString openGraphicsFile();
+    /**
+        * Find the place on the filesystem where user created
+        * conversion tables in csv format are stored
+        *
+        * Typically this will be ~/.landuseAnalyst/conversionTables
+        *
+        * @return QString containing the relevant directory name
+        */
+       static const QString userConversionTablesDirPath();
+
+    QString openGraphicFile();
     QString saveFile();
 
 private:

@@ -1,3 +1,13 @@
+// based on code from:
+/***************************************************************************
+                          lacrop.h  -  A crop class
+                             -------------------
+    begin                : March 2006
+    copyright            : (C) 2003 by Tim Sutton  tim@linfiniti.com
+                         :     2007 by Jason Jorgenson  arkygeek@gmail.com
+ ***************************************************************************/
+
+
 /***************************************************************************
  *   File:  madmodel.h created: 02/05/2013                                    *
  *   Class info: MADModel                                               *
@@ -28,10 +38,104 @@
 // forward declarations
 class QString;
 
-class MadModel
+//Local includes
+#include "madserialisable.h"
+#include "madguid.h"
+#include "mad.h"
+
+//Qt includes
+#include <QString>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDebug>
+
+
+/**
+ * @brief The MadModel class, to represent a ModelTheme
+ */
+class MadModel : public MadSerialisable, public MadGuid
 {
 public:
+    /** Constructor . */
     MadModel();
+    /** Desctructor . */
+    //~LaCrop();
+    /** copy constructor */
+    MadModel(const MadModel& theModel);
+    /** Assignement operator */
+    MadModel& operator= (const MadModel& theModel);
+
+      //
+      // Accessors
+      //
+
+    /** The name of this crop */
+    QString name() const;
+    /** The description of this crop */
+    QString description() const;
+
+    /** All production levels based on either Kg/Dunum or Kg/Hectare
+     *  0==Dunum 1==Hectare
+     */
+    //AreaUnits areaUnits() const;
+
+    /** The image file associated with the model */
+    QString imageFile() const;
+
+
+    //
+    // Mutators
+    //
+
+  /** Set the modelName
+   * @see name()
+   */
+  void setName(QString theName);
+
+  /** Set the model description
+   * @see description()
+   */
+  void setDescription(QString theDescription);
+
+  /** Set the image file
+   * @see imageFile()
+   */
+  void setImageFile(QString theImageFileName);
+
+  /** Return an xml representation of this layer
+   * @NOTE this class inherits the serialisable interface so
+   * it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @NOTE this class inherits the serialisable interface so
+   * it MUST implement this
+   */
+  bool fromXml(const QString theXml);
+
+
+
+private:
+  /** The name for this model */
+  QString mName;
+
+  /** The description for this model */
+  QString mDescription;
+  QString mImageFile;
+
+
 };
 
 #endif // MADMODEL_H
+

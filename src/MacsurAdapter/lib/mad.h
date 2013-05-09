@@ -32,7 +32,7 @@
 #include <QString>
 
 //Local includes
-#include <./lib/madmodel.h>
+#include "madmodel.h"
 
 /**
  * @brief MadTripleMap
@@ -45,7 +45,7 @@ typedef QPair <QPair<QString,QString>, QPair<QString,QString> > MadModelInfo;
 /**
  * @brief MadModelMap
  */
-typedef QMap < QString, MadModel > MadModelMap;
+//typedef QMap < QString, MadModel > MadModelMap;
 //typedef QMap <QString,QPair<QString,float> > MadReportMap;
 /**
  * @brief The ModelTheme enum
