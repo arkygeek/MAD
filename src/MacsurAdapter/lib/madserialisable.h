@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  maddataclassification.h created: 08/05/2013                    *
- *   Class info: MadDataClassification                                     *
+ *   File:  madserialisable.h created: 09/05/2013                                    *
+ *   Class info: MadSerialisable                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,31 +19,13 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MADDATACLASSIFICATION_H
-#define MADDATACLASSIFICATION_H
+#ifndef MADSERIALISABLE_H
+#define MADSERIALISABLE_H
 
-#include "ui_maddataclassificationbase.h"
-
-class MadDataClassification : public QDialog, private Ui::MadDataClassification
+class MadSerialisable
 {
-    Q_OBJECT
-    
 public:
-    explicit MadDataClassification(QWidget *parent = 0);
-    
-protected:
-    void changeEvent(QEvent *e);
-private slots:
-    void on_groupBox_clicked();
-    void on_cbExamples_currentIndexChanged(const QString &theValue);
-    void on_hsldrVariety_valueChanged(int theSliderValue);
-    void on_hsldrSowing_valueChanged(int theSliderValue);
-    void on_hsldrHarvest_valueChanged(int theSliderValue);
-    void on_hsldrFertilisation_valueChanged(int theSliderValue);
-    void on_hsldrIrrigation_valueChanged(int theSliderValue);
-    void on_hsldrSeedDensity_valueChanged(int theSliderValue);
-    void on_hsldrYield_valueChanged(int theSliderValue);
-    void on_hsldrTillage_valueChanged(int theSliderValue);
+    MadSerialisable();
 };
 
-#endif // MADDATACLASSIFICATION_H
+#endif // MADSERIALISABLE_H

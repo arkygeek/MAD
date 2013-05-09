@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  maddataclassification.h created: 08/05/2013                    *
- *   Class info: MadDataClassification                                     *
+ *   File:  madguid.h created: 09/05/2013                                  *
+ *   Class info: MadGuid                                                   *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,31 +19,34 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MADDATACLASSIFICATION_H
-#define MADDATACLASSIFICATION_H
+#ifndef MADGUID_H
+#define MADGUID_H
 
-#include "ui_maddataclassificationbase.h"
+#include <QString>
 
-class MadDataClassification : public QDialog, private Ui::MadDataClassification
+/**
+ * @brief The MadGuid class
+ * An abstract base class that has a Globally Unique Identifier (GUID)
+ * to represent a unique instance
+ */
+class MadGuid
 {
-    Q_OBJECT
-    
 public:
-    explicit MadDataClassification(QWidget *parent = 0);
-    
-protected:
-    void changeEvent(QEvent *e);
-private slots:
-    void on_groupBox_clicked();
-    void on_cbExamples_currentIndexChanged(const QString &theValue);
-    void on_hsldrVariety_valueChanged(int theSliderValue);
-    void on_hsldrSowing_valueChanged(int theSliderValue);
-    void on_hsldrHarvest_valueChanged(int theSliderValue);
-    void on_hsldrFertilisation_valueChanged(int theSliderValue);
-    void on_hsldrIrrigation_valueChanged(int theSliderValue);
-    void on_hsldrSeedDensity_valueChanged(int theSliderValue);
-    void on_hsldrYield_valueChanged(int theSliderValue);
-    void on_hsldrTillage_valueChanged(int theSliderValue);
+    /**   Constructor  */
+    MadGuid();
+
+    /**   Destructor   */
+    //virtual ~MadGuid(); //throws a compiler error
+
+    /** Retrieve the GUID */
+    QString guid() const;
+
+    void setGuid(QString theGuid="");
+
+private:
+    /**  A Globally Unique IDentifier (GUID) for this model */
+    QString mGuid;
+
 };
 
-#endif // MADDATACLASSIFICATION_H
+#endif // MADGUID_H

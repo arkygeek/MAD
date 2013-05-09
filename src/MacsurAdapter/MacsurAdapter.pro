@@ -16,14 +16,20 @@ SOURCES += main.cpp\
         madmainwindow.cpp \
     lib/madmodel.cpp \
     lib/madutils.cpp \
-    gui/maddataclassification.cpp
+    gui/maddataclassification.cpp \
+    lib/maddata.cpp \
+    lib/madserialisable.cpp \
+    lib/madguid.cpp
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
     lib/mad.h \
     lib/madutils.h \
     gui/maddataclassification.h \
-    lib/madversion.h
+    lib/madversion.h \
+    lib/maddata.h \
+    lib/madserialisable.h \
+    lib/madguid.h
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \

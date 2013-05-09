@@ -18,6 +18,7 @@
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
+#include <iomanip>
 
 //Qt includes
 
@@ -64,13 +65,14 @@ void MadDataClassification::on_groupBox_clicked()
     }
 }
 
-void MadDataClassification::on_cbExamples_currentIndexChanged(const QString &arg1)
+void MadDataClassification::on_cbExamples_currentIndexChanged
+     (const QString &theValue)
 {
     // if enabled, set values for corresponding classification
     // options are: Platinum, Gold, Silver, Bronze
     if (cbExamples->currentText()!="Examples")
     {
-        lblExample->setText(arg1);
+        lblExample->setText(theValue);
     }
     else
     {
@@ -79,7 +81,7 @@ void MadDataClassification::on_cbExamples_currentIndexChanged(const QString &arg
 
     // I want to make it work somethig like this, but can't remember how
     //
-    /*DataClass myDataClass = cbExamples->currentText();
+    /*DataClass myDataClass = (cbExamples->currentText());
     switch (myDataClass) {
     case Platinum:
         lblExample->setText("Platinum");
@@ -97,4 +99,92 @@ void MadDataClassification::on_cbExamples_currentIndexChanged(const QString &arg
         lblExample->setText("Select Example");
         break;
     }*/
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrVariety_valueChanged
+ * update label according to desired resolution
+ * hardcoded for now at a range of 1 to 5
+ * default values for slider range set in form at 0 to 1000
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
+{
+    // update label according to desired resolution
+    // hardcoded for now at a range of 1 to 5
+    // slider goes from 0 to 1000
+
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    lblVarietyWeight->setText(QString::number((myPreciseValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrSowing_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblSowingWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrHarvest_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblHarvestWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrFertilisation_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblFertilisationWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrIrrigation_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblIrrigationWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrSeedDensity_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblSeedDensityWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrYield_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblYieldWeight->setText(QString::number((myValue)));
+}
+
+/**
+ * @brief MadDataClassification::on_hsldrTillage_valueChanged
+ * @param theSliderValue
+ */
+void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
+{
+    int myValue = theSliderValue/200;
+    lblTillageWeight->setText(QString::number((myValue)));
 }
