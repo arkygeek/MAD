@@ -200,8 +200,8 @@ QString MadUtils::saveFile()
 
 const QString MadUtils::userConversionTablesDirPath()
 {
-    // always saved in the users home dir under .landuseAnalyst/
-  QString myPath = QDir::homePath() + QString("/.landuseAnalyst/") +
+    // always saved in the users home dir under .macsurAdapter/
+  QString myPath = QDir::homePath() + QString("/.macsurAdapter/") +
     QDir::separator()+"conversionTables"+QDir::separator();
   QDir().mkpath(myPath);
   return myPath;

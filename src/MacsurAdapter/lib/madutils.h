@@ -166,7 +166,7 @@ public:
         * Find the place on the filesystem where user created
         * conversion tables in csv format are stored
         *
-        * Typically this will be ~/.landuseAnalyst/conversionTables
+        * Typically this will be ~/.macsurAdapter/conversionTables
         *
         * @return QString containing the relevant directory name
         */
