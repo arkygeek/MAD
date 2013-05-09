@@ -42,6 +42,10 @@ QString MadGuid::guid() const
     return mGuid;
 }
 
+/**
+ * @brief MadGuid::setGuid
+ * @param theGuid
+ */
 void MadGuid::setGuid(QString theGuid)
 {
     if (theGuid.isEmpty())

@@ -22,10 +22,143 @@
 #ifndef MADUTILS_H
 #define MADUTILS_H
 
+class QString;
+class QStringList;
+
+//Local includes
+#include "mad.h"
+#include "madmodel.h"
+
+//QtIncludes
+#include <QHash>
+#include <QMap>
+
+
+
 class MadUtils
 {
 public:
     MadUtils();
+    /** @brief userSettingsDirPath
+     * Find the place on the filesystem where user data is stored
+     *
+     * Typically, this will be ~/.macsurAdapter
+     *
+     * @return QString containing the relevant directory name
+     */
+    static const QString userSettingsDirPath();
+
+    /** @brief uerModelProfilesDirPath
+     * Find the place on the filesystem where user defined model
+     * profiles are stored.
+     *
+     * Typically this will be ~/.macsurAdapter/modelProfiles
+     *
+     * @return QString containing the relevant directory name
+     */
+    static const QString userModelProfilesDirPath();
+
+    /**
+     * @brief userModelParametersDirPath
+     * Find the place on the filesystem where user defined model
+     * parameter profiles are stored.
+     *
+     * Typically this will be ~/.macsurAdapter/animalParameters
+     *
+     * @return QString containing the relevant directory name
+     */
+    static const QString userModelParametersDirPath();
+
+    /**
+     * @brief getModelOutputDir
+     * Get the place where model outputs are to be stored.
+     * By default this is in ~/.macsurAdapter/modelOutputs
+     * But if modelOutputsDir is specified in QSettings, it will override
+     * the default.
+     */
+    static const QString getModelOutputDir();
+
+    /**
+     * @brief userImagesDirPath
+     * Find the place on the filesystem where user images
+     * are stored.
+     *
+     * Typically this will be ~/.macsurAdapter/images
+     *
+     * @return QString containing the relevant directory name
+     */
+    static const QString userImagesDirPath();
+
+    /**
+     * @brief ModelMap (typedef)
+     * This typedef is used to refer to a collection of layersets.
+     * the key is the layerset name
+     * the value is the layerset itself
+     */
+    typedef QMap<QString,MadModel> ModelMap;
+
+    /**
+     * @brief getAvailableModels
+     * Get a QMap of the avaliable layersets in the users layersets directory
+     * @return a QMap<QString,OmgLayerSet> where
+     * the QString key is the layerset name
+     **/
+    static MadUtils::ModelMap getAvailableModels();
+
+    static MadModel getModel(QString theGuid);
+
+    /** @brief sortList
+     * Sort a string list into descending alphabetic order
+     * and return the result.
+     * @param theList - the QStringList to be sorted
+     * @return QStringList - sorted in descending alphabetical order
+     */
+    static QStringList sortList(QStringList theList);
+
+    /** @brief uniqueList
+     * Remove any duplucate entries from a sorted list
+     * @param theList - the QStringList to be sorted
+     * @return QStringList - a list with no sequential duplicates
+     */
+    static QStringList uniqueList(QStringList theList);
+
+    /** @brief createTextFile
+     * A helper method to easily write a file to disk.
+     * @param theFileName - the filename to be created or overwritten
+     * @param theData - the data that will be written into the file
+     * @return bool - false if the file could not be written
+     */
+    static bool createTextFile(QString theFileName, QString theData);
+
+    /** @brief xmlEncode
+     * A helper method to xml encode any special chars in a string
+     * (< > & etc) will become (&lt; &gt; &amp; etc)
+     * @param QString - the string to be properly encoded
+     * @return A QString with the special chars properly encoded
+     */
+    static QString xmlEncode(QString theString);
+
+    /** @brief xmlDecode
+     * A helper method to xml deencode any special chars in a string
+     * (&lt; &gt; &amp; etc) will become (< > & etc)
+     * @param QString - the string to be properly decoded
+     * @return A QString with the encoded chars properly decoded
+     */
+    static QString xmlDecode(QString theString);
+
+    /** @brief getStandardCss
+     * Get the standard style sheet for reports. Typically this will be
+     * used like this:
+     * QString myStyle = getStandardCss();
+     * textBrowserFoo->document()->setDefaultStylesheet(myStyle);
+     */
+    static QString getStandardCss();
+
+    QString openGraphicsFile();
+    QString saveFile();
+
+private:
+
 };
 
 #endif // MADUTILS_H

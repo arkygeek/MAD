@@ -28,10 +28,10 @@
 // forward declarations
 class QString;
 
-class MADModel
+class MadModel
 {
 public:
-    MADModel();
+    MadModel();
 };
 
 #endif // MADMODEL_H

@@ -21,6 +21,6 @@
 
 #include "madmodel.h"
 
-MADModel::MADModel()
+MadModel::MadModel()
 {
 }
