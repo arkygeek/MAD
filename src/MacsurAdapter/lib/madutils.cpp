@@ -36,10 +36,10 @@
 #include <QString>
 
 #include <QFileDialog>
-#ifdef Q_OS_MACX
+//#ifdef Q_OS_MACX
   //for getting app bundle path
-#include <ApplicationServices/ApplicationServices.h>
-#endif
+//#include <ApplicationServices/ApplicationServices.h>
+//#endif
 
 MadUtils::MadUtils()
 {

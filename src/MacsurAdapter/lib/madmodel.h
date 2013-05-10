@@ -45,9 +45,9 @@ class QString;
 
 //Qt includes
 #include <QString>
-#include <QDomDocument>
-#include <QDomElement>
-#include <QDebug>
+//#include <QDomDocument>
+//#include <QDomElement>
+//#include <QDebug>
 
 
 /**
@@ -59,11 +59,11 @@ public:
     /** Constructor . */
     MadModel();
     /** Desctructor . */
-    //~LaCrop();
+    //~MadModel();
     /** copy constructor */
     MadModel(const MadModel& theModel);
     /** Assignement operator */
-    MadModel& operator= (const MadModel& theModel);
+    MadModel& operator = (const MadModel& theModel);
 
       //
       // Accessors
@@ -73,11 +73,6 @@ public:
     QString name() const;
     /** The description of this crop */
     QString description() const;
-
-    /** All production levels based on either Kg/Dunum or Kg/Hectare
-     *  0==Dunum 1==Hectare
-     */
-    //AreaUnits areaUnits() const;
 
     /** The image file associated with the model */
     QString imageFile() const;
