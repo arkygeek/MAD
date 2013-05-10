@@ -44,6 +44,15 @@ private slots:
     void on_hsldrSeedDensity_valueChanged(int theSliderValue);
     void on_hsldrYield_valueChanged(int theSliderValue);
     void on_hsldrTillage_valueChanged(int theSliderValue);
+    void on_comboBox_currentIndexChanged(const QString &theIndex);
+    void on_dsbVariety_valueChanged(double theValue);
+    void on_dsbSowing_valueChanged(double theValue);
+    void on_dsbHarvest_valueChanged(double theValue);
+    void on_dsbFertilisation_valueChanged(double theValue);
+    void on_dsbIrrigation_valueChanged(double theValue);
+    void on_dsbSeedDensity_valueChanged(double theValue);
+    void on_dsbYield_valueChanged(double theValue);
+    void on_dsbTillage_valueChanged(double theValue);
 };
 
 #endif // MADDATACLASSIFICATION_H

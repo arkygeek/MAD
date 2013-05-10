@@ -116,7 +116,7 @@ void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
 
     int myValue = (theSliderValue/100);
     float myPreciseValue = myValue/2.0;
-    lblVarietyWeight->setText(QString::number((myPreciseValue)));
+    dsbVariety->setValue(myPreciseValue);
 }
 
 /**
@@ -125,8 +125,9 @@ void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblSowingWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbSowing->setValue(myPreciseValue);
 }
 
 /**
@@ -135,8 +136,9 @@ void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblHarvestWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbHarvest->setValue(myPreciseValue);
 }
 
 /**
@@ -145,8 +147,9 @@ void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblFertilisationWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbFertilisation->setValue(myPreciseValue);
 }
 
 /**
@@ -155,8 +158,9 @@ void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValu
  */
 void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblIrrigationWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbIrrigation->setValue(myPreciseValue);
 }
 
 /**
@@ -165,8 +169,9 @@ void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblSeedDensityWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbSeedDensity->setValue(myPreciseValue);
 }
 
 /**
@@ -175,8 +180,9 @@ void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblYieldWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbYield->setValue(myPreciseValue);
 }
 
 /**
@@ -185,6 +191,62 @@ void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
 {
-    int myValue = theSliderValue/200;
-    lblTillageWeight->setText(QString::number((myValue)));
+    int myValue = (theSliderValue/100);
+    float myPreciseValue = myValue/2.0;
+    dsbTillage->setValue(myPreciseValue);
+}
+
+void MadDataClassification::on_comboBox_currentIndexChanged(const QString &theIndex)
+{
+    QString myIndex=theIndex;
+    //this will do something...
+}
+
+void MadDataClassification::on_dsbVariety_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrVariety->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbSowing_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrSowing->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbHarvest_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrHarvest->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbFertilisation_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrFertilisation->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbIrrigation_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrIrrigation->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbSeedDensity_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrSeedDensity->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbYield_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrYield->setSliderPosition(myPosition);
+}
+void MadDataClassification::on_dsbTillage_valueChanged(double theValue)
+{
+    int myPosition;
+    myPosition = theValue * 200;
+    hsldrTillage->setSliderPosition(myPosition);
 }
