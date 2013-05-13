@@ -58,7 +58,7 @@ class MadModel : public MadSerialisable, public MadGuid
 public:
     /** Constructor . */
     MadModel();
-    /** Desctructor . */
+    /** Destructor . */
     //~MadModel();
     /** copy constructor */
     MadModel(const MadModel& theModel);
@@ -69,9 +69,9 @@ public:
       // Accessors
       //
 
-    /** The name of this crop */
+    /** The name of this model */
     QString name() const;
-    /** The description of this crop */
+    /** The description of this model */
     QString description() const;
 
     /** The image file associated with the model */

@@ -22,10 +22,95 @@
 #ifndef MADDATA_H
 #define MADDATA_H
 
-class MadData
+class QString;
+
+//Local includes
+#include "madserialisable.h"
+#include "madguid.h"
+#include "mad.h"
+
+//Qt includes
+#include <QString>
+//#include <QDomDocument>
+//#include <QDomElement>
+//#include <QDebug>
+
+class MadData : public MadSerialisable, public MadGuid
 {
 public:
     MadData();
+
+    /** copy constructor */
+    MadData(const MadData& theData);
+    /** Assignement operator */
+    MadData& operator = (const MadData& theData);
+
+      //
+      // Accessors
+      //
+
+    /** The name of this dataset */
+    QString name() const;
+    /** The description of this dataset */
+    QString description() const;
+
+    /** The image file associated with the dataset */
+    QString imageFile() const;
+
+
+    //
+    // Mutators
+    //
+
+  /** Set the modelName
+   * @see name()
+   */
+  void setName(QString theName);
+
+  /** Set the model description
+   * @see description()
+   */
+  void setDescription(QString theDescription);
+
+  /** Set the image file
+   * @see imageFile()
+   */
+  void setImageFile(QString theImageFileName);
+
+  /** Return an xml representation of this layer
+   * @NOTE this class inherits the serialisable interface so
+   * it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @NOTE this class inherits the serialisable interface so
+   * it MUST implement this
+   */
+  bool fromXml(const QString theXml);
+
+
+
+private:
+  /** The name for this dataset */
+  QString mName;
+
+  /** The description for this dataset */
+  QString mDescription;
+  QString mImageFile;
+
+
+
 };
 
 #endif // MADDATA_H
