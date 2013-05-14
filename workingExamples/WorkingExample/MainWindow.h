@@ -14,7 +14,7 @@ public:
     explicit MainWindow(QWidget *parent = 0);
 
 private slots:
-    void pushButton();
+    void on_pushButton_clicked();
     
 private:
     Dialog* dial;
