@@ -3,22 +3,16 @@
 
 #include <QDialog>
 #include <QString>
+#include "ui_Dialog.h"
 
-namespace Ui {
-class Dialog;
-}
 
-class Dialog : public QDialog
+class Dialog : public QDialog, private Ui::Dialog
 {
     Q_OBJECT
     
 public:
     explicit Dialog(QWidget *parent = 0);
-    ~Dialog();
     void setText(const QString& t);
-
-private:
-    Ui::Dialog *ui;
 };
 
 #endif // DIALOG_H

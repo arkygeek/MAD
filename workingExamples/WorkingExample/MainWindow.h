@@ -3,25 +3,21 @@
 
 #include <QMainWindow>
 #include "Dialog.h"
+#include "ui_MainWindow.h"
 
-namespace Ui {
-class MainWindow;
-}
 
-class MainWindow : public QMainWindow
+class MainWindow : public QMainWindow, private Ui::MainWindow
 {
     Q_OBJECT
     
 public:
     explicit MainWindow(QWidget *parent = 0);
-    ~MainWindow();
 
 private slots:
     void pushButton();
     
 private:
     Dialog* dial;
-    Ui::MainWindow *ui;
 };
 
 #endif // MAINWINDOW_H
