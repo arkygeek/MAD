@@ -33,6 +33,19 @@
 
 //Local includes
 #include "madmodel.h"
+#include "maddata.h"
+
+/*
+ * struct Category { QString name; QList<SubCategory> children; };
+ * struct SubCategory { QString name; bool minData; int depth; ... };
+ * QList<Category>
+ *
+ */
+
+
+
+
+//typedef QPair <QString, QList<MadSubCategory> > MadCategory;
 
 /**
  * @brief MadTripleMap

@@ -31,9 +31,31 @@ class QString;
 
 //Qt includes
 #include <QString>
-//#include <QDomDocument>
-//#include <QDomElement>
-//#include <QDebug>
+
+
+/*struct dataClassificationColumns {
+  bool minData;
+  int observations;
+  double weightPoints;
+} variety, sowing, harvest, fertilisation, irrigation, seedDensity, yield, tillage;
+*/
+
+struct MadSubCategory
+{
+    QString name;
+    bool minData;
+    float depth;
+    int observations;
+    float weightPoints;
+    int replicates;
+};
+struct MadCategory
+{
+    QString name;
+    QList<MadSubCategory> children;
+};
+
+//typedef QList <MadCategory> MadDataClassified;
 
 class MadData : public MadSerialisable, public MadGuid
 {
@@ -53,6 +75,18 @@ public:
     QString name() const;
     /** The description of this dataset */
     QString description() const;
+    // /** The cultivation vars of this dataset */
+    //QString cultivationVariety() const;
+    //QString cultivationSowing() const;
+    //QString cultivationHarvest() const;
+    //QString cultivationFertilisation() const;
+    //QString cultivationIrrigation() const;
+    //QString cultivationSeedDensity() const;
+    //QString cultivationYield() const;
+    //QString cultivationTillage() const;
+
+    //MadCategory myCategory;
+
 
     /** The image file associated with the dataset */
     QString imageFile() const;
@@ -104,13 +138,11 @@ public:
 private:
   /** The name for this dataset */
   QString mName;
-
   /** The description for this dataset */
   QString mDescription;
   QString mImageFile;
 
-
-
 };
+
 
 #endif // MADDATA_H

@@ -28,6 +28,7 @@ class QStringList;
 //Local includes
 #include "mad.h"
 #include "madmodel.h"
+#include "maddata.h"
 
 //QtIncludes
 #include <QHash>
