@@ -1,0 +1,385 @@
+\hypertarget{class_mad_utils}{\section{Mad\-Utils Class Reference}
+\label{class_mad_utils}\index{Mad\-Utils@{Mad\-Utils}}
+}
+
+
+{\ttfamily \#include $<$madutils.\-h$>$}
+
+\subsection*{Public Types}
+\begin{DoxyCompactItemize}
+\item 
+typedef Q\-Map$<$ Q\-String, \hyperlink{class_mad_model}{Mad\-Model} $>$ \hyperlink{class_mad_utils_a6bec5016d103cb2712d7bd2001c55b3b}{Model\-Map}
+\begin{DoxyCompactList}\small\item\em Model\-Map (typedef) This typedef is used to refer to a collection of layersets. the key is the layerset name the value is the layerset itself. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_mad_utils_a1a74572145ae5f7f6680896bb8fccb0e}{Mad\-Utils} ()
+\item 
+Q\-String \hyperlink{class_mad_utils_a5c0a97189ce985a39dcd3f3c6882418f}{open\-Graphic\-File} ()
+\item 
+Q\-String \hyperlink{class_mad_utils_ab4c61234d51b19693917dd0551ad744c}{save\-File} ()
+\end{DoxyCompactItemize}
+\subsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static const Q\-String \hyperlink{class_mad_utils_a615810cd3a1f9894731a51c5f9cc3e69}{user\-Settings\-Dir\-Path} ()
+\begin{DoxyCompactList}\small\item\em user\-Settings\-Dir\-Path Find the place on the filesystem where user data is stored \end{DoxyCompactList}\item 
+static const Q\-String \hyperlink{class_mad_utils_aeaed9eea3735e2fa84059b1cd73c9bdd}{user\-Model\-Profiles\-Dir\-Path} ()
+\begin{DoxyCompactList}\small\item\em uer\-Model\-Profiles\-Dir\-Path Find the place on the filesystem where user defined model profiles are stored. \end{DoxyCompactList}\item 
+static const Q\-String \hyperlink{class_mad_utils_ac79920c4e62df9e73cdc7f5c7675d93f}{user\-Model\-Parameters\-Dir\-Path} ()
+\begin{DoxyCompactList}\small\item\em user\-Model\-Parameters\-Dir\-Path Find the place on the filesystem where user defined model parameter profiles are stored. \end{DoxyCompactList}\item 
+static const Q\-String \hyperlink{class_mad_utils_a027a1b9a97c1eb82539af3ea971ca73f}{get\-Model\-Output\-Dir} ()
+\begin{DoxyCompactList}\small\item\em get\-Model\-Output\-Dir Get the place where model outputs are to be stored. By default this is in $\sim$/.macsur\-Adapter/model\-Outputs But if model\-Outputs\-Dir is specified in Q\-Settings, it will override the default. \end{DoxyCompactList}\item 
+static const Q\-String \hyperlink{class_mad_utils_a76f1053d29df630d965a41830920257a}{user\-Images\-Dir\-Path} ()
+\begin{DoxyCompactList}\small\item\em user\-Images\-Dir\-Path Find the place on the filesystem where user images are stored. \end{DoxyCompactList}\item 
+static \hyperlink{class_mad_utils_a6bec5016d103cb2712d7bd2001c55b3b}{Mad\-Utils\-::\-Model\-Map} \hyperlink{class_mad_utils_ac4ada50d41fccd2f0782c669721165c6}{get\-Available\-Models} ()
+\begin{DoxyCompactList}\small\item\em get\-Available\-Models Get a Q\-Map of the avaliable layersets in the users layersets directory \end{DoxyCompactList}\item 
+static \hyperlink{class_mad_model}{Mad\-Model} \hyperlink{class_mad_utils_a25b56990e934963c77f010382c92747c}{get\-Model} (Q\-String the\-Guid)
+\begin{DoxyCompactList}\small\item\em get\-Model Get a \hyperlink{class_mad_model}{Mad\-Model} given its G\-U\-I\-D. If no matching model is found, a blank one is returned. \end{DoxyCompactList}\item 
+static Q\-String\-List \hyperlink{class_mad_utils_a7b39b00a2403f195eee4fc4e510db90b}{sort\-List} (Q\-String\-List the\-List)
+\begin{DoxyCompactList}\small\item\em sort\-List Sort a string list into descending alphabetic order and return the result. \end{DoxyCompactList}\item 
+static Q\-String\-List \hyperlink{class_mad_utils_a95cfacb1aabb5fd8085933ee9cabb5de}{unique\-List} (Q\-String\-List the\-List)
+\begin{DoxyCompactList}\small\item\em unique\-List Remove any duplucate entries from a sorted list \end{DoxyCompactList}\item 
+static bool \hyperlink{class_mad_utils_a548aac989563c538ad9695e10845e3ab}{create\-Text\-File} (Q\-String the\-File\-Name, Q\-String the\-Data)
+\begin{DoxyCompactList}\small\item\em create\-Text\-File A helper method to easily write a file to disk. \end{DoxyCompactList}\item 
+static Q\-String \hyperlink{class_mad_utils_ae6d98beebaf217ce2d630644412eabf2}{xml\-Encode} (Q\-String the\-String)
+\begin{DoxyCompactList}\small\item\em xml\-Encode A helper method to xml encode any special chars in a string ($<$ $>$ \& etc) will become ($<$ $>$ \& etc) \end{DoxyCompactList}\item 
+static Q\-String \hyperlink{class_mad_utils_aee37612e0cc8aeafe2614b018e5d2c4d}{xml\-Decode} (Q\-String the\-String)
+\begin{DoxyCompactList}\small\item\em xml\-Decode A helper method to xml deencode any special chars in a string ($<$ $>$ \& etc) will become ($<$ $>$ \& etc) \end{DoxyCompactList}\item 
+static Q\-String \hyperlink{class_mad_utils_ac633dc293b02664fe0246be01a3f448c}{get\-Standard\-Css} ()
+\begin{DoxyCompactList}\small\item\em get\-Standard\-Css Get the standard style sheet for reports. Typically this will be used like this\-: Q\-String my\-Style = \hyperlink{class_mad_utils_ac633dc293b02664fe0246be01a3f448c}{get\-Standard\-Css()}; text\-Browser\-Foo-\/$>$document()-\/$>$set\-Default\-Stylesheet(my\-Style); \end{DoxyCompactList}\item 
+static const Q\-String \hyperlink{class_mad_utils_add01d28ed02067656f7f20240c9b8213}{user\-Conversion\-Tables\-Dir\-Path} ()
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+
+
+Definition at line 41 of file madutils.\-h.
+
+
+
+\subsection{Member Typedef Documentation}
+\hypertarget{class_mad_utils_a6bec5016d103cb2712d7bd2001c55b3b}{\index{Mad\-Utils@{Mad\-Utils}!Model\-Map@{Model\-Map}}
+\index{Model\-Map@{Model\-Map}!MadUtils@{Mad\-Utils}}
+\subsubsection[{Model\-Map}]{\setlength{\rightskip}{0pt plus 5cm}typedef Q\-Map$<$Q\-String,{\bf Mad\-Model}$>$ {\bf Mad\-Utils\-::\-Model\-Map}}}\label{class_mad_utils_a6bec5016d103cb2712d7bd2001c55b3b}
+
+
+Model\-Map (typedef) This typedef is used to refer to a collection of layersets. the key is the layerset name the value is the layerset itself. 
+
+
+
+Definition at line 101 of file madutils.\-h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_mad_utils_a1a74572145ae5f7f6680896bb8fccb0e}{\index{Mad\-Utils@{Mad\-Utils}!Mad\-Utils@{Mad\-Utils}}
+\index{Mad\-Utils@{Mad\-Utils}!MadUtils@{Mad\-Utils}}
+\subsubsection[{Mad\-Utils}]{\setlength{\rightskip}{0pt plus 5cm}Mad\-Utils\-::\-Mad\-Utils (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mad_utils_a1a74572145ae5f7f6680896bb8fccb0e}
+
+
+Definition at line 44 of file madutils.\-cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_mad_utils_a548aac989563c538ad9695e10845e3ab}{\index{Mad\-Utils@{Mad\-Utils}!create\-Text\-File@{create\-Text\-File}}
+\index{create\-Text\-File@{create\-Text\-File}!MadUtils@{Mad\-Utils}}
+\subsubsection[{create\-Text\-File}]{\setlength{\rightskip}{0pt plus 5cm}bool Mad\-Utils\-::create\-Text\-File (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{the\-File\-Name, }
+\item[{Q\-String}]{the\-Data}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a548aac989563c538ad9695e10845e3ab}
+
+
+create\-Text\-File A helper method to easily write a file to disk. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-File\-Name} & -\/ the filename to be created or overwritten \\
+\hline
+{\em the\-Data} & -\/ the data that will be written into the file \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+bool -\/ false if the file could not be written 
+\end{DoxyReturn}
+
+
+Definition at line 126 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_ac4ada50d41fccd2f0782c669721165c6}{\index{Mad\-Utils@{Mad\-Utils}!get\-Available\-Models@{get\-Available\-Models}}
+\index{get\-Available\-Models@{get\-Available\-Models}!MadUtils@{Mad\-Utils}}
+\subsubsection[{get\-Available\-Models}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Mad\-Utils\-::\-Model\-Map} Mad\-Utils\-::get\-Available\-Models (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_ac4ada50d41fccd2f0782c669721165c6}
+
+
+get\-Available\-Models Get a Q\-Map of the avaliable layersets in the users layersets directory 
+
+\begin{DoxyReturn}{Returns}
+a Q\-Map$<$\-Q\-String,\-Omg\-Layer\-Set$>$ where the Q\-String key is the layerset name 
+\end{DoxyReturn}
+
+
+Definition at line 93 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_a25b56990e934963c77f010382c92747c}{\index{Mad\-Utils@{Mad\-Utils}!get\-Model@{get\-Model}}
+\index{get\-Model@{get\-Model}!MadUtils@{Mad\-Utils}}
+\subsubsection[{get\-Model}]{\setlength{\rightskip}{0pt plus 5cm}static {\bf Mad\-Model} Mad\-Utils\-::get\-Model (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{the\-Guid}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a25b56990e934963c77f010382c92747c}
+
+
+get\-Model Get a \hyperlink{class_mad_model}{Mad\-Model} given its G\-U\-I\-D. If no matching model is found, a blank one is returned. 
+
+\hypertarget{class_mad_utils_a027a1b9a97c1eb82539af3ea971ca73f}{\index{Mad\-Utils@{Mad\-Utils}!get\-Model\-Output\-Dir@{get\-Model\-Output\-Dir}}
+\index{get\-Model\-Output\-Dir@{get\-Model\-Output\-Dir}!MadUtils@{Mad\-Utils}}
+\subsubsection[{get\-Model\-Output\-Dir}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::get\-Model\-Output\-Dir (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a027a1b9a97c1eb82539af3ea971ca73f}
+
+
+get\-Model\-Output\-Dir Get the place where model outputs are to be stored. By default this is in $\sim$/.macsur\-Adapter/model\-Outputs But if model\-Outputs\-Dir is specified in Q\-Settings, it will override the default. 
+
+
+
+Definition at line 60 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_ac633dc293b02664fe0246be01a3f448c}{\index{Mad\-Utils@{Mad\-Utils}!get\-Standard\-Css@{get\-Standard\-Css}}
+\index{get\-Standard\-Css@{get\-Standard\-Css}!MadUtils@{Mad\-Utils}}
+\subsubsection[{get\-Standard\-Css}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Mad\-Utils\-::get\-Standard\-Css (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_ac633dc293b02664fe0246be01a3f448c}
+
+
+get\-Standard\-Css Get the standard style sheet for reports. Typically this will be used like this\-: Q\-String my\-Style = \hyperlink{class_mad_utils_ac633dc293b02664fe0246be01a3f448c}{get\-Standard\-Css()}; text\-Browser\-Foo-\/$>$document()-\/$>$set\-Default\-Stylesheet(my\-Style); 
+
+
+
+Definition at line 159 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_a5c0a97189ce985a39dcd3f3c6882418f}{\index{Mad\-Utils@{Mad\-Utils}!open\-Graphic\-File@{open\-Graphic\-File}}
+\index{open\-Graphic\-File@{open\-Graphic\-File}!MadUtils@{Mad\-Utils}}
+\subsubsection[{open\-Graphic\-File}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Mad\-Utils\-::open\-Graphic\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mad_utils_a5c0a97189ce985a39dcd3f3c6882418f}
+
+
+Definition at line 180 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_ab4c61234d51b19693917dd0551ad744c}{\index{Mad\-Utils@{Mad\-Utils}!save\-File@{save\-File}}
+\index{save\-File@{save\-File}!MadUtils@{Mad\-Utils}}
+\subsubsection[{save\-File}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Mad\-Utils\-::save\-File (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}}\label{class_mad_utils_ab4c61234d51b19693917dd0551ad744c}
+
+
+Definition at line 191 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_a7b39b00a2403f195eee4fc4e510db90b}{\index{Mad\-Utils@{Mad\-Utils}!sort\-List@{sort\-List}}
+\index{sort\-List@{sort\-List}!MadUtils@{Mad\-Utils}}
+\subsubsection[{sort\-List}]{\setlength{\rightskip}{0pt plus 5cm}static Q\-String\-List Mad\-Utils\-::sort\-List (
+\begin{DoxyParamCaption}
+\item[{Q\-String\-List}]{the\-List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a7b39b00a2403f195eee4fc4e510db90b}
+
+
+sort\-List Sort a string list into descending alphabetic order and return the result. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-List} & -\/ the Q\-String\-List to be sorted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\-String\-List -\/ sorted in descending alphabetical order 
+\end{DoxyReturn}
+\hypertarget{class_mad_utils_a95cfacb1aabb5fd8085933ee9cabb5de}{\index{Mad\-Utils@{Mad\-Utils}!unique\-List@{unique\-List}}
+\index{unique\-List@{unique\-List}!MadUtils@{Mad\-Utils}}
+\subsubsection[{unique\-List}]{\setlength{\rightskip}{0pt plus 5cm}static Q\-String\-List Mad\-Utils\-::unique\-List (
+\begin{DoxyParamCaption}
+\item[{Q\-String\-List}]{the\-List}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a95cfacb1aabb5fd8085933ee9cabb5de}
+
+
+unique\-List Remove any duplucate entries from a sorted list 
+
+
+\begin{DoxyParams}{Parameters}
+{\em the\-List} & -\/ the Q\-String\-List to be sorted \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Q\-String\-List -\/ a list with no sequential duplicates 
+\end{DoxyReturn}
+\hypertarget{class_mad_utils_add01d28ed02067656f7f20240c9b8213}{\index{Mad\-Utils@{Mad\-Utils}!user\-Conversion\-Tables\-Dir\-Path@{user\-Conversion\-Tables\-Dir\-Path}}
+\index{user\-Conversion\-Tables\-Dir\-Path@{user\-Conversion\-Tables\-Dir\-Path}!MadUtils@{Mad\-Utils}}
+\subsubsection[{user\-Conversion\-Tables\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::user\-Conversion\-Tables\-Dir\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_add01d28ed02067656f7f20240c9b8213}
+Find the place on the filesystem where user created conversion tables in csv format are stored
+
+Typically this will be $\sim$/.macsur\-Adapter/conversion\-Tables
+
+\begin{DoxyReturn}{Returns}
+Q\-String containing the relevant directory name 
+\end{DoxyReturn}
+
+
+Definition at line 201 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_a76f1053d29df630d965a41830920257a}{\index{Mad\-Utils@{Mad\-Utils}!user\-Images\-Dir\-Path@{user\-Images\-Dir\-Path}}
+\index{user\-Images\-Dir\-Path@{user\-Images\-Dir\-Path}!MadUtils@{Mad\-Utils}}
+\subsubsection[{user\-Images\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::user\-Images\-Dir\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a76f1053d29df630d965a41830920257a}
+
+
+user\-Images\-Dir\-Path Find the place on the filesystem where user images are stored. 
+
+Typically this will be $\sim$/.macsur\-Adapter/images
+
+\begin{DoxyReturn}{Returns}
+Q\-String containing the relevant directory name 
+\end{DoxyReturn}
+
+
+Definition at line 85 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_ac79920c4e62df9e73cdc7f5c7675d93f}{\index{Mad\-Utils@{Mad\-Utils}!user\-Model\-Parameters\-Dir\-Path@{user\-Model\-Parameters\-Dir\-Path}}
+\index{user\-Model\-Parameters\-Dir\-Path@{user\-Model\-Parameters\-Dir\-Path}!MadUtils@{Mad\-Utils}}
+\subsubsection[{user\-Model\-Parameters\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::user\-Model\-Parameters\-Dir\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_ac79920c4e62df9e73cdc7f5c7675d93f}
+
+
+user\-Model\-Parameters\-Dir\-Path Find the place on the filesystem where user defined model parameter profiles are stored. 
+
+Typically this will be $\sim$/.macsur\-Adapter/animal\-Parameters
+
+\begin{DoxyReturn}{Returns}
+Q\-String containing the relevant directory name 
+\end{DoxyReturn}
+
+
+Definition at line 76 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_aeaed9eea3735e2fa84059b1cd73c9bdd}{\index{Mad\-Utils@{Mad\-Utils}!user\-Model\-Profiles\-Dir\-Path@{user\-Model\-Profiles\-Dir\-Path}}
+\index{user\-Model\-Profiles\-Dir\-Path@{user\-Model\-Profiles\-Dir\-Path}!MadUtils@{Mad\-Utils}}
+\subsubsection[{user\-Model\-Profiles\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::user\-Model\-Profiles\-Dir\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_aeaed9eea3735e2fa84059b1cd73c9bdd}
+
+
+uer\-Model\-Profiles\-Dir\-Path Find the place on the filesystem where user defined model profiles are stored. 
+
+Typically this will be $\sim$/.macsur\-Adapter/model\-Profiles
+
+\begin{DoxyReturn}{Returns}
+Q\-String containing the relevant directory name 
+\end{DoxyReturn}
+
+
+Definition at line 67 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_a615810cd3a1f9894731a51c5f9cc3e69}{\index{Mad\-Utils@{Mad\-Utils}!user\-Settings\-Dir\-Path@{user\-Settings\-Dir\-Path}}
+\index{user\-Settings\-Dir\-Path@{user\-Settings\-Dir\-Path}!MadUtils@{Mad\-Utils}}
+\subsubsection[{user\-Settings\-Dir\-Path}]{\setlength{\rightskip}{0pt plus 5cm}const Q\-String Mad\-Utils\-::user\-Settings\-Dir\-Path (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_a615810cd3a1f9894731a51c5f9cc3e69}
+
+
+user\-Settings\-Dir\-Path Find the place on the filesystem where user data is stored 
+
+Typically, this will be $\sim$/.macsur\-Adapter
+
+\begin{DoxyReturn}{Returns}
+Q\-String containing the relevant directory name
+\end{DoxyReturn}
+Returns the path to the settings directory in user's home dir 
+
+Definition at line 51 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_aee37612e0cc8aeafe2614b018e5d2c4d}{\index{Mad\-Utils@{Mad\-Utils}!xml\-Decode@{xml\-Decode}}
+\index{xml\-Decode@{xml\-Decode}!MadUtils@{Mad\-Utils}}
+\subsubsection[{xml\-Decode}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Mad\-Utils\-::xml\-Decode (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{the\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_aee37612e0cc8aeafe2614b018e5d2c4d}
+
+
+xml\-Decode A helper method to xml deencode any special chars in a string ($<$ $>$ \& etc) will become ($<$ $>$ \& etc) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q\-String} & -\/ the string to be properly decoded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Q\-String with the encoded chars properly decoded 
+\end{DoxyReturn}
+
+
+Definition at line 151 of file madutils.\-cpp.
+
+\hypertarget{class_mad_utils_ae6d98beebaf217ce2d630644412eabf2}{\index{Mad\-Utils@{Mad\-Utils}!xml\-Encode@{xml\-Encode}}
+\index{xml\-Encode@{xml\-Encode}!MadUtils@{Mad\-Utils}}
+\subsubsection[{xml\-Encode}]{\setlength{\rightskip}{0pt plus 5cm}Q\-String Mad\-Utils\-::xml\-Encode (
+\begin{DoxyParamCaption}
+\item[{Q\-String}]{the\-String}
+\end{DoxyParamCaption}
+)\hspace{0.3cm}{\ttfamily [static]}}}\label{class_mad_utils_ae6d98beebaf217ce2d630644412eabf2}
+
+
+xml\-Encode A helper method to xml encode any special chars in a string ($<$ $>$ \& etc) will become ($<$ $>$ \& etc) 
+
+
+\begin{DoxyParams}{Parameters}
+{\em Q\-String} & -\/ the string to be properly encoded \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+A Q\-String with the special chars properly encoded 
+\end{DoxyReturn}
+
+
+Definition at line 143 of file madutils.\-cpp.
+
+
+
+The documentation for this class was generated from the following files\-:\begin{DoxyCompactItemize}
+\item 
+/\-Users/arkygeek/\-Qt\-Projects/macsur-\/adapter/src/\-Macsur\-Adapter/lib/\hyperlink{madutils_8h}{madutils.\-h}\item 
+/\-Users/arkygeek/\-Qt\-Projects/macsur-\/adapter/src/\-Macsur\-Adapter/lib/\hyperlink{madutils_8cpp}{madutils.\-cpp}\end{DoxyCompactItemize}

@@ -30,7 +30,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) :
     QDialog(parent)
 {
     setupUi(this);
-    groupBox->setChecked(false);
+    gbxCultivation->setChecked(false);
     cbExamples->setEnabled(true);
     lblExample->setVisible(true);
     lblExample->setText("Select Example");
@@ -53,7 +53,7 @@ void MadDataClassification::on_groupBox_clicked()
     // if values are editable, should not be able to select for any
     // examples to be shown as it will destroy destroy current settings
 
-    if (groupBox->isChecked())
+    if (gbxCultivation->isChecked())
     {
         lblExample->setVisible(false);
         cbExamples->setDisabled(true);

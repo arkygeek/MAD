@@ -1,0 +1,16 @@
+digraph "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_68267d1309a1af8e8297ef4c3efbcdba {
+    graph [ bgcolor="#ddddee", pencolor="black", label="src" fontname="Helvetica", fontsize="10", URL="dir_68267d1309a1af8e8297ef4c3efbcdba.html"]
+  subgraph clusterdir_0976b7c1070d105ce9a45e848ff99eca {
+    graph [ bgcolor="#eeeeff", pencolor="black", label="" URL="dir_0976b7c1070d105ce9a45e848ff99eca.html"];
+    dir_0976b7c1070d105ce9a45e848ff99eca [shape=plaintext label="MacsurAdapter"];
+    dir_d222dbe04ff54d8eba0bc52be3b729c4 [shape=box label="gui" color="black" fillcolor="white" style="filled" URL="dir_d222dbe04ff54d8eba0bc52be3b729c4.html"];
+    dir_28396c6dadb4fda2a5fc7fe3aec95f24 [shape=box label="lib" color="black" fillcolor="white" style="filled" URL="dir_28396c6dadb4fda2a5fc7fe3aec95f24.html"];
+  }
+  }
+  dir_0976b7c1070d105ce9a45e848ff99eca->dir_d222dbe04ff54d8eba0bc52be3b729c4 [headlabel="2", labeldistance=1.5 headhref="dir_000001_000002.html"];
+  dir_d222dbe04ff54d8eba0bc52be3b729c4->dir_28396c6dadb4fda2a5fc7fe3aec95f24 [headlabel="1", labeldistance=1.5 headhref="dir_000002_000003.html"];
+}

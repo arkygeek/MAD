@@ -35,7 +35,7 @@ class QStringList;
 #include <QMap>
 #include <QString>
 #include <QStringList>
-
+#include <QColumnView>
 
 
 class MadUtils

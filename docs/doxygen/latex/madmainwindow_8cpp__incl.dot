@@ -1,0 +1,24 @@
+digraph "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  Node1 [label="/Users/arkygeek/QtProjects\l/macsur-adapter/src/MacsurAdapter\l/madmainwindow.cpp",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled" fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="QModelIndex",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid"];
+  Node3 [label="QDebug",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid"];
+  Node4 [label="QTreeView",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 [label="madmainwindow.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$madmainwindow_8h.html"];
+  Node5 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+  Node6 [label="gui/maddataclassification.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$maddataclassification_8h.html"];
+  Node6 -> Node7 [color="midnightblue",fontsize="10",style="solid"];
+  Node7 [label="ui_maddataclassificationbase.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node5 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node5 -> Node8 [color="midnightblue",fontsize="10",style="solid"];
+  Node8 [label="ui_madmainwindowbase.h",height=0.2,width=0.4,color="grey75", fillcolor="white", style="filled"];
+  Node1 -> Node9 [color="midnightblue",fontsize="10",style="solid"];
+  Node9 [label="lib/madversion.h",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$madversion_8h.html"];
+  Node1 -> Node6 [color="midnightblue",fontsize="10",style="solid"];
+}

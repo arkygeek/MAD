@@ -1,0 +1,9 @@
+digraph "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib" {
+  compound=true
+  node [ fontsize="10", fontname="Helvetica"];
+  edge [ labelfontsize="10", labelfontname="Helvetica"];
+  subgraph clusterdir_0976b7c1070d105ce9a45e848ff99eca {
+    graph [ bgcolor="#ddddee", pencolor="black", label="MacsurAdapter" fontname="Helvetica", fontsize="10", URL="dir_0976b7c1070d105ce9a45e848ff99eca.html"]
+  dir_28396c6dadb4fda2a5fc7fe3aec95f24 [shape=box, label="lib", style="filled", fillcolor="#eeeeff", pencolor="black", URL="dir_28396c6dadb4fda2a5fc7fe3aec95f24.html"];
+  }
+}

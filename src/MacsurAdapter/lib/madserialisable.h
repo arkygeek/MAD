@@ -19,7 +19,7 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-// adapted from code originally written by Tim Sutton as per below:
+// adapted from code originally contributed by Tim Sutton as per below:
 /***************************************************************************
                           LaSerialisable.h  -  description
                              -------------------
@@ -44,7 +44,7 @@ class QString;
 
 /**
   * An abstract base class for any class that is serialiseable to xml
-  * @author Tim Sutton
+  * @author Tim Sutton, Jason Jorgenson
   */
 
 class MadSerialisable
