@@ -1,5 +1,5 @@
 #include "MainWindow.h"
-//#include <
+
 MainWindow::MainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
@@ -14,5 +14,6 @@ void MainWindow::on_pushButton_clicked()
     dial = new Dialog(this);
 
     dial->setText(lineEdit->text());
+    dial->setModal(true);
     dial->setVisible(true);
 }
