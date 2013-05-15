@@ -17,7 +17,7 @@
    <item row="0" column="0">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
-      <number>0</number>
+      <number>7</number>
      </property>
      <widget class="QWidget" name="tabCultivation">
       <attribute name="title">
@@ -110,6 +110,9 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
@@ -146,6 +149,9 @@
               <width>150</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -184,6 +190,9 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
@@ -220,6 +229,9 @@
               <width>150</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -271,6 +283,9 @@
               <width>150</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -390,6 +405,9 @@
               <height>16777215</height>
              </size>
             </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
+            </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
             </property>
@@ -433,6 +451,9 @@
               <width>150</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -601,6 +622,9 @@
               <width>150</width>
               <height>16777215</height>
              </size>
+            </property>
+            <property name="cursor">
+             <cursorShape>ArrowCursor</cursorShape>
             </property>
             <property name="toolTip">
              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Number of weight points&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
@@ -4314,402 +4338,437 @@
       <attribute name="title">
        <string>State Vars</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayout_10">
-       <item row="0" column="0" colspan="2">
-        <widget class="QTableWidget" name="tblCrop">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="alternatingRowColors">
-          <bool>true</bool>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>100</number>
-         </attribute>
-         <attribute name="horizontalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>20</number>
-         </attribute>
-         <attribute name="verticalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <row>
-          <property name="text">
-           <string>a.gr. biomass</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>weight organs</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>root biomass</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>N in a.gr.biomass</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>N in organs</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>LAI</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>min Data</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. org./layers</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. observat.</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Weight Points</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>replicates</string>
-          </property>
-         </column>
-        </widget>
+      <widget class="QTableWidget" name="tblCrop">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>12</y>
+         <width>601</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>100</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>20</number>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>a.gr. biomass</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>weight organs</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>root biomass</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>N in a.gr.biomass</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>N in organs</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>LAI</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>min Data</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. org./layers</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. observat.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Weight Points</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>replicates</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QTableWidget" name="tblSoil">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>190</y>
+         <width>611</width>
+         <height>141</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>100</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>4</number>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>20</number>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderMinimumSectionSize">
+        <number>16</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>soil water grav.</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>pressure heads</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>Nmin</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>soil H20 sensor cal.</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>H2O flux bot root</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>N flux bot root</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>min Data</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. org./layers</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. observat.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Weight Points</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>replicates</string>
+        </property>
+       </column>
+       <item row="1" column="0">
+        <property name="text">
+         <string/>
+        </property>
        </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QTableWidget" name="tblSoil">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="alternatingRowColors">
-          <bool>true</bool>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>100</number>
-         </attribute>
-         <attribute name="horizontalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderMinimumSectionSize">
-          <number>4</number>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>20</number>
-         </attribute>
-         <attribute name="verticalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="verticalHeaderMinimumSectionSize">
-          <number>16</number>
-         </attribute>
-         <row>
-          <property name="text">
-           <string>soil water grav.</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>pressure heads</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>Nmin</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>soil H20 sensor cal.</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>H2O flux bot root</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>N flux bot root</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>min Data</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. org./layers</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. observat.</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Weight Points</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>replicates</string>
-          </property>
-         </column>
-         <item row="1" column="0">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-        </widget>
+      </widget>
+      <widget class="QTableWidget" name="tblSurfaceFluxes">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>340</y>
+         <width>561</width>
+         <height>121</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderDefaultSectionSize">
+        <number>100</number>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="horizontalHeaderMinimumSectionSize">
+        <number>4</number>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>20</number>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderMinimumSectionSize">
+        <number>16</number>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>ET</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>NH3 Loss</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>N2O Loss</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>N2 Loss</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>CH4 Loss</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>min Data</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. org./layers</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. observat.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Weight Points</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>replicates</string>
+        </property>
+       </column>
+       <item row="1" column="0">
+        <property name="text">
+         <string/>
+        </property>
        </item>
-       <item row="2" column="0" colspan="2">
-        <widget class="QTableWidget" name="tblSurfaceFluxes">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="alternatingRowColors">
-          <bool>true</bool>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderDefaultSectionSize">
-          <number>100</number>
-         </attribute>
-         <attribute name="horizontalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="horizontalHeaderMinimumSectionSize">
-          <number>4</number>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>20</number>
-         </attribute>
-         <attribute name="verticalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="verticalHeaderMinimumSectionSize">
-          <number>16</number>
-         </attribute>
-         <row>
-          <property name="text">
-           <string>ET</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>NH3 Loss</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>N2O Loss</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>N2 Loss</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>CH4 Loss</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>min Data</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. org./layers</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. observat.</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Weight Points</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>replicates</string>
-          </property>
-         </column>
-         <item row="1" column="0">
-          <property name="text">
-           <string/>
-          </property>
-         </item>
-        </widget>
-       </item>
-       <item row="3" column="0" colspan="2">
-        <widget class="QTableWidget" name="tblObservations">
-         <property name="font">
-          <font>
-           <pointsize>10</pointsize>
-          </font>
-         </property>
-         <property name="frameShape">
-          <enum>QFrame::NoFrame</enum>
-         </property>
-         <property name="frameShadow">
-          <enum>QFrame::Plain</enum>
-         </property>
-         <property name="alternatingRowColors">
-          <bool>true</bool>
-         </property>
-         <attribute name="horizontalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="horizontalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="verticalHeaderVisible">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderCascadingSectionResizes">
-          <bool>false</bool>
-         </attribute>
-         <attribute name="verticalHeaderDefaultSectionSize">
-          <number>20</number>
-         </attribute>
-         <attribute name="verticalHeaderHighlightSections">
-          <bool>true</bool>
-         </attribute>
-         <attribute name="verticalHeaderStretchLastSection">
-          <bool>false</bool>
-         </attribute>
-         <row>
-          <property name="text">
-           <string>lodging</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>pests/diseases</string>
-          </property>
-         </row>
-         <row>
-          <property name="text">
-           <string>damages</string>
-          </property>
-         </row>
-         <column>
-          <property name="text">
-           <string>min Data</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. org./layers</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>no. observat.</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>Weight Points</string>
-          </property>
-         </column>
-         <column>
-          <property name="text">
-           <string>replicates</string>
-          </property>
-         </column>
-        </widget>
-       </item>
-       <item row="4" column="0">
-        <widget class="QLabel" name="lblKnownDatasetsStateVars">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QComboBox" name="cbStateVars"/>
-       </item>
-      </layout>
+      </widget>
+      <widget class="QTableWidget" name="tblObservations">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>485</y>
+         <width>591</width>
+         <height>81</height>
+        </rect>
+       </property>
+       <property name="font">
+        <font>
+         <pointsize>10</pointsize>
+        </font>
+       </property>
+       <property name="frameShape">
+        <enum>QFrame::NoFrame</enum>
+       </property>
+       <property name="frameShadow">
+        <enum>QFrame::Plain</enum>
+       </property>
+       <property name="alternatingRowColors">
+        <bool>true</bool>
+       </property>
+       <attribute name="horizontalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="horizontalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderVisible">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderCascadingSectionResizes">
+        <bool>false</bool>
+       </attribute>
+       <attribute name="verticalHeaderDefaultSectionSize">
+        <number>20</number>
+       </attribute>
+       <attribute name="verticalHeaderHighlightSections">
+        <bool>true</bool>
+       </attribute>
+       <attribute name="verticalHeaderStretchLastSection">
+        <bool>false</bool>
+       </attribute>
+       <row>
+        <property name="text">
+         <string>lodging</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>pests/diseases</string>
+        </property>
+       </row>
+       <row>
+        <property name="text">
+         <string>damages</string>
+        </property>
+       </row>
+       <column>
+        <property name="text">
+         <string>min Data</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. org./layers</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>no. observat.</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>Weight Points</string>
+        </property>
+       </column>
+       <column>
+        <property name="text">
+         <string>replicates</string>
+        </property>
+       </column>
+      </widget>
+      <widget class="QLabel" name="lblKnownDatasetsStateVars">
+       <property name="geometry">
+        <rect>
+         <x>20</x>
+         <y>576</y>
+         <width>101</width>
+         <height>16</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Known Datasets</string>
+       </property>
+      </widget>
+      <widget class="QComboBox" name="cbStateVars">
+       <property name="geometry">
+        <rect>
+         <x>346</x>
+         <y>574</y>
+         <width>111</width>
+         <height>26</height>
+        </rect>
+       </property>
+      </widget>
      </widget>
     </widget>
    </item>
