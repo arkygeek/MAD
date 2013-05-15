@@ -48,7 +48,7 @@ void MadDataClassification::changeEvent(QEvent *e)
     }
 }
 
-void MadDataClassification::on_groupBox_clicked()
+void MadDataClassification::on_gbxCultivation_clicked()
 {
     // if values are editable, should not be able to select for any
     // examples to be shown as it will destroy destroy current settings
@@ -196,7 +196,7 @@ void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
     dsbTillage->setValue(myPreciseValue);
 }
 
-void MadDataClassification::on_comboBox_currentIndexChanged(const QString &theIndex)
+void MadDataClassification::on_cbCultivation_currentIndexChanged(const QString &theIndex)
 {
     QString myIndex=theIndex;
     //this will do something...

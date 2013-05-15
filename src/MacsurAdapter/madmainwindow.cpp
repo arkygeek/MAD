@@ -32,11 +32,7 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     setupUi(this);
-    lblVersion->setText(
-                         QString("Version: %1").arg(VERSION)
-                         + " "
-                         + QString("$Revision: 34 $").replace("$","")
-                       );
+    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision: 34 $").replace("$",""));
 
 }
 
