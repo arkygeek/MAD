@@ -1,0 +1,14 @@
+#!/bin/sh
+echo "\nsrc:"
+find . -name "*."cpp | xargs wc -l
+echo "\n"
+find . -name "*."h | xargs wc -l
+echo "\ngui:"
+find ./gui/ -name "*."cpp | xargs wc -l
+echo "\n"
+find ./gui/ -name "*."h | xargs wc -l
+echo "\nlib:"
+find ./lib/ -name "*."cpp | xargs wc -l
+echo "\n"
+find ./lib/ -name "*."h | xargs wc -l
+
