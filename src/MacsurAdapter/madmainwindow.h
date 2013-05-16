@@ -51,14 +51,7 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
     MadDataClassification *pMadDataClassification;
 
   public slots:
-    // examples listed below
-    // void on_checkBox_clicked(bool theBool)
-    // void on_pushButton_clicked();
-    /**
-     * @brief loadModels
-     * Refreshes the list of known models
-     */
-    //void loadModels();
+
 
   protected:
     /**
@@ -69,11 +62,8 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
 
   private slots:
     /**
-     * @brief on_trvwCurrentInventory_clicked
-     * triggers loading of model details for display
-     * @param index
+     * @brief on_pbClassification_clicked
      */
-    void on_trvwCurrentInventory_clicked(const QModelIndex &index);
     void on_pbClassification_clicked();
 
     /**
@@ -83,7 +73,23 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
      * @param theSelection
      */
     void on_cbAboutMain_currentIndexChanged(const QString &theSelection);
+
+    /**
+     * @brief on_pbViewAsText_clicked show model info in new dialog as plain text
+     */
     void on_pbViewAsText_clicked();
+
+    /**
+     * @brief on_actionOpen_triggered launches open file dialog to load settings
+     */
+    void on_actionOpen_triggered();
+
+    /**
+     * @brief on_lvwCurrentInventoryModels_clicked
+     * triggers loading of model details for display in
+     * @param theIndex
+     */
+    void on_lvwCurrentInventoryModels_clicked(const QModelIndex &theIndex);
 };
 
 #endif // MADMAINWINDOW_H

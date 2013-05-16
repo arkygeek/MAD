@@ -52,10 +52,7 @@ void MadMainWindow::changeEvent(QEvent *e)
     }
 }
 
-void MadMainWindow::on_trvwCurrentInventory_clicked(const QModelIndex &index)
-{
-    qDebug() << index; //the tree viewer was clicked
-}
+
 
 //void MadMainWindow::loadModels(MadModelMap *theModelMap);
 //{
@@ -83,4 +80,16 @@ void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelecti
 void MadMainWindow::on_pbViewAsText_clicked()
 {
   // display model info in new dialog as plain text
+}
+
+void MadMainWindow::on_actionOpen_triggered()
+{
+  //Open file dialog from main menu bar
+
+}
+
+void MadMainWindow::on_lvwCurrentInventoryModels_clicked(const QModelIndex &theIndex)
+{
+  // triggers loading of model details for display in treevwModelSpecsModels
+  QModelIndex myModelIndex = theIndex;
 }
