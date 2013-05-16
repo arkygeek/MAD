@@ -75,6 +75,16 @@ void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelecti
 {
   // update the text to correspond with the combo box selection
   QString mySelection = theSelection;
+  if (theSelection == "About") loadTextFile("about");
+  if (theSelection == "CropM") loadTextFile("cropm");
+  if (theSelection == "LiveM") loadTextFile("livem");
+  if (theSelection == "TradeM") loadTextFile("tradem");
+  if (theSelection == "Credits")
+  {
+    plainTextEdit->clear();
+    plainTextEdit->appendPlainText("how vain!");
+    plainTextEdit->setUndoRedoEnabled(false);
+  }
 }
 
 void MadMainWindow::on_pbViewAsText_clicked()
@@ -93,3 +103,17 @@ void MadMainWindow::on_lvwCurrentInventoryModels_clicked(const QModelIndex &theI
   // triggers loading of model details for display in treevwModelSpecsModels
   QModelIndex myModelIndex = theIndex;
 }
+
+void MadMainWindow::loadTextFile(const QString &theFileToLoad)
+ {
+   QString myFilename = "://" + theFileToLoad + ".txt";
+   QFile inputFile(myFilename);
+   inputFile.open(QIODevice::ReadOnly);
+   QTextStream in(&inputFile);
+   QString line = in.readAll();
+   inputFile.close();
+
+   plainTextEdit->clear();
+   plainTextEdit->appendPlainText(line);
+   plainTextEdit->setUndoRedoEnabled(false);
+ }

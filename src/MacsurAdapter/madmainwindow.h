@@ -90,6 +90,12 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
      * @param theIndex
      */
     void on_lvwCurrentInventoryModels_clicked(const QModelIndex &theIndex);
+
+    /**
+     * @brief loadTextFile to display in the 'about' text display on main page
+     * @param theFileToLoad
+     */
+    void loadTextFile(const QString &theFileToLoad);
 };
 
 #endif // MADMAINWINDOW_H

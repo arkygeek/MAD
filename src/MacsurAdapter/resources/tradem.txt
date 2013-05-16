@@ -1,0 +1,3 @@
+TradeM aims at promoting the enhancement and deployment of economic models, a better integration of crop- and livestock production into them and more insights into adaptation and mitigation measures and strategies. Moreover, the structure of the work packages aims at a focused exchange of ideas, better insights and conclusions of those involved and offering a forum for researchers, stakeholders and policymakers.
+
+A main challenge to TradeM is finding appropriate methods of generalization (scaling) of outputs of models at different levels, starting at farm level and up until European and global scales. Such upscaling will enable appropriate integration of different models that exist.

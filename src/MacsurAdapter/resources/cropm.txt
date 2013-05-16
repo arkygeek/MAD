@@ -1,0 +1,7 @@
+The work of CropM can be structured into three phases:
+
+Phase I: improve capabilities of crop model application for risk assessment including upscaling, model linking capabilities and better understanding and quantification of model uncertainties
+
+Phase II: demonstrate model improvement, advanced methods of upscaling and model linking and uncertainty analysis and strengthen research capacity in these fields
+
+Phase III: develop strategies for future research within Europe on crop modelling for improved climatic risk assessment

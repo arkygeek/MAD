@@ -1,5 +1,9 @@
 <RCC>
     <qresource prefix="/">
         <file>MADCircle.png</file>
+        <file>about.txt</file>
+        <file>tradem.txt</file>
+        <file>livem.txt</file>
+        <file>cropm.txt</file>
     </qresource>
 </RCC>

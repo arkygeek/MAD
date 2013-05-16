@@ -1,0 +1,5 @@
+This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
+
+It provides a common platform to describe, evaluate and integrate models and datasets.
+
+It is open source (GPL V.3) and written in C++/Qt (v4.8)

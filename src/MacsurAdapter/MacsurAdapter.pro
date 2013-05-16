@@ -36,3 +36,9 @@ FORMS    += madmainwindowbase.ui \
 
 RESOURCES += \
     resources/resources.qrc
+
+OTHER_FILES += \
+    resources/about.txt \
+    resources/cropm.txt \
+    resources/livem.txt \
+    resources/tradem.txt
