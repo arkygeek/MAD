@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>528</height>
+    <height>579</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -4342,9 +4342,17 @@
        <item row="0" column="0" colspan="2">
         <widget class="QToolBox" name="toolBox">
          <property name="currentIndex">
-          <number>2</number>
+          <number>0</number>
          </property>
          <widget class="QWidget" name="pageSoil">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>650</width>
+            <height>298</height>
+           </rect>
+          </property>
           <attribute name="label">
            <string>Soil</string>
           </attribute>
@@ -4581,8 +4589,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>650</width>
-            <height>283</height>
+            <width>602</width>
+            <height>280</height>
            </rect>
           </property>
           <attribute name="label">
@@ -4803,6 +4811,14 @@
           </layout>
          </widget>
          <widget class="QWidget" name="surfaceFluxesPage">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>650</width>
+            <height>298</height>
+           </rect>
+          </property>
           <attribute name="label">
            <string>Surface Fluxes</string>
           </attribute>
@@ -5016,7 +5032,6 @@
                <widget class="QSpinBox" name="spinBox_66"/>
               </item>
              </layout>
-             <zorder>gbxCropStateVars</zorder>
              <zorder>spinBox_49</zorder>
              <zorder>spinBox_50</zorder>
              <zorder>checkBox_13</zorder>
@@ -5072,8 +5087,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>650</width>
-            <height>283</height>
+            <width>602</width>
+            <height>280</height>
            </rect>
           </property>
           <attribute name="label">
