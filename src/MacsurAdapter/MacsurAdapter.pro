@@ -33,3 +33,6 @@ HEADERS  += madmainwindow.h \
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \
+
+RESOURCES += \
+    resources/resources.qrc

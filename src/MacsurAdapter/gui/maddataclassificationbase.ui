@@ -7,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>720</width>
-    <height>663</height>
+    <height>528</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
-   <item row="0" column="0">
+   <item row="0" column="0" colspan="2">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
-      <number>7</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabCultivation">
       <attribute name="title">
@@ -4338,438 +4338,1117 @@
       <attribute name="title">
        <string>State Vars</string>
       </attribute>
-      <widget class="QTableWidget" name="tblCrop">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>12</y>
-         <width>601</width>
-         <height>141</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
-       <property name="alternatingRowColors">
-        <bool>true</bool>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>100</number>
-       </attribute>
-       <attribute name="horizontalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>20</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>a.gr. biomass</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>weight organs</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>root biomass</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>N in a.gr.biomass</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>N in organs</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>LAI</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>min Data</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. org./layers</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. observat.</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Weight Points</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>replicates</string>
-        </property>
-       </column>
-      </widget>
-      <widget class="QTableWidget" name="tblSoil">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>190</y>
-         <width>611</width>
-         <height>141</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
-       <property name="alternatingRowColors">
-        <bool>true</bool>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>100</number>
-       </attribute>
-       <attribute name="horizontalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="horizontalHeaderMinimumSectionSize">
-        <number>4</number>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>20</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderMinimumSectionSize">
-        <number>16</number>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>soil water grav.</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>pressure heads</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>Nmin</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>soil H20 sensor cal.</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>H2O flux bot root</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>N flux bot root</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>min Data</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. org./layers</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. observat.</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Weight Points</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>replicates</string>
-        </property>
-       </column>
-       <item row="1" column="0">
-        <property name="text">
-         <string/>
-        </property>
+      <layout class="QGridLayout" name="gridLayout_11">
+       <item row="0" column="0" colspan="2">
+        <widget class="QToolBox" name="toolBox">
+         <property name="currentIndex">
+          <number>2</number>
+         </property>
+         <widget class="QWidget" name="pageSoil">
+          <attribute name="label">
+           <string>Soil</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_12">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="gbxSoilStateVars">
+             <property name="title">
+              <string>Soil</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_10">
+              <item row="6" column="6">
+               <widget class="QSpinBox" name="spinBox_20"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QCheckBox" name="checkBox_3">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_2">
+                <property name="text">
+                 <string>weight organs</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_6">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QCheckBox" name="checkBox_6">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="spinBox_11"/>
+              </item>
+              <item row="2" column="4">
+               <widget class="QSpinBox" name="spinBox_17"/>
+              </item>
+              <item row="6" column="2">
+               <widget class="QSpinBox" name="spinBox_6"/>
+              </item>
+              <item row="6" column="3">
+               <widget class="QSpinBox" name="spinBox_7"/>
+              </item>
+              <item row="5" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
+              </item>
+              <item row="5" column="6">
+               <widget class="QSpinBox" name="spinBox_24"/>
+              </item>
+              <item row="3" column="6">
+               <widget class="QSpinBox" name="spinBox_21"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_4">
+                <property name="text">
+                 <string>N in a.gr.biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="3">
+               <widget class="QSpinBox" name="spinBox_9"/>
+              </item>
+              <item row="4" column="4">
+               <widget class="QSpinBox" name="spinBox_15"/>
+              </item>
+              <item row="6" column="4">
+               <widget class="QSpinBox" name="spinBox_13"/>
+              </item>
+              <item row="6" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_6"/>
+              </item>
+              <item row="2" column="6">
+               <widget class="QSpinBox" name="spinBox_22"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_3">
+                <property name="text">
+                 <string>root biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="spinBox_12"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QSpinBox" name="spinBox_18"/>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="spinBox_8"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label">
+                <property name="text">
+                 <string>a.gr. biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_5">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QSpinBox" name="spinBox_5"/>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="spinBox_10"/>
+              </item>
+              <item row="4" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
+              </item>
+              <item row="4" column="6">
+               <widget class="QSpinBox" name="spinBox_23"/>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="spinBox_3"/>
+              </item>
+              <item row="3" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
+              </item>
+              <item row="2" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
+              </item>
+              <item row="5" column="4">
+               <widget class="QSpinBox" name="spinBox_16"/>
+              </item>
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="spinBox_2"/>
+              </item>
+              <item row="2" column="1">
+               <widget class="QCheckBox" name="checkBox_2">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="4">
+               <widget class="QSpinBox" name="spinBox_14"/>
+              </item>
+              <item row="1" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox"/>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="checkBox_5">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="checkBox_4">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QSpinBox" name="spinBox_4"/>
+              </item>
+              <item row="1" column="6">
+               <widget class="QSpinBox" name="spinBox_19"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QCheckBox" name="checkBox">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_7">
+                <property name="text">
+                 <string>Layers</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_9">
+                <property name="text">
+                 <string>Observations</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="label_10">
+                <property name="text">
+                 <string>Weight Pts</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="5">
+               <widget class="QLabel" name="label_11">
+                <property name="text">
+                 <string>Replicates</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="6">
+               <widget class="QLabel" name="label_12">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_8">
+                <property name="text">
+                 <string>Min.Data</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageCrop">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>650</width>
+            <height>283</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Crop</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_14">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="gbxCropStateVars">
+             <property name="title">
+              <string>Crop</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_13">
+              <item row="0" column="4">
+               <widget class="QLabel" name="label_18">
+                <property name="text">
+                 <string>Weight Pts</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="spinBox_43"/>
+              </item>
+              <item row="1" column="1">
+               <widget class="QCheckBox" name="checkBox_9">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="spinBox_38"/>
+              </item>
+              <item row="6" column="4">
+               <widget class="QSpinBox" name="spinBox_41"/>
+              </item>
+              <item row="6" column="6">
+               <widget class="QSpinBox" name="spinBox_42"/>
+              </item>
+              <item row="5" column="6">
+               <widget class="QSpinBox" name="spinBox_40"/>
+              </item>
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_19">
+                <property name="text">
+                 <string>Min.Data</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_13">
+                <property name="text">
+                 <string>Layers</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QCheckBox" name="checkBox_8">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="6">
+               <widget class="QSpinBox" name="spinBox_45"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QSpinBox" name="spinBox_30"/>
+              </item>
+              <item row="2" column="4">
+               <widget class="QSpinBox" name="spinBox_48"/>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_22">
+                <property name="text">
+                 <string>Observations</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_11"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_15">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="4">
+               <widget class="QSpinBox" name="spinBox_25"/>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="checkBox_12">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="spinBox_26"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="spinBox_36"/>
+              </item>
+              <item row="5" column="2">
+               <widget class="QSpinBox" name="spinBox_47"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_20">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QCheckBox" name="checkBox_11">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_12"/>
+              </item>
+              <item row="2" column="6">
+               <widget class="QSpinBox" name="spinBox_35"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_21">
+                <property name="text">
+                 <string>root biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="spinBox_46"/>
+              </item>
+              <item row="3" column="1">
+               <widget class="QCheckBox" name="checkBox_10">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QSpinBox" name="spinBox_28"/>
+              </item>
+              <item row="5" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_8"/>
+              </item>
+              <item row="5" column="4">
+               <widget class="QSpinBox" name="spinBox_37"/>
+              </item>
+              <item row="4" column="6">
+               <widget class="QSpinBox" name="spinBox_31"/>
+              </item>
+              <item row="4" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_7"/>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="checkBox_7">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_9"/>
+              </item>
+              <item row="1" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_10"/>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_17">
+                <property name="text">
+                 <string>a.gr. biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="spinBox_34"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_14">
+                <property name="text">
+                 <string>weight organs</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox_39"/>
+              </item>
+              <item row="3" column="6">
+               <widget class="QSpinBox" name="spinBox_27"/>
+              </item>
+              <item row="1" column="4">
+               <widget class="QSpinBox" name="spinBox_32"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QSpinBox" name="spinBox_44"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_16">
+                <property name="text">
+                 <string>N in a.gr.biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QSpinBox" name="spinBox_33"/>
+              </item>
+              <item row="6" column="3">
+               <widget class="QSpinBox" name="spinBox_29"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="surfaceFluxesPage">
+          <attribute name="label">
+           <string>Surface Fluxes</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_15">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="gbxSurfaceFluxesStateVars">
+             <property name="title">
+              <string>Surface Fluxes</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_18">
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_29">
+                <property name="text">
+                 <string>Min.Data</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_23">
+                <property name="text">
+                 <string>Layers</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_32">
+                <property name="text">
+                 <string>Observations</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="label_28">
+                <property name="text">
+                 <string>Weight Pts</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_27">
+                <property name="text">
+                 <string>a.gr. biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QCheckBox" name="checkBox_15">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox_63"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="spinBox_62"/>
+              </item>
+              <item row="1" column="4">
+               <widget class="QSpinBox" name="spinBox_56"/>
+              </item>
+              <item row="1" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_16"/>
+              </item>
+              <item row="1" column="6">
+               <widget class="QSpinBox" name="spinBox_69"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_24">
+                <property name="text">
+                 <string>weight organs</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QCheckBox" name="checkBox_14">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="spinBox_70"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="spinBox_50"/>
+              </item>
+              <item row="2" column="4">
+               <widget class="QSpinBox" name="spinBox_72"/>
+              </item>
+              <item row="2" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_17"/>
+              </item>
+              <item row="2" column="6">
+               <widget class="QSpinBox" name="spinBox_59"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_31">
+                <property name="text">
+                 <string>root biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QCheckBox" name="checkBox_16">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="spinBox_67"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="spinBox_60"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QSpinBox" name="spinBox_54"/>
+              </item>
+              <item row="3" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_15"/>
+              </item>
+              <item row="3" column="6">
+               <widget class="QSpinBox" name="spinBox_51"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_26">
+                <property name="text">
+                 <string>N in a.gr.biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="checkBox_18">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QSpinBox" name="spinBox_57"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QSpinBox" name="spinBox_68"/>
+              </item>
+              <item row="4" column="4">
+               <widget class="QSpinBox" name="spinBox_49"/>
+              </item>
+              <item row="4" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_13"/>
+              </item>
+              <item row="4" column="6">
+               <widget class="QSpinBox" name="spinBox_55"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_30">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="checkBox_13">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QSpinBox" name="spinBox_71"/>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="spinBox_58"/>
+              </item>
+              <item row="5" column="4">
+               <widget class="QSpinBox" name="spinBox_61"/>
+              </item>
+              <item row="5" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_14"/>
+              </item>
+              <item row="5" column="6">
+               <widget class="QSpinBox" name="spinBox_64"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_25">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QCheckBox" name="checkBox_17">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QSpinBox" name="spinBox_52"/>
+              </item>
+              <item row="6" column="3">
+               <widget class="QSpinBox" name="spinBox_53"/>
+              </item>
+              <item row="6" column="4">
+               <widget class="QSpinBox" name="spinBox_65"/>
+              </item>
+              <item row="6" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_18"/>
+              </item>
+              <item row="6" column="6">
+               <widget class="QSpinBox" name="spinBox_66"/>
+              </item>
+             </layout>
+             <zorder>gbxCropStateVars</zorder>
+             <zorder>spinBox_49</zorder>
+             <zorder>spinBox_50</zorder>
+             <zorder>checkBox_13</zorder>
+             <zorder>spinBox_51</zorder>
+             <zorder>checkBox_14</zorder>
+             <zorder>spinBox_52</zorder>
+             <zorder>spinBox_53</zorder>
+             <zorder>spinBox_54</zorder>
+             <zorder>spinBox_55</zorder>
+             <zorder>label_23</zorder>
+             <zorder>label_24</zorder>
+             <zorder>label_25</zorder>
+             <zorder>label_26</zorder>
+             <zorder>doubleSpinBox_13</zorder>
+             <zorder>spinBox_56</zorder>
+             <zorder>spinBox_57</zorder>
+             <zorder>doubleSpinBox_14</zorder>
+             <zorder>spinBox_58</zorder>
+             <zorder>label_27</zorder>
+             <zorder>doubleSpinBox_15</zorder>
+             <zorder>checkBox_15</zorder>
+             <zorder>label_28</zorder>
+             <zorder>spinBox_59</zorder>
+             <zorder>spinBox_60</zorder>
+             <zorder>spinBox_61</zorder>
+             <zorder>label_29</zorder>
+             <zorder>label_30</zorder>
+             <zorder>spinBox_62</zorder>
+             <zorder>spinBox_63</zorder>
+             <zorder>spinBox_64</zorder>
+             <zorder>spinBox_65</zorder>
+             <zorder>doubleSpinBox_16</zorder>
+             <zorder>spinBox_66</zorder>
+             <zorder>spinBox_67</zorder>
+             <zorder>spinBox_68</zorder>
+             <zorder>spinBox_69</zorder>
+             <zorder>spinBox_70</zorder>
+             <zorder>doubleSpinBox_17</zorder>
+             <zorder>spinBox_71</zorder>
+             <zorder>checkBox_16</zorder>
+             <zorder>doubleSpinBox_18</zorder>
+             <zorder>label_31</zorder>
+             <zorder>label_32</zorder>
+             <zorder>spinBox_72</zorder>
+             <zorder>checkBox_17</zorder>
+             <zorder>checkBox_18</zorder>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+         <widget class="QWidget" name="pageObservations">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>0</y>
+            <width>650</width>
+            <height>283</height>
+           </rect>
+          </property>
+          <attribute name="label">
+           <string>Observations</string>
+          </attribute>
+          <layout class="QGridLayout" name="gridLayout_16">
+           <item row="0" column="0">
+            <widget class="QGroupBox" name="gbxSurfaceFluxesStateVars_2">
+             <property name="title">
+              <string>Observations</string>
+             </property>
+             <layout class="QGridLayout" name="gridLayout_17">
+              <item row="0" column="1">
+               <widget class="QLabel" name="label_39">
+                <property name="text">
+                 <string>Min.Data</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="2">
+               <widget class="QLabel" name="label_33">
+                <property name="text">
+                 <string>Layers</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="3">
+               <widget class="QLabel" name="label_42">
+                <property name="text">
+                 <string>Observations</string>
+                </property>
+               </widget>
+              </item>
+              <item row="0" column="4">
+               <widget class="QLabel" name="label_38">
+                <property name="text">
+                 <string>Weight Pts</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="0">
+               <widget class="QLabel" name="label_37">
+                <property name="text">
+                 <string>a.gr. biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="1">
+               <widget class="QCheckBox" name="checkBox_21">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="1" column="2">
+               <widget class="QSpinBox" name="spinBox_87"/>
+              </item>
+              <item row="1" column="3">
+               <widget class="QSpinBox" name="spinBox_86"/>
+              </item>
+              <item row="1" column="4">
+               <widget class="QSpinBox" name="spinBox_80"/>
+              </item>
+              <item row="1" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_22"/>
+              </item>
+              <item row="1" column="6">
+               <widget class="QSpinBox" name="spinBox_93"/>
+              </item>
+              <item row="2" column="0">
+               <widget class="QLabel" name="label_34">
+                <property name="text">
+                 <string>weight organs</string>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="1">
+               <widget class="QCheckBox" name="checkBox_20">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="2" column="2">
+               <widget class="QSpinBox" name="spinBox_94"/>
+              </item>
+              <item row="2" column="3">
+               <widget class="QSpinBox" name="spinBox_74"/>
+              </item>
+              <item row="2" column="4">
+               <widget class="QSpinBox" name="spinBox_96"/>
+              </item>
+              <item row="2" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_23"/>
+              </item>
+              <item row="2" column="6">
+               <widget class="QSpinBox" name="spinBox_83"/>
+              </item>
+              <item row="3" column="0">
+               <widget class="QLabel" name="label_41">
+                <property name="text">
+                 <string>root biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="1">
+               <widget class="QCheckBox" name="checkBox_22">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="3" column="2">
+               <widget class="QSpinBox" name="spinBox_91"/>
+              </item>
+              <item row="3" column="3">
+               <widget class="QSpinBox" name="spinBox_84"/>
+              </item>
+              <item row="3" column="4">
+               <widget class="QSpinBox" name="spinBox_78"/>
+              </item>
+              <item row="3" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_21"/>
+              </item>
+              <item row="3" column="6">
+               <widget class="QSpinBox" name="spinBox_75"/>
+              </item>
+              <item row="4" column="0">
+               <widget class="QLabel" name="label_36">
+                <property name="text">
+                 <string>N in a.gr.biomass</string>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="1">
+               <widget class="QCheckBox" name="checkBox_24">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="4" column="2">
+               <widget class="QSpinBox" name="spinBox_81"/>
+              </item>
+              <item row="4" column="3">
+               <widget class="QSpinBox" name="spinBox_92"/>
+              </item>
+              <item row="4" column="4">
+               <widget class="QSpinBox" name="spinBox_73"/>
+              </item>
+              <item row="4" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_19"/>
+              </item>
+              <item row="4" column="6">
+               <widget class="QSpinBox" name="spinBox_79"/>
+              </item>
+              <item row="5" column="0">
+               <widget class="QLabel" name="label_40">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="1">
+               <widget class="QCheckBox" name="checkBox_19">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="5" column="2">
+               <widget class="QSpinBox" name="spinBox_95"/>
+              </item>
+              <item row="5" column="3">
+               <widget class="QSpinBox" name="spinBox_82"/>
+              </item>
+              <item row="5" column="4">
+               <widget class="QSpinBox" name="spinBox_85"/>
+              </item>
+              <item row="5" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_20"/>
+              </item>
+              <item row="5" column="6">
+               <widget class="QSpinBox" name="spinBox_88"/>
+              </item>
+              <item row="6" column="0">
+               <widget class="QLabel" name="label_35">
+                <property name="text">
+                 <string>TextLabel</string>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="1">
+               <widget class="QCheckBox" name="checkBox_23">
+                <property name="text">
+                 <string/>
+                </property>
+               </widget>
+              </item>
+              <item row="6" column="2">
+               <widget class="QSpinBox" name="spinBox_76"/>
+              </item>
+              <item row="6" column="3">
+               <widget class="QSpinBox" name="spinBox_77"/>
+              </item>
+              <item row="6" column="4">
+               <widget class="QSpinBox" name="spinBox_89"/>
+              </item>
+              <item row="6" column="5">
+               <widget class="QDoubleSpinBox" name="doubleSpinBox_24"/>
+              </item>
+              <item row="6" column="6">
+               <widget class="QSpinBox" name="spinBox_90"/>
+              </item>
+             </layout>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
        </item>
-      </widget>
-      <widget class="QTableWidget" name="tblSurfaceFluxes">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>340</y>
-         <width>561</width>
-         <height>121</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
-       <property name="alternatingRowColors">
-        <bool>true</bool>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderDefaultSectionSize">
-        <number>100</number>
-       </attribute>
-       <attribute name="horizontalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="horizontalHeaderMinimumSectionSize">
-        <number>4</number>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>20</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderMinimumSectionSize">
-        <number>16</number>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>ET</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>NH3 Loss</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>N2O Loss</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>N2 Loss</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>CH4 Loss</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>min Data</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. org./layers</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. observat.</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Weight Points</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>replicates</string>
-        </property>
-       </column>
-       <item row="1" column="0">
-        <property name="text">
-         <string/>
-        </property>
+       <item row="1" column="0" alignment="Qt::AlignRight">
+        <widget class="QLabel" name="lblKnownDatasetsStateVars">
+         <property name="text">
+          <string>Known Datasets</string>
+         </property>
+        </widget>
        </item>
-      </widget>
-      <widget class="QTableWidget" name="tblObservations">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>485</y>
-         <width>591</width>
-         <height>81</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <pointsize>10</pointsize>
-        </font>
-       </property>
-       <property name="frameShape">
-        <enum>QFrame::NoFrame</enum>
-       </property>
-       <property name="frameShadow">
-        <enum>QFrame::Plain</enum>
-       </property>
-       <property name="alternatingRowColors">
-        <bool>true</bool>
-       </property>
-       <attribute name="horizontalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="horizontalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderVisible">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderCascadingSectionResizes">
-        <bool>false</bool>
-       </attribute>
-       <attribute name="verticalHeaderDefaultSectionSize">
-        <number>20</number>
-       </attribute>
-       <attribute name="verticalHeaderHighlightSections">
-        <bool>true</bool>
-       </attribute>
-       <attribute name="verticalHeaderStretchLastSection">
-        <bool>false</bool>
-       </attribute>
-       <row>
-        <property name="text">
-         <string>lodging</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>pests/diseases</string>
-        </property>
-       </row>
-       <row>
-        <property name="text">
-         <string>damages</string>
-        </property>
-       </row>
-       <column>
-        <property name="text">
-         <string>min Data</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. org./layers</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>no. observat.</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>Weight Points</string>
-        </property>
-       </column>
-       <column>
-        <property name="text">
-         <string>replicates</string>
-        </property>
-       </column>
-      </widget>
-      <widget class="QLabel" name="lblKnownDatasetsStateVars">
-       <property name="geometry">
-        <rect>
-         <x>20</x>
-         <y>576</y>
-         <width>101</width>
-         <height>16</height>
-        </rect>
-       </property>
-       <property name="text">
-        <string>Known Datasets</string>
-       </property>
-      </widget>
-      <widget class="QComboBox" name="cbStateVars">
-       <property name="geometry">
-        <rect>
-         <x>346</x>
-         <y>574</y>
-         <width>111</width>
-         <height>26</height>
-        </rect>
-       </property>
-      </widget>
+       <item row="1" column="1">
+        <widget class="QComboBox" name="cbStateVars"/>
+       </item>
+      </layout>
      </widget>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QComboBox" name="comboBox">
+     <item>
+      <property name="text">
+       <string>Select Theme</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CropM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>LiveM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>TradeM</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Climate</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Other</string>
+      </property>
+     </item>
+    </widget>
+   </item>
+   <item row="1" column="1">
+    <widget class="QComboBox" name="modelNameComboBox">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="currentIndex">
+      <number>0</number>
+     </property>
+     <property name="modelColumn">
+      <number>0</number>
+     </property>
+     <item>
+      <property name="text">
+       <string>Select Dataset</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CMAP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>I-COADS</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>CRU TS 2.0</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Dai</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>HadISST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Hulme (CRU)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jones (CRU) Air Temperature</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Jones (CRU) SLP</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kaplan (SLP)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Kaplan (SST)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>NCAR Sea Level Pressure</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>NCEP/NCAR Reanalysis</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Reynold Reconstructed SST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Reynolds Optimum Interpolation (OI) SST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
+      </property>
+     </item>
+     <item>
+      <property name="text">
+       <string>Other</string>
+      </property>
+     </item>
     </widget>
    </item>
   </layout>

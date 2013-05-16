@@ -75,6 +75,15 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
      */
     void on_trvwCurrentInventory_clicked(const QModelIndex &index);
     void on_pbClassification_clicked();
+
+    /**
+     * @brief on_cbAboutMain_currentIndexChanged
+     * Updates the text in the text browser to reflect relevant info chosen
+     * in the combo box.  Options are About, CropM, LiveM, TradeM, Credits
+     * @param theSelection
+     */
+    void on_cbAboutMain_currentIndexChanged(const QString &theSelection);
+    void on_pbViewAsText_clicked();
 };
 
 #endif // MADMAINWINDOW_H

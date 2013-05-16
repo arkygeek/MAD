@@ -22,6 +22,8 @@
 #include <QModelIndex>
 #include <QDebug>
 #include <QTreeView>
+#include <QPixmap>
+#include <QGraphicsObject>
 
 //Local includes
 #include "madmainwindow.h"
@@ -32,7 +34,8 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     setupUi(this);
-    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision: 34 $").replace("$",""));
+
+    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision: 60 $").replace("$",""));
 
 }
 
@@ -69,4 +72,15 @@ void MadMainWindow::on_pbClassification_clicked()
     // launch classification form (modal-less method)
     pMadDataClassification = new MadDataClassification(this);
     pMadDataClassification->show();
+}
+
+void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelection)
+{
+  // update the text to correspond with the combo box selection
+  QString mySelection = theSelection;
+}
+
+void MadMainWindow::on_pbViewAsText_clicked()
+{
+  // display model info in new dialog as plain text
 }

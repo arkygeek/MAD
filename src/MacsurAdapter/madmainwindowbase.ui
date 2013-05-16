@@ -25,26 +25,89 @@
         <string>Main</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_4">
-        <item row="0" column="0">
-         <widget class="QGroupBox" name="groupBox">
-          <property name="sizePolicy">
-           <sizepolicy hsizetype="Preferred" vsizetype="Expanding">
-            <horstretch>0</horstretch>
-            <verstretch>0</verstretch>
-           </sizepolicy>
+        <item row="0" column="0" rowspan="2">
+         <widget class="QLabel" name="lblGraphicMain">
+          <property name="text">
+           <string/>
           </property>
-          <property name="title">
-           <string>GroupBox</string>
+          <property name="pixmap">
+           <pixmap resource="resources/resources.qrc">:/MADCircle.png</pixmap>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
           </property>
          </widget>
         </item>
-        <item row="1" column="0">
+        <item row="3" column="0">
          <widget class="QLabel" name="lblVersion">
           <property name="text">
            <string>Version Label</string>
           </property>
           <property name="alignment">
            <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cbAboutMain">
+          <item>
+           <property name="text">
+            <string>About</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CropM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>LiveM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TradeM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Credits</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+        <item row="1" column="1">
+         <widget class="QPlainTextEdit" name="plainTextEdit">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="plainText">
+           <string>This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
+
+It provides a common platform to describe, evaluate and integrate models and datasets.
+
+It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>© Jason Jorgenson 2013</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
           </property>
          </widget>
         </item>
@@ -73,14 +136,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QTreeView" name="trvwCurrentInventory">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select a model&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="whatsThis">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;All &lt;span style=&quot; font-style:italic;&quot;&gt;'known'&lt;/span&gt; models are displayed here.  When selected, the specifics will be displayed to the right.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-             </widget>
+             <widget class="QListView" name="lvwCurrentInventoryModels"/>
             </item>
             <item>
              <widget class="QGroupBox" name="grpbxWhatToShow">
@@ -173,7 +229,7 @@
              </widget>
             </item>
             <item>
-             <widget class="QColumnView" name="colvwModelSpecs"/>
+             <widget class="QTreeView" name="treevwModelSpecsModels"/>
             </item>
             <item>
              <widget class="QPushButton" name="pbViewAsText">
@@ -367,6 +423,8 @@
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
- <resources/>
+ <resources>
+  <include location="resources/resources.qrc"/>
+ </resources>
  <connections/>
 </ui>
