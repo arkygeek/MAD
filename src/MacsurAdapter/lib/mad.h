@@ -67,7 +67,7 @@ enum ModelTheme {CropM, LiveM, TradeM};
 /**
  * @brief The Scale enum
  */
-enum Scale {Farm, Locality, Region, National, International, Global};
+//enum Scale {Farm, Locality, Region, National, International, Global};
 /**
  * @brief The Nuts enum
  */
