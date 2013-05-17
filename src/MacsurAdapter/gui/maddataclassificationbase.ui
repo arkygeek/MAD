@@ -17,7 +17,7 @@
    <item row="0" column="0" colspan="2">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
-      <number>0</number>
+      <number>1</number>
      </property>
      <widget class="QWidget" name="tabCultivation">
       <attribute name="title">
@@ -4815,8 +4815,8 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>650</width>
-            <height>298</height>
+            <width>602</width>
+            <height>280</height>
            </rect>
           </property>
           <attribute name="label">

@@ -21,20 +21,26 @@
 
 #ifndef MADMAINWINDOW_H
 #define MADMAINWINDOW_H
-#include "gui/maddataclassification.h" //this is only needed if non-modal
+
 
 //Qt includes
 #include <QModelIndex>
 
 
 //Local includes
+
 #include "ui_madmainwindowbase.h"
+#include "gui/maddataclassification.h" //needed if non-modal
+#include "gui/madtextdisplayform.h" //needed if non-modal
+#include "lib/mad.h"
+
+//Doxygen stuff
+/** @file lib/mad.h */
 
 /**
  * This is the main GUI class
  * @author Jason Jorgenson
  */
-
 class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
 {
   Q_OBJECT
@@ -47,8 +53,30 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
    */
     explicit MadMainWindow(QWidget *parent = 0);
 
-  private:
-    MadDataClassification *pMadDataClassification;
+  //
+  // Accessors //
+  //
+
+  QString modelText() const;
+
+  //
+  // Mutators
+  //
+
+  void setModelText(QString theModelText);
+
+
+private:
+    MadDataClassification *mpMadDataClassification;
+    MadTextDisplayForm *mpMadTextDisplayForm;
+
+    QString mModelText;
+
+    /**
+     * @brief loadTextFile to display in the 'about' text display on main page
+     * @param theFileToLoad
+     */
+    void loadTextFile(const QString &theFileToLoad);
 
   public slots:
 
@@ -61,6 +89,8 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
     void changeEvent(QEvent *e);
 
   private slots:
+
+
     /**
      * @brief on_pbClassification_clicked
      */
@@ -91,11 +121,6 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
      */
     void on_lvwCurrentInventoryModels_clicked(const QModelIndex &theIndex);
 
-    /**
-     * @brief loadTextFile to display in the 'about' text display on main page
-     * @param theFileToLoad
-     */
-    void loadTextFile(const QString &theFileToLoad);
 };
 
 #endif // MADMAINWINDOW_H

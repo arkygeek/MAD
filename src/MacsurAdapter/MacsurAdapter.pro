@@ -19,7 +19,8 @@ SOURCES += main.cpp\
     gui/maddataclassification.cpp \
     lib/maddata.cpp \
     lib/madserialisable.cpp \
-    lib/madguid.cpp
+    lib/madguid.cpp \
+    gui/madtextdisplayform.cpp
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
@@ -29,10 +30,12 @@ HEADERS  += madmainwindow.h \
     lib/madversion.h \
     lib/maddata.h \
     lib/madserialisable.h \
-    lib/madguid.h
+    lib/madguid.h \
+    gui/madtextdisplayform.h
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \
+    gui/madtextdisplayformbase.ui
 
 RESOURCES += \
     resources/resources.qrc

@@ -18,7 +18,7 @@
     <item row="0" column="0" colspan="2">
      <widget class="QTabWidget" name="tabwidMainWin">
       <property name="currentIndex">
-       <number>0</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabMain">
        <attribute name="title">
@@ -242,7 +242,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
              </widget>
             </item>
             <item>
-             <widget class="QTreeView" name="treevwModelSpecsModels"/>
+             <widget class="QTextEdit" name="tedModelSpecsModel"/>
             </item>
             <item>
              <widget class="QPushButton" name="pbViewAsText">

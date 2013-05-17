@@ -22,7 +22,7 @@
 #ifndef MADDATA_H
 #define MADDATA_H
 
-class QString;
+class QString;  // forward declaration
 
 //Local includes
 #include "madserialisable.h"
@@ -32,69 +32,78 @@ class QString;
 //Qt includes
 #include <QString>
 
-
-/*struct dataClassificationColumns {
-  bool minData;
-  int observations;
-  double weightPoints;
-} variety, sowing, harvest, fertilisation, irrigation, seedDensity, yield, tillage;
-*/
-
+/**
+ * @brief The MadSubCategory struct
+ */
 struct MadSubCategory
 {
-    QString name;
-    bool minData;
-    float depth;
-    int observations;
-    float weightPoints;
-    int replicates;
+  //QString name;
+  bool minData;
+  float depth;
+  int observations;
+  float weightPoints;
+  int replicates;
 };
+
+/**
+ * @brief The MadCategory struct
+ */
 struct MadCategory
 {
-    QString name;
-    QList<MadSubCategory> children;
+  QString name;
+  QList<MadSubCategory> children;
 };
 
 //typedef QList <MadCategory> MadDataClassified;
 
+/**
+ * @brief The MadData class
+ */
 class MadData : public MadSerialisable, public MadGuid
 {
 public:
-    MadData();
+  MadData();
 
-    /** copy constructor */
-    MadData(const MadData& theData);
-    /** Assignement operator */
-    MadData& operator = (const MadData& theData);
+  /** copy constructor */
+  MadData(const MadData& theData);
+  /** Assignement operator */
+  MadData& operator = (const MadData& theData);
 
-      //
-      // Accessors
-      //
+  //
+  // Accessors
+  //
 
-    /** The name of this dataset */
-    QString name() const;
-    /** The description of this dataset */
-    QString description() const;
-    // /** The cultivation vars of this dataset */
-    //QString cultivationVariety() const;
-    //QString cultivationSowing() const;
-    //QString cultivationHarvest() const;
-    //QString cultivationFertilisation() const;
-    //QString cultivationIrrigation() const;
-    //QString cultivationSeedDensity() const;
-    //QString cultivationYield() const;
-    //QString cultivationTillage() const;
+  /** The name of this dataset */
+  /**
+   * @brief name (accessor) this is the dataset's name
+   * @return
+   */
+  QString name() const;
+  /**
+   * @brief description (accessor) this is the dataset's description
+   * @return
+   */
+  QString description() const;
+  // /** The cultivation vars of this dataset */
+  //QString cultivationVariety() const;
+  //QString cultivationSowing() const;
+  //QString cultivationHarvest() const;
+  //QString cultivationFertilisation() const;
+  //QString cultivationIrrigation() const;
+  //QString cultivationSeedDensity() const;
+  //QString cultivationYield() const;
+  //QString cultivationTillage() const;
 
-    //MadCategory myCategory;
+  //MadCategory myCategory;
 
 
-    /** The image file associated with the dataset */
-    QString imageFile() const;
+  /** The image file associated with the dataset */
+  QString imageFile() const;
 
 
-    //
-    // Mutators
-    //
+  //
+  // Mutators
+  //
 
   /** Set the modelName
    * @see name()
@@ -112,8 +121,7 @@ public:
   void setImageFile(QString theImageFileName);
 
   /** Return an xml representation of this layer
-   * @NOTE this class inherits the serialisable interface so
-   * it MUST implement this
+   * @note this class inherits the serialisable interface so it MUST implement this
    */
   QString toXml();
 
@@ -128,8 +136,7 @@ public:
   /** Read this object from xml and return result as
    * true for success, false for failure.
    * @see MadSerialisable
-   * @NOTE this class inherits the serialisable interface so
-   * it MUST implement this
+   * @note this class inherits the serialisable interface so it MUST implement this
    */
   bool fromXml(const QString theXml);
 

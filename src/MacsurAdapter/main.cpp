@@ -30,8 +30,6 @@
  *  example:  #include "gui/theHeader.h"                    *
  **************************************************************/
 #include "madmainwindow.h"
-//#include "lib/madmodel.h"
-//#include "lib/mad.h"
 #include "lib/madversion.h"
 
 int main(int argc, char *argv[])

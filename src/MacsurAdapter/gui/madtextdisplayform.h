@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  mad.h created: 02/05/2013                                    *
- *   Class info:                                                *
+ *   File:  madtextdisplayform.h created: 16/05/2013                                    *
+ *   Class info: MadTextDisplayForm                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,68 +19,28 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-/**
- * @file mad.h
- */
+#ifndef MADTEXTDISPLAYFORM_H
+#define MADTEXTDISPLAYFORM_H
 
-#ifndef MAD_H
-#define MAD_H
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QDialog>
+#else
+#include <QtGui/QDialog>
+#endif
 
-//Qt Includes
-#include <QMap>
-#include <QPair>
-#include <QString>
+namespace Ui {class MadTextDisplayForm;}
 
-//Local includes
-#include "madmodel.h"
-#include "maddata.h"
+class MadTextDisplayForm : public QDialog
+{
+  Q_OBJECT
+  
+public:
+  explicit MadTextDisplayForm(QWidget *parent = 0);
+  ~MadTextDisplayForm();
+  void setText(const QString &theText);
+private:
+  Ui::MadTextDisplayForm *ui;
+  QString mTheText;
+};
 
-//Doxygen stuff for includes - is this required?
-/**
- * @file madmodel.h
- * @file maddata.h
- */
-
-/**
- * @brief MadTripleMap
- */
-typedef QMap <QString,QPair<bool,QString> > MadTripleMap;
-/**
- * @brief MadModelInfo
- */
-typedef QPair <QPair<QString,QString>, QPair<QString,QString> > MadModelInfo;
-/**
- * @brief MadModelMap
- */
-//typedef QMap < QString, MadModel > MadModelMap;
-//typedef QMap <QString,QPair<QString,float> > MadReportMap;
-/**
- * @brief The ModelTheme enum
- */
-enum ModelTheme {CropM, LiveM, TradeM};
-/**
- * @brief The Scale enum
- */
-enum Scale {Farm, Locality, Regional, National, International, Global};
-/**
- * @brief The Nuts enum
- */
-enum Nuts {Nuts1, Nuts2, Nuts3};
-/**
- * @brief The AreaUnits enum
- */
-enum AreaUnits {Dunum, Hectare, Acre, SquareKm, SquareMile};
-/**
- * @brief The FileType enum
- */
-enum FileType {CSV, TAB, OtherDelimited, Binary};
-/**
- * @brief The EnergyType enum
- */
-enum EnergyType {KCalories, TDN};
-/**
- * @brief The DataClass enum
- */
-enum DataClass {Platinum, Gold, Silver, Bronze};
-
-#endif // MAD_H
+#endif // MADTEXTDISPLAYFORM_H

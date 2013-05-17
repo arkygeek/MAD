@@ -29,6 +29,7 @@
 #include "madmainwindow.h"
 #include "lib/madversion.h"
 #include "gui/maddataclassification.h"
+#include "gui/madtextdisplayform.h"
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -39,6 +40,15 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
 
 }
 
+QString MadMainWindow::modelText() const
+{
+  return mModelText;
+}
+
+void MadMainWindow::setModelText(QString theModelText)
+{
+  mModelText=theModelText;
+}
 
 void MadMainWindow::changeEvent(QEvent *e)
 {
@@ -67,18 +77,18 @@ void MadMainWindow::on_pbClassification_clicked()
     //myMadDataClassification.exec();
 
     // launch classification form (modal-less method)
-    pMadDataClassification = new MadDataClassification(this);
-    pMadDataClassification->show();
+    mpMadDataClassification = new MadDataClassification(this);
+    mpMadDataClassification->show();
 }
 
 void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelection)
 {
   // update the text to correspond with the combo box selection
-  QString mySelection = theSelection;
-  if (theSelection == "About") loadTextFile("about");
-  if (theSelection == "CropM") loadTextFile("cropm");
-  if (theSelection == "LiveM") loadTextFile("livem");
-  if (theSelection == "TradeM") loadTextFile("tradem");
+  QString mySelection = theSelection.toLower(); // converts to all lowercase
+  if (theSelection == "About") loadTextFile(mySelection);
+  if (theSelection == "CropM") loadTextFile(mySelection);
+  if (theSelection == "LiveM") loadTextFile(mySelection);
+  if (theSelection == "TradeM") loadTextFile(mySelection);
   if (theSelection == "Credits")
   {
     plainTextEdit->clear();
@@ -90,6 +100,14 @@ void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelecti
 void MadMainWindow::on_pbViewAsText_clicked()
 {
   // display model info in new dialog as plain text
+
+  //MadTextDisplayForm myMadTextDisplayForm;
+  //myMadTextDisplayForm.setModal(true);
+  //myMadTextDisplayForm.exec();
+  mpMadTextDisplayForm = new MadTextDisplayForm(this);
+  mpMadTextDisplayForm->show();
+  //QString myExample = MadMainWindow
+  mpMadTextDisplayForm->setText("this is text");
 }
 
 void MadMainWindow::on_actionOpen_triggered()

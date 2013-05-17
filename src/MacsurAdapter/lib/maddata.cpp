@@ -19,18 +19,9 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#include "maddata.h"
-
-//MadData::MadData()
-//{
-//}
-
-
-
 //Local includes
 #include "maddata.h"
 #include "madutils.h"
-
 
 //Qt includes
 #include <QString>
@@ -44,12 +35,6 @@ MadData::MadData() : MadSerialisable(), MadGuid()
     mName="No Name Set";
     mDescription="Not Set";
 }
-
-//MadData::~MadData()
-//{
-//}
-
-// copy constructor
 
 MadData::MadData(const MadData &theData)
 {
@@ -174,3 +159,141 @@ QString MadData::toHtml()
   myString+="</table>";
   return myString;
 }
+
+  /*****************/
+ /*    CLASSES    */
+/*****************/
+
+class cultivation
+{
+public:
+  MadSubCategory variety;
+  MadSubCategory sowing;
+  MadSubCategory harvest;
+  MadSubCategory fertilisation;
+  MadSubCategory irrigation;
+  MadSubCategory seedDensity;
+  MadSubCategory yield;
+  MadSubCategory tillage;
+
+};
+
+class phenology
+{
+public:
+  MadSubCategory emergence;
+  MadSubCategory stemElongation;
+  MadSubCategory earEmergence;
+  MadSubCategory flowering;
+  MadSubCategory yellowRipeness;
+
+};
+
+class previousCrop
+{
+public:
+  MadSubCategory crop;
+  MadSubCategory sowingDate;
+  MadSubCategory harvestDate;
+  MadSubCategory yield;
+  MadSubCategory residueMgmt;
+  MadSubCategory fertilisation;
+  MadSubCategory irrigation;
+
+};
+
+class initialValues
+{
+public:
+  MadSubCategory soilMoisture;
+  MadSubCategory nitrogenMin;
+
+};
+
+class soil
+{
+public:
+  MadSubCategory carbonOrganic;
+  MadSubCategory nitrogenOrganic;
+  MadSubCategory texture;
+  MadSubCategory bulkDensity;
+  MadSubCategory fieldCapacityMeas;
+  MadSubCategory wiltingPointMeas;
+  MadSubCategory pfCurve;
+  MadSubCategory hydrCondCurve;
+  MadSubCategory pH;
+
+};
+
+class siteData
+{
+public:
+  MadSubCategory latitude;
+  MadSubCategory longitude;
+  MadSubCategory altitude;
+
+};
+
+class weatherData
+{
+public:
+  MadSubCategory precipitation;
+  MadSubCategory tAve;
+  MadSubCategory tMin;
+  MadSubCategory tMax;
+  MadSubCategory relativeHumidity;
+  MadSubCategory windSpeed;
+  MadSubCategory globalRadiation;
+  MadSubCategory sunshineHours;
+  MadSubCategory leafWetness;
+  MadSubCategory soilTemp;
+
+};
+
+class stateVariables // this has 4 sub classes
+{
+public:
+  class crop
+  {
+  public:
+    MadSubCategory aGrBiomass;
+    MadSubCategory weightOrgans;
+    MadSubCategory rootBiomass;
+    MadSubCategory nInAGrBiomass;
+    MadSubCategory nInOrgans;
+    MadSubCategory lai;
+
+  };
+
+  class soil
+  {
+  public:
+    MadSubCategory soilWaterGrav;
+    MadSubCategory pressureHeads;
+    MadSubCategory nMin;
+    MadSubCategory soilWaterSensorCal;
+    MadSubCategory waterFluxBottomRoot;
+    MadSubCategory nitrogenFluxBottomRoot;
+
+  };
+
+  class surfaceFluxes
+  {
+  public:
+    MadSubCategory et;
+    MadSubCategory nh3Loss;
+    MadSubCategory n2oLosse;
+    MadSubCategory n2Loss;
+    MadSubCategory ch4Loss;
+
+  };
+
+  class observations
+  {
+  public:
+    MadSubCategory lodging;
+    MadSubCategory pestsOrDiseases;
+    MadSubCategory damages;
+
+  };
+};
