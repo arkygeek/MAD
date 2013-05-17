@@ -16,6 +16,7 @@ set ( MacsurAdapter_HDRS
         lib/maddata.h
         lib/madserialisable.h
         lib/madguid.h
+        gui/madtextdisplayform.h
         )
 
 set ( MacsurAdapter_SRCS
@@ -27,11 +28,13 @@ set ( MacsurAdapter_SRCS
         lib/maddata.cpp
         lib/madserialisable.cpp
         lib/madguid.cpp
+        gui/madtextdisplayform.cpp
         )
 
 set ( MacsurAdapter_UIS
         madmainwindowbase.ui
         gui/maddataclassificationbase.ui
+        gui/madtextdisplayformbase.ui
         )
 QT4_WRAP_UI(UIS ${MacsurAdapter_UIS})
 
@@ -43,6 +46,7 @@ QT4_ADD_RESOURCES(RSCS ${MacsurAdapter_RSCS})
 set ( MacsurAdapter_MOCS
         madmainwindow.h
         gui/maddataclassification.h
+        gui/madtextdisplayform.h
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 
