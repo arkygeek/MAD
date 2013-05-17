@@ -106,8 +106,8 @@ void MadMainWindow::on_pbViewAsText_clicked()
   //myMadTextDisplayForm.exec();
   mpMadTextDisplayForm = new MadTextDisplayForm(this);
   mpMadTextDisplayForm->show();
-  //QString myExample = MadMainWindow
-  mpMadTextDisplayForm->setText("this is text");
+  QString myExample = MadMainWindow::tedModelSpecsModel->toPlainText();
+  mpMadTextDisplayForm->setText(myExample);
 }
 
 void MadMainWindow::on_actionOpen_triggered()
