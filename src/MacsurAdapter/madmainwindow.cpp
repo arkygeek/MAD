@@ -35,8 +35,13 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
     setupUi(this);
-
-    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision$").replace("$",""));
+    // the key to making the revision autoupdate is to use a feature in svn
+    // that will update keywords on commits.  to make this work, you need to:
+    // svn propset svn:keywords "Revision" madmainwindow.cpp
+    // and then it works!  note that you need to touch madmainform.cpp every
+    // commit for this to work
+    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
+                        + QString("$Revision$").replace("$",""));
 
 }
 
