@@ -44,4 +44,5 @@ OTHER_FILES += \
     resources/about.txt \
     resources/cropm.txt \
     resources/livem.txt \
-    resources/tradem.txt
+    resources/tradem.txt \
+    README.txt

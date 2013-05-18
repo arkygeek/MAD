@@ -250,3 +250,137 @@ void MadDataClassification::on_dsbTillage_valueChanged(double theValue)
     myPosition = theValue * 200;
     hsldrTillage->setSliderPosition(myPosition);
 }
+
+class cultivation
+{
+public:
+  MadSubCategory variety;
+  MadSubCategory sowing;
+  MadSubCategory harvest;
+  MadSubCategory fertilisation;
+  MadSubCategory irrigation;
+  MadSubCategory seedDensity;
+  MadSubCategory yield;
+  MadSubCategory tillage;
+
+};
+
+class phenology
+{
+public:
+  MadSubCategory emergence;
+  MadSubCategory stemElongation;
+  MadSubCategory earEmergence;
+  MadSubCategory flowering;
+  MadSubCategory yellowRipeness;
+
+};
+
+class previousCrop
+{
+public:
+  MadSubCategory crop;
+  MadSubCategory sowingDate;
+  MadSubCategory harvestDate;
+  MadSubCategory yield;
+  MadSubCategory residueMgmt;
+  MadSubCategory fertilisation;
+  MadSubCategory irrigation;
+
+};
+
+class initialValues
+{
+public:
+  MadSubCategory soilMoisture;
+  MadSubCategory nitrogenMin;
+
+};
+
+class soil
+{
+public:
+  MadSubCategory carbonOrganic;
+  MadSubCategory nitrogenOrganic;
+  MadSubCategory texture;
+  MadSubCategory bulkDensity;
+  MadSubCategory fieldCapacityMeas;
+  MadSubCategory wiltingPointMeas;
+  MadSubCategory pfCurve;
+  MadSubCategory hydrCondCurve;
+  MadSubCategory pH;
+
+};
+
+class siteData
+{
+public:
+  MadSubCategory latitude;
+  MadSubCategory longitude;
+  MadSubCategory altitude;
+
+};
+
+class weatherData
+{
+public:
+  MadSubCategory precipitation;
+  MadSubCategory tAve;
+  MadSubCategory tMin;
+  MadSubCategory tMax;
+  MadSubCategory relativeHumidity;
+  MadSubCategory windSpeed;
+  MadSubCategory globalRadiation;
+  MadSubCategory sunshineHours;
+  MadSubCategory leafWetness;
+  MadSubCategory soilTemp;
+
+};
+
+class stateVariables // this has 4 sub classes
+{
+public:
+  class crop
+  {
+  public:
+    MadSubCategory aGrBiomass;
+    MadSubCategory weightOrgans;
+    MadSubCategory rootBiomass;
+    MadSubCategory nInAGrBiomass;
+    MadSubCategory nInOrgans;
+    MadSubCategory lai;
+
+  };
+
+  class soil
+  {
+  public:
+    MadSubCategory soilWaterGrav;
+    MadSubCategory pressureHeads;
+    MadSubCategory nMin;
+    MadSubCategory soilWaterSensorCal;
+    MadSubCategory waterFluxBottomRoot;
+    MadSubCategory nitrogenFluxBottomRoot;
+
+  };
+
+  class surfaceFluxes
+  {
+  public:
+    MadSubCategory et;
+    MadSubCategory nh3Loss;
+    MadSubCategory n2oLosse;
+    MadSubCategory n2Loss;
+    MadSubCategory ch4Loss;
+
+  };
+
+  class observations
+  {
+  public:
+    MadSubCategory lodging;
+    MadSubCategory pestsOrDiseases;
+    MadSubCategory damages;
+
+  };
+};

@@ -36,7 +36,7 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
 {
     setupUi(this);
 
-    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision: 60 $").replace("$",""));
+    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " " + QString("$Revision$").replace("$",""));
 
 }
 
@@ -100,12 +100,13 @@ void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelecti
 void MadMainWindow::on_pbViewAsText_clicked()
 {
   // display model info in new dialog as plain text
-
-  //MadTextDisplayForm myMadTextDisplayForm;
-  //myMadTextDisplayForm.setModal(true);
-  //myMadTextDisplayForm.exec();
   mpMadTextDisplayForm = new MadTextDisplayForm(this);
   mpMadTextDisplayForm->show();
+
+  // in order to get at the QTextEdit I need to use MadMainWindow::
+  // this is because MadMainWindow is using multiple inheritance
+  // and not aggregation as pointer member
+  // ->toPlainText() gets contents and converts it to plain text
   QString myExample = MadMainWindow::tedModelSpecsModel->toPlainText();
   mpMadTextDisplayForm->setText(myExample);
 }
