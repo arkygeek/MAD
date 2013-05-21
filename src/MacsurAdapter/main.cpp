@@ -23,7 +23,7 @@
 #include <QBitmap>
 #include <QFile>
 #include <QPixmap>
-#include <QPlastiqueStyle>
+//#include <QPlastiqueStyle>
 #include <QSettings>
 #include <QSplashScreen>
 #include <QString>
