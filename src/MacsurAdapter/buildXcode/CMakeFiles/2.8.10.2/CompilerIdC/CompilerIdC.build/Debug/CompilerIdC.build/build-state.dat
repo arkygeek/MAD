@@ -1,0 +1,68 @@
+TCompilerIdC
+v5
+r1
+cCheck dependencies
+cCompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC normal i386
+cPhaseScriptExecution "Run Script" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList
+c0000000051990D7000000000000000BA
+t1368984944
+s186
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+c0000000051990D70000000000000002A
+t1368984944
+s42
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c
+c0000000051990D6F0000000000002F20
+t1368984943
+s12064
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependenciesd21d04f04449b741^d47f1ef04449b741^---0#1#0#--18"Check dependencies36"48A0E437-97D9-404E-AFC5-9831E453EECA-
+
+CCompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler
+s390677744.123049
+e390677744.336589
+r1
+xCompileC
+x./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c
+xnormal
+xi386
+xc
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection129"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c62a01ff04449b741^bf2b56f04449b741^---0#0#0#-19%DVTDocumentLocation2@137"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c0000000000000000^2764"CompileC ./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o CMakeCCompilerId.c normal i386 c com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c -arch i386 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -Os -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wpointer-sign -Wno-newline-eof -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -g -fvisibility=hidden -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/CompilerIdC.hmap -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/include -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources/i386 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/DerivedSources -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/CMakeCCompilerId.c -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CMakeCCompilerId.o36"2FB4C5FA-C988-41E1-BC04-D8B543B0CD74-
+
+CLd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC normal i386
+s390677744.343608
+e390677744.480117
+r1
+xLd
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC
+xnormal
+xi386
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection121"Link /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC9a0b58f04449b741^b0e87af04449b741^---0#0#0#--779"Ld ./CompilerIdC normal i386    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -arch i386 -L/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC -filelist /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Objects-normal/i386/CompilerIdC.LinkFileList -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC36"75062963-D728-468E-836B-32FB6BEA8A4F-
+
+CPhaseScriptExecution "Run Script" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+s390677744.488318
+e390677744.506568
+r1
+xPhaseScriptExecution
+xRun Script
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh
+oGCC_VERSION=com.apple.compilers.llvm.clang.1_0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection36"Run custom shell script 'Run Script'f25e7df04449b741^2eae81f04449b741^-47"GCC_VERSION=com.apple.compilers.llvm.clang.1_01(21%IDEActivityLogMessage2@47"GCC_VERSION=com.apple.compilers.llvm.clang.1_0-390677744#0#47#-0#-----0#0#0#--420"PhaseScriptExecution "Run Script" ./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC    /bin/sh -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/2.8.10.2/CompilerIdC/./CompilerIdC.build/Debug/CompilerIdC.build/Script-2C8FEB8E15DC1A1A00E56A5D.sh36"46A1D5D7-617E-4598-A59F-81CD305CC1B2-
+

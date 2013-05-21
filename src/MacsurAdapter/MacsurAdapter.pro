@@ -20,7 +20,8 @@ SOURCES += main.cpp\
     lib/maddata.cpp \
     lib/madserialisable.cpp \
     lib/madguid.cpp \
-    gui/madtextdisplayform.cpp
+    gui/madtextdisplayform.cpp \
+    lib/madcultivation.cpp
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
@@ -31,7 +32,8 @@ HEADERS  += madmainwindow.h \
     lib/maddata.h \
     lib/madserialisable.h \
     lib/madguid.h \
-    gui/madtextdisplayform.h
+    gui/madtextdisplayform.h \
+    lib/madcultivation.h
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \

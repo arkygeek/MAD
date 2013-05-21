@@ -1,0 +1,467 @@
+TMacsurAdapter
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+cLd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter normal x86_64
+cPhaseScriptExecution "CMake PostBuild Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh
+
+N/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk
+c00000000516D9E7700000000000000AA
+t1366138487
+s170
+
+N/Library/Frameworks/QtGui.framework/Headers/QApplication
+c0000000050B2BE9A000000000000001A
+t1353891482
+s26
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/MacsurAdapter.LinkFileList
+c0000000051990DC200000000000007E8
+t1368985026
+s2024
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh
+c0000000051990DC200000000000000EA
+t1368985026
+s234
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh
+c0000000051990DC200000000000000E4
+t1368985026
+s228
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx
+c00000000000000000000000000000000
+t2
+s0
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp
+c00000000519668A90000000000002794
+t1368811689
+s10132
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp
+c000000005194B9FD000000000000078A
+t1368701437
+s1930
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp
+c0000000051966C5B0000000000001FBA
+t1368812635
+s8122
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp
+c00000000518B90A5000000000000081D
+t1368101029
+s2077
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp
+c00000000518CF2040000000000001579
+t1368191492
+s5497
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp
+c00000000518CBD7C0000000000000DEC
+t1368178044
+s3564
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp
+c00000000518CBA3C0000000000001C89
+t1368177212
+s7305
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madversion.h
+c00000000518A38CF0000000000000617
+t1368013007
+s1559
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp
+c000000005197670300000000000013E5
+t1368876803
+s5093
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h
+c00000000519603EC0000000000000ED0
+t1368785900
+s3792
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp
+c000000005195DCA80000000000000F53
+t1368775848
+s3923
+i<QApplication>
+i"madmainwindow.h"
+i"lib/madversion.h"
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp
+r0
+
+CBuild AST from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp
+r0
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies0b63f3424549b741^3cf6f3424549b741^---0#1#0#--18"Check dependencies36"7FA001F9-B4F3-4EB4-A171-3282C4181485-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352289
+e390677828.537928
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp82545a434549b741^20b589444549b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp0000000000000000^2654"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o lib/maddata.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddata.o36"8C18898C-C2C3-408B-87C1-1FF27EB3CF03-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352283
+e390677829.586256
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection97"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp04755a434549b741^e01496454549b741^---0#0#0#-19%DVTDocumentLocation2@105"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp0000000000000000^2738"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o gui/maddataclassification.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/maddataclassification.o36"961A2B69-208D-40E8-AE19-C969EEFFAEE4-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352539
+e390677827.751896
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection83"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cppc66b5a434549b741^9a7bc0434549b741^---0#0#0#-19%DVTDocumentLocation2@91"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp0000000000000000^2654"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o lib/madguid.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madguid.o36"D706B93E-B698-44B8-8A03-05A5964668D7-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352255
+e390677829.259600
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp:29:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:
+o/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]
+o    char type;
+o         ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection85"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cppe3555a434549b741^70415e454549b741^-934"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp:29:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]    char type;         ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@32"Private field 'type' is not used-390677829#18446744073709551615#0#8(2@103"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp:29:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@93"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp0000000000000000^28#9#28#9#1702#0#21"Clang LLVM 1.0 Notice--2@101"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@91"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h0000000000000000^31#9#31#9#1668#0#21"Clang LLVM 1.0 Notice--2@119"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@109"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h0000000000000000^26#9#26#9#856#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@74"file://localhost/Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@86"In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@76"file://localhost/Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h0000000000000000^51#9#51#9#2223#0#21"Clang LLVM 1.0 Notice--2@99"In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@89"file://localhost/Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h0000000000000000^45#9#45#9#2082#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Library/Frameworks/QtGui.framework/Headers/qtextlayout.h0000000000000000^49#9#49#9#2188#0#21"Clang LLVM 1.0 Notice--2@78"In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Library/Frameworks/QtGui.framework/Headers/qevent.h0000000000000000^51#9#51#9#2220#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@67"file://localhost/Library/Frameworks/QtGui.framework/Headers/qmime.h0000000000000000^118#9#118#9#4206#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@93"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp0000000000000000^2682"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o madmainwindow.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmainwindow.o36"C0309C4D-720D-4637-B971-4F9E5033A516-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352260
+e390677828.548716
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp365a5a434549b741^ff778c444549b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp0000000000000000^2660"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o lib/madmodel.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madmodel.o36"FDD805EF-7F68-4467-BBC4-31CB28703742-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352477
+e390677828.191129
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection91"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp84635a434549b741^d3f930444549b741^---0#0#0#-19%DVTDocumentLocation2@99"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp0000000000000000^2702"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o lib/madserialisable.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madserialisable.o36"09FFF102-3D43-460A-9657-D5F7133CE828-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.753323
+e390677829.054569
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection94"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cppcd02c1434549b741^c6f70d454549b741^---0#0#0#-19%DVTDocumentLocation2@102"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp0000000000000000^2720"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o gui/madtextdisplayform.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madtextdisplayform.o36"269DFF31-4CE7-43F3-AFEB-CE7224289AE3-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352276
+e390677829.034828
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection84"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp9a5e5a434549b741^18ea08454549b741^---0#0#0#-19%DVTDocumentLocation2@92"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp0000000000000000^2660"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o lib/madutils.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/madutils.o36"B448375F-656F-4F04-A5EA-4B87C92890E2-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677827.352235
+e390677828.964610
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp:32:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:
+o/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]
+o    char type;
+o         ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection76"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp80605a434549b741^6501f7444549b741^-925"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp:32:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]    char type;         ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@32"Private field 'type' is not used-390677828#18446744073709551615#0#8(2@94"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp:32:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@84"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp0000000000000000^31#9#31#9#1882#0#21"Clang LLVM 1.0 Notice--2@101"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h:32:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@91"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h0000000000000000^31#9#31#9#1668#0#21"Clang LLVM 1.0 Notice--2@119"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@109"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h0000000000000000^26#9#26#9#856#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@74"file://localhost/Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@86"In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@76"file://localhost/Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h0000000000000000^51#9#51#9#2223#0#21"Clang LLVM 1.0 Notice--2@99"In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@89"file://localhost/Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h0000000000000000^45#9#45#9#2082#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Library/Frameworks/QtGui.framework/Headers/qtextlayout.h0000000000000000^49#9#49#9#2188#0#21"Clang LLVM 1.0 Notice--2@78"In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:-390677828#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Library/Frameworks/QtGui.framework/Headers/qevent.h0000000000000000^51#9#51#9#2220#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@67"file://localhost/Library/Frameworks/QtGui.framework/Headers/qmime.h0000000000000000^118#9#118#9#4206#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@84"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp0000000000000000^2628"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o main.cpp normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/main.o36"2E35E514-0527-4B1A-A87C-F04B83EEC393-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677828.539288
+e390677829.581144
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection112"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxxa2418a444549b741^6dc794454549b741^---0#0#0#-19%DVTDocumentLocation2@120"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx0000000000000000^2784"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o buildXcode/gui/moc_maddataclassification.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_maddataclassification.o36"5008ACB4-A3F6-4494-9804-84EA2AC60004-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677828.422884
+e390677829.614917
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx:10:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/../madmainwindow.h:32:
+oIn file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:
+oIn file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:
+o/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]
+o    char type;
+o         ^
+o1 warning generated.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection100"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx73656c444549b741^486a9d454549b741^-963"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx:10:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/../madmainwindow.h:32:In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:/Library/Frameworks/QtGui.framework/Headers/qmime.h:119:10: warning: private field 'type' is not used [-Wunused-private-field]    char type;         ^1 warning generated.1(36%IDEClangDiagnosticActivityLogMessage2@32"Private field 'type' is not used-390677829#18446744073709551615#0#8(2@118"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx:10:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic23%DVTTextDocumentLocation3@108"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx0000000000000000^9#9#9#9#388#0#21"Clang LLVM 1.0 Notice--2@115"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/../madmainwindow.h:32:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@91"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h0000000000000000^31#9#31#9#1668#0#21"Clang LLVM 1.0 Notice--2@119"In file included from /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h:27:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@109"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h0000000000000000^26#9#26#9#856#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit:1:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@74"file://localhost/Library/Frameworks/QtGui.framework/Headers/QPlainTextEdit0000000000000000^0#9#0#9#9#0#21"Clang LLVM 1.0 Notice--2@86"In file included from /Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h:52:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@76"file://localhost/Library/Frameworks/QtGui.framework/Headers/qplaintextedit.h0000000000000000^51#9#51#9#2223#0#21"Clang LLVM 1.0 Notice--2@99"In file included from /Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h:46:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@89"file://localhost/Library/Frameworks/QtGui.framework/Headers/qabstracttextdocumentlayout.h0000000000000000^45#9#45#9#2082#0#21"Clang LLVM 1.0 Notice--2@83"In file included from /Library/Frameworks/QtGui.framework/Headers/qtextlayout.h:50:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@73"file://localhost/Library/Frameworks/QtGui.framework/Headers/qtextlayout.h0000000000000000^49#9#49#9#2188#0#21"Clang LLVM 1.0 Notice--2@78"In file included from /Library/Frameworks/QtGui.framework/Headers/qevent.h:52:-390677829#18446744073709551615#0#-0#27"com.apple.dt.IDE.diagnostic3@68"file://localhost/Library/Frameworks/QtGui.framework/Headers/qevent.h0000000000000000^51#9#51#9#2220#0#21"Clang LLVM 1.0 Notice--1#27"com.apple.dt.IDE.diagnostic3@67"file://localhost/Library/Frameworks/QtGui.framework/Headers/qmime.h0000000000000000^118#9#118#9#4206#0#19"Unused Entity Issue--0#0#0#-19%DVTDocumentLocation4@108"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx0000000000000000^2728"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o buildXcode/moc_madmainwindow.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madmainwindow.o36"C0AB5170-7241-4856-B07A-16B6A821A47F-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677828.550101
+e390677829.335327
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection109"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxxb3278d444549b741^24435e454549b741^---0#0#0#-19%DVTDocumentLocation2@117"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx0000000000000000^2766"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o buildXcode/gui/moc_madtextdisplayform.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/moc_madtextdisplayform.o36"044EA57E-0568-4384-B5B5-4E076DF2098F-
+
+CCompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler
+s390677828.192456
+e390677828.421549
+r1
+xCompileC
+xbuildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx
+xnormal
+xx86_64
+xc++
+xcom.apple.compilers.llvm.clang.1_0.compiler
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection96"Compile /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxxa16931444549b741^3eea6b444549b741^---0#0#0#-19%DVTDocumentLocation2@104"file://localhost/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx0000000000000000^2704"CompileC buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o buildXcode/qrc_resources.cxx normal x86_64 c++ com.apple.compilers.llvm.clang.1_0.compiler    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv LANG en_US.US-ASCII    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -x c++ -arch x86_64 -fmessage-length=0 -Wno-trigraphs -fpascal-strings -O0 -Wno-missing-field-initializers -Wno-missing-prototypes -Wno-return-type -Wno-non-virtual-dtor -Wno-overloaded-virtual -Wno-exit-time-destructors -Wformat -Wno-missing-braces -Wparentheses -Wswitch -Wno-unused-function -Wno-unused-label -Wno-unused-parameter -Wno-unused-variable -Wunused-value -Wno-empty-body -Wno-uninitialized -Wno-unknown-pragmas -Wno-shadow -Wno-four-char-constants -Wno-conversion -Wno-constant-conversion -Wno-int-conversion -Wno-enum-conversion -Wno-shorten-64-to-32 -Wno-newline-eof -Wno-c++11-extensions "-DCMAKE_INTDIR=\"Debug\"" -DQT_GUI_LIB -DQT_CORE_LIB -DQT_DEBUG -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -fasm-blocks -fstrict-aliasing -Wdeprecated-declarations -Winvalid-offsetof -mmacosx-version-min=10.8 -g -Wno-sign-conversion -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/include -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtXml.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources/x86_64 -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/DerivedSources -Wmost -Wno-four-char-constants -Wno-unknown-pragmas -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -Wall -MMD -MT dependencies -MF /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.d --serialize-diagnostics /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.dia -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/qrc_resources.o36"539F3502-2FFF-48F3-A6F8-3AE5E46A30A5-
+
+CLd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter normal x86_64
+s390677829.621299
+e390677829.669934
+r1
+xLd
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter
+xnormal
+xx86_64
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection95"Link /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter1d219f454549b741^62bbab454549b741^---0#0#0#--997"Ld buildXcode/Debug/MacsurAdapter normal x86_64    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    setenv MACOSX_DEPLOYMENT_TARGET 10.8    /Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang++ -arch x86_64 -isysroot /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk -L/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug -F/Library/Frameworks -filelist /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Objects-normal/x86_64/MacsurAdapter.LinkFileList -mmacosx-version-min=10.8 -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework QtCore -framework QtGui -framework QtCore -framework QtGui -framework QtXml -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/Debug/MacsurAdapter36"A84B6B9A-913C-439F-B689-943E4B1849EE-
+
+CPhaseScriptExecution "CMake PostBuild Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh
+s390677829.678260
+e390677829.705513
+r1
+xPhaseScriptExecution
+xCMake PostBuild Rules
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh
+oecho "Depend check for xcode"
+oDepend check for xcode
+ocd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode && make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.MacsurAdapter.Debug
+omake[1]: Nothing to be done for `PostBuild.MacsurAdapter.Debug'.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection47"Run custom shell script 'CMake PostBuild Rules'8bfdad454549b741^1b9cb4454549b741^-416"echo "Depend check for xcode"Depend check for xcodecd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode && make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.MacsurAdapter.Debugmake[1]: Nothing to be done for `PostBuild.MacsurAdapter.Debug'.4(21%IDEActivityLogMessage2@30"echo "Depend check for xcode"-390677829#0#30#-0#-----2@23"Depend check for xcode-390677829#30#23#-0#-----2@298"cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode && make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/XCODE_DEPEND_HELPER.make PostBuild.MacsurAdapter.Debug-390677829#53#298#-0#-----2@65"make[1]: Nothing to be done for `PostBuild.MacsurAdapter.Debug'.-390677829#351#65#-0#-----0#0#0#--371"PhaseScriptExecution "CMake PostBuild Rules" buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    /bin/sh -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-5776A5CB26494F2B863F35CB.sh36"22CC7257-8B62-4C69-AC31-0D9B302795A5-
+
+CPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh
+s390677826.955795
+e390677827.344119
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh
+o/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui
+o/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui
+o/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui
+o/Developer/Tools/Qt/rcc -name resources -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc
+o/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h
+o/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h
+o/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'4911f5424549b741^981758434549b741^-3058"/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui/Developer/Tools/Qt/rcc -name resources -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h7(21%IDEActivityLogMessage2@202"/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui-390677826#0#202#-0#-----2@222"/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui-390677827#202#222#-0#-----2@216"/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui-390677827#424#216#-0#-----2@216"/Developer/Tools/Qt/rcc -name resources -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc-390677827#640#216#-0#-----2@720"/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h-390677827#856#720#-0#-----2@744"/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h-390677827#1576#744#-0#-----2@738"/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h-390677827#2320#738#-0#-----0#0#0#--361"PhaseScriptExecution "CMake Rules" buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    /bin/sh -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/MacsurAdapter.build/Script-0C7A3F0121D54E4A97617D41.sh36"11098A99-C437-4FD4-A09F-B11F438221F0-
+

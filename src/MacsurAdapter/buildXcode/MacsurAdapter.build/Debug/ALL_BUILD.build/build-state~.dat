@@ -1,0 +1,28 @@
+TALL_BUILD
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh
+c0000000051990DC500000000000000E6
+t1368985029
+s230
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies2386b9454549b741^5cc6b9454549b741^---0#1#0#--18"Check dependencies36"514741BA-85DC-409D-8B92-2683A420820D-
+
+CPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh
+s390677829.727000
+e390677829.749546
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh
+oecho ""
+o
+oecho Build\ all\ projects
+oBuild all projects
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'766eba454549b741^ebe1bf454549b741^-54"echo ""echo Build\ all\ projectsBuild all projects3(21%IDEActivityLogMessage2@8"echo ""-390677829#0#8#-0#-----2@26"echo Build\ all\ projects-390677829#9#26#-0#-----2@19"Build all projects-390677829#35#19#-0#-----0#0#0#--353"PhaseScriptExecution "CMake Rules" buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    /bin/sh -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ALL_BUILD.build/Script-9C4F79E0CCB246BE8DC03CCC.sh36"B7ED17FC-F6CC-411C-B66D-FEDC949ACD48-
+

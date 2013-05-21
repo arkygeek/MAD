@@ -65,40 +65,18 @@ void MadDataClassification::on_gbxCultivation_clicked()
     }
 }
 
-void MadDataClassification::on_cbExamples_currentIndexChanged
-     (const QString &theValue)
+void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &theValue)
 {
     // if enabled, set values for corresponding classification
     // options are: Platinum, Gold, Silver, Bronze
     if (cbExamples->currentText()!="Examples")
     {
         lblExample->setText(theValue);
-    }
+    } //end if
     else
     {
         lblExample->setText("Select Example");
-    }
-
-    // I want to make it work somethig like this, but can't remember how
-    //
-    /*DataClass myDataClass = (cbExamples->currentText());
-    switch (myDataClass) {
-    case Platinum:
-        lblExample->setText("Platinum");
-        break;
-    case Gold:
-        lblExample->setText("Gold");
-        break;
-    case Silver:
-        lblExample->setText("Silver");
-        break;
-    case Bronze:
-        lblExample->setText("Bronze");
-        break;
-    default:
-        lblExample->setText("Select Example");
-        break;
-    }*/
+    } //end else
 }
 
 /**
@@ -251,6 +229,10 @@ void MadDataClassification::on_dsbTillage_valueChanged(double theValue)
     hsldrTillage->setSliderPosition(myPosition);
 }
 
+
+
+
+/*
 class cultivation
 {
 public:
@@ -384,3 +366,4 @@ public:
 
   };
 };
+*/

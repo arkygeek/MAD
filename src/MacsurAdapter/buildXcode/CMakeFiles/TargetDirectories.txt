@@ -1,0 +1,3 @@
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/ALL_BUILD.dir
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/MacsurAdapter.dir
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeFiles/ZERO_CHECK.dir

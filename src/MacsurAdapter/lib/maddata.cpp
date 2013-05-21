@@ -163,11 +163,108 @@ QString MadData::toHtml()
   /*****************/
  /*    CLASSES    */
 /*****************/
-class stateVars
+
+class Cultivation
+{
+public:
+  MadSubCategory variety;
+  MadSubCategory sowing;
+  MadSubCategory harvest;
+  MadSubCategory fertilisation;
+  MadSubCategory irrigation;
+  MadSubCategory seedDensity;
+  MadSubCategory yield;
+  MadSubCategory tillage;
+
+private:
+  MadSubCategory mVariety;
+  MadSubCategory mSowing;
+  MadSubCategory mHarvest;
+  MadSubCategory mFertilisation;
+  MadSubCategory mIrrigation;
+  MadSubCategory mSeedDensity;
+  MadSubCategory mYield;
+  MadSubCategory mTillage;
+
+};
+
+class Phenology
+{
+public:
+  MadSubCategory mEmergence;
+  MadSubCategory mStemElongation;
+  MadSubCategory mEarEmergence;
+  MadSubCategory mFlowering;
+  MadSubCategory mYellowRipeness;
+
+};
+
+class PreviousCrop
+{
+public:
+  MadSubCategory mCrop;
+  MadSubCategory mSowingDate;
+  MadSubCategory mHarvestDate;
+  MadSubCategory mYield;
+  MadSubCategory mResidueMgmt;
+  MadSubCategory mFertilisation;
+  MadSubCategory mIrrigation;
+
+};
+
+class InitialValues
+{
+public:
+  MadSubCategory mSoilMoisture;
+  MadSubCategory mNitrogenMin;
+
+};
+
+class Soil
+{
+public:
+  MadSubCategory mCarbonOrganic;
+  MadSubCategory mNitrogenOrganic;
+  MadSubCategory mTexture;
+  MadSubCategory mBulkDensity;
+  MadSubCategory mFieldCapacityMeas;
+  MadSubCategory mWiltingPointMeas;
+  MadSubCategory mPfCurve;
+  MadSubCategory mHydrCondCurve;
+  MadSubCategory mPh;
+
+};
+
+class SiteData
+{
+public:
+  MadSubCategory mLatitude;
+  MadSubCategory mLongitude;
+  MadSubCategory mAltitude;
+
+};
+
+class WeatherData
+{
+public:
+  MadSubCategory mPrecipitation;
+  MadSubCategory mTAve;
+  MadSubCategory mTMin;
+  MadSubCategory mTMax;
+  MadSubCategory mRelativeHumidity;
+  MadSubCategory mWindSpeed;
+  MadSubCategory mGlobalRadiation;
+  MadSubCategory mSunshineHours;
+  MadSubCategory mLeafWetness;
+  MadSubCategory mSoilTemp;
+
+};
+
+class StateVars
 {
 
 public:
-  class cultivation
+  class Cultivation
   {
   public:
     MadSubCategory mVariety;
@@ -181,7 +278,7 @@ public:
 
   };
 
-  class phenology
+  class Phenology
   {
   public:
     MadSubCategory mEmergence;
@@ -192,7 +289,7 @@ public:
 
   };
 
-  class previousCrop
+  class PreviousCrop
   {
   public:
     MadSubCategory mCrop;
@@ -205,7 +302,7 @@ public:
 
   };
 
-  class initialValues
+  class InitialValues
   {
   public:
     MadSubCategory mSoilMoisture;
@@ -213,7 +310,7 @@ public:
 
   };
 
-  class soil
+  class Soil
   {
   public:
     MadSubCategory mCarbonOrganic;
@@ -228,7 +325,7 @@ public:
 
   };
 
-  class siteData
+  class SiteData
   {
   public:
     MadSubCategory mLatitude;
@@ -237,7 +334,7 @@ public:
 
   };
 
-  class weatherData
+  class WeatherData
   {
   public:
     MadSubCategory mPrecipitation;
@@ -253,7 +350,7 @@ public:
 
   };
 
-  class stateVariables // this has 4 sub classes
+  class StateVariables // this has 4 sub classes
   {
   public:
     class crop
@@ -268,7 +365,7 @@ public:
 
     };
 
-    class soil
+    class Soil
     {
     public:
       MadSubCategory mSoilWaterGrav;
@@ -280,7 +377,7 @@ public:
 
     };
 
-    class surfaceFluxes
+    class SurfaceFluxes
     {
     public:
       MadSubCategory mEt;
@@ -291,7 +388,7 @@ public:
 
     };
 
-    class observations
+    class Observations
     {
     public:
       MadSubCategory mLodging;

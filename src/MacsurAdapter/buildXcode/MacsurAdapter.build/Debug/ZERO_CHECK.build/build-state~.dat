@@ -1,0 +1,28 @@
+TZERO_CHECK
+v5
+r1
+cCheck dependencies
+cPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh
+
+N/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh
+c0000000051990DC200000000000000E7
+t1368985026
+s231
+
+CCheck dependencies
+r0
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection18"Check dependencies37e2dd424549b741^eb8dde424549b741^---0#1#0#--18"Check dependencies36"08AA31DC-E2DE-41D3-AAF1-186EB81994D7-
+
+CPhaseScriptExecution "CMake Rules" /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh
+s390677826.881655
+e390677826.932547
+r1
+xPhaseScriptExecution
+xCMake Rules
+x/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh
+oecho ""
+o
+omake -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ReRunCMake.make
+omake[1]: `CMakeFiles/cmake.check_cache' is up to date.
+lSLF05#21%IDEActivityLogSection1@2#32"com.apple.dt.IDE.BuildLogSection37"Run custom shell script 'CMake Rules'9834e2424549b741^6bbaee424549b741^-172"echo ""make -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ReRunCMake.makemake[1]: `CMakeFiles/cmake.check_cache' is up to date.3(21%IDEActivityLogMessage2@8"echo ""-390677826#0#8#-0#-----2@108"make -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ReRunCMake.make-390677826#9#108#-0#-----2@55"make[1]: `CMakeFiles/cmake.check_cache' is up to date.-390677826#117#55#-0#-----0#0#0#--355"PhaseScriptExecution "CMake Rules" buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh    cd /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter    /bin/sh -c /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/MacsurAdapter.build/Debug/ZERO_CHECK.build/Script-CC9B23464E1C46A4BF0C9F0E.sh36"D98075C0-ECA4-4CF4-A71D-769D10409657-
+
