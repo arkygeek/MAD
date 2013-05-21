@@ -24,31 +24,88 @@
 
 #include "../madsubcategory.h"
 
-
+/**
+ * @brief The MadSVSurfaceFluxes class
+ */
 class MadSVSurfaceFluxes
 {
 public:
   MadSVSurfaceFluxes();
 
   // Accessors
+  /**
+   * @brief et
+   * @return
+   */
   MadSubCategory et() const;
+  /**
+   * @brief nh3Loss
+   * @return
+   */
   MadSubCategory nh3Loss() const;
+  /**
+   * @brief n2oLoss
+   * @return
+   */
   MadSubCategory n2oLoss() const;
+  /**
+   * @brief n2Loss
+   * @return
+   */
   MadSubCategory n2Loss() const;
+  /**
+   * @brief ch4Loss
+   * @return
+   */
   MadSubCategory ch4Loss() const;
 
   // Mutators
+  /**
+   * @brief setEt
+   * @param theData
+   */
   void setEt(MadSubCategory theData);
+  /**
+   * @brief setNh3Loss
+   * @param theData
+   */
   void setNh3Loss(MadSubCategory theData);
+  /**
+   * @brief setN2oLoss
+   * @param theData
+   */
   void setN2oLoss(MadSubCategory theData);
+  /**
+   * @brief setN2Loss
+   * @param theData
+   */
   void setN2Loss(MadSubCategory theData);
+  /**
+   * @brief setCh4Loss
+   * @param theData
+   */
   void setCh4Loss(MadSubCategory theData);
 
 private:
+  /**
+   * @brief mEt
+   */
   MadSubCategory mEt;
+  /**
+   * @brief mNh3Loss
+   */
   MadSubCategory mNh3Loss;
+  /**
+   * @brief mN2oLoss
+   */
   MadSubCategory mN2oLoss;
+  /**
+   * @brief mN2Loss
+   */
   MadSubCategory mN2Loss;
+  /**
+   * @brief mCh4Loss
+   */
   MadSubCategory mCh4Loss;
 };
 

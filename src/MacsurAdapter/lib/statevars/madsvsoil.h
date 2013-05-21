@@ -21,11 +21,40 @@
 
 #ifndef MADSVSOIL_H
 #define MADSVSOIL_H
+#include "../madsubcategory.h"
 
 class MadSVSoil
 {
 public:
   MadSVSoil();
+
+  // Accessors
+  MadSubCategory soilWaterGrav() const;
+  MadSubCategory pressureHeads() const;
+  MadSubCategory nMin() const;
+  MadSubCategory soilWaterSensorCal() const;
+  MadSubCategory waterFluxBottomRoot() const;
+  MadSubCategory nitrogenFluxBottomRoot() const;
+
+  // Mutators
+  void setSoilWaterGrav(MadSubCategory theData);
+  void setPressureHeads(MadSubCategory theData);
+  void setNMin(MadSubCategory theData);
+  void setSoilWaterSensorCal(MadSubCategory theData);
+  void setWaterFluxBottomRoot(MadSubCategory theData);
+  void setNitrogenFluxBottomRoot(MadSubCategory theData);
+
+private:
+  MadSubCategory mSoilWaterGrav;
+  MadSubCategory mPressureHeads;
+  MadSubCategory mNMin;
+  MadSubCategory mSoilWaterSensorCal;
+  MadSubCategory mWaterFluxBottomRoot;
+  MadSubCategory mNitrogenFluxBottomRoot;
+
 };
 
 #endif // MADSVSOIL_H
+
+
+

@@ -9,5 +9,6 @@
         <file>MAdLogo.png</file>
         <file>MAdLogoWhiteBkgd.png</file>
         <file>MadLogoTransparent.png</file>
+        <file>MadLogoTransparent200x160.png</file>
     </qresource>
 </RCC>

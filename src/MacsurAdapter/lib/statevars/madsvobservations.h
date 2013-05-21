@@ -21,11 +21,27 @@
 
 #ifndef MADSVOBSERVATIONS_H
 #define MADSVOBSERVATIONS_H
+#include "../madsubcategory.h"
 
 class MadSVObservations
 {
 public:
   MadSVObservations();
+
+  // Accessors
+  MadSubCategory lodging() const;
+  MadSubCategory pestsOrDiseases() const;
+  MadSubCategory damages() const;
+
+  // Mutators
+  void setLodging(MadSubCategory theData);
+  void setPestsOrDiseases(MadSubCategory theData);
+  void setDamages(MadSubCategory theData);
+
+private:
+  MadSubCategory mLodging;
+  MadSubCategory mPestsOrDiseases;
+  MadSubCategory mDamages;
 };
 
 #endif // MADSVOBSERVATIONS_H

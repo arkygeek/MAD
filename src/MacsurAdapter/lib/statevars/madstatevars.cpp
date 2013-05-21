@@ -20,7 +20,51 @@
  ***************************************************************************/
 
 #include "madstatevars.h"
+#include "madsvcrop.h"
+#include "madsvsoil.h"
+#include "madsvsurfacefluxes.h"
+#include "madsvobservations.h"
+#include "../madsubcategory.h"
 
 MadStateVars::MadStateVars()
 {
+}
+
+// Accessors
+MadSVCrop MadStateVars::cropCategories() const
+{
+  return mCropCategories;
+}
+MadSVSoil MadStateVars::soilCategories() const
+{
+  return mSoilCategories;
+}
+MadSVSurfaceFluxes MadStateVars::surfaceFluxes() const
+{
+  return mSurfaceFluxes;
+}
+MadSVObservations MadStateVars::observationCategories() const
+{
+  return mObservations;
+}
+
+// Mutators
+
+void MadStateVars::setCropCategories(MadSVCrop theMadSVCrop)
+{
+  mCropCategories = theMadSVCrop;
+}
+void MadStateVars::setSoilCategories(MadSVSoil theMadSVSoil)
+{
+  mSoilCategories = theMadSVSoil;
+}
+
+void MadStateVars::setSurfaceFluxes(MadSVSurfaceFluxes theMadSVSurfaceFluxes)
+{
+  mSurfaceFluxes = theMadSVSurfaceFluxes;
+}
+
+void MadStateVars::setObservationCategories(MadSVObservations theMadSVObservations)
+{
+  mObservations = theMadSVObservations;
 }

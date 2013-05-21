@@ -20,18 +20,39 @@
  ***************************************************************************/
 
 #include "madsvsoil.h"
+#include "../madsubcategory.h"
 
 MadSVSoil::MadSVSoil()
 {
 }
 
-/*
+// Accessors
+MadSubCategory MadSVSoil::soilWaterGrav() const
+{
+  return mSoilWaterGrav;
+}
 
-MadSubCategory mSoilWaterGrav;
-MadSubCategory mPressureHeads;
-MadSubCategory mNMin;
-MadSubCategory mSoilWaterSensorCal;
-MadSubCategory mWaterFluxBottomRoot;
-MadSubCategory mNitrogenFluxBottomRoot;
+MadSubCategory MadSVSoil::pressureHeads() const
+{
+  return mPressureHeads;
+}
 
-*/
+MadSubCategory MadSVSoil::nMin() const
+{
+  return mNMin;
+}
+
+MadSubCategory MadSVSoil::soilWaterSensorCal() const
+{
+  return mSoilWaterSensorCal;
+}
+
+MadSubCategory MadSVSoil::waterFluxBottomRoot() const
+{
+  return mWaterFluxBottomRoot;
+}
+
+MadSubCategory MadSVSoil::nitrogenFluxBottomRoot() const
+{
+  return mNitrogenFluxBottomRoot;
+}

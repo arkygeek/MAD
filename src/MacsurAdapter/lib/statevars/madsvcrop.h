@@ -29,27 +29,91 @@ public:
   MadSVCrop();
 
   // Accessors
+  /**
+   * @brief agrBiomass
+   * @return
+   */
   MadSubCategory agrBiomass() const;
+  /**
+   * @brief weightOrgans
+   * @return
+   */
   MadSubCategory weightOrgans() const;
+  /**
+   * @brief rootBiomass
+   * @return
+   */
   MadSubCategory rootBiomass() const;
+  /**
+   * @brief nInAGrBiomass
+   * @return
+   */
   MadSubCategory nInAGrBiomass() const;
+  /**
+   * @brief nInOrgans
+   * @return
+   */
   MadSubCategory nInOrgans() const;
+  /**
+   * @brief lai
+   * @return
+   */
   MadSubCategory lai() const;
 
   // Mutators
+  /**
+   * @brief setAgrBiomass
+   * @param theData
+   */
   void setAgrBiomass(MadSubCategory theData);
+  /**
+   * @brief setWeightOrgans
+   * @param theData
+   */
   void setWeightOrgans(MadSubCategory theData);
+  /**
+   * @brief setRootBiomass
+   * @param theData
+   */
   void setRootBiomass(MadSubCategory theData);
+  /**
+   * @brief setNInAGrBiomass
+   * @param theData
+   */
   void setNInAGrBiomass(MadSubCategory theData);
+  /**
+   * @brief setNInOrgans
+   * @param theData
+   */
   void setNInOrgans(MadSubCategory theData);
+  /**
+   * @brief setLai
+   * @param theData
+   */
   void setLai(MadSubCategory theData);
 
 private:
+
   MadSubCategory mAgrBiomass;
+  /**
+   * @brief mWeightOrgans
+   */
   MadSubCategory mWeightOrgans;
+  /**
+   * @brief mRootBiomass
+   */
   MadSubCategory mRootBiomass;
+  /**
+   * @brief mNInAGrBiomass
+   */
   MadSubCategory mNInAGrBiomass;
+  /**
+   * @brief mNInOrgans
+   */
   MadSubCategory mNInOrgans;
+  /**
+   * @brief mLai
+   */
   MadSubCategory mLai;
 };
 

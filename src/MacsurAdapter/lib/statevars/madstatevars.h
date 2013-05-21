@@ -29,11 +29,33 @@
 #include "madsvobservations.h"
 
 
-
+/**
+ * @brief The MadStateVars class.  This contains 4 sub categories
+ * @file "madsvcrop.h"
+ */
 class MadStateVars
 {
 public:
   MadStateVars();
+
+  // Accessors
+  MadSVCrop cropCategories() const;
+  MadSVSoil soilCategories() const;
+  MadSVSurfaceFluxes surfaceFluxes() const;
+  MadSVObservations observationCategories() const;
+
+  // Mutators
+
+  void setCropCategories(MadSVCrop theMadSVCrop);
+  void setSoilCategories(MadSVSoil theMadSVSoil);
+  void setSurfaceFluxes(MadSVSurfaceFluxes theMadSVSurfaceFluxes);
+  void setObservationCategories(MadSVObservations theMadSVObservations);
+
+private:
+  MadSVCrop mCropCategories;
+  MadSVSoil mSoilCategories;
+  MadSVSurfaceFluxes mSurfaceFluxes;
+  MadSVObservations mObservations;
 };
 
 #endif // MADSTATEVARS_H

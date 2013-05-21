@@ -20,15 +20,38 @@
  ***************************************************************************/
 
 #include "madsvobservations.h"
+#include "../madsubcategory.h"
 
 MadSVObservations::MadSVObservations()
 {
 }
 
-/*
+// Accessors
+MadSubCategory MadSVObservations::lodging() const
+{
+  return mLodging;
+}
+MadSubCategory MadSVObservations::pestsOrDiseases() const
+{
+  return mPestsOrDiseases;
+}
+MadSubCategory MadSVObservations::damages() const
+{
+  return mDamages;
+}
 
-    MadSubCategory lodging;
-    MadSubCategory pestsOrDiseases;
-    MadSubCategory damages;
+// Mutators
+void MadSVObservations::setLodging(MadSubCategory theData)
+{
+  mLodging = theData;
+}
 
- */
+void MadSVObservations::setPestsOrDiseases(MadSubCategory theData)
+{
+  mPestsOrDiseases = theData;
+}
+
+void MadSVObservations::setDamages(MadSubCategory theData)
+{
+  mDamages = theData;
+}
