@@ -16,7 +16,14 @@ set ( MacsurAdapter_HDRS
         lib/maddata.h
         lib/madserialisable.h
         lib/madguid.h
+        lib/madsubcategory.h
+        lib/statevars/madstatevars.h
+        lib/statevars/madsvcrop.h
+        lib/statevars/madsvobservations.h
+        lib/statevars/madsvsoil.h
+        lib/statevars/madsvsurfacefluxes.h
         gui/madtextdisplayform.h
+        gui/maddataclassification.h
         )
 
 set ( MacsurAdapter_SRCS
@@ -24,11 +31,18 @@ set ( MacsurAdapter_SRCS
         madmainwindow.cpp
         lib/madmodel.cpp
         lib/madutils.cpp
-        gui/maddataclassification.cpp
         lib/maddata.cpp
         lib/madserialisable.cpp
         lib/madguid.cpp
+        lib/madsubcategory.cpp
+        lib/statevars/madstatevars.cpp
+        lib/statevars/madsvcrop.cpp
+        lib/statevars/madsvobservations.cpp
+        lib/statevars/madsvsoil.cpp
+        lib/statevars/madsvsurfacefluxes.cpp
+        gui/maddataclassification.cpp
         gui/madtextdisplayform.cpp
+        gui/maddataclassification.cpp
         )
 
 set ( MacsurAdapter_UIS

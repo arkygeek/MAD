@@ -23,7 +23,10 @@ SOURCES += main.cpp\
     gui/madtextdisplayform.cpp \
     lib/madsubcategory.cpp \
     lib/statevars/madstatevars.cpp \
-    lib/statevars/madcultivation.cpp
+    lib/statevars/madsvsoil.cpp \
+    lib/statevars/madsvcrop.cpp \
+    lib/statevars/madsvsurfacefluxes.cpp \
+    lib/statevars/madsvobservations.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -38,7 +41,10 @@ HEADERS  += madmainwindow.h \
     gui/madtextdisplayform.h \
     lib/madsubcategory.h \
     lib/statevars/madstatevars.h \
-    lib/statevars/madcultivation.h
+    lib/statevars/madsvcrop.h \
+    lib/statevars/madsvsoil.h \
+    lib/statevars/madsvsurfacefluxes.h \
+    lib/statevars/madsvobservations.h
 
 
 FORMS    += madmainwindowbase.ui \
@@ -53,4 +59,5 @@ OTHER_FILES += \
     resources/cropm.txt \
     resources/livem.txt \
     resources/tradem.txt \
-    README.txt
+    README.txt \
+    CMakeLists.txt

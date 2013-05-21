@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madstatevars.h created: 21/05/2013                                    *
- *   Class info: MadStateVars                                               *
+ *   File:  madcultivation.cpp created: 20/05/2013                         *
+ *   Class info: MADCultivation                                            *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,21 +19,20 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MADSTATEVARS_H
-#define MADSTATEVARS_H
-
-// local includes
 #include "madsvcrop.h"
-#include "madsvsoil.h"
-#include "madsvsurfacefluxes.h"
-#include "madsvobservations.h"
 
-
-
-class MadStateVars
+MadSVCrop::MadSVCrop()
 {
-public:
-  MadStateVars();
-};
+}
 
-#endif // MADSTATEVARS_H
+
+/*
+
+      MadSubCategory mAgrBiomass;
+      MadSubCategory mWeightOrgans;
+      MadSubCategory mRootBiomass;
+      MadSubCategory mNInAGrBiomass;
+      MadSubCategory mNInOrgans;
+      MadSubCategory mLai;
+
+  */
