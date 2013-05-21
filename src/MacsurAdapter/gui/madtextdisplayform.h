@@ -25,7 +25,8 @@
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QDialog>
 #else
-#include <QtGui/QDialog>
+#include <QtGui>
+#include <QDialog>
 #endif
 
 namespace Ui {class MadTextDisplayForm;}
