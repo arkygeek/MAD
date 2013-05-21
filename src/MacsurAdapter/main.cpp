@@ -20,6 +20,18 @@
  ***************************************************************************/
 //Qt includes
 #include <QApplication>
+#include <QBitmap>
+#include <QFile>
+#include <QPixmap>
+#include <QPlastiqueStyle>
+#include <QSettings>
+#include <QSplashScreen>
+#include <QString>
+#include <QStyle>
+  //std includes
+#ifdef Q_OS_MACX
+#include <ApplicationServices/ApplicationServices.h>
+#endif
 
 /*  Local includes
  *
@@ -35,10 +47,36 @@
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
+
+#ifdef Q_WS_WIN
+    //for windows lets use plastique syle!
+  QApplication::setStyle(new QPlastiqueStyle);
+#endif
+
+#ifdef Q_OS_MACX
+  QString bundledQtCore(QCoreApplication::applicationDirPath().append
+                        ("/lib/QtCore.framework"));
+  if (QFile::exists(bundledQtCore))
+  {
+    QCoreApplication::setLibraryPaths
+        (QStringList(QCoreApplication::applicationDirPath()));
+  }
+#endif
+
     MadMainWindow w;
     w.show();
     
     return a.exec();
+}
+
+/* Test to determine if this program was started on Mac OS X by double-clicking
+ * the application bundle rather then from a command line. If clicked, argv[1]
+ * contains a process serial number in the form -psn_0_1234567. Don't process
+ * the command line arguments in this case because argv[1] confuses the processing.
+ */
+bool bundleclicked(int argc, char *argv[])
+{
+  return ( argc > 1 && memcmp(argv[1], "-psn_", 5) == 0 );
 }
 
 

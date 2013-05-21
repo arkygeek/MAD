@@ -25,7 +25,7 @@
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QDialog>
 #else
- #ifdef OS_WINDOWS
+ #ifdef Q_WS_WIN
   #include <QtGui>
   #include <QDialog>
  #else
