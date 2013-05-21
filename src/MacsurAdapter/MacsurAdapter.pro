@@ -21,9 +21,10 @@ SOURCES += main.cpp\
     lib/madserialisable.cpp \
     lib/madguid.cpp \
     gui/madtextdisplayform.cpp \
-    lib/madcultivation.cpp \
     lib/madsubcategory.cpp \
-    lib/statevars/madstatevars.cpp
+    lib/statevars/madstatevars.cpp \
+    lib/statevars/madcultivation.cpp
+
 
 HEADERS  += madmainwindow.h \
     lib/madmodel.h \
@@ -35,9 +36,10 @@ HEADERS  += madmainwindow.h \
     lib/madserialisable.h \
     lib/madguid.h \
     gui/madtextdisplayform.h \
-    lib/madcultivation.h \
     lib/madsubcategory.h \
-    lib/statevars/madstatevars.h
+    lib/statevars/madstatevars.h \
+    lib/statevars/madcultivation.h
+
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \
