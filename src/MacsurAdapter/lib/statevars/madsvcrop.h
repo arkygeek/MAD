@@ -21,11 +21,36 @@
 
 #ifndef MADSVCROP_H
 #define MADSVCROP_H
+#include "../madsubcategory.h"
 
 class MadSVCrop
 {
 public:
   MadSVCrop();
+
+  // Accessors
+  MadSubCategory agrBiomass() const;
+  MadSubCategory weightOrgans() const;
+  MadSubCategory rootBiomass() const;
+  MadSubCategory nInAGrBiomass() const;
+  MadSubCategory nInOrgans() const;
+  MadSubCategory lai() const;
+
+  // Mutators
+  void setAgrBiomass(MadSubCategory theData);
+  void setWeightOrgans(MadSubCategory theData);
+  void setRootBiomass(MadSubCategory theData);
+  void setNInAGrBiomass(MadSubCategory theData);
+  void setNInOrgans(MadSubCategory theData);
+  void setLai(MadSubCategory theData);
+
+private:
+  MadSubCategory mAgrBiomass;
+  MadSubCategory mWeightOrgans;
+  MadSubCategory mRootBiomass;
+  MadSubCategory mNInAGrBiomass;
+  MadSubCategory mNInOrgans;
+  MadSubCategory mLai;
 };
 
 #endif // MADSVCROP_H

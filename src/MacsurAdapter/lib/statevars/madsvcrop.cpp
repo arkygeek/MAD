@@ -20,19 +20,69 @@
  ***************************************************************************/
 
 #include "madsvcrop.h"
+#include "../madsubcategory.h"
 
 MadSVCrop::MadSVCrop()
 {
 }
 
+// Accessors
+MadSubCategory MadSVCrop::agrBiomass() const
+{
+  return mAgrBiomass;
+}
+MadSubCategory MadSVCrop::weightOrgans() const
+{
+  return mWeightOrgans;
+}
 
-/*
+MadSubCategory MadSVCrop::rootBiomass() const
+{
+  return mRootBiomass;
+}
 
-      MadSubCategory mAgrBiomass;
-      MadSubCategory mWeightOrgans;
-      MadSubCategory mRootBiomass;
-      MadSubCategory mNInAGrBiomass;
-      MadSubCategory mNInOrgans;
-      MadSubCategory mLai;
+MadSubCategory MadSVCrop::nInAGrBiomass() const
+{
+  return mNInAGrBiomass;
+}
 
-  */
+MadSubCategory MadSVCrop::nInOrgans() const
+{
+  return mNInOrgans;
+}
+
+MadSubCategory MadSVCrop::lai() const
+{
+  return mLai;
+}
+
+// Mutators
+void MadSVCrop::setAgrBiomass(MadSubCategory theData)
+{
+  mAgrBiomass = theData;
+}
+
+void MadSVCrop::setWeightOrgans(MadSubCategory theData)
+{
+  mWeightOrgans = theData;
+}
+
+void MadSVCrop::setRootBiomass(MadSubCategory theData)
+{
+  mRootBiomass = theData;
+}
+
+void MadSVCrop::setNInAGrBiomass(MadSubCategory theData)
+{
+  mNInAGrBiomass = theData;
+}
+
+void MadSVCrop::setNInOrgans(MadSubCategory theData)
+{
+  mNInOrgans = theData;
+}
+
+void MadSVCrop::setLai(MadSubCategory theData)
+{
+  mLai = theData;
+}

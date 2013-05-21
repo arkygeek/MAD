@@ -20,17 +20,61 @@
  ***************************************************************************/
 
 #include "madsvsurfacefluxes.h"
+#include "../madsubcategory.h"
 
 MadSVSurfaceFluxes::MadSVSurfaceFluxes()
 {
 }
 
-/*
 
-    MadSubCategory et;
-    MadSubCategory nh3Loss;
-    MadSubCategory n2oLosse;
-    MadSubCategory n2Loss;
-    MadSubCategory ch4Loss;
+// Accessors
+MadSubCategory MadSVSurfaceFluxes::et() const
+{
+  return mEt;
+}
+MadSubCategory MadSVSurfaceFluxes::nh3Loss() const
+{
+  return mNh3Loss;
+}
 
-  */
+MadSubCategory MadSVSurfaceFluxes::n2oLoss() const
+{
+  return mN2oLoss;
+}
+
+MadSubCategory MadSVSurfaceFluxes::n2Loss() const
+{
+  return mN2Loss;
+}
+
+MadSubCategory MadSVSurfaceFluxes::ch4Loss() const
+{
+  return mCh4Loss;
+}
+
+// Mutators
+void MadSVSurfaceFluxes::setEt(MadSubCategory theData)
+{
+  mEt = theData;
+}
+
+void MadSVSurfaceFluxes::setNh3Loss(MadSubCategory theData)
+{
+  mNh3Loss = theData;
+}
+
+void MadSVSurfaceFluxes::setN2oLoss(MadSubCategory theData)
+{
+  mN2oLoss = theData;
+}
+
+void MadSVSurfaceFluxes::setN2Loss(MadSubCategory theData)
+{
+  mN2Loss = theData;
+}
+
+void MadSVSurfaceFluxes::setCh4Loss(MadSubCategory theData)
+{
+  mCh4Loss = theData;
+}
+#

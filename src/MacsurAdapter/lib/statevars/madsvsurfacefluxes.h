@@ -22,10 +22,35 @@
 #ifndef MADSVSURFACEFLUXES_H
 #define MADSVSURFACEFLUXES_H
 
+#include "../madsubcategory.h"
+
+
 class MadSVSurfaceFluxes
 {
 public:
   MadSVSurfaceFluxes();
+
+  // Accessors
+  MadSubCategory et() const;
+  MadSubCategory nh3Loss() const;
+  MadSubCategory n2oLoss() const;
+  MadSubCategory n2Loss() const;
+  MadSubCategory ch4Loss() const;
+
+  // Mutators
+  void setEt(MadSubCategory theData);
+  void setNh3Loss(MadSubCategory theData);
+  void setN2oLoss(MadSubCategory theData);
+  void setN2Loss(MadSubCategory theData);
+  void setCh4Loss(MadSubCategory theData);
+
+private:
+  MadSubCategory mEt;
+  MadSubCategory mNh3Loss;
+  MadSubCategory mN2oLoss;
+  MadSubCategory mN2Loss;
+  MadSubCategory mCh4Loss;
 };
 
 #endif // MADSVSURFACEFLUXES_H
+
