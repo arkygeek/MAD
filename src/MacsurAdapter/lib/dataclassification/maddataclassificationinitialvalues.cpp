@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsoil.cpp created: 21/05/2013                                *
- *   Class info: madSoil                                                   *
+ *   File:  maddataclassificationinitialvalues.cpp created: 22/05/2013     *
+ *   Class info: MadDataClassificationInitialValues                        *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,71 +19,30 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#include "madsvsoil.h"
-#include "../madsubcategory.h"
+#include "maddataclassificationinitialvalues.h"
+#include "madsubcategory.h"
 
-MadSVSoil::MadSVSoil()
+MadDataClassificationInitialValues::MadDataClassificationInitialValues()
 {
 }
 
 // Accessors
-MadSubCategory MadSVSoil::soilWaterGrav() const
+MadSubCategory MadDataClassificationInitialValues::soilMoisture() const
 {
-  return mSoilWaterGrav;
+  return mSoilMoisture;
 }
-
-MadSubCategory MadSVSoil::pressureHeads() const
+MadSubCategory MadDataClassificationInitialValues::nitrogenMin() const
 {
-  return mPressureHeads;
-}
-
-MadSubCategory MadSVSoil::nMin() const
-{
-  return mNMin;
-}
-
-MadSubCategory MadSVSoil::soilWaterSensorCal() const
-{
-  return mSoilWaterSensorCal;
-}
-
-MadSubCategory MadSVSoil::waterFluxBottomRoot() const
-{
-  return mWaterFluxBottomRoot;
-}
-
-MadSubCategory MadSVSoil::nitrogenFluxBottomRoot() const
-{
-  return mNitrogenFluxBottomRoot;
+  return mNitrogenMin;
 }
 
 // Mutators
-void MadSVSoil::setSoilWaterGrav(MadSubCategory theData)
+void MadDataClassificationInitialValues::setSoilMoisture(MadSubCategory theData)
 {
-  mSoilWaterGrav = theData;
+  mSoilMoisture = theData;
 }
 
-void MadSVSoil::setPressureHeads(MadSubCategory theData)
+void MadDataClassificationInitialValues::setNitrogenMin(MadSubCategory theData)
 {
-  mPressureHeads = theData;
-}
-
-void MadSVSoil::setNMin(MadSubCategory theData)
-{
-  mNMin = theData;
-}
-
-void MadSVSoil::setSoilWaterSensorCal(MadSubCategory theData)
-{
-  mSoilWaterSensorCal = theData;
-}
-
-void MadSVSoil::setWaterFluxBottomRoot(MadSubCategory theData)
-{
-  mWaterFluxBottomRoot = theData;
-}
-
-void MadSVSoil::setNitrogenFluxBottomRoot(MadSubCategory theData)
-{
-  mNitrogenFluxBottomRoot = theData;
+  mNitrogenMin = theData;
 }

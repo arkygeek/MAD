@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  maddataclassificationcultivation.h created: 22/05/2013                                    *
- *   Class info: MadDataClassificationCultivation                                               *
+ *   File:  maddataclassificationcultivation.h created: 22/05/2013         *
+ *   Class info: MadDataClassificationCultivation                          *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -29,3 +29,26 @@ public:
 };
 
 #endif // MADDATACLASSIFICATIONCULTIVATION_H
+
+/*  for Katharina's reference...
+
+MadSubCategory variety;
+MadSubCategory sowing;
+MadSubCategory harvest;
+MadSubCategory fertilisation;
+MadSubCategory irrigation;
+MadSubCategory seedDensity;
+MadSubCategory yield;
+MadSubCategory tillage;
+
+private:
+MadSubCategory mVariety;
+MadSubCategory mSowing;
+MadSubCategory mHarvest;
+MadSubCategory mFertilisation;
+MadSubCategory mIrrigation;
+MadSubCategory mSeedDensity;
+MadSubCategory mYield;
+MadSubCategory mTillage;
+
+*/

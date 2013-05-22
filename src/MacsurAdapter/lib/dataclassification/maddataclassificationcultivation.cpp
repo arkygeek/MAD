@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  maddataclassificationcultivation.cpp created: 22/05/2013                                    *
- *   Class info: MadDataClassificationCultivation                                               *
+ *   File:  maddataclassificationcultivation.cpp created: 22/05/2013       *
+ *   Class info: MadDataClassificationCultivation                          *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

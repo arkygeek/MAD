@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsoil.cpp created: 21/05/2013                                *
- *   Class info: madSoil                                                   *
+ *   File:  maddataclassificationphenology.h created: 22/05/2013           *
+ *   Class info: MadDataClassificationPhenology                            *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,71 +19,36 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#include "madsvsoil.h"
-#include "../madsubcategory.h"
+#ifndef MADDATACLASSIFICATIONPHENOLOGY_H
+#define MADDATACLASSIFICATIONPHENOLOGY_H
+#include "madsubcategory.h"
 
-MadSVSoil::MadSVSoil()
+class MadDataClassificationPhenology
 {
-}
+public:
+  MadDataClassificationPhenology();
 
-// Accessors
-MadSubCategory MadSVSoil::soilWaterGrav() const
-{
-  return mSoilWaterGrav;
-}
+  // Accessors
+  MadSubCategory emergence() const;
+  MadSubCategory stemElongation() const;
+  MadSubCategory earEmergence() const;
+  MadSubCategory flowering() const;
+  MadSubCategory yellowRipeness() const;
 
-MadSubCategory MadSVSoil::pressureHeads() const
-{
-  return mPressureHeads;
-}
+  // Mutators
+  void setEmergence(MadSubCategory theData);
+  void setStemElongation(MadSubCategory theData);
+  void setEarEmergence(MadSubCategory theData);
+  void setFlowering(MadSubCategory theData);
+  void setYellowRipeness(MadSubCategory theData);
 
-MadSubCategory MadSVSoil::nMin() const
-{
-  return mNMin;
-}
+private:
+  MadSubCategory mEmergence;
+  MadSubCategory mStemElongation;
+  MadSubCategory mEarEmergence;
+  MadSubCategory mFlowering;
+  MadSubCategory mYellowRipeness;
 
-MadSubCategory MadSVSoil::soilWaterSensorCal() const
-{
-  return mSoilWaterSensorCal;
-}
+};
 
-MadSubCategory MadSVSoil::waterFluxBottomRoot() const
-{
-  return mWaterFluxBottomRoot;
-}
-
-MadSubCategory MadSVSoil::nitrogenFluxBottomRoot() const
-{
-  return mNitrogenFluxBottomRoot;
-}
-
-// Mutators
-void MadSVSoil::setSoilWaterGrav(MadSubCategory theData)
-{
-  mSoilWaterGrav = theData;
-}
-
-void MadSVSoil::setPressureHeads(MadSubCategory theData)
-{
-  mPressureHeads = theData;
-}
-
-void MadSVSoil::setNMin(MadSubCategory theData)
-{
-  mNMin = theData;
-}
-
-void MadSVSoil::setSoilWaterSensorCal(MadSubCategory theData)
-{
-  mSoilWaterSensorCal = theData;
-}
-
-void MadSVSoil::setWaterFluxBottomRoot(MadSubCategory theData)
-{
-  mWaterFluxBottomRoot = theData;
-}
-
-void MadSVSoil::setNitrogenFluxBottomRoot(MadSubCategory theData)
-{
-  mNitrogenFluxBottomRoot = theData;
-}
+#endif // MADDATACLASSIFICATIONPHENOLOGY_H

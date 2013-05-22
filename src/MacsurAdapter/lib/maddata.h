@@ -73,7 +73,7 @@ public:
   // Accessors
   //
 
-  /** The name of this dataset */
+
   /**
    * @brief name (accessor) this is the dataset's name
    * @return
@@ -84,19 +84,6 @@ public:
    * @return
    */
   QString description() const;
-  // /** The cultivation vars of this dataset */
-  //QString cultivationVariety() const;
-  //QString cultivationSowing() const;
-  //QString cultivationHarvest() const;
-  //QString cultivationFertilisation() const;
-  //QString cultivationIrrigation() const;
-  //QString cultivationSeedDensity() const;
-  //QString cultivationYield() const;
-  //QString cultivationTillage() const;
-
-  //MadCategory myCategory;
-
-
   /** The image file associated with the dataset */
   QString imageFile() const;
 

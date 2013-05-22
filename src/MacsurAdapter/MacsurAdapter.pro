@@ -27,7 +27,13 @@ SOURCES += main.cpp\
     lib/dataclassification/statevars/madsvcrop.cpp \
     lib/dataclassification/statevars/madsvsurfacefluxes.cpp \
     lib/dataclassification/statevars/madsvobservations.cpp \
-    lib/dataclassification/maddataclassificationcultivation.cpp
+    lib/dataclassification/maddataclassificationcultivation.cpp \
+    lib/dataclassification/maddataclassificationphenology.cpp \
+    lib/dataclassification/maddataclassificationprevcrop.cpp \
+    lib/dataclassification/maddataclassificationinitialvalues.cpp \
+    lib/dataclassification/maddataclassificationsoil.cpp \
+    lib/dataclassification/maddataclassificationsitedata.cpp \
+    lib/dataclassification/maddataclassificationweather.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -46,7 +52,13 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/statevars/madsvsoil.h \
     lib/dataclassification/statevars/madsvsurfacefluxes.h \
     lib/dataclassification/statevars/madsvobservations.h \
-    lib/dataclassification/maddataclassificationcultivation.h
+    lib/dataclassification/maddataclassificationcultivation.h \
+    lib/dataclassification/maddataclassificationphenology.h \
+    lib/dataclassification/maddataclassificationprevcrop.h \
+    lib/dataclassification/maddataclassificationinitialvalues.h \
+    lib/dataclassification/maddataclassificationsoil.h \
+    lib/dataclassification/maddataclassificationsitedata.h \
+    lib/dataclassification/maddataclassificationweather.h
 
 
 FORMS    += madmainwindowbase.ui \

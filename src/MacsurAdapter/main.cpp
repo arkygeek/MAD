@@ -79,7 +79,6 @@ bool bundleclicked(int argc, char *argv[])
   return ( argc > 1 && memcmp(argv[1], "-psn_", 5) == 0 );
 }
 
-
 /*
  * Some notes about code documentation and how to
  * effectively use regular comments and doxygen

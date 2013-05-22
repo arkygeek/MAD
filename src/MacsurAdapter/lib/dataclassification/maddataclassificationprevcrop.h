@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsoil.cpp created: 21/05/2013                                *
- *   Class info: madSoil                                                   *
+ *   File:  maddataclassificationprevcrop.h created: 22/05/2013            *
+ *   Class info: MadDataClassificationPrevCrop                             *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,71 +19,42 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#include "madsvsoil.h"
-#include "../madsubcategory.h"
+#ifndef MADDATACLASSIFICATIONPREVCROP_H
+#define MADDATACLASSIFICATIONPREVCROP_H
+#include "madsubcategory.h"
 
-MadSVSoil::MadSVSoil()
+class MadDataClassificationPrevCrop
 {
-}
+public:
+  MadDataClassificationPrevCrop();
 
-// Accessors
-MadSubCategory MadSVSoil::soilWaterGrav() const
-{
-  return mSoilWaterGrav;
-}
+  // Accessors
+  MadSubCategory crop() const;
+  MadSubCategory sowingDate() const;
+  MadSubCategory harvestDate() const;
+  MadSubCategory yield() const;
+  MadSubCategory residueMgmt() const;
+  MadSubCategory fertilisation() const;
+  MadSubCategory irrigation() const;
 
-MadSubCategory MadSVSoil::pressureHeads() const
-{
-  return mPressureHeads;
-}
+  // Mutators
+  void setCrop(MadSubCategory theData);
+  void setSowingDate(MadSubCategory theData);
+  void setHarvestDate(MadSubCategory theData);
+  void setYield(MadSubCategory theData);
+  void setResidueMgmt(MadSubCategory theData);
+  void setFertilisation(MadSubCategory theData);
+  void setIrrigation(MadSubCategory theData);
 
-MadSubCategory MadSVSoil::nMin() const
-{
-  return mNMin;
-}
+private:
+  MadSubCategory mCrop;
+  MadSubCategory mSowingDate;
+  MadSubCategory mHarvestDate;
+  MadSubCategory mYield;
+  MadSubCategory mResidueMgmt;
+  MadSubCategory mFertilisation;
+  MadSubCategory mIrrigation;
 
-MadSubCategory MadSVSoil::soilWaterSensorCal() const
-{
-  return mSoilWaterSensorCal;
-}
+};
 
-MadSubCategory MadSVSoil::waterFluxBottomRoot() const
-{
-  return mWaterFluxBottomRoot;
-}
-
-MadSubCategory MadSVSoil::nitrogenFluxBottomRoot() const
-{
-  return mNitrogenFluxBottomRoot;
-}
-
-// Mutators
-void MadSVSoil::setSoilWaterGrav(MadSubCategory theData)
-{
-  mSoilWaterGrav = theData;
-}
-
-void MadSVSoil::setPressureHeads(MadSubCategory theData)
-{
-  mPressureHeads = theData;
-}
-
-void MadSVSoil::setNMin(MadSubCategory theData)
-{
-  mNMin = theData;
-}
-
-void MadSVSoil::setSoilWaterSensorCal(MadSubCategory theData)
-{
-  mSoilWaterSensorCal = theData;
-}
-
-void MadSVSoil::setWaterFluxBottomRoot(MadSubCategory theData)
-{
-  mWaterFluxBottomRoot = theData;
-}
-
-void MadSVSoil::setNitrogenFluxBottomRoot(MadSubCategory theData)
-{
-  mNitrogenFluxBottomRoot = theData;
-}
+#endif // MADDATACLASSIFICATIONPREVCROP_H
