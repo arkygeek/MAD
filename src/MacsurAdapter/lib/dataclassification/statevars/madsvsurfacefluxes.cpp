@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsvsurfacefluxes.cpp created: 21/05/2013                                    *
- *   Class info: MadSVSurfaceFluxes                                               *
+ *   File:  madsvsurfacefluxes.cpp created: 21/05/2013                     *
+ *   Class info: MadSVSurfaceFluxes                                        *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

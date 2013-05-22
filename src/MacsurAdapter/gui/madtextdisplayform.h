@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madtextdisplayform.h created: 16/05/2013                                    *
- *   Class info: MadTextDisplayForm                                               *
+ *   File:  madtextdisplayform.h created: 16/05/2013                       *
+ *   Class info: MadTextDisplayForm                                        *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

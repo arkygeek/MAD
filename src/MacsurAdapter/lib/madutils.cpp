@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madutils.cpp created: 06/05/2013                                    *
- *   Class info: MadUtils                                               *
+ *   File:  madutils.cpp created: 06/05/2013                               *
+ *   Class info: MadUtils                                                  *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

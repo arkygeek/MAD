@@ -26,7 +26,8 @@ SOURCES += main.cpp\
     lib/dataclassification/statevars/madsvsoil.cpp \
     lib/dataclassification/statevars/madsvcrop.cpp \
     lib/dataclassification/statevars/madsvsurfacefluxes.cpp \
-    lib/dataclassification/statevars/madsvobservations.cpp
+    lib/dataclassification/statevars/madsvobservations.cpp \
+    lib/dataclassification/maddataclassificationcultivation.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -44,7 +45,8 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/statevars/madsvcrop.h \
     lib/dataclassification/statevars/madsvsoil.h \
     lib/dataclassification/statevars/madsvsurfacefluxes.h \
-    lib/dataclassification/statevars/madsvobservations.h
+    lib/dataclassification/statevars/madsvobservations.h \
+    lib/dataclassification/maddataclassificationcultivation.h
 
 
 FORMS    += madmainwindowbase.ui \

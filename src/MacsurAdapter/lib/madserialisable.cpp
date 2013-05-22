@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madserialisable.cpp created: 09/05/2013                                    *
- *   Class info: MadSerialisable                                               *
+ *   File:  madserialisable.cpp created: 09/05/2013                        *
+ *   Class info: MadSerialisable                                           *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

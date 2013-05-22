@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsubcategory.h created: 21/05/2013                                    *
- *   Class info: MadSubCategory                                               *
+ *   File:  madsubcategory.h created: 21/05/2013                           *
+ *   Class info: MadSubCategory                                            *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

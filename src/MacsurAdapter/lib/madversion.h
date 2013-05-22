@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  version.h created: 02/05/2013                                    *
- *   Class info:                                                *
+ *   File:  version.h created: 02/05/2013                                  *
+ *   Class info:                                                           *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

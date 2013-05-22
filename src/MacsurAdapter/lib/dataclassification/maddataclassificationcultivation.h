@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsoil.h created: 21/05/2013                                  *
- *   Class info: madSoil                                                   *
+ *   File:  maddataclassificationcultivation.h created: 22/05/2013                                    *
+ *   Class info: MadDataClassificationCultivation                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,42 +19,13 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MADSVSOIL_H
-#define MADSVSOIL_H
-#include "../madsubcategory.h"
+#ifndef MADDATACLASSIFICATIONCULTIVATION_H
+#define MADDATACLASSIFICATIONCULTIVATION_H
 
-class MadSVSoil
+class MadDataClassificationCultivation
 {
 public:
-  MadSVSoil();
-
-  // Accessors
-  MadSubCategory soilWaterGrav() const;
-  MadSubCategory pressureHeads() const;
-  MadSubCategory nMin() const;
-  MadSubCategory soilWaterSensorCal() const;
-  MadSubCategory waterFluxBottomRoot() const;
-  MadSubCategory nitrogenFluxBottomRoot() const;
-
-  // Mutators
-  void setSoilWaterGrav(MadSubCategory theData);
-  void setPressureHeads(MadSubCategory theData);
-  void setNMin(MadSubCategory theData);
-  void setSoilWaterSensorCal(MadSubCategory theData);
-  void setWaterFluxBottomRoot(MadSubCategory theData);
-  void setNitrogenFluxBottomRoot(MadSubCategory theData);
-
-private:
-  MadSubCategory mSoilWaterGrav;
-  MadSubCategory mPressureHeads;
-  MadSubCategory mNMin;
-  MadSubCategory mSoilWaterSensorCal;
-  MadSubCategory mWaterFluxBottomRoot;
-  MadSubCategory mNitrogenFluxBottomRoot;
-
+  MadDataClassificationCultivation();
 };
 
-#endif // MADSVSOIL_H
-
-
-
+#endif // MADDATACLASSIFICATIONCULTIVATION_H

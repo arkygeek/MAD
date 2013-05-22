@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madsvobservations.h created: 21/05/2013                                    *
- *   Class info: MadSVObservations                                               *
+ *   File:  madsvobservations.h created: 21/05/2013                        *
+ *   Class info: MadSVObservations                                         *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
