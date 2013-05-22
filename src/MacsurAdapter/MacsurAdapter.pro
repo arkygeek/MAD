@@ -21,12 +21,12 @@ SOURCES += main.cpp\
     lib/madserialisable.cpp \
     lib/madguid.cpp \
     gui/madtextdisplayform.cpp \
-    lib/madsubcategory.cpp \
-    lib/statevars/madstatevars.cpp \
-    lib/statevars/madsvsoil.cpp \
-    lib/statevars/madsvcrop.cpp \
-    lib/statevars/madsvsurfacefluxes.cpp \
-    lib/statevars/madsvobservations.cpp
+    lib/dataclassification/madsubcategory.cpp \
+    lib/dataclassification/statevars/madstatevars.cpp \
+    lib/dataclassification/statevars/madsvsoil.cpp \
+    lib/dataclassification/statevars/madsvcrop.cpp \
+    lib/dataclassification/statevars/madsvsurfacefluxes.cpp \
+    lib/dataclassification/statevars/madsvobservations.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -39,12 +39,12 @@ HEADERS  += madmainwindow.h \
     lib/madserialisable.h \
     lib/madguid.h \
     gui/madtextdisplayform.h \
-    lib/madsubcategory.h \
-    lib/statevars/madstatevars.h \
-    lib/statevars/madsvcrop.h \
-    lib/statevars/madsvsoil.h \
-    lib/statevars/madsvsurfacefluxes.h \
-    lib/statevars/madsvobservations.h
+    lib/dataclassification/madsubcategory.h \
+    lib/dataclassification/statevars/madstatevars.h \
+    lib/dataclassification/statevars/madsvcrop.h \
+    lib/dataclassification/statevars/madsvsoil.h \
+    lib/dataclassification/statevars/madsvsurfacefluxes.h \
+    lib/dataclassification/statevars/madsvobservations.h
 
 
 FORMS    += madmainwindowbase.ui \
