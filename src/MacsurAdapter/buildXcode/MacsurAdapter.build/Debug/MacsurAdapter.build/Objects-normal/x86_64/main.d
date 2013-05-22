@@ -28,49 +28,65 @@ dependencies: \
   /Library/Frameworks/QtCore.framework/Headers/qpoint.h \
   /Library/Frameworks/QtCore.framework/Headers/qsize.h \
   /Library/Frameworks/QtGui.framework/Headers/qcursor.h \
+  /Library/Frameworks/QtGui.framework/Headers/QBitmap \
+  /Library/Frameworks/QtGui.framework/Headers/qbitmap.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpixmap.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpaintdevice.h \
+  /Library/Frameworks/QtCore.framework/Headers/qrect.h \
+  /Library/Frameworks/QtGui.framework/Headers/qcolor.h \
+  /Library/Frameworks/QtGui.framework/Headers/qrgb.h \
+  /Library/Frameworks/QtCore.framework/Headers/qstringlist.h \
+  /Library/Frameworks/QtCore.framework/Headers/qdatastream.h \
+  /Library/Frameworks/QtCore.framework/Headers/qiodevice.h \
+  /Library/Frameworks/QtCore.framework/Headers/qregexp.h \
+  /Library/Frameworks/QtCore.framework/Headers/qstringmatcher.h \
+  /Library/Frameworks/QtCore.framework/Headers/qsharedpointer.h \
+  /Library/Frameworks/QtCore.framework/Headers/qshareddata.h \
+  /Library/Frameworks/QtCore.framework/Headers/qsharedpointer_impl.h \
+  /Library/Frameworks/QtGui.framework/Headers/qimage.h \
+  /Library/Frameworks/QtGui.framework/Headers/qtransform.h \
+  /Library/Frameworks/QtGui.framework/Headers/qmatrix.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpolygon.h \
+  /Library/Frameworks/QtCore.framework/Headers/qvector.h \
+  /Library/Frameworks/QtGui.framework/Headers/qregion.h \
+  /Library/Frameworks/QtCore.framework/Headers/qline.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpainterpath.h \
+  /Library/Frameworks/QtCore.framework/Headers/QFile \
+  /Library/Frameworks/QtCore.framework/Headers/qfile.h \
+  /Library/Frameworks/QtGui.framework/Headers/QPixmap \
+  /Library/Frameworks/QtGui.framework/Headers/QProxyStyle \
+  /Library/Frameworks/QtGui.framework/Headers/qproxystyle.h \
+  /Library/Frameworks/QtGui.framework/Headers/QCommonStyle \
+  /Library/Frameworks/QtGui.framework/Headers/qcommonstyle.h \
+  /Library/Frameworks/QtGui.framework/Headers/qstyle.h \
+  /Library/Frameworks/QtGui.framework/Headers/qicon.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpalette.h \
+  /Library/Frameworks/QtGui.framework/Headers/qbrush.h \
+  /Library/Frameworks/QtCore.framework/Headers/qpair.h \
+  /Library/Frameworks/QtGui.framework/Headers/qsizepolicy.h \
+  /Library/Frameworks/QtCore.framework/Headers/QSettings \
+  /Library/Frameworks/QtCore.framework/Headers/qsettings.h \
+  /Library/Frameworks/QtCore.framework/Headers/qvariant.h \
+  /Library/Frameworks/QtCore.framework/Headers/qmetatype.h \
+  /Library/Frameworks/QtCore.framework/Headers/qmap.h \
+  /Library/Frameworks/QtCore.framework/Headers/qhash.h \
+  /Library/Frameworks/QtGui.framework/Headers/QSplashScreen \
+  /Library/Frameworks/QtGui.framework/Headers/qsplashscreen.h \
+  /Library/Frameworks/QtGui.framework/Headers/qwidget.h \
+  /Library/Frameworks/QtCore.framework/Headers/qmargins.h \
+  /Library/Frameworks/QtGui.framework/Headers/qfont.h \
+  /Library/Frameworks/QtGui.framework/Headers/qfontmetrics.h \
+  /Library/Frameworks/QtGui.framework/Headers/qfontinfo.h \
+  /Library/Frameworks/QtGui.framework/Headers/qkeysequence.h \
+  /Library/Frameworks/QtCore.framework/Headers/QString \
+  /Library/Frameworks/QtGui.framework/Headers/QStyle \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h \
   /Library/Frameworks/QtCore.framework/Headers/QModelIndex \
   /Library/Frameworks/QtCore.framework/Headers/qabstractitemmodel.h \
-  /Library/Frameworks/QtCore.framework/Headers/qvariant.h \
-  /Library/Frameworks/QtCore.framework/Headers/qmetatype.h \
-  /Library/Frameworks/QtCore.framework/Headers/qdatastream.h \
-  /Library/Frameworks/QtCore.framework/Headers/qiodevice.h \
-  /Library/Frameworks/QtCore.framework/Headers/qmap.h \
-  /Library/Frameworks/QtCore.framework/Headers/qhash.h \
-  /Library/Frameworks/QtCore.framework/Headers/qpair.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h \
   /Library/Frameworks/QtCore.framework/Headers/QVariant \
   /Library/Frameworks/QtGui.framework/Headers/QAction \
   /Library/Frameworks/QtGui.framework/Headers/qaction.h \
-  /Library/Frameworks/QtGui.framework/Headers/qkeysequence.h \
-  /Library/Frameworks/QtGui.framework/Headers/qwidget.h \
-  /Library/Frameworks/QtCore.framework/Headers/qmargins.h \
-  /Library/Frameworks/QtGui.framework/Headers/qpaintdevice.h \
-  /Library/Frameworks/QtCore.framework/Headers/qrect.h \
-  /Library/Frameworks/QtGui.framework/Headers/qpalette.h \
-  /Library/Frameworks/QtGui.framework/Headers/qcolor.h \
-  /Library/Frameworks/QtGui.framework/Headers/qrgb.h \
-  /Library/Frameworks/QtCore.framework/Headers/qstringlist.h \
-  /Library/Frameworks/QtCore.framework/Headers/qregexp.h \
-  /Library/Frameworks/QtCore.framework/Headers/qstringmatcher.h \
-  /Library/Frameworks/QtGui.framework/Headers/qbrush.h \
-  /Library/Frameworks/QtCore.framework/Headers/qvector.h \
-  /Library/Frameworks/QtGui.framework/Headers/qmatrix.h \
-  /Library/Frameworks/QtGui.framework/Headers/qpolygon.h \
-  /Library/Frameworks/QtGui.framework/Headers/qregion.h \
-  /Library/Frameworks/QtCore.framework/Headers/qline.h \
-  /Library/Frameworks/QtGui.framework/Headers/qtransform.h \
-  /Library/Frameworks/QtGui.framework/Headers/qpainterpath.h \
-  /Library/Frameworks/QtGui.framework/Headers/qimage.h \
-  /Library/Frameworks/QtGui.framework/Headers/qpixmap.h \
-  /Library/Frameworks/QtCore.framework/Headers/qsharedpointer.h \
-  /Library/Frameworks/QtCore.framework/Headers/qshareddata.h \
-  /Library/Frameworks/QtCore.framework/Headers/qsharedpointer_impl.h \
-  /Library/Frameworks/QtGui.framework/Headers/qfont.h \
-  /Library/Frameworks/QtGui.framework/Headers/qfontmetrics.h \
-  /Library/Frameworks/QtGui.framework/Headers/qfontinfo.h \
-  /Library/Frameworks/QtGui.framework/Headers/qsizepolicy.h \
-  /Library/Frameworks/QtGui.framework/Headers/qicon.h \
   /Library/Frameworks/QtGui.framework/Headers/qactiongroup.h \
   /Library/Frameworks/QtGui.framework/Headers/QButtonGroup \
   /Library/Frameworks/QtGui.framework/Headers/qbuttongroup.h \
@@ -86,7 +102,6 @@ dependencies: \
   /Library/Frameworks/QtCore.framework/Headers/qlocale.h \
   /Library/Frameworks/QtGui.framework/Headers/qslider.h \
   /Library/Frameworks/QtGui.framework/Headers/qabstractslider.h \
-  /Library/Frameworks/QtGui.framework/Headers/qstyle.h \
   /Library/Frameworks/QtGui.framework/Headers/qtabbar.h \
   /Library/Frameworks/QtGui.framework/Headers/qtabwidget.h \
   /Library/Frameworks/QtGui.framework/Headers/qrubberband.h \
@@ -128,12 +143,12 @@ dependencies: \
   /Library/Frameworks/QtGui.framework/Headers/qmime.h \
   /Library/Frameworks/QtCore.framework/Headers/qmimedata.h \
   /Library/Frameworks/QtGui.framework/Headers/qdrag.h \
-  /Library/Frameworks/QtCore.framework/Headers/qfile.h \
   /Library/Frameworks/QtGui.framework/Headers/qglyphrun.h \
   /Library/Frameworks/QtGui.framework/Headers/qrawfont.h \
   /Library/Frameworks/QtGui.framework/Headers/qfontdatabase.h \
   /Library/Frameworks/QtGui.framework/Headers/QPushButton \
   /Library/Frameworks/QtGui.framework/Headers/qpushbutton.h \
+  /Library/Frameworks/QtGui.framework/Headers/QSpacerItem \
   /Library/Frameworks/QtGui.framework/Headers/QSplitter \
   /Library/Frameworks/QtGui.framework/Headers/qsplitter.h \
   /Library/Frameworks/QtGui.framework/Headers/QStatusBar \
@@ -151,19 +166,20 @@ dependencies: \
   /Library/Frameworks/QtGui.framework/Headers/QDoubleSpinBox \
   /Library/Frameworks/QtGui.framework/Headers/qspinbox.h \
   /Library/Frameworks/QtGui.framework/Headers/QFrame \
+  /Library/Frameworks/QtGui.framework/Headers/QHBoxLayout \
+  /Library/Frameworks/QtGui.framework/Headers/QLineEdit \
+  /Library/Frameworks/QtGui.framework/Headers/qlineedit.h \
   /Library/Frameworks/QtGui.framework/Headers/QSlider \
-  /Library/Frameworks/QtGui.framework/Headers/QSpacerItem \
   /Library/Frameworks/QtGui.framework/Headers/QSpinBox \
   /Library/Frameworks/QtGui.framework/Headers/QToolBox \
   /Library/Frameworks/QtGui.framework/Headers/qtoolbox.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h \
+  /Library/Frameworks/QtCore.framework/Headers/QtGlobal \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/mad.h \
   /Library/Frameworks/QtCore.framework/Headers/QMap \
   /Library/Frameworks/QtCore.framework/Headers/QPair \
-  /Library/Frameworks/QtCore.framework/Headers/QString \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.h \
-  /Library/Frameworks/QtCore.framework/Headers/QFile \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madversion.h

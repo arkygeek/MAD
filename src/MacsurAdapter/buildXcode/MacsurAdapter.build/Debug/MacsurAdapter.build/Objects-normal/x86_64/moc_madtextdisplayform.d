@@ -1,15 +1,16 @@
 dependencies: \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/../../gui/madtextdisplayform.h \
+  /Library/Frameworks/QtCore.framework/Headers/QtGlobal \
+  /Library/Frameworks/QtCore.framework/Headers/qglobal.h \
+  /Library/Frameworks/QtCore.framework/Headers/qconfig.h \
+  /Library/Frameworks/QtCore.framework/Headers/qfeatures.h \
   /Library/Frameworks/QtGui.framework/Headers/QDialog \
   /Library/Frameworks/QtGui.framework/Headers/qdialog.h \
   /Library/Frameworks/QtGui.framework/Headers/qwidget.h \
   /Library/Frameworks/QtGui.framework/Headers/qwindowdefs.h \
   /Library/Frameworks/QtCore.framework/Headers/qobjectdefs.h \
   /Library/Frameworks/QtCore.framework/Headers/qnamespace.h \
-  /Library/Frameworks/QtCore.framework/Headers/qglobal.h \
-  /Library/Frameworks/QtCore.framework/Headers/qconfig.h \
-  /Library/Frameworks/QtCore.framework/Headers/qfeatures.h \
   /Library/Frameworks/QtGui.framework/Headers/qmacdefines_mac.h \
   /Library/Frameworks/QtCore.framework/Headers/qobject.h \
   /Library/Frameworks/QtCore.framework/Headers/qstring.h \

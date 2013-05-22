@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'madmainwindowbase.ui'
 **
-** Created: Sun May 19 18:37:06 2013
+** Created: Wed May 22 18:06:24 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -26,6 +26,7 @@
 #include <QtGui/QMenuBar>
 #include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
 #include <QtGui/QSplitter>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
@@ -42,16 +43,17 @@ public:
     QAction *actionOpen;
     QAction *actionAbout;
     QWidget *centralWidget;
-    QGridLayout *gridLayout_2;
+    QGridLayout *gridLayout_4;
     QTabWidget *tabwidMainWin;
     QWidget *tabMain;
-    QGridLayout *gridLayout_4;
+    QGridLayout *gridLayout_2;
     QComboBox *cbAboutMain;
-    QLabel *lblVersion;
     QPlainTextEdit *plainTextEdit;
-    QLabel *label;
-    QLabel *label_2;
+    QVBoxLayout *verticalLayout;
     QLabel *lblGraphicMain;
+    QLabel *lblVersion;
+    QSpacerItem *verticalSpacer;
+    QLabel *label;
     QWidget *tabModels;
     QGridLayout *gridLayout_3;
     QSplitter *splitter;
@@ -71,8 +73,9 @@ public:
     QTextEdit *tedModelSpecsModel;
     QPushButton *pbViewAsText;
     QWidget *tabData;
-    QComboBox *modelNameComboBox;
+    QGridLayout *gridLayout_5;
     QPushButton *pbClassification;
+    QComboBox *modelNameComboBox;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -83,35 +86,29 @@ public:
     {
         if (MadMainWindow->objectName().isEmpty())
             MadMainWindow->setObjectName(QString::fromUtf8("MadMainWindow"));
-        MadMainWindow->resize(589, 431);
+        MadMainWindow->resize(534, 367);
         actionOpen = new QAction(MadMainWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionAbout = new QAction(MadMainWindow);
         actionAbout->setObjectName(QString::fromUtf8("actionAbout"));
         centralWidget = new QWidget(MadMainWindow);
         centralWidget->setObjectName(QString::fromUtf8("centralWidget"));
-        gridLayout_2 = new QGridLayout(centralWidget);
-        gridLayout_2->setSpacing(6);
-        gridLayout_2->setContentsMargins(11, 11, 11, 11);
-        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
+        gridLayout_4 = new QGridLayout(centralWidget);
+        gridLayout_4->setSpacing(6);
+        gridLayout_4->setContentsMargins(11, 11, 11, 11);
+        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
         tabwidMainWin = new QTabWidget(centralWidget);
         tabwidMainWin->setObjectName(QString::fromUtf8("tabwidMainWin"));
         tabMain = new QWidget();
         tabMain->setObjectName(QString::fromUtf8("tabMain"));
-        gridLayout_4 = new QGridLayout(tabMain);
-        gridLayout_4->setSpacing(6);
-        gridLayout_4->setContentsMargins(11, 11, 11, 11);
-        gridLayout_4->setObjectName(QString::fromUtf8("gridLayout_4"));
+        gridLayout_2 = new QGridLayout(tabMain);
+        gridLayout_2->setSpacing(6);
+        gridLayout_2->setContentsMargins(11, 11, 11, 11);
+        gridLayout_2->setObjectName(QString::fromUtf8("gridLayout_2"));
         cbAboutMain = new QComboBox(tabMain);
         cbAboutMain->setObjectName(QString::fromUtf8("cbAboutMain"));
 
-        gridLayout_4->addWidget(cbAboutMain, 1, 2, 1, 1);
-
-        lblVersion = new QLabel(tabMain);
-        lblVersion->setObjectName(QString::fromUtf8("lblVersion"));
-        lblVersion->setAlignment(Qt::AlignCenter);
-
-        gridLayout_4->addWidget(lblVersion, 4, 0, 1, 1);
+        gridLayout_2->addWidget(cbAboutMain, 0, 1, 1, 1);
 
         plainTextEdit = new QPlainTextEdit(tabMain);
         plainTextEdit->setObjectName(QString::fromUtf8("plainTextEdit"));
@@ -119,7 +116,31 @@ public:
         font.setPointSize(10);
         plainTextEdit->setFont(font);
 
-        gridLayout_4->addWidget(plainTextEdit, 2, 2, 1, 1);
+        gridLayout_2->addWidget(plainTextEdit, 1, 1, 1, 1);
+
+        verticalLayout = new QVBoxLayout();
+        verticalLayout->setSpacing(6);
+        verticalLayout->setObjectName(QString::fromUtf8("verticalLayout"));
+        lblGraphicMain = new QLabel(tabMain);
+        lblGraphicMain->setObjectName(QString::fromUtf8("lblGraphicMain"));
+        lblGraphicMain->setMaximumSize(QSize(200, 140));
+        lblGraphicMain->setPixmap(QPixmap(QString::fromUtf8(":/newMACSURLogoTransparentFull.png")));
+        lblGraphicMain->setScaledContents(true);
+        lblGraphicMain->setAlignment(Qt::AlignCenter);
+        lblGraphicMain->setOpenExternalLinks(false);
+
+        verticalLayout->addWidget(lblGraphicMain);
+
+        lblVersion = new QLabel(tabMain);
+        lblVersion->setObjectName(QString::fromUtf8("lblVersion"));
+        lblVersion->setFont(font);
+        lblVersion->setAlignment(Qt::AlignCenter);
+
+        verticalLayout->addWidget(lblVersion);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        verticalLayout->addItem(verticalSpacer);
 
         label = new QLabel(tabMain);
         label->setObjectName(QString::fromUtf8("label"));
@@ -127,23 +148,12 @@ public:
         font1.setPointSize(8);
         label->setFont(font1);
         label->setLayoutDirection(Qt::LeftToRight);
-        label->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        label->setAlignment(Qt::AlignCenter);
 
-        gridLayout_4->addWidget(label, 4, 2, 1, 1);
+        verticalLayout->addWidget(label);
 
-        label_2 = new QLabel(tabMain);
-        label_2->setObjectName(QString::fromUtf8("label_2"));
-        label_2->setPixmap(QPixmap(QString::fromUtf8(":/MACSURLogo122x50Transp.png")));
-        label_2->setAlignment(Qt::AlignCenter);
 
-        gridLayout_4->addWidget(label_2, 0, 2, 1, 1);
-
-        lblGraphicMain = new QLabel(tabMain);
-        lblGraphicMain->setObjectName(QString::fromUtf8("lblGraphicMain"));
-        lblGraphicMain->setPixmap(QPixmap(QString::fromUtf8(":/MADCircle.png")));
-        lblGraphicMain->setAlignment(Qt::AlignCenter);
-
-        gridLayout_4->addWidget(lblGraphicMain, 0, 0, 4, 2);
+        gridLayout_2->addLayout(verticalLayout, 0, 0, 2, 1);
 
         tabwidMainWin->addTab(tabMain, QString());
         tabModels = new QWidget();
@@ -237,22 +247,30 @@ public:
         tabwidMainWin->addTab(tabModels, QString());
         tabData = new QWidget();
         tabData->setObjectName(QString::fromUtf8("tabData"));
+        gridLayout_5 = new QGridLayout(tabData);
+        gridLayout_5->setSpacing(6);
+        gridLayout_5->setContentsMargins(11, 11, 11, 11);
+        gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
+        pbClassification = new QPushButton(tabData);
+        pbClassification->setObjectName(QString::fromUtf8("pbClassification"));
+
+        gridLayout_5->addWidget(pbClassification, 0, 0, 1, 1);
+
         modelNameComboBox = new QComboBox(tabData);
         modelNameComboBox->setObjectName(QString::fromUtf8("modelNameComboBox"));
         modelNameComboBox->setEnabled(true);
-        modelNameComboBox->setGeometry(QRect(40, 220, 331, 26));
         modelNameComboBox->setModelColumn(0);
-        pbClassification = new QPushButton(tabData);
-        pbClassification->setObjectName(QString::fromUtf8("pbClassification"));
-        pbClassification->setGeometry(QRect(90, 120, 114, 32));
+
+        gridLayout_5->addWidget(modelNameComboBox, 1, 0, 1, 1);
+
         tabwidMainWin->addTab(tabData, QString());
 
-        gridLayout_2->addWidget(tabwidMainWin, 0, 0, 1, 2);
+        gridLayout_4->addWidget(tabwidMainWin, 0, 0, 1, 1);
 
         MadMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MadMainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 589, 22));
+        menuBar->setGeometry(QRect(0, 0, 534, 22));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuHelp = new QMenu(menuBar);
@@ -292,15 +310,14 @@ public:
          << QApplication::translate("MadMainWindow", "TradeM", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Credits", 0, QApplication::UnicodeUTF8)
         );
-        lblVersion->setText(QApplication::translate("MadMainWindow", "Version Label", 0, QApplication::UnicodeUTF8));
         plainTextEdit->setPlainText(QApplication::translate("MadMainWindow", "This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.\n"
 "\n"
 "It provides a common platform to describe, evaluate and integrate models and datasets.\n"
 "\n"
 "It is open source (GPL V.3) and written in C++/Qt (v4.8)", 0, QApplication::UnicodeUTF8));
-        label->setText(QApplication::translate("MadMainWindow", "\302\251 Jason Jorgenson 2013", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QString());
         lblGraphicMain->setText(QString());
+        lblVersion->setText(QApplication::translate("MadMainWindow", "Version Label", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("MadMainWindow", "\302\251 Jason Jorgenson 2013", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabMain), QApplication::translate("MadMainWindow", "Main", 0, QApplication::UnicodeUTF8));
         lblCurrentInventory->setText(QApplication::translate("MadMainWindow", "Current Inventory", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
@@ -341,6 +358,7 @@ public:
 #endif // QT_NO_TOOLTIP
         pbViewAsText->setText(QApplication::translate("MadMainWindow", "View Selection as Text", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabModels), QApplication::translate("MadMainWindow", "Models", 0, QApplication::UnicodeUTF8));
+        pbClassification->setText(QApplication::translate("MadMainWindow", "Classification", 0, QApplication::UnicodeUTF8));
         modelNameComboBox->clear();
         modelNameComboBox->insertItems(0, QStringList()
          << QApplication::translate("MadMainWindow", "CMAP", 0, QApplication::UnicodeUTF8)
@@ -362,7 +380,6 @@ public:
          << QApplication::translate("MadMainWindow", "Smith and Reynolds Extended Reconstructed SST (ERSST)", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Other", 0, QApplication::UnicodeUTF8)
         );
-        pbClassification->setText(QApplication::translate("MadMainWindow", "Classification", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabData), QApplication::translate("MadMainWindow", "Data", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MadMainWindow", "File", 0, QApplication::UnicodeUTF8));
         menuHelp->setTitle(QApplication::translate("MadMainWindow", "Help", 0, QApplication::UnicodeUTF8));

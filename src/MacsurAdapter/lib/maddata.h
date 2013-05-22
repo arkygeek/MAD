@@ -32,27 +32,6 @@ class QString;  // forward declaration
 //Qt includes
 #include <QString>
 
-/**
- * @brief The MadSubCategory struct
- */
-struct MadSubCategory
-{
-  //QString name;
-  bool minData;
-  float depth;
-  int observations;
-  float weightPoints;
-  int replicates;
-};
-
-/**
- * @brief The MadCategory struct
- */
-struct MadCategory
-{
-  QString name;
-  QList<MadSubCategory> children;
-};
 
 //typedef QList <MadCategory> MadDataClassified;
 

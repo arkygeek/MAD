@@ -6,5 +6,11 @@
         <file>livem.txt</file>
         <file>cropm.txt</file>
         <file>MACSURLogo122x50Transp.png</file>
+        <file>MAdLogo.png</file>
+        <file>MAdLogoWhiteBkgd.png</file>
+        <file>MadLogoTransparent.png</file>
+        <file>MadLogoTransparent200x160.png</file>
+        <file>newMACSURLogoTransparentFull.png</file>
+        <file>jpiHeader.png</file>
     </qresource>
 </RCC>

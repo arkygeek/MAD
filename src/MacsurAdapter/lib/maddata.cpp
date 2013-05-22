@@ -109,23 +109,47 @@ bool MadData::fromXml(const QString theXml)
 QString MadData::toXml()
 {
   QString myString;
-  myString+=QString("<model guid=\"" + guid() + "\">\n");
-    myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
+  myString+=QString("<dataset guid=\"" + guid() + "\">\n");
+  myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
   myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-
-
-//  switch (mAreaUnits)
-//  {
-//    case Dunum:
-//      myString+=QString("  <areaUnits>Dunum</areaUnits>\n");
-//      break;
-//    case Hectare:
-//      myString+=QString("  <areaUnits>Hectare</areaUnits>\n");
-//      break;
-//  }
   myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
-  myString+=QString("</model>\n");
+  myString+=QString("</dataset>\n");
   return myString;
+
+  /*   example structure of xml file
+
+    <dataset guid="hj243g5hjk34gjh2g43">
+      <name>Some name</name>
+      <description>The given description</description>
+      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
+      <cultivation>
+        <variety>
+          <minData>true</minData>
+          <depth>1.0</depth>
+          <observations>3</observations>
+          <weightPoints>2.0</weightPoints>
+          <replicates>3</replicates>
+        </variety>
+        <sowing>
+          <minData>true</minData>
+          <depth>1.0</depth>
+          <observations>3</observations>
+          <weightPoints>2.0</weightPoints>
+          <replicates>3</replicates>
+        </sowing>
+        <harvest>
+          <minData>true</minData>
+          <depth>1.0</depth>
+          <observations>3</observations>
+          <weightPoints>2.0</weightPoints>
+          <replicates>3</replicates>
+        </harvest>
+      </cultivation>
+    </dataset>
+
+
+
+  */
 }
 
 QString MadData::toText()

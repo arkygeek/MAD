@@ -134,6 +134,7 @@ dependencies: \
   /Library/Frameworks/QtGui.framework/Headers/qfontdatabase.h \
   /Library/Frameworks/QtGui.framework/Headers/QPushButton \
   /Library/Frameworks/QtGui.framework/Headers/qpushbutton.h \
+  /Library/Frameworks/QtGui.framework/Headers/QSpacerItem \
   /Library/Frameworks/QtGui.framework/Headers/QSplitter \
   /Library/Frameworks/QtGui.framework/Headers/qsplitter.h \
   /Library/Frameworks/QtGui.framework/Headers/QStatusBar \
@@ -151,12 +152,15 @@ dependencies: \
   /Library/Frameworks/QtGui.framework/Headers/QDoubleSpinBox \
   /Library/Frameworks/QtGui.framework/Headers/qspinbox.h \
   /Library/Frameworks/QtGui.framework/Headers/QFrame \
+  /Library/Frameworks/QtGui.framework/Headers/QHBoxLayout \
+  /Library/Frameworks/QtGui.framework/Headers/QLineEdit \
+  /Library/Frameworks/QtGui.framework/Headers/qlineedit.h \
   /Library/Frameworks/QtGui.framework/Headers/QSlider \
-  /Library/Frameworks/QtGui.framework/Headers/QSpacerItem \
   /Library/Frameworks/QtGui.framework/Headers/QSpinBox \
   /Library/Frameworks/QtGui.framework/Headers/QToolBox \
   /Library/Frameworks/QtGui.framework/Headers/qtoolbox.h \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h \
+  /Library/Frameworks/QtCore.framework/Headers/QtGlobal \
   /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/mad.h \
   /Library/Frameworks/QtCore.framework/Headers/QMap \
   /Library/Frameworks/QtCore.framework/Headers/QPair \

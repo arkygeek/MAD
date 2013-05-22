@@ -6,174 +6,106 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>594</width>
-    <height>415</height>
+    <width>534</width>
+    <height>367</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MadMainWindow</string>
   </property>
   <widget class="QWidget" name="centralWidget">
-   <widget class="QTabWidget" name="tabwidMainWin">
-    <property name="geometry">
-     <rect>
-      <x>12</x>
-      <y>6</y>
-      <width>566</width>
-      <height>351</height>
-     </rect>
-    </property>
-    <property name="currentIndex">
-     <number>0</number>
-    </property>
-    <widget class="QWidget" name="tabMain">
-     <attribute name="title">
-      <string>Main</string>
-     </attribute>
-     <layout class="QGridLayout" name="gridLayout_4">
-      <item row="0" column="0" rowspan="2">
-       <layout class="QVBoxLayout" name="verticalLayout">
-        <item>
-         <widget class="QLabel" name="label_2">
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="resources/resources.qrc">:/MACSURLogo122x50Transp.png</pixmap>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
+   <layout class="QGridLayout" name="gridLayout_4">
+    <item row="0" column="0">
+     <widget class="QTabWidget" name="tabwidMainWin">
+      <property name="currentIndex">
+       <number>0</number>
+      </property>
+      <widget class="QWidget" name="tabMain">
+       <attribute name="title">
+        <string>Main</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_2">
+        <item row="0" column="1">
+         <widget class="QComboBox" name="cbAboutMain">
+          <item>
+           <property name="text">
+            <string>About</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CropM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>LiveM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>TradeM</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Credits</string>
+           </property>
+          </item>
          </widget>
         </item>
-        <item>
-         <widget class="QLabel" name="lblGraphicMain">
-          <property name="maximumSize">
-           <size>
-            <width>200</width>
-            <height>140</height>
-           </size>
-          </property>
-          <property name="text">
-           <string/>
-          </property>
-          <property name="pixmap">
-           <pixmap resource="resources/resources.qrc">:/MadLogoTransparent.png</pixmap>
-          </property>
-          <property name="scaledContents">
-           <bool>true</bool>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <widget class="QLabel" name="lblVersion">
-          <property name="text">
-           <string>Version Label</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-        <item>
-         <spacer name="verticalSpacer">
-          <property name="orientation">
-           <enum>Qt::Vertical</enum>
-          </property>
-          <property name="sizeHint" stdset="0">
-           <size>
-            <width>20</width>
-            <height>40</height>
-           </size>
-          </property>
-         </spacer>
-        </item>
-        <item>
-         <widget class="QLabel" name="label">
+        <item row="1" column="1">
+         <widget class="QPlainTextEdit" name="plainTextEdit">
           <property name="font">
            <font>
-            <pointsize>8</pointsize>
+            <pointsize>10</pointsize>
            </font>
           </property>
-          <property name="layoutDirection">
-           <enum>Qt::LeftToRight</enum>
-          </property>
-          <property name="text">
-           <string>© Jason Jorgenson 2013</string>
-          </property>
-          <property name="alignment">
-           <set>Qt::AlignCenter</set>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </item>
-      <item row="0" column="1">
-       <widget class="QComboBox" name="cbAboutMain">
-        <item>
-         <property name="text">
-          <string>About</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>CropM</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>LiveM</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>TradeM</string>
-         </property>
-        </item>
-        <item>
-         <property name="text">
-          <string>Credits</string>
-         </property>
-        </item>
-       </widget>
-      </item>
-      <item row="1" column="1">
-       <widget class="QPlainTextEdit" name="plainTextEdit">
-        <property name="font">
-         <font>
-          <pointsize>10</pointsize>
-         </font>
-        </property>
-        <property name="plainText">
-         <string>This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
+          <property name="plainText">
+           <string>This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
 
 It provides a common platform to describe, evaluate and integrate models and datasets.
 
 It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
-        </property>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="tabModels">
-     <attribute name="title">
-      <string>Models</string>
-     </attribute>
-     <layout class="QGridLayout" name="gridLayout_3">
-      <item row="0" column="0">
-       <widget class="QSplitter" name="splitter">
-        <property name="orientation">
-         <enum>Qt::Horizontal</enum>
-        </property>
-        <widget class="QWidget" name="layoutWidget">
-         <layout class="QVBoxLayout" name="vLayout">
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0" rowspan="2">
+         <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QLabel" name="lblCurrentInventory">
+           <widget class="QLabel" name="lblGraphicMain">
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>140</height>
+             </size>
+            </property>
             <property name="text">
-             <string>Current Inventory</string>
+             <string/>
+            </property>
+            <property name="pixmap">
+             <pixmap resource="resources/resources.qrc">:/newMACSURLogoTransparentFull.png</pixmap>
+            </property>
+            <property name="scaledContents">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignCenter</set>
+            </property>
+            <property name="openExternalLinks">
+             <bool>false</bool>
+            </property>
+           </widget>
+          </item>
+          <item>
+           <widget class="QLabel" name="lblVersion">
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+             </font>
+            </property>
+            <property name="text">
+             <string>Version Label</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
@@ -181,252 +113,301 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
            </widget>
           </item>
           <item>
-           <widget class="QListView" name="lvwCurrentInventoryModels"/>
+           <spacer name="verticalSpacer">
+            <property name="orientation">
+             <enum>Qt::Vertical</enum>
+            </property>
+            <property name="sizeHint" stdset="0">
+             <size>
+              <width>20</width>
+              <height>40</height>
+             </size>
+            </property>
+           </spacer>
           </item>
           <item>
-           <widget class="QGroupBox" name="grpbxWhatToShow">
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select desired info to display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+           <widget class="QLabel" name="label">
+            <property name="font">
+             <font>
+              <pointsize>8</pointsize>
+             </font>
             </property>
-            <property name="title">
-             <string>Select what to show</string>
+            <property name="layoutDirection">
+             <enum>Qt::LeftToRight</enum>
             </property>
-            <layout class="QGridLayout" name="gridLayout">
-             <item row="0" column="0">
-              <widget class="QCheckBox" name="chbxRunCommand">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="whatsThis">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Run Command</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="1" column="0">
-              <widget class="QCheckBox" name="chbxParameters">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="whatsThis">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Parameters</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="2" column="0">
-              <widget class="QCheckBox" name="chbxInputData">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="whatsThis">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Input Files</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-             <item row="3" column="0">
-              <widget class="QCheckBox" name="checkBox">
-               <property name="toolTip">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="whatsThis">
-                <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-               </property>
-               <property name="text">
-                <string>Output Files</string>
-               </property>
-               <property name="checked">
-                <bool>true</bool>
-               </property>
-              </widget>
-             </item>
-            </layout>
-           </widget>
-          </item>
-         </layout>
-        </widget>
-        <widget class="QWidget" name="layoutWidget1">
-         <layout class="QVBoxLayout" name="vlayoutModelSpecs">
-          <item>
-           <widget class="QLabel" name="lblModelSpecs">
             <property name="text">
-             <string>Model Specifications</string>
+             <string>© Jason Jorgenson 2013</string>
             </property>
             <property name="alignment">
              <set>Qt::AlignCenter</set>
             </property>
            </widget>
           </item>
-          <item>
-           <widget class="QTextEdit" name="tedModelSpecsModel"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pbViewAsText">
-            <property name="toolTip">
-             <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-            </property>
-            <property name="text">
-             <string>View Selection as Text</string>
-            </property>
-           </widget>
-          </item>
          </layout>
-        </widget>
-       </widget>
-      </item>
-     </layout>
-    </widget>
-    <widget class="QWidget" name="tabData">
-     <attribute name="title">
-      <string>Data</string>
-     </attribute>
-     <widget class="QComboBox" name="modelNameComboBox">
-      <property name="enabled">
-       <bool>true</bool>
-      </property>
-      <property name="geometry">
-       <rect>
-        <x>40</x>
-        <y>220</y>
-        <width>331</width>
-        <height>26</height>
-       </rect>
-      </property>
-      <property name="currentIndex">
-       <number>0</number>
-      </property>
-      <property name="modelColumn">
-       <number>0</number>
-      </property>
-      <item>
-       <property name="text">
-        <string>CMAP</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>I-COADS</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>CRU TS 2.0</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Dai</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>HadISST</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Hulme (CRU)</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Jones (CRU) Air Temperature</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Jones (CRU) SLP</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Kaplan (SLP)</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Kaplan (SST)</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>NCAR Sea Level Pressure</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>NCEP/NCAR Reanalysis</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reynold Reconstructed SST</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reynolds Optimum Interpolation (OI) SST</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
-       </property>
-      </item>
-      <item>
-       <property name="text">
-        <string>Other</string>
-       </property>
-      </item>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabModels">
+       <attribute name="title">
+        <string>Models</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_3">
+        <item row="0" column="0">
+         <widget class="QSplitter" name="splitter">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <widget class="QWidget" name="layoutWidget">
+           <layout class="QVBoxLayout" name="vLayout">
+            <item>
+             <widget class="QLabel" name="lblCurrentInventory">
+              <property name="text">
+               <string>Current Inventory</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QListView" name="lvwCurrentInventoryModels"/>
+            </item>
+            <item>
+             <widget class="QGroupBox" name="grpbxWhatToShow">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select desired info to display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="title">
+               <string>Select what to show</string>
+              </property>
+              <layout class="QGridLayout" name="gridLayout">
+               <item row="0" column="0">
+                <widget class="QCheckBox" name="chbxRunCommand">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Run Command</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QCheckBox" name="chbxParameters">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Parameters</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="chbxInputData">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Input Files</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QCheckBox" name="checkBox">
+                 <property name="toolTip">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="whatsThis">
+                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                 </property>
+                 <property name="text">
+                  <string>Output Files</string>
+                 </property>
+                 <property name="checked">
+                  <bool>true</bool>
+                 </property>
+                </widget>
+               </item>
+              </layout>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+          <widget class="QWidget" name="layoutWidget1">
+           <layout class="QVBoxLayout" name="vlayoutModelSpecs">
+            <item>
+             <widget class="QLabel" name="lblModelSpecs">
+              <property name="text">
+               <string>Model Specifications</string>
+              </property>
+              <property name="alignment">
+               <set>Qt::AlignCenter</set>
+              </property>
+             </widget>
+            </item>
+            <item>
+             <widget class="QTextEdit" name="tedModelSpecsModel"/>
+            </item>
+            <item>
+             <widget class="QPushButton" name="pbViewAsText">
+              <property name="toolTip">
+               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+              </property>
+              <property name="text">
+               <string>View Selection as Text</string>
+              </property>
+             </widget>
+            </item>
+           </layout>
+          </widget>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabData">
+       <attribute name="title">
+        <string>Data</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0">
+         <widget class="QPushButton" name="pbClassification">
+          <property name="text">
+           <string>Classification</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QComboBox" name="modelNameComboBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="modelColumn">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>CMAP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>I-COADS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CRU TS 2.0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Dai</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>HadISST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Hulme (CRU)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jones (CRU) Air Temperature</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jones (CRU) SLP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Kaplan (SLP)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Kaplan (SST)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NCAR Sea Level Pressure</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NCEP/NCAR Reanalysis</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynold Reconstructed SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynolds Optimum Interpolation (OI) SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Other</string>
+           </property>
+          </item>
+         </widget>
+        </item>
+       </layout>
+      </widget>
      </widget>
-     <widget class="QPushButton" name="pbClassification">
-      <property name="geometry">
-       <rect>
-        <x>90</x>
-        <y>120</y>
-        <width>114</width>
-        <height>32</height>
-       </rect>
-      </property>
-      <property name="text">
-       <string>Classification</string>
-      </property>
-     </widget>
-    </widget>
-   </widget>
+    </item>
+   </layout>
   </widget>
   <widget class="QMenuBar" name="menuBar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>594</width>
+     <width>534</width>
      <height>22</height>
     </rect>
    </property>

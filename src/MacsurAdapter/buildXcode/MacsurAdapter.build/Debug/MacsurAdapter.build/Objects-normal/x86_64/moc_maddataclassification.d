@@ -102,6 +102,7 @@ dependencies: \
   /Library/Frameworks/QtGui.framework/Headers/qboxlayout.h \
   /Library/Frameworks/QtGui.framework/Headers/QGroupBox \
   /Library/Frameworks/QtGui.framework/Headers/qgroupbox.h \
+  /Library/Frameworks/QtGui.framework/Headers/QHBoxLayout \
   /Library/Frameworks/QtGui.framework/Headers/QHeaderView \
   /Library/Frameworks/QtGui.framework/Headers/qheaderview.h \
   /Library/Frameworks/QtGui.framework/Headers/qabstractitemview.h \
@@ -110,6 +111,14 @@ dependencies: \
   /Library/Frameworks/QtCore.framework/Headers/qset.h \
   /Library/Frameworks/QtGui.framework/Headers/QLabel \
   /Library/Frameworks/QtGui.framework/Headers/qlabel.h \
+  /Library/Frameworks/QtGui.framework/Headers/QLineEdit \
+  /Library/Frameworks/QtGui.framework/Headers/qlineedit.h \
+  /Library/Frameworks/QtGui.framework/Headers/qtextcursor.h \
+  /Library/Frameworks/QtGui.framework/Headers/qtextformat.h \
+  /Library/Frameworks/QtGui.framework/Headers/qpen.h \
+  /Library/Frameworks/QtGui.framework/Headers/qtextoption.h \
+  /Library/Frameworks/QtGui.framework/Headers/QPushButton \
+  /Library/Frameworks/QtGui.framework/Headers/qpushbutton.h \
   /Library/Frameworks/QtGui.framework/Headers/QSlider \
   /Library/Frameworks/QtGui.framework/Headers/QSpacerItem \
   /Library/Frameworks/QtGui.framework/Headers/QSpinBox \

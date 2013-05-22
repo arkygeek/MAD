@@ -14,7 +14,7 @@
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
-   <item row="0" column="0" colspan="2">
+   <item row="0" column="0" colspan="5">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
       <number>0</number>
@@ -24,7 +24,153 @@
        <string>Cultivation</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayoutPhenology">
-       <item row="0" column="0" rowspan="13">
+       <item row="2" column="1">
+        <widget class="QLabel" name="lblHarvest">
+         <property name="text">
+          <string>Harvest</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="2">
+        <widget class="QLabel" name="lblOverallRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="lblTillage">
+         <property name="text">
+          <string>Tillage</string>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="1" colspan="2">
+        <widget class="Line" name="line">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="lblFertilisationRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="2">
+        <widget class="QLabel" name="lblVarietyRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="1">
+        <widget class="QLabel" name="lblFertilisation">
+         <property name="text">
+          <string>Fertilisation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1">
+        <widget class="QLabel" name="lblIrrigation">
+         <property name="text">
+          <string>Irrigation</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1">
+        <widget class="QLabel" name="lblSeedDensity">
+         <property name="text">
+          <string>Seed Density</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="2">
+        <widget class="QLabel" name="lblSeedDensityRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLabel" name="lblTillageRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="lblCombined">
+         <property name="text">
+          <string>Combined:</string>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="2">
+        <widget class="QLabel" name="lblYieldRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="2">
+        <widget class="QLabel" name="lblIrrigationRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="lblSowingRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="1">
+        <widget class="QLabel" name="lblSowing">
+         <property name="text">
+          <string>Sowing</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="lblHarvestRating">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1" colspan="2">
+        <spacer name="vspLabelsCultivation">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="6" column="1">
+        <widget class="QLabel" name="lblYield">
+         <property name="text">
+          <string>Yield</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QLabel" name="lblVariety">
+         <property name="text">
+          <string>Variety</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="0" rowspan="12">
         <widget class="QGroupBox" name="gbxCultivation">
          <property name="title">
           <string>Edit</string>
@@ -677,162 +823,6 @@
           </item>
          </layout>
         </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="lblVariety">
-         <property name="text">
-          <string>Variety</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="lblVarietyRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="lblSowing">
-         <property name="text">
-          <string>Sowing</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QLabel" name="lblSowingRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="1">
-        <widget class="QLabel" name="lblHarvest">
-         <property name="text">
-          <string>Harvest</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="lblHarvestRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLabel" name="lblFertilisation">
-         <property name="text">
-          <string>Fertilisation</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="2">
-        <widget class="QLabel" name="lblFertilisationRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="lblIrrigation">
-         <property name="text">
-          <string>Irrigation</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2">
-        <widget class="QLabel" name="lblIrrigationRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLabel" name="lblSeedDensity">
-         <property name="text">
-          <string>Seed Density</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
-        <widget class="QLabel" name="lblSeedDensityRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1">
-        <widget class="QLabel" name="lblYield">
-         <property name="text">
-          <string>Yield</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QLabel" name="lblYieldRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLabel" name="lblTillage">
-         <property name="text">
-          <string>Tillage</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="2">
-        <widget class="QLabel" name="lblTillageRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="1" colspan="2">
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="1">
-        <widget class="QLabel" name="lblCombined">
-         <property name="text">
-          <string>Combined:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="2">
-        <widget class="QLabel" name="lblOverallRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="1" colspan="2">
-        <spacer name="vspLabelsCultivation">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="11" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasets">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="12" column="1" colspan="2">
-        <widget class="QComboBox" name="cbCultivation"/>
        </item>
       </layout>
      </widget>
@@ -4350,7 +4340,7 @@
             <x>0</x>
             <y>0</y>
             <width>650</width>
-            <height>298</height>
+            <height>280</height>
            </rect>
           </property>
           <attribute name="label">
@@ -5324,146 +5314,192 @@
      </widget>
     </widget>
    </item>
-   <item row="1" column="0">
-    <widget class="QComboBox" name="comboBox">
+   <item row="1" column="0" colspan="5">
+    <layout class="QHBoxLayout" name="horizontalLayout">
      <item>
-      <property name="text">
-       <string>Select Theme</string>
-      </property>
+      <widget class="QComboBox" name="cbThemes">
+       <item>
+        <property name="text">
+         <string>Select Theme</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CropM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LiveM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TradeM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Climate</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <property name="text">
-       <string>CropM</string>
-      </property>
+      <widget class="QComboBox" name="cbRankedDatasets">
+       <item>
+        <property name="text">
+         <string>Ranked Datasets</string>
+        </property>
+       </item>
+      </widget>
      </item>
      <item>
-      <property name="text">
-       <string>LiveM</string>
-      </property>
+      <widget class="QComboBox" name="cbDatasets">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="modelColumn">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Select Dataset</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CMAP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>I-COADS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CRU TS 2.0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dai</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>HadISST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hulme (CRU)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jones (CRU) Air Temperature</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jones (CRU) SLP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kaplan (SLP)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kaplan (SST)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NCAR Sea Level Pressure</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NCEP/NCAR Reanalysis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynold Reconstructed SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynolds Optimum Interpolation (OI) SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other/New</string>
+        </property>
+       </item>
+      </widget>
      </item>
-     <item>
-      <property name="text">
-       <string>TradeM</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Climate</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Other</string>
-      </property>
-     </item>
+    </layout>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblDataSetName">
+     <property name="text">
+      <string>Dataset Name</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEdit_2</cstring>
+     </property>
     </widget>
    </item>
-   <item row="1" column="1">
-    <widget class="QComboBox" name="modelNameComboBox">
-     <property name="enabled">
-      <bool>true</bool>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEdit_2"/>
+   </item>
+   <item row="2" column="2">
+    <widget class="QLabel" name="lblDataSetName_2">
+     <property name="text">
+      <string>Description</string>
      </property>
-     <property name="currentIndex">
-      <number>0</number>
+     <property name="buddy">
+      <cstring>lineEdit</cstring>
      </property>
-     <property name="modelColumn">
-      <number>0</number>
+    </widget>
+   </item>
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Save</string>
      </property>
-     <item>
-      <property name="text">
-       <string>Select Dataset</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>CMAP</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>I-COADS</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>CRU TS 2.0</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Dai</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>HadISST</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Hulme (CRU)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Jones (CRU) Air Temperature</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Jones (CRU) SLP</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Kaplan (SLP)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Kaplan (SST)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>NCAR Sea Level Pressure</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>NCEP/NCAR Reanalysis</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Reynold Reconstructed SST</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Reynolds Optimum Interpolation (OI) SST</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
-      </property>
-     </item>
-     <item>
-      <property name="text">
-       <string>Other</string>
-      </property>
-     </item>
     </widget>
    </item>
   </layout>

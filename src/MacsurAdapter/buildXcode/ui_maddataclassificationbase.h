@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'maddataclassificationbase.ui'
 **
-** Created: Sun May 19 18:37:07 2013
+** Created: Wed May 22 18:06:24 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -21,8 +21,11 @@
 #include <QtGui/QFrame>
 #include <QtGui/QGridLayout>
 #include <QtGui/QGroupBox>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
+#include <QtGui/QLineEdit>
+#include <QtGui/QPushButton>
 #include <QtGui/QSlider>
 #include <QtGui/QSpacerItem>
 #include <QtGui/QSpinBox>
@@ -39,6 +42,26 @@ public:
     QTabWidget *tabWidgetDataClassification;
     QWidget *tabCultivation;
     QGridLayout *gridLayoutPhenology;
+    QLabel *lblHarvest;
+    QLabel *lblOverallRating;
+    QLabel *lblTillage;
+    QFrame *line;
+    QLabel *lblFertilisationRating;
+    QLabel *lblVarietyRating;
+    QLabel *lblFertilisation;
+    QLabel *lblIrrigation;
+    QLabel *lblSeedDensity;
+    QLabel *lblSeedDensityRating;
+    QLabel *lblTillageRating;
+    QLabel *lblCombined;
+    QLabel *lblYieldRating;
+    QLabel *lblIrrigationRating;
+    QLabel *lblSowingRating;
+    QLabel *lblSowing;
+    QLabel *lblHarvestRating;
+    QSpacerItem *vspLabelsCultivation;
+    QLabel *lblYield;
+    QLabel *lblVariety;
     QGroupBox *gbxCultivation;
     QGridLayout *gridLayout;
     QSpinBox *sbTillage;
@@ -76,28 +99,6 @@ public:
     QSlider *hsldrVariety;
     QCheckBox *chbxFertilisation;
     QSpacerItem *vspCultivation;
-    QLabel *lblVariety;
-    QLabel *lblVarietyRating;
-    QLabel *lblSowing;
-    QLabel *lblSowingRating;
-    QLabel *lblHarvest;
-    QLabel *lblHarvestRating;
-    QLabel *lblFertilisation;
-    QLabel *lblFertilisationRating;
-    QLabel *lblIrrigation;
-    QLabel *lblIrrigationRating;
-    QLabel *lblSeedDensity;
-    QLabel *lblSeedDensityRating;
-    QLabel *lblYield;
-    QLabel *lblYieldRating;
-    QLabel *lblTillage;
-    QLabel *lblTillageRating;
-    QFrame *line;
-    QLabel *lblCombined;
-    QLabel *lblOverallRating;
-    QSpacerItem *vspLabelsCultivation;
-    QLabel *lblKnownDatasets;
-    QComboBox *cbCultivation;
     QWidget *tabPhenology;
     QGridLayout *gridLayout_2;
     QLabel *lblStemElongationPhenology;
@@ -581,8 +582,15 @@ public:
     QSpinBox *spinBox_90;
     QLabel *lblKnownDatasetsStateVars;
     QComboBox *cbStateVars;
-    QComboBox *comboBox;
-    QComboBox *modelNameComboBox;
+    QHBoxLayout *horizontalLayout;
+    QComboBox *cbThemes;
+    QComboBox *cbRankedDatasets;
+    QComboBox *cbDatasets;
+    QLabel *lblDataSetName;
+    QLineEdit *lineEdit_2;
+    QLabel *lblDataSetName_2;
+    QLineEdit *lineEdit;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *MadDataClassification)
     {
@@ -597,6 +605,107 @@ public:
         tabCultivation->setObjectName(QString::fromUtf8("tabCultivation"));
         gridLayoutPhenology = new QGridLayout(tabCultivation);
         gridLayoutPhenology->setObjectName(QString::fromUtf8("gridLayoutPhenology"));
+        lblHarvest = new QLabel(tabCultivation);
+        lblHarvest->setObjectName(QString::fromUtf8("lblHarvest"));
+
+        gridLayoutPhenology->addWidget(lblHarvest, 2, 1, 1, 1);
+
+        lblOverallRating = new QLabel(tabCultivation);
+        lblOverallRating->setObjectName(QString::fromUtf8("lblOverallRating"));
+
+        gridLayoutPhenology->addWidget(lblOverallRating, 9, 2, 1, 1);
+
+        lblTillage = new QLabel(tabCultivation);
+        lblTillage->setObjectName(QString::fromUtf8("lblTillage"));
+
+        gridLayoutPhenology->addWidget(lblTillage, 7, 1, 1, 1);
+
+        line = new QFrame(tabCultivation);
+        line->setObjectName(QString::fromUtf8("line"));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        gridLayoutPhenology->addWidget(line, 8, 1, 1, 2);
+
+        lblFertilisationRating = new QLabel(tabCultivation);
+        lblFertilisationRating->setObjectName(QString::fromUtf8("lblFertilisationRating"));
+
+        gridLayoutPhenology->addWidget(lblFertilisationRating, 3, 2, 1, 1);
+
+        lblVarietyRating = new QLabel(tabCultivation);
+        lblVarietyRating->setObjectName(QString::fromUtf8("lblVarietyRating"));
+
+        gridLayoutPhenology->addWidget(lblVarietyRating, 0, 2, 1, 1);
+
+        lblFertilisation = new QLabel(tabCultivation);
+        lblFertilisation->setObjectName(QString::fromUtf8("lblFertilisation"));
+
+        gridLayoutPhenology->addWidget(lblFertilisation, 3, 1, 1, 1);
+
+        lblIrrigation = new QLabel(tabCultivation);
+        lblIrrigation->setObjectName(QString::fromUtf8("lblIrrigation"));
+
+        gridLayoutPhenology->addWidget(lblIrrigation, 4, 1, 1, 1);
+
+        lblSeedDensity = new QLabel(tabCultivation);
+        lblSeedDensity->setObjectName(QString::fromUtf8("lblSeedDensity"));
+
+        gridLayoutPhenology->addWidget(lblSeedDensity, 5, 1, 1, 1);
+
+        lblSeedDensityRating = new QLabel(tabCultivation);
+        lblSeedDensityRating->setObjectName(QString::fromUtf8("lblSeedDensityRating"));
+
+        gridLayoutPhenology->addWidget(lblSeedDensityRating, 5, 2, 1, 1);
+
+        lblTillageRating = new QLabel(tabCultivation);
+        lblTillageRating->setObjectName(QString::fromUtf8("lblTillageRating"));
+
+        gridLayoutPhenology->addWidget(lblTillageRating, 7, 2, 1, 1);
+
+        lblCombined = new QLabel(tabCultivation);
+        lblCombined->setObjectName(QString::fromUtf8("lblCombined"));
+
+        gridLayoutPhenology->addWidget(lblCombined, 9, 1, 1, 1);
+
+        lblYieldRating = new QLabel(tabCultivation);
+        lblYieldRating->setObjectName(QString::fromUtf8("lblYieldRating"));
+
+        gridLayoutPhenology->addWidget(lblYieldRating, 6, 2, 1, 1);
+
+        lblIrrigationRating = new QLabel(tabCultivation);
+        lblIrrigationRating->setObjectName(QString::fromUtf8("lblIrrigationRating"));
+
+        gridLayoutPhenology->addWidget(lblIrrigationRating, 4, 2, 1, 1);
+
+        lblSowingRating = new QLabel(tabCultivation);
+        lblSowingRating->setObjectName(QString::fromUtf8("lblSowingRating"));
+
+        gridLayoutPhenology->addWidget(lblSowingRating, 1, 2, 1, 1);
+
+        lblSowing = new QLabel(tabCultivation);
+        lblSowing->setObjectName(QString::fromUtf8("lblSowing"));
+
+        gridLayoutPhenology->addWidget(lblSowing, 1, 1, 1, 1);
+
+        lblHarvestRating = new QLabel(tabCultivation);
+        lblHarvestRating->setObjectName(QString::fromUtf8("lblHarvestRating"));
+
+        gridLayoutPhenology->addWidget(lblHarvestRating, 2, 2, 1, 1);
+
+        vspLabelsCultivation = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayoutPhenology->addItem(vspLabelsCultivation, 10, 1, 1, 2);
+
+        lblYield = new QLabel(tabCultivation);
+        lblYield->setObjectName(QString::fromUtf8("lblYield"));
+
+        gridLayoutPhenology->addWidget(lblYield, 6, 1, 1, 1);
+
+        lblVariety = new QLabel(tabCultivation);
+        lblVariety->setObjectName(QString::fromUtf8("lblVariety"));
+
+        gridLayoutPhenology->addWidget(lblVariety, 0, 1, 1, 1);
+
         gbxCultivation = new QGroupBox(tabCultivation);
         gbxCultivation->setObjectName(QString::fromUtf8("gbxCultivation"));
         gbxCultivation->setCheckable(true);
@@ -884,118 +993,7 @@ public:
         gridLayout->addItem(vspCultivation, 11, 1, 1, 1);
 
 
-        gridLayoutPhenology->addWidget(gbxCultivation, 0, 0, 13, 1);
-
-        lblVariety = new QLabel(tabCultivation);
-        lblVariety->setObjectName(QString::fromUtf8("lblVariety"));
-
-        gridLayoutPhenology->addWidget(lblVariety, 0, 1, 1, 1);
-
-        lblVarietyRating = new QLabel(tabCultivation);
-        lblVarietyRating->setObjectName(QString::fromUtf8("lblVarietyRating"));
-
-        gridLayoutPhenology->addWidget(lblVarietyRating, 0, 2, 1, 1);
-
-        lblSowing = new QLabel(tabCultivation);
-        lblSowing->setObjectName(QString::fromUtf8("lblSowing"));
-
-        gridLayoutPhenology->addWidget(lblSowing, 1, 1, 1, 1);
-
-        lblSowingRating = new QLabel(tabCultivation);
-        lblSowingRating->setObjectName(QString::fromUtf8("lblSowingRating"));
-
-        gridLayoutPhenology->addWidget(lblSowingRating, 1, 2, 1, 1);
-
-        lblHarvest = new QLabel(tabCultivation);
-        lblHarvest->setObjectName(QString::fromUtf8("lblHarvest"));
-
-        gridLayoutPhenology->addWidget(lblHarvest, 2, 1, 1, 1);
-
-        lblHarvestRating = new QLabel(tabCultivation);
-        lblHarvestRating->setObjectName(QString::fromUtf8("lblHarvestRating"));
-
-        gridLayoutPhenology->addWidget(lblHarvestRating, 2, 2, 1, 1);
-
-        lblFertilisation = new QLabel(tabCultivation);
-        lblFertilisation->setObjectName(QString::fromUtf8("lblFertilisation"));
-
-        gridLayoutPhenology->addWidget(lblFertilisation, 3, 1, 1, 1);
-
-        lblFertilisationRating = new QLabel(tabCultivation);
-        lblFertilisationRating->setObjectName(QString::fromUtf8("lblFertilisationRating"));
-
-        gridLayoutPhenology->addWidget(lblFertilisationRating, 3, 2, 1, 1);
-
-        lblIrrigation = new QLabel(tabCultivation);
-        lblIrrigation->setObjectName(QString::fromUtf8("lblIrrigation"));
-
-        gridLayoutPhenology->addWidget(lblIrrigation, 4, 1, 1, 1);
-
-        lblIrrigationRating = new QLabel(tabCultivation);
-        lblIrrigationRating->setObjectName(QString::fromUtf8("lblIrrigationRating"));
-
-        gridLayoutPhenology->addWidget(lblIrrigationRating, 4, 2, 1, 1);
-
-        lblSeedDensity = new QLabel(tabCultivation);
-        lblSeedDensity->setObjectName(QString::fromUtf8("lblSeedDensity"));
-
-        gridLayoutPhenology->addWidget(lblSeedDensity, 5, 1, 1, 1);
-
-        lblSeedDensityRating = new QLabel(tabCultivation);
-        lblSeedDensityRating->setObjectName(QString::fromUtf8("lblSeedDensityRating"));
-
-        gridLayoutPhenology->addWidget(lblSeedDensityRating, 5, 2, 1, 1);
-
-        lblYield = new QLabel(tabCultivation);
-        lblYield->setObjectName(QString::fromUtf8("lblYield"));
-
-        gridLayoutPhenology->addWidget(lblYield, 6, 1, 1, 1);
-
-        lblYieldRating = new QLabel(tabCultivation);
-        lblYieldRating->setObjectName(QString::fromUtf8("lblYieldRating"));
-
-        gridLayoutPhenology->addWidget(lblYieldRating, 6, 2, 1, 1);
-
-        lblTillage = new QLabel(tabCultivation);
-        lblTillage->setObjectName(QString::fromUtf8("lblTillage"));
-
-        gridLayoutPhenology->addWidget(lblTillage, 7, 1, 1, 1);
-
-        lblTillageRating = new QLabel(tabCultivation);
-        lblTillageRating->setObjectName(QString::fromUtf8("lblTillageRating"));
-
-        gridLayoutPhenology->addWidget(lblTillageRating, 7, 2, 1, 1);
-
-        line = new QFrame(tabCultivation);
-        line->setObjectName(QString::fromUtf8("line"));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-
-        gridLayoutPhenology->addWidget(line, 8, 1, 1, 2);
-
-        lblCombined = new QLabel(tabCultivation);
-        lblCombined->setObjectName(QString::fromUtf8("lblCombined"));
-
-        gridLayoutPhenology->addWidget(lblCombined, 9, 1, 1, 1);
-
-        lblOverallRating = new QLabel(tabCultivation);
-        lblOverallRating->setObjectName(QString::fromUtf8("lblOverallRating"));
-
-        gridLayoutPhenology->addWidget(lblOverallRating, 9, 2, 1, 1);
-
-        vspLabelsCultivation = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
-
-        gridLayoutPhenology->addItem(vspLabelsCultivation, 10, 1, 1, 2);
-
-        lblKnownDatasets = new QLabel(tabCultivation);
-        lblKnownDatasets->setObjectName(QString::fromUtf8("lblKnownDatasets"));
-
-        gridLayoutPhenology->addWidget(lblKnownDatasets, 11, 1, 1, 2);
-
-        cbCultivation = new QComboBox(tabCultivation);
-        cbCultivation->setObjectName(QString::fromUtf8("cbCultivation"));
-
-        gridLayoutPhenology->addWidget(cbCultivation, 12, 1, 1, 2);
+        gridLayoutPhenology->addWidget(gbxCultivation, 0, 0, 12, 1);
 
         tabWidgetDataClassification->addTab(tabCultivation, QString());
         tabPhenology = new QWidget();
@@ -2758,7 +2756,7 @@ public:
         toolBox->setObjectName(QString::fromUtf8("toolBox"));
         pageSoil = new QWidget();
         pageSoil->setObjectName(QString::fromUtf8("pageSoil"));
-        pageSoil->setGeometry(QRect(0, 0, 650, 298));
+        pageSoil->setGeometry(QRect(0, 0, 650, 280));
         gridLayout_12 = new QGridLayout(pageSoil);
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
         gbxSoilStateVars = new QGroupBox(pageSoil);
@@ -3799,26 +3797,65 @@ public:
 
         tabWidgetDataClassification->addTab(tabStateVars, QString());
 
-        gridLayout_8->addWidget(tabWidgetDataClassification, 0, 0, 1, 2);
+        gridLayout_8->addWidget(tabWidgetDataClassification, 0, 0, 1, 5);
 
-        comboBox = new QComboBox(MadDataClassification);
-        comboBox->setObjectName(QString::fromUtf8("comboBox"));
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        cbThemes = new QComboBox(MadDataClassification);
+        cbThemes->setObjectName(QString::fromUtf8("cbThemes"));
 
-        gridLayout_8->addWidget(comboBox, 1, 0, 1, 1);
+        horizontalLayout->addWidget(cbThemes);
 
-        modelNameComboBox = new QComboBox(MadDataClassification);
-        modelNameComboBox->setObjectName(QString::fromUtf8("modelNameComboBox"));
-        modelNameComboBox->setEnabled(true);
-        modelNameComboBox->setModelColumn(0);
+        cbRankedDatasets = new QComboBox(MadDataClassification);
+        cbRankedDatasets->setObjectName(QString::fromUtf8("cbRankedDatasets"));
 
-        gridLayout_8->addWidget(modelNameComboBox, 1, 1, 1, 1);
+        horizontalLayout->addWidget(cbRankedDatasets);
 
+        cbDatasets = new QComboBox(MadDataClassification);
+        cbDatasets->setObjectName(QString::fromUtf8("cbDatasets"));
+        cbDatasets->setEnabled(true);
+        cbDatasets->setModelColumn(0);
+
+        horizontalLayout->addWidget(cbDatasets);
+
+
+        gridLayout_8->addLayout(horizontalLayout, 1, 0, 1, 5);
+
+        lblDataSetName = new QLabel(MadDataClassification);
+        lblDataSetName->setObjectName(QString::fromUtf8("lblDataSetName"));
+
+        gridLayout_8->addWidget(lblDataSetName, 2, 0, 1, 1);
+
+        lineEdit_2 = new QLineEdit(MadDataClassification);
+        lineEdit_2->setObjectName(QString::fromUtf8("lineEdit_2"));
+
+        gridLayout_8->addWidget(lineEdit_2, 2, 1, 1, 1);
+
+        lblDataSetName_2 = new QLabel(MadDataClassification);
+        lblDataSetName_2->setObjectName(QString::fromUtf8("lblDataSetName_2"));
+
+        gridLayout_8->addWidget(lblDataSetName_2, 2, 2, 1, 1);
+
+        lineEdit = new QLineEdit(MadDataClassification);
+        lineEdit->setObjectName(QString::fromUtf8("lineEdit"));
+
+        gridLayout_8->addWidget(lineEdit, 2, 3, 1, 1);
+
+        pushButton = new QPushButton(MadDataClassification);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout_8->addWidget(pushButton, 2, 4, 1, 1);
+
+#ifndef QT_NO_SHORTCUT
+        lblDataSetName->setBuddy(lineEdit_2);
+        lblDataSetName_2->setBuddy(lineEdit);
+#endif // QT_NO_SHORTCUT
 
         retranslateUi(MadDataClassification);
 
-        tabWidgetDataClassification->setCurrentIndex(1);
+        tabWidgetDataClassification->setCurrentIndex(0);
         toolBox->setCurrentIndex(0);
-        modelNameComboBox->setCurrentIndex(0);
+        cbDatasets->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MadDataClassification);
@@ -3827,6 +3864,24 @@ public:
     void retranslateUi(QDialog *MadDataClassification)
     {
         MadDataClassification->setWindowTitle(QApplication::translate("MadDataClassification", "Dialog", 0, QApplication::UnicodeUTF8));
+        lblHarvest->setText(QApplication::translate("MadDataClassification", "Harvest", 0, QApplication::UnicodeUTF8));
+        lblOverallRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblTillage->setText(QApplication::translate("MadDataClassification", "Tillage", 0, QApplication::UnicodeUTF8));
+        lblFertilisationRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblVarietyRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblFertilisation->setText(QApplication::translate("MadDataClassification", "Fertilisation", 0, QApplication::UnicodeUTF8));
+        lblIrrigation->setText(QApplication::translate("MadDataClassification", "Irrigation", 0, QApplication::UnicodeUTF8));
+        lblSeedDensity->setText(QApplication::translate("MadDataClassification", "Seed Density", 0, QApplication::UnicodeUTF8));
+        lblSeedDensityRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblTillageRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblCombined->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
+        lblYieldRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblIrrigationRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblSowingRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblSowing->setText(QApplication::translate("MadDataClassification", "Sowing", 0, QApplication::UnicodeUTF8));
+        lblHarvestRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
+        lblYield->setText(QApplication::translate("MadDataClassification", "Yield", 0, QApplication::UnicodeUTF8));
+        lblVariety->setText(QApplication::translate("MadDataClassification", "Variety", 0, QApplication::UnicodeUTF8));
         gbxCultivation->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         sbTillage->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of observations</p></body></html>", 0, QApplication::UnicodeUTF8));
@@ -3917,25 +3972,6 @@ public:
         chbxFertilisation->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Check if Minimum Data</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
         chbxFertilisation->setText(QApplication::translate("MadDataClassification", "Fertilisation ", 0, QApplication::UnicodeUTF8));
-        lblVariety->setText(QApplication::translate("MadDataClassification", "Variety", 0, QApplication::UnicodeUTF8));
-        lblVarietyRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblSowing->setText(QApplication::translate("MadDataClassification", "Sowing", 0, QApplication::UnicodeUTF8));
-        lblSowingRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblHarvest->setText(QApplication::translate("MadDataClassification", "Harvest", 0, QApplication::UnicodeUTF8));
-        lblHarvestRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblFertilisation->setText(QApplication::translate("MadDataClassification", "Fertilisation", 0, QApplication::UnicodeUTF8));
-        lblFertilisationRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblIrrigation->setText(QApplication::translate("MadDataClassification", "Irrigation", 0, QApplication::UnicodeUTF8));
-        lblIrrigationRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblSeedDensity->setText(QApplication::translate("MadDataClassification", "Seed Density", 0, QApplication::UnicodeUTF8));
-        lblSeedDensityRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblYield->setText(QApplication::translate("MadDataClassification", "Yield", 0, QApplication::UnicodeUTF8));
-        lblYieldRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblTillage->setText(QApplication::translate("MadDataClassification", "Tillage", 0, QApplication::UnicodeUTF8));
-        lblTillageRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblCombined->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
-        lblOverallRating->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
-        lblKnownDatasets->setText(QApplication::translate("MadDataClassification", "Known Datasets", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabCultivation), QApplication::translate("MadDataClassification", "Cultivation", 0, QApplication::UnicodeUTF8));
         lblStemElongationPhenology->setText(QApplication::translate("MadDataClassification", "Stem Elongation", 0, QApplication::UnicodeUTF8));
         lblEmergenceRatingPhenology->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
@@ -4493,8 +4529,8 @@ public:
         toolBox->setItemText(toolBox->indexOf(pageObservations), QApplication::translate("MadDataClassification", "Observations", 0, QApplication::UnicodeUTF8));
         lblKnownDatasetsStateVars->setText(QApplication::translate("MadDataClassification", "Known Datasets", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabStateVars), QApplication::translate("MadDataClassification", "State Vars", 0, QApplication::UnicodeUTF8));
-        comboBox->clear();
-        comboBox->insertItems(0, QStringList()
+        cbThemes->clear();
+        cbThemes->insertItems(0, QStringList()
          << QApplication::translate("MadDataClassification", "Select Theme", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "CropM", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "LiveM", 0, QApplication::UnicodeUTF8)
@@ -4502,8 +4538,12 @@ public:
          << QApplication::translate("MadDataClassification", "Climate", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "Other", 0, QApplication::UnicodeUTF8)
         );
-        modelNameComboBox->clear();
-        modelNameComboBox->insertItems(0, QStringList()
+        cbRankedDatasets->clear();
+        cbRankedDatasets->insertItems(0, QStringList()
+         << QApplication::translate("MadDataClassification", "Ranked Datasets", 0, QApplication::UnicodeUTF8)
+        );
+        cbDatasets->clear();
+        cbDatasets->insertItems(0, QStringList()
          << QApplication::translate("MadDataClassification", "Select Dataset", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "CMAP", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "I-COADS", 0, QApplication::UnicodeUTF8)
@@ -4522,8 +4562,11 @@ public:
          << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation (OI) SST", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadDataClassification", "Smith and Reynolds Extended Reconstructed SST (ERSST)", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Other", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Other/New", 0, QApplication::UnicodeUTF8)
         );
+        lblDataSetName->setText(QApplication::translate("MadDataClassification", "Dataset Name", 0, QApplication::UnicodeUTF8));
+        lblDataSetName_2->setText(QApplication::translate("MadDataClassification", "Description", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("MadDataClassification", "Save", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
