@@ -142,4 +142,3 @@ void MadMainWindow::loadTextFile(const QString &theFileToLoad)
    plainTextEdit->appendPlainText(line);
    plainTextEdit->setUndoRedoEnabled(false);
  }
-
