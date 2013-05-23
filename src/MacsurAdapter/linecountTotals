@@ -3,8 +3,8 @@ echo "src:"
 find . -name "*."cpp | xargs wc -l | grep total
 find . -name "*."h | xargs wc -l | grep total
 echo "gui:"
-find ./gui/ -name "*."cpp | xargs wc -l
-find ./gui/ -name "*."h | xargs wc -l
+find ./gui/ -name "*."cpp | xargs wc -l |grep total
+find ./gui/ -name "*."h | xargs wc -l | grep total
 echo "lib:"
 find ./lib/ -name "*."cpp | xargs wc -l | grep total
 find ./lib/ -name "*."h | xargs wc -l | grep total

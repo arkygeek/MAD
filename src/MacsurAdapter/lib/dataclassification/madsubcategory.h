@@ -22,10 +22,19 @@
 #ifndef MADSUBCATEGORY_H
 #define MADSUBCATEGORY_H
 
-class MadSubCategory
+// Local includes
+#include "../madguid.h"
+#include "../madserialisable.h"
+
+// Qt includes
+#include <QString>
+
+class MadSubCategory : public MadSerialisable, public MadGuid
 {
 public:
-  MadSubCategory(); // Constructor
+  MadSubCategory();
+  MadSubCategory(const MadSubCategory& theData);
+  MadSubCategory& operator = (const MadSubCategory& theData);
 
   // Accessors
   bool minData() const;
@@ -33,6 +42,31 @@ public:
   int observations() const;
   float weightPoints() const;
   int replicates() const;
+
+  // Text functions
+
+  /** Return an xml representation of this layer
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  bool fromXml(const QString theXml);
+
 
   // Mutators
   void setMinData(bool theBool);

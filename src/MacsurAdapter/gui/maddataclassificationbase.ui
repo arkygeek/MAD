@@ -6,14 +6,17 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>720</width>
-    <height>579</height>
+    <width>741</width>
+    <height>558</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
+   <item row="2" column="3">
+    <widget class="QLineEdit" name="lineEdit"/>
+   </item>
    <item row="0" column="0" colspan="5">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
@@ -831,6 +834,13 @@
        <string>Phenology</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="1">
+        <widget class="QLabel" name="lblEmergencePhenology">
+         <property name="text">
+          <string>Emergence</string>
+         </property>
+        </widget>
+       </item>
        <item row="1" column="1">
         <widget class="QLabel" name="lblStemElongationPhenology">
          <property name="text">
@@ -845,14 +855,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="lblEmergencePhenology">
-         <property name="text">
-          <string>Emergence</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" rowspan="10">
+       <item row="0" column="0" rowspan="9">
         <widget class="QGroupBox" name="gbxPhenology">
          <property name="title">
           <string>Edit</string>
@@ -1307,13 +1310,10 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="1" colspan="2">
-        <widget class="QComboBox" name="cbPhenology"/>
-       </item>
-       <item row="8" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsPhenology">
-         <property name="text">
-          <string>Known Datasets</string>
+       <item row="5" column="1" colspan="2">
+        <widget class="Line" name="linePhenology">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
          </property>
         </widget>
        </item>
@@ -1331,10 +1331,10 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="1" colspan="2">
-        <widget class="Line" name="linePhenology">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
+       <item row="4" column="1">
+        <widget class="QLabel" name="lblYellowRipenessPhenology">
+         <property name="text">
+          <string>Yellow Ripeness</string>
          </property>
         </widget>
        </item>
@@ -1342,13 +1342,6 @@
         <widget class="QLabel" name="lblYellowRipenessRatingPhenology">
          <property name="text">
           <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="lblYellowRipenessPhenology">
-         <property name="text">
-          <string>Yellow Ripeness</string>
          </property>
         </widget>
        </item>
@@ -1393,9 +1386,6 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="1" colspan="2">
-        <widget class="QComboBox" name="cbPrevCrop"/>
-       </item>
        <item row="0" column="2">
         <widget class="QLabel" name="lblCropRatingPrevCrop">
          <property name="text">
@@ -1424,7 +1414,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0" rowspan="12">
+       <item row="0" column="0" rowspan="11">
         <widget class="QGroupBox" name="gbxPrevCrop">
          <property name="title">
           <string>Edit</string>
@@ -2012,10 +2002,10 @@
          </property>
         </widget>
        </item>
-       <item row="10" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsPrevCrop">
+       <item row="3" column="1">
+        <widget class="QLabel" name="lblYieldPrevCrop">
          <property name="text">
-          <string>Known Datasets</string>
+          <string>Yield</string>
          </property>
         </widget>
        </item>
@@ -2023,13 +2013,6 @@
         <widget class="QLabel" name="lblHarvestDateRatingPrevCrop">
          <property name="text">
           <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLabel" name="lblYieldPrevCrop">
-         <property name="text">
-          <string>Yield</string>
          </property>
         </widget>
        </item>
@@ -2081,7 +2064,7 @@
        <string>Initial Values</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_4">
-       <item row="0" column="0" rowspan="7">
+       <item row="0" column="0" rowspan="6">
         <widget class="QGroupBox" name="gbxInitialValues">
          <property name="title">
           <string>Edit</string>
@@ -2298,16 +2281,6 @@
          </property>
         </widget>
        </item>
-       <item row="5" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsInitialValues">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="1" colspan="2">
-        <widget class="QComboBox" name="cbInitialValues"/>
-       </item>
        <item row="0" column="1">
         <widget class="QLabel" name="lblSoilMoistureInitialValues">
          <property name="text">
@@ -2370,7 +2343,7 @@
        <string>Soil</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="0" rowspan="13">
+       <item row="0" column="0" rowspan="12">
         <widget class="QGroupBox" name="gbxSoil">
          <property name="title">
           <string>Edit</string>
@@ -3091,17 +3064,17 @@
          </property>
         </widget>
        </item>
-       <item row="7" column="1">
-        <widget class="QLabel" name="lblHydrCondCurveSoil">
-         <property name="text">
-          <string>Hydr. Cond. Curve</string>
-         </property>
-        </widget>
-       </item>
        <item row="7" column="2">
         <widget class="QLabel" name="lblTillageRatingSoil">
          <property name="text">
           <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="1">
+        <widget class="QLabel" name="lblHydrCondCurveSoil">
+         <property name="text">
+          <string>Hydr. Cond. Curve</string>
          </property>
         </widget>
        </item>
@@ -3125,16 +3098,6 @@
           <string>Rank</string>
          </property>
         </widget>
-       </item>
-       <item row="11" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsSoil">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="12" column="1" colspan="2">
-        <widget class="QComboBox" name="cbSoil"/>
        </item>
        <item row="4" column="2">
         <widget class="QLabel" name="lblIrrigationRatingSoil">
@@ -3184,16 +3147,6 @@
          </property>
         </widget>
        </item>
-       <item row="6" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsSite">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1" colspan="2">
-        <widget class="QComboBox" name="cbSite"/>
-       </item>
        <item row="1" column="2">
         <widget class="QLabel" name="lblSowingRatingSite">
          <property name="text">
@@ -3236,7 +3189,7 @@
          </property>
         </widget>
        </item>
-       <item row="0" column="0" rowspan="8">
+       <item row="0" column="0" rowspan="7">
         <widget class="QGroupBox" name="gbxSite">
          <property name="title">
           <string>Edit</string>
@@ -3564,17 +3517,7 @@
          </property>
         </widget>
        </item>
-       <item row="11" column="1" colspan="2">
-        <widget class="QLabel" name="lblKnownDatasetsWeather">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="12" column="1" colspan="2">
-        <widget class="QComboBox" name="cbWeather"/>
-       </item>
-       <item row="0" column="0" rowspan="13">
+       <item row="0" column="0" rowspan="12">
         <widget class="QGroupBox" name="gbxWeather">
          <property name="title">
           <string>Edit</string>
@@ -4253,17 +4196,17 @@
          </property>
         </widget>
        </item>
-       <item row="9" column="1">
-        <widget class="QLabel" name="lblCombinedWeather">
-         <property name="text">
-          <string>Combined:</string>
-         </property>
-        </widget>
-       </item>
        <item row="2" column="1">
         <widget class="QLabel" name="lblTminWeather">
          <property name="text">
           <string>T min</string>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1">
+        <widget class="QLabel" name="lblCombinedWeather">
+         <property name="text">
+          <string>Combined:</string>
          </property>
         </widget>
        </item>
@@ -4339,7 +4282,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>650</width>
+            <width>671</width>
             <height>280</height>
            </rect>
           </property>
@@ -5300,18 +5243,15 @@
          </widget>
         </widget>
        </item>
-       <item row="1" column="0" alignment="Qt::AlignRight">
-        <widget class="QLabel" name="lblKnownDatasetsStateVars">
-         <property name="text">
-          <string>Known Datasets</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QComboBox" name="cbStateVars"/>
-       </item>
       </layout>
      </widget>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pushButton">
+     <property name="text">
+      <string>Save</string>
+     </property>
     </widget>
    </item>
    <item row="1" column="0" colspan="5">
@@ -5489,16 +5429,6 @@
      </property>
      <property name="buddy">
       <cstring>lineEdit</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="3">
-    <widget class="QLineEdit" name="lineEdit"/>
-   </item>
-   <item row="2" column="4">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Save</string>
      </property>
     </widget>
    </item>

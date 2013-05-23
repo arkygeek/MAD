@@ -21,12 +21,23 @@
 
 #ifndef MADDATACLASSIFICATIONPREVCROP_H
 #define MADDATACLASSIFICATIONPREVCROP_H
-#include "madsubcategory.h"
 
-class MadDataClassificationPrevCrop
+class QString;  //  forward declaration
+
+// local includes
+#include "madsubcategory.h"
+#include "../madguid.h"
+#include "../madserialisable.h"
+
+// Qt includes
+#include <QString>
+
+class MadDataClassificationPrevCrop : public MadSerialisable, public MadGuid
 {
 public:
   MadDataClassificationPrevCrop();
+  MadDataClassificationPrevCrop(const MadDataClassificationPrevCrop& theData);
+  MadDataClassificationPrevCrop& operator = (const MadDataClassificationPrevCrop& theData);
 
   // Accessors
   MadSubCategory crop() const;
@@ -36,6 +47,30 @@ public:
   MadSubCategory residueMgmt() const;
   MadSubCategory fertilisation() const;
   MadSubCategory irrigation() const;
+
+  // Text functions
+
+  /** Return an xml representation of this layer
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  bool fromXml(const QString theXml);
 
   // Mutators
   void setCrop(MadSubCategory theData);

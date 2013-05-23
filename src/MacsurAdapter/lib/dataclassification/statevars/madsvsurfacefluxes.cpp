@@ -21,11 +21,34 @@
 
 #include "madsvsurfacefluxes.h"
 #include "../madsubcategory.h"
+#include "../../madutils.h"
 
-MadSVSurfaceFluxes::MadSVSurfaceFluxes()
+//Qt includes
+#include <QString>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDebug>
+
+MadSVSurfaceFluxes::MadSVSurfaceFluxes() : MadSerialisable(), MadGuid()
 {
+  setGuid();
 }
 
+MadSVSurfaceFluxes::MadSVSurfaceFluxes(const MadSVSurfaceFluxes &theData)
+{
+  setGuid(theData.guid());
+}
+
+MadSVSurfaceFluxes& MadSVSurfaceFluxes::operator =(const MadSVSurfaceFluxes& theData)
+{
+  // gracefully handles self assignment
+  if (this == &theData) return *this;
+  //mName=theData.name();
+  //mDescription=theData.description();
+  //setGuid(theData.guid());
+  //mImageFile=theData.imageFile();
+  return *this;
+}
 
 // Accessors
 MadSubCategory MadSVSurfaceFluxes::et() const
@@ -77,4 +100,73 @@ void MadSVSurfaceFluxes::setCh4Loss(MadSubCategory theData)
 {
   mCh4Loss = theData;
 }
-#
+
+bool MadSVSurfaceFluxes::fromXml(const QString theXml)
+{
+    QDomDocument myDocument("mydocument");
+    myDocument.setContent(theXml);
+    QDomElement myTopElement = myDocument.firstChildElement("model");
+    if (myTopElement.isNull())
+    {
+        //TODO - just make this a warning
+        qDebug("the top element couldn't be found!");
+        setGuid(myTopElement.attribute("guid"));
+        //mEt=MadUtils::xmlDecode(myTopElement.firstChildElement("et").text());
+        //mNh3Loss=MadUtils::xmlDecode(myTopElement.firstChildElement("nh3Loss").text());
+        //mN2oLoss=MadUtils::xmlDecode(myTopElement.firstChildElement("n2oLoss").text());
+        //mN2Loss=MadUtils::xmlDecode(myTopElement.firstChildElement("n2Loss").text());
+        //ch4Loss()=MadUtils::xmlDecode(myTopElement.firstChildElement("ch4Loss").text());
+        return true;
+    }
+    else
+    return false;
+}
+
+QString MadSVSurfaceFluxes::toXml()
+{
+  QString myString;
+  myString+=QString("<MadSVSurfaceFluxes guid=\"" + guid() + "\">\n");
+  //myString+=QString("  <et>" + MadUtils::xmlEncode(mEt) + "</et>\n");
+  //myString+=QString("  <nh3Loss>" + MadUtils::xmlEncode(mNh3Loss) + "</nh3Loss>\n");
+  //myString+=QString("  <n2oLoss>" + MadUtils::xmlEncode(mN2oLoss) + "</n2oLoss>\n");
+  //myString+=QString("  <n2Loss>" + MadUtils::xmlEncode(mN2Loss) + "</n2Loss>\n");
+  //myString+=QString("  <ch4Loss>" + MadUtils::xmlEncode(mCh4Loss) + "</ch4Loss>\n");
+  myString+=QString("</MadSVSurfaceFluxes>\n");
+  return myString;
+}
+
+QString MadSVSurfaceFluxes::toText()
+{
+  QString myString;
+  myString+=QString("guid=>" + guid() + "\n");
+  /** @TODO I need to figure out how to turn the sub category into text */
+  //myString+=QString("et=>" + MadUtils::xmlEncode(mEt) + "</et>\n");
+  //myString+=QString("nh3Loss=>" + MadUtils::xmlEncode(mNh3Loss) + "</nh3Loss>\n");
+  //myString+=QString("n2oLoss=>" + MadUtils::xmlEncode(mN2oLoss) + "</n2oLoss>\n");
+  //myString+=QString("n2Loss=>" + MadUtils::xmlEncode(mN2Loss) + "</n2Loss>\n");
+  //myString+=QString("ch4Loss=>" + MadUtils::xmlEncode(mCh4Loss) + "</ch4Loss>\n");
+  return myString;
+}
+
+QString MadSVSurfaceFluxes::toHtml()
+{
+  QString myString;
+  //myString+="<h3>Details for " + MadUtils::xmlEncode(mName) + "</h3>";
+    //myString+="<p>GUID:" + guid() + "</p>";
+  myString+="<table>";
+  //myString+="<tr><td><b>Description: </b></td><td>" + mDescription + "</td></tr>";
+
+  //
+  // the following shows example of how to do a couple of things
+  //
+
+  //myString+="<tr><td><b>Cals/Kg: </b></td><td>" + QString::number(mCropCalories) + "</td></tr>";
+  //QString myCropFodderEnergyType = (mCropFodderEnergyType==0) ? "KCalories" : "TDN";
+  //QString myUnits = (mAreaUnits==0) ? "Dunum" : "Hectare";
+  //myString+="<tr><td><b>Fodder (kg/" + myUnits + "): </b></td><td>" + QString::number(mCropFodderProduction) + "</td></tr>";
+  //myString+="<tr><td><b>Fodder Value/Kg: </b></td><td>" + QString::number(mCropFodderValue) + "</td></tr>";
+  //myString+="<tr><td><b>FodderEnergyType: </b></td><td>" + myCropFodderEnergyType + "</td></tr>";
+  //myString+="<tr><td><b>AreaUnits: </b></td><td>" + myUnits + "</td></tr>";
+  myString+="</table>";
+  return myString;
+}

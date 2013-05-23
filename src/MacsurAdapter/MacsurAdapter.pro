@@ -74,4 +74,5 @@ OTHER_FILES += \
     resources/livem.txt \
     resources/tradem.txt \
     README.txt \
-    CMakeLists.txt
+    CMakeLists.txt \
+    notes.txt

@@ -21,17 +21,53 @@
 
 #ifndef MADDATACLASSIFICATIONSITEDATA_H
 #define MADDATACLASSIFICATIONSITEDATA_H
-#include "madsubcategory.h"
 
-class MadDataClassificationSiteData
+
+class QString;  //  forward declaration
+
+// local includes
+#include "madsubcategory.h"
+#include "../madguid.h"
+#include "../madserialisable.h"
+
+// Qt includes
+#include <QString>
+
+class MadDataClassificationSiteData : public MadSerialisable, public MadGuid
 {
 public:
   MadDataClassificationSiteData();
+  MadDataClassificationSiteData(const MadDataClassificationSiteData& theData);
+  MadDataClassificationSiteData& operator = (const MadDataClassificationSiteData& theData);
 
   // Accessors
   MadSubCategory latitude() const;
   MadSubCategory longitude() const;
   MadSubCategory altitude() const;
+
+  // Text functions
+
+  /** Return an xml representation of this layer
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  bool fromXml(const QString theXml);
 
   // Mutators
   void setLatitude(MadSubCategory theData);

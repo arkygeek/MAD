@@ -87,7 +87,8 @@ public:
   void setImageFile(QString theImageFileName);
 
   /** Return an xml representation of this layer
-   * @note this class inherits the serialisable interface so it MUST implement this
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
    */
   QString toXml();
 
@@ -102,7 +103,8 @@ public:
   /** Read this object from xml and return result as
    * true for success, false for failure.
    * @see MadSerialisable
-   * @note this class inherits the serialisable interface so it MUST implement this
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
    */
   bool fromXml(const QString theXml);
 

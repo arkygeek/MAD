@@ -27,29 +27,63 @@
 #include "madsvsoil.h"
 #include "madsvsurfacefluxes.h"
 #include "madsvobservations.h"
+#include "../madsubcategory.h"
+#include "../../madutils.h"
 
+//Qt includes
+#include <QString>
+#include <QDomDocument>
+#include <QDomElement>
+#include <QDebug>
 
 /**
  * @brief The MadStateVars class.  This contains 4 sub categories
  * @file "madsvcrop.h"
  */
-class MadStateVars
+class MadStateVars : public MadSerialisable, public MadGuid
 {
 public:
   MadStateVars();
+  MadStateVars(const MadStateVars& theData);
+  MadStateVars& operator = (const MadStateVars& theData);
 
   // Accessors
   MadSVCrop cropCategories() const;
   MadSVSoil soilCategories() const;
-  MadSVSurfaceFluxes surfaceFluxes() const;
+  MadSVSurfaceFluxes surfaceFluxesCategories() const;
   MadSVObservations observationCategories() const;
+
+  // Text functions
+
+  /** Return an xml representation of this layer
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  bool fromXml(const QString theXml);
+
 
   // Mutators
 
   void setCropCategories(MadSVCrop theMadSVCrop);
-  void setSoilCategories(MadSVSoil theMadSVSoil);
-  void setSurfaceFluxes(MadSVSurfaceFluxes theMadSVSurfaceFluxes);
-  void setObservationCategories(MadSVObservations theMadSVObservations);
+  void setSoilCategories(MadSVSoil theData);
+  void setSurfaceFluxesCategories(MadSVSurfaceFluxes theData);
+  void setObservationCategories(MadSVObservations theData);
 
 private:
   MadSVCrop mCropCategories;

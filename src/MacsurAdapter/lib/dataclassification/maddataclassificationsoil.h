@@ -21,12 +21,22 @@
 
 #ifndef MADDATACLASSIFICATIONSOIL_H
 #define MADDATACLASSIFICATIONSOIL_H
-#include "madsubcategory.h"
+class QString;  //  forward declaration
 
-class MadDataClassificationSoil
+// local includes
+#include "madsubcategory.h"
+#include "../madguid.h"
+#include "../madserialisable.h"
+
+// Qt includes
+#include <QString>
+
+class MadDataClassificationSoil : public MadSerialisable, public MadGuid
 {
 public:
   MadDataClassificationSoil();
+  MadDataClassificationSoil(const MadDataClassificationSoil& theData);
+  MadDataClassificationSoil& operator = (const MadDataClassificationSoil& theData);
 
   // Accessors
   MadSubCategory carbonOrganic() const;
@@ -38,6 +48,31 @@ public:
   MadSubCategory pfCurve() const;
   MadSubCategory hydrCondCurve() const;
   MadSubCategory pH() const;
+
+  // Text functions
+
+  /** Return an xml representation of this layer
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  QString toXml();
+
+  /** Return a plain text representation of this layer
+   */
+  QString toText();
+
+  /** Return a html text representation of this layer
+   */
+  QString toHtml();
+
+  /** Read this object from xml and return result as
+   * true for success, false for failure.
+   * @see MadSerialisable
+   * @note this class inherits the serialisable interface
+   * so it MUST implement this
+   */
+  bool fromXml(const QString theXml);
+
 
   // Mutators
   void setCarbonOrganic(MadSubCategory theData);
