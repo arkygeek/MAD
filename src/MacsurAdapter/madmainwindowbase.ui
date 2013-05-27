@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>534</width>
+    <width>558</width>
     <height>417</height>
    </rect>
   </property>
@@ -433,7 +433,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>534</width>
+     <width>558</width>
      <height>22</height>
     </rect>
    </property>

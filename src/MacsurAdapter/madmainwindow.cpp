@@ -153,7 +153,6 @@ void MadMainWindow::on_pbExportCsv_clicked()
     // Export model details as a CSV file
 }
 
-
 void MadMainWindow::on_pbTableView_clicked()
 {
     // Table view of the model details
