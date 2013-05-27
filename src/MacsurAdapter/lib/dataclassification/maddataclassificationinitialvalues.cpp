@@ -21,7 +21,7 @@
 
 
 // Local includes
-#include "MadDataClassificationInitialValues.h"
+#include "maddataclassificationinitialvalues.h"
 #include "madsubcategory.h"
 #include "../madutils.h"
 
