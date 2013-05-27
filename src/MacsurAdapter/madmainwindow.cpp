@@ -142,3 +142,19 @@ void MadMainWindow::loadTextFile(const QString &theFileToLoad)
    plainTextEdit->appendPlainText(line);
    plainTextEdit->setUndoRedoEnabled(false);
  }
+
+void MadMainWindow::on_pbViewAsHtml_clicked()
+{
+    // view model details in HTML format
+}
+
+void MadMainWindow::on_pbExportCsv_clicked()
+{
+    // Export model details as a CSV file
+}
+
+
+void MadMainWindow::on_pbTableView_clicked()
+{
+    // Table view of the model details
+}

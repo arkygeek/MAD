@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>741</width>
+    <width>874</width>
     <height>558</height>
    </rect>
   </property>
@@ -4282,7 +4282,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>671</width>
+            <width>804</width>
             <height>280</height>
            </rect>
           </property>
@@ -5245,6 +5245,27 @@
        </item>
       </layout>
      </widget>
+     <widget class="QWidget" name="tabInfo">
+      <attribute name="title">
+       <string>Info</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_19">
+       <item row="0" column="0">
+        <widget class="QWebView" name="webView">
+         <property name="font">
+          <font>
+           <pointsize>11</pointsize>
+          </font>
+         </property>
+         <property name="url">
+          <url>
+           <string>qrc:/CropMWP1TaskC1-2.htm</string>
+          </url>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
     </widget>
    </item>
    <item row="2" column="4">
@@ -5434,6 +5455,13 @@
    </item>
   </layout>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources/>
  <connections/>
 </ui>

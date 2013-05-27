@@ -82,7 +82,7 @@
 /* Begin PBXFileReference section */
 		00B03AE6FAB541EBBD081F53 /* maddataclassificationinitialvalues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationinitialvalues.cpp; path = lib/dataclassification/maddataclassificationinitialvalues.cpp; sourceTree = SOURCE_ROOT; };
 		078A083F304A4C6083FD1123 /* maddataclassificationprevcrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationprevcrop.cpp; path = lib/dataclassification/maddataclassificationprevcrop.cpp; sourceTree = SOURCE_ROOT; };
-		1011DF481E9B49AABFF5B478 /* madmainwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = madmainwindow.cpp; sourceTree = SOURCE_ROOT; };
+		1011DF481E9B49AABFF5B478 /* madmainwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = madmainwindow.cpp; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.cpp; };
 		2071E08F30A143B2B4B4F96E /* maddataclassificationbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = maddataclassificationbase.ui; path = gui/maddataclassificationbase.ui; sourceTree = SOURCE_ROOT; };
 		23AE5D6657E947D9B467E6A6 /* madsvobservations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsvobservations.cpp; path = lib/dataclassification/statevars/madsvobservations.cpp; sourceTree = SOURCE_ROOT; };
 		242605A5CD2E441894D0BCCC /* maddataclassificationsitedata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationsitedata.cpp; path = lib/dataclassification/maddataclassificationsitedata.cpp; sourceTree = SOURCE_ROOT; };
@@ -543,9 +543,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -593,9 +591,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
@@ -633,9 +629,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -743,9 +737,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -793,9 +785,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
@@ -833,9 +823,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ALL_BUILD;
@@ -873,9 +861,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;
@@ -915,12 +901,8 @@
 				);
 				INSTALL_PATH = "";
 				LIBRARY_SEARCH_PATHS = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
-				OTHER_CPLUSPLUSFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
+				OTHER_CPLUSPLUSFLAGS = "-Wall";
 				OTHER_LDFLAGS = (
 					"-Wl,-search_paths_first",
 					"-Wl,-headerpad_max_install_names",
@@ -971,9 +953,7 @@
 					/Library/Frameworks/QtXml.framework/Headers,
 				);
 				INSTALL_PATH = "";
-				OTHER_CFLAGS = (
-					"-Wall",
-				);
+				OTHER_CFLAGS = "-Wall";
 				OTHER_LDFLAGS = "";
 				OTHER_REZFLAGS = "";
 				PRODUCT_NAME = ZERO_CHECK;

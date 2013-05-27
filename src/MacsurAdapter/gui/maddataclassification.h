@@ -44,7 +44,6 @@ private slots:
     void on_hsldrSeedDensity_valueChanged(int theSliderValue);
     void on_hsldrYield_valueChanged(int theSliderValue);
     void on_hsldrTillage_valueChanged(int theSliderValue);
-    void on_cbCultivation_currentIndexChanged(const QString &theIndex);
     void on_dsbVariety_valueChanged(double theValue);
     void on_dsbSowing_valueChanged(double theValue);
     void on_dsbHarvest_valueChanged(double theValue);

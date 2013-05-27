@@ -174,12 +174,6 @@ void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
     dsbTillage->setValue(myPreciseValue);
 }
 
-void MadDataClassification::on_cbCultivation_currentIndexChanged(const QString &theIndex)
-{
-    QString myIndex=theIndex;
-    //this will do something...
-}
-
 void MadDataClassification::on_dsbVariety_valueChanged(double theValue)
 {
     int myPosition;

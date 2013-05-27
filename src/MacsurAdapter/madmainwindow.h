@@ -90,12 +90,10 @@ private:
 
   private slots:
 
-
     /**
      * @brief on_pbClassification_clicked
      */
     void on_pbClassification_clicked();
-
     /**
      * @brief on_cbAboutMain_currentIndexChanged
      * Updates the text in the text browser to reflect relevant info chosen
@@ -103,24 +101,32 @@ private:
      * @param theSelection
      */
     void on_cbAboutMain_currentIndexChanged(const QString &theSelection);
-
     /**
      * @brief on_pbViewAsText_clicked show model info in new dialog as plain text
      */
     void on_pbViewAsText_clicked();
-
     /**
      * @brief on_actionOpen_triggered launches open file dialog to load settings
      */
     void on_actionOpen_triggered();
-
     /**
      * @brief on_lvwCurrentInventoryModels_clicked
      * triggers loading of model details for display in
      * @param theIndex
      */
     void on_lvwCurrentInventoryModels_clicked(const QModelIndex &theIndex);
-
+    /**
+     * @brief on_pbViewAsHtml_clicked views model details in HTML format
+     */
+    void on_pbViewAsHtml_clicked();
+    /**
+     * @brief on_pbExportCsv_clicked exports model details as a CSV file
+     */
+    void on_pbExportCsv_clicked();
+    /**
+     * @brief on_pbTableView_clicked gives a table view of the model details
+     */
+    void on_pbTableView_clicked();
 };
 
 #endif // MADMAINWINDOW_H
