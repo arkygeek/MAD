@@ -22,24 +22,67 @@
 #ifndef MADDATACLASSIFICATIONCULTIVATION_H
 #define MADDATACLASSIFICATIONCULTIVATION_H
 
-class MadDataClassificationCultivation
+class QString; // forward declaration
+
+// local includes
+#include "madsubcategory.h"
+#include "../madguid.h"
+#include "../madserialisable.h"
+
+// Qt includes
+#include <QString>
+
+class MadDataClassificationCultivation : public MadSerialisable, public MadGuid
 {
 public:
   MadDataClassificationCultivation();
-};
+  MadDataClassificationCultivation(const MadDataClassificationCultivation& theData);
+  MadDataClassificationCultivation& operator = (const MadDataClassificationCultivation& theData);
 
-#endif // MADDATACLASSIFICATIONCULTIVATION_H
+// Accessors
+  MadSubCategory variety() const;
+  MadSubCategory sowing() const;
+  MadSubCategory harvest() const;
+  MadSubCategory fertilisation() const;
+  MadSubCategory irrigation() const;
+  MadSubCategory seedDensity() const;
+  MadSubCategory yield() const;
+  MadSubCategory tillage() const;
 
-/*  for Katharina's reference...
 
-MadSubCategory variety;
-MadSubCategory sowing;
-MadSubCategory harvest;
-MadSubCategory fertilisation;
-MadSubCategory irrigation;
-MadSubCategory seedDensity;
-MadSubCategory yield;
-MadSubCategory tillage;
+// Text functions
+/** Return an xml representation of this layer
+ * @note this class inherits the serialisable interface
+ * so it MUST implement this
+ */
+QString toXml();
+
+/** Return a plain text representation of this layer
+ */
+QString toText();
+
+/** Return a html text representation of this layer
+ */
+QString toHtml();
+
+/**
+* true for success, false for failure.
+* @see MadSerialisable
+* @note this class inherits the serialisable interface
+* so it MUST implement this
+*/
+bool fromXml(const QString theXml);
+
+
+// Mutators
+void setVariety(MadSubCategory theData);
+void setSowing(MadSubCategory theData);
+void setHarvest(MadSubCategory theData);
+void setFertilisation(MadSubCategory theData);
+void setIrrigation(MadSubCategory theData);
+void setSeedDensity(MadSubCategory theData);
+void setYield(MadSubCategory theData);
+void setTillage(MadSubCategory theData);
 
 private:
 MadSubCategory mVariety;
@@ -51,4 +94,6 @@ MadSubCategory mSeedDensity;
 MadSubCategory mYield;
 MadSubCategory mTillage;
 
-*/
+};
+
+#endif // MADDATACLASSIFICATIONCULTIVATION_H

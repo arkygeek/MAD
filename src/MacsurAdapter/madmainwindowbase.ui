@@ -408,7 +408,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
      <x>0</x>
      <y>0</y>
      <width>534</width>
-     <height>22</height>
+     <height>21</height>
     </rect>
    </property>
    <widget class="QMenu" name="menuFile">
