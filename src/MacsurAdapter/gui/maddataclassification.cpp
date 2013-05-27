@@ -21,6 +21,8 @@
 #include <iomanip>
 
 //Qt includes
+#include <QtWebKit>
+
 
 //Local includes
 #include "maddataclassification.h"

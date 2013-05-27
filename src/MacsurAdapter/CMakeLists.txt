@@ -1,12 +1,19 @@
 project( MacsurAdapter )
 cmake_minimum_required( VERSION 2.6 )
 set ( CMAKE_BUILD_TYPE Release )
+set ( QT_USE_QTWEBKIT TRUE )
 add_definitions ( -Wall )
 find_package ( Qt4 REQUIRED )
 include ( ${QT_USE_FILE} )
 include_directories (
-        ${CMAKE_SOURCE_DIR} ${CMAKE_CURRENT_BINARY_DIR}
-        ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTCORE_INCLUDE_DIR} ${QT_QTGUI_INCLUDE_DIR} ${QT_QTXML_INCLUDE_DIR}
+        ${CMAKE_SOURCE_DIR}
+        ${CMAKE_CURRENT_BINARY_DIR}
+        ${QT_QTCORE_INCLUDE_DIR}
+        ${QT_QTGUI_INCLUDE_DIR}
+        ${QT_QTCORE_INCLUDE_DIR}
+        ${QT_QTGUI_INCLUDE_DIR}
+        ${QT_QTXML_INCLUDE_DIR}
+        ${QT_QTWEBKIT_INCLUDE_DIR}
         )
 set ( MacsurAdapter_HDRS
         lib/madmodel.h
@@ -78,6 +85,21 @@ set ( MacsurAdapter_MOCS
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 
-add_executable ( MacsurAdapter ${MacsurAdapter_SRCS} ${UIS} ${RSCS} ${TRS} ${MOCS} )
-target_link_libraries ( MacsurAdapter  ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTCORE_LIBRARY} ${QT_QTGUI_LIBRARY} ${QT_QTXML_LIBRARY} )
+add_executable (
+                 MacsurAdapter
+                ${MacsurAdapter_SRCS}
+                ${UIS}
+                ${RSCS}
+                ${TRS}
+                ${MOCS}
+               )
+target_link_libraries (
+                        MacsurAdapter
+                        ${QT_QTCORE_LIBRARY}
+                        ${QT_QTGUI_LIBRARY}
+                        ${QT_QTCORE_LIBRARY}
+                        ${QT_QTGUI_LIBRARY}
+                        ${QT_QTXML_LIBRARY}
+                        ${QT_QTWEBKIT_LIBRARY}
+                      )
 

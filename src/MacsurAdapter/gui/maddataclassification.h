@@ -23,6 +23,7 @@
 #define MADDATACLASSIFICATION_H
 
 #include "ui_maddataclassificationbase.h"
+#include <QtWebKit>
 
 class MadDataClassification : public QDialog, private Ui::MadDataClassification
 {

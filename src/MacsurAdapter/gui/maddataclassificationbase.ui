@@ -20,7 +20,7 @@
    <item row="0" column="0" colspan="5">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
      <property name="currentIndex">
-      <number>0</number>
+      <number>8</number>
      </property>
      <widget class="QWidget" name="tabCultivation">
       <attribute name="title">
