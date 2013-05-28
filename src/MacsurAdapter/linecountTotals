@@ -1,11 +1,30 @@
 #!/bin/sh
 echo "src:"
-find . -name "*."cpp | xargs wc -l | grep total
-find . -name "*."h | xargs wc -l | grep total
-echo "gui:"
-find ./gui/ -name "*."cpp | xargs wc -l |grep total
-find ./gui/ -name "*."h | xargs wc -l | grep total
-echo "lib:"
-find ./lib/ -name "*."cpp | xargs wc -l | grep total
-find ./lib/ -name "*."h | xargs wc -l | grep total
+find . -name "*build*" -prune -o -name "*."cpp -exec wc -l {} \+
+find . -name "*build*" -prune -o -name "*."h -exec wc -l {} \+
+#echo "gui:"
+#find ./gui/ -name "*."cpp | xargs wc -l
+#find ./gui/ -name "*."h | xargs wc -l
+#echo "lib:"
+#find ./lib/ -name "*."cpp | xargs wc -l
+#find ./lib/ -name "*."h | xargs wc -l
+
+
+echo "src:"
+echo "cpp files:"
+find . -name "*build*" -prune -o -name "*."cpp -exec wc -l {} \+ | grep total
+echo "header files:"
+find . -name "*build*" -prune -o -name "*."h -exec wc -l {} \+ | grep total
+#echo " "
+#echo "gui:"
+#echo "cpp files:"
+#find ./gui/ -name "*."cpp | xargs wc -l |grep total
+#echo "header files:"
+#find ./gui/ -name "*."h | xargs wc -l | grep total
+#echo " "
+#echo "lib:"
+#echo "cpp files:"
+#find ./lib/ -name "*."cpp | xargs wc -l | grep total
+#echo "header files:"
+#find ./lib/ -name "*."h | xargs wc -l | grep total
 
