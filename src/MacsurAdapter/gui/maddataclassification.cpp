@@ -22,6 +22,7 @@
 
 //Qt includes
 #include <QtWebKit>
+#include <QWebPage>
 #include <QString>
 #include <QPixmap>
 
@@ -41,6 +42,8 @@ MadDataClassification::MadDataClassification(QWidget *parent) :
   lblExample->setText("Select Example");
   lblMedal->setVisible(false);
   lblRanking->setVisible(false);
+  lblExample->setVisible(true);
+  cbExamples->setDisabled(false);
 }
 
 void MadDataClassification::changeEvent(QEvent *e)

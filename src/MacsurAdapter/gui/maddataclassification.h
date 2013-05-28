@@ -34,6 +34,8 @@
 
 // Qt includes
 #include <QtWebKit>
+#include <QWebPage>
+
 
 class MadDataClassification : public QDialog, private Ui::MadDataClassification
 {
