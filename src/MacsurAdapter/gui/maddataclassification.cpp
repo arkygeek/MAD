@@ -43,6 +43,40 @@ MadDataClassification::MadDataClassification(QWidget *parent) :
   lblRanking->setVisible(false);
   lblExample->setVisible(true);
   cbExamples->setDisabled(false);
+
+  // These must stay here at the end
+  connect ( sbVariety, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateVarietyRatingLbl() ));
+  //connect ( dsbVariety, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateVarietyRatingLbl() ));
+  connect ( sbSowing, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSowingRatingLbl() ));
+  //connect ( dsbSowing, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateSowingRatingLbl() ));
+  connect ( sbHarvest, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateHarvestRatingLbl() ));
+  //connect ( dsbHarvest, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateHarvestRatingLbl() ));
+  connect ( sbFertilisation, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateFertilisationRatingLbl() ));
+  //connect ( dsbFertilisation, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateFertilisationRatingLbl() ));
+  connect ( sbIrrigation, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateIrrigationRatingLbl() ));
+  //connect ( dsbIrrigation, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateIrrigationRatingLbl() ));
+  connect ( sbSeedDensity, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSeedDensityRatingLbl() ));
+  //connect ( dsbSeedDensity, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateSeedDensityRatingLbl() ));
+  connect ( sbYield, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateYieldRatingLbl() ));
+  //connect ( dsbYield, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateYieldRatingLbl() ));
+  connect ( sbTillage, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateTillageRatingLbl() ));
+  //connect ( dsbTillage, SIGNAL ( valueChanged(int) ),
+  //          this, SLOT ( updateTillageRatingLbl() ));
 }
 
 void MadDataClassification::changeEvent(QEvent *e)
@@ -412,84 +446,4 @@ void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
     {
       pbCultivationSave->setEnabled(false);
     };
-}
-
-void MadDataClassification::on_sbVariety_valueChanged()
-{
-  updateVarietyRatingLbl();
-}
-
-void MadDataClassification::on_sbSowing_valueChanged()
-{
-  updateSowingRatingLbl();
-}
-
-void MadDataClassification::on_sbHarvest_valueChanged()
-{
-  updateHarvestRatingLbl();
-}
-
-void MadDataClassification::on_sbFertilisation_valueChanged()
-{
-  updateFertilisationRatingLbl();
-}
-
-void MadDataClassification::on_sbIrrigation_valueChanged()
-{
-  updateIrrigationRatingLbl();
-}
-
-void MadDataClassification::on_sbSeedDensity_valueChanged()
-{
-  updateSeedDensityRatingLbl();
-}
-
-void MadDataClassification::on_sbYield_valueChanged()
-{
-  updateYieldRatingLbl();
-}
-
-void MadDataClassification::on_sbTillage_valueChanged()
-{
-  updateTillageRatingLbl();
-}
-
-void MadDataClassification::on_dsbVariety_valueChanged()
-{
-  updateVarietyRatingLbl();
-}
-
-void MadDataClassification::on_dsbSowing_valueChanged()
-{
-  updateSowingRatingLbl();
-}
-
-void MadDataClassification::on_dsbHarvest_valueChanged()
-{
-  updateHarvestRatingLbl();
-}
-
-void MadDataClassification::on_dsbFertilisation_valueChanged()
-{
-  updateFertilisationRatingLbl();
-}
-
-void MadDataClassification::on_dsbIrrigation_valueChanged()
-{
-  updateIrrigationRatingLbl();
-}
-
-void MadDataClassification::on_dsbSeedDensity_valueChanged()
-{
-  updateSeedDensityRatingLbl();
-}
-
-void MadDataClassification::on_dsbYield_valueChanged()
-{
-  updateYieldRatingLbl();
-}
-
-void MadDataClassification::on_dsbTillage_valueChanged()
-{
-  updateTillageRatingLbl();
 }

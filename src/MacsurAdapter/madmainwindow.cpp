@@ -143,6 +143,7 @@ void MadMainWindow::loadTextFile(const QString &theFileToLoad)
    plainTextEdit->setUndoRedoEnabled(false);
  }
 
+
 void MadMainWindow::on_pbViewAsHtml_clicked()
 {
     // view model details in HTML format

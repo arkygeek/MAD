@@ -76,24 +76,6 @@ private slots:
   void updateYieldRatingLbl();
   void updateTillageRatingLbl();
 
-  void on_sbVariety_valueChanged();
-  void on_sbSowing_valueChanged();
-  void on_sbHarvest_valueChanged();
-  void on_sbFertilisation_valueChanged();
-  void on_sbIrrigation_valueChanged();
-  void on_sbSeedDensity_valueChanged();
-  void on_sbYield_valueChanged();
-  void on_sbTillage_valueChanged();
-
-  void on_dsbVariety_valueChanged();
-  void on_dsbSowing_valueChanged();
-  void on_dsbHarvest_valueChanged();
-  void on_dsbFertilisation_valueChanged();
-  void on_dsbIrrigation_valueChanged();
-  void on_dsbSeedDensity_valueChanged();
-  void on_dsbYield_valueChanged();
-  void on_dsbTillage_valueChanged();
-
   void on_pbCultivationSave_clicked();
   void on_pbCultivationSet_clicked();
   void on_lineEdit_2_textChanged(const QString &theText);
