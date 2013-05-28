@@ -31,10 +31,9 @@
 #include "lib/dataclassification/maddataclassificationsitedata.h"
 #include "lib/dataclassification/maddataclassificationsoil.h"
 #include "lib/dataclassification/maddataclassificationweather.h"
+#include "lib/dataclassification/statevars/madstatevars.h"
 
 // Qt includes
-#include <QtWebKit>
-
 
 class MadDataClassification : public QDialog, private Ui::MadDataClassification
 {

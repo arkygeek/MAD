@@ -4,7 +4,9 @@
 #
 #-------------------------------------------------
 
-QT       += core gui xml webkit network
+QT       +=  xml
+
+lessThan(QT_MAJOR_VERSION, 5): QT += webkit core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets webkitwidgets
 
@@ -33,7 +35,8 @@ SOURCES += main.cpp\
     lib/dataclassification/maddataclassificationinitialvalues.cpp \
     lib/dataclassification/maddataclassificationsoil.cpp \
     lib/dataclassification/maddataclassificationsitedata.cpp \
-    lib/dataclassification/maddataclassificationweather.cpp
+    lib/dataclassification/maddataclassificationweather.cpp \
+    lib/maddataset.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -58,7 +61,8 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/maddataclassificationinitialvalues.h \
     lib/dataclassification/maddataclassificationsoil.h \
     lib/dataclassification/maddataclassificationsitedata.h \
-    lib/dataclassification/maddataclassificationweather.h
+    lib/dataclassification/maddataclassificationweather.h \
+    lib/maddataset.h
 
 
 FORMS    += madmainwindowbase.ui \

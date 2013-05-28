@@ -103,6 +103,7 @@ void MadMainWindow::on_cbAboutMain_currentIndexChanged(const QString &theSelecti
   }
 }
 
+
 void MadMainWindow::on_pbViewAsText_clicked()
 {
   // display model info in new dialog as plain text

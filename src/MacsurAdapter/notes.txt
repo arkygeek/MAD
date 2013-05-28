@@ -4,3 +4,14 @@ Remember to date your entries.
 2013-05-22
 Thinking that there should be a member/pin for anything to get uploaded (for example dataset quality classifications).
 
+2013-05-28
+
+A written record of my journey as I attempt to get files writing to xml files!
+
+Step 1.   Choose something simple to begin with.
+Step 2.   display the xml to screen first, before attempting to write file
+
+So, for step 1 I think a good place to start will be to generate a file with just the dataset Name, Description, and theme selected.  As for displaying it to the screen, I think I will abandon that, as it would just be more work, and the code is already in place for writing and reading files.  I will check the files manually...
+
+
+

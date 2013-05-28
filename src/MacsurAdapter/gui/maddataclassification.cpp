@@ -1,27 +1,26 @@
 /***************************************************************************
- *   File:  maddataclassification.cpp created: 08/05/2013          *
- *   Class info: MadDataClassification                   *
- *   Copyright (C) 2013 by: Jason S. Jorgenson               *
- *                                     *
+ *   File:  maddataclassification.cpp created: 08/05/2013                  *
+ *   Class info: MadDataClassification                                     *
+ *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
+ *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or   *
- *   (at your option) any later version.                   *
- *                                     *
- *   This program is distributed in the hope that it will be useful,     *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of    *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the     *
- *   GNU General Public License for more details.              *
- *                                     *
- *   You should have received a copy of the GNU General Public License   *
- *   along with this program; if not, write to the             *
- *   Free Software Foundation, Inc.,                     *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.       *
+ *   the Free Software Foundation; either version 2 of the License, or     *
+ *   (at your option) any later version.                                   *
+ *                                                                         *
+ *   This program is distributed in the hope that it will be useful,       *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
+ *   GNU General Public License for more details.                          *
+ *                                                                         *
+ *   You should have received a copy of the GNU General Public License     *
+ *   along with this program; if not, write to the                         *
+ *   Free Software Foundation, Inc.,                                       *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 #include <iomanip>
 
 //Qt includes
-#include <QtWebKit>
 #include <QString>
 #include <QPixmap>
 
@@ -31,8 +30,7 @@
 
 QString makeString();
 
-MadDataClassification::MadDataClassification(QWidget *parent) :
-  QDialog(parent)
+MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
 {
   setupUi(this);
   gbxCultivation->setChecked(false);
@@ -47,36 +45,36 @@ MadDataClassification::MadDataClassification(QWidget *parent) :
   // These must stay here at the end
   connect ( sbVariety, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateVarietyRatingLbl() ));
-  //connect ( dsbVariety, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateVarietyRatingLbl() ));
+  connect ( dsbVariety, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateVarietyRatingLbl() ));
   connect ( sbSowing, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSowingRatingLbl() ));
-  //connect ( dsbSowing, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateSowingRatingLbl() ));
+  connect ( dsbSowing, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSowingRatingLbl() ));
   connect ( sbHarvest, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateHarvestRatingLbl() ));
-  //connect ( dsbHarvest, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateHarvestRatingLbl() ));
+  connect ( dsbHarvest, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateHarvestRatingLbl() ));
   connect ( sbFertilisation, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateFertilisationRatingLbl() ));
-  //connect ( dsbFertilisation, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateFertilisationRatingLbl() ));
+  connect ( dsbFertilisation, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateFertilisationRatingLbl() ));
   connect ( sbIrrigation, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateIrrigationRatingLbl() ));
-  //connect ( dsbIrrigation, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateIrrigationRatingLbl() ));
+  connect ( dsbIrrigation, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateIrrigationRatingLbl() ));
   connect ( sbSeedDensity, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSeedDensityRatingLbl() ));
-  //connect ( dsbSeedDensity, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateSeedDensityRatingLbl() ));
+  connect ( dsbSeedDensity, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSeedDensityRatingLbl() ));
   connect ( sbYield, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateYieldRatingLbl() ));
-  //connect ( dsbYield, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateYieldRatingLbl() ));
+  connect ( dsbYield, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateYieldRatingLbl() ));
   connect ( sbTillage, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateTillageRatingLbl() ));
-  //connect ( dsbTillage, SIGNAL ( valueChanged(int) ),
-  //          this, SLOT ( updateTillageRatingLbl() ));
+  connect ( dsbTillage, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateTillageRatingLbl() ));
 }
 
 void MadDataClassification::changeEvent(QEvent *e)
@@ -392,17 +390,25 @@ void MadDataClassification::updateCultivationLabels()
   myTotal += lblTillageRating->text().toFloat();
   lblCombinedTotal->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 23) myRank=23;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
   else if (myTotal >= 22) myRank=22;
   else if (myTotal >= 21) myRank=21;
 
   switch (myRank)
   {
-    case 23: lblMedal->setVisible(true);
+    case 24: lblMedal->setVisible(true);
              lblMedal->setScaledContents(true);
              lblMedal->setPixmap(QPixmap( ":platinum.png" ));
              lblRanking->setVisible(true);
              lblRanking->setText("Platinum");
+      break;
+
+    case 23: lblMedal->setVisible(true);
+             lblMedal->setScaledContents(true);
+             lblMedal->setPixmap(QPixmap( ":gold.png" ));
+             lblRanking->setVisible(true);
+             lblRanking->setText("Gold");
       break;
 
     case 22: lblMedal->setVisible(true);
@@ -429,6 +435,8 @@ void MadDataClassification::updateCultivationLabels()
 void MadDataClassification::on_pbCultivationSave_clicked()
 {
   // save current settings for cultivation to xml file
+  QString myString;
+
 }
 
 void MadDataClassification::on_pbCultivationSet_clicked()

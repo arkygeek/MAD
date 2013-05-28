@@ -32,9 +32,6 @@ class QString;  // forward declaration
 //Qt includes
 #include <QString>
 
-
-//typedef QList <MadCategory> MadDataClassified;
-
 /**
  * @brief The MadData class
  */
