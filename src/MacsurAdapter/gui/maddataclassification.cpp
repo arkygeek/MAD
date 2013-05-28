@@ -22,7 +22,6 @@
 
 //Qt includes
 #include <QtWebKit>
-#include <QWebPage>
 #include <QString>
 #include <QPixmap>
 
