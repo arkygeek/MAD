@@ -21,5 +21,9 @@
         <file>CropMWP1TaskC1-2_files/header.htm</file>
         <file>CropMWP1TaskC1-2_files/themedata.xml</file>
         <file>CropMWP1TaskC1-2_files/filelist.xml</file>
+        <file>silver.png</file>
+        <file>gold.png</file>
+        <file>platinum.png</file>
+        <file>bronze.png</file>
     </qresource>
 </RCC>

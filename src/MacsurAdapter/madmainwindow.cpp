@@ -157,3 +157,10 @@ void MadMainWindow::on_pbTableView_clicked()
 {
     // Table view of the model details
 }
+
+void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
+                    const QString &theSelection)
+{
+    txtbrwsData->setText("This will say something about:");
+    txtbrwsData->append(theSelection);
+}

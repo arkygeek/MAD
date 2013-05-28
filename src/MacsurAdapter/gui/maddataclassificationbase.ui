@@ -7,173 +7,225 @@
     <x>0</x>
     <y>0</y>
     <width>874</width>
-    <height>558</height>
+    <height>560</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>Dialog</string>
   </property>
   <layout class="QGridLayout" name="gridLayout_8">
+   <item row="2" column="2">
+    <widget class="QLabel" name="lblDataSetName_2">
+     <property name="text">
+      <string>Description</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEdit</cstring>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="1">
+    <widget class="QLineEdit" name="lineEdit_2"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="lblDataSetName">
+     <property name="text">
+      <string>Dataset Name</string>
+     </property>
+     <property name="buddy">
+      <cstring>lineEdit_2</cstring>
+     </property>
+    </widget>
+   </item>
    <item row="2" column="3">
-    <widget class="QLineEdit" name="lineEdit"/>
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="4">
+    <widget class="QPushButton" name="pbCultivationSave">
+     <property name="enabled">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string>Save</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0" colspan="5">
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <item>
+      <widget class="QComboBox" name="cbThemes">
+       <item>
+        <property name="text">
+         <string>Select Theme</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CropM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>LiveM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>TradeM</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Climate</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cbRankedDatasets">
+       <item>
+        <property name="text">
+         <string>Ranked Datasets</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+     <item>
+      <widget class="QComboBox" name="cbDatasets">
+       <property name="enabled">
+        <bool>true</bool>
+       </property>
+       <property name="currentIndex">
+        <number>0</number>
+       </property>
+       <property name="modelColumn">
+        <number>0</number>
+       </property>
+       <item>
+        <property name="text">
+         <string>Select Dataset</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CMAP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>I-COADS</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>CRU TS 2.0</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Dai</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>HadISST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Hulme (CRU)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jones (CRU) Air Temperature</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Jones (CRU) SLP</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kaplan (SLP)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Kaplan (SST)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NCAR Sea Level Pressure</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>NCEP/NCAR Reanalysis</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynold Reconstructed SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynolds Optimum Interpolation (OI) SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>Other/New</string>
+        </property>
+       </item>
+      </widget>
+     </item>
+    </layout>
    </item>
    <item row="0" column="0" colspan="5">
     <widget class="QTabWidget" name="tabWidgetDataClassification">
+     <property name="minimumSize">
+      <size>
+       <width>25</width>
+       <height>0</height>
+      </size>
+     </property>
      <property name="currentIndex">
-      <number>8</number>
+      <number>0</number>
      </property>
      <widget class="QWidget" name="tabCultivation">
       <attribute name="title">
        <string>Cultivation</string>
       </attribute>
-      <layout class="QGridLayout" name="gridLayoutPhenology">
-       <item row="2" column="1">
-        <widget class="QLabel" name="lblHarvest">
-         <property name="text">
-          <string>Harvest</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="2">
-        <widget class="QLabel" name="lblOverallRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="1">
-        <widget class="QLabel" name="lblTillage">
-         <property name="text">
-          <string>Tillage</string>
-         </property>
-        </widget>
-       </item>
-       <item row="8" column="1" colspan="2">
-        <widget class="Line" name="line">
-         <property name="orientation">
-          <enum>Qt::Horizontal</enum>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="2">
-        <widget class="QLabel" name="lblFertilisationRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="2">
-        <widget class="QLabel" name="lblVarietyRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="3" column="1">
-        <widget class="QLabel" name="lblFertilisation">
-         <property name="text">
-          <string>Fertilisation</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="1">
-        <widget class="QLabel" name="lblIrrigation">
-         <property name="text">
-          <string>Irrigation</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="1">
-        <widget class="QLabel" name="lblSeedDensity">
-         <property name="text">
-          <string>Seed Density</string>
-         </property>
-        </widget>
-       </item>
-       <item row="5" column="2">
-        <widget class="QLabel" name="lblSeedDensityRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="7" column="2">
-        <widget class="QLabel" name="lblTillageRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="9" column="1">
-        <widget class="QLabel" name="lblCombined">
-         <property name="text">
-          <string>Combined:</string>
-         </property>
-        </widget>
-       </item>
-       <item row="6" column="2">
-        <widget class="QLabel" name="lblYieldRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="4" column="2">
-        <widget class="QLabel" name="lblIrrigationRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="2">
-        <widget class="QLabel" name="lblSowingRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="1" column="1">
-        <widget class="QLabel" name="lblSowing">
-         <property name="text">
-          <string>Sowing</string>
-         </property>
-        </widget>
-       </item>
-       <item row="2" column="2">
-        <widget class="QLabel" name="lblHarvestRating">
-         <property name="text">
-          <string>Rank</string>
-         </property>
-        </widget>
-       </item>
-       <item row="10" column="1" colspan="2">
-        <spacer name="vspLabelsCultivation">
-         <property name="orientation">
-          <enum>Qt::Vertical</enum>
-         </property>
-         <property name="sizeHint" stdset="0">
-          <size>
-           <width>20</width>
-           <height>40</height>
-          </size>
-         </property>
-        </spacer>
-       </item>
-       <item row="6" column="1">
-        <widget class="QLabel" name="lblYield">
-         <property name="text">
-          <string>Yield</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="1">
-        <widget class="QLabel" name="lblVariety">
-         <property name="text">
-          <string>Variety</string>
-         </property>
-        </widget>
-       </item>
-       <item row="0" column="0" rowspan="12">
+      <layout class="QGridLayout" name="gridLayout_20">
+       <item row="0" column="0" rowspan="19">
         <widget class="QGroupBox" name="gbxCultivation">
          <property name="title">
           <string>Edit</string>
@@ -824,10 +876,862 @@
             </property>
            </spacer>
           </item>
+          <item row="11" column="2">
+           <widget class="QPushButton" name="pbCultivationSet">
+            <property name="text">
+             <string>Set</string>
+            </property>
+           </widget>
+          </item>
+          <item row="11" column="3">
+           <widget class="QPushButton" name="pbCultivationStore">
+            <property name="enabled">
+             <bool>false</bool>
+            </property>
+            <property name="text">
+             <string>Store</string>
+            </property>
+           </widget>
+          </item>
          </layout>
         </widget>
        </item>
+       <item row="0" column="1" colspan="3">
+        <widget class="Line" name="line_4">
+         <property name="lineWidth">
+          <number>0</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="3">
+        <widget class="QLabel" name="lblVarietyRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="3">
+        <widget class="QLabel" name="lblSowingRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="3">
+        <widget class="QLabel" name="lblHarvestRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="1" colspan="2">
+        <widget class="QLabel" name="lblFertilisation">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Fertilisation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="4" column="3">
+        <widget class="QLabel" name="lblFertilisationRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="1" colspan="2">
+        <widget class="QLabel" name="lblIrrigation">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Irrigation</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLabel" name="lblIrrigationRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="1" colspan="2">
+        <widget class="QLabel" name="lblSeedDensity">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Seed Density</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="6" column="3">
+        <widget class="QLabel" name="lblSeedDensityRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="3">
+        <widget class="QLabel" name="lblYieldRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="3">
+        <widget class="QLabel" name="lblTillageRating">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="midLineWidth">
+          <number>1</number>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="9" column="1" colspan="3">
+        <widget class="Line" name="line">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="minimumSize">
+          <size>
+           <width>108</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="1" colspan="2">
+        <widget class="QLabel" name="lblCombined">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>Combined:</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="3">
+        <widget class="QLabel" name="lblCombinedTotal">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+           <weight>75</weight>
+           <bold>true</bold>
+          </font>
+         </property>
+         <property name="text">
+          <string>0</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="12" column="1" colspan="3">
+        <widget class="Line" name="line_2">
+         <property name="lineWidth">
+          <number>1</number>
+         </property>
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="1" colspan="2">
+        <widget class="QLabel" name="label_43">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Platinum Minimum: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <widget class="QLabel" name="label_47">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>23</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="1" colspan="2">
+        <widget class="QLabel" name="label_44">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Gold Minimum: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-2</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="14" column="3">
+        <widget class="QLabel" name="label_48">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>22</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="1" colspan="2">
+        <widget class="QLabel" name="label_45">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Silver Minimum: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-2</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="15" column="3">
+        <widget class="QLabel" name="label_49">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>22</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="1" colspan="2">
+        <widget class="QLabel" name="label_46">
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Bronze Minimum: </string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-2</number>
+         </property>
+         <property name="indent">
+          <number>0</number>
+         </property>
+        </widget>
+       </item>
+       <item row="16" column="3">
+        <widget class="QLabel" name="label_50">
+         <property name="minimumSize">
+          <size>
+           <width>25</width>
+           <height>0</height>
+          </size>
+         </property>
+         <property name="font">
+          <font>
+           <pointsize>9</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>21</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>1</number>
+         </property>
+        </widget>
+       </item>
+       <item row="17" column="1" colspan="3">
+        <widget class="Line" name="line_3">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+        </widget>
+       </item>
+       <item row="18" column="2">
+        <spacer name="verticalSpacer">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="11" column="1" colspan="3">
+        <layout class="QHBoxLayout" name="horizontalLayout_2">
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblMedal">
+           <property name="minimumSize">
+            <size>
+             <width>10</width>
+             <height>10</height>
+            </size>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>25</width>
+             <height>25</height>
+            </size>
+           </property>
+           <property name="baseSize">
+            <size>
+             <width>20</width>
+             <height>60</height>
+            </size>
+           </property>
+           <property name="lineWidth">
+            <number>0</number>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="pixmap">
+            <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+           </property>
+           <property name="scaledContents">
+            <bool>true</bool>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblRanking">
+           <property name="font">
+            <font>
+             <pointsize>10</pointsize>
+            </font>
+           </property>
+           <property name="text">
+            <string>Platinum</string>
+           </property>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+       <item row="1" column="2">
+        <widget class="QLabel" name="lblVariety">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Variety</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="2">
+        <widget class="QLabel" name="lblSowing">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Sowing</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="3" column="2">
+        <widget class="QLabel" name="lblHarvest">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Harvest</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="7" column="2">
+        <widget class="QLabel" name="lblYield">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Yield</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="2">
+        <widget class="QLabel" name="lblTillage">
+         <property name="font">
+          <font>
+           <pointsize>10</pointsize>
+          </font>
+         </property>
+         <property name="text">
+          <string>Tillage</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing</set>
+         </property>
+         <property name="margin">
+          <number>-1</number>
+         </property>
+         <property name="indent">
+          <number>2</number>
+         </property>
+        </widget>
+       </item>
       </layout>
+      <zorder>gbxCultivation</zorder>
+      <zorder>line_4</zorder>
+      <zorder>lblVarietyRating</zorder>
+      <zorder>lblSowingRating</zorder>
+      <zorder>lblHarvestRating</zorder>
+      <zorder>lblFertilisation</zorder>
+      <zorder>lblFertilisationRating</zorder>
+      <zorder>lblIrrigation</zorder>
+      <zorder>lblIrrigationRating</zorder>
+      <zorder>lblSeedDensity</zorder>
+      <zorder>lblSeedDensityRating</zorder>
+      <zorder>lblYieldRating</zorder>
+      <zorder>lblTillageRating</zorder>
+      <zorder>line</zorder>
+      <zorder>lblCombined</zorder>
+      <zorder>line_2</zorder>
+      <zorder>label_43</zorder>
+      <zorder>label_47</zorder>
+      <zorder>label_44</zorder>
+      <zorder>label_48</zorder>
+      <zorder>label_45</zorder>
+      <zorder>label_49</zorder>
+      <zorder>label_46</zorder>
+      <zorder>label_50</zorder>
+      <zorder>line_3</zorder>
+      <zorder>lblCombinedTotal</zorder>
+      <zorder>lblMedal</zorder>
+      <zorder>lblRanking</zorder>
+      <zorder>lblMedal</zorder>
+      <zorder>lblVariety</zorder>
+      <zorder>lblSowing</zorder>
+      <zorder>lblHarvest</zorder>
+      <zorder>lblYield</zorder>
+      <zorder>lblTillage</zorder>
      </widget>
      <widget class="QWidget" name="tabPhenology">
       <attribute name="title">
@@ -851,7 +1755,7 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblEmergenceRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1278,7 +2182,7 @@
        <item row="1" column="2">
         <widget class="QLabel" name="lblStemElongationRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1292,7 +2196,7 @@
        <item row="2" column="2">
         <widget class="QLabel" name="lblEarEmergenceRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1306,7 +2210,7 @@
        <item row="3" column="2">
         <widget class="QLabel" name="lblFloweringRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1320,7 +2224,7 @@
        <item row="6" column="2">
         <widget class="QLabel" name="lblOverallRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1341,7 +2245,7 @@
        <item row="4" column="2">
         <widget class="QLabel" name="lblYellowRipenessRatingPhenology">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1375,7 +2279,7 @@
        <item row="1" column="2">
         <widget class="QLabel" name="lblSowingDateRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1389,7 +2293,7 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblCropRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1403,7 +2307,7 @@
        <item row="4" column="2">
         <widget class="QLabel" name="lblResidueMgmtRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -1998,7 +2902,7 @@
        <item row="8" column="2">
         <widget class="QLabel" name="lblOverallRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2012,21 +2916,21 @@
        <item row="2" column="2">
         <widget class="QLabel" name="lblHarvestDateRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="3" column="2">
         <widget class="QLabel" name="lblYieldRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="5" column="2">
         <widget class="QLabel" name="lblFertilisationRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2040,7 +2944,7 @@
        <item row="6" column="2">
         <widget class="QLabel" name="lblIrrigationRatingPrevCrop">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2277,7 +3181,7 @@
        <item row="3" column="2">
         <widget class="QLabel" name="lblOverallRatingInitialValues">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2291,7 +3195,7 @@
        <item row="1" column="2">
         <widget class="QLabel" name="lblNminRatingInitialValues">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2312,7 +3216,7 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblSoilMoistureRatingInitialValues">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -2983,28 +3887,28 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblVarietyRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="1" column="2">
         <widget class="QLabel" name="lblSowingRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="3" column="2">
         <widget class="QLabel" name="lblFertilisationRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="2" column="2">
         <widget class="QLabel" name="lblHarvestRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3046,7 +3950,7 @@
        <item row="5" column="2">
         <widget class="QLabel" name="lblSeedDensityRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3060,14 +3964,14 @@
        <item row="6" column="2">
         <widget class="QLabel" name="lblYieldRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="7" column="2">
         <widget class="QLabel" name="lblTillageRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3095,14 +3999,14 @@
        <item row="9" column="2">
         <widget class="QLabel" name="lblOverallRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="4" column="2">
         <widget class="QLabel" name="lblIrrigationRatingSoil">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3136,7 +4040,7 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblVarietyRatingSite">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3150,7 +4054,7 @@
        <item row="1" column="2">
         <widget class="QLabel" name="lblSowingRatingSite">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3164,7 +4068,7 @@
        <item row="2" column="2">
         <widget class="QLabel" name="lblHarvestRatingSite">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3185,7 +4089,7 @@
        <item row="4" column="2">
         <widget class="QLabel" name="lblOverallRatingSite">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3492,7 +4396,7 @@
        <item row="2" column="2">
         <widget class="QLabel" name="lblTminRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -3506,7 +4410,7 @@
        <item row="0" column="2">
         <widget class="QLabel" name="lblPrecipitationRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -4150,7 +5054,7 @@
        <item row="6" column="2">
         <widget class="QLabel" name="lblGlobalRadiationRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -4171,21 +5075,21 @@
        <item row="3" column="2">
         <widget class="QLabel" name="lblTmaxRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="7" column="2">
         <widget class="QLabel" name="lblSunshineHoursRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="9" column="2">
         <widget class="QLabel" name="lblOverallRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -4213,14 +5117,14 @@
        <item row="1" column="2">
         <widget class="QLabel" name="lblTaveRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
        <item row="5" column="2">
         <widget class="QLabel" name="lblWindSpeedRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -4234,7 +5138,7 @@
        <item row="4" column="2">
         <widget class="QLabel" name="lblRelHumidityRatingWeather">
          <property name="text">
-          <string>Rank</string>
+          <string>0</string>
          </property>
         </widget>
        </item>
@@ -4282,7 +5186,7 @@
            <rect>
             <x>0</x>
             <y>0</y>
-            <width>804</width>
+            <width>789</width>
             <height>280</height>
            </rect>
           </property>
@@ -5268,191 +6172,6 @@
      </widget>
     </widget>
    </item>
-   <item row="2" column="4">
-    <widget class="QPushButton" name="pushButton">
-     <property name="text">
-      <string>Save</string>
-     </property>
-    </widget>
-   </item>
-   <item row="1" column="0" colspan="5">
-    <layout class="QHBoxLayout" name="horizontalLayout">
-     <item>
-      <widget class="QComboBox" name="cbThemes">
-       <item>
-        <property name="text">
-         <string>Select Theme</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>CropM</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>LiveM</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>TradeM</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Climate</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Other</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="cbRankedDatasets">
-       <item>
-        <property name="text">
-         <string>Ranked Datasets</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-     <item>
-      <widget class="QComboBox" name="cbDatasets">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="currentIndex">
-        <number>0</number>
-       </property>
-       <property name="modelColumn">
-        <number>0</number>
-       </property>
-       <item>
-        <property name="text">
-         <string>Select Dataset</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>CMAP</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>I-COADS</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>CRU TS 2.0</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Dai</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>HadISST</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Hulme (CRU)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Jones (CRU) Air Temperature</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Jones (CRU) SLP</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Kaplan (SLP)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Kaplan (SST)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>NCAR Sea Level Pressure</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>NCEP/NCAR Reanalysis</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Reynold Reconstructed SST</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Reynolds Optimum Interpolation (OI) SST</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
-        </property>
-       </item>
-       <item>
-        <property name="text">
-         <string>Other/New</string>
-        </property>
-       </item>
-      </widget>
-     </item>
-    </layout>
-   </item>
-   <item row="2" column="0">
-    <widget class="QLabel" name="lblDataSetName">
-     <property name="text">
-      <string>Dataset Name</string>
-     </property>
-     <property name="buddy">
-      <cstring>lineEdit_2</cstring>
-     </property>
-    </widget>
-   </item>
-   <item row="2" column="1">
-    <widget class="QLineEdit" name="lineEdit_2"/>
-   </item>
-   <item row="2" column="2">
-    <widget class="QLabel" name="lblDataSetName_2">
-     <property name="text">
-      <string>Description</string>
-     </property>
-     <property name="buddy">
-      <cstring>lineEdit</cstring>
-     </property>
-    </widget>
-   </item>
   </layout>
  </widget>
  <customwidgets>
@@ -5462,6 +6181,57 @@
    <header>QtWebKitWidgets/QWebView</header>
   </customwidget>
  </customwidgets>
- <resources/>
- <connections/>
+ <resources>
+  <include location="../resources/resources.qrc"/>
+ </resources>
+ <connections>
+  <connection>
+   <sender>dsbVariety</sender>
+   <signal>valueChanged(double)</signal>
+   <receiver>lblVarietyRating</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>600</x>
+     <y>115</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>838</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sbVariety</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>lblVarietyRating</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>278</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>838</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>chbxVariety</sender>
+   <signal>clicked()</signal>
+   <receiver>lblVarietyRating</receiver>
+   <slot>update()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>193</x>
+     <y>108</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>838</x>
+     <y>59</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

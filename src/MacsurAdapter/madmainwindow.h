@@ -127,6 +127,7 @@ private:
      * @brief on_pbTableView_clicked gives a table view of the model details
      */
     void on_pbTableView_clicked();
+    void on_modelNameComboBox_currentIndexChanged(const QString &theSelection);
 };
 
 #endif // MADMAINWINDOW_H

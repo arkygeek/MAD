@@ -1,84 +1,89 @@
 /***************************************************************************
- *   File:  maddataclassification.cpp created: 08/05/2013                  *
- *   Class info: MadDataClassification                                     *
- *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
- *                                                                         *
+ *   File:  maddataclassification.cpp created: 08/05/2013          *
+ *   Class info: MadDataClassification                   *
+ *   Copyright (C) 2013 by: Jason S. Jorgenson               *
+ *                                     *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
- *   the Free Software Foundation; either version 2 of the License, or     *
- *   (at your option) any later version.                                   *
- *                                                                         *
- *   This program is distributed in the hope that it will be useful,       *
- *   but WITHOUT ANY WARRANTY; without even the implied warranty of        *
- *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the         *
- *   GNU General Public License for more details.                          *
- *                                                                         *
- *   You should have received a copy of the GNU General Public License     *
- *   along with this program; if not, write to the                         *
- *   Free Software Foundation, Inc.,                                       *
- *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
+ *   the Free Software Foundation; either version 2 of the License, or   *
+ *   (at your option) any later version.                   *
+ *                                     *
+ *   This program is distributed in the hope that it will be useful,     *
+ *   but WITHOUT ANY WARRANTY; without even the implied warranty of    *
+ *   MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the     *
+ *   GNU General Public License for more details.              *
+ *                                     *
+ *   You should have received a copy of the GNU General Public License   *
+ *   along with this program; if not, write to the             *
+ *   Free Software Foundation, Inc.,                     *
+ *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.       *
  ***************************************************************************/
 #include <iomanip>
 
 //Qt includes
 #include <QtWebKit>
-
+#include <QString>
+#include <QPixmap>
 
 //Local includes
 #include "maddataclassification.h"
 #include "lib/mad.h"
 
+QString makeString();
+
 MadDataClassification::MadDataClassification(QWidget *parent) :
-    QDialog(parent)
+  QDialog(parent)
 {
-    setupUi(this);
-    gbxCultivation->setChecked(false);
-    cbExamples->setEnabled(true);
-    lblExample->setVisible(true);
-    lblExample->setText("Select Example");
+  setupUi(this);
+  gbxCultivation->setChecked(false);
+  cbExamples->setEnabled(true);
+  lblExample->setVisible(true);
+  lblExample->setText("Select Example");
+  lblMedal->setVisible(false);
+  lblRanking->setVisible(false);
 }
 
 void MadDataClassification::changeEvent(QEvent *e)
 {
-    QDialog::changeEvent(e);
-    switch (e->type()) {
-    case QEvent::LanguageChange:
-        retranslateUi(this);
-        break;
-    default:
-        break;
-    }
+  QDialog::changeEvent(e);
+  switch (e->type()) {
+  case QEvent::LanguageChange:
+    retranslateUi(this);
+    break;
+  default:
+    break;
+  }
 }
 
 void MadDataClassification::on_gbxCultivation_clicked()
 {
-    // if values are editable, should not be able to select for any
-    // examples to be shown as it will destroy destroy current settings
+  // if values are editable, should not be able to select for any
+  // examples to be shown as it will destroy destroy current settings
 
-    if (gbxCultivation->isChecked())
-    {
-        lblExample->setVisible(false);
-        cbExamples->setDisabled(true);
-    }
-    else
-    {
-        cbExamples->setEnabled(true);
-        lblExample->setVisible(true);
-    }
+  if (gbxCultivation->isChecked())
+  {
+    lblExample->setVisible(false);
+    cbExamples->setDisabled(true);
+  }
+  else
+  {
+    cbExamples->setEnabled(true);
+    lblExample->setVisible(true);
+  }
 }
 
 void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &theValue)
 {
-    // if enabled, set values for corresponding classification
-    // options are: Platinum, Gold, Silver, Bronze
-    if (cbExamples->currentText()!="Examples")
-    {
-        lblExample->setText(theValue);
-    } //end if
-    else
-    {
-        lblExample->setText("Select Example");
-    } //end else
+  // if enabled, set values for corresponding classification
+  // options are: Platinum, Gold, Silver, Bronze
+  if (cbExamples->currentText()!="Examples")
+  {
+    lblExample->setText(theValue);
+  } //end if
+  else
+  {
+    lblExample->setText("Select Example");
+  } //end else
 }
 
 /**
@@ -90,13 +95,14 @@ void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &th
  */
 void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
 {
-    // update label according to desired resolution
-    // hardcoded for now at a range of 1 to 5
-    // slider goes from 0 to 1000
+  // update label according to desired resolution
+  // hardcoded for now at a range of 1 to 5
+  // slider goes from 0 to 1000
 
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbVariety->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbVariety->setValue(myPreciseValue);
+  updateVarietyRatingLbl();
 }
 
 /**
@@ -105,9 +111,9 @@ void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbSowing->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbSowing->setValue(myPreciseValue);
 }
 
 /**
@@ -116,9 +122,9 @@ void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbHarvest->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbHarvest->setValue(myPreciseValue);
 }
 
 /**
@@ -127,9 +133,9 @@ void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbFertilisation->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbFertilisation->setValue(myPreciseValue);
 }
 
 /**
@@ -138,9 +144,9 @@ void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValu
  */
 void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbIrrigation->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbIrrigation->setValue(myPreciseValue);
 }
 
 /**
@@ -149,9 +155,9 @@ void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbSeedDensity->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbSeedDensity->setValue(myPreciseValue);
 }
 
 /**
@@ -160,9 +166,9 @@ void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbYield->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbYield->setValue(myPreciseValue);
 }
 
 /**
@@ -171,195 +177,317 @@ void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
  */
 void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
 {
-    int myValue = (theSliderValue/100);
-    float myPreciseValue = myValue/2.0;
-    dsbTillage->setValue(myPreciseValue);
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbTillage->setValue(myPreciseValue);
 }
 
 void MadDataClassification::on_dsbVariety_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrVariety->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrVariety->setSliderPosition(myPosition);
+  float myResult = dsbVariety->value() * sbVariety->value();
+  lblVarietyRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbSowing_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrSowing->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSowing->setSliderPosition(myPosition);
+  float myResult = dsbSowing->value() * sbSowing->value();
+  lblSowingRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbHarvest_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrHarvest->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrHarvest->setSliderPosition(myPosition);
+  float myResult = dsbHarvest->value() * sbHarvest->value();
+  lblHarvestRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbFertilisation_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrFertilisation->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrFertilisation->setSliderPosition(myPosition);
+  float myResult = dsbFertilisation->value() * sbFertilisation->value();
+  lblFertilisationRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbIrrigation_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrIrrigation->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrIrrigation->setSliderPosition(myPosition);
+  float myResult = dsbIrrigation->value() * sbIrrigation->value();
+  lblIrrigationRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbSeedDensity_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrSeedDensity->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSeedDensity->setSliderPosition(myPosition);
+  float myResult = dsbSeedDensity->value() * sbSeedDensity->value();
+  lblSeedDensityRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbYield_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrYield->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrYield->setSliderPosition(myPosition);
+  float myResult = dsbYield->value() * sbYield->value();
+  lblYieldRating->setText(makeString(myResult));
 }
 void MadDataClassification::on_dsbTillage_valueChanged(double theValue)
 {
-    int myPosition;
-    myPosition = theValue * 200;
-    hsldrTillage->setSliderPosition(myPosition);
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrTillage->setSliderPosition(myPosition);
+  float myResult = dsbTillage->value() * sbTillage->value();
+  lblTillageRating->setText(makeString(myResult));
 }
 
-
-
-
-/*
-class cultivation
+QString MadDataClassification::makeString(double theValue)
 {
-public:
-  MadSubCategory variety;
-  MadSubCategory sowing;
-  MadSubCategory harvest;
-  MadSubCategory fertilisation;
-  MadSubCategory irrigation;
-  MadSubCategory seedDensity;
-  MadSubCategory yield;
-  MadSubCategory tillage;
+  QString myString = QString::number(theValue);
+  return myString;
+}
 
-};
-
-class phenology
+void MadDataClassification::updateVarietyRatingLbl()
 {
-public:
-  MadSubCategory emergence;
-  MadSubCategory stemElongation;
-  MadSubCategory earEmergence;
-  MadSubCategory flowering;
-  MadSubCategory yellowRipeness;
+  // calculate weight and update the label
+  int myObservations = sbVariety->value();
+  float myGivenWeighting = dsbVariety->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblVarietyRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class previousCrop
+void MadDataClassification::updateSowingRatingLbl()
 {
-public:
-  MadSubCategory crop;
-  MadSubCategory sowingDate;
-  MadSubCategory harvestDate;
-  MadSubCategory yield;
-  MadSubCategory residueMgmt;
-  MadSubCategory fertilisation;
-  MadSubCategory irrigation;
+  // calculate weight and update the label
+  int myObservations = sbSowing->value();
+  float myGivenWeighting = dsbSowing->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSowingRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class initialValues
+void MadDataClassification::updateHarvestRatingLbl()
 {
-public:
-  MadSubCategory soilMoisture;
-  MadSubCategory nitrogenMin;
+  // calculate weight and update the label
+  int myObservations = sbHarvest->value();
+  float myGivenWeighting = dsbHarvest->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblHarvestRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class soil
+void MadDataClassification::updateFertilisationRatingLbl()
 {
-public:
-  MadSubCategory carbonOrganic;
-  MadSubCategory nitrogenOrganic;
-  MadSubCategory texture;
-  MadSubCategory bulkDensity;
-  MadSubCategory fieldCapacityMeas;
-  MadSubCategory wiltingPointMeas;
-  MadSubCategory pfCurve;
-  MadSubCategory hydrCondCurve;
-  MadSubCategory pH;
+  // calculate weight and update the label
+  int myObservations = sbFertilisation->value();
+  float myGivenWeighting = dsbFertilisation->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblFertilisationRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class siteData
+void MadDataClassification::updateIrrigationRatingLbl()
 {
-public:
-  MadSubCategory latitude;
-  MadSubCategory longitude;
-  MadSubCategory altitude;
+  // calculate weight and update the label
+  int myObservations = sbIrrigation->value();
+  float myGivenWeighting = dsbIrrigation->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblIrrigationRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class weatherData
+void MadDataClassification::updateSeedDensityRatingLbl()
 {
-public:
-  MadSubCategory precipitation;
-  MadSubCategory tAve;
-  MadSubCategory tMin;
-  MadSubCategory tMax;
-  MadSubCategory relativeHumidity;
-  MadSubCategory windSpeed;
-  MadSubCategory globalRadiation;
-  MadSubCategory sunshineHours;
-  MadSubCategory leafWetness;
-  MadSubCategory soilTemp;
+  // calculate weight and update the label
+  int myObservations = sbSeedDensity->value();
+  float myGivenWeighting = dsbSeedDensity->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSeedDensityRating->setText(myText);
+  updateCultivationLabels();
+}
 
-};
-
-class stateVariables // this has 4 sub classes
+void MadDataClassification::updateYieldRatingLbl()
 {
-public:
-  class crop
+  // calculate weight and update the label
+  int myObservations = sbYield->value();
+  float myGivenWeighting = dsbYield->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblYieldRating->setText(myText);
+  updateCultivationLabels();
+}
+
+void MadDataClassification::updateTillageRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbTillage->value();
+  float myGivenWeighting = dsbTillage->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblTillageRating->setText(myText);
+  updateCultivationLabels();
+}
+
+void MadDataClassification::updateCultivationLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblVarietyRating->text().toFloat();
+  myTotal += lblSowingRating->text().toFloat();
+  myTotal += lblHarvestRating->text().toFloat();
+  myTotal += lblFertilisationRating->text().toFloat();
+  myTotal += lblIrrigationRating->text().toFloat();
+  myTotal += lblSeedDensityRating->text().toFloat();
+  myTotal += lblYieldRating->text().toFloat();
+  myTotal += lblTillageRating->text().toFloat();
+  lblCombinedTotal->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
   {
-  public:
-    MadSubCategory aGrBiomass;
-    MadSubCategory weightOrgans;
-    MadSubCategory rootBiomass;
-    MadSubCategory nInAGrBiomass;
-    MadSubCategory nInOrgans;
-    MadSubCategory lai;
+    case 23: lblMedal->setVisible(true);
+             lblMedal->setScaledContents(true);
+             lblMedal->setPixmap(QPixmap( ":platinum.png" ));
+             lblRanking->setVisible(true);
+             lblRanking->setText("Platinum");
+      break;
 
-  };
+    case 22: lblMedal->setVisible(true);
+             lblMedal->setScaledContents(true);
+             lblMedal->setPixmap(QPixmap( ":silver.png" ));
+             lblRanking->setVisible(true);
+             lblRanking->setText("Silver");
+      break;
 
-  class soil
-  {
-  public:
-    MadSubCategory soilWaterGrav;
-    MadSubCategory pressureHeads;
-    MadSubCategory nMin;
-    MadSubCategory soilWaterSensorCal;
-    MadSubCategory waterFluxBottomRoot;
-    MadSubCategory nitrogenFluxBottomRoot;
+    case 21: lblMedal->setVisible(true);
+             lblMedal->setScaledContents(true);
+             lblMedal->setPixmap(QPixmap( ":bronze.png" ));
+             lblRanking->setVisible(true);
+             lblRanking->setText("Bronze");
+      break;
 
-  };
+    default: // hide
+             lblRanking->setVisible(false);
+             lblMedal->setVisible(false);
+      break;
+  }
+}
 
-  class surfaceFluxes
-  {
-  public:
-    MadSubCategory et;
-    MadSubCategory nh3Loss;
-    MadSubCategory n2oLosse;
-    MadSubCategory n2Loss;
-    MadSubCategory ch4Loss;
+void MadDataClassification::on_pbCultivationSave_clicked()
+{
+  // save current settings for cultivation to xml file
+}
 
-  };
+void MadDataClassification::on_pbCultivationSet_clicked()
+{
+    // sets variables for cultivation
+}
 
-  class observations
-  {
-  public:
-    MadSubCategory lodging;
-    MadSubCategory pestsOrDiseases;
-    MadSubCategory damages;
+void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
+{
+    if (theText != "")
+    {
+      pbCultivationSave->setEnabled(true);
+    }
+    else
+    {
+      pbCultivationSave->setEnabled(false);
+    };
+}
 
-  };
-};
-*/
+void MadDataClassification::on_sbVariety_valueChanged()
+{
+  updateVarietyRatingLbl();
+}
+
+void MadDataClassification::on_sbSowing_valueChanged()
+{
+  updateSowingRatingLbl();
+}
+
+void MadDataClassification::on_sbHarvest_valueChanged()
+{
+  updateHarvestRatingLbl();
+}
+
+void MadDataClassification::on_sbFertilisation_valueChanged()
+{
+  updateFertilisationRatingLbl();
+}
+
+void MadDataClassification::on_sbIrrigation_valueChanged()
+{
+  updateIrrigationRatingLbl();
+}
+
+void MadDataClassification::on_sbSeedDensity_valueChanged()
+{
+  updateSeedDensityRatingLbl();
+}
+
+void MadDataClassification::on_sbYield_valueChanged()
+{
+  updateYieldRatingLbl();
+}
+
+void MadDataClassification::on_sbTillage_valueChanged()
+{
+  updateTillageRatingLbl();
+}
+
+void MadDataClassification::on_dsbVariety_valueChanged()
+{
+  updateVarietyRatingLbl();
+}
+
+void MadDataClassification::on_dsbSowing_valueChanged()
+{
+  updateSowingRatingLbl();
+}
+
+void MadDataClassification::on_dsbHarvest_valueChanged()
+{
+  updateHarvestRatingLbl();
+}
+
+void MadDataClassification::on_dsbFertilisation_valueChanged()
+{
+  updateFertilisationRatingLbl();
+}
+
+void MadDataClassification::on_dsbIrrigation_valueChanged()
+{
+  updateIrrigationRatingLbl();
+}
+
+void MadDataClassification::on_dsbSeedDensity_valueChanged()
+{
+  updateSeedDensityRatingLbl();
+}
+
+void MadDataClassification::on_dsbYield_valueChanged()
+{
+  updateYieldRatingLbl();
+}
+
+void MadDataClassification::on_dsbTillage_valueChanged()
+{
+  updateTillageRatingLbl();
+}
