@@ -33,7 +33,7 @@ class MadSubCategory : public MadSerialisable, public MadGuid
 {
 public:
   MadSubCategory();
-  MadSubCategory(const MadSubCategory& theData);
+  MadSubCategory(const MadSubCategory& theSubCategory);
   MadSubCategory& operator = (const MadSubCategory& theData);
 
   // Accessors

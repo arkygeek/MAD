@@ -437,7 +437,8 @@ void MadDataClassification::on_pbCultivationSave_clicked()
   //myCultSet.variety().setReplicates(0);
 
   QString myString;
-  myString = mySubCat.toXml();
+  //myString = mySubCat.toXml();
+  myString = myCultSet.toXml();
   textEdit->setText(myString);
 
 

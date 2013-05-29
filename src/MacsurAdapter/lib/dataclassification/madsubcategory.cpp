@@ -29,24 +29,38 @@
 #include <QDomElement>
 #include <QDebug>
 
+// Constructor
 MadSubCategory::MadSubCategory() : MadSerialisable(), MadGuid()
 {
   setGuid();
+  mMinData= 0;
+  mDepth = 0.0;
+  mObservations = 0;
+  mWeightPoints = 0.0;
+  mReplicates = 0;
 }
 
-MadSubCategory::MadSubCategory(const MadSubCategory &theData)
+// copy constructor
+MadSubCategory::MadSubCategory(const MadSubCategory &theSubCategory)
 {
-  setGuid(theData.guid());
+  setGuid(theSubCategory.guid());
+  mMinData = theSubCategory.minData();
+  mDepth = theSubCategory.depth();
+  mObservations = theSubCategory.observations();
+  mWeightPoints = theSubCategory.weightPoints();
+  mReplicates = theSubCategory.replicates();
 }
 
-MadSubCategory & MadSubCategory::operator = (const MadSubCategory& theData)
+MadSubCategory & MadSubCategory::operator = (const MadSubCategory& theSubCategory)
 {
   // gracefully handles self assignment
-  if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  if (this == &theSubCategory) return *this;
+  setGuid(theSubCategory.guid());
+  mMinData = theSubCategory.minData();
+  mDepth = theSubCategory.depth();
+  mObservations = theSubCategory.observations();
+  mWeightPoints = theSubCategory.weightPoints();
+  mReplicates = theSubCategory.replicates();
   return *this;
 }
 
