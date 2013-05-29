@@ -38,16 +38,31 @@ MadDataClassificationSoil::MadDataClassificationSoil() : MadSerialisable(), MadG
 MadDataClassificationSoil::MadDataClassificationSoil(const MadDataClassificationSoil &theData)
 {
   setGuid(theData.guid());
+  setCarbonOrganic(theData.carbonOrganic());
+  setNitrogenOrganic(theData.nitrogenOrganic());
+  setTexture(theData.texture());
+  setBulkDensity(theData.bulkDensity());
+  setFieldCapacityMeas(theData.fieldCapacityMeas());
+  setWiltingPointMeas(theData.wiltingPointMeas());
+  setPfCurve(theData.pfCurve());
+  setHydrCondCurve(theData.hydrCondCurve());
+  setPH(theData.pH());
 }
 
 MadDataClassificationSoil& MadDataClassificationSoil::operator =(const MadDataClassificationSoil& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mCarbonOrganic=theData.carbonOrganic();
+  mNitrogenOrganic=theData.nitrogenOrganic();
+  mTexture=theData.texture();
+  mBulkDensity=theData.bulkDensity();
+  mFieldCapacityMeas=theData.fieldCapacityMeas();
+  mWiltingPointMeas=theData.wiltingPointMeas();
+  mPfCurve=theData.pfCurve();
+  mHydrCondCurve=theData.hydrCondCurve();
+  mPH=theData.mPH;
   return *this;
 }
 

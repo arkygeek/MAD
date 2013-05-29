@@ -39,16 +39,16 @@ MadDataClassificationInitialValues::MadDataClassificationInitialValues() : MadSe
 MadDataClassificationInitialValues::MadDataClassificationInitialValues(const MadDataClassificationInitialValues &theData)
 {
   setGuid(theData.guid());
+  setSoilMoisture(theData.soilMoisture());
+  setNitrogenMin(theData.nitrogenMin());
 }
 
 MadDataClassificationInitialValues& MadDataClassificationInitialValues::operator =(const MadDataClassificationInitialValues& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  mSoilMoisture = theData.soilMoisture();
+  mNitrogenMin = theData.nitrogenMin();
   return *this;
 }
 

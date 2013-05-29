@@ -38,16 +38,27 @@ MadDataClassificationPrevCrop::MadDataClassificationPrevCrop() : MadSerialisable
 MadDataClassificationPrevCrop::MadDataClassificationPrevCrop(const MadDataClassificationPrevCrop &theData)
 {
   setGuid(theData.guid());
+  setCrop(theData.crop());
+  setSowingDate(theData.sowingDate());
+  setHarvestDate(theData.harvestDate());
+  setYield(theData.yield());
+  setResidueMgmt(theData.residueMgmt());
+  setFertilisation(theData.fertilisation());
+  setIrrigation(theData.irrigation());
 }
 
 MadDataClassificationPrevCrop& MadDataClassificationPrevCrop::operator =(const MadDataClassificationPrevCrop& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mCrop=theData.crop();
+  mSowingDate=theData.sowingDate();
+  mHarvestDate=theData.harvestDate();
+  mYield=theData.yield();
+  mResidueMgmt=theData.residueMgmt();
+  mFertilisation=theData.fertilisation();
+  mIrrigation=theData.irrigation();
   return *this;
 }
 

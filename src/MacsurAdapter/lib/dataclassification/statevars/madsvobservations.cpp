@@ -38,16 +38,19 @@ MadSVObservations::MadSVObservations() : MadSerialisable(), MadGuid()
 MadSVObservations::MadSVObservations(const MadSVObservations &theData)
 {
   setGuid(theData.guid());
+  setLodging(theData.lodging());
+  setPestsOrDiseases(theData.pestsOrDiseases());
+  setDamages(theData.damages());
 }
 
 MadSVObservations& MadSVObservations::operator =(const MadSVObservations& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mLodging=theData.lodging();
+  mPestsOrDiseases=theData.pestsOrDiseases();
+  mDamages=theData.damages();
   return *this;
 }
 

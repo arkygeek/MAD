@@ -38,16 +38,23 @@ MadDataClassificationPhenology::MadDataClassificationPhenology() : MadSerialisab
 MadDataClassificationPhenology::MadDataClassificationPhenology(const MadDataClassificationPhenology &theData)
 {
   setGuid(theData.guid());
+  setEmergence(theData.emergence());
+  setStemElongation(theData.stemElongation());
+  setEarEmergence(theData.earEmergence());
+  setFlowering(theData.flowering());
+  setYellowRipeness(theData.yellowRipeness());
 }
 
-MadDataClassificationPhenology& MadDataClassificationPhenology::operator =(const MadDataClassificationPhenology& theData)
+MadDataClassificationPhenology& MadDataClassificationPhenology::operator = (const MadDataClassificationPhenology& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mEmergence=theData.emergence();
+  mStemElongation=theData.stemElongation();
+  mEarEmergence=theData.earEmergence();
+  mFlowering=theData.flowering();
+  mYellowRipeness=theData.yellowRipeness();
   return *this;
 }
 // Accessors

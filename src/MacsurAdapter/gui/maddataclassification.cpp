@@ -421,9 +421,9 @@ void MadDataClassification::on_pbCultivationSave_clicked()
   MadSubCategory mySubCat;
 
   mySubCat.setMinData(chbxVariety->isChecked());
-  mySubCat.setDepth(sbVariety->value());
+  mySubCat.setDepth(0);
   mySubCat.setWeightPoints(dsbVariety->value());
-  mySubCat.setObservations(0);
+  mySubCat.setObservations(sbVariety->value());
   mySubCat.setReplicates(0);
   myCultSet.setVariety(mySubCat);
 

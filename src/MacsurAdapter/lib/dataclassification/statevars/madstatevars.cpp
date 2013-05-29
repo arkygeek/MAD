@@ -41,16 +41,21 @@ MadStateVars::MadStateVars() : MadSerialisable(), MadGuid()
 MadStateVars::MadStateVars(const MadStateVars &theData)
 {
   setGuid(theData.guid());
+  setCropCategories(theData.cropCategories());
+  setSoilCategories(theData.soilCategories());
+  setSurfaceFluxesCategories(theData.surfaceFluxesCategories());
+  setObservationCategories(theData.observationCategories());
 }
 
 MadStateVars& MadStateVars::operator =(const MadStateVars& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mCropCategories=theData.cropCategories();
+  mSoilCategories=theData.soilCategories();
+  mSurfaceFluxes=theData.surfaceFluxesCategories();
+  mObservations=theData.observationCategories();
   return *this;
 }
 

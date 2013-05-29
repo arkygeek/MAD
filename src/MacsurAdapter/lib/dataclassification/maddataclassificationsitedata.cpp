@@ -38,16 +38,19 @@ MadDataClassificationSiteData::MadDataClassificationSiteData() : MadSerialisable
 MadDataClassificationSiteData::MadDataClassificationSiteData(const MadDataClassificationSiteData &theData)
 {
   setGuid(theData.guid());
+  setLatitude(theData.latitude());
+  setLongitude(theData.longitude());
+  setAltitude(theData.altitude());
 }
 
 MadDataClassificationSiteData& MadDataClassificationSiteData::operator =(const MadDataClassificationSiteData& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mLatitude=theData.latitude();
+  mLongitude=theData.longitude();
+  mAltitude=theData.altitude();
   return *this;
 }
 // Accessors

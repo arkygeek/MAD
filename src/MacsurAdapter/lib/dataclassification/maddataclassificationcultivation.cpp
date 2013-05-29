@@ -38,16 +38,29 @@ MadDataClassificationCultivation::MadDataClassificationCultivation() : MadSerial
 MadDataClassificationCultivation::MadDataClassificationCultivation(const MadDataClassificationCultivation &theData)
 {
     setGuid(theData.guid());
+    setVariety(theData.variety());
+    setSowing(theData.sowing());
+    setHarvest(theData.harvest());
+    setFertilisation(theData.fertilisation());
+    setIrrigation(theData.irrigation());
+    setSeedDensity(theData.seedDensity());
+    setYield(theData.yield());
+    setTillage(theData.tillage());
 }
 
 MadDataClassificationCultivation& MadDataClassificationCultivation::operator = (const MadDataClassificationCultivation& theData)
 {
     // gracefully handles self assignment
     if (this == &theData) return *this;
-    //mName=theData.name();
-    //mDescription=theData.description();
-    //setGuid(theData.guid());
-    //mImageFile=theData.imageFile();
+    setGuid(theData.guid());
+    mVariety=theData.variety();
+    mSowing=theData.sowing();
+    mHarvest=theData.harvest();
+    mFertilisation=theData.fertilisation();
+    mIrrigation=theData.irrigation();
+    mSeedDensity=theData.seedDensity();
+    mYield=theData.yield();
+    mTillage=theData.tillage();
     return *this;
 }
 

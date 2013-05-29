@@ -32,21 +32,34 @@
 MadSVSurfaceFluxes::MadSVSurfaceFluxes() : MadSerialisable(), MadGuid()
 {
   setGuid();
+
+  MadSubCategory mEt;
+  MadSubCategory mNh3Loss;
+  MadSubCategory mN2oLoss;
+  MadSubCategory mN2Loss;
+  MadSubCategory mCh4Loss;
 }
 
 MadSVSurfaceFluxes::MadSVSurfaceFluxes(const MadSVSurfaceFluxes &theData)
 {
   setGuid(theData.guid());
+  setEt(theData.et());
+  setNh3Loss(theData.nh3Loss());
+  setN2oLoss(theData.n2oLoss());
+  setN2Loss(theData.n2Loss());
+  setCh4Loss(theData.ch4Loss());
 }
 
 MadSVSurfaceFluxes& MadSVSurfaceFluxes::operator =(const MadSVSurfaceFluxes& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mEt=theData.et();
+  mNh3Loss=theData.nh3Loss();
+  mN2oLoss=theData.n2oLoss();
+  mN2Loss=theData.n2Loss();
+  mCh4Loss=theData.ch4Loss();
   return *this;
 }
 

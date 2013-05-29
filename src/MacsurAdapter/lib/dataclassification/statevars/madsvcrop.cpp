@@ -38,16 +38,25 @@ MadSVCrop::MadSVCrop() : MadSerialisable(), MadGuid()
 MadSVCrop::MadSVCrop(const MadSVCrop &theData)
 {
   setGuid(theData.guid());
+  setAgrBiomass(theData.agrBiomass());
+  setWeightOrgans(theData.weightOrgans());
+  setRootBiomass(theData.rootBiomass());
+  setNInAGrBiomass(theData.nInAGrBiomass());
+  setNInOrgans(theData.nInOrgans());
+  setLai(theData.lai());
 }
 
 MadSVCrop& MadSVCrop::operator =(const MadSVCrop& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mAgrBiomass=theData.agrBiomass();
+  mWeightOrgans=theData.weightOrgans();
+  mRootBiomass=theData.rootBiomass();
+  mNInAGrBiomass=theData.nInAGrBiomass();
+  mNInOrgans=theData.nInOrgans();
+  mLai=theData.lai();
   return *this;
 }
 

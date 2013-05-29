@@ -39,16 +39,25 @@ MadSVSoil::MadSVSoil() : MadSerialisable(), MadGuid()
 MadSVSoil::MadSVSoil(const MadSVSoil &theData)
 {
   setGuid(theData.guid());
+  setSoilWaterGrav(theData.soilWaterGrav());
+  setPressureHeads(theData.pressureHeads());
+  setNMin(theData.nMin());
+  setSoilWaterSensorCal(theData.soilWaterSensorCal());
+  setWaterFluxBottomRoot(theData.waterFluxBottomRoot());
+  setNitrogenFluxBottomRoot(theData.nitrogenFluxBottomRoot());
 }
 
 MadSVSoil& MadSVSoil::operator =(const MadSVSoil& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
-  //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  setGuid(theData.guid());
+  mSoilWaterGrav=theData.soilWaterGrav();
+  mPressureHeads=theData.pressureHeads();
+  mNMin=theData.nMin();
+  mSoilWaterSensorCal=theData.soilWaterSensorCal();
+  mWaterFluxBottomRoot=theData.waterFluxBottomRoot();
+  mNitrogenFluxBottomRoot=theData.nitrogenFluxBottomRoot();
   return *this;
 }
 

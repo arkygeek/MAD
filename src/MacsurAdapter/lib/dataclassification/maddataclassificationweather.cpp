@@ -38,16 +38,34 @@ MadDataClassificationWeather::MadDataClassificationWeather() : MadSerialisable()
 MadDataClassificationWeather::MadDataClassificationWeather(const MadDataClassificationWeather &theData)
 {
   setGuid(theData.guid());
+  setPrecipitation(theData.precipitation());
+  setTAve(theData.tAve());
+  setTMin(theData.tMin());
+  setTMax(theData.tMax());
+  setRelativeHumidity(theData.relativeHumidity());
+  setWindSpeed(theData.windSpeed());
+  setGlobalRadiation(theData.globalRadiation());
+  setSunshineHours(theData.sunshineHours());
+  setLeafWetness(theData.leafWetness());
+  setSoilTemp(theData.soilTemp());
 }
 
 MadDataClassificationWeather& MadDataClassificationWeather::operator =(const MadDataClassificationWeather& theData)
 {
   // gracefully handles self assignment
   if (this == &theData) return *this;
-  //mName=theData.name();
-  //mDescription=theData.description();
   //setGuid(theData.guid());
-  //mImageFile=theData.imageFile();
+  mPrecipitation=theData.precipitation();
+  mTAve=theData.tAve();
+  mTMin=theData.tMin();
+  mTMax=theData.tMax();
+  mRelativeHumidity=theData.relativeHumidity();
+  mWindSpeed=theData.windSpeed();
+  mGlobalRadiation=theData.globalRadiation();
+  mSunshineHours=theData.sunshineHours();
+  mLeafWetness=theData.leafWetness();
+  mSoilTemp=theData.soilTemp();
+
   return *this;
 }
 
