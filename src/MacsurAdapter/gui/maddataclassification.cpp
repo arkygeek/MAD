@@ -417,17 +417,30 @@ void MadDataClassification::on_pbCultivationSave_clicked()
 {
   // save current settings for cultivation to xml file
   // first we have to get the values
-  MadSubCategory myCultSubCat;
-  myCultSubCat.setMinData(chbxVariety->isChecked());
-  myCultSubCat.setDepth(sbVariety->value());
-  myCultSubCat.setWeightPoints(dsbVariety->value());
-  myCultSubCat.setObservations(0);
-  myCultSubCat.setReplicates(0);
-  QString myString;
-  myString = myCultSubCat.toXml();
-  textEdit->setText(myString);
   MadDataClassificationCultivation myCultSet;
-  myCultSet.variety().setMinData(chbxVariety->isChecked());
+  MadSubCategory mySubCat;
+
+  mySubCat.setMinData(chbxVariety->isChecked());
+  mySubCat.setDepth(sbVariety->value());
+  mySubCat.setWeightPoints(dsbVariety->value());
+  mySubCat.setObservations(0);
+  mySubCat.setReplicates(0);
+  myCultSet.setVariety(mySubCat);
+
+
+
+
+  //myCultSet.variety().minData(chbxVariety->isChecked());
+  //myCultSet.variety().setDepth(sbVariety->value());
+  //myCultSet.variety().setWeightPoints(dsbVariety->value());
+  //myCultSet.variety().setObservations(0);
+  //myCultSet.variety().setReplicates(0);
+
+  QString myString;
+  myString = mySubCat.toXml();
+  textEdit->setText(myString);
+
+
   //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
   //    QDir::separator() + mCrop.guid() + ".xml");
 }
