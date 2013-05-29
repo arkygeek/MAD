@@ -49,7 +49,6 @@ public:
   // Accessors
   //
 
-
   /**
    * @brief name (accessor) this is the dataset's name
    * @return

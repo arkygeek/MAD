@@ -125,11 +125,13 @@ bool MadSubCategory::fromXml(const QString theXml)
 QString MadSubCategory::toXml()
 {
   QString myString;
-  myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  //myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
-  myString+=QString("</dataset>\n");
+  //myString+=QString("<dataset guid=\"" + guid() + "\">\n");
+  myString+=QString("      <minData>" + QString::number(mMinData) + "</minData>\n");
+  myString+=QString("      <depth>" + QString::number(mDepth) + "</depth>\n");
+  myString+=QString("      <observations>" + QString::number(mObservations) + "</observations>\n");
+  myString+=QString("      <weightPoints>" + QString::number(mWeightPoints) + "</weightPoints>\n");
+  myString+=QString("      <replicates>" + QString::number(mReplicates) + "</replicates>\n");
+  //myString+=QString("</dataset>\n");
   return myString;
 
   /*   example structure of xml file

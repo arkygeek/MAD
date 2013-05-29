@@ -55,6 +55,8 @@ MadData& MadData::operator =(const MadData& theData)
     return *this;
 }
 
+// Accessors
+
 QString MadData::name() const
 {
     return mName;
@@ -70,7 +72,7 @@ QString MadData::imageFile() const
     return mImageFile;
 }
 
-/*****************/
+// Mutators
 
 void MadData::setName(QString theName)
 {
@@ -86,6 +88,8 @@ void MadData::setImageFile(QString theImageFileName)
 {
     mImageFile=theImageFileName;
 }
+
+// Others
 
 bool MadData::fromXml(const QString theXml)
 {
@@ -115,41 +119,6 @@ QString MadData::toXml()
   myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
   myString+=QString("</dataset>\n");
   return myString;
-
-  /*   example structure of xml file
-
-    <dataset guid="hj243g5hjk34gjh2g43">
-      <name>Some name</name>
-      <description>The given description</description>
-      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
-      <cultivation>
-        <variety>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </variety>
-        <sowing>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </sowing>
-        <harvest>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </harvest>
-      </cultivation>
-    </dataset>
-
-
-
-  */
 }
 
 QString MadData::toText()
@@ -168,18 +137,6 @@ QString MadData::toHtml()
     //myString+="<p>GUID:" + guid() + "</p>";
   myString+="<table>";
   myString+="<tr><td><b>Description: </b></td><td>" + mDescription + "</td></tr>";
-
-  //
-  // the following shows example of how to do a couple of things
-  //
-
-  //myString+="<tr><td><b>Cals/Kg: </b></td><td>" + QString::number(mCropCalories) + "</td></tr>";
-  //QString myCropFodderEnergyType = (mCropFodderEnergyType==0) ? "KCalories" : "TDN";
-  //QString myUnits = (mAreaUnits==0) ? "Dunum" : "Hectare";
-  //myString+="<tr><td><b>Fodder (kg/" + myUnits + "): </b></td><td>" + QString::number(mCropFodderProduction) + "</td></tr>";
-  //myString+="<tr><td><b>Fodder Value/Kg: </b></td><td>" + QString::number(mCropFodderValue) + "</td></tr>";
-  //myString+="<tr><td><b>FodderEnergyType: </b></td><td>" + myCropFodderEnergyType + "</td></tr>";
-  //myString+="<tr><td><b>AreaUnits: </b></td><td>" + myUnits + "</td></tr>";
   myString+="</table>";
   return myString;
 }

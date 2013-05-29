@@ -76,7 +76,6 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
   connect ( dsbTillage, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateTillageRatingLbl() ));
 }
-
 void MadDataClassification::changeEvent(QEvent *e)
 {
   QDialog::changeEvent(e);
@@ -88,7 +87,6 @@ void MadDataClassification::changeEvent(QEvent *e)
     break;
   }
 }
-
 void MadDataClassification::on_gbxCultivation_clicked()
 {
   // if values are editable, should not be able to select for any
@@ -105,7 +103,6 @@ void MadDataClassification::on_gbxCultivation_clicked()
     lblExample->setVisible(true);
   }
 }
-
 void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &theValue)
 {
   // if enabled, set values for corresponding classification
@@ -119,7 +116,6 @@ void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &th
     lblExample->setText("Select Example");
   } //end else
 }
-
 /**
  * @brief MadDataClassification::on_hsldrVariety_valueChanged
  * update label according to desired resolution
@@ -138,7 +134,6 @@ void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
   dsbVariety->setValue(myPreciseValue);
   updateVarietyRatingLbl();
 }
-
 /**
  * @brief MadDataClassification::on_hsldrSowing_valueChanged
  * @param theSliderValue
@@ -149,7 +144,6 @@ void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
   float myPreciseValue = myValue/2.0;
   dsbSowing->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrHarvest_valueChanged
  * @param theSliderValue
@@ -160,7 +154,6 @@ void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
   float myPreciseValue = myValue/2.0;
   dsbHarvest->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrFertilisation_valueChanged
  * @param theSliderValue
@@ -171,7 +164,6 @@ void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValu
   float myPreciseValue = myValue/2.0;
   dsbFertilisation->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrIrrigation_valueChanged
  * @param theSliderValue
@@ -182,7 +174,6 @@ void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
   float myPreciseValue = myValue/2.0;
   dsbIrrigation->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrSeedDensity_valueChanged
  * @param theSliderValue
@@ -193,7 +184,6 @@ void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
   float myPreciseValue = myValue/2.0;
   dsbSeedDensity->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrYield_valueChanged
  * @param theSliderValue
@@ -204,7 +194,6 @@ void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
   float myPreciseValue = myValue/2.0;
   dsbYield->setValue(myPreciseValue);
 }
-
 /**
  * @brief MadDataClassification::on_hsldrTillage_valueChanged
  * @param theSliderValue
@@ -297,7 +286,6 @@ void MadDataClassification::updateVarietyRatingLbl()
   lblVarietyRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateSowingRatingLbl()
 {
   // calculate weight and update the label
@@ -308,7 +296,6 @@ void MadDataClassification::updateSowingRatingLbl()
   lblSowingRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateHarvestRatingLbl()
 {
   // calculate weight and update the label
@@ -319,7 +306,6 @@ void MadDataClassification::updateHarvestRatingLbl()
   lblHarvestRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateFertilisationRatingLbl()
 {
   // calculate weight and update the label
@@ -330,7 +316,6 @@ void MadDataClassification::updateFertilisationRatingLbl()
   lblFertilisationRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateIrrigationRatingLbl()
 {
   // calculate weight and update the label
@@ -341,7 +326,6 @@ void MadDataClassification::updateIrrigationRatingLbl()
   lblIrrigationRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateSeedDensityRatingLbl()
 {
   // calculate weight and update the label
@@ -352,7 +336,6 @@ void MadDataClassification::updateSeedDensityRatingLbl()
   lblSeedDensityRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateYieldRatingLbl()
 {
   // calculate weight and update the label
@@ -363,7 +346,6 @@ void MadDataClassification::updateYieldRatingLbl()
   lblYieldRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateTillageRatingLbl()
 {
   // calculate weight and update the label
@@ -374,7 +356,6 @@ void MadDataClassification::updateTillageRatingLbl()
   lblTillageRating->setText(myText);
   updateCultivationLabels();
 }
-
 void MadDataClassification::updateCultivationLabels()
 {
   // updates totals
@@ -435,15 +416,26 @@ void MadDataClassification::updateCultivationLabels()
 void MadDataClassification::on_pbCultivationSave_clicked()
 {
   // save current settings for cultivation to xml file
+  // first we have to get the values
+  MadSubCategory myCultSubCat;
+  myCultSubCat.setMinData(chbxVariety->isChecked());
+  myCultSubCat.setDepth(sbVariety->value());
+  myCultSubCat.setWeightPoints(dsbVariety->value());
+  myCultSubCat.setObservations(0);
+  myCultSubCat.setReplicates(0);
   QString myString;
-
+  myString = myCultSubCat.toXml();
+  textEdit->setText(myString);
+  MadDataClassificationCultivation myCultSet;
+  myCultSet.variety().setMinData(chbxVariety->isChecked());
+  //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
+  //    QDir::separator() + mCrop.guid() + ".xml");
 }
 
 void MadDataClassification::on_pbCultivationSet_clicked()
 {
     // sets variables for cultivation
 }
-
 void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
 {
     if (theText != "")
