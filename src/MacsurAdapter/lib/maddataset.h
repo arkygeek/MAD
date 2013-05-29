@@ -26,6 +26,8 @@
 #include "madguid.h"
 #include "madserialisable.h"
 #include "ui_maddataclassificationbase.h"
+#include "maddataset.h"
+
 #include "dataclassification/maddataclassificationcultivation.h"
 #include "dataclassification/maddataclassificationinitialvalues.h"
 #include "dataclassification/maddataclassificationphenology.h"
@@ -34,6 +36,7 @@
 #include "dataclassification/maddataclassificationsoil.h"
 #include "dataclassification/maddataclassificationweather.h"
 #include "dataclassification/statevars/madstatevars.h"
+
 
 // Qt includes
 #include <QString>
@@ -46,6 +49,8 @@ public:
   MadDataset& operator = (const MadDataset& theDataset);
 
   // Accessors
+  QString name() const;
+  QString description() const;
   MadDataClassificationCultivation cultivation() const;
   MadDataClassificationInitialValues initialValues() const;
   MadDataClassificationPhenology phenology() const;
@@ -80,7 +85,8 @@ public:
   bool fromXml(const QString theXml);
 
   // Mutators
-
+  void setName(QString theName);
+  void setDescription(QString theDescription);
   void setCultivation(MadDataClassificationCultivation theCultivationData);
   void setInitialValues(MadDataClassificationInitialValues theInitialValues);
   void setPhenology(MadDataClassificationPhenology thePhenologyData);
@@ -91,6 +97,8 @@ public:
   void setStateVars(MadStateVars theStateVarsData);
 
 private:
+  QString mName;
+  QString mDescription;
   MadDataClassificationCultivation mCultivation;
   MadDataClassificationInitialValues mInitialValues;
   MadDataClassificationPhenology mPhenology;

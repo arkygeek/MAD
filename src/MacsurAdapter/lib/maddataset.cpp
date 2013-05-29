@@ -34,25 +34,55 @@
 MadDataset::MadDataset() : MadSerialisable(), MadGuid()
 {
  setGuid();
+ mName="No Name Set";
+ mDescription="Not Set";
+ // we can put in other defaults here, such as
+ // mTheme="Valid for all themes";  <-- this doesn't exist though haha
 }
 
 MadDataset::MadDataset(const MadDataset &theData)
 {
- setGuid(theData.guid());
+  mName=theData.name();
+  mDescription=theData.description();
+  setGuid(theData.guid());
+  mCultivation=theData.cultivation();
+  mInitialValues=theData.initialValues();
+  mPhenology=theData.phenology();
+  mPrevCrop=theData.prevCrop();
+  mSiteData=theData.siteData();
+  mSoil=theData.soil();
+  mWeather=theData.weather();
+  mStateVars=theData.stateVars();
 }
 
 MadDataset& MadDataset::operator =(const MadDataset& theData)
 {
  // gracefully handles self assignment
  if (this == &theData) return *this;
- //mName=theData.name();
- //mDescription=theData.description();
- //setGuid(theData.guid());
- //mImageFile=theData.imageFile();
+ mName=theData.name();
+ mDescription=theData.description();
+ setGuid(theData.guid());
+ mCultivation=theData.cultivation();
+ mInitialValues=theData.initialValues();
+ mPhenology=theData.phenology();
+ mPrevCrop=theData.prevCrop();
+ mSiteData=theData.siteData();
+ mSoil=theData.soil();
+ mWeather=theData.weather();
+ mStateVars=theData.stateVars();
  return *this;
 }
 
 // Accessors
+QString MadDataset::name() const
+{
+  return mName;
+}
+QString MadDataset::description() const
+{
+  return mDescription;
+}
+
 MadDataClassificationCultivation MadDataset::cultivation() const
 {
   return mCultivation;
@@ -87,10 +117,16 @@ MadStateVars MadDataset::stateVars() const
 }
 
 // Mutators
-//void MadDataClassificationSoil::setCarbonOrganic(MadSubCategory theData)
-//{
-//  mCarbonOrganic = theData;
-//}
+
+void MadDataset::setName(QString theName)
+{
+  mName = theName;
+}
+
+void MadDataset::setDescription(QString theDescription)
+{
+  mDescription = theDescription;
+}
 
 void MadDataset::setCultivation(MadDataClassificationCultivation theCultivationData)
 {
@@ -155,46 +191,18 @@ QString MadDataset::toXml()
 {
   QString myString;
   myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  //myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
+  myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
+  myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
+  myString+=mCultivation.toXml();
+  myString+=mPhenology.toXml();
+  myString+=mPrevCrop.toXml();
+  myString+=mInitialValues.toXml();
+  myString+=mSoil.toXml();
+  myString+=mSiteData.toXml();
+  myString+=mWeather.toXml();
+  myString+=mStateVars.toXml();
   myString+=QString("</dataset>\n");
   return myString;
-
-  /*   example structure of xml file
-
-    <dataset guid="hj243g5hjk34gjh2g43">
-      <name>Some name</name>
-      <description>The given description</description>
-      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
-      <cultivation>
-        <variety>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </variety>
-        <sowing>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </sowing>
-        <harvest>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </harvest>
-      </cultivation>
-    </dataset>
-
-
-
-  */
 }
 
 QString MadDataset::toText()

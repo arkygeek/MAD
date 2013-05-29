@@ -156,9 +156,39 @@ QString MadDataClassificationCultivation::toXml()
 {
   QString myString;
   myString+=QString("  <cultivation guid=\"" + guid() + "\">\n");
+
   myString+=QString("    <variety>\n");
   myString+=mVariety.toXml();
   myString+=QString("    </variety>\n");
+
+  myString+=QString("    <sowing>\n");
+  myString+=mSowing.toXml();
+  myString+=QString("    </sowing>\n");
+
+  myString+=QString("    <harvest>\n");
+  myString+=mHarvest.toXml();
+  myString+=QString("    </harvest>\n");
+
+  myString+=QString("    <fertilisation>\n");
+  myString+=mFertilisation.toXml();
+  myString+=QString("    </fertilisation>\n");
+
+  myString+=QString("    <irrigation>\n");
+  myString+=mIrrigation.toXml();
+  myString+=QString("    </irrigation>\n");
+
+  myString+=QString("    <seeddensity>\n");
+  myString+=mSeedDensity.toXml();
+  myString+=QString("    </seeddensity>\n");
+
+  myString+=QString("    <yield>\n");
+  myString+=mYield.toXml();
+  myString+=QString("    </yield>\n");
+
+  myString+=QString("    <tillage>\n");
+  myString+=mTillage.toXml();
+  myString+=QString("    </tillage>\n");
+
   //myString+=QString("      <depth>" + QString::number(variety().depth()) + "</depth>\n");
   //myString+=QString("      <observations>" + QString::number(variety().observations()) + "</observations>\n");
   //myString+=QString("      <weightPoints>" + QString::number(variety().weightPoints()) + "</weightPoints>\n");

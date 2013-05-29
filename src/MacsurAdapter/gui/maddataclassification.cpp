@@ -417,28 +417,169 @@ void MadDataClassification::on_pbCultivationSave_clicked()
 {
   // save current settings for cultivation to xml file
   // first we have to get the values
-  MadDataClassificationCultivation myCultSet;
-  MadSubCategory mySubCat;
 
-  mySubCat.setMinData(chbxVariety->isChecked());
-  mySubCat.setDepth(0);
-  mySubCat.setWeightPoints(dsbVariety->value());
-  mySubCat.setObservations(sbVariety->value());
-  mySubCat.setReplicates(0);
-  myCultSet.setVariety(mySubCat);
+  // create the variables
+  MadDataClassificationCultivation myCultivation;
+  MadDataClassificationPhenology myPhenology;
+  MadDataClassificationPrevCrop myPrevCropSet;
+  MadDataClassificationInitialValues myInitialValues;
+  MadDataClassificationSoil mySoil;
+  MadDataClassificationSiteData mySiteData;
+  MadDataClassificationWeather myWeather;
+  MadStateVars myStateVars;
+
+  // cultivation
+  MadSubCategory myCultVariety;
+  MadSubCategory myCultSowing;
+  MadSubCategory myCultHarvest;
+  MadSubCategory myCultFertilisation;
+  MadSubCategory myCultIrrigation;
+  MadSubCategory myCultSeedDensity;
+  MadSubCategory myCultYield;
+  MadSubCategory myCultTillage;
+
+  // phenology
+  MadSubCategory myPhenologyEmergence;
+  MadSubCategory myPhenologyStemElongation;
+  MadSubCategory myPhenologyEarEmergence;
+  MadSubCategory myPhenologyFlowering;
+  MadSubCategory myPhenologyYellowRipeness;
+
+  // prev crop
+  MadSubCategory myPrevCropCrop;
+  MadSubCategory myPrevCropSowingDate;
+  MadSubCategory myPrevCropHarvestDate;
+  MadSubCategory myPrevCropYield;
+  MadSubCategory myPrevCropResidueMgmt;
+  MadSubCategory myPrevCropFertilisation;
+  MadSubCategory myPrevCropIrrigation;
+
+  //initial values
+  MadSubCategory myInitialValuesSoilMoisture;
+  MadSubCategory myInitialValuesNitrogenMin;
+
+  // soil
+  MadSubCategory mySoilCarbonOrganic;
+  MadSubCategory mySoilNitrogenOrganic;
+  MadSubCategory mySoilTexture;
+  MadSubCategory mySoilBulkDensity;
+  MadSubCategory mySoilFieldCapacity;
+  MadSubCategory mySoilWiltingPoint;
+  MadSubCategory mySoilPfCurve;
+  MadSubCategory mySoilHydrCondState;
+
+  // site
+  MadSubCategory mySiteDataLatitude;
+  MadSubCategory mySiteDataLongitude;
+  MadSubCategory mySiteDataAltitude;
+
+  //weather
+  MadSubCategory myWeatherPrecipitation;
+  MadSubCategory myWeatherTAve;
+  MadSubCategory myWeatherTMin;
+  MadSubCategory myWeatherTMax;
+  MadSubCategory myWeatherRelativeHumidity;
+  MadSubCategory myWeatherWindSpeed;
+  MadSubCategory myWeatherGlobalRadiation;
+  MadSubCategory myWeatherSunshineHours;
+
+  //state vars - soil
+  MadSubCategory myStateVarsSoilSoilWaterGrav;
+  MadSubCategory myStateVarsSoilPressureHeads;
+  MadSubCategory myStateVarsSoilNMin;
+  MadSubCategory myStateVarsSoilSoilWaterSensorCal;
+  MadSubCategory myStateVarsSoilWaterFluxBottomRoot;
+  MadSubCategory myStateVarsSoilNFluxBottomRoot;
+
+  // state vars - crop
+  MadSubCategory myStateVarsCropAGrBiomass;
+  MadSubCategory myStateVarsCropWeightOrgans;
+  MadSubCategory myStateVarsCropRootBiomass;
+  MadSubCategory myStateVarsCropNInAGrBiomass;
+  MadSubCategory myStateVarsCropNInOrgans;
+  MadSubCategory myStateVarsCropLAI;
+
+  // state vars - surface fluxes
+  MadSubCategory myStateVarsSurfaceFluxesEt;
+  MadSubCategory myStateVarsSurfaceFluxesNh3Loss;
+  MadSubCategory myStateVarsSurfaceFluxesN2OLoss;
+  MadSubCategory myStateVarsSurfaceFluxesN2Loss;
+  MadSubCategory myStateVarsSurfaceFluxesCh4Loss;
+
+  // state vars - observation data
+  MadSubCategory myStateVarsObservationsLodging;
+  MadSubCategory myStateVarsObservationsPestsOrDiseases;
+  MadSubCategory myStateVarsObservationsDamages;
+
+  //get the values from the form
+
+  // Cultivation values from form
+  // variety
+  myCultVariety.setMinData(chbxVariety->isChecked());
+  myCultVariety.setDepth(0);
+  myCultVariety.setWeightPoints(dsbVariety->value());
+  myCultVariety.setObservations(sbVariety->value());
+  myCultVariety.setReplicates(0);
+  // sowing
+  myCultSowing.setMinData(chbxSowing->isChecked());
+  myCultSowing.setDepth(0);
+  myCultSowing.setWeightPoints(dsbSowing->value());
+  myCultSowing.setObservations(sbSowing->value());
+  myCultSowing.setReplicates(0);
+  // harvest
+  myCultHarvest.setMinData(chbxHarvest->isChecked());
+  myCultHarvest.setDepth(0);
+  myCultHarvest.setWeightPoints(dsbHarvest->value());
+  myCultHarvest.setObservations(sbHarvest->value());
+  myCultHarvest.setReplicates(0);
+  // fertilisation
+  myCultFertilisation.setMinData(chbxFertilisation->isChecked());
+  myCultFertilisation.setDepth(0);
+  myCultFertilisation.setWeightPoints(dsbFertilisation->value());
+  myCultFertilisation.setObservations(sbFertilisation->value());
+  myCultFertilisation.setReplicates(0);
+  // irrigation
+  myCultIrrigation.setMinData(chbxIrrigation->isChecked());
+  myCultIrrigation.setDepth(0);
+  myCultIrrigation.setWeightPoints(dsbIrrigation->value());
+  myCultIrrigation.setObservations(sbIrrigation->value());
+  myCultIrrigation.setReplicates(0);
+  // seed density
+  myCultSeedDensity.setMinData(chbxSeedDensity->isChecked());
+  myCultSeedDensity.setDepth(0);
+  myCultSeedDensity.setWeightPoints(dsbSeedDensity->value());
+  myCultSeedDensity.setObservations(sbSeedDensity->value());
+  myCultSeedDensity.setReplicates(0);
+  // yield
+  myCultYield.setMinData(chbxYield->isChecked());
+  myCultYield.setDepth(0);
+  myCultYield.setWeightPoints(dsbYield->value());
+  myCultYield.setObservations(sbYield->value());
+  myCultYield.setReplicates(0);
+  // tillage
+  myCultYield.setMinData(chbxTillage->isChecked());
+  myCultTillage.setDepth(0);
+  myCultTillage.setWeightPoints(dsbTillage->value());
+  myCultTillage.setObservations(sbTillage->value());
+  myCultTillage.setReplicates(0);
 
 
 
+  // set the values
+  // cultivation
+  myCultivation.setVariety(myCultVariety);
+  myCultivation.setSowing(myCultSowing);
+  myCultivation.setHarvest(myCultHarvest);
+  myCultivation.setFertilisation(myCultFertilisation);
+  myCultivation.setIrrigation(myCultIrrigation);
+  myCultivation.setSeedDensity(myCultSeedDensity);
+  myCultivation.setYield(myCultYield);
+  myCultivation.setTillage(myCultTillage);
 
-  //myCultSet.variety().minData(chbxVariety->isChecked());
-  //myCultSet.variety().setDepth(sbVariety->value());
-  //myCultSet.variety().setWeightPoints(dsbVariety->value());
-  //myCultSet.variety().setObservations(0);
-  //myCultSet.variety().setReplicates(0);
 
   QString myString;
   //myString = mySubCat.toXml();
-  myString = myCultSet.toXml();
+  myString = myCultivation.toXml();
   textEdit->setText(myString);
 
 

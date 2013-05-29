@@ -68,6 +68,7 @@ void MadMainWindow::changeEvent(QEvent *e)
     }
 }
 
+
 //void MadMainWindow::loadModels(MadModelMap *theModelMap);
 //{
   //
