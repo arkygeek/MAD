@@ -37,8 +37,8 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
   cbExamples->setEnabled(true);
   lblExample->setVisible(true);
   lblExample->setText("Select Example");
-  lblMedal->setVisible(false);
-  lblRanking->setVisible(false);
+  lblMedalCultivation->setVisible(false);
+  lblRankingCultivation->setVisible(false);
   lblExample->setVisible(true);
   cbExamples->setDisabled(false);
 
@@ -378,37 +378,37 @@ void MadDataClassification::updateCultivationLabels()
 
   switch (myRank)
   {
-    case 24: lblMedal->setVisible(true);
-             lblMedal->setScaledContents(true);
-             lblMedal->setPixmap(QPixmap( ":platinum.png" ));
-             lblRanking->setVisible(true);
-             lblRanking->setText("Platinum");
+    case 24: lblMedalCultivation->setVisible(true);
+             lblMedalCultivation->setScaledContents(true);
+             lblMedalCultivation->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingCultivation->setVisible(true);
+             lblRankingCultivation->setText("Platinum");
       break;
 
-    case 23: lblMedal->setVisible(true);
-             lblMedal->setScaledContents(true);
-             lblMedal->setPixmap(QPixmap( ":gold.png" ));
-             lblRanking->setVisible(true);
-             lblRanking->setText("Gold");
+    case 23: lblMedalCultivation->setVisible(true);
+             lblMedalCultivation->setScaledContents(true);
+             lblMedalCultivation->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingCultivation->setVisible(true);
+             lblRankingCultivation->setText("Gold");
       break;
 
-    case 22: lblMedal->setVisible(true);
-             lblMedal->setScaledContents(true);
-             lblMedal->setPixmap(QPixmap( ":silver.png" ));
-             lblRanking->setVisible(true);
-             lblRanking->setText("Silver");
+    case 22: lblMedalCultivation->setVisible(true);
+             lblMedalCultivation->setScaledContents(true);
+             lblMedalCultivation->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingCultivation->setVisible(true);
+             lblRankingCultivation->setText("Silver");
       break;
 
-    case 21: lblMedal->setVisible(true);
-             lblMedal->setScaledContents(true);
-             lblMedal->setPixmap(QPixmap( ":bronze.png" ));
-             lblRanking->setVisible(true);
-             lblRanking->setText("Bronze");
+    case 21: lblMedalCultivation->setVisible(true);
+             lblMedalCultivation->setScaledContents(true);
+             lblMedalCultivation->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingCultivation->setVisible(true);
+             lblRankingCultivation->setText("Bronze");
       break;
 
     default: // hide
-             lblRanking->setVisible(false);
-             lblMedal->setVisible(false);
+             lblRankingCultivation->setVisible(false);
+             lblMedalCultivation->setVisible(false);
       break;
   }
 }
@@ -580,7 +580,7 @@ void MadDataClassification::on_pbCultivationSave_clicked()
   QString myString;
   //myString = mySubCat.toXml();
   myString = myCultivation.toXml();
-  textEdit->setText(myString);
+  textEditSide->setText(myString);
 
 
   //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +

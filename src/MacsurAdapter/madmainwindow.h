@@ -77,6 +77,7 @@ private:
      * @param theFileToLoad
      */
     void loadTextFile(const QString &theFileToLoad);
+    void loadHtmlFile(const QString &theFileToLoad);
 
   public slots:
 

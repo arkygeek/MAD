@@ -129,17 +129,34 @@ void MadMainWindow::on_lvwCurrentInventoryModels_clicked(const QModelIndex &theI
 }
 
 void MadMainWindow::loadTextFile(const QString &theFileToLoad)
- {
-   QString myFilename = "://" + theFileToLoad + ".txt";
-   QFile inputFile(myFilename);
-   inputFile.open(QIODevice::ReadOnly);
-   QTextStream in(&inputFile);
-   QString line = in.readAll();
-   inputFile.close();
+{
+  QString myFilename = "://" + theFileToLoad + ".txt";
+  QFile inputFile(myFilename);
+  inputFile.open(QIODevice::ReadOnly);
+  QTextStream in(&inputFile);
+  QString line = in.readAll();
+  inputFile.close();
 
-   plainTextEdit->clear();
-   plainTextEdit->appendPlainText(line);
-   plainTextEdit->setUndoRedoEnabled(false);
+  plainTextEdit->clear();
+  plainTextEdit->appendPlainText(line);
+  plainTextEdit->setUndoRedoEnabled(false);
+}
+
+void MadMainWindow::loadHtmlFile(const QString &theFileToLoad)
+{
+  QString myFilename = "://" + theFileToLoad + ".html";
+  QFile inputFile(myFilename);
+  inputFile.open(QIODevice::ReadOnly);
+  QTextStream in(&inputFile);
+  QString myHtml = in.readAll();
+  inputFile.close();
+
+  txtbrwsData->clear();
+  txtbrwsData->append(myHtml);
+  txtbrwsData->setUndoRedoEnabled(false);
+  //plainTextEdit->clear();
+  //plainTextEdit->appendHtml(myHtml);
+  //plainTextEdit->setUndoRedoEnabled(false);
  }
 
 void MadMainWindow::on_pbViewAsHtml_clicked()
@@ -157,10 +174,39 @@ void MadMainWindow::on_pbTableView_clicked()
     // Table view of the model details
 }
 
-
 void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
                     const QString &theSelection)
 {
     txtbrwsData->setText("This will say something about:");
     txtbrwsData->append(theSelection);
+
+
+    QString mySelection = theSelection.toLower(); // converts to all lowercase
+    if (theSelection == "CMAP") loadHtmlFile("cmap");
+    if (theSelection == "Dai") loadHtmlFile("Dai");
+    if (theSelection == "I-COADS") loadHtmlFile("I-COADS");
+    if (theSelection == "CRU TS 2.0") loadHtmlFile("CRU-TS-2.0");
+    if (theSelection == "HadISST") loadHtmlFile("HadISST");
+    if (theSelection == "Hulme (CRU)") loadHtmlFile("Hulme-CRU");
+    if (theSelection == "Jones (CRU) Air Temperature") loadHtmlFile("JonesCRUAirTemp");
+    if (theSelection == "Jones (CRU) SLP") loadHtmlFile("Jones-CRU-SLP");
+    if (theSelection == "Kaplan (SLP)") loadHtmlFile("Kaplan-SLP");
+    if (theSelection == "Kaplan (SST)") loadHtmlFile("Kaplan-SST");
+    if (theSelection == "Lucas and Waliser Satellite ECT-Corrected OLR") loadHtmlFile("Lucas-Waliser-Satellite-ECT-Corrected-OLR");
+    if (theSelection == "NCAR Sea Level Pressure") loadHtmlFile("NCAR-Sea-Level-Pressure");
+    if (theSelection == "NCEP/NCAR Reanalysis") loadHtmlFile("NCEP-NCAR-Reanalysis");
+    if (theSelection == "Reynold Reconstructed SST") loadHtmlFile("Reynolds-Reconstructed-SST");
+    if (theSelection == "Reynolds Optimum Interpolation (OI) SST") loadHtmlFile("Reynolds-Optimum-Interpolation-OI-SST");
+    if (theSelection == "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST") loadHtmlFile("Reynolds-Optimum-Interpolation-Ver-2-OIv2");
+    if (theSelection == "Smith and Reynolds Extended Reconstructed SLP (ERSLP)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP");
+    if (theSelection == "Smith and Reynolds Extended Reconstructed SST (ERSST)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SST-ERSST");
+
+
+    if (theSelection == "Credits")
+    {
+      plainTextEdit->clear();
+      plainTextEdit->appendPlainText("how vain!");
+      plainTextEdit->setUndoRedoEnabled(false);
+    }
+
 }

@@ -25,5 +25,23 @@
         <file>gold.png</file>
         <file>platinum.png</file>
         <file>bronze.png</file>
+        <file>Smith-Reynolds-Extended-Reconstructed-SST-ERSST.html</file>
+        <file>Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP.html</file>
+        <file>Reynolds-Optimum-Interpolation-Ver-2-OIv2.html</file>
+        <file>Reynolds-Optimum-Interpolation-OI-SST.html</file>
+        <file>Reynolds-Reconstructed-SST.html</file>
+        <file>NCEP-NCAR-Reanalysis.html</file>
+        <file>NCAR-Sea-Level-Pressure.html</file>
+        <file>Lucas-Waliser-Satellite-ECT-Corrected-OLR.html</file>
+        <file>Kaplan-SST.html</file>
+        <file>Kaplan-SLP.html</file>
+        <file>Jones-CRU-SLP.html</file>
+        <file>JonesCRUAirTemp.html</file>
+        <file>Hulme-CRU.html</file>
+        <file>HadISST.html</file>
+        <file>Dai.html</file>
+        <file>CRU-TS-2.0.html</file>
+        <file>I-COADS.html</file>
+        <file>cmap.html</file>
     </qresource>
 </RCC>

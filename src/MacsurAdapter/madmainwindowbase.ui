@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>604</width>
-    <height>417</height>
+    <width>712</width>
+    <height>462</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -18,7 +18,7 @@
     <item row="0" column="0">
      <widget class="QTabWidget" name="tabwidMainWin">
       <property name="currentIndex">
-       <number>2</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabMain">
        <attribute name="title">
@@ -328,6 +328,11 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
           </property>
           <item>
            <property name="text">
+            <string>Select Dataset</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>CMAP</string>
            </property>
           </item>
@@ -408,6 +413,11 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
           </item>
           <item>
            <property name="text">
+            <string>Smith and Reynolds Extended Reconstructed SLP (ERSLP)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
             <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
            </property>
           </item>
@@ -436,7 +446,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>604</width>
+     <width>712</width>
      <height>22</height>
     </rect>
    </property>
