@@ -76,34 +76,32 @@ private slots:
   void updateTillageRatingLbl();
 
   void on_pbCultivationSave_clicked();
-  void on_pbCultivationSet_clicked();
+  //void on_pbCultivationSet_clicked();
   void on_lineEdit_2_textChanged(const QString &theText);
   void updateCultivationLabels();
 
 
   void on_gbxPhenology_clicked();
-  void on_cbExamples_currentIndexChanged(const QString &theValue);
-  void on_hsldrEmergence_valueChanged(int theSliderValue);
-  void on_hsldrStemElongation_valueChanged(int theSliderValue);
-  void on_hsldrEarEmergence_valueChanged(int theSliderValue);
-  void on_hsldrFlowering_valueChanged(int theSliderValue);
-  void on_hsldrYellowRipeness_valueChanged(int theSliderValue);
-  void on_dsbEmergence_valueChanged(double theValue);
-  void on_dsbStemElongation_valueChanged(double theValue);
-  void on_dsbEarEmergence_valueChanged(double theValue);
-  void on_dsbFlowering_valueChanged(double theValue);
-  void on_dsbYellowRipeness_valueChanged(double theValue);
-  QString makeString(double theValue);
+  void on_cbExamplesPhenology_currentIndexChanged(const QString &theValue);
+  void on_hsldrEmergencePhenology_valueChanged(int theSliderValue);
+  void on_hsldrStemElongationPhenology_valueChanged(int theSliderValue);
+  void on_hsldrEarEmergencePhenology_valueChanged(int theSliderValue);
+  void on_hsldrFloweringPhenology_valueChanged(int theSliderValue);
+  void on_hsldrYellowRipenessPhenology_valueChanged(int theSliderValue);
+  void on_dsbEmergencePhenology_valueChanged(double theValue);
+  void on_dsbStemElongationPhenology_valueChanged(double theValue);
+  void on_dsbEarEmergencePhenology_valueChanged(double theValue);
+  void on_dsbFloweringPhenology_valueChanged(double theValue);
+  void on_dsbYellowRipenessPhenology_valueChanged(double theValue);
 
-  void updateEmergenceRatingLbl();
-  void updateStemElongationRatingLbl();
-  void updateEarEmergenceRatingLbl();
-  void updateFloweringRatingLbl();
-  void updateYellowRipenessRatingLbl();
+  void updatePhenologyEmergenceRatingLbl();
+  void updatePhenologyStemElongationRatingLbl();
+  void updatePhenologyEarEmergenceRatingLbl();
+  void updatePhenologyFloweringRatingLbl();
+  void updatePhenologyYellowRipenessRatingLbl();
 
-  void on_pbPhenologySave_clicked();
-  void on_pbPhenologySet_clicked();
-  void on_lineEdit_2_textChanged(const QString &theText);
+  //void on_pbPhenologySave_clicked();
+  //void on_pbPhenologySet_clicked();
   void updatePhenologyLabels();
 
 };

@@ -85,38 +85,26 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
   connect ( dsbTillage, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateTillageRatingLbl() ));
 
-  connect ( sbVarietyPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateVarietyRatingLbl() ));
-  connect ( dsbVarietyPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateVarietyRatingLbl() ));
-  connect ( sbSowingPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSowingRatingLbl() ));
-  connect ( dsbSowingPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateSowingRatingLbl() ));
-  connect ( sbHarvestPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateHarvestRatingLbl() ));
-  connect ( dsbHarvestPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateHarvestRatingLbl() ));
-  connect ( sbFertilisationPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateFertilisationRatingLbl() ));
-  connect ( dsbFertilisationPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateFertilisationRatingLbl() ));
-  connect ( sbIrrigationPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateIrrigationRatingLbl() ));
-  connect ( dsbIrrigationPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateIrrigationRatingLbl() ));
-  connect ( sbSeedDensityPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSeedDensityRatingLbl() ));
-  connect ( dsbSeedDensityPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateSeedDensityRatingLbl() ));
-  connect ( sbYieldPhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateYieldRatingLbl() ));
-  connect ( dsbYieldPhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateYieldRatingLbl() ));
-  connect ( sbTillagePhenology, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateTillageRatingLbl() ));
-  connect ( dsbTillagePhenology, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateTillageRatingLbl() ));
+  connect ( sbEmergencePhenology, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePhenologyEmergenceRatingLbl() ));
+  connect ( dsbEmergencePhenology, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePhenologyEmergenceRatingLbl() ));
+  connect ( sbStemElongationPhenology, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePhenologyStemElongationRatingLbl() ));
+  connect ( dsbStemElongationPhenology, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePhenologyStemElongationRatingLbl() ));
+  connect ( sbEarEmergencePhenology, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePhenologyEarEmergenceRatingLbl() ));
+  connect ( dsbEarEmergencePhenology, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePhenologyEarEmergenceRatingLbl() ));
+  connect ( sbFloweringPhenology, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePhenologyFloweringRatingLbl() ));
+  connect ( dsbFloweringPhenology, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePhenologyFloweringRatingLbl() ));
+  connect ( sbYellowRipenessPhenology, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePhenologyYellowRipenessRatingLbl() ));
+  connect ( dsbYellowRipenessPhenology, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePhenologyYellowRipenessRatingLbl() ));
 }
 void MadDataClassification::changeEvent(QEvent *e)
 {
@@ -455,184 +443,9 @@ void MadDataClassification::updateCultivationLabels()
   }
 }
 
-void MadDataClassification::on_pbCultivationSave_clicked()
-{
-  // save current settings for cultivation to xml file
-  // first we have to get the values
-
-  // create the variables
-  MadDataClassificationCultivation myCultivation;
-  MadDataClassificationPhenology myPhenology;
-  MadDataClassificationPrevCrop myPrevCropSet;
-  MadDataClassificationInitialValues myInitialValues;
-  MadDataClassificationSoil mySoil;
-  MadDataClassificationSiteData mySiteData;
-  MadDataClassificationWeather myWeather;
-  MadStateVars myStateVars;
-
-  // cultivation
-  MadSubCategory myCultVariety;
-  MadSubCategory myCultSowing;
-  MadSubCategory myCultHarvest;
-  MadSubCategory myCultFertilisation;
-  MadSubCategory myCultIrrigation;
-  MadSubCategory myCultSeedDensity;
-  MadSubCategory myCultYield;
-  MadSubCategory myCultTillage;
-
-  // phenology
-  MadSubCategory myPhenologyEmergence;
-  MadSubCategory myPhenologyStemElongation;
-  MadSubCategory myPhenologyEarEmergence;
-  MadSubCategory myPhenologyFlowering;
-  MadSubCategory myPhenologyYellowRipeness;
-
-  // prev crop
-  MadSubCategory myPrevCropCrop;
-  MadSubCategory myPrevCropSowingDate;
-  MadSubCategory myPrevCropHarvestDate;
-  MadSubCategory myPrevCropYield;
-  MadSubCategory myPrevCropResidueMgmt;
-  MadSubCategory myPrevCropFertilisation;
-  MadSubCategory myPrevCropIrrigation;
-
-  //initial values
-  MadSubCategory myInitialValuesSoilMoisture;
-  MadSubCategory myInitialValuesNitrogenMin;
-
-  // soil
-  MadSubCategory mySoilCarbonOrganic;
-  MadSubCategory mySoilNitrogenOrganic;
-  MadSubCategory mySoilTexture;
-  MadSubCategory mySoilBulkDensity;
-  MadSubCategory mySoilFieldCapacity;
-  MadSubCategory mySoilWiltingPoint;
-  MadSubCategory mySoilPfCurve;
-  MadSubCategory mySoilHydrCondState;
-
-  // site
-  MadSubCategory mySiteDataLatitude;
-  MadSubCategory mySiteDataLongitude;
-  MadSubCategory mySiteDataAltitude;
-
-  //weather
-  MadSubCategory myWeatherPrecipitation;
-  MadSubCategory myWeatherTAve;
-  MadSubCategory myWeatherTMin;
-  MadSubCategory myWeatherTMax;
-  MadSubCategory myWeatherRelativeHumidity;
-  MadSubCategory myWeatherWindSpeed;
-  MadSubCategory myWeatherGlobalRadiation;
-  MadSubCategory myWeatherSunshineHours;
-
-  //state vars - soil
-  MadSubCategory myStateVarsSoilSoilWaterGrav;
-  MadSubCategory myStateVarsSoilPressureHeads;
-  MadSubCategory myStateVarsSoilNMin;
-  MadSubCategory myStateVarsSoilSoilWaterSensorCal;
-  MadSubCategory myStateVarsSoilWaterFluxBottomRoot;
-  MadSubCategory myStateVarsSoilNFluxBottomRoot;
-
-  // state vars - crop
-  MadSubCategory myStateVarsCropAGrBiomass;
-  MadSubCategory myStateVarsCropWeightOrgans;
-  MadSubCategory myStateVarsCropRootBiomass;
-  MadSubCategory myStateVarsCropNInAGrBiomass;
-  MadSubCategory myStateVarsCropNInOrgans;
-  MadSubCategory myStateVarsCropLAI;
-
-  // state vars - surface fluxes
-  MadSubCategory myStateVarsSurfaceFluxesEt;
-  MadSubCategory myStateVarsSurfaceFluxesNh3Loss;
-  MadSubCategory myStateVarsSurfaceFluxesN2OLoss;
-  MadSubCategory myStateVarsSurfaceFluxesN2Loss;
-  MadSubCategory myStateVarsSurfaceFluxesCh4Loss;
-
-  // state vars - observation data
-  MadSubCategory myStateVarsObservationsLodging;
-  MadSubCategory myStateVarsObservationsPestsOrDiseases;
-  MadSubCategory myStateVarsObservationsDamages;
-
-  //get the values from the form
-
-  // Cultivation values from form
-  // variety
-  myCultVariety.setMinData(chbxVariety->isChecked());
-  myCultVariety.setDepth(0);
-  myCultVariety.setWeightPoints(dsbVariety->value());
-  myCultVariety.setObservations(sbVariety->value());
-  myCultVariety.setReplicates(0);
-  // sowing
-  myCultSowing.setMinData(chbxSowing->isChecked());
-  myCultSowing.setDepth(0);
-  myCultSowing.setWeightPoints(dsbSowing->value());
-  myCultSowing.setObservations(sbSowing->value());
-  myCultSowing.setReplicates(0);
-  // harvest
-  myCultHarvest.setMinData(chbxHarvest->isChecked());
-  myCultHarvest.setDepth(0);
-  myCultHarvest.setWeightPoints(dsbHarvest->value());
-  myCultHarvest.setObservations(sbHarvest->value());
-  myCultHarvest.setReplicates(0);
-  // fertilisation
-  myCultFertilisation.setMinData(chbxFertilisation->isChecked());
-  myCultFertilisation.setDepth(0);
-  myCultFertilisation.setWeightPoints(dsbFertilisation->value());
-  myCultFertilisation.setObservations(sbFertilisation->value());
-  myCultFertilisation.setReplicates(0);
-  // irrigation
-  myCultIrrigation.setMinData(chbxIrrigation->isChecked());
-  myCultIrrigation.setDepth(0);
-  myCultIrrigation.setWeightPoints(dsbIrrigation->value());
-  myCultIrrigation.setObservations(sbIrrigation->value());
-  myCultIrrigation.setReplicates(0);
-  // seed density
-  myCultSeedDensity.setMinData(chbxSeedDensity->isChecked());
-  myCultSeedDensity.setDepth(0);
-  myCultSeedDensity.setWeightPoints(dsbSeedDensity->value());
-  myCultSeedDensity.setObservations(sbSeedDensity->value());
-  myCultSeedDensity.setReplicates(0);
-  // yield
-  myCultYield.setMinData(chbxYield->isChecked());
-  myCultYield.setDepth(0);
-  myCultYield.setWeightPoints(dsbYield->value());
-  myCultYield.setObservations(sbYield->value());
-  myCultYield.setReplicates(0);
-  // tillage
-  myCultYield.setMinData(chbxTillage->isChecked());
-  myCultTillage.setDepth(0);
-  myCultTillage.setWeightPoints(dsbTillage->value());
-  myCultTillage.setObservations(sbTillage->value());
-  myCultTillage.setReplicates(0);
 
 
 
-  // set the values
-  // cultivation
-  myCultivation.setVariety(myCultVariety);
-  myCultivation.setSowing(myCultSowing);
-  myCultivation.setHarvest(myCultHarvest);
-  myCultivation.setFertilisation(myCultFertilisation);
-  myCultivation.setIrrigation(myCultIrrigation);
-  myCultivation.setSeedDensity(myCultSeedDensity);
-  myCultivation.setYield(myCultYield);
-  myCultivation.setTillage(myCultTillage);
-
-
-  QString myString;
-  //myString = mySubCat.toXml();
-  myString = myCultivation.toXml();
-  textEditSide->setText(myString);
-
-
-  //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
-  //    QDir::separator() + mCrop.guid() + ".xml");
-}
-
-void MadDataClassification::on_pbCultivationSet_clicked()
-{
-    // sets variables for cultivation
-}
 void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
 {
     if (theText != "")
@@ -663,7 +476,7 @@ void MadDataClassification::on_gbxPhenology_clicked()
     lblExample->setVisible(true);
   }
 }
-void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &theValue)
+void MadDataClassification::on_cbExamplesPhenology_currentIndexChanged (const QString &theValue)
 {
   // if enabled, set values for corresponding classification
   // options are: Platinum, Gold, Silver, Bronze
@@ -683,7 +496,7 @@ void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &th
  * default values for slider range set in form at 0 to 1000
  * @param theSliderValue
  */
-void MadDataClassification::on_hsldrEmergence_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrEmergencePhenology_valueChanged(int theSliderValue)
 {
   // update label according to desired resolution
   // hardcoded for now at a range of 1 to 5
@@ -691,156 +504,143 @@ void MadDataClassification::on_hsldrEmergence_valueChanged(int theSliderValue)
 
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbEmergence->setValue(myPreciseValue);
-  updateEmergenceRatingLbl();
+  dsbEmergencePhenology->setValue(myPreciseValue);
+  updatePhenologyEmergenceRatingLbl();
 }
 /**
  * @brief MadDataClassification::on_hsldrEmergence_valueChanged
  * @param theSliderValue
  */
-void MadDataClassification::on_hsldrEmergence_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrEarEmergencePhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbEmergence->setValue(myPreciseValue);
+  dsbEmergencePhenology->setValue(myPreciseValue);
 }
 /**
  * @brief MadDataClassification::on_hsldrStemElongation_valueChanged
  * @param theSliderValue
  */
-void MadDataClassification::on_hsldrStemElongation_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrStemElongationPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbElongation->setValue(myPreciseValue);
+  dsbStemElongationPhenology->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrEarEmergence_valueChanged
- * @param theSliderValue
- */
-void MadDataClassification::on_hsldrEarEmergence_valueChanged(int theSliderValue)
-{
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbEarEmergence->setValue(myPreciseValue);
-}
+
 /**
  * @brief MadDataClassification::on_hsldrFlowering_valueChanged
  * @param theSliderValue
  */
-void MadDataClassification::on_hsldrFlowering_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrFloweringPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbFlowering->setValue(myPreciseValue);
+  dsbFloweringPhenology->setValue(myPreciseValue);
 }
 /**
  * @brief MadDataClassification::on_hsldrYellowRipeness_valueChanged
  * @param theSliderValue
  */
-void MadDataClassification::on_hsldrYellowRipeness_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrYellowRipenessPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbYellowRipeness->setValue(myPreciseValue);
+  dsbYellowRipenessPhenology->setValue(myPreciseValue);
 }
 
-void MadDataClassification::on_dsbEmergence_valueChanged(double theValue)
+void MadDataClassification::on_dsbEmergencePhenology_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
-  hsldrEmergence->setSliderPosition(myPosition);
-  float myResult = dsbEmergence->value() * sbEmergence->value();
-  lblEmergenceRating->setText(makeString(myResult));
+  hsldrEmergencePhenology->setSliderPosition(myPosition);
+  float myResult = dsbEmergencePhenology->value() * sbEmergencePhenology->value();
+  lblEmergenceRatingPhenology->setText(makeString(myResult));
 }
-void MadDataClassification::on_dsbStemElongation_valueChanged(double theValue)
+void MadDataClassification::on_dsbStemElongationPhenology_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
-  hsldrStemElongation->setSliderPosition(myPosition);
-  float myResult = dsbStemElongation->value() * sbStemElongation->value();
-  lblStemElongationRating->setText(makeString(myResult));
+  hsldrStemElongationPhenology->setSliderPosition(myPosition);
+  float myResult = dsbStemElongationPhenology->value() * sbStemElongationPhenology->value();
+  lblStemElongationRatingPhenology->setText(makeString(myResult));
 }
-void MadDataClassification::on_dsbEarEmergence_valueChanged(double theValue)
+void MadDataClassification::on_dsbEarEmergencePhenology_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
-  hsldrEarEmergence->setSliderPosition(myPosition);
-  float myResult = dsbEarEmergence->value() * sbEarEmergence->value();
-  lblEarEmergenceRating->setText(makeString(myResult));
+  hsldrEarEmergencePhenology->setSliderPosition(myPosition);
+  float myResult = dsbEarEmergencePhenology->value() * sbEarEmergencePhenology->value();
+  lblEarEmergenceRatingPhenology->setText(makeString(myResult));
 }
-void MadDataClassification::on_dsbFlowering_valueChanged(double theValue)
+void MadDataClassification::on_dsbFloweringPhenology_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
-  hsldrFlowering->setSliderPosition(myPosition);
-  float myResult = dsbFlowering->value() * sbFlowering->value();
-  lblFloweringRating->setText(makeString(myResult));
+  hsldrFloweringPhenology->setSliderPosition(myPosition);
+  float myResult = dsbFloweringPhenology->value() * sbFloweringPhenology->value();
+  lblFloweringRatingPhenology->setText(makeString(myResult));
 }
-void MadDataClassification::on_dsbYellowRipeness_valueChanged(double theValue)
+void MadDataClassification::on_dsbYellowRipenessPhenology_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
-  hsldrYellowRipeness->setSliderPosition(myPosition);
-  float myResult = dsbYellowRipeness->value() * sbYellowRipeness->value();
-  lblYellowRipenessRating->setText(makeString(myResult));
+  hsldrYellowRipenessPhenology->setSliderPosition(myPosition);
+  float myResult = dsbYellowRipenessPhenology->value() * sbYellowRipenessPhenology->value();
+  lblYellowRipenessRatingPhenology->setText(makeString(myResult));
 }
 
 
-QString MadDataClassification::makeString(double theValue)
-{
-  QString myString = QString::number(theValue);
-  return myString;
-}
 
-void MadDataClassification::updateEmergenceRatingLbl()
+
+void MadDataClassification::updatePhenologyEmergenceRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbEmergence->value();
-  float myGivenWeighting = dsbEmergence->value();
+  int myObservations = sbEmergencePhenology->value();
+  float myGivenWeighting = dsbEmergencePhenology->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
-  lblEmergenceRating->setText(myText);
+  lblEmergenceRatingPhenology->setText(myText);
   updatePhenologyLabels();
 }
-void MadDataClassification::updateStemElongationRatingLbl()
+void MadDataClassification::updatePhenologyStemElongationRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbStemElongation->value();
-  float myGivenWeighting = dsbStemElongation->value();
+  int myObservations = sbStemElongationPhenology->value();
+  float myGivenWeighting = dsbStemElongationPhenology->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
-  lblStemElongationRating->setText(myText);
+  lblStemElongationRatingPhenology->setText(myText);
   updatePhenologyLabels();
 }
-void MadDataClassification::updateEarEmergenceRatingLbl()
+void MadDataClassification::updatePhenologyEarEmergenceRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbEarEmergence->value();
-  float myGivenWeighting = dsbEarEmergence->value();
+  int myObservations = sbEarEmergencePhenology->value();
+  float myGivenWeighting = dsbEarEmergencePhenology->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
-  lblEarEmergenceRating->setText(myText);
+  lblEarEmergenceRatingPhenology->setText(myText);
   updatePhenologyLabels();
 }
-void MadDataClassification::updateFloweringRatingLbl()
+void MadDataClassification::updatePhenologyFloweringRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbFlowering->value();
-  float myGivenWeighting = dsbFlowering->value();
+  int myObservations = sbFloweringPhenology->value();
+  float myGivenWeighting = dsbFloweringPhenology->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
-  lblFloweringRating->setText(myText);
+  lblFloweringRatingPhenology->setText(myText);
   updatePhenologyLabels();
 }
-void MadDataClassification::updateYellowRipenessRatingLbl()
+void MadDataClassification::updatePhenologyYellowRipenessRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbYellowRipeness->value();
-  float myGivenWeighting = dsbYellowRipeness->value();
+  int myObservations = sbYellowRipenessPhenology->value();
+  float myGivenWeighting = dsbYellowRipenessPhenology->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
-  lblYellowRipenessRating->setText(myText);
+  lblYellowRipenessRatingPhenology->setText(myText);
   updatePhenologyLabels();
 }
 
@@ -849,14 +649,11 @@ void MadDataClassification::updatePhenologyLabels()
   // updates totals
   float myTotal = 0.0;
   //QPixmap pixmap;
-  myTotal += lblEmergenceRating->text().toFloat();
-  myTotal += lblStemElongationRating->text().toFloat();
-  myTotal += lblEarEmergenceRating->text().toFloat();
-  myTotal += lblFloweringRating->text().toFloat();
-  myTotal += lblYellowRipenessRating->text().toFloat();
-  myTotal += lblSeedDensityRating->text().toFloat();
-  myTotal += lblYieldRating->text().toFloat();
-  myTotal += lblTillageRating->text().toFloat();
+  myTotal += lblEmergenceRatingPhenology->text().toFloat();
+  myTotal += lblStemElongationRatingPhenology->text().toFloat();
+  myTotal += lblEarEmergenceRatingPhenology->text().toFloat();
+  myTotal += lblFloweringRatingPhenology->text().toFloat();
+  myTotal += lblYellowRipenessRatingPhenology->text().toFloat();
   lblCombinedTotal->setText(makeString(myTotal));
   int myRank = 0;
   if (myTotal >= 24) myRank=24;
@@ -904,7 +701,7 @@ void MadDataClassification::updatePhenologyLabels()
 
 
 // check part from here before inserting
-void MadDataClassification::on_pbPhenologySave_clicked()
+void MadDataClassification::on_pbCultivationSave_clicked()
 {
   // save current settings for phenology to xml file
   // first we have to get the values
@@ -1004,52 +801,111 @@ void MadDataClassification::on_pbPhenologySave_clicked()
 
   //get the values from the form
 
-  // Phenology values from form
+  // Cultivation values from form
   // variety
-  myCultEmergence.setMinData(chbxEmergence->isChecked());
-  myCultEmergence.setDepth(0);
-  myCultEmergence.setWeightPoints(dsbEmergence->value());
-  myCultEmergence.setObservations(sbEmergence->value());
-  myCultEmergence.setReplicates(0);
+  myCultVariety.setMinData(chbxVariety->isChecked());
+  myCultVariety.setDepth(0);
+  myCultVariety.setWeightPoints(dsbVariety->value());
+  myCultVariety.setObservations(sbVariety->value());
+  myCultVariety.setReplicates(0);
   // sowing
-  myCultStemElongation.setMinData(chbxStemElongation->isChecked());
-  myCultStemElongation.setDepth(0);
-  myCultStemElongation.setWeightPoints(dsbStemElongation->value());
-  myCultStemElongation.setObservations(sbStemElongation->value());
-  myCultStemElongation.setReplicates(0);
+  myCultSowing.setMinData(chbxSowing->isChecked());
+  myCultSowing.setDepth(0);
+  myCultSowing.setWeightPoints(dsbSowing->value());
+  myCultSowing.setObservations(sbSowing->value());
+  myCultSowing.setReplicates(0);
   // harvest
-  myCultEarEmergence.setMinData(chbxEarEmergence->isChecked());
-  myCultEarEmergence.setDepth(0);
-  myCultEarEmergence.setWeightPoints(dsbEarEmergence->value());
-  myCultEarEmergence.setObservations(sbEarEmergence->value());
-  myCultEarEmergence.setReplicates(0);
+  myCultHarvest.setMinData(chbxHarvest->isChecked());
+  myCultHarvest.setDepth(0);
+  myCultHarvest.setWeightPoints(dsbHarvest->value());
+  myCultHarvest.setObservations(sbHarvest->value());
+  myCultHarvest.setReplicates(0);
   // fertilisation
-  myCultFlowering.setMinData(chbxFlowering->isChecked());
-  myCultFlowering.setDepth(0);
-  myCultFlowering.setWeightPoints(dsbFlowering->value());
-  myCultFlowering.setObservations(sbFlowering->value());
-  myCultFlowering.setReplicates(0);
+  myCultFertilisation.setMinData(chbxFertilisation->isChecked());
+  myCultFertilisation.setDepth(0);
+  myCultFertilisation.setWeightPoints(dsbFertilisation->value());
+  myCultFertilisation.setObservations(sbFertilisation->value());
+  myCultFertilisation.setReplicates(0);
   // irrigation
-  myCultYellowRipeness.setMinData(chbxYellowRipeness->isChecked());
-  myCultYellowRipeness.setDepth(0);
-  myCultYellowRipeness.setWeightPoints(dsbYellowRipeness->value());
-  myCultYellowRipeness.setObservations(sbYellowRipeness->value());
-  myCultYellowRipeness.setReplicates(0);
+  myCultIrrigation.setMinData(chbxIrrigation->isChecked());
+  myCultIrrigation.setDepth(0);
+  myCultIrrigation.setWeightPoints(dsbIrrigation->value());
+  myCultIrrigation.setObservations(sbIrrigation->value());
+  myCultIrrigation.setReplicates(0);
+  // seed density
+  myCultSeedDensity.setMinData(chbxSeedDensity->isChecked());
+  myCultSeedDensity.setDepth(0);
+  myCultSeedDensity.setWeightPoints(dsbSeedDensity->value());
+  myCultSeedDensity.setObservations(sbSeedDensity->value());
+  myCultSeedDensity.setReplicates(0);
+  // yield
+  myCultYield.setMinData(chbxYield->isChecked());
+  myCultYield.setDepth(0);
+  myCultYield.setWeightPoints(dsbYield->value());
+  myCultYield.setObservations(sbYield->value());
+  myCultYield.setReplicates(0);
+  // tillage
+  myCultYield.setMinData(chbxTillage->isChecked());
+  myCultTillage.setDepth(0);
+  myCultTillage.setWeightPoints(dsbTillage->value());
+  myCultTillage.setObservations(sbTillage->value());
+  myCultTillage.setReplicates(0);
 
+  // Phenology values from form
+  // emergence
+  myPhenologyEmergence.setMinData(chbxEmergencePhenology->isChecked());
+  myPhenologyEmergence.setDepth(0);
+  myPhenologyEmergence.setWeightPoints(dsbEmergencePhenology->value());
+  myPhenologyEmergence.setObservations(sbEmergencePhenology->value());
+  myPhenologyEmergence.setReplicates(0);
+  // stem elongation
+  myPhenologyStemElongation.setMinData(chbxStemElongationPhenology->isChecked());
+  myPhenologyStemElongation.setDepth(0);
+  myPhenologyStemElongation.setWeightPoints(dsbStemElongationPhenology->value());
+  myPhenologyStemElongation.setObservations(sbStemElongationPhenology->value());
+  myPhenologyStemElongation.setReplicates(0);
+  // ear emergence
+  myPhenologyEarEmergence.setMinData(chbxEarEmergencePhenology->isChecked());
+  myPhenologyEarEmergence.setDepth(0);
+  myPhenologyEarEmergence.setWeightPoints(dsbEarEmergencePhenology->value());
+  myPhenologyEarEmergence.setObservations(sbEarEmergencePhenology->value());
+  myPhenologyEarEmergence.setReplicates(0);
+  // flowering
+  myPhenologyFlowering.setMinData(chbxFloweringPhenology->isChecked());
+  myPhenologyFlowering.setDepth(0);
+  myPhenologyFlowering.setWeightPoints(dsbFloweringPhenology->value());
+  myPhenologyFlowering.setObservations(sbFloweringPhenology->value());
+  myPhenologyFlowering.setReplicates(0);
+  // yellow ripeness
+  myPhenologyYellowRipeness.setMinData(chbxYellowRipenessPhenology->isChecked());
+  myPhenologyYellowRipeness.setDepth(0);
+  myPhenologyYellowRipeness.setWeightPoints(dsbYellowRipenessPhenology->value());
+  myPhenologyYellowRipeness.setObservations(sbYellowRipenessPhenology->value());
+  myPhenologyYellowRipeness.setReplicates(0);
 
 
   // set the values
-  // phenology
-  myPhenology.setEmergence(myCultEmergence);
-  myPhenology.setStemElongation(myCultStemElongation);
-  myPhenology.setEarEmergence(myCultEarEmergence);
-  myPhenology.setFlowering(myCultFlowering		);
-  myPhenology.setYellowRipeness(myCultYellowRipeness);
 
+  // set cultivation values
+  myCultivation.setVariety(myCultVariety);
+  myCultivation.setSowing(myCultSowing);
+  myCultivation.setHarvest(myCultHarvest);
+  myCultivation.setFertilisation(myCultFertilisation);
+  myCultivation.setIrrigation(myCultIrrigation);
+  myCultivation.setSeedDensity(myCultSeedDensity);
+  myCultivation.setYield(myCultYield);
+  myCultivation.setTillage(myCultTillage);
+
+  // set phenology values
+  myPhenology.setEmergence(myPhenologyEmergence);
+  myPhenology.setStemElongation(myPhenologyStemElongation);
+  myPhenology.setEarEmergence(myPhenologyEarEmergence);
+  myPhenology.setFlowering(myPhenologyFlowering);
+  myPhenology.setYellowRipeness(myPhenologyYellowRipeness);
 
   QString myString;
-  //myString = mySubCat.toXml();
-  myString = myPhenology.toXml();
+  myString = myCultivation.toXml();
+  myString += myPhenology.toXml();
   textEditSide->setText(myString);
 
 
@@ -1057,19 +913,5 @@ void MadDataClassification::on_pbPhenologySave_clicked()
   //    QDir::separator() + mCrop.guid() + ".xml");
 }
 
-void MadDataClassification::on_pbPhenologySet_clicked()
-{
-    // sets variables for phenology
-}
-void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
-{
-    if (theText != "")
-    {
-      pbPhenologySave->setEnabled(true);
-    }
-    else
-    {
-      pbPhenologySave->setEnabled(false);
-    };
-}
+
 

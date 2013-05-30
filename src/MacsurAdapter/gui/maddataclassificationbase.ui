@@ -259,7 +259,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="title">
@@ -8670,78 +8670,6 @@
                 <string>Global Radiation</string>
                </property>
               </widget>
-              <zorder>checkBox_10</zorder>
-              <zorder>checkBox_7</zorder>
-              <zorder>checkBox_12</zorder>
-              <zorder>spinBox_26</zorder>
-              <zorder>doubleSpinBox_9</zorder>
-              <zorder>spinBox_25</zorder>
-              <zorder>spinBox_48</zorder>
-              <zorder>spinBox_30</zorder>
-              <zorder>label_15</zorder>
-              <zorder>spinBox_44</zorder>
-              <zorder>doubleSpinBox_7</zorder>
-              <zorder>label_21</zorder>
-              <zorder>label_13</zorder>
-              <zorder>spinBox_36</zorder>
-              <zorder>spinBox_39</zorder>
-              <zorder>label_14</zorder>
-              <zorder>spinBox_34</zorder>
-              <zorder>checkBox_8</zorder>
-              <zorder>label_16</zorder>
-              <zorder>doubleSpinBox_12</zorder>
-              <zorder>label_17</zorder>
-              <zorder>spinBox_41</zorder>
-              <zorder>checkBox_11</zorder>
-              <zorder>spinBox_47</zorder>
-              <zorder>spinBox_43</zorder>
-              <zorder>doubleSpinBox_11</zorder>
-              <zorder>spinBox_33</zorder>
-              <zorder>label_18</zorder>
-              <zorder>label_19</zorder>
-              <zorder>spinBox_28</zorder>
-              <zorder>spinBox_38</zorder>
-              <zorder>spinBox_32</zorder>
-              <zorder>spinBox_37</zorder>
-              <zorder>label_54</zorder>
-              <zorder>label_22</zorder>
-              <zorder>doubleSpinBox_10</zorder>
-              <zorder>spinBox_29</zorder>
-              <zorder>spinBox_46</zorder>
-              <zorder>doubleSpinBox_8</zorder>
-              <zorder>label_20</zorder>
-              <zorder>checkBox_9</zorder>
-              <zorder>verticalSpacer_12</zorder>
-              <zorder>label_27</zorder>
-              <zorder>layoutWidget_5</zorder>
-              <zorder>lblRankingWeather_2</zorder>
-              <zorder>lblMedalWeather_2</zorder>
-              <zorder>lblWeatherPlatinumMin_2</zorder>
-              <zorder>lblWeatherBronzeMinVal_2</zorder>
-              <zorder>lblGlobalRadiationRatingWeather_2</zorder>
-              <zorder>lblWeatherSilverMinVal_2</zorder>
-              <zorder>line_17</zorder>
-              <zorder>lblRelHumidityWeather_2</zorder>
-              <zorder>lblWeatherPlatinumMinVal_2</zorder>
-              <zorder>lblTminRatingWeather_2</zorder>
-              <zorder>lblTaveWeather_2</zorder>
-              <zorder>lblTminWeather_2</zorder>
-              <zorder>lblSunshineHoursRatingWeather_2</zorder>
-              <zorder>lineWeather_2</zorder>
-              <zorder>lblOverallRatingWeather_2</zorder>
-              <zorder>lblTaveRatingWeather_2</zorder>
-              <zorder>lblWindSpeedWeather_2</zorder>
-              <zorder>lblCombinedWeather_2</zorder>
-              <zorder>lblSunshineHoursWeather_2</zorder>
-              <zorder>lblWeatherGoldMinVal_2</zorder>
-              <zorder>lblWeatherBronzeMin_2</zorder>
-              <zorder>lblWeatherGoldMin_2</zorder>
-              <zorder>lblTmaxRatingWeather_2</zorder>
-              <zorder>lblWindSpeedRatingWeather_2</zorder>
-              <zorder>lblWeatherSilverMin_2</zorder>
-              <zorder>lblRelHumidityRatingWeather_2</zorder>
-              <zorder>lblTmaxWeather_2</zorder>
-              <zorder>lblGlobalRadiationWeather_2</zorder>
              </widget>
             </item>
            </layout>
@@ -8751,8 +8679,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>313</height>
+             <width>567</width>
+             <height>292</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8992,8 +8920,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>313</height>
+             <width>484</width>
+             <height>260</height>
             </rect>
            </property>
            <attribute name="label">
@@ -9228,8 +9156,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>313</height>
+             <width>525</width>
+             <height>192</height>
             </rect>
            </property>
            <attribute name="label">
