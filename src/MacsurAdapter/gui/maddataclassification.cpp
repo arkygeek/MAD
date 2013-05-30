@@ -515,7 +515,7 @@ void MadDataClassification::on_hsldrEarEmergencePhenology_valueChanged(int theSl
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
-  dsbEmergencePhenology->setValue(myPreciseValue);
+  dsbEarEmergencePhenology->setValue(myPreciseValue);
 }
 /**
  * @brief MadDataClassification::on_hsldrStemElongation_valueChanged
@@ -654,7 +654,7 @@ void MadDataClassification::updatePhenologyLabels()
   myTotal += lblEarEmergenceRatingPhenology->text().toFloat();
   myTotal += lblFloweringRatingPhenology->text().toFloat();
   myTotal += lblYellowRipenessRatingPhenology->text().toFloat();
-  lblCombinedTotal->setText(makeString(myTotal));
+  lblCombinedTotalPhenology->setText(makeString(myTotal));
   int myRank = 0;
   if (myTotal >= 24) myRank=24;
   else if (myTotal >= 23) myRank=23;

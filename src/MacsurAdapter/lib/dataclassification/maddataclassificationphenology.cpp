@@ -128,7 +128,7 @@ bool MadDataClassificationPhenology::fromXml(const QString theXml)
 QString MadDataClassificationPhenology::toXml()
 {
   QString myString;
-  myString+=QString("<phenology guid=\"" + guid() + "\">\n");
+  myString+=QString("  <phenology guid=\"" + guid() + "\">\n");
 
   myString+=QString("    <emergence>\n");
   myString+=mEmergence.toXml();
@@ -150,7 +150,7 @@ QString MadDataClassificationPhenology::toXml()
   myString+=mYellowRipeness.toXml();
   myString+=QString("    </yellowripeness>\n");
 
-  myString+=QString("</phenology>\n");
+  myString+=QString("  </phenology>\n");
   return myString;
 }
 

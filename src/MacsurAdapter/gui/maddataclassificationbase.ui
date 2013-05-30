@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>952</width>
-    <height>675</height>
+    <height>760</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -259,7 +259,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>1</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="title">
@@ -7546,7 +7546,7 @@
         <string>State Vars</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_11">
-        <item row="0" column="0" colspan="2">
+        <item row="0" column="0">
          <widget class="QToolBox" name="toolBox">
           <property name="currentIndex">
            <number>0</number>
@@ -7557,7 +7557,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>313</height>
+             <height>393</height>
             </rect>
            </property>
            <attribute name="label">
@@ -7575,1101 +7575,566 @@
               <property name="checked">
                <bool>false</bool>
               </property>
-              <widget class="QCheckBox" name="checkBox_10">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>138</y>
-                 <width>95</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>root biomass</string>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="checkBox_7">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>206</y>
-                 <width>87</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>N in organs</string>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="checkBox_12">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>172</y>
-                 <width>119</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>N in a.gr.biomass</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_26">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>97</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_9">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>135</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_25">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>169</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_48">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>97</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_30">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>135</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_15">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>93</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_44">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>169</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_7">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>169</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_21">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>237</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_13">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>33</y>
-                 <width>41</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Layers</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_36">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>135</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_39">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>59</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_14">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>59</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_34">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>203</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="checkBox_8">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>100</y>
-                 <width>101</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>weight organs</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_16">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>135</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_12">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>237</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_17">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>169</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_41">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>237</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="checkBox_11">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>240</y>
-                 <width>42</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>LAI</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_47">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>203</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_43">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>135</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_11">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>97</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_33">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>169</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_18">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>33</y>
-                 <width>44</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Weight</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_19">
-               <property name="geometry">
-                <rect>
-                 <x>15</x>
-                 <y>33</y>
-                 <width>57</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Min.Data</string>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_28">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>237</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_38">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>59</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_32">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>59</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_37">
-               <property name="geometry">
-                <rect>
-                 <x>301</x>
-                 <y>203</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_54">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>33</y>
-                 <width>64</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Replicates</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_22">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>33</y>
-                 <width>52</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>Obsrvns</string>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_10">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>59</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_29">
-               <property name="geometry">
-                <rect>
-                 <x>217</x>
-                 <y>237</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QSpinBox" name="spinBox_46">
-               <property name="geometry">
-                <rect>
-                 <x>133</x>
-                 <y>97</y>
-                 <width>19</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QDoubleSpinBox" name="doubleSpinBox_8">
-               <property name="geometry">
-                <rect>
-                 <x>384</x>
-                 <y>203</y>
-                 <width>37</width>
-                 <height>22</height>
-                </rect>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_20">
-               <property name="geometry">
-                <rect>
-                 <x>468</x>
-                 <y>203</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QCheckBox" name="checkBox_9">
-               <property name="geometry">
-                <rect>
-                 <x>13</x>
-                 <y>62</y>
-                 <width>98</width>
-                 <height>18</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>a.gr. biomass</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="label_27">
-               <property name="geometry">
-                <rect>
-                 <x>552</x>
-                 <y>59</y>
-                 <width>62</width>
-                 <height>16</height>
-                </rect>
-               </property>
-               <property name="text">
-                <string>TextLabel</string>
-               </property>
-              </widget>
-              <widget class="QWidget" name="layoutWidget_5">
-               <property name="geometry">
-                <rect>
-                 <x>550</x>
-                 <y>220</y>
-                 <width>83</width>
-                 <height>32</height>
-                </rect>
-               </property>
-               <layout class="QHBoxLayout" name="horizontalLayout_11">
-                <item>
-                 <widget class="QLabel" name="lblRankingWeather_2">
-                  <property name="font">
-                   <font>
-                    <pointsize>10</pointsize>
-                   </font>
-                  </property>
-                  <property name="text">
-                   <string>Platinum</string>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignCenter</set>
-                  </property>
-                 </widget>
-                </item>
-                <item>
-                 <widget class="QLabel" name="lblMedalWeather_2">
-                  <property name="minimumSize">
-                   <size>
-                    <width>30</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="maximumSize">
-                   <size>
-                    <width>30</width>
-                    <height>30</height>
-                   </size>
-                  </property>
-                  <property name="baseSize">
-                   <size>
-                    <width>20</width>
-                    <height>60</height>
-                   </size>
-                  </property>
-                  <property name="lineWidth">
-                   <number>0</number>
-                  </property>
-                  <property name="text">
-                   <string/>
-                  </property>
-                  <property name="pixmap">
-                   <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
-                  </property>
-                  <property name="scaledContents">
-                   <bool>true</bool>
-                  </property>
-                  <property name="alignment">
-                   <set>Qt::AlignJustify|Qt::AlignVCenter</set>
-                  </property>
-                 </widget>
-                </item>
-               </layout>
-              </widget>
-              <widget class="QLabel" name="lblWeatherPlatinumMin_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>288</y>
-                 <width>86</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Platinum Minimum: </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-1</number>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherBronzeMinVal_2">
-               <property name="geometry">
-                <rect>
-                 <x>586</x>
-                 <y>349</y>
-                 <width>58</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>21</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-1</number>
-               </property>
-               <property name="indent">
-                <number>1</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblGlobalRadiationRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>150</y>
-                 <width>24</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherSilverMinVal_2">
-               <property name="geometry">
-                <rect>
-                 <x>586</x>
-                 <y>329</y>
-                 <width>58</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>22</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-1</number>
-               </property>
-               <property name="indent">
-                <number>1</number>
-               </property>
-              </widget>
-              <widget class="Line" name="line_17">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>274</y>
-                 <width>154</width>
-                 <height>3</height>
-                </rect>
-               </property>
-               <property name="lineWidth">
-                <number>1</number>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblRelHumidityWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>104</y>
-                 <width>86</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Rel Humidity</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherPlatinumMinVal_2">
-               <property name="geometry">
-                <rect>
-                 <x>586</x>
-                 <y>288</y>
-                 <width>58</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>24</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-1</number>
-               </property>
-               <property name="indent">
-                <number>1</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTminRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>59</y>
-                 <width>24</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTaveWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>37</y>
-                 <width>38</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>T ave</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTminWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>59</y>
-                 <width>38</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>T min</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblSunshineHoursRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>170</y>
-                 <width>24</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="Line" name="lineWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>194</y>
-                 <width>154</width>
-                 <height>3</height>
-                </rect>
-               </property>
-               <property name="orientation">
-                <enum>Qt::Horizontal</enum>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblOverallRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>208</y>
-                 <width>24</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTaveRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>37</y>
-                 <width>24</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWindSpeedWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>127</y>
-                 <width>86</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Wind Speed</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblCombinedWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>208</y>
-                 <width>86</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Combined:</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblSunshineHoursWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>170</y>
-                 <width>120</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Sunshine Hours</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherGoldMinVal_2">
-               <property name="geometry">
-                <rect>
-                 <x>586</x>
-                 <y>308</y>
-                 <width>58</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="minimumSize">
-                <size>
-                 <width>25</width>
-                 <height>0</height>
-                </size>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>23</string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-1</number>
-               </property>
-               <property name="indent">
-                <number>1</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherBronzeMin_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>349</y>
-                 <width>86</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Bronze Minimum: </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-2</number>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherGoldMin_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>308</y>
-                 <width>86</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Gold Minimum: </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-2</number>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTmaxRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>82</y>
-                 <width>24</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWindSpeedRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>127</y>
-                 <width>24</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblWeatherSilverMin_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>329</y>
-                 <width>86</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>9</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Silver Minimum: </string>
-               </property>
-               <property name="alignment">
-                <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-               </property>
-               <property name="margin">
-                <number>-2</number>
-               </property>
-               <property name="indent">
-                <number>0</number>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblRelHumidityRatingWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>620</x>
-                 <y>104</y>
-                 <width>24</width>
-                 <height>13</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>0</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblTmaxWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>82</y>
-                 <width>38</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>T max</string>
-               </property>
-              </widget>
-              <widget class="QLabel" name="lblGlobalRadiationWeather_2">
-               <property name="geometry">
-                <rect>
-                 <x>490</x>
-                 <y>150</y>
-                 <width>120</width>
-                 <height>12</height>
-                </rect>
-               </property>
-               <property name="font">
-                <font>
-                 <pointsize>10</pointsize>
-                </font>
-               </property>
-               <property name="text">
-                <string>Global Radiation</string>
-               </property>
-              </widget>
+              <layout class="QGridLayout" name="gridLayout_23">
+               <item row="0" column="0">
+                <layout class="QVBoxLayout" name="verticalLayout_3">
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_22">
+                   <item row="5" column="0">
+                    <widget class="QCheckBox" name="checkBox_12">
+                     <property name="text">
+                      <string>N in a.gr.biomass</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="2">
+                    <widget class="QSpinBox" name="spinBox_29"/>
+                   </item>
+                   <item row="5" column="1">
+                    <widget class="QSpinBox" name="spinBox_33"/>
+                   </item>
+                   <item row="5" column="2">
+                    <widget class="QSpinBox" name="spinBox_44"/>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QSpinBox" name="spinBox_39"/>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QCheckBox" name="checkBox_8">
+                     <property name="text">
+                      <string>weight organs</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_10"/>
+                   </item>
+                   <item row="7" column="3">
+                    <widget class="QSpinBox" name="spinBox_41"/>
+                   </item>
+                   <item row="6" column="2">
+                    <widget class="QSpinBox" name="spinBox_34"/>
+                   </item>
+                   <item row="4" column="2">
+                    <widget class="QSpinBox" name="spinBox_36"/>
+                   </item>
+                   <item row="3" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_11"/>
+                   </item>
+                   <item row="0" column="3">
+                    <widget class="QLabel" name="label_18">
+                     <property name="text">
+                      <string>Weight</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_9"/>
+                   </item>
+                   <item row="3" column="5">
+                    <widget class="QLabel" name="lblTminRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="label_19">
+                     <property name="text">
+                      <string>Min.Data</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="5">
+                    <widget class="QLabel" name="lblRelHumidityRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QSpinBox" name="spinBox_43"/>
+                   </item>
+                   <item row="7" column="1">
+                    <widget class="QSpinBox" name="spinBox_28"/>
+                   </item>
+                   <item row="2" column="0">
+                    <widget class="QCheckBox" name="checkBox_9">
+                     <property name="text">
+                      <string>a.gr. biomass</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="1">
+                    <widget class="QSpinBox" name="spinBox_47"/>
+                   </item>
+                   <item row="6" column="5">
+                    <widget class="QLabel" name="lblWindSpeedRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="5">
+                    <widget class="QLabel" name="lblTmaxRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="4">
+                    <widget class="QLabel" name="label_54">
+                     <property name="text">
+                      <string>Replicates</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QCheckBox" name="checkBox_10">
+                     <property name="text">
+                      <string>root biomass</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="6" column="0">
+                    <widget class="QCheckBox" name="checkBox_7">
+                     <property name="text">
+                      <string>N in organs</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QSpinBox" name="spinBox_46"/>
+                   </item>
+                   <item row="3" column="3">
+                    <widget class="QSpinBox" name="spinBox_48"/>
+                   </item>
+                   <item row="3" column="2">
+                    <widget class="QSpinBox" name="spinBox_26"/>
+                   </item>
+                   <item row="4" column="3">
+                    <widget class="QSpinBox" name="spinBox_30"/>
+                   </item>
+                   <item row="2" column="3">
+                    <widget class="QSpinBox" name="spinBox_32"/>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="label_13">
+                     <property name="text">
+                      <string>Layers</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="5">
+                    <widget class="QLabel" name="lblTaveRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="0">
+                    <widget class="QCheckBox" name="checkBox_11">
+                     <property name="text">
+                      <string>LAI</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="2">
+                    <widget class="QLabel" name="label_22">
+                     <property name="text">
+                      <string>Obsrvns</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="3">
+                    <widget class="QSpinBox" name="spinBox_25"/>
+                   </item>
+                   <item row="2" column="2">
+                    <widget class="QSpinBox" name="spinBox_38"/>
+                   </item>
+                   <item row="6" column="3">
+                    <widget class="QSpinBox" name="spinBox_37"/>
+                   </item>
+                   <item row="6" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_8"/>
+                   </item>
+                   <item row="7" column="5">
+                    <widget class="QLabel" name="lblGlobalRadiationRatingWeather_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="7" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_12"/>
+                   </item>
+                   <item row="5" column="4">
+                    <widget class="QDoubleSpinBox" name="doubleSpinBox_7"/>
+                   </item>
+                   <item row="0" column="5">
+                    <widget class="QLabel" name="label_14">
+                     <property name="text">
+                      <string>Points</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QHBoxLayout" name="horizontalLayout_11">
+                   <item>
+                    <spacer name="horizontalSpacer_2">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout_13">
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="lblWeatherGoldMin_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Gold Minimum: </string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-2</number>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="lblWeatherPlatinumMin_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Platinum Minimum: </string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-1</number>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="2" column="1">
+                      <widget class="QLabel" name="lblWeatherGoldMinVal_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>25</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>23</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-1</number>
+                       </property>
+                       <property name="indent">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="0">
+                      <widget class="QLabel" name="lblWeatherSilverMin_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Silver Minimum: </string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-2</number>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="3" column="1">
+                      <widget class="QLabel" name="lblWeatherSilverMinVal_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>25</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>22</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-1</number>
+                       </property>
+                       <property name="indent">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="0">
+                      <widget class="QLabel" name="lblWeatherBronzeMin_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Bronze Minimum: </string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-2</number>
+                       </property>
+                       <property name="indent">
+                        <number>0</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <widget class="QLabel" name="lblWeatherPlatinumMinVal_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>25</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>24</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-1</number>
+                       </property>
+                       <property name="indent">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="4" column="1">
+                      <widget class="QLabel" name="lblWeatherBronzeMinVal_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>25</width>
+                         <height>0</height>
+                        </size>
+                       </property>
+                       <property name="font">
+                        <font>
+                         <pointsize>9</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>21</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                       <property name="margin">
+                        <number>-1</number>
+                       </property>
+                       <property name="indent">
+                        <number>1</number>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="0">
+                      <widget class="QLabel" name="lblCombinedWeather_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Combined:</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="0" column="1">
+                      <widget class="QLabel" name="lblOverallRatingWeather_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>0</string>
+                       </property>
+                      </widget>
+                     </item>
+                    </layout>
+                   </item>
+                   <item>
+                    <layout class="QGridLayout" name="gridLayout_21">
+                     <item row="2" column="0">
+                      <widget class="QLabel" name="lblRankingWeather_2">
+                       <property name="font">
+                        <font>
+                         <pointsize>10</pointsize>
+                        </font>
+                       </property>
+                       <property name="text">
+                        <string>Platinum</string>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="0">
+                      <widget class="QLabel" name="lblMedalWeather_2">
+                       <property name="minimumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="maximumSize">
+                        <size>
+                         <width>30</width>
+                         <height>30</height>
+                        </size>
+                       </property>
+                       <property name="baseSize">
+                        <size>
+                         <width>20</width>
+                         <height>60</height>
+                        </size>
+                       </property>
+                       <property name="lineWidth">
+                        <number>0</number>
+                       </property>
+                       <property name="text">
+                        <string/>
+                       </property>
+                       <property name="pixmap">
+                        <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+                       </property>
+                       <property name="scaledContents">
+                        <bool>true</bool>
+                       </property>
+                       <property name="alignment">
+                        <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                       </property>
+                      </widget>
+                     </item>
+                     <item row="1" column="1">
+                      <spacer name="horizontalSpacer_3">
+                       <property name="orientation">
+                        <enum>Qt::Horizontal</enum>
+                       </property>
+                       <property name="sizeHint" stdset="0">
+                        <size>
+                         <width>40</width>
+                         <height>20</height>
+                        </size>
+                       </property>
+                      </spacer>
+                     </item>
+                    </layout>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="0">
+                <spacer name="verticalSpacer_12">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+              </layout>
              </widget>
             </item>
            </layout>
@@ -8679,8 +8144,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>567</width>
-             <height>292</height>
+             <width>674</width>
+             <height>416</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8920,8 +8385,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>484</width>
-             <height>260</height>
+             <width>674</width>
+             <height>416</height>
             </rect>
            </property>
            <attribute name="label">
@@ -9156,8 +8621,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>525</width>
-             <height>192</height>
+             <width>674</width>
+             <height>416</height>
             </rect>
            </property>
            <attribute name="label">
