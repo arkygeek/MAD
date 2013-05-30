@@ -139,13 +139,11 @@ bool MadSubCategory::fromXml(const QString theXml)
 QString MadSubCategory::toXml()
 {
   QString myString;
-  //myString+=QString("<dataset guid=\"" + guid() + "\">\n");
   myString+=QString("      <minData>" + QString::number(mMinData) + "</minData>\n");
   myString+=QString("      <depth>" + QString::number(mDepth) + "</depth>\n");
   myString+=QString("      <observations>" + QString::number(mObservations) + "</observations>\n");
   myString+=QString("      <weightPoints>" + QString::number(mWeightPoints) + "</weightPoints>\n");
   myString+=QString("      <replicates>" + QString::number(mReplicates) + "</replicates>\n");
-  //myString+=QString("</dataset>\n");
   return myString;
 }
 
@@ -155,28 +153,33 @@ QString MadSubCategory::toText()
   myString+=QString("guid=>" + guid() + "\n");
   //myString+=QString("name=>" + MadUtils::xmlEncode(mName) + "\n");
   //myString+=QString("description=>" + MadUtils::xmlEncode(mDescription) + "\n");
+  //myString+=QString("<dataset guid=\"" + guid() + "\">\n");
+  myString+=QString("minData=>" + QString::number(mMinData) + "\n");
+  myString+=QString("depth=>" + QString::number(mDepth) + "\n");
+  myString+=QString("observations=>" + QString::number(mObservations) + "<\n");
+  myString+=QString("weightPoints=>" + QString::number(mWeightPoints) + "<\n");
+  myString+=QString("replicates=>" + QString::number(mReplicates) + "<\n");
   return myString;
 }
 
 QString MadSubCategory::toHtml()
 {
   QString myString;
-  //myString+="<h3>Details for " + MadUtils::xmlEncode(mName) + "</h3>";
+  myString+="<h3>Details for values in the form:</h3>";
     //myString+="<p>GUID:" + guid() + "</p>";
   myString+="<table>";
   //myString+="<tr><td><b>Description: </b></td><td>" + mDescription + "</td></tr>";
 
-  //
   // the following shows example of how to do a couple of things
-  //
 
-  //myString+="<tr><td><b>Cals/Kg: </b></td><td>" + QString::number(mCropCalories) + "</td></tr>";
-  //QString myCropFodderEnergyType = (mCropFodderEnergyType==0) ? "KCalories" : "TDN";
-  //QString myUnits = (mAreaUnits==0) ? "Dunum" : "Hectare";
-  //myString+="<tr><td><b>Fodder (kg/" + myUnits + "): </b></td><td>" + QString::number(mCropFodderProduction) + "</td></tr>";
-  //myString+="<tr><td><b>Fodder Value/Kg: </b></td><td>" + QString::number(mCropFodderValue) + "</td></tr>";
-  //myString+="<tr><td><b>FodderEnergyType: </b></td><td>" + myCropFodderEnergyType + "</td></tr>";
-  //myString+="<tr><td><b>AreaUnits: </b></td><td>" + myUnits + "</td></tr>";
+  QString myMinData = (mMinData==0) ? "false" : "true";
+
+  myString+="<tr><td><b>min. Data: </b></td><td>" + myMinData + "</td></tr>";
+  myString+="<tr><td><b>Depth: </b></td><td>" + QString::number(mDepth) + "</td></tr>";
+  myString+="<tr><td><b>Observations: </b></td><td>" + QString::number(mObservations) + "</td></tr>";
+  myString+="<tr><td><b>WeightPoints: </b></td><td>" + QString::number(mWeightPoints) + "</td></tr>";
+  myString+="<tr><td><b>Replicates: </b></td><td>" + QString::number(mReplicates) + "</td></tr>";
+
   myString+="</table>";
   return myString;
 }
