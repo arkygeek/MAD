@@ -7549,7 +7549,7 @@
         <item row="0" column="0">
          <widget class="QToolBox" name="toolBox">
           <property name="currentIndex">
-           <number>0</number>
+           <number>2</number>
           </property>
           <widget class="QWidget" name="pageCrop">
            <property name="geometry">
@@ -7557,7 +7557,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>393</height>
+             <height>390</height>
             </rect>
            </property>
            <attribute name="label">
@@ -7581,58 +7581,66 @@
                  <item>
                   <layout class="QGridLayout" name="gridLayout_22">
                    <item row="5" column="0">
-                    <widget class="QCheckBox" name="checkBox_12">
+                    <widget class="QCheckBox" name="chbxSVCropNInAGrBiomass">
                      <property name="text">
                       <string>N in a.gr.biomass</string>
                      </property>
                     </widget>
                    </item>
                    <item row="7" column="2">
-                    <widget class="QSpinBox" name="spinBox_29"/>
+                    <widget class="QSpinBox" name="sbSVCropLAIObservations"/>
                    </item>
                    <item row="5" column="1">
-                    <widget class="QSpinBox" name="spinBox_33"/>
+                    <widget class="QSpinBox" name="sbSVCropNInAGrBioMassLayers"/>
                    </item>
                    <item row="5" column="2">
-                    <widget class="QSpinBox" name="spinBox_44"/>
+                    <widget class="QSpinBox" name="sbSVCropNInAGrBioMassObservations"/>
                    </item>
                    <item row="2" column="1">
-                    <widget class="QSpinBox" name="spinBox_39"/>
+                    <widget class="QSpinBox" name="sbSVCropAGrBiomassLayers"/>
                    </item>
                    <item row="3" column="0">
-                    <widget class="QCheckBox" name="checkBox_8">
+                    <widget class="QCheckBox" name="chbxSVCropWeightOrgans">
                      <property name="text">
                       <string>weight organs</string>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_10"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropAGrBiomassReplicates"/>
                    </item>
                    <item row="7" column="3">
-                    <widget class="QSpinBox" name="spinBox_41"/>
+                    <widget class="QSpinBox" name="sbSVCropLAIWeight"/>
                    </item>
                    <item row="6" column="2">
-                    <widget class="QSpinBox" name="spinBox_34"/>
+                    <widget class="QSpinBox" name="sbSVCropNInOrgansObservations"/>
                    </item>
                    <item row="4" column="2">
-                    <widget class="QSpinBox" name="spinBox_36"/>
+                    <widget class="QSpinBox" name="sbSVCropRootBioMassObservations"/>
                    </item>
                    <item row="3" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_11"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropWeightOrgansReplicates"/>
                    </item>
                    <item row="0" column="3">
-                    <widget class="QLabel" name="label_18">
+                    <widget class="QLabel" name="lblSVCropWeightHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Weight</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="4" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_9"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropRootBioMassReplicates"/>
                    </item>
                    <item row="3" column="5">
-                    <widget class="QLabel" name="lblTminRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropWeightOrgansPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7640,18 +7648,29 @@
                      </property>
                      <property name="text">
                       <string>0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="0">
-                    <widget class="QLabel" name="label_19">
+                    <widget class="QLabel" name="lblSVCropMinDataHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Min.Data</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="5" column="5">
-                    <widget class="QLabel" name="lblRelHumidityRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropNInAGrBiomassPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7660,26 +7679,29 @@
                      <property name="text">
                       <string>0</string>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                    </item>
                    <item row="4" column="1">
-                    <widget class="QSpinBox" name="spinBox_43"/>
+                    <widget class="QSpinBox" name="sbSVCropRootBioMassLayers"/>
                    </item>
                    <item row="7" column="1">
-                    <widget class="QSpinBox" name="spinBox_28"/>
+                    <widget class="QSpinBox" name="sbSVCropLAILayers"/>
                    </item>
                    <item row="2" column="0">
-                    <widget class="QCheckBox" name="checkBox_9">
+                    <widget class="QCheckBox" name="chbxSVCropAGrBiomass">
                      <property name="text">
                       <string>a.gr. biomass</string>
                      </property>
                     </widget>
                    </item>
                    <item row="6" column="1">
-                    <widget class="QSpinBox" name="spinBox_47"/>
+                    <widget class="QSpinBox" name="sbSVCropNInOrgansLayers"/>
                    </item>
                    <item row="6" column="5">
-                    <widget class="QLabel" name="lblWindSpeedRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropNInOrgansPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7687,11 +7709,14 @@
                      </property>
                      <property name="text">
                       <string>0</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="4" column="5">
-                    <widget class="QLabel" name="lblTmaxRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropRootBiomassPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7700,53 +7725,72 @@
                      <property name="text">
                       <string>0</string>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                    </item>
                    <item row="0" column="4">
-                    <widget class="QLabel" name="label_54">
+                    <widget class="QLabel" name="lblSVCropReplicatesHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Replicates</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="4" column="0">
-                    <widget class="QCheckBox" name="checkBox_10">
+                    <widget class="QCheckBox" name="chbxSVCropRootBiomass">
                      <property name="text">
                       <string>root biomass</string>
                      </property>
                     </widget>
                    </item>
                    <item row="6" column="0">
-                    <widget class="QCheckBox" name="checkBox_7">
+                    <widget class="QCheckBox" name="chbxSVCropNInOrgans">
                      <property name="text">
                       <string>N in organs</string>
                      </property>
                     </widget>
                    </item>
                    <item row="3" column="1">
-                    <widget class="QSpinBox" name="spinBox_46"/>
+                    <widget class="QSpinBox" name="sbSVCropWeightOrgansLayers"/>
                    </item>
                    <item row="3" column="3">
-                    <widget class="QSpinBox" name="spinBox_48"/>
+                    <widget class="QSpinBox" name="sbSVCropWeightOrgansWeight"/>
                    </item>
                    <item row="3" column="2">
-                    <widget class="QSpinBox" name="spinBox_26"/>
+                    <widget class="QSpinBox" name="sbSVCropWeightOrgansObservations"/>
                    </item>
                    <item row="4" column="3">
-                    <widget class="QSpinBox" name="spinBox_30"/>
+                    <widget class="QSpinBox" name="sbSVCropRootBioMassWeight"/>
                    </item>
                    <item row="2" column="3">
-                    <widget class="QSpinBox" name="spinBox_32"/>
+                    <widget class="QSpinBox" name="sbSVCropAGrBiomassWeight"/>
                    </item>
                    <item row="0" column="1">
-                    <widget class="QLabel" name="label_13">
+                    <widget class="QLabel" name="lblSVCropLayersHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Layers</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="2" column="5">
-                    <widget class="QLabel" name="lblTaveRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropAGrBiomassPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7755,36 +7799,47 @@
                      <property name="text">
                       <string>0</string>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                    </item>
                    <item row="7" column="0">
-                    <widget class="QCheckBox" name="checkBox_11">
+                    <widget class="QCheckBox" name="chbxSVCropLAI">
                      <property name="text">
                       <string>LAI</string>
                      </property>
                     </widget>
                    </item>
                    <item row="0" column="2">
-                    <widget class="QLabel" name="label_22">
+                    <widget class="QLabel" name="lblSVCropObservationsHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Obsrvns</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
                    <item row="5" column="3">
-                    <widget class="QSpinBox" name="spinBox_25"/>
+                    <widget class="QSpinBox" name="sbSVCropNInAGrBioMassWeight"/>
                    </item>
                    <item row="2" column="2">
-                    <widget class="QSpinBox" name="spinBox_38"/>
+                    <widget class="QSpinBox" name="sbSVCropAGrBiomassObservations"/>
                    </item>
                    <item row="6" column="3">
-                    <widget class="QSpinBox" name="spinBox_37"/>
+                    <widget class="QSpinBox" name="sbSVCropNInOrgansWeight"/>
                    </item>
                    <item row="6" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_8"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropNInOrgansReplicates"/>
                    </item>
                    <item row="7" column="5">
-                    <widget class="QLabel" name="lblGlobalRadiationRatingWeather_2">
+                    <widget class="QLabel" name="lblSVCropLAIPoints">
                      <property name="font">
                       <font>
                        <pointsize>10</pointsize>
@@ -7793,18 +7848,29 @@
                      <property name="text">
                       <string>0</string>
                      </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
                     </widget>
                    </item>
                    <item row="7" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_12"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropLAIReplicates"/>
                    </item>
                    <item row="5" column="4">
-                    <widget class="QDoubleSpinBox" name="doubleSpinBox_7"/>
+                    <widget class="QDoubleSpinBox" name="dsbSVCropNInAGrBioMassReplicates"/>
                    </item>
                    <item row="0" column="5">
-                    <widget class="QLabel" name="label_14">
+                    <widget class="QLabel" name="lblSVCropPointsHeader">
+                     <property name="font">
+                      <font>
+                       <pointsize>11</pointsize>
+                      </font>
+                     </property>
                      <property name="text">
                       <string>Points</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
                      </property>
                     </widget>
                    </item>
@@ -7828,7 +7894,7 @@
                    <item>
                     <layout class="QGridLayout" name="gridLayout_13">
                      <item row="2" column="0">
-                      <widget class="QLabel" name="lblWeatherGoldMin_2">
+                      <widget class="QLabel" name="lblWeatherGoldMinSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -7849,7 +7915,7 @@
                       </widget>
                      </item>
                      <item row="1" column="0">
-                      <widget class="QLabel" name="lblWeatherPlatinumMin_2">
+                      <widget class="QLabel" name="lblWeatherPlatinumMinSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -7870,7 +7936,7 @@
                       </widget>
                      </item>
                      <item row="2" column="1">
-                      <widget class="QLabel" name="lblWeatherGoldMinVal_2">
+                      <widget class="QLabel" name="lblWeatherGoldMinValSVCrop">
                        <property name="minimumSize">
                         <size>
                          <width>25</width>
@@ -7897,7 +7963,7 @@
                       </widget>
                      </item>
                      <item row="3" column="0">
-                      <widget class="QLabel" name="lblWeatherSilverMin_2">
+                      <widget class="QLabel" name="lblWeatherSilverMinSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -7918,7 +7984,7 @@
                       </widget>
                      </item>
                      <item row="3" column="1">
-                      <widget class="QLabel" name="lblWeatherSilverMinVal_2">
+                      <widget class="QLabel" name="lblWeatherSilverMinValSVCrop">
                        <property name="minimumSize">
                         <size>
                          <width>25</width>
@@ -7945,7 +8011,7 @@
                       </widget>
                      </item>
                      <item row="4" column="0">
-                      <widget class="QLabel" name="lblWeatherBronzeMin_2">
+                      <widget class="QLabel" name="lblWeatherBronzeMinSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>9</pointsize>
@@ -7966,7 +8032,7 @@
                       </widget>
                      </item>
                      <item row="1" column="1">
-                      <widget class="QLabel" name="lblWeatherPlatinumMinVal_2">
+                      <widget class="QLabel" name="lblWeatherPlatinumMinValSVCrop">
                        <property name="minimumSize">
                         <size>
                          <width>25</width>
@@ -7993,7 +8059,7 @@
                       </widget>
                      </item>
                      <item row="4" column="1">
-                      <widget class="QLabel" name="lblWeatherBronzeMinVal_2">
+                      <widget class="QLabel" name="lblWeatherBronzeMinValSVCrop">
                        <property name="minimumSize">
                         <size>
                          <width>25</width>
@@ -8020,7 +8086,7 @@
                       </widget>
                      </item>
                      <item row="0" column="0">
-                      <widget class="QLabel" name="lblCombinedWeather_2">
+                      <widget class="QLabel" name="lblCombinedSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>10</pointsize>
@@ -8035,7 +8101,7 @@
                       </widget>
                      </item>
                      <item row="0" column="1">
-                      <widget class="QLabel" name="lblOverallRatingWeather_2">
+                      <widget class="QLabel" name="lblOverallRatingSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>10</pointsize>
@@ -8051,7 +8117,7 @@
                    <item>
                     <layout class="QGridLayout" name="gridLayout_21">
                      <item row="2" column="0">
-                      <widget class="QLabel" name="lblRankingWeather_2">
+                      <widget class="QLabel" name="lblRankingWeatherSVCrop">
                        <property name="font">
                         <font>
                          <pointsize>10</pointsize>
@@ -8066,7 +8132,7 @@
                       </widget>
                      </item>
                      <item row="1" column="0">
-                      <widget class="QLabel" name="lblMedalWeather_2">
+                      <widget class="QLabel" name="lblMedalWeatherSVCrop">
                        <property name="minimumSize">
                         <size>
                          <width>30</width>
@@ -8145,7 +8211,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>416</height>
+             <height>381</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8164,216 +8230,626 @@
                <bool>false</bool>
               </property>
               <layout class="QGridLayout" name="gridLayout_10">
-               <item row="0" column="5">
-                <widget class="QLabel" name="label_12">
-                 <property name="text">
-                  <string>Total</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0">
-                <widget class="QCheckBox" name="checkBox_5">
-                 <property name="text">
-                  <string>water flux bottom root</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="5">
-                <widget class="QLabel" name="label_56">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_5"/>
-               </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="checkBox_2">
-                 <property name="text">
-                  <string>pressure heads</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="1">
-                <widget class="QSpinBox" name="spinBox_4"/>
-               </item>
-               <item row="1" column="4">
-                <widget class="QDoubleSpinBox" name="dsbSVSoilAGrBiomassReplicates"/>
-               </item>
-               <item row="3" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_3"/>
-               </item>
-               <item row="3" column="0">
-                <widget class="QCheckBox" name="checkBox_3">
-                 <property name="text">
-                  <string>Nmin</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="5">
-                <widget class="QLabel" name="label_59">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
                <item row="0" column="0">
-                <widget class="QLabel" name="label_8">
+                <widget class="QLabel" name="lblSVSoilMinDataHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Min.Data</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                 </property>
                 </widget>
                </item>
-               <item row="5" column="3">
-                <widget class="QSpinBox" name="spinBox_16"/>
-               </item>
-               <item row="2" column="5">
-                <widget class="QLabel" name="label_55">
+               <item row="0" column="1">
+                <widget class="QLabel" name="lblSVSoilLayersHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>Layers</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="lblSVSoilObservationsHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Observations</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QLabel" name="lblSVSoilWeightPtsHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Weight Pts</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QLabel" name="lblSVSoilReplicatesHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Replicates</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="5">
+                <widget class="QLabel" name="lblSVSoilPointsHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Points</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QCheckBox" name="chbxSVSoilSoilWaterGrav">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>soil water grav.</string>
                  </property>
                 </widget>
                </item>
                <item row="1" column="1">
                 <widget class="QSpinBox" name="sbSVSoilAGrBiomassLayers"/>
                </item>
-               <item row="4" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_4"/>
-               </item>
-               <item row="5" column="2">
-                <widget class="QSpinBox" name="spinBox_10"/>
-               </item>
-               <item row="6" column="3">
-                <widget class="QSpinBox" name="spinBox_13"/>
-               </item>
-               <item row="1" column="5">
-                <widget class="QLabel" name="lblSVSoilAGrBiomassWeight">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QCheckBox" name="checkBox">
-                 <property name="text">
-                  <string>soil water grav.</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="6" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_6"/>
-               </item>
-               <item row="4" column="3">
-                <widget class="QSpinBox" name="spinBox_15"/>
-               </item>
-               <item row="3" column="3">
-                <widget class="QSpinBox" name="spinBox_18"/>
-               </item>
-               <item row="4" column="5">
-                <widget class="QLabel" name="label_57">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="2">
-                <widget class="QSpinBox" name="spinBox_12"/>
-               </item>
-               <item row="4" column="2">
-                <widget class="QSpinBox" name="spinBox_9"/>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLabel" name="label_7">
-                 <property name="text">
-                  <string>Layers</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QSpinBox" name="spinBox_2"/>
-               </item>
                <item row="1" column="2">
                 <widget class="QSpinBox" name="sbSVSoilAGrBiomassObservations"/>
-               </item>
-               <item row="2" column="3">
-                <widget class="QSpinBox" name="spinBox_17"/>
-               </item>
-               <item row="6" column="0">
-                <widget class="QCheckBox" name="checkBox_6">
-                 <property name="text">
-                  <string>N flux bottom root</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="1">
-                <widget class="QSpinBox" name="spinBox_5"/>
-               </item>
-               <item row="2" column="2">
-                <widget class="QSpinBox" name="spinBox_11"/>
-               </item>
-               <item row="2" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_2"/>
-               </item>
-               <item row="0" column="3">
-                <widget class="QLabel" name="label_10">
-                 <property name="text">
-                  <string>Weight Pts</string>
-                 </property>
-                </widget>
                </item>
                <item row="1" column="3">
                 <widget class="QSpinBox" name="sbSVSoilAGrBiomassWeightPts"/>
                </item>
+               <item row="1" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilAGrBiomassReplicates"/>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLabel" name="lblSVSoilAGrBiomassWeight">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string notr="true">0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="chbxSVSoilPressureHeads">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>pressure heads</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="sbSVSoilPressureHeadsLayers"/>
+               </item>
+               <item row="2" column="2">
+                <widget class="QSpinBox" name="sbSVSoilPressureHeadsObservations"/>
+               </item>
+               <item row="2" column="3">
+                <widget class="QSpinBox" name="sbSVSoilPressureHeadsWeightPts"/>
+               </item>
+               <item row="2" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilPressureHeadsReplicates"/>
+               </item>
+               <item row="2" column="5">
+                <widget class="QLabel" name="label_55">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string notr="true">0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QCheckBox" name="chbxSVSoilNMin">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>Nmin</string>
+                 </property>
+                </widget>
+               </item>
                <item row="3" column="1">
-                <widget class="QSpinBox" name="spinBox_3"/>
+                <widget class="QSpinBox" name="sbSVSoilNMinLayers"/>
                </item>
-               <item row="0" column="2">
-                <widget class="QLabel" name="label_9">
-                 <property name="text">
-                  <string>Observations</string>
+               <item row="3" column="2">
+                <widget class="QSpinBox" name="sbSVSoilNMinObservations"/>
+               </item>
+               <item row="3" column="3">
+                <widget class="QSpinBox" name="sbSVSoilNMinWeightPts"/>
+               </item>
+               <item row="3" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilNMinReplicates"/>
+               </item>
+               <item row="3" column="5">
+                <widget class="QLabel" name="label_56">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
                  </property>
-                </widget>
-               </item>
-               <item row="6" column="2">
-                <widget class="QSpinBox" name="spinBox_7"/>
-               </item>
-               <item row="5" column="5">
-                <widget class="QLabel" name="label_58">
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string notr="true">0</string>
                  </property>
-                </widget>
-               </item>
-               <item row="0" column="4">
-                <widget class="QLabel" name="label_11">
-                 <property name="text">
-                  <string>Replicates</string>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="4" column="0">
-                <widget class="QCheckBox" name="checkBox_4">
+                <widget class="QCheckBox" name="chbxSVSoilSoilWaterSensorCal">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
                  <property name="text">
                   <string>soil water sensor cal</string>
                  </property>
                 </widget>
                </item>
-               <item row="6" column="1">
-                <widget class="QSpinBox" name="spinBox_6"/>
+               <item row="4" column="1">
+                <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalLayers"/>
                </item>
-               <item row="7" column="1">
-                <spacer name="verticalSpacer_11">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalObservations"/>
+               </item>
+               <item row="4" column="3">
+                <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalWeightPts"/>
+               </item>
+               <item row="4" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterSensorCalReplicates"/>
+               </item>
+               <item row="4" column="5">
+                <widget class="QLabel" name="label_57">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
                  </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
+                 <property name="text">
+                  <string notr="true">0</string>
                  </property>
-                </spacer>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QCheckBox" name="chbxSVSoilWaterFluxBottomRoot">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>water flux bottom root</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootLayers"/>
+               </item>
+               <item row="5" column="2">
+                <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootObservations"/>
+               </item>
+               <item row="5" column="3">
+                <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootWeightPts"/>
+               </item>
+               <item row="5" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilWasterFluxBottomRootReplicates"/>
+               </item>
+               <item row="5" column="5">
+                <widget class="QLabel" name="label_58">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string notr="true">0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="0">
+                <widget class="QCheckBox" name="chbxSVSoilNFluxBottomRoot">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>N flux bottom root</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="6" column="1">
+                <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootLayers"/>
+               </item>
+               <item row="6" column="2">
+                <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootObservations"/>
+               </item>
+               <item row="6" column="3">
+                <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootWeightPts"/>
+               </item>
+               <item row="6" column="4">
+                <widget class="QDoubleSpinBox" name="dsbSVSoilNFluxBottomRootReplicates"/>
+               </item>
+               <item row="6" column="5">
+                <widget class="QLabel" name="label_59">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string notr="true">0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="7" column="0" colspan="6">
+                <layout class="QHBoxLayout" name="horizontalLayout_12">
+                 <item>
+                  <spacer name="horizontalSpacer_10">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_24">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblWeatherGoldMinSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Gold Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="lblWeatherGoldMinValSVCrop_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>23</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblWeatherSilverMinSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Silver Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="lblWeatherSilverMinValSVCrop_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>22</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="lblWeatherBronzeMinSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Bronze Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinValSVCrop_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>24</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLabel" name="lblWeatherBronzeMinValSVCrop_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>21</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblCombinedSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Combined:</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="lblOverallRatingSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_25">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblRankingWeatherSVCrop_2">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblMedalWeatherSVCrop_2">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>20</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="lineWidth">
+                      <number>0</number>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_11">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </item>
               </layout>
              </widget>
@@ -8386,7 +8862,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>416</height>
+             <height>381</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8404,110 +8880,550 @@
               <property name="checked">
                <bool>false</bool>
               </property>
-              <layout class="QGridLayout" name="gridLayout_18">
-               <item row="2" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_17"/>
-               </item>
-               <item row="1" column="5">
-                <widget class="QLabel" name="label">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="5">
-                <widget class="QLabel" name="label_3">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="5">
-                <widget class="QLabel" name="label_5">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="2">
-                <widget class="QSpinBox" name="spinBox_60"/>
-               </item>
-               <item row="3" column="0">
-                <widget class="QCheckBox" name="checkBox_16">
-                 <property name="text">
-                  <string>N2O Loss</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="0">
-                <widget class="QCheckBox" name="checkBox_13">
-                 <property name="text">
-                  <string>CH4 Loss</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="5" column="2">
-                <widget class="QSpinBox" name="spinBox_58"/>
-               </item>
-               <item row="5" column="3">
-                <widget class="QSpinBox" name="spinBox_61"/>
-               </item>
+              <layout class="QGridLayout" name="gridLayout_27">
                <item row="0" column="2">
                 <widget class="QLabel" name="label_32">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
                   <string>Observations</string>
                  </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
                 </widget>
                </item>
-               <item row="3" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_15"/>
-               </item>
-               <item row="4" column="5">
-                <widget class="QLabel" name="label_4">
+               <item row="0" column="0">
+                <widget class="QLabel" name="lblSVSurfaceFluxesMinDataHeader">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>TextLabel</string>
+                  <string>Min.Data</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_23">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Layers</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
                <item row="5" column="4">
                 <widget class="QDoubleSpinBox" name="doubleSpinBox_14"/>
                </item>
-               <item row="0" column="3">
-                <widget class="QLabel" name="label_28">
+               <item row="5" column="5">
+                <widget class="QLabel" name="label_5">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>Weight Pts</string>
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
-               <item row="3" column="3">
-                <widget class="QSpinBox" name="spinBox_54"/>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLabel" name="label_23">
-                 <property name="text">
-                  <string>Layers</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="5">
-                <widget class="QLabel" name="label_2">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
+               <item row="6" column="0" colspan="6">
+                <layout class="QHBoxLayout" name="horizontalLayout_13">
+                 <item>
+                  <spacer name="horizontalSpacer_12">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_18">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblWeatherGoldMinSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Gold Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="lblWeatherGoldMinValSVCrop_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>23</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblWeatherSilverMinSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Silver Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="lblWeatherSilverMinValSVCrop_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>22</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="lblWeatherBronzeMinSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Bronze Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinValSVCrop_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>24</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLabel" name="lblWeatherBronzeMinValSVCrop_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>21</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblCombinedSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Combined:</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="lblOverallRatingSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_26">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblRankingWeatherSVCrop_3">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblMedalWeatherSVCrop_3">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>20</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="lineWidth">
+                      <number>0</number>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_13">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </item>
                <item row="3" column="1">
                 <widget class="QSpinBox" name="spinBox_67"/>
                </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_29">
+               <item row="3" column="2">
+                <widget class="QSpinBox" name="spinBox_60"/>
+               </item>
+               <item row="3" column="3">
+                <widget class="QSpinBox" name="spinBox_54"/>
+               </item>
+               <item row="3" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_15"/>
+               </item>
+               <item row="3" column="5">
+                <widget class="QLabel" name="label_3">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
                  <property name="text">
-                  <string>Min.Data</string>
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
                  </property>
                 </widget>
                </item>
+               <item row="4" column="0">
+                <widget class="QCheckBox" name="checkBox_18">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>N2 Loss</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="2">
+                <widget class="QSpinBox" name="spinBox_68"/>
+               </item>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="checkBox_14">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>NH3 Loss</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="1">
+                <widget class="QSpinBox" name="spinBox_57"/>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="spinBox_70"/>
+               </item>
+               <item row="2" column="2">
+                <widget class="QSpinBox" name="spinBox_50"/>
+               </item>
+               <item row="2" column="3">
+                <widget class="QSpinBox" name="spinBox_72"/>
+               </item>
+               <item row="2" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_17"/>
+               </item>
+               <item row="5" column="3">
+                <widget class="QSpinBox" name="spinBox_61"/>
+               </item>
+               <item row="2" column="5">
+                <widget class="QLabel" name="label_2">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QCheckBox" name="checkBox_16">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>N2O Loss</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="4" column="3">
+                <widget class="QSpinBox" name="spinBox_49"/>
+               </item>
+               <item row="4" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_13"/>
+               </item>
+               <item row="4" column="5">
+                <widget class="QLabel" name="label_4">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="0">
+                <widget class="QCheckBox" name="checkBox_13">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>CH4 Loss</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="1">
+                <widget class="QSpinBox" name="spinBox_71"/>
+               </item>
+               <item row="5" column="2">
+                <widget class="QSpinBox" name="spinBox_58"/>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLabel" name="label">
+                 <property name="font">
+                  <font>
+                   <pointsize>10</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>0</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QLabel" name="label_28">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Weight Pts</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QSpinBox" name="spinBox_56"/>
+               </item>
+               <item row="1" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_16"/>
+               </item>
                <item row="1" column="0">
                 <widget class="QCheckBox" name="checkBox_15">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
                  <property name="text">
                   <string>ET</string>
                  </property>
@@ -8519,51 +9435,7 @@
                <item row="1" column="2">
                 <widget class="QSpinBox" name="spinBox_62"/>
                </item>
-               <item row="1" column="3">
-                <widget class="QSpinBox" name="spinBox_56"/>
-               </item>
-               <item row="1" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_16"/>
-               </item>
-               <item row="2" column="3">
-                <widget class="QSpinBox" name="spinBox_72"/>
-               </item>
-               <item row="2" column="2">
-                <widget class="QSpinBox" name="spinBox_50"/>
-               </item>
-               <item row="5" column="1">
-                <widget class="QSpinBox" name="spinBox_71"/>
-               </item>
-               <item row="4" column="0">
-                <widget class="QCheckBox" name="checkBox_18">
-                 <property name="text">
-                  <string>N2 Loss</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="1">
-                <widget class="QSpinBox" name="spinBox_70"/>
-               </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="checkBox_14">
-                 <property name="text">
-                  <string>NH3 Loss</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="4" column="1">
-                <widget class="QSpinBox" name="spinBox_57"/>
-               </item>
-               <item row="4" column="3">
-                <widget class="QSpinBox" name="spinBox_49"/>
-               </item>
-               <item row="4" column="2">
-                <widget class="QSpinBox" name="spinBox_68"/>
-               </item>
-               <item row="4" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_13"/>
-               </item>
-               <item row="6" column="2">
+               <item row="7" column="0">
                 <spacer name="verticalSpacer_10">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -8575,6 +9447,36 @@
                   </size>
                  </property>
                 </spacer>
+               </item>
+               <item row="0" column="5">
+                <widget class="QLabel" name="label_8">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="4">
+                <widget class="QLabel" name="label_9">
+                 <property name="font">
+                  <font>
+                   <pointsize>11</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>TextLabel</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
                </item>
               </layout>
               <zorder>spinBox_49</zorder>
@@ -8593,7 +9495,7 @@
               <zorder>label_28</zorder>
               <zorder>spinBox_60</zorder>
               <zorder>spinBox_61</zorder>
-              <zorder>label_29</zorder>
+              <zorder>lblSVSurfaceFluxesMinDataHeader</zorder>
               <zorder>spinBox_62</zorder>
               <zorder>spinBox_63</zorder>
               <zorder>doubleSpinBox_16</zorder>
@@ -8611,7 +9513,10 @@
               <zorder>label_3</zorder>
               <zorder>label_4</zorder>
               <zorder>label_5</zorder>
+              <zorder>layoutWidget_2</zorder>
               <zorder>verticalSpacer_10</zorder>
+              <zorder>label_8</zorder>
+              <zorder>label_9</zorder>
              </widget>
             </item>
            </layout>
@@ -8622,7 +9527,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>416</height>
+             <height>381</height>
             </rect>
            </property>
            <attribute name="label">
@@ -8640,11 +9545,132 @@
               <property name="checked">
                <bool>false</bool>
               </property>
-              <layout class="QGridLayout" name="gridLayout_17">
+              <layout class="QGridLayout" name="gridLayout_31">
+               <item row="0" column="0">
+                <widget class="QLabel" name="lblSVObservationsMinDataHeader">
+                 <property name="text">
+                  <string>Min.Data</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="1">
+                <widget class="QLabel" name="label_33">
+                 <property name="text">
+                  <string>Layers</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="0">
+                <widget class="QCheckBox" name="checkBox_21">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>Lodging</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="2" column="0">
+                <widget class="QCheckBox" name="checkBox_20">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>Pests/Diseases</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
+                <widget class="QCheckBox" name="checkBox_22">
+                 <property name="layoutDirection">
+                  <enum>Qt::RightToLeft</enum>
+                 </property>
+                 <property name="text">
+                  <string>Damages</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="5" column="2">
+                <spacer name="verticalSpacer_9">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <property name="sizeHint" stdset="0">
+                  <size>
+                   <width>20</width>
+                   <height>40</height>
+                  </size>
+                 </property>
+                </spacer>
+               </item>
+               <item row="3" column="1">
+                <widget class="QSpinBox" name="spinBox_91"/>
+               </item>
+               <item row="2" column="1">
+                <widget class="QSpinBox" name="spinBox_94"/>
+               </item>
+               <item row="1" column="1">
+                <widget class="QSpinBox" name="spinBox_87"/>
+               </item>
+               <item row="1" column="2">
+                <widget class="QSpinBox" name="spinBox_86"/>
+               </item>
+               <item row="2" column="2">
+                <widget class="QSpinBox" name="spinBox_74"/>
+               </item>
+               <item row="3" column="2">
+                <widget class="QSpinBox" name="spinBox_84"/>
+               </item>
+               <item row="0" column="2">
+                <widget class="QLabel" name="label_42">
+                 <property name="text">
+                  <string>Observations</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="0" column="3">
+                <widget class="QLabel" name="label_38">
+                 <property name="text">
+                  <string>Weight Pts</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QSpinBox" name="spinBox_80"/>
+               </item>
+               <item row="2" column="3">
+                <widget class="QSpinBox" name="spinBox_96"/>
+               </item>
+               <item row="3" column="3">
+                <widget class="QSpinBox" name="spinBox_78"/>
+               </item>
                <item row="0" column="4">
                 <widget class="QLabel" name="label_26">
                  <property name="text">
                   <string>Replicates</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_22"/>
+               </item>
+               <item row="2" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_23"/>
+               </item>
+               <item row="3" column="4">
+                <widget class="QDoubleSpinBox" name="doubleSpinBox_21"/>
+               </item>
+               <item row="0" column="5">
+                <widget class="QLabel" name="label_7">
+                 <property name="text">
+                  <string>Points</string>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="5">
+                <widget class="QLabel" name="label_6">
+                 <property name="text">
+                  <string>TextLabel</string>
                  </property>
                 </widget>
                </item>
@@ -8662,119 +9688,314 @@
                  </property>
                 </widget>
                </item>
-               <item row="0" column="3">
-                <widget class="QLabel" name="label_38">
-                 <property name="text">
-                  <string>Weight Pts</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="1">
-                <widget class="QLabel" name="label_33">
-                 <property name="text">
-                  <string>Layers</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="5">
-                <widget class="QLabel" name="label_6">
-                 <property name="text">
-                  <string>TextLabel</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="0">
-                <widget class="QLabel" name="label_39">
-                 <property name="text">
-                  <string>Min.Data</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="0" column="2">
-                <widget class="QLabel" name="label_42">
-                 <property name="text">
-                  <string>Observations</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QCheckBox" name="checkBox_21">
-                 <property name="layoutDirection">
-                  <enum>Qt::RightToLeft</enum>
-                 </property>
-                 <property name="text">
-                  <string>Lodging</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="1">
-                <widget class="QSpinBox" name="spinBox_87"/>
-               </item>
-               <item row="1" column="2">
-                <widget class="QSpinBox" name="spinBox_86"/>
-               </item>
-               <item row="1" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_22"/>
-               </item>
-               <item row="1" column="3">
-                <widget class="QSpinBox" name="spinBox_80"/>
-               </item>
-               <item row="2" column="1">
-                <widget class="QSpinBox" name="spinBox_94"/>
-               </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="checkBox_20">
-                 <property name="layoutDirection">
-                  <enum>Qt::RightToLeft</enum>
-                 </property>
-                 <property name="text">
-                  <string>Pests/Diseases</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="3">
-                <widget class="QSpinBox" name="spinBox_96"/>
-               </item>
-               <item row="2" column="2">
-                <widget class="QSpinBox" name="spinBox_74"/>
-               </item>
-               <item row="2" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_23"/>
-               </item>
-               <item row="3" column="1">
-                <widget class="QSpinBox" name="spinBox_91"/>
-               </item>
-               <item row="3" column="2">
-                <widget class="QSpinBox" name="spinBox_84"/>
-               </item>
-               <item row="3" column="0">
-                <widget class="QCheckBox" name="checkBox_22">
-                 <property name="layoutDirection">
-                  <enum>Qt::RightToLeft</enum>
-                 </property>
-                 <property name="text">
-                  <string>Damages</string>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="3">
-                <widget class="QSpinBox" name="spinBox_78"/>
-               </item>
-               <item row="3" column="4">
-                <widget class="QDoubleSpinBox" name="doubleSpinBox_21"/>
-               </item>
-               <item row="4" column="1">
-                <spacer name="verticalSpacer_9">
-                 <property name="orientation">
-                  <enum>Qt::Vertical</enum>
-                 </property>
-                 <property name="sizeHint" stdset="0">
-                  <size>
-                   <width>20</width>
-                   <height>40</height>
-                  </size>
-                 </property>
-                </spacer>
+               <item row="4" column="0" colspan="6">
+                <layout class="QHBoxLayout" name="horizontalLayout_15">
+                 <item>
+                  <spacer name="horizontalSpacer_16">
+                   <property name="orientation">
+                    <enum>Qt::Horizontal</enum>
+                   </property>
+                   <property name="sizeHint" stdset="0">
+                    <size>
+                     <width>40</width>
+                     <height>20</height>
+                    </size>
+                   </property>
+                  </spacer>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_29">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblWeatherGoldMinSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Gold Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QLabel" name="lblWeatherGoldMinValSVCrop_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>23</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="lblWeatherSilverMinSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Silver Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="lblWeatherSilverMinValSVCrop_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>22</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0">
+                    <widget class="QLabel" name="lblWeatherBronzeMinSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Bronze Minimum: </string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-2</number>
+                     </property>
+                     <property name="indent">
+                      <number>0</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <widget class="QLabel" name="lblWeatherPlatinumMinValSVCrop_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>24</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="1">
+                    <widget class="QLabel" name="lblWeatherBronzeMinValSVCrop_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>25</width>
+                       <height>0</height>
+                      </size>
+                     </property>
+                     <property name="font">
+                      <font>
+                       <pointsize>9</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>21</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                     <property name="margin">
+                      <number>-1</number>
+                     </property>
+                     <property name="indent">
+                      <number>1</number>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="lblCombinedSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Combined:</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLabel" name="lblOverallRatingSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>0</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                 <item>
+                  <layout class="QGridLayout" name="gridLayout_30">
+                   <item row="2" column="0">
+                    <widget class="QLabel" name="lblRankingWeatherSVCrop_5">
+                     <property name="font">
+                      <font>
+                       <pointsize>10</pointsize>
+                      </font>
+                     </property>
+                     <property name="text">
+                      <string>Platinum</string>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0">
+                    <widget class="QLabel" name="lblMedalWeatherSVCrop_5">
+                     <property name="minimumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="maximumSize">
+                      <size>
+                       <width>30</width>
+                       <height>30</height>
+                      </size>
+                     </property>
+                     <property name="baseSize">
+                      <size>
+                       <width>20</width>
+                       <height>60</height>
+                      </size>
+                     </property>
+                     <property name="lineWidth">
+                      <number>0</number>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="pixmap">
+                      <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+                     </property>
+                     <property name="scaledContents">
+                      <bool>true</bool>
+                     </property>
+                     <property name="alignment">
+                      <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="1">
+                    <spacer name="horizontalSpacer_17">
+                     <property name="orientation">
+                      <enum>Qt::Horizontal</enum>
+                     </property>
+                     <property name="sizeHint" stdset="0">
+                      <size>
+                       <width>40</width>
+                       <height>20</height>
+                      </size>
+                     </property>
+                    </spacer>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
                </item>
               </layout>
              </widget>
