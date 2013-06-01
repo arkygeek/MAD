@@ -251,19 +251,24 @@ private slots:
   void updateSVCropNInOrgansRatingLbl();
   void updateSVCropLAIRatingLbl();
   // SV soil
-  void updateSVSoil RatingLbl();
+  void updateSVSoilSoilWaterGravRatingLbl();
+  void updateSVSoilPressureHeadsRatingLbl();
+  void updateSVSoilNMinRatingLbl();
+  void updateSVSoilSoilWaterSensorCalRatingLbl();
+  void updateSVSoilWaterFluxBottomRootRatingLbl();
+  void updateSVSoilNFluxBottomRootRatingLbl();
 
   // SV surface fluxes
-  void updateSVSurfaceFluxes RatingLbl();
-  void updateSVSurfaceFluxes RatingLbl();
-  void updateSVSurfaceFluxes RatingLbl();
-  void updateSVSurfaceFluxes RatingLbl();
-  void updateSVSurfaceFluxes RatingLbl();
+  void updateSVSurfaceFluxesETRatingLbl();
+  void updateSVSurfaceFluxesNh3LossRatingLbl();
+  void updateSVSurfaceFluxesN2OLossRatingLbl();
+  void updateSVSurfaceFluxesN2LossRatingLbl();
+  void updateSVSurfaceFluxesCh4LossRatingLbl();
 
   // SV observations
-  void updateSVObservations RatingLbl();
-  void updateSVObservations RatingLbl();
-  void updateSVObservations RatingLbl();
+  void updateSVObservationsLodgingRatingLbl();
+  void updateSVObservationsPestsOrDiseasesRatingLbl();
+  void updateSVObservationsDamagesRatingLbl();
 
 
 
