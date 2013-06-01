@@ -443,22 +443,17 @@ void MadDataClassification::updateCultivationLabels()
   }
 }
 
-
-
-
-void MadDataClassification::on_lineEdit_2_textChanged(const QString &theText)
+void MadDataClassification::on_leDatasetName_textChanged(const QString &theText)
 {
     if (theText != "")
     {
-      pbCultivationSave->setEnabled(true);
+      pbSave->setEnabled(true);
     }
     else
     {
-      pbCultivationSave->setEnabled(false);
+      pbSave->setEnabled(false);
     };
 }
-
-
 
 void MadDataClassification::on_gbxPhenology_clicked()
 {
@@ -701,7 +696,7 @@ void MadDataClassification::updatePhenologyLabels()
 
 
 // check part from here before inserting
-void MadDataClassification::on_pbCultivationSave_clicked()
+void MadDataClassification::on_pbSave_clicked()
 {
   // save current settings for phenology to xml file
   // first we have to get the values
@@ -797,7 +792,6 @@ void MadDataClassification::on_pbCultivationSave_clicked()
   MadSubCategory myStateVarsObservationsLodging;
   MadSubCategory myStateVarsObservationsPestsOrDiseases;
   MadSubCategory myStateVarsObservationsDamages;
-
 
   //get the values from the form
 
@@ -912,6 +906,4 @@ void MadDataClassification::on_pbCultivationSave_clicked()
   //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
   //    QDir::separator() + mCrop.guid() + ".xml");
 }
-
-
 

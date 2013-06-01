@@ -75,9 +75,9 @@ private slots:
   void updateYieldRatingLbl();
   void updateTillageRatingLbl();
 
-  void on_pbCultivationSave_clicked();
+  void on_pbSave_clicked();
   //void on_pbCultivationSet_clicked();
-  void on_lineEdit_2_textChanged(const QString &theText);
+  void on_leDatasetName_textChanged(const QString &theText);
   void updateCultivationLabels();
 
 
