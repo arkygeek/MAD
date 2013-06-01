@@ -52,6 +52,8 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
   cbExamplesPhenology->setDisabled(false);
 
   // These must stay here at the end
+
+  // cultivation connections
   connect ( sbVariety, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateVarietyRatingLbl() ));
   connect ( dsbVariety, SIGNAL ( valueChanged(double) ),
@@ -85,6 +87,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
   connect ( dsbTillage, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateTillageRatingLbl() ));
 
+  // phenology connections
   connect ( sbEmergencePhenology, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updatePhenologyEmergenceRatingLbl() ));
   connect ( dsbEmergencePhenology, SIGNAL ( valueChanged(double) ),
@@ -105,6 +108,178 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updatePhenologyYellowRipenessRatingLbl() ));
   connect ( dsbYellowRipenessPhenology, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updatePhenologyYellowRipenessRatingLbl() ));
+
+  // prev crop connections
+  connect ( sbCropPrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropCropRatingLbl() ));
+  connect ( dsbCropPrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropCropRatingLbl() ));
+  connect ( sbSowingDatePrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropSowingDateRatingLbl() ));
+  connect ( dsbSowingDatePrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropSowingDateRatingLbl() ));
+  connect ( sbHarvestDatePrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropHarvestDateRatingLbl() ));
+  connect ( dsbHarvestDatePrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropHarvestDateRatingLbl() ));
+  connect ( sbYieldPrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropYieldRatingLbl() ));
+  connect ( dsbYieldPrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropYieldRatingLbl() ));
+  connect ( sbResidueMgmtPrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropResidueMgmtRatingLbl() ));
+  connect ( dsbResidueMgmtPrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropResidueMgmtRatingLbl() ));
+  connect ( sbFertilisationPrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropFertilisationRatingLbl() ));
+  connect ( dsbFertilisationPrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropFertilisationRatingLbl() ));
+  connect ( sbIrrigationPrevCrop, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updatePrevCropIrrigationRatingLbl() ));
+  connect ( dsbIrrigationPrevCrop, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updatePrevCropIrrigationRatingLbl() ));
+
+  // initial values connections
+  connect ( sbSoilMoistureInitialValues, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateInitialValuesSoilMoistureRatingLbl() ));
+  connect ( dsbSoilMoistureInitialValues, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateInitialValuesSoilMoistureRatingLbl() ));
+  connect ( sbNMinInitialValues, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateInitialValuesNMinRatingLbl() ));
+  connect ( dsbNMinInitialValues, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateInitialValuesNMinRatingLbl() ));
+
+  // soil connections
+  connect ( sbCOrgSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilCOrgRatingLbl() ));
+  connect ( dsbCOrgSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilCOrgRatingLbl() ));
+  connect ( sbNOrgSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilNOrgRatingLbl() ));
+  connect ( dsbNOrgSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilNOrgRatingLbl() ));
+  connect ( sbTextureSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilTextureRatingLbl() ));
+  connect ( dsbTextureSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilTextureRatingLbl() ));
+  connect ( sbBulkDensitySoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilBulkDensityRatingLbl() ));
+  connect ( dsbBulkDensitySoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilBulkDensityRatingLbl() ));
+  connect ( sbFieldCapacitySoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilFieldCapacityRatingLbl() ));
+  connect ( dsbFieldCapacitySoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilFieldCapacityRatingLbl() ));
+  connect ( sbWiltingPointSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilWiltingPointRatingLbl() ));
+  connect ( dsbWiltingPointSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilWiltingPointRatingLbl() ));
+  connect ( sbPfCurveSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilPfCurveRatingLbl() ));
+  connect ( dsbPfCurveSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilPfCurveRatingLbl() ));
+  connect ( sbHydrCondCurveSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilHydrCondCurveRatingLbl() ));
+  connect ( dsbHydrCondCurveSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilHydrCondCurveRatingLbl() ));
+  connect ( sbPhSoil, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSoilPhRatingLbl() ));
+  connect ( dsbPhSoil, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSoilPhRatingLbl() ));
+
+  // site data connections
+  connect ( sbLatitudeSite, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSiteLatitudeRatingLbl() ));
+  connect ( dsbLatitudeSite, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSiteLatitudeRatingLbl() ));
+  connect ( sbLongitudeSite, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSiteLongitudeRatingLbl() ));
+  connect ( dsbLongitudeSite, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSiteLongitudeRatingLbl() ));
+  connect ( sbAltitudeSite, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSiteAltitudeRatingLbl() ));
+  connect ( dsbAltitudeSite, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSiteAltitudeRatingLbl() ));
+
+  // weather connections
+  connect ( sbPrecipitationWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherPrecipitationRatingLbl() ));
+  connect ( dsbPrecipitationWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherPrecipitationRatingLbl() ));
+  connect ( sbTAveWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherTAveRatingLbl() ));
+  connect ( dsbTAveWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherTAveRatingLbl() ));
+  connect ( sbTMinWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherTMinRatingLbl() ));
+  connect ( dsbTMinWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherTMinRatingLbl() ));
+  connect ( sbTMaxWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherTMaxRatingLbl() ));
+  connect ( dsbTMaxWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherTMaxRatingLbl() ));
+  connect ( sbRelHumidityWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherRelHumidityRatingLbl() ));
+  connect ( dsbRelHumidityWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherRelHumidityRatingLbl() ));
+  connect ( sbWindSpeedWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherWindSpeedRatingLbl() ));
+  connect ( dsbWindSpeedWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherWindSpeedRatingLbl() ));
+  connect ( sbGlobalRadiationWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherGlobalRadiationRatingLbl() ));
+  connect ( dsbGlobalRadiationWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherGlobalRadiationRatingLbl() ));
+  connect ( sbSunshineHoursWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherSunshineHoursRatingLbl() ));
+  connect ( dsbSunshineHoursWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherSunshineHoursRatingLbl() ));
+  connect ( sbLeafWetnessWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherLeafWetnessRatingLbl() ));
+  connect ( dsbLeafWetnessWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherLeafWetnessRatingLbl() ));
+  connect ( sbSoilTempWeather, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateWeatherSoilTempRatingLbl() ));
+  connect ( dsbSoilTempWeather, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateWeatherSoilTempRatingLbl() ));
+
+  // state vars connections
+  //crop
+  connect ( sbSVCropAGrBiomassLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
+  connect ( sbSVCropAGrBiomassObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
+  connect ( sbSVCropAGrBiomassWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
+
+  connect ( sbSVCropWeightOrgansLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
+  connect ( sbSVCropWeightOrgansObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
+  connect ( sbSVCropWeightOrgansWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
+
+  connect ( sbSVCropRootBioMassLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
+  connect ( sbSVCropRootBioMassObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
+  connect ( sbSVCropRootBioMassWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
+
+  connect ( sbSVCropNInAGrBioMassLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
+  connect ( sbSVCropNInAGrBioMassObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
+  connect ( sbSVCropNInAGrBioMassWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
+
+
+  // soil
+
+  // surface fluxes
+
+  // observations
+
 }
 void MadDataClassification::changeEvent(QEvent *e)
 {
@@ -117,6 +292,11 @@ void MadDataClassification::changeEvent(QEvent *e)
     break;
   }
 }
+
+    //               //
+   //  cultivation  //
+  //               //
+
 void MadDataClassification::on_gbxCultivation_clicked()
 {
   // if values are editable, should not be able to select for any
@@ -146,6 +326,9 @@ void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &th
     lblExample->setText("Select Example");
   } //end else
 }
+
+ // slider linking and point calcs
+
 /**
  * @brief MadDataClassification::on_hsldrVariety_valueChanged
  * update label according to desired resolution
@@ -455,6 +638,10 @@ void MadDataClassification::on_leDatasetName_textChanged(const QString &theText)
     };
 }
 
+    //             //
+   //  phenology  //
+  //             //
+
 void MadDataClassification::on_gbxPhenology_clicked()
 {
   // if values are editable, should not be able to select for any
@@ -484,13 +671,7 @@ void MadDataClassification::on_cbExamplesPhenology_currentIndexChanged (const QS
     lblExample->setText("Select Example");
   } //end else
 }
-/**
- * @brief MadDataClassification::on_hsldrEmergence_valueChanged
- * update label according to desired resolution
- * hardcoded for now at a range of 1 to 5
- * default values for slider range set in form at 0 to 1000
- * @param theSliderValue
- */
+
 void MadDataClassification::on_hsldrEmergencePhenology_valueChanged(int theSliderValue)
 {
   // update label according to desired resolution
@@ -502,20 +683,14 @@ void MadDataClassification::on_hsldrEmergencePhenology_valueChanged(int theSlide
   dsbEmergencePhenology->setValue(myPreciseValue);
   updatePhenologyEmergenceRatingLbl();
 }
-/**
- * @brief MadDataClassification::on_hsldrEmergence_valueChanged
- * @param theSliderValue
- */
+
 void MadDataClassification::on_hsldrEarEmergencePhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbEarEmergencePhenology->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrStemElongation_valueChanged
- * @param theSliderValue
- */
+
 void MadDataClassification::on_hsldrStemElongationPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
@@ -523,20 +698,13 @@ void MadDataClassification::on_hsldrStemElongationPhenology_valueChanged(int the
   dsbStemElongationPhenology->setValue(myPreciseValue);
 }
 
-/**
- * @brief MadDataClassification::on_hsldrFlowering_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrFloweringPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbFloweringPhenology->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrYellowRipeness_valueChanged
- * @param theSliderValue
- */
+
 void MadDataClassification::on_hsldrYellowRipenessPhenology_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
@@ -584,9 +752,6 @@ void MadDataClassification::on_dsbYellowRipenessPhenology_valueChanged(double th
   float myResult = dsbYellowRipenessPhenology->value() * sbYellowRipenessPhenology->value();
   lblYellowRipenessRatingPhenology->setText(makeString(myResult));
 }
-
-
-
 
 void MadDataClassification::updatePhenologyEmergenceRatingLbl()
 {
@@ -693,9 +858,49 @@ void MadDataClassification::updatePhenologyLabels()
   }
 }
 
+    //             //
+   //  prev crop  //
+  //             //
+
+  // slider linking and point calcs
 
 
-// check part from here before inserting
+    //                  //
+   //  initial values  //
+  //                  //
+
+  // slider linking and point calcs
+
+
+
+    //        //
+   //  soil  //
+  //        //
+
+  // slider linking and point calcs
+
+
+
+    //             //
+   //  site data  //
+  //             //
+
+  // slider linking and point calcs
+
+
+
+    //           //
+   //  weather  //
+  //           //
+
+  // slider linking and point calcs
+
+
+
+    //              //
+   //  state vars  //
+  //              //
+
 void MadDataClassification::on_pbSave_clicked()
 {
   // save current settings for phenology to xml file
@@ -793,9 +998,14 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myStateVarsObservationsPestsOrDiseases;
   MadSubCategory myStateVarsObservationsDamages;
 
-  //get the values from the form
+    //////////////////////////////////
+   //get the values from the form  //
+  //////////////////////////////////
 
+  //
   // Cultivation values from form
+  //
+
   // variety
   myCultVariety.setMinData(chbxVariety->isChecked());
   myCultVariety.setDepth(0);
@@ -877,10 +1087,133 @@ void MadDataClassification::on_pbSave_clicked()
   myPhenologyYellowRipeness.setObservations(sbYellowRipenessPhenology->value());
   myPhenologyYellowRipeness.setReplicates(0);
 
+  //
+  // PrevCrop values from form
+  //
 
-  // set the values
+  // crop
 
+  // sowing date
+
+  // harvest date
+
+  // yield
+
+  // residue mgmt
+
+  // fertilisation
+
+  // irrigation
+
+  //
+  // Initial Values values from form
+  //
+
+  // soil moisture
+
+  // nitrogen min
+
+  //
+  // Soil values from form
+  //
+
+  // Carbon organic
+
+  // Nitrogen organic
+
+  // texture
+
+  // bulk density
+
+  // field capacity
+
+  // wilting point
+
+  // pf curve
+
+  // hydr. cond. curve
+
+  //
+  // Site values from form
+  //
+
+  // latitude
+
+  // longitude
+
+  // altitude
+
+  //
+  // Weather values from form
+  //
+
+  // precipitation
+
+  // T ave
+
+  // T min
+
+  // T max
+
+  // relative humidity
+
+  // wind speed
+
+  // global radiation
+
+  // sunshine hours
+
+  //
+  // Sate Vars from Form
+  //
+
+  // CROP a. gr. biomass
+
+  // CROP weight organs
+
+  // CROP root biomass
+
+  // CROP N in a. gr. biomass
+
+  // CROP N in organs
+
+  // CROP LAI
+
+  // SOIL soil water grav.
+
+  // SOIL pressure heads
+
+  // SOIL nitrogen min.
+
+  // SOIL soil water sensor cal.
+
+  // SOIL water flux bottom root
+
+  // SOIL N flux bottom root
+
+  // SURFACE FLUXES ET
+
+  // SURFACE FLUXES NH3 Loss
+
+  // SURFACE FLUXES N2O Loss
+
+  // SURFACE FLUXES N2 Loss
+
+  // SURFACE FLUXES CH4 Loss
+
+  // OBSERVATIONS lodging
+
+  // OBSERVATIONS pests or diseases
+
+  // OBSERVATIONS damages
+
+    /////////////////////
+   // set the values  //
+  /////////////////////
+
+  //
   // set cultivation values
+  //
   myCultivation.setVariety(myCultVariety);
   myCultivation.setSowing(myCultSowing);
   myCultivation.setHarvest(myCultHarvest);
@@ -890,12 +1223,45 @@ void MadDataClassification::on_pbSave_clicked()
   myCultivation.setYield(myCultYield);
   myCultivation.setTillage(myCultTillage);
 
+  //
   // set phenology values
+  //
   myPhenology.setEmergence(myPhenologyEmergence);
   myPhenology.setStemElongation(myPhenologyStemElongation);
   myPhenology.setEarEmergence(myPhenologyEarEmergence);
   myPhenology.setFlowering(myPhenologyFlowering);
   myPhenology.setYellowRipeness(myPhenologyYellowRipeness);
+
+  //
+  // set previous crop values
+  //
+
+
+  //
+  // set initial values values
+  //
+
+
+  //
+  // set soil values
+  //
+
+
+  //
+  // set site values
+  //
+
+
+  //
+  // set weather values
+  //
+
+
+  //
+  // set state vars values
+  //
+
+
 
   QString myString;
   myString = myCultivation.toXml();

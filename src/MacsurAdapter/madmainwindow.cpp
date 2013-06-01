@@ -180,7 +180,6 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
     txtbrwsData->setText("This will say something about:");
     txtbrwsData->append(theSelection);
 
-
     QString mySelection = theSelection.toLower(); // converts to all lowercase
     if (theSelection == "CMAP") loadHtmlFile("cmap");
     if (theSelection == "Dai") loadHtmlFile("Dai");
@@ -200,7 +199,6 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
     if (theSelection == "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST") loadHtmlFile("Reynolds-Optimum-Interpolation-Ver-2-OIv2");
     if (theSelection == "Smith and Reynolds Extended Reconstructed SLP (ERSLP)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP");
     if (theSelection == "Smith and Reynolds Extended Reconstructed SST (ERSST)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SST-ERSST");
-
 
     if (theSelection == "Credits")
     {
