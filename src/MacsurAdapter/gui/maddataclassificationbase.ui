@@ -38,7 +38,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="icon">
@@ -5483,7 +5483,7 @@
          </widget>
         </item>
         <item row="5" column="3">
-         <widget class="QLabel" name="lblWiltingCapacityRatingSoil">
+         <widget class="QLabel" name="lblWiltingPointRatingSoil">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -6993,7 +6993,7 @@
          </widget>
         </item>
         <item row="1" column="1">
-         <widget class="QLabel" name="lblTaveWeather">
+         <widget class="QLabel" name="lblTAveWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -7005,7 +7005,7 @@
          </widget>
         </item>
         <item row="1" column="4">
-         <widget class="QLabel" name="lblTaveRatingWeather">
+         <widget class="QLabel" name="lblTAveRatingWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -7017,7 +7017,7 @@
          </widget>
         </item>
         <item row="2" column="1">
-         <widget class="QLabel" name="lblTminWeather">
+         <widget class="QLabel" name="lblTMinWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -7029,7 +7029,7 @@
          </widget>
         </item>
         <item row="2" column="4">
-         <widget class="QLabel" name="lblTminRatingWeather">
+         <widget class="QLabel" name="lblTMinRatingWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -7041,7 +7041,7 @@
          </widget>
         </item>
         <item row="3" column="1">
-         <widget class="QLabel" name="lblTmaxWeather">
+         <widget class="QLabel" name="lblTMaxWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>
@@ -7053,7 +7053,7 @@
          </widget>
         </item>
         <item row="3" column="4">
-         <widget class="QLabel" name="lblTmaxRatingWeather">
+         <widget class="QLabel" name="lblTMaxRatingWeather">
           <property name="font">
            <font>
             <pointsize>10</pointsize>

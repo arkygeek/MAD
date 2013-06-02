@@ -1360,923 +1360,604 @@ void MadDataClassification::on_dsbYellowRipenessPhenology_valueChanged(double th
 }
 
 // prev crop tab (double spin box changes)
+void MadDataClassification::on_dsbCropPrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrCropPrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbCropPrevCrop->value() * sbCropPrevCrop->value();
+  lblCropRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbSowingDatePrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSowingDatePrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbSowingDatePrevCrop->value() * sbSowingDatePrevCrop->value();
+  lblSowingDateRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbHarvestDatePrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrHarvestDatePrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbHarvestDatePrevCrop->value() * sbHarvestDatePrevCrop->value();
+  lblHarvestDateRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbYieldPrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrYieldPrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbYieldPrevCrop->value() * sbYieldPrevCrop->value();
+  lblYieldRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbResidueMgmtPrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrResidueMgmtPrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbResidueMgmtPrevCrop->value() * sbResidueMgmtPrevCrop->value();
+  lblResidueMgmtRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbFertilisationPrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrFertilisationPrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbFertilisationPrevCrop->value() * sbFertilisationPrevCrop->value();
+  lblFertilisationRatingPrevCrop->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbIrrigationPrevCrop_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrIrrigationPrevCrop->setSliderPosition(myPosition);
+  float myResult = dsbIrrigationPrevCrop->value() * sbIrrigationPrevCrop->value();
+  lblIrrigationRatingPrevCrop->setText(makeString(myResult));
+}
 
 // initial values tab (double spin box changes)
+void MadDataClassification::on_dsbSoilMoistureInitialValues_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSoilMoistureInitialValues->setSliderPosition(myPosition);
+  float myResult = dsbSoilMoistureInitialValues->value() * sbSoilMoistureInitialValues->value();
+  lblSoilMoistureRatingInitialValues->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbNMinInitialValues_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrNMinInitialValues->setSliderPosition(myPosition);
+  float myResult = dsbNMinInitialValues->value() * sbNMinInitialValues->value();
+  lblNMinRatingInitialValues->setText(makeString(myResult));
+}
 
 // soil tab (double spin box changes)
+void MadDataClassification::on_dsbCOrgSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrCOrgSoil->setSliderPosition(myPosition);
+  float myResult = dsbCOrgSoil->value() * sbCOrgSoil->value();
+  lblCOrgRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbNOrgSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrNOrgSoil->setSliderPosition(myPosition);
+  float myResult = dsbNOrgSoil->value() * sbNOrgSoil->value();
+  lblNOrgRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbTextureSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrTextureSoil->setSliderPosition(myPosition);
+  float myResult = dsbTextureSoil->value() * sbTextureSoil->value();
+  lblTextureRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbBulkDensitySoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrBulkDensitySoil->setSliderPosition(myPosition);
+  float myResult = dsbBulkDensitySoil->value() * sbBulkDensitySoil->value();
+  lblBulkDensityRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbFieldCapacitySoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrFieldCapacitySoil->setSliderPosition(myPosition);
+  float myResult = dsbFieldCapacitySoil->value() * sbFieldCapacitySoil->value();
+  lblFieldCapacityRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbWiltingPointSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrWiltingPointSoil->setSliderPosition(myPosition);
+  float myResult = dsbWiltingPointSoil->value() * sbWiltingPointSoil->value();
+  lblWiltingPointRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbPfCurveSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrPfCurveSoil->setSliderPosition(myPosition);
+  float myResult = dsbPfCurveSoil->value() * sbPfCurveSoil->value();
+  lblPfCurveRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbHydrCondCurveSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrHydrCondCurveSoil->setSliderPosition(myPosition);
+  float myResult = dsbHydrCondCurveSoil->value() * sbHydrCondCurveSoil->value();
+  lblHydrCondCurveRatingSoil->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbPhSoil_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrPhSoil->setSliderPosition(myPosition);
+  float myResult = dsbPhSoil->value() * sbPhSoil->value();
+  lblPhRatingSoil->setText(makeString(myResult));
+}
 
 // site tab (double spin box changes)
+void MadDataClassification::on_dsbLatitudeSite_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrLatitudeSite->setSliderPosition(myPosition);
+  float myResult = dsbLatitudeSite->value() * sbLatitudeSite->value();
+  lblLatitudeRatingSite->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbLongitudeSite_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrLongitudeSite->setSliderPosition(myPosition);
+  float myResult = dsbLongitudeSite->value() * sbLongitudeSite->value();
+  lblLongitudeRatingSite->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbAltitudeSite_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrAltitudeSite->setSliderPosition(myPosition);
+  float myResult = dsbAltitudeSite->value() * sbAltitudeSite->value();
+  lblAltitudeRatingSite->setText(makeString(myResult));
+}
 
 // weather tab (double spin box changes)
+void MadDataClassification::on_dsbPrecipitationWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrPrecipitationWeather->setSliderPosition(myPosition);
+  float myResult = dsbPrecipitationWeather->value() * sbPrecipitationWeather->value();
+  lblPrecipitationRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbTAveWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrTAveWeather->setSliderPosition(myPosition);
+  float myResult = dsbTAveWeather->value() * sbTAveWeather->value();
+  lblTAveRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbTMinWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrTMinWeather->setSliderPosition(myPosition);
+  float myResult = dsbTMinWeather->value() * sbTMinWeather->value();
+  lblTMinRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbTMaxWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrTMaxWeather->setSliderPosition(myPosition);
+  float myResult = dsbTMaxWeather->value() * sbTMaxWeather->value();
+  lblTMaxRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbRelativeHumidityWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrRelHumidityWeather->setSliderPosition(myPosition);
+  float myResult = dsbRelHumidityWeather->value() * sbRelHumidityWeather->value();
+  lblRelHumidityRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbWindSpeedWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrWindSpeedWeather->setSliderPosition(myPosition);
+  float myResult = dsbWindSpeedWeather->value() * sbWindSpeedWeather->value();
+  lblWindSpeedRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbGlobalRadiationWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrGlobalRadiationWeather->setSliderPosition(myPosition);
+  float myResult = dsbGlobalRadiationWeather->value() * sbGlobalRadiationWeather->value();
+  lblGlobalRadiationRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbSunshineHoursWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSunshineHoursWeather->setSliderPosition(myPosition);
+  float myResult = dsbSunshineHoursWeather->value() * sbSunshineHoursWeather->value();
+  lblSunshineHoursRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbLeafWetnessWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrLeafWetnessWeather->setSliderPosition(myPosition);
+  float myResult = dsbLeafWetnessWeather->value() * sbLeafWetnessWeather->value();
+  lblLeafWetnessRatingWeather->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbSoilTempWeather_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrSoilTempWeather->setSliderPosition(myPosition);
+  float myResult = dsbSoilTempWeather->value() * sbSoilTempWeather->value();
+  lblSoilTempRatingWeather->setText(makeString(myResult));
+}
 
-// SV crop tab (double spin box changes)
-
-// SV soil tab (double spin box changes)
-
-// SV surface fluxes tab (double spin box changes)
-
-// SV observations tab (spin box changes)
 // SV crop tab (spin box changes)
-void MadDataClassification::on_sbSVCropAGrBiomassLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropAGrBiomassLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropAGrBiomassLayers->setValue(myPreciseValue);
   updateSVCropAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropAGrBiomassObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropAGrBiomassObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropAGrBiomassObservations->setValue(myPreciseValue);
   updateSVCropAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropAGrBiomassWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropAGrBiomassWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropAGrBiomassWeight->setValue(myPreciseValue);
   updateSVCropAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropAGrBiomassReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropAGrBiomassReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropAGrBiomassReplicates->setValue(myPreciseValue);
   updateSVCropAGrBiomassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropWeightOrgansLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropWeightOrgansLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropWeightOrgansLayers->setValue(myPreciseValue);
   updateSVCropWeightOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropWeightOrgansObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropWeightOrgansObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropWeightOrgansObservations->setValue(myPreciseValue);
   updateSVCropWeightOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropWeightOrgansWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropWeightOrgansWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropWeightOrgansWeight->setValue(myPreciseValue);
   updateSVCropWeightOrgansRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropWeightOrgansReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropWeightOrgansReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropWeightOrgansReplicates->setValue(myPreciseValue);
   updateSVCropWeightOrgansRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropRootBioMassLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropRootBioMassLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropRootBioMassLayers->setValue(myPreciseValue);
   updateSVCropRootBioMassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropRootBioMassObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropRootBioMassObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropRootBioMassObservations->setValue(myPreciseValue);
   updateSVCropRootBioMassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropRootBioMassWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropRootBioMassWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropRootBioMassWeight->setValue(myPreciseValue);
   updateSVCropRootBioMassRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropRootBioMassReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropRootBioMassReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropRootBioMassReplicates->setValue(myPreciseValue);
   updateSVCropRootBioMassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropNInAGrBioMassLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInAGrBioMassLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInAGrBioMassLayers->setValue(myPreciseValue);
   updateSVCropNInAGrBioMassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInAGrBioMassObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInAGrBioMassObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInAGrBioMassObservations->setValue(myPreciseValue);
   updateSVCropNInAGrBioMassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInAGrBioMassWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInAGrBioMassWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInAGrBioMassWeight->setValue(myPreciseValue);
   updateSVCropNInAGrBioMassRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropNInAGrBioMassReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropNInAGrBioMassReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropNInAGrBioMassReplicates->setValue(myPreciseValue);
   updateSVCropNInAGrBioMassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropNInOrgansLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInOrgansLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInOrgansLayers->setValue(myPreciseValue);
   updateSVCropNInOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInOrgansObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInOrgansObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInOrgansObservations->setValue(myPreciseValue);
   updateSVCropNInOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInOrgansWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropNInOrgansWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropNInOrgansWeight->setValue(myPreciseValue);
   updateSVCropNInOrgansRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropNInOrgansReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropNInOrgansReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropNInOrgansReplicates->setValue(myPreciseValue);
   updateSVCropNInOrgansRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropLAILayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropLAILayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropLAILayers->setValue(myPreciseValue);
   updateSVCropLAIRatingLbl();
 }
-void MadDataClassification::on_sbSVCropLAIObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropLAIObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropLAIObservations->setValue(myPreciseValue);
   updateSVCropLAIRatingLbl();
 }
-void MadDataClassification::on_sbSVCropLAIWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVCropLAIWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVCropLAIWeight->setValue(myPreciseValue);
   updateSVCropLAIRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropLAIReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVCropLAIReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVCropLAIReplicates->setValue(myPreciseValue);
   updateSVCropLAIRatingLbl();
 }
 
 // SV soil tab (spin box changes)
-void MadDataClassification::on_sbSVSoilSoilWaterGravLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterGravLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterGravLayers->setValue(myPreciseValue);
   updateSVSoilSoilWaterGravRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterGravObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterGravObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterGravObservations->setValue(myPreciseValue);
   updateSVSoilSoilWaterGravRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterGravWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterGravWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterGravWeightPts->setValue(myPreciseValue);
   updateSVSoilSoilWaterGravRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilSoilWaterGravReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilSoilWaterGravReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilSoilWaterGravReplicates->setValue(myPreciseValue);
   updateSVSoilSoilWaterGravRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilPressureHeadsLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilPressureHeadsLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilPressureHeadsLayers->setValue(myPreciseValue);
   updateSVSoilPressureHeadsRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilPressureHeadsObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilPressureHeadsObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilPressureHeadsObservations->setValue(myPreciseValue);
   updateSVSoilPressureHeadsRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilPressureHeadsWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilPressureHeadsWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilPressureHeadsWeightPts->setValue(myPreciseValue);
   updateSVSoilPressureHeadsRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilPressureHeadsReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilPressureHeadsReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilPressureHeadsReplicates->setValue(myPreciseValue);
   updateSVSoilPressureHeadsRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilNMinLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNMinLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNMinLayers->setValue(myPreciseValue);
   updateSVSoilNMinRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNMinObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNMinObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNMinObservations->setValue(myPreciseValue);
   updateSVSoilNMinRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNMinWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNMinWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNMinWeightPts->setValue(myPreciseValue);
   updateSVSoilNMinRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilNMinReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilNMinReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilNMinReplicates->setValue(myPreciseValue);
   updateSVSoilNMinRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilSoilWaterSensorCalLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterSensorCalLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterSensorCalLayers->setValue(myPreciseValue);
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterSensorCalObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterSensorCalObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterSensorCalObservations->setValue(myPreciseValue);
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterSensorCalWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilSoilWaterSensorCalWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilSoilWaterSensorCalWeightPts->setValue(myPreciseValue);
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilSoilWaterSensorCalReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilSoilWaterSensorCalReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilSoilWaterSensorCalReplicates->setValue(myPreciseValue);
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilWaterFluxBottomRootLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilWaterFluxBottomRootLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilWaterFluxBottomRootLayers->setValue(myPreciseValue);
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilWaterFluxBottomRootObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilWaterFluxBottomRootObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilWaterFluxBottomRootObservations->setValue(myPreciseValue);
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilWaterFluxBottomRootWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilWaterFluxBottomRootWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilWaterFluxBottomRootWeightPts->setValue(myPreciseValue);
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilWaterFluxBottomRootReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilWaterFluxBottomRootReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilWaterFluxBottomRootReplicates->setValue(myPreciseValue);
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilNFluxBottomRootLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNFluxBottomRootLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNFluxBottomRootLayers->setValue(myPreciseValue);
   updateSVSoilNFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNFluxBottomRootObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNFluxBottomRootObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNFluxBottomRootObservations->setValue(myPreciseValue);
   updateSVSoilNFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNFluxBottomRootWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSoilNFluxBottomRootWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSoilNFluxBottomRootWeightPts->setValue(myPreciseValue);
   updateSVSoilNFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_dsbSVSoilNFluxBottomRootReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSoilNFluxBottomRootReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSoilNFluxBottomRootReplicates->setValue(myPreciseValue);
   updateSVSoilNFluxBottomRootRatingLbl();
 }
 
 // SV surface fluxes tab (spin box changes)
-void MadDataClassification::on_sbSVSurfaceFluxesEtLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesEtLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesEtLayers->setValue(myPreciseValue);
   updateSVSurfaceFluxesEtRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesEtObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesEtObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesEtObservations->setValue(myPreciseValue);
   updateSVSurfaceFluxesEtRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesEtWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesEtWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesEtWeightPts->setValue(myPreciseValue);
   updateSVSurfaceFluxesEtRatingLbl();
 }
-void MadDataClassification::on_dsbSVSurfaceFluxesEtReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSurfaceFluxesEtReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSurfaceFluxesEtReplicates->setValue(myPreciseValue);
   updateSVSurfaceFluxesEtRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesNh3LossLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesNh3LossLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesNh3LossLayers->setValue(myPreciseValue);
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesNh3LossObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesNh3LossObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesNh3LossObservations->setValue(myPreciseValue);
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesNh3LossWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesNh3LossWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesNh3LossWeightPts->setValue(myPreciseValue);
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
-void MadDataClassification::on_dsbSVSurfaceFluxesNh3LossReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSurfaceFluxesNh3LossReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSurfaceFluxesNh3LossReplicates->setValue(myPreciseValue);
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesN2OLossLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2OLossLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2OLossLayers->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2OLossObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2OLossObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2OLossObservations->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2OLossWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2OLossWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2OLossWeightPts->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
-void MadDataClassification::on_dsbSVSurfaceFluxesN2OLossReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSurfaceFluxesN2OLossReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSurfaceFluxesN2OLossReplicates->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesN2LossLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2LossLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2LossLayers->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2LossObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2LossObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2LossObservations->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2LossWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesN2LossWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesN2LossWeightPts->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
-void MadDataClassification::on_dsbSVSurfaceFluxesN2LossReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSurfaceFluxesN2LossReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSurfaceFluxesN2LossReplicates->setValue(myPreciseValue);
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesCh4LossLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesCh4LossLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesCh4LossLayers->setValue(myPreciseValue);
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesCh4LossObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesCh4LossObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesCh4LossObservations->setValue(myPreciseValue);
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesCh4LossWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVSurfaceFluxesCh4LossWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVSurfaceFluxesCh4LossWeightPts->setValue(myPreciseValue);
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
-void MadDataClassification::on_dsbSVSurfaceFluxesCh4LossReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVSurfaceFluxesCh4LossReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVSurfaceFluxesCh4LossReplicates->setValue(myPreciseValue);
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
 
 // SV observations tab (spin box changes)
-void MadDataClassification::on_sbSVObservationsLodgingLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsLodgingLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsLodgingLayers->setValue(myPreciseValue);
   updateSVObservationsLodgingRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsLodgingObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsLodgingObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsLodgingObservations->setValue(myPreciseValue);
   updateSVObservationsLodgingRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsLodgingWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsLodgingWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsLodgingWeightPts->setValue(myPreciseValue);
   updateSVObservationsLodgingRatingLbl();
 }
-void MadDataClassification::on_dsbSVObservationsLodgingReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVObservationsLodgingReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVObservationsLodgingReplicates->setValue(myPreciseValue);
   updateSVObservationsLodgingRatingLbl();
 }
 
-void MadDataClassification::on_sbSVObservationsPestsOrDiseasesLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsPestsOrDiseasesLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsPestsOrDiseasesLayers->setValue(myPreciseValue);
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsPestsOrDiseasesObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsPestsOrDiseasesObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsPestsOrDiseasesObservations->setValue(myPreciseValue);
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsPestsOrDiseasesWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsPestsOrDiseasesWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsPestsOrDiseasesWeightPts->setValue(myPreciseValue);
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
-void MadDataClassification::on_dsbSVObservationsPestsOrDiseasesReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVObservationsPestsOrDiseasesReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVObservationsPestsOrDiseasesReplicates->setValue(myPreciseValue);
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
 
-void MadDataClassification::on_sbSVObservationsDamagesLayers_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsDamagesLayers_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsDamagesLayers->setValue(myPreciseValue);
   updateSVObservationsDamagesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsDamagesObservations_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsDamagesObservations_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsDamagesObservations->setValue(myPreciseValue);
   updateSVObservationsDamagesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsDamagesWeightPts_valueChanged(int theSliderValue)
+void MadDataClassification::on_sbSVObservationsDamagesWeightPts_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  sbSVObservationsDamagesWeightPts->setValue(myPreciseValue);
   updateSVObservationsDamagesRatingLbl();
 }
-void MadDataClassification::on_dsbSVObservationsDamagesReplicates_valueChanged(double theSliderValue)
+void MadDataClassification::on_dsbSVObservationsDamagesReplicates_valueChanged()
 {
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbSVObservationsDamagesReplicates->setValue(myPreciseValue);
   updateSVObservationsDamagesRatingLbl();
 }
 
@@ -2419,22 +2100,532 @@ void MadDataClassification::updatePhenologyYellowRipenessRatingLbl()
 }
 
 // prev crop tab (label updates (with calcs))
+void MadDataClassification::updatePrevCropCropRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbCropPrevCrop->value();
+  float myGivenWeighting = dsbCropPrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblCropRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropSowingDateRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSowingDatePrevCrop->value();
+  float myGivenWeighting = dsbSowingDatePrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSowingDateRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropHarvestDateRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbHarvestDatePrevCrop->value();
+  float myGivenWeighting = dsbHarvestDatePrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblHarvestDateRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropYieldRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbYieldPrevCrop->value();
+  float myGivenWeighting = dsbYieldPrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblYieldRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropResidueMgmtRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbResidueMgmtPrevCrop->value();
+  float myGivenWeighting = dsbResidueMgmtPrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblResidueMgmtRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropFertilisationRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbFertilisationPrevCrop->value();
+  float myGivenWeighting = dsbFertilisationPrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblFertilisationRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
+void MadDataClassification::updatePrevCropIrrigationRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbIrrigationPrevCrop->value();
+  float myGivenWeighting = dsbIrrigationPrevCrop->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblIrrigationRatingPrevCrop->setText(myText);
+  updatePrevCropLabels();
+}
 
 // initial values tab (label updates (with calcs))
+void MadDataClassification::updateInitialValuesSoilMoistureRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSoilMoistureInitialValues->value();
+  float myGivenWeighting = dsbSoilMoistureInitialValues->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSoilMoistureRatingInitialValues->setText(myText);
+  updateInitialValuesLabels();
+}
+void MadDataClassification::updateInitialValuesNMinRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbNMinInitialValues->value();
+  float myGivenWeighting = dsbNMinInitialValues->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblNMinRatingInitialValues->setText(myText);
+  updateInitialValuesLabels();
+}
 
 // soil tab (label updates (with calcs))
+void MadDataClassification::updateSoilCOrgRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbCOrgSoil->value();
+  float myGivenWeighting = dsbCOrgSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblCOrgRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilNOrgRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbNOrgSoil->value();
+  float myGivenWeighting = dsbNOrgSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblNOrgRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilTextureRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbTextureSoil->value();
+  float myGivenWeighting = dsbTextureSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblTextureRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilBulkDensityRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbBulkDensitySoil->value();
+  float myGivenWeighting = dsbBulkDensitySoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblBulkDensityRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilFieldCapacityRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbFieldCapacitySoil->value();
+  float myGivenWeighting = dsbFieldCapacitySoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblFieldCapacityRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilWiltingPointRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbWiltingPointSoil->value();
+  float myGivenWeighting = dsbWiltingPointSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblWiltingPointRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilPfCurveRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbPfCurveSoil->value();
+  float myGivenWeighting = dsbPfCurveSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblPfCurveRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilHydrCondCurveRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbHydrCondCurveSoil->value();
+  float myGivenWeighting = dsbHydrCondCurveSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblHydrCondCurveRatingSoil->setText(myText);
+  updateSoilLabels();
+}
+void MadDataClassification::updateSoilPhRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbPhSoil->value();
+  float myGivenWeighting = dsbPhSoil->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblPhRatingSoil->setText(myText);
+  updateSoilLabels();
+}
 
 // site tab (label updates (with calcs))
+void MadDataClassification::updateSiteLatitudeRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbLatitudeSite->value();
+  float myGivenWeighting = dsbLatitudeSite->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblLatitudeRatingSite->setText(myText);
+  updateSiteLabels();
+}
+void MadDataClassification::updateSiteLongitudeRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbLongitudeSite->value();
+  float myGivenWeighting = dsbLongitudeSite->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblLongitudeRatingSite->setText(myText);
+  updateSiteLabels();
+}
+void MadDataClassification::updateSiteAltitudeRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbAltitudeSite->value();
+  float myGivenWeighting = dsbAltitudeSite->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblAltitudeRatingSite->setText(myText);
+  updateSiteLabels();
+}
 
 // weather tab (label updates (with calcs))
+void MadDataClassification::updateWeatherPrecipitationRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbPrecipitationWeather->value();
+  float myGivenWeighting = dsbPrecipitationWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblPrecipitationRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherTAveRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbTAveWeather->value();
+  float myGivenWeighting = dsbTAveWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblTAveRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherTMinRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbTMinWeather->value();
+  float myGivenWeighting = dsbTMinWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblTMinRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherTMaxRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbTMaxWeather->value();
+  float myGivenWeighting = dsbTMaxWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblTMaxRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherRelHumidityRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbRelHumidityWeather->value();
+  float myGivenWeighting = dsbRelHumidityWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblRelHumidityRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherWindSpeedRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbWindSpeedWeather->value();
+  float myGivenWeighting = dsbWindSpeedWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblWindSpeedRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherGlobalRadiationRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbGlobalRadiationWeather->value();
+  float myGivenWeighting = dsbGlobalRadiationWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblGlobalRadiationRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherSunshineHoursRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSunshineHoursWeather->value();
+  float myGivenWeighting = dsbSunshineHoursWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSunshineHoursRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherLeafWetnessRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbLeafWetnessWeather->value();
+  float myGivenWeighting = dsbLeafWetnessWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblLeafWetnessRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
+void MadDataClassification::updateWeatherSoilTempRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSoilTempWeather->value();
+  float myGivenWeighting = dsbSoilTempWeather->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSoilTempRatingWeather->setText(myText);
+  updateWeatherLabels();
+}
 
 // SV crop tab (label updates (with calcs))
+void MadDataClassification::updateSVCropAGrBiomassRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropAGrBiomassObservations->value();
+  float myGivenWeighting = sbSVCropAGrBiomassWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropAGrBiomassPoints->setText(myText);
+  updateSVCropLabels();
+}
+void MadDataClassification::updateSVCropWeightOrgansRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropWeightOrgansObservations->value();
+  float myGivenWeighting = sbSVCropWeightOrgansWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropWeightOrgansPoints->setText(myText);
+  updateSVCropLabels();
+}
+void MadDataClassification::updateSVCropRootBioMassRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropRootBioMassObservations->value();
+  float myGivenWeighting = sbSVCropRootBioMassWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropRootBiomassPoints->setText(myText);
+  updateSVCropLabels();
+}
+void MadDataClassification::updateSVCropNInAGrBioMassRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropNInAGrBioMassObservations->value();
+  float myGivenWeighting = sbSVCropNInAGrBioMassWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropNInAGrBiomassPoints->setText(myText);
+  updateSVCropLabels();
+}
+void MadDataClassification::updateSVCropNInOrgansRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropNInOrgansObservations->value();
+  float myGivenWeighting = sbSVCropNInOrgansWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropNInOrgansPoints->setText(myText);
+  updateSVCropLabels();
+}
+void MadDataClassification::updateSVCropLAIRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVCropLAIObservations->value();
+  float myGivenWeighting = sbSVCropLAIWeight->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVCropLAIPoints->setText(myText);
+  updateSVCropLabels();
+}
 
 // SV soil tab (label updates (with calcs))
+void MadDataClassification::updateSVSoilSoilWaterGravRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilSoilWaterGravObservations->value();
+  float myGivenWeighting = sbSVSoilSoilWaterGravWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilSoilWaterGravPoints->setText(myText);
+  updateSVSoilLabels();
+}
+void MadDataClassification::updateSVSoilPressureHeadsRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilPressureHeadsObservations->value();
+  float myGivenWeighting = sbSVSoilPressureHeadsWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilPressureHeadsPoints->setText(myText);
+  updateSVSoilLabels();
+}
+void MadDataClassification::updateSVSoilNMinRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilNMinObservations->value();
+  float myGivenWeighting = sbSVSoilNMinWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilNMinPoints->setText(myText);
+  updateSVSoilLabels();
+}
+void MadDataClassification::updateSVSoilSoilWaterSensorCalRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilSoilWaterSensorCalObservations->value();
+  float myGivenWeighting = sbSVSoilSoilWaterSensorCalWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilSoilWaterSensorCalPoints->setText(myText);
+  updateSVSoilLabels();
+}
+void MadDataClassification::updateSVSoilWaterFluxBottomRootRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilWaterFluxBottomRootObservations->value();
+  float myGivenWeighting = sbSVSoilWaterFluxBottomRootWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilWaterFluxBottomRootPoints->setText(myText);
+  updateSVSoilLabels();
+}
+void MadDataClassification::updateSVSoilNFluxBottomRootRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSoilNFluxBottomRootObservations->value();
+  float myGivenWeighting = sbSVSoilNFluxBottomRootWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSoilNFluxBottomRootPoints->setText(myText);
+  updateSVSoilLabels();
+}
 
 // SV surface fluxes tab (label updates (with calcs))
+void MadDataClassification::updateSVSurfaceFluxesEtRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSurfaceFluxesEtObservations->value();
+  float myGivenWeighting = sbSVSurfaceFluxesEtWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSurfaceFluxesEtPoints->setText(myText);
+  updateSVSurfaceFluxesLabels();
+}
+void MadDataClassification::updateSVSurfaceFluxesNh3LossRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSurfaceFluxesNh3LossObservations->value();
+  float myGivenWeighting = sbSVSurfaceFluxesNh3LossWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSurfaceFluxesNh3LossPoints->setText(myText);
+  updateSVSurfaceFluxesLabels();
+}
+void MadDataClassification::updateSVSurfaceFluxesN2OLossRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSurfaceFluxesN2OLossObservations->value();
+  float myGivenWeighting = sbSVSurfaceFluxesN2OLossWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSurfaceFluxesN2OLossPoints->setText(myText);
+  updateSVSurfaceFluxesLabels();
+}
+void MadDataClassification::updateSVSurfaceFluxesN2LossRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSurfaceFluxesN2LossObservations->value();
+  float myGivenWeighting = sbSVSurfaceFluxesN2LossWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSurfaceFluxesN2LossPoints->setText(myText);
+  updateSVSurfaceFluxesLabels();
+}
+void MadDataClassification::updateSVSurfaceFluxesCh4LossRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVSurfaceFluxesCh4LossObservations->value();
+  float myGivenWeighting = sbSVSurfaceFluxesCh4LossWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVSurfaceFluxesCh4LossPoints->setText(myText);
+  updateSVSurfaceFluxesLabels();
+}
 
 // SV observations tab (label updates (with calcs))
+void MadDataClassification::updateSVObservationsLodgingRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVObservationsLodgingObservations->value();
+  float myGivenWeighting = sbSVObservationsLodgingWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVObservationsLodgingPoints->setText(myText);
+  updateSVObservationsLabels();
+}
+void MadDataClassification::updateSVObservationsPestsOrDiseasesRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVObservationsPestsOrDiseasesObservations->value();
+  float myGivenWeighting = sbSVObservationsPestsOrDiseasesWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVObservationsPestsOrDiseasesPoints->setText(myText);
+  updateSVObservationsLabels();
+}
+void MadDataClassification::updateSVObservationsDamagesRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbSVObservationsDamagesObservations->value();
+  float myGivenWeighting = sbSVObservationsDamagesWeightPts->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblSVObservationsDamagesPoints->setText(myText);
+  updateSVObservationsLabels();
+}
 
 
    //-------------------------------------//
