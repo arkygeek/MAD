@@ -7546,7 +7546,7 @@
         <item row="0" column="0">
          <widget class="QToolBox" name="toolBoxStateVars">
           <property name="currentIndex">
-           <number>0</number>
+           <number>1</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -7557,7 +7557,7 @@
              <x>0</x>
              <y>0</y>
              <width>674</width>
-             <height>377</height>
+             <height>383</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8169,6 +8169,42 @@
                  </property>
                 </widget>
                </item>
+               <item row="4" column="7">
+                <widget class="QComboBox" name="cbExamplesSVCrop">
+                 <item>
+                  <property name="text">
+                   <string>Examples</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Platinum</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Gold</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Silver</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bronze</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="4" column="6">
+                <widget class="QLabel" name="lblExampleSVCrop">
+                 <property name="text">
+                  <string>Example</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
@@ -8179,8 +8215,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>516</width>
-             <height>353</height>
+             <width>674</width>
+             <height>383</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8241,7 +8277,7 @@
                   <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootWeightPts"/>
                  </item>
                  <item row="5" column="4">
-                  <widget class="QDoubleSpinBox" name="dsbSVSoilWasterFluxBottomRootReplicates"/>
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilWaterFluxBottomRootReplicates"/>
                  </item>
                  <item row="2" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilPressureHeadsReplicates"/>
@@ -8396,16 +8432,16 @@
                   <widget class="QSpinBox" name="sbSVSoilPressureHeadsWeightPts"/>
                  </item>
                  <item row="1" column="2">
-                  <widget class="QSpinBox" name="sbSVSoilAGrBiomassObservations"/>
+                  <widget class="QSpinBox" name="sbSVSoilSoilWaterGravObservations"/>
                  </item>
                  <item row="1" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilAGrBiomassWeightPts"/>
+                  <widget class="QSpinBox" name="sbSVSoilSoilWaterGravWeightPts"/>
                  </item>
                  <item row="1" column="4">
-                  <widget class="QDoubleSpinBox" name="dsbSVSoilAGrBiomassReplicates"/>
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterGravReplicates"/>
                  </item>
                  <item row="1" column="5">
-                  <widget class="QLabel" name="lblSVSoilAGrBiomassPoints">
+                  <widget class="QLabel" name="lblSVSoilSoilWaterGravPoints">
                    <property name="font">
                     <font>
                      <pointsize>10</pointsize>
@@ -8463,7 +8499,7 @@
                   <widget class="QSpinBox" name="sbSVSoilPressureHeadsLayers"/>
                  </item>
                  <item row="1" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilAGrBiomassLayers"/>
+                  <widget class="QSpinBox" name="sbSVSoilSoilWaterGravLayers"/>
                  </item>
                  <item row="5" column="5">
                   <widget class="QLabel" name="lblSVSoilWaterFluxBottomRootPoints">
@@ -8807,6 +8843,42 @@
                  </item>
                 </layout>
                </item>
+               <item row="2" column="5">
+                <widget class="QComboBox" name="cbExamplesSVSoil">
+                 <item>
+                  <property name="text">
+                   <string>Examples</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Platinum</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Gold</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Silver</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bronze</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="2" column="4">
+                <widget class="QLabel" name="lblExampleSVSoil">
+                 <property name="text">
+                  <string>Example</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
              </widget>
             </item>
@@ -8817,8 +8889,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>444</width>
-             <height>319</height>
+             <width>674</width>
+             <height>377</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8841,6 +8913,35 @@
                <bool>false</bool>
               </property>
               <layout class="QGridLayout" name="gridLayout_25">
+               <item row="2" column="4">
+                <widget class="QComboBox" name="cbExamplesSVSurfaceFluxes">
+                 <item>
+                  <property name="text">
+                   <string>Examples</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Platinum</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Gold</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Silver</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bronze</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
                <item row="0" column="0" colspan="5">
                 <layout class="QGridLayout" name="gridLayoutSVSurfaceFluxesInputs">
                  <item row="5" column="4">
@@ -9398,7 +9499,7 @@
                  </property>
                 </widget>
                </item>
-               <item row="2" column="2" colspan="3">
+               <item row="3" column="2" colspan="3">
                 <spacer name="verticalSpacerSVSurfaceFluxes">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -9411,10 +9512,19 @@
                  </property>
                 </spacer>
                </item>
+               <item row="2" column="3">
+                <widget class="QLabel" name="lblExampleSVSurfaceFluxes">
+                 <property name="text">
+                  <string>Example</string>
+                 </property>
+                </widget>
+               </item>
               </layout>
               <zorder>lblMedalWeatherSVSurfaceFluxes</zorder>
               <zorder>lblRankingWeatherSVSurfaceFluxes</zorder>
               <zorder>verticalSpacerSVSurfaceFluxes</zorder>
+              <zorder>cbExamplesSVSurfaceFluxes</zorder>
+              <zorder>lblExampleSVSurfaceFluxes</zorder>
              </widget>
             </item>
            </layout>
@@ -9424,8 +9534,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>377</height>
+             <width>473</width>
+             <height>281</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -9448,7 +9558,284 @@
                <bool>false</bool>
               </property>
               <layout class="QGridLayout" name="gridLayout_27">
-               <item row="2" column="0">
+               <item row="2" column="6">
+                <widget class="QComboBox" name="cbExamplesSVObservations">
+                 <item>
+                  <property name="text">
+                   <string>Examples</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Platinum</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Gold</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Silver</string>
+                  </property>
+                 </item>
+                 <item>
+                  <property name="text">
+                   <string>Bronze</string>
+                  </property>
+                 </item>
+                </widget>
+               </item>
+               <item row="1" column="3">
+                <widget class="QLabel" name="lblMedalWeatherSVObservations">
+                 <property name="minimumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="maximumSize">
+                  <size>
+                   <width>30</width>
+                   <height>30</height>
+                  </size>
+                 </property>
+                 <property name="baseSize">
+                  <size>
+                   <width>20</width>
+                   <height>60</height>
+                  </size>
+                 </property>
+                 <property name="lineWidth">
+                  <number>0</number>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="pixmap">
+                  <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
+                 </property>
+                 <property name="scaledContents">
+                  <bool>true</bool>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="1" column="6">
+                <layout class="QGridLayout" name="gridLayoutSVObservationsRankLvls">
+                 <item row="0" column="0">
+                  <widget class="QLabel" name="lblWeatherPlatinumMinSVObservations">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Platinum: </string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-1</number>
+                   </property>
+                   <property name="indent">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="0">
+                  <widget class="QLabel" name="lblWeatherPlatinumMinValSVObservations">
+                   <property name="minimumSize">
+                    <size>
+                     <width>25</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>24</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-1</number>
+                   </property>
+                   <property name="indent">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QLabel" name="lblWeatherGoldMinValSVObservations">
+                   <property name="minimumSize">
+                    <size>
+                     <width>25</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>23</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-1</number>
+                   </property>
+                   <property name="indent">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="1">
+                  <widget class="QLabel" name="lblWeatherGoldMinSVObservations">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Gold: </string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-2</number>
+                   </property>
+                   <property name="indent">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="2">
+                  <widget class="QLabel" name="lblWeatherSilverMinSVObservations">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Silver: </string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-2</number>
+                   </property>
+                   <property name="indent">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="0" column="3">
+                  <widget class="QLabel" name="lblWeatherBronzeMinSVObservations">
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>Bronze: </string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-2</number>
+                   </property>
+                   <property name="indent">
+                    <number>0</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="2">
+                  <widget class="QLabel" name="lblWeatherSilverMinValSVObservations">
+                   <property name="minimumSize">
+                    <size>
+                     <width>25</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>22</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-1</number>
+                   </property>
+                   <property name="indent">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QLabel" name="lblWeatherBronzeMinValSVObservations">
+                   <property name="minimumSize">
+                    <size>
+                     <width>25</width>
+                     <height>0</height>
+                    </size>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <pointsize>9</pointsize>
+                    </font>
+                   </property>
+                   <property name="text">
+                    <string>21</string>
+                   </property>
+                   <property name="alignment">
+                    <set>Qt::AlignCenter</set>
+                   </property>
+                   <property name="margin">
+                    <number>-1</number>
+                   </property>
+                   <property name="indent">
+                    <number>1</number>
+                   </property>
+                  </widget>
+                 </item>
+                </layout>
+               </item>
+               <item row="1" column="2">
+                <widget class="QLabel" name="lblRankingWeatherSVObservations">
+                 <property name="font">
+                  <font>
+                   <pointsize>13</pointsize>
+                  </font>
+                 </property>
+                 <property name="text">
+                  <string>Platinum</string>
+                 </property>
+                 <property name="alignment">
+                  <set>Qt::AlignCenter</set>
+                 </property>
+                </widget>
+               </item>
+               <item row="3" column="0">
                 <spacer name="verticalSpacerSVObservations">
                  <property name="orientation">
                   <enum>Qt::Vertical</enum>
@@ -9696,251 +10083,10 @@
                  </item>
                 </layout>
                </item>
-               <item row="1" column="6">
-                <layout class="QGridLayout" name="gridLayoutSVObservationsRankLvls">
-                 <item row="0" column="0">
-                  <widget class="QLabel" name="lblWeatherPlatinumMinSVObservations">
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Platinum: </string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-1</number>
-                   </property>
-                   <property name="indent">
-                    <number>0</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="0">
-                  <widget class="QLabel" name="lblWeatherPlatinumMinValSVObservations">
-                   <property name="minimumSize">
-                    <size>
-                     <width>25</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>24</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-1</number>
-                   </property>
-                   <property name="indent">
-                    <number>1</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QLabel" name="lblWeatherGoldMinValSVObservations">
-                   <property name="minimumSize">
-                    <size>
-                     <width>25</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>23</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-1</number>
-                   </property>
-                   <property name="indent">
-                    <number>1</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="1">
-                  <widget class="QLabel" name="lblWeatherGoldMinSVObservations">
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Gold: </string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-2</number>
-                   </property>
-                   <property name="indent">
-                    <number>0</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="2">
-                  <widget class="QLabel" name="lblWeatherSilverMinSVObservations">
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Silver: </string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-2</number>
-                   </property>
-                   <property name="indent">
-                    <number>0</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="0" column="3">
-                  <widget class="QLabel" name="lblWeatherBronzeMinSVObservations">
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>Bronze: </string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-2</number>
-                   </property>
-                   <property name="indent">
-                    <number>0</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="2">
-                  <widget class="QLabel" name="lblWeatherSilverMinValSVObservations">
-                   <property name="minimumSize">
-                    <size>
-                     <width>25</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>22</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-1</number>
-                   </property>
-                   <property name="indent">
-                    <number>1</number>
-                   </property>
-                  </widget>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QLabel" name="lblWeatherBronzeMinValSVObservations">
-                   <property name="minimumSize">
-                    <size>
-                     <width>25</width>
-                     <height>0</height>
-                    </size>
-                   </property>
-                   <property name="font">
-                    <font>
-                     <pointsize>9</pointsize>
-                    </font>
-                   </property>
-                   <property name="text">
-                    <string>21</string>
-                   </property>
-                   <property name="alignment">
-                    <set>Qt::AlignCenter</set>
-                   </property>
-                   <property name="margin">
-                    <number>-1</number>
-                   </property>
-                   <property name="indent">
-                    <number>1</number>
-                   </property>
-                  </widget>
-                 </item>
-                </layout>
-               </item>
-               <item row="1" column="2">
-                <widget class="QLabel" name="lblRankingWeatherSVObservations">
-                 <property name="font">
-                  <font>
-                   <pointsize>13</pointsize>
-                  </font>
-                 </property>
+               <item row="2" column="5">
+                <widget class="QLabel" name="lblExampleSVObservations">
                  <property name="text">
-                  <string>Platinum</string>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignCenter</set>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="3">
-                <widget class="QLabel" name="lblMedalWeatherSVObservations">
-                 <property name="minimumSize">
-                  <size>
-                   <width>30</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>30</width>
-                   <height>30</height>
-                  </size>
-                 </property>
-                 <property name="baseSize">
-                  <size>
-                   <width>20</width>
-                   <height>60</height>
-                  </size>
-                 </property>
-                 <property name="lineWidth">
-                  <number>0</number>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="pixmap">
-                  <pixmap resource="../resources/resources.qrc">:/platinum.png</pixmap>
-                 </property>
-                 <property name="scaledContents">
-                  <bool>true</bool>
-                 </property>
-                 <property name="alignment">
-                  <set>Qt::AlignJustify|Qt::AlignVCenter</set>
+                  <string>Example</string>
                  </property>
                 </widget>
                </item>
