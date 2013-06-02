@@ -7546,7 +7546,7 @@
         <item row="0" column="0">
          <widget class="QToolBox" name="toolBoxStateVars">
           <property name="currentIndex">
-           <number>3</number>
+           <number>0</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -8179,8 +8179,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>377</height>
+             <width>516</width>
+             <height>353</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -8817,8 +8817,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>377</height>
+             <width>444</width>
+             <height>319</height>
             </rect>
            </property>
            <attribute name="icon">

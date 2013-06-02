@@ -251,12 +251,16 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
   connect ( sbSVCropAGrBiomassWeight, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
+  connect ( dsbSVCropAGrBiomassReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
 
   connect ( sbSVCropWeightOrgansLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
   connect ( sbSVCropWeightOrgansObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
   connect ( sbSVCropWeightOrgansWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
+  connect ( dsbSVCropWeightOrgansReplicates, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
 
   connect ( sbSVCropRootBioMassLayers, SIGNAL ( valueChanged(int) ),
@@ -265,6 +269,8 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
   connect ( sbSVCropRootBioMassWeight, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
+  connect ( dsbSVCropRootBioMassReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
 
   connect ( sbSVCropNInAGrBioMassLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
@@ -272,14 +278,155 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
   connect ( sbSVCropNInAGrBioMassWeight, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
+  connect ( dsbSVCropNInAGrBioMassReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
 
+  connect ( sbSVCropNInOrgansLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
+  connect ( sbSVCropNInOrgansObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
+  connect ( sbSVCropNInOrgansWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
+  connect ( dsbSVCropNInOrgansReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
+
+  connect ( sbSVCropLAILayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropLAIRatingLbl() ));
+  connect ( sbSVCropLAIObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropLAIRatingLbl() ));
+  connect ( sbSVCropLAIWeight, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropLAIRatingLbl() ));
+  connect ( dsbSVCropLAIReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropLAIRatingLbl() ));
 
   // soil
+  connect ( sbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( sbSVSoilSoilWaterSensorCalObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+
+  connect ( sbSVSoilPressureHeadsLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
+  connect ( sbSVSoilPressureHeadsObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
+  connect ( sbSVSoilPressureHeadsWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
+  connect ( dsbSVSoilPressureHeadsReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
+
+  connect ( sbSVSoilNMinLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNMinRatingLbl() ));
+  connect ( sbSVSoilNMinObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNMinRatingLbl() ));
+  connect ( sbSVSoilNMinWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNMinRatingLbl() ));
+  connect ( dsbSVSoilNMinReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNMinRatingLbl() ));
+
+  connect ( sbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( sbSVSoilSoilWaterSensorCalObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
+
+  connect ( sbSVSoilWaterFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
+  connect ( sbSVSoilWaterFluxBottomRootObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
+  connect ( sbSVSoilWaterFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
+  connect ( dsbSVSoilWasterFluxBottomRootReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
+
+  connect ( sbSVSoilNFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
+  connect ( sbSVSoilNFluxBottomRootObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
+  connect ( sbSVSoilNFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
+  connect ( dsbSVSoilNFluxBottomRootReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
 
   // surface fluxes
+  connect ( sbSVSurfaceFluxesEtLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
+  connect ( sbSVSurfaceFluxesEtObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
+  connect ( sbSVSurfaceFluxesEtWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
+  connect ( dsbSVSurfaceFluxesEtReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
+
+  connect ( sbSVSurfaceFluxesNh3LossLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesNh3LossObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesNh3LossWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
+  connect ( dsbSVSurfaceFluxesNh3LossReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
+
+  connect ( sbSVSurfaceFluxesN2OLossLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesN2OLossObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesN2OLossWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
+  connect ( dsbSVSurfaceFluxesN2OLossReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
+
+  connect ( sbSVSurfaceFluxesN2LossLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesN2LossObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesN2LossWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
+  connect ( dsbSVSurfaceFluxesN2LossReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
+
+  connect ( sbSVSurfaceFluxesCh4LossLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesCh4LossObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
+  connect ( sbSVSurfaceFluxesCh4LossWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
+  connect ( dsbSVSurfaceFluxesCh4LossReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
 
   // observations
+  connect ( sbSVObservationsLodgingLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
+  connect ( sbSVObservationsLodgingObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
+  connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
+  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
 
+  connect ( sbSVObservationsPestsOrDiseasesLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
+  connect ( sbSVObservationsPestsOrDiseasesObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
+  connect ( sbSVObservationsPestsOrDiseasesWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
+  connect ( dsbSVObservationsPestsOrDiseasesReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
+
+  connect ( sbSVObservationsDamagesLayers, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
+  connect ( sbSVObservationsDamagesObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
+  connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
+  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
 }
 void MadDataClassification::changeEvent(QEvent *e)
 {
@@ -293,15 +440,32 @@ void MadDataClassification::changeEvent(QEvent *e)
   }
 }
 
-    //               //
-   //  cultivation  //
-  //               //
+void MadDataClassification::on_leDatasetName_textChanged(const QString &theText)
+{
+    if (theText != "")
+    {
+      pbSave->setEnabled(true);
+    }
+    else
+    {
+      pbSave->setEnabled(false);
+    };
+}
 
+QString MadDataClassification::makeString(double theValue)
+{
+  QString myString = QString::number(theValue);
+  return myString;
+}
+
+   //
+  //  group box edit and examples combobox
+ //
+// cultivation tab (group box edit and examples combobox)
 void MadDataClassification::on_gbxCultivation_clicked()
 {
   // if values are editable, should not be able to select for any
   // examples to be shown as it will destroy destroy current settings
-
   if (gbxCultivation->isChecked())
   {
     lblExample->setVisible(false);
@@ -324,18 +488,63 @@ void MadDataClassification::on_cbExamples_currentIndexChanged (const QString &th
   else
   {
     lblExample->setText("Select Example");
-  } //end else
+  }
 }
 
- // slider linking and point calcs
+// phenology tab (group box edit and examples combobox)
+void MadDataClassification::on_gbxPhenology_clicked()
+{
+  // if values are editable, should not be able to select for any
+  // examples to be shown as it will destroy destroy current settings
 
-/**
- * @brief MadDataClassification::on_hsldrVariety_valueChanged
- * update label according to desired resolution
- * hardcoded for now at a range of 1 to 5
- * default values for slider range set in form at 0 to 1000
- * @param theSliderValue
- */
+  if (gbxPhenology->isChecked())
+  {
+    lblExample->setVisible(false);
+    cbExamples->setDisabled(true);
+  }
+  else
+  {
+    cbExamples->setEnabled(true);
+    lblExample->setVisible(true);
+  }
+}
+void MadDataClassification::on_cbExamplesPhenology_currentIndexChanged (const QString &theValue)
+{
+  // if enabled, set values for corresponding classification
+  // options are: Platinum, Gold, Silver, Bronze
+  if (cbExamples->currentText()!="Examples")
+  {
+    lblExample->setText(theValue);
+  }
+  else
+  {
+    lblExample->setText("Select Example");
+  }
+}
+
+// prev crop tab (group box edit and examples combobox)
+
+// initial values tab (group box edit and examples combobox)
+
+// soil tab (group box edit and examples combobox)
+
+// site tab (group box edit and examples combobox)
+
+// weather tab (group box edit and examples combobox)
+
+// SV crop tab (group box edit and examples combobox)
+
+// SV soil tab (group box edit and examples combobox)
+
+// SV surface fluxes tab (group box edit and examples combobox)
+
+// SV observations tab (group box edit and examples combobox)
+
+
+   //
+  //  slider linking and point calcs
+ //
+// cultivation (slider linking and point calcs)
 void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
 {
   // update label according to desired resolution
@@ -347,70 +556,42 @@ void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
   dsbVariety->setValue(myPreciseValue);
   updateVarietyRatingLbl();
 }
-/**
- * @brief MadDataClassification::on_hsldrSowing_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrSowing_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbSowing->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrHarvest_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrHarvest_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbHarvest->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrFertilisation_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrFertilisation_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbFertilisation->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrIrrigation_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrIrrigation_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbIrrigation->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrSeedDensity_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrSeedDensity_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbSeedDensity->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrYield_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrYield_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
   float myPreciseValue = myValue/2.0;
   dsbYield->setValue(myPreciseValue);
 }
-/**
- * @brief MadDataClassification::on_hsldrTillage_valueChanged
- * @param theSliderValue
- */
 void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
 {
   int myValue = (theSliderValue/100);
@@ -418,6 +599,66 @@ void MadDataClassification::on_hsldrTillage_valueChanged(int theSliderValue)
   dsbTillage->setValue(myPreciseValue);
 }
 
+// phenology (slider linking and point calcs)
+void MadDataClassification::on_hsldrEmergencePhenology_valueChanged(int theSliderValue)
+{
+  // update label according to desired resolution
+  // hardcoded for now at a range of 1 to 5
+  // slider goes from 0 to 1000
+
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbEmergencePhenology->setValue(myPreciseValue);
+  updatePhenologyEmergenceRatingLbl();
+}
+void MadDataClassification::on_hsldrEarEmergencePhenology_valueChanged(int theSliderValue)
+{
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbEarEmergencePhenology->setValue(myPreciseValue);
+}
+void MadDataClassification::on_hsldrStemElongationPhenology_valueChanged(int theSliderValue)
+{
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbStemElongationPhenology->setValue(myPreciseValue);
+}
+void MadDataClassification::on_hsldrFloweringPhenology_valueChanged(int theSliderValue)
+{
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbFloweringPhenology->setValue(myPreciseValue);
+}
+void MadDataClassification::on_hsldrYellowRipenessPhenology_valueChanged(int theSliderValue)
+{
+  int myValue = (theSliderValue/100);
+  float myPreciseValue = myValue/2.0;
+  dsbYellowRipenessPhenology->setValue(myPreciseValue);
+}
+
+// prev crop tab (slider linking and point calcs)
+
+// initial values tab (slider linking and point calcs)
+
+// soil tab (slider linking and point calcs)
+
+// site tab (slider linking and point calcs)
+
+// weather tab (slider linking and point calcs)
+
+// SV crop tab (slider linking and point calcs)
+
+// SV soil tab (slider linking and point calcs)
+
+// SV surface fluxes tab (slider linking and point calcs)
+
+// SV observations tab (slider linking and point calcs)
+
+
+   //
+  //  double spin box changes
+ //
+// cultivation (double spin box changes)
 void MadDataClassification::on_dsbVariety_valueChanged(double theValue)
 {
   int myPosition;
@@ -483,12 +724,71 @@ void MadDataClassification::on_dsbTillage_valueChanged(double theValue)
   lblTillageRating->setText(makeString(myResult));
 }
 
-QString MadDataClassification::makeString(double theValue)
+// phenology (double spin box changes)
+void MadDataClassification::on_dsbEmergencePhenology_valueChanged(double theValue)
 {
-  QString myString = QString::number(theValue);
-  return myString;
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrEmergencePhenology->setSliderPosition(myPosition);
+  float myResult = dsbEmergencePhenology->value() * sbEmergencePhenology->value();
+  lblEmergenceRatingPhenology->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbStemElongationPhenology_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrStemElongationPhenology->setSliderPosition(myPosition);
+  float myResult = dsbStemElongationPhenology->value() * sbStemElongationPhenology->value();
+  lblStemElongationRatingPhenology->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbEarEmergencePhenology_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrEarEmergencePhenology->setSliderPosition(myPosition);
+  float myResult = dsbEarEmergencePhenology->value() * sbEarEmergencePhenology->value();
+  lblEarEmergenceRatingPhenology->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbFloweringPhenology_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrFloweringPhenology->setSliderPosition(myPosition);
+  float myResult = dsbFloweringPhenology->value() * sbFloweringPhenology->value();
+  lblFloweringRatingPhenology->setText(makeString(myResult));
+}
+void MadDataClassification::on_dsbYellowRipenessPhenology_valueChanged(double theValue)
+{
+  int myPosition;
+  myPosition = theValue * 200;
+  hsldrYellowRipenessPhenology->setSliderPosition(myPosition);
+  float myResult = dsbYellowRipenessPhenology->value() * sbYellowRipenessPhenology->value();
+  lblYellowRipenessRatingPhenology->setText(makeString(myResult));
 }
 
+// prev crop tab (double spin box changes)
+
+// initial values tab (double spin box changes)
+
+// soil tab (double spin box changes)
+
+// site tab (double spin box changes)
+
+// weather tab (double spin box changes)
+
+// SV crop tab (double spin box changes)
+
+// SV soil tab (double spin box changes)
+
+// SV surface fluxes tab (double spin box changes)
+
+// SV observations tab (double spin box changes)
+
+
+   //
+  // label updates (with calcs)
+ //
+// cultivation tab (label updates (with calcs))
 void MadDataClassification::updateVarietyRatingLbl()
 {
   // calculate weight and update the label
@@ -569,6 +869,82 @@ void MadDataClassification::updateTillageRatingLbl()
   lblTillageRating->setText(myText);
   updateCultivationLabels();
 }
+
+// phenology tab (label updates (with calcs))
+void MadDataClassification::updatePhenologyEmergenceRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbEmergencePhenology->value();
+  float myGivenWeighting = dsbEmergencePhenology->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblEmergenceRatingPhenology->setText(myText);
+  updatePhenologyLabels();
+}
+void MadDataClassification::updatePhenologyStemElongationRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbStemElongationPhenology->value();
+  float myGivenWeighting = dsbStemElongationPhenology->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblStemElongationRatingPhenology->setText(myText);
+  updatePhenologyLabels();
+}
+void MadDataClassification::updatePhenologyEarEmergenceRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbEarEmergencePhenology->value();
+  float myGivenWeighting = dsbEarEmergencePhenology->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblEarEmergenceRatingPhenology->setText(myText);
+  updatePhenologyLabels();
+}
+void MadDataClassification::updatePhenologyFloweringRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbFloweringPhenology->value();
+  float myGivenWeighting = dsbFloweringPhenology->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblFloweringRatingPhenology->setText(myText);
+  updatePhenologyLabels();
+}
+void MadDataClassification::updatePhenologyYellowRipenessRatingLbl()
+{
+  // calculate weight and update the label
+  int myObservations = sbYellowRipenessPhenology->value();
+  float myGivenWeighting = dsbYellowRipenessPhenology->value();
+  float myWeight = myObservations * myGivenWeighting;
+  QString myText = makeString(myWeight);
+  lblYellowRipenessRatingPhenology->setText(myText);
+  updatePhenologyLabels();
+}
+
+// prev crop tab (label updates (with calcs))
+
+// initial values tab (label updates (with calcs))
+
+// soil tab (label updates (with calcs))
+
+// site tab (label updates (with calcs))
+
+// weather tab (label updates (with calcs))
+
+// SV crop tab (label updates (with calcs))
+
+// SV soil tab (label updates (with calcs))
+
+// SV surface fluxes tab (label updates (with calcs))
+
+// SV observations tab (label updates (with calcs))
+
+
+   //
+  //  Update ranking labels and pixmaps
+ //
+// cultivation (ranking labels and pixmaps)
 void MadDataClassification::updateCultivationLabels()
 {
   // updates totals
@@ -626,184 +1002,7 @@ void MadDataClassification::updateCultivationLabels()
   }
 }
 
-void MadDataClassification::on_leDatasetName_textChanged(const QString &theText)
-{
-    if (theText != "")
-    {
-      pbSave->setEnabled(true);
-    }
-    else
-    {
-      pbSave->setEnabled(false);
-    };
-}
-
-    //             //
-   //  phenology  //
-  //             //
-
-void MadDataClassification::on_gbxPhenology_clicked()
-{
-  // if values are editable, should not be able to select for any
-  // examples to be shown as it will destroy destroy current settings
-
-  if (gbxPhenology->isChecked())
-  {
-    lblExample->setVisible(false);
-    cbExamples->setDisabled(true);
-  }
-  else
-  {
-    cbExamples->setEnabled(true);
-    lblExample->setVisible(true);
-  }
-}
-void MadDataClassification::on_cbExamplesPhenology_currentIndexChanged (const QString &theValue)
-{
-  // if enabled, set values for corresponding classification
-  // options are: Platinum, Gold, Silver, Bronze
-  if (cbExamples->currentText()!="Examples")
-  {
-    lblExample->setText(theValue);
-  } //end if
-  else
-  {
-    lblExample->setText("Select Example");
-  } //end else
-}
-
-void MadDataClassification::on_hsldrEmergencePhenology_valueChanged(int theSliderValue)
-{
-  // update label according to desired resolution
-  // hardcoded for now at a range of 1 to 5
-  // slider goes from 0 to 1000
-
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbEmergencePhenology->setValue(myPreciseValue);
-  updatePhenologyEmergenceRatingLbl();
-}
-
-void MadDataClassification::on_hsldrEarEmergencePhenology_valueChanged(int theSliderValue)
-{
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbEarEmergencePhenology->setValue(myPreciseValue);
-}
-
-void MadDataClassification::on_hsldrStemElongationPhenology_valueChanged(int theSliderValue)
-{
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbStemElongationPhenology->setValue(myPreciseValue);
-}
-
-void MadDataClassification::on_hsldrFloweringPhenology_valueChanged(int theSliderValue)
-{
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbFloweringPhenology->setValue(myPreciseValue);
-}
-
-void MadDataClassification::on_hsldrYellowRipenessPhenology_valueChanged(int theSliderValue)
-{
-  int myValue = (theSliderValue/100);
-  float myPreciseValue = myValue/2.0;
-  dsbYellowRipenessPhenology->setValue(myPreciseValue);
-}
-
-void MadDataClassification::on_dsbEmergencePhenology_valueChanged(double theValue)
-{
-  int myPosition;
-  myPosition = theValue * 200;
-  hsldrEmergencePhenology->setSliderPosition(myPosition);
-  float myResult = dsbEmergencePhenology->value() * sbEmergencePhenology->value();
-  lblEmergenceRatingPhenology->setText(makeString(myResult));
-}
-void MadDataClassification::on_dsbStemElongationPhenology_valueChanged(double theValue)
-{
-  int myPosition;
-  myPosition = theValue * 200;
-  hsldrStemElongationPhenology->setSliderPosition(myPosition);
-  float myResult = dsbStemElongationPhenology->value() * sbStemElongationPhenology->value();
-  lblStemElongationRatingPhenology->setText(makeString(myResult));
-}
-void MadDataClassification::on_dsbEarEmergencePhenology_valueChanged(double theValue)
-{
-  int myPosition;
-  myPosition = theValue * 200;
-  hsldrEarEmergencePhenology->setSliderPosition(myPosition);
-  float myResult = dsbEarEmergencePhenology->value() * sbEarEmergencePhenology->value();
-  lblEarEmergenceRatingPhenology->setText(makeString(myResult));
-}
-void MadDataClassification::on_dsbFloweringPhenology_valueChanged(double theValue)
-{
-  int myPosition;
-  myPosition = theValue * 200;
-  hsldrFloweringPhenology->setSliderPosition(myPosition);
-  float myResult = dsbFloweringPhenology->value() * sbFloweringPhenology->value();
-  lblFloweringRatingPhenology->setText(makeString(myResult));
-}
-void MadDataClassification::on_dsbYellowRipenessPhenology_valueChanged(double theValue)
-{
-  int myPosition;
-  myPosition = theValue * 200;
-  hsldrYellowRipenessPhenology->setSliderPosition(myPosition);
-  float myResult = dsbYellowRipenessPhenology->value() * sbYellowRipenessPhenology->value();
-  lblYellowRipenessRatingPhenology->setText(makeString(myResult));
-}
-
-void MadDataClassification::updatePhenologyEmergenceRatingLbl()
-{
-  // calculate weight and update the label
-  int myObservations = sbEmergencePhenology->value();
-  float myGivenWeighting = dsbEmergencePhenology->value();
-  float myWeight = myObservations * myGivenWeighting;
-  QString myText = makeString(myWeight);
-  lblEmergenceRatingPhenology->setText(myText);
-  updatePhenologyLabels();
-}
-void MadDataClassification::updatePhenologyStemElongationRatingLbl()
-{
-  // calculate weight and update the label
-  int myObservations = sbStemElongationPhenology->value();
-  float myGivenWeighting = dsbStemElongationPhenology->value();
-  float myWeight = myObservations * myGivenWeighting;
-  QString myText = makeString(myWeight);
-  lblStemElongationRatingPhenology->setText(myText);
-  updatePhenologyLabels();
-}
-void MadDataClassification::updatePhenologyEarEmergenceRatingLbl()
-{
-  // calculate weight and update the label
-  int myObservations = sbEarEmergencePhenology->value();
-  float myGivenWeighting = dsbEarEmergencePhenology->value();
-  float myWeight = myObservations * myGivenWeighting;
-  QString myText = makeString(myWeight);
-  lblEarEmergenceRatingPhenology->setText(myText);
-  updatePhenologyLabels();
-}
-void MadDataClassification::updatePhenologyFloweringRatingLbl()
-{
-  // calculate weight and update the label
-  int myObservations = sbFloweringPhenology->value();
-  float myGivenWeighting = dsbFloweringPhenology->value();
-  float myWeight = myObservations * myGivenWeighting;
-  QString myText = makeString(myWeight);
-  lblFloweringRatingPhenology->setText(myText);
-  updatePhenologyLabels();
-}
-void MadDataClassification::updatePhenologyYellowRipenessRatingLbl()
-{
-  // calculate weight and update the label
-  int myObservations = sbYellowRipenessPhenology->value();
-  float myGivenWeighting = dsbYellowRipenessPhenology->value();
-  float myWeight = myObservations * myGivenWeighting;
-  QString myText = makeString(myWeight);
-  lblYellowRipenessRatingPhenology->setText(myText);
-  updatePhenologyLabels();
-}
-
+// phenology (ranking labels and pixmaps)
 void MadDataClassification::updatePhenologyLabels()
 {
   // updates totals
@@ -858,49 +1057,28 @@ void MadDataClassification::updatePhenologyLabels()
   }
 }
 
-    //             //
-   //  prev crop  //
-  //             //
+// prev crop tab (ranking labels and pixmaps)
 
-  // slider linking and point calcs
+// initial values tab (ranking labels and pixmaps)
 
+// soil tab (ranking labels and pixmaps)
 
-    //                  //
-   //  initial values  //
-  //                  //
+// site tab (ranking labels and pixmaps)
 
-  // slider linking and point calcs
+// weather tab (ranking labels and pixmaps)
 
+// SV crop tab (ranking labels and pixmaps)
 
+// SV soil tab (ranking labels and pixmaps)
 
-    //        //
-   //  soil  //
-  //        //
+// SV surface fluxes tab (ranking labels and pixmaps)
 
-  // slider linking and point calcs
+// SV observations tab (ranking labels and pixmaps)
 
-
-
-    //             //
-   //  site data  //
-  //             //
-
-  // slider linking and point calcs
-
-
-
-    //           //
-   //  weather  //
-  //           //
-
-  // slider linking and point calcs
-
-
-
-    //              //
-   //  state vars  //
-  //              //
-
+   //
+  //  Saving the form
+ //
+//  when save button is pressed, it gets converted to xml here
 void MadDataClassification::on_pbSave_clicked()
 {
   // save current settings for phenology to xml file
