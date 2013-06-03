@@ -106,47 +106,23 @@ bool MadSVObservations::fromXml(const QString theXml)
 QString MadSVObservations::toXml()
 {
   QString myString;
-  myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  //myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
-  myString+=QString("</dataset>\n");
+  myString+=QString("    <observations guid=\"" + guid() + "\">\n");
+
+  myString+=QString("     <lodging>\n");
+  myString+=mLodging.toXml();
+  myString+=QString("     </lodging>\n");
+
+  myString+=QString("     <pestsordiseases>\n");
+  myString+=mPestsOrDiseases.toXml();
+  myString+=QString("     </pestsordiseases>\n");
+
+  myString+=QString("     <damage>\n");
+  myString+=mDamages.toXml();
+  myString+=QString("     </damage>\n");
+
+  myString+=QString("    </observations>\n");
   return myString;
 
-  /*   example structure of xml file
-
-    <dataset guid="hj243g5hjk34gjh2g43">
-      <name>Some name</name>
-      <description>The given description</description>
-      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
-      <cultivation>
-        <variety>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </variety>
-        <sowing>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </sowing>
-        <harvest>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </harvest>
-      </cultivation>
-    </dataset>
-
-
-
-  */
 }
 
 QString MadSVObservations::toText()

@@ -38,7 +38,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="icon">
@@ -7556,7 +7556,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
+             <width>458</width>
              <height>383</height>
             </rect>
            </property>
@@ -8215,7 +8215,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
+             <width>516</width>
              <height>383</height>
             </rect>
            </property>
@@ -8889,8 +8889,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>377</height>
+             <width>444</width>
+             <height>349</height>
             </rect>
            </property>
            <attribute name="icon">

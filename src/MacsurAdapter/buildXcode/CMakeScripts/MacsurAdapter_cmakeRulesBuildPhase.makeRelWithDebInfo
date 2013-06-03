@@ -36,18 +36,49 @@ all: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/MadLogoTransparent200x160.png\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/newMACSURLogoTransparentFull.png\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/jpiHeader.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2.htm\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/image003.jpg\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/image001.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/image004.jpg\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/image005.jpg\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/image002.gif\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/header.htm\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/themedata.xml\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CropMWP1TaskC1-2_files/filelist.xml\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/silver.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/gold.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/platinum.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/bronze.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Smith-Reynolds-Extended-Reconstructed-SST-ERSST.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Reynolds-Optimum-Interpolation-Ver-2-OIv2.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Reynolds-Optimum-Interpolation-OI-SST.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Reynolds-Reconstructed-SST.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/NCEP-NCAR-Reanalysis.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/NCAR-Sea-Level-Pressure.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Lucas-Waliser-Satellite-ECT-Corrected-OLR.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Kaplan-SST.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Kaplan-SLP.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Jones-CRU-SLP.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/JonesCRUAirTemp.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Hulme-CRU.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/HadISST.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/Dai.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/CRU-TS-2.0.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/I-COADS.html\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/cmap.html\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/resources/resources.qrc.depends\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc
 	/Developer/Tools/Qt/rcc -name resources -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc
 
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h
-	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h
+	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.h
 
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h
-	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h
+	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.h
 
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h
-	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h
+	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.h

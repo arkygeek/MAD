@@ -139,11 +139,11 @@ bool MadSubCategory::fromXml(const QString theXml)
 QString MadSubCategory::toXml()
 {
   QString myString;
-  myString+=QString("      <minData>" + QString::number(mMinData) + "</minData>\n");
-  myString+=QString("      <depth>" + QString::number(mDepth) + "</depth>\n");
-  myString+=QString("      <observations>" + QString::number(mObservations) + "</observations>\n");
-  myString+=QString("      <weightPoints>" + QString::number(mWeightPoints) + "</weightPoints>\n");
-  myString+=QString("      <replicates>" + QString::number(mReplicates) + "</replicates>\n");
+  myString+=QString("        <mindata>" + QString::number(mMinData) + "</mindata>\n");
+  myString+=QString("        <depth>" + QString::number(mDepth) + "</depth>\n");
+  myString+=QString("        <observations>" + QString::number(mObservations) + "</observations>\n");
+  myString+=QString("        <weightpoints>" + QString::number(mWeightPoints) + "</weightpoints>\n");
+  myString+=QString("        <replicates>" + QString::number(mReplicates) + "</replicates>\n");
   return myString;
 }
 

@@ -144,47 +144,36 @@ bool MadSVCrop::fromXml(const QString theXml)
 QString MadSVCrop::toXml()
 {
   QString myString;
-  myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  //myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
-  myString+=QString("</dataset>\n");
+  myString+=QString("    <crop guid=\"" + guid() + "\">\n");
+
+  myString+=QString("     <agrbiomass>\n");
+  myString+=mAgrBiomass.toXml();
+  myString+=QString("     </agrbiomass>\n");
+
+  myString+=QString("     <weightorgans>\n");
+  myString+=mWeightOrgans.toXml();
+  myString+=QString("     </weightorgans>\n");
+
+  myString+=QString("     <rootbiomass>\n");
+  myString+=mRootBiomass.toXml();
+  myString+=QString("     </rootbiomass>\n");
+
+  myString+=QString("     <ninagrbiomass>\n");
+  myString+=mNInAGrBiomass.toXml();
+  myString+=QString("     </ninagrbiomass>\n");
+
+  myString+=QString("     <ninorgans>\n");
+  myString+=mNInOrgans.toXml();
+  myString+=QString("     </ninorgans>\n");
+
+  myString+=QString("     <lai>\n");
+  myString+=mLai.toXml();
+  myString+=QString("     </lai>\n");
+
+  myString+=QString("    </crop>\n");
   return myString;
 
-  /*   example structure of xml file
 
-    <dataset guid="hj243g5hjk34gjh2g43">
-      <name>Some name</name>
-      <description>The given description</description>
-      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
-      <cultivation>
-        <variety>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </variety>
-        <sowing>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </sowing>
-        <harvest>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </harvest>
-      </cultivation>
-    </dataset>
-
-
-
-  */
 }
 
 QString MadSVCrop::toText()

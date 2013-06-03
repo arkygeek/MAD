@@ -106,43 +106,9 @@ QString MadDataClassificationInitialValues::toXml()
   myString+=mNitrogenMin.toXml();
   myString+=QString("    </nmin>\n");
 
-  myString+=QString("  </dataset>\n");
+  myString+=QString("  </initialvalues>\n");
   return myString;
 
-  /*   example structure of xml file
-
-    <dataset guid="hj243g5hjk34gjh2g43">
-      <name>Some name</name>
-      <description>The given description</description>
-      <imageFile>/home/arkygeek/.macsurAdapter/images/image.png</imageFile>
-      <cultivation>
-        <variety>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </variety>
-        <sowing>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </sowing>
-        <harvest>
-          <minData>true</minData>
-          <depth>1.0</depth>
-          <observations>3</observations>
-          <weightPoints>2.0</weightPoints>
-          <replicates>3</replicates>
-        </harvest>
-      </cultivation>
-    </dataset>
-
-
-
-  */
 }
 
 QString MadDataClassificationInitialValues::toText()

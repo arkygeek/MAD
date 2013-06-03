@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'madmainwindowbase.ui'
 **
-** Created: Wed May 22 18:06:24 2013
+** Created: Mon Jun 3 17:38:45 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -27,9 +27,9 @@
 #include <QtGui/QPlainTextEdit>
 #include <QtGui/QPushButton>
 #include <QtGui/QSpacerItem>
-#include <QtGui/QSplitter>
 #include <QtGui/QStatusBar>
 #include <QtGui/QTabWidget>
+#include <QtGui/QTextBrowser>
 #include <QtGui/QTextEdit>
 #include <QtGui/QToolBar>
 #include <QtGui/QVBoxLayout>
@@ -56,8 +56,6 @@ public:
     QLabel *label;
     QWidget *tabModels;
     QGridLayout *gridLayout_3;
-    QSplitter *splitter;
-    QWidget *layoutWidget;
     QVBoxLayout *vLayout;
     QLabel *lblCurrentInventory;
     QListView *lvwCurrentInventoryModels;
@@ -67,15 +65,18 @@ public:
     QCheckBox *chbxParameters;
     QCheckBox *chbxInputData;
     QCheckBox *checkBox;
-    QWidget *layoutWidget1;
-    QVBoxLayout *vlayoutModelSpecs;
     QLabel *lblModelSpecs;
     QTextEdit *tedModelSpecsModel;
     QPushButton *pbViewAsText;
+    QPushButton *pbViewAsHtml;
+    QPushButton *pushButton;
+    QPushButton *pbExportCsv;
+    QPushButton *pbTableView;
     QWidget *tabData;
     QGridLayout *gridLayout_5;
-    QPushButton *pbClassification;
+    QTextBrowser *txtbrwsData;
     QComboBox *modelNameComboBox;
+    QPushButton *pbClassification;
     QMenuBar *menuBar;
     QMenu *menuFile;
     QMenu *menuHelp;
@@ -86,7 +87,7 @@ public:
     {
         if (MadMainWindow->objectName().isEmpty())
             MadMainWindow->setObjectName(QString::fromUtf8("MadMainWindow"));
-        MadMainWindow->resize(534, 367);
+        MadMainWindow->resize(712, 462);
         actionOpen = new QAction(MadMainWindow);
         actionOpen->setObjectName(QString::fromUtf8("actionOpen"));
         actionAbout = new QAction(MadMainWindow);
@@ -162,28 +163,21 @@ public:
         gridLayout_3->setSpacing(6);
         gridLayout_3->setContentsMargins(11, 11, 11, 11);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        splitter = new QSplitter(tabModels);
-        splitter->setObjectName(QString::fromUtf8("splitter"));
-        splitter->setOrientation(Qt::Horizontal);
-        layoutWidget = new QWidget(splitter);
-        layoutWidget->setObjectName(QString::fromUtf8("layoutWidget"));
-        vLayout = new QVBoxLayout(layoutWidget);
+        vLayout = new QVBoxLayout();
         vLayout->setSpacing(6);
-        vLayout->setContentsMargins(11, 11, 11, 11);
         vLayout->setObjectName(QString::fromUtf8("vLayout"));
-        vLayout->setContentsMargins(0, 0, 0, 0);
-        lblCurrentInventory = new QLabel(layoutWidget);
+        lblCurrentInventory = new QLabel(tabModels);
         lblCurrentInventory->setObjectName(QString::fromUtf8("lblCurrentInventory"));
         lblCurrentInventory->setAlignment(Qt::AlignCenter);
 
         vLayout->addWidget(lblCurrentInventory);
 
-        lvwCurrentInventoryModels = new QListView(layoutWidget);
+        lvwCurrentInventoryModels = new QListView(tabModels);
         lvwCurrentInventoryModels->setObjectName(QString::fromUtf8("lvwCurrentInventoryModels"));
 
         vLayout->addWidget(lvwCurrentInventoryModels);
 
-        grpbxWhatToShow = new QGroupBox(layoutWidget);
+        grpbxWhatToShow = new QGroupBox(tabModels);
         grpbxWhatToShow->setObjectName(QString::fromUtf8("grpbxWhatToShow"));
         gridLayout = new QGridLayout(grpbxWhatToShow);
         gridLayout->setSpacing(6);
@@ -216,33 +210,44 @@ public:
 
         vLayout->addWidget(grpbxWhatToShow);
 
-        splitter->addWidget(layoutWidget);
-        layoutWidget1 = new QWidget(splitter);
-        layoutWidget1->setObjectName(QString::fromUtf8("layoutWidget1"));
-        vlayoutModelSpecs = new QVBoxLayout(layoutWidget1);
-        vlayoutModelSpecs->setSpacing(6);
-        vlayoutModelSpecs->setContentsMargins(11, 11, 11, 11);
-        vlayoutModelSpecs->setObjectName(QString::fromUtf8("vlayoutModelSpecs"));
-        vlayoutModelSpecs->setContentsMargins(0, 0, 0, 0);
-        lblModelSpecs = new QLabel(layoutWidget1);
+
+        gridLayout_3->addLayout(vLayout, 0, 0, 3, 1);
+
+        lblModelSpecs = new QLabel(tabModels);
         lblModelSpecs->setObjectName(QString::fromUtf8("lblModelSpecs"));
         lblModelSpecs->setAlignment(Qt::AlignCenter);
 
-        vlayoutModelSpecs->addWidget(lblModelSpecs);
+        gridLayout_3->addWidget(lblModelSpecs, 0, 1, 1, 2);
 
-        tedModelSpecsModel = new QTextEdit(layoutWidget1);
+        tedModelSpecsModel = new QTextEdit(tabModels);
         tedModelSpecsModel->setObjectName(QString::fromUtf8("tedModelSpecsModel"));
 
-        vlayoutModelSpecs->addWidget(tedModelSpecsModel);
+        gridLayout_3->addWidget(tedModelSpecsModel, 1, 1, 1, 2);
 
-        pbViewAsText = new QPushButton(layoutWidget1);
+        pbViewAsText = new QPushButton(tabModels);
         pbViewAsText->setObjectName(QString::fromUtf8("pbViewAsText"));
 
-        vlayoutModelSpecs->addWidget(pbViewAsText);
+        gridLayout_3->addWidget(pbViewAsText, 2, 1, 1, 1);
 
-        splitter->addWidget(layoutWidget1);
+        pbViewAsHtml = new QPushButton(tabModels);
+        pbViewAsHtml->setObjectName(QString::fromUtf8("pbViewAsHtml"));
 
-        gridLayout_3->addWidget(splitter, 0, 0, 1, 1);
+        gridLayout_3->addWidget(pbViewAsHtml, 2, 2, 1, 1);
+
+        pushButton = new QPushButton(tabModels);
+        pushButton->setObjectName(QString::fromUtf8("pushButton"));
+
+        gridLayout_3->addWidget(pushButton, 3, 0, 1, 1);
+
+        pbExportCsv = new QPushButton(tabModels);
+        pbExportCsv->setObjectName(QString::fromUtf8("pbExportCsv"));
+
+        gridLayout_3->addWidget(pbExportCsv, 3, 1, 1, 1);
+
+        pbTableView = new QPushButton(tabModels);
+        pbTableView->setObjectName(QString::fromUtf8("pbTableView"));
+
+        gridLayout_3->addWidget(pbTableView, 3, 2, 1, 1);
 
         tabwidMainWin->addTab(tabModels, QString());
         tabData = new QWidget();
@@ -251,10 +256,10 @@ public:
         gridLayout_5->setSpacing(6);
         gridLayout_5->setContentsMargins(11, 11, 11, 11);
         gridLayout_5->setObjectName(QString::fromUtf8("gridLayout_5"));
-        pbClassification = new QPushButton(tabData);
-        pbClassification->setObjectName(QString::fromUtf8("pbClassification"));
+        txtbrwsData = new QTextBrowser(tabData);
+        txtbrwsData->setObjectName(QString::fromUtf8("txtbrwsData"));
 
-        gridLayout_5->addWidget(pbClassification, 0, 0, 1, 1);
+        gridLayout_5->addWidget(txtbrwsData, 0, 0, 1, 2);
 
         modelNameComboBox = new QComboBox(tabData);
         modelNameComboBox->setObjectName(QString::fromUtf8("modelNameComboBox"));
@@ -263,6 +268,11 @@ public:
 
         gridLayout_5->addWidget(modelNameComboBox, 1, 0, 1, 1);
 
+        pbClassification = new QPushButton(tabData);
+        pbClassification->setObjectName(QString::fromUtf8("pbClassification"));
+
+        gridLayout_5->addWidget(pbClassification, 1, 1, 1, 1);
+
         tabwidMainWin->addTab(tabData, QString());
 
         gridLayout_4->addWidget(tabwidMainWin, 0, 0, 1, 1);
@@ -270,7 +280,7 @@ public:
         MadMainWindow->setCentralWidget(centralWidget);
         menuBar = new QMenuBar(MadMainWindow);
         menuBar->setObjectName(QString::fromUtf8("menuBar"));
-        menuBar->setGeometry(QRect(0, 0, 534, 22));
+        menuBar->setGeometry(QRect(0, 0, 712, 22));
         menuFile = new QMenu(menuBar);
         menuFile->setObjectName(QString::fromUtf8("menuFile"));
         menuHelp = new QMenu(menuBar);
@@ -299,7 +309,7 @@ public:
 
     void retranslateUi(QMainWindow *MadMainWindow)
     {
-        MadMainWindow->setWindowTitle(QApplication::translate("MadMainWindow", "MadMainWindow", 0, QApplication::UnicodeUTF8));
+        MadMainWindow->setWindowTitle(QApplication::translate("MadMainWindow", "MACSUR Model Adapter", 0, QApplication::UnicodeUTF8));
         actionOpen->setText(QApplication::translate("MadMainWindow", "Open", 0, QApplication::UnicodeUTF8));
         actionAbout->setText(QApplication::translate("MadMainWindow", "About", 0, QApplication::UnicodeUTF8));
         cbAboutMain->clear();
@@ -356,11 +366,24 @@ public:
 #ifndef QT_NO_TOOLTIP
         pbViewAsText->setToolTip(QApplication::translate("MadMainWindow", "<html><head/><body><p>Details of selection opens in a new text window</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        pbViewAsText->setText(QApplication::translate("MadMainWindow", "View Selection as Text", 0, QApplication::UnicodeUTF8));
+        pbViewAsText->setText(QApplication::translate("MadMainWindow", "View as Text", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        pbViewAsHtml->setToolTip(QApplication::translate("MadMainWindow", "<html><head/><body><p>Details of selection opens in a new text window</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        pbViewAsHtml->setText(QApplication::translate("MadMainWindow", "View as HTML", 0, QApplication::UnicodeUTF8));
+        pushButton->setText(QApplication::translate("MadMainWindow", "Manage Models", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        pbExportCsv->setToolTip(QApplication::translate("MadMainWindow", "<html><head/><body><p>Details of selection opens in a new text window</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        pbExportCsv->setText(QApplication::translate("MadMainWindow", "Export CSV", 0, QApplication::UnicodeUTF8));
+#ifndef QT_NO_TOOLTIP
+        pbTableView->setToolTip(QApplication::translate("MadMainWindow", "<html><head/><body><p>Details of selection opens in a new text window</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        pbTableView->setText(QApplication::translate("MadMainWindow", "Table View", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabModels), QApplication::translate("MadMainWindow", "Models", 0, QApplication::UnicodeUTF8));
-        pbClassification->setText(QApplication::translate("MadMainWindow", "Classification", 0, QApplication::UnicodeUTF8));
         modelNameComboBox->clear();
         modelNameComboBox->insertItems(0, QStringList()
+         << QApplication::translate("MadMainWindow", "Select Dataset", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "CMAP", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "I-COADS", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "CRU TS 2.0", 0, QApplication::UnicodeUTF8)
@@ -377,9 +400,11 @@ public:
          << QApplication::translate("MadMainWindow", "Reynold Reconstructed SST", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Reynolds Optimum Interpolation (OI) SST", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadMainWindow", "Smith and Reynolds Extended Reconstructed SLP (ERSLP)", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Smith and Reynolds Extended Reconstructed SST (ERSST)", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadMainWindow", "Other", 0, QApplication::UnicodeUTF8)
         );
+        pbClassification->setText(QApplication::translate("MadMainWindow", "Classification", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabData), QApplication::translate("MadMainWindow", "Data", 0, QApplication::UnicodeUTF8));
         menuFile->setTitle(QApplication::translate("MadMainWindow", "File", 0, QApplication::UnicodeUTF8));
         menuHelp->setTitle(QApplication::translate("MadMainWindow", "Help", 0, QApplication::UnicodeUTF8));

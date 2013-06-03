@@ -138,13 +138,29 @@ bool MadSVSurfaceFluxes::fromXml(const QString theXml)
 QString MadSVSurfaceFluxes::toXml()
 {
   QString myString;
-  myString+=QString("<MadSVSurfaceFluxes guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <et>" + MadUtils::xmlEncode(mEt) + "</et>\n");
-  //myString+=QString("  <nh3Loss>" + MadUtils::xmlEncode(mNh3Loss) + "</nh3Loss>\n");
-  //myString+=QString("  <n2oLoss>" + MadUtils::xmlEncode(mN2oLoss) + "</n2oLoss>\n");
-  //myString+=QString("  <n2Loss>" + MadUtils::xmlEncode(mN2Loss) + "</n2Loss>\n");
-  //myString+=QString("  <ch4Loss>" + MadUtils::xmlEncode(mCh4Loss) + "</ch4Loss>\n");
-  myString+=QString("</MadSVSurfaceFluxes>\n");
+  myString+=QString("     <surfacefluxes guid=\"" + guid() + "\">\n");
+
+  myString+=QString("      <et>\n");
+  myString+=mEt.toXml();
+  myString+=QString("      </et>\n");
+
+  myString+=QString("      <nh3loss>");
+  myString+=mNh3Loss.toXml();
+  myString+=QString("      </nh3loss>\n");
+
+  myString+=QString("      <n2oloss>");
+  myString+=mN2oLoss.toXml();
+  myString+=QString("      </n2oloss>\n");
+
+  myString+=QString("      <n2loss>");
+  myString+=mN2Loss.toXml();
+  myString+=QString("      </n2loss>\n");
+
+  myString+=QString("      <ch4loss>");
+  myString+=mCh4Loss.toXml();
+  myString+=QString("      </ch4loss>\n");
+
+  myString+=QString("     </surfacefluxes>\n");
   return myString;
 }
 

@@ -189,11 +189,8 @@ QString MadDataClassificationCultivation::toXml()
   myString+=mTillage.toXml();
   myString+=QString("    </tillage>\n");
 
-  //myString+=QString("      <depth>" + QString::number(variety().depth()) + "</depth>\n");
-  //myString+=QString("      <observations>" + QString::number(variety().observations()) + "</observations>\n");
-  //myString+=QString("      <weightPoints>" + QString::number(variety().weightPoints()) + "</weightPoints>\n");
-  //myString+=QString("      <replicates>" + QString::number(variety().replicates()) + "</replicates>\n");
   myString+=QString("  </cultivation>\n");
+
   return myString;
 }
 
