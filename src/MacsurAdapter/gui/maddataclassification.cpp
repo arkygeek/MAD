@@ -3253,8 +3253,9 @@ void MadDataClassification::updateSVObservationsLabels()
 void MadDataClassification::on_pbSave_clicked()
 {
   // save current settings for phenology to xml file
-  // first we have to get the values
 
+  // first we have to get the values
+  // initialise variables
   MadDataClassificationCultivation myCultivation;
   MadDataClassificationPhenology myPhenology;
   MadDataClassificationPrevCrop myPrevCropSet;
@@ -3264,7 +3265,7 @@ void MadDataClassification::on_pbSave_clicked()
   MadDataClassificationWeather myWeather;
   MadStateVars myStateVars;
 
-  // cultivation
+  // cultivation (initialise variables)
   MadSubCategory myCultVariety;
   MadSubCategory myCultSowing;
   MadSubCategory myCultHarvest;
@@ -3274,14 +3275,14 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myCultYield;
   MadSubCategory myCultTillage;
 
-  // phenology
+  // phenology (initialise variables)
   MadSubCategory myPhenologyEmergence;
   MadSubCategory myPhenologyStemElongation;
   MadSubCategory myPhenologyEarEmergence;
   MadSubCategory myPhenologyFlowering;
   MadSubCategory myPhenologyYellowRipeness;
 
-  // prev crop
+  // prev crop (initialise variables)
   MadSubCategory myPrevCropCrop;
   MadSubCategory myPrevCropSowingDate;
   MadSubCategory myPrevCropHarvestDate;
@@ -3290,26 +3291,26 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myPrevCropFertilisation;
   MadSubCategory myPrevCropIrrigation;
 
-  //initial values
+  //initial values (initialise variables)
   MadSubCategory myInitialValuesSoilMoisture;
-  MadSubCategory myInitialValuesNitrogenMin;
+  MadSubCategory myInitialValuesNMin;
 
-  // soil
-  MadSubCategory mySoilCarbonOrganic;
-  MadSubCategory mySoilNitrogenOrganic;
+  // soil (initialise variables)
+  MadSubCategory mySoilCOrg;
+  MadSubCategory mySoilNOrg;
   MadSubCategory mySoilTexture;
   MadSubCategory mySoilBulkDensity;
   MadSubCategory mySoilFieldCapacity;
   MadSubCategory mySoilWiltingPoint;
   MadSubCategory mySoilPfCurve;
-  MadSubCategory mySoilHydrCondState;
+  MadSubCategory mySoilHydrCondCurve;
 
-  // site
+  // site (initialise variables)
   MadSubCategory mySiteDataLatitude;
   MadSubCategory mySiteDataLongitude;
   MadSubCategory mySiteDataAltitude;
 
-  //weather
+  //weather (initialise variables)
   MadSubCategory myWeatherPrecipitation;
   MadSubCategory myWeatherTAve;
   MadSubCategory myWeatherTMin;
@@ -3319,7 +3320,7 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myWeatherGlobalRadiation;
   MadSubCategory myWeatherSunshineHours;
 
-  //state vars - soil
+  //state vars - soil (initialise variables)
   MadSubCategory myStateVarsSoilSoilWaterGrav;
   MadSubCategory myStateVarsSoilPressureHeads;
   MadSubCategory myStateVarsSoilNMin;
@@ -3327,7 +3328,7 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myStateVarsSoilWaterFluxBottomRoot;
   MadSubCategory myStateVarsSoilNFluxBottomRoot;
 
-  // state vars - crop
+  // state vars - crop (initialise variables)
   MadSubCategory myStateVarsCropAGrBiomass;
   MadSubCategory myStateVarsCropWeightOrgans;
   MadSubCategory myStateVarsCropRootBiomass;
@@ -3335,101 +3336,104 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory myStateVarsCropNInOrgans;
   MadSubCategory myStateVarsCropLAI;
 
-  // state vars - surface fluxes
+  // state vars - surface fluxes (initialise variables)
   MadSubCategory myStateVarsSurfaceFluxesEt;
   MadSubCategory myStateVarsSurfaceFluxesNh3Loss;
   MadSubCategory myStateVarsSurfaceFluxesN2OLoss;
   MadSubCategory myStateVarsSurfaceFluxesN2Loss;
   MadSubCategory myStateVarsSurfaceFluxesCh4Loss;
 
-  // state vars - observation data
+  // state vars - observation data (initialise variables)
   MadSubCategory myStateVarsObservationsLodging;
   MadSubCategory myStateVarsObservationsPestsOrDiseases;
   MadSubCategory myStateVarsObservationsDamages;
 
-    //////////////////////////////////
-   //get the values from the form  //
-  //////////////////////////////////
+     //------------------------------//
+    //get the values from the form  //
+   //------------------------------//
 
   //
-  // Cultivation values from form
+  // Cultivation - set the values from form
   //
 
-  // variety
+  // variety (set values from form)
   myCultVariety.setMinData(chbxVariety->isChecked());
   myCultVariety.setDepth(0);
   myCultVariety.setWeightPoints(dsbVariety->value());
   myCultVariety.setObservations(sbVariety->value());
   myCultVariety.setReplicates(0);
-  // sowing
+  // sowing (set values from form)
   myCultSowing.setMinData(chbxSowing->isChecked());
   myCultSowing.setDepth(0);
   myCultSowing.setWeightPoints(dsbSowing->value());
   myCultSowing.setObservations(sbSowing->value());
   myCultSowing.setReplicates(0);
-  // harvest
+  // harvest (set values from form)
   myCultHarvest.setMinData(chbxHarvest->isChecked());
   myCultHarvest.setDepth(0);
   myCultHarvest.setWeightPoints(dsbHarvest->value());
   myCultHarvest.setObservations(sbHarvest->value());
   myCultHarvest.setReplicates(0);
-  // fertilisation
+  // fertilisation (set values from form)
   myCultFertilisation.setMinData(chbxFertilisation->isChecked());
   myCultFertilisation.setDepth(0);
   myCultFertilisation.setWeightPoints(dsbFertilisation->value());
   myCultFertilisation.setObservations(sbFertilisation->value());
   myCultFertilisation.setReplicates(0);
-  // irrigation
+  // irrigation (set values from form)
   myCultIrrigation.setMinData(chbxIrrigation->isChecked());
   myCultIrrigation.setDepth(0);
   myCultIrrigation.setWeightPoints(dsbIrrigation->value());
   myCultIrrigation.setObservations(sbIrrigation->value());
   myCultIrrigation.setReplicates(0);
-  // seed density
+  // seed density (set values from form)
   myCultSeedDensity.setMinData(chbxSeedDensity->isChecked());
   myCultSeedDensity.setDepth(0);
   myCultSeedDensity.setWeightPoints(dsbSeedDensity->value());
   myCultSeedDensity.setObservations(sbSeedDensity->value());
   myCultSeedDensity.setReplicates(0);
-  // yield
+  // yield (set values from form)
   myCultYield.setMinData(chbxYield->isChecked());
   myCultYield.setDepth(0);
   myCultYield.setWeightPoints(dsbYield->value());
   myCultYield.setObservations(sbYield->value());
   myCultYield.setReplicates(0);
-  // tillage
+  // tillage (set values from form)
   myCultYield.setMinData(chbxTillage->isChecked());
   myCultTillage.setDepth(0);
   myCultTillage.setWeightPoints(dsbTillage->value());
   myCultTillage.setObservations(sbTillage->value());
   myCultTillage.setReplicates(0);
 
-  // Phenology values from form
-  // emergence
+  //
+  // Phenology set values from form
+  //
+
+  // emergence (set values from form)
   myPhenologyEmergence.setMinData(chbxEmergencePhenology->isChecked());
   myPhenologyEmergence.setDepth(0);
   myPhenologyEmergence.setWeightPoints(dsbEmergencePhenology->value());
   myPhenologyEmergence.setObservations(sbEmergencePhenology->value());
   myPhenologyEmergence.setReplicates(0);
-  // stem elongation
+  // stem elongation (set values from form)
   myPhenologyStemElongation.setMinData(chbxStemElongationPhenology->isChecked());
   myPhenologyStemElongation.setDepth(0);
   myPhenologyStemElongation.setWeightPoints(dsbStemElongationPhenology->value());
   myPhenologyStemElongation.setObservations(sbStemElongationPhenology->value());
   myPhenologyStemElongation.setReplicates(0);
-  // ear emergence
+  // ear emergence (set values from form)
   myPhenologyEarEmergence.setMinData(chbxEarEmergencePhenology->isChecked());
   myPhenologyEarEmergence.setDepth(0);
   myPhenologyEarEmergence.setWeightPoints(dsbEarEmergencePhenology->value());
   myPhenologyEarEmergence.setObservations(sbEarEmergencePhenology->value());
   myPhenologyEarEmergence.setReplicates(0);
-  // flowering
+  // flowering (set values from form)
   myPhenologyFlowering.setMinData(chbxFloweringPhenology->isChecked());
   myPhenologyFlowering.setDepth(0);
   myPhenologyFlowering.setWeightPoints(dsbFloweringPhenology->value());
   myPhenologyFlowering.setObservations(sbFloweringPhenology->value());
   myPhenologyFlowering.setReplicates(0);
-  // yellow ripeness
+  // yellow ripeness (set values from form)
   myPhenologyYellowRipeness.setMinData(chbxYellowRipenessPhenology->isChecked());
   myPhenologyYellowRipeness.setDepth(0);
   myPhenologyYellowRipeness.setWeightPoints(dsbYellowRipenessPhenology->value());
@@ -3437,124 +3441,212 @@ void MadDataClassification::on_pbSave_clicked()
   myPhenologyYellowRipeness.setReplicates(0);
 
   //
-  // PrevCrop values from form
+  // PrevCrop set values from form
   //
 
-  // crop
+  // crop (set values from form)
+  myPrevCropCrop.setMinData(chbxCropPrevCrop->isChecked());
+  myPrevCropCrop.setDepth(0);
+  myPrevCropCrop.setWeightPoints(dsbCropPrevCrop->value());
+  myPrevCropCrop.setObservations(sbCropPrevCrop->value());
+  myPrevCropCrop.setReplicates(0);
 
-  // sowing date
+  // sowing date (set values from form)
+  myPrevCropSowingDate.setMinData(chbxSowingDatePrevCrop->isChecked());
+  myPrevCropSowingDate.setDepth(0);
+  myPrevCropSowingDate.setWeightPoints(dsbSowingDatePrevCrop->value());
+  myPrevCropSowingDate.setObservations(sbSowingDatePrevCrop->value());
+  myPrevCropSowingDate.setReplicates(0);
 
-  // harvest date
+  // harvest date (set values from form)
+  myPrevCropHarvestDate.setMinData(chbxHarvestDatePrevCrop->isChecked());
+  myPrevCropHarvestDate.setDepth(0);
+  myPrevCropHarvestDate.setWeightPoints(dsbHarvestDatePrevCrop->value());
+  myPrevCropHarvestDate.setObservations(sbHarvestDatePrevCrop->value());
+  myPrevCropHarvestDate.setReplicates(0);
 
-  // yield
+  // yield (set values from form)
+  myPrevCropYield.setMinData(chbxYieldPrevCrop->isChecked());
+  myPrevCropYield.setDepth(0);
+  myPrevCropYield.setWeightPoints(dsbYieldPrevCrop->value());
+  myPrevCropYield.setObservations(sbYieldPrevCrop->value());
+  myPrevCropYield.setReplicates(0);
 
-  // residue mgmt
+  // residue mgmt (set values from form)
+  myPrevCropResidueMgmt.setMinData(chbxResidueMgmtPrevCrop->isChecked());
+  myPrevCropResidueMgmt.setDepth(0);
+  myPrevCropResidueMgmt.setWeightPoints(dsbResidueMgmtPrevCrop->value());
+  myPrevCropResidueMgmt.setObservations(sbResidueMgmtPrevCrop->value());
+  myPrevCropResidueMgmt.setReplicates(0);
 
-  // fertilisation
+  // fertilisation (set values from form)
+  myPrevCropFertilisation.setMinData(chbxFertilisationPrevCrop->isChecked());
+  myPrevCropFertilisation.setDepth(0);
+  myPrevCropFertilisation.setWeightPoints(dsbFertilisationPrevCrop->value());
+  myPrevCropFertilisation.setObservations(sbFertilisationPrevCrop->value());
+  myPrevCropFertilisation.setReplicates(0);
 
-  // irrigation
+  // irrigation (set values from form)
+  myPrevCropIrrigation.setMinData(chbxIrrigationPrevCrop->isChecked());
+  myPrevCropIrrigation.setDepth(0);
+  myPrevCropIrrigation.setWeightPoints(dsbIrrigationPrevCrop->value());
+  myPrevCropIrrigation.setObservations(sbIrrigationPrevCrop->value());
+  myPrevCropIrrigation.setReplicates(0);
 
-  //
-  // Initial Values values from form
-  //
-
-  // soil moisture
-
-  // nitrogen min
-
-  //
-  // Soil values from form
-  //
-
-  // Carbon organic
-
-  // Nitrogen organic
-
-  // texture
-
-  // bulk density
-
-  // field capacity
-
-  // wilting point
-
-  // pf curve
-
-  // hydr. cond. curve
-
-  //
-  // Site values from form
-  //
-
-  // latitude
-
-  // longitude
-
-  // altitude
 
   //
-  // Weather values from form
+  // Initial Values set values from form
   //
 
-  // precipitation
+  // soil moisture (set values from form)
+  myInitialValuesSoilMoisture.setMinData(chbxSoilMoistureInitialValues->isChecked());
+  myInitialValuesSoilMoisture.setDepth(0);
+  myInitialValuesSoilMoisture.setWeightPoints(dsbSoilMoistureInitialValues->value());
+  myInitialValuesSoilMoisture.setObservations(sbSoilMoistureInitialValues->value());
+  myInitialValuesSoilMoisture.setReplicates(0);
 
-  // T ave
+  // nitrogen min (set values from form)
+  myInitialValuesNMin.setMinData(chbxNMinInitialValues->isChecked());
+  myInitialValuesNMin.setDepth(0);
+  myInitialValuesNMin.setWeightPoints(dsbNMinInitialValues->value());
+  myInitialValuesNMin.setObservations(sbNMinInitialValues->value());
+  myInitialValuesNMin.setReplicates(0);
 
-  // T min
-
-  // T max
-
-  // relative humidity
-
-  // wind speed
-
-  // global radiation
-
-  // sunshine hours
 
   //
-  // Sate Vars from Form
+  // Soil set values from form
   //
 
-  // CROP a. gr. biomass
+  // Carbon organic (set values from form)
+  mySoilCOrg.setMinData(chbxCOrgSoil->isChecked());
+  mySoilCOrg.setDepth(0);
+  mySoilCOrg.setWeightPoints(dsbCOrgSoil->value());
+  mySoilCOrg.setObservations(sbCOrgSoil->value());
+  mySoilCOrg.setReplicates(0);
 
-  // CROP weight organs
+  // Nitrogen organic (set values from form)
+  mySoilNOrg.setMinData(chbxNOrgSoil->isChecked());
+  mySoilNOrg.setDepth(0);
+  mySoilNOrg.setWeightPoints(dsbNOrgSoil->value());
+  mySoilNOrg.setObservations(sbNOrgSoil->value());
+  mySoilNOrg.setReplicates(0);
 
-  // CROP root biomass
+  // texture (set values from form)
+  mySoilTexture.setMinData(chbxTextureSoil->isChecked());
+  mySoilTexture.setDepth(0);
+  mySoilTexture.setWeightPoints(dsbTextureSoil->value());
+  mySoilTexture.setObservations(sbTextureSoil->value());
+  mySoilTexture.setReplicates(0);
 
-  // CROP N in a. gr. biomass
+  // bulk density (set values from form)
+  mySoilBulkDensity.setMinData(chbxBulkDensitySoil->isChecked());
+  mySoilBulkDensity.setDepth(0);
+  mySoilBulkDensity.setWeightPoints(dsbBulkDensitySoil->value());
+  mySoilBulkDensity.setObservations(sbBulkDensitySoil->value());
+  mySoilBulkDensity.setReplicates(0);
 
-  // CROP N in organs
+  // field capacity (set values from form)
+  mySoilFieldCapacity.setMinData(chbxFieldCapacitySoil->isChecked());
+  mySoilFieldCapacity.setDepth(0);
+  mySoilFieldCapacity.setWeightPoints(dsbFieldCapacitySoil->value());
+  mySoilFieldCapacity.setObservations(sbFieldCapacitySoil->value());
+  mySoilFieldCapacity.setReplicates(0);
 
-  // CROP LAI
+  // wilting point (set values from form)
+  mySoilWiltingPoint.setMinData(chbxWiltingPointSoil->isChecked());
+  mySoilWiltingPoint.setDepth(0);
+  mySoilWiltingPoint.setWeightPoints(dsbWiltingPointSoil->value());
+  mySoilWiltingPoint.setObservations(sbWiltingPointSoil->value());
+  mySoilWiltingPoint.setReplicates(0);
 
-  // SOIL soil water grav.
+  // pf curve (set values from form)
+  mySoilPfCurve.setMinData(chbxPfCurveSoil->isChecked());
+  mySoilPfCurve.setDepth(0);
+  mySoilPfCurve.setWeightPoints(dsbPfCurveSoil->value());
+  mySoilPfCurve.setObservations(sbPfCurveSoil->value());
+  mySoilPfCurve.setReplicates(0);
 
-  // SOIL pressure heads
+  // hydr. cond. curve (set values from form)
+  mySoilHydrCondCurve.setMinData(chbxHydrCondCurveSoil->isChecked());
+  mySoilHydrCondCurve.setDepth(0);
+  mySoilHydrCondCurve.setWeightPoints(dsbHydrCondCurveSoil->value());
+  mySoilHydrCondCurve.setObservations(sbHydrCondCurveSoil->value());
+  mySoilHydrCondCurve.setReplicates(0);
 
-  // SOIL nitrogen min.
 
-  // SOIL soil water sensor cal.
+  //
+  // Site set values from form
+  //
 
-  // SOIL water flux bottom root
+  // latitude (set values from form)
 
-  // SOIL N flux bottom root
+  // longitude (set values from form)
 
-  // SURFACE FLUXES ET
+  // altitude (set values from form)
 
-  // SURFACE FLUXES NH3 Loss
+  //
+  // Weather set values from form
+  //
 
-  // SURFACE FLUXES N2O Loss
+  // precipitation (set values from form)
 
-  // SURFACE FLUXES N2 Loss
+  // T ave (set values from form)
 
-  // SURFACE FLUXES CH4 Loss
+  // T min (set values from form)
 
-  // OBSERVATIONS lodging
+  // T max (set values from form)
 
-  // OBSERVATIONS pests or diseases
+  // relative humidity (set values from form)
 
-  // OBSERVATIONS damages
+  // wind speed (set values from form)
+
+  // global radiation (set values from form)
+
+  // sunshine hours (set values from form)
+
+  //
+  // Sate Vars set from Form
+  //
+
+  // CROP a. gr. biomass (set values from form)
+
+  // CROP weight organs (set values from form)
+
+  // CROP root biomass (set values from form)
+
+  // CROP N in a. gr. biomass (set values from form)
+
+  // CROP N in organs (set values from form)
+
+  // CROP LAI (set values from form)
+
+  // SOIL soil water grav. (set values from form)
+
+  // SOIL pressure heads (set values from form)
+
+  // SOIL nitrogen min. (set values from form)
+
+  // SOIL soil water sensor cal. (set values from form)
+
+  // SOIL water flux bottom root (set values from form)
+
+  // SOIL N flux bottom root (set values from form)
+
+  // SURFACEFLUXES ET (set values from form)
+
+  // SURFACEFLUXES NH3 Loss (set values from form)
+
+  // SURFACEFLUXES N2O Loss (set values from form)
+
+  // SURFACEFLUXES N2 Loss (set values from form)
+
+  // SURFACEFLUXES CH4 Loss (set values from form)
+
+  // OBSERVATIONS lodging (set values from form)
+
+  // OBSERVATIONS pests or diseases (set values from form)
+
+  // OBSERVATIONS damages (set values from form)
 
     /////////////////////
    // set the values  //
