@@ -38,7 +38,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>0</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="icon">
@@ -7546,7 +7546,7 @@
         <item row="0" column="0">
          <widget class="QToolBox" name="toolBoxStateVars">
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -7618,15 +7618,6 @@
                     <string>a.gr. biomass</string>
                    </property>
                   </widget>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QSpinBox" name="sbSVCropWeightOrgansLayers"/>
-                 </item>
-                 <item row="3" column="3">
-                  <widget class="QSpinBox" name="sbSVCropWeightOrgansWeightPts"/>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QSpinBox" name="sbSVCropAGrBiomassLayers"/>
                  </item>
                  <item row="0" column="1">
                   <widget class="QLabel" name="lblSVCropLayersHeader">
@@ -7707,7 +7698,7 @@
                   </widget>
                  </item>
                  <item row="5" column="4">
-                  <widget class="QDoubleSpinBox" name="dsbSVCropNInAGrBioMassReplicates"/>
+                  <widget class="QDoubleSpinBox" name="dsbSVCropNInAGrBiomassReplicates"/>
                  </item>
                  <item row="5" column="5">
                   <widget class="QLabel" name="lblSVCropNInAGrBiomassPoints">
@@ -7731,17 +7722,11 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="6" column="3">
-                  <widget class="QSpinBox" name="sbSVCropNInOrgansWeightPts"/>
-                 </item>
                  <item row="6" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVCropNInOrgansReplicates"/>
                  </item>
-                 <item row="4" column="3">
-                  <widget class="QSpinBox" name="sbSVCropRootBioMassWeightPts"/>
-                 </item>
                  <item row="4" column="4">
-                  <widget class="QDoubleSpinBox" name="dsbSVCropRootBioMassReplicates"/>
+                  <widget class="QDoubleSpinBox" name="dsbSVCropRootBiomassReplicates"/>
                  </item>
                  <item row="4" column="5">
                   <widget class="QLabel" name="lblSVCropRootBiomassPoints">
@@ -7765,9 +7750,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="1">
-                  <widget class="QSpinBox" name="sbSVCropNInAGrBioMassLayers"/>
-                 </item>
                  <item row="6" column="5">
                   <widget class="QLabel" name="lblSVCropNInOrgansPoints">
                    <property name="font">
@@ -7790,14 +7772,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="7" column="1">
-                  <widget class="QSpinBox" name="sbSVCropLAILayers"/>
-                 </item>
                  <item row="7" column="2">
                   <widget class="QSpinBox" name="sbSVCropLAIObservations"/>
-                 </item>
-                 <item row="7" column="3">
-                  <widget class="QSpinBox" name="sbSVCropLAIWeightPts"/>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="lblSVCropMinDataHeader">
@@ -7832,9 +7808,6 @@
                  <item row="2" column="2">
                   <widget class="QSpinBox" name="sbSVCropAGrBiomassObservations"/>
                  </item>
-                 <item row="2" column="3">
-                  <widget class="QSpinBox" name="sbSVCropAGrBiomassWeightPts"/>
-                 </item>
                  <item row="2" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVCropAGrBiomassReplicates"/>
                  </item>
@@ -7860,9 +7833,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="6" column="1">
-                  <widget class="QSpinBox" name="sbSVCropNInOrgansLayers"/>
-                 </item>
                  <item row="6" column="2">
                   <widget class="QSpinBox" name="sbSVCropNInOrgansObservations"/>
                  </item>
@@ -7873,17 +7843,11 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="1">
-                  <widget class="QSpinBox" name="sbSVCropRootBioMassLayers"/>
-                 </item>
                  <item row="4" column="2">
-                  <widget class="QSpinBox" name="sbSVCropRootBioMassObservations"/>
+                  <widget class="QSpinBox" name="sbSVCropRootBiomassObservations"/>
                  </item>
                  <item row="5" column="2">
-                  <widget class="QSpinBox" name="sbSVCropNInAGrBioMassObservations"/>
-                 </item>
-                 <item row="5" column="3">
-                  <widget class="QSpinBox" name="sbSVCropNInAGrBioMassWeightPts"/>
+                  <widget class="QSpinBox" name="sbSVCropNInAGrBiomassObservations"/>
                  </item>
                  <item row="3" column="2">
                   <widget class="QSpinBox" name="sbSVCropWeightOrgansObservations"/>
@@ -7905,6 +7869,42 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropAGrBiomassLayers"/>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropWeightOrgansLayers"/>
+                 </item>
+                 <item row="7" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropLAIWeightPts"/>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropRootBiomassLayers"/>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropNInAGrBiomassLayers"/>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropNInOrgansLayers"/>
+                 </item>
+                 <item row="7" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropLAILayers"/>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropNInOrgansWeightPts"/>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropNInAGrBiomassWeightPts"/>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropRootBiomassWeightPts"/>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropWeightOrgansWeightPts"/>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVCropAGrBiomassWeightPts"/>
                  </item>
                 </layout>
                </item>
@@ -8251,9 +8251,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalLayers"/>
-                 </item>
                  <item row="4" column="2">
                   <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalObservations"/>
                  </item>
@@ -8267,14 +8264,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="5" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootLayers"/>
-                 </item>
                  <item row="5" column="2">
                   <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootObservations"/>
-                 </item>
-                 <item row="5" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilWaterFluxBottomRootWeightPts"/>
                  </item>
                  <item row="5" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilWaterFluxBottomRootReplicates"/>
@@ -8307,14 +8298,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilNMinLayers"/>
-                 </item>
                  <item row="3" column="2">
                   <widget class="QSpinBox" name="sbSVSoilNMinObservations"/>
-                 </item>
-                 <item row="3" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilNMinWeightPts"/>
                  </item>
                  <item row="3" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilNMinReplicates"/>
@@ -8343,9 +8328,6 @@
                     <string>soil water sensor cal</string>
                    </property>
                   </widget>
-                 </item>
-                 <item row="4" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilSoilWaterSensorCalWeightPts"/>
                  </item>
                  <item row="4" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterSensorCalReplicates"/>
@@ -8428,14 +8410,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilPressureHeadsWeightPts"/>
-                 </item>
                  <item row="1" column="2">
                   <widget class="QSpinBox" name="sbSVSoilSoilWaterGravObservations"/>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilSoilWaterGravWeightPts"/>
                  </item>
                  <item row="1" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterGravReplicates"/>
@@ -8495,12 +8471,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilPressureHeadsLayers"/>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilSoilWaterGravLayers"/>
-                 </item>
                  <item row="5" column="5">
                   <widget class="QLabel" name="lblSVSoilWaterFluxBottomRootPoints">
                    <property name="font">
@@ -8526,14 +8496,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="6" column="1">
-                  <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootLayers"/>
-                 </item>
                  <item row="6" column="2">
                   <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootObservations"/>
-                 </item>
-                 <item row="6" column="3">
-                  <widget class="QSpinBox" name="sbSVSoilNFluxBottomRootWeightPts"/>
                  </item>
                  <item row="6" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSoilNFluxBottomRootReplicates"/>
@@ -8579,6 +8543,42 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterGravLayers"/>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilPressureHeadsLayers"/>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilNMinLayers"/>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterSensorCalLayers"/>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilWaterFluxBottomRootLayers"/>
+                 </item>
+                 <item row="6" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilNFluxBottomRootLayers"/>
+                 </item>
+                 <item row="6" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilNFluxBottomRootWeightPts"/>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilWaterFluxBottomRootWeightPts"/>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterSensorCalWeightPts"/>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilNMinWeightPts"/>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilPressureHeadsWeightPts"/>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSoilSoilWaterGravWeightPts"/>
                  </item>
                 </layout>
                </item>
@@ -9031,12 +9031,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="2" column="1">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesNh3LossLayers"/>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesEtWeightPts"/>
-                 </item>
                  <item row="0" column="1">
                   <widget class="QLabel" name="lblSVSurfaceFluxesLayersHeader">
                    <property name="font">
@@ -9051,12 +9045,6 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
-                 </item>
-                 <item row="4" column="1">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesN2LossLayers"/>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesEtLayers"/>
                  </item>
                  <item row="1" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesEtReplicates"/>
@@ -9093,9 +9081,6 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
-                 </item>
-                 <item row="5" column="1">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesCh4LossLayers"/>
                  </item>
                  <item row="2" column="0">
                   <widget class="QCheckBox" name="chbxSVSurfaceFluxesNh3Loss">
@@ -9137,23 +9122,8 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="4" column="3">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesN2LossWeightPts"/>
-                 </item>
-                 <item row="3" column="1">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesN2OLossLayers"/>
-                 </item>
-                 <item row="2" column="3">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesNh3LossWeightPts"/>
-                 </item>
                  <item row="4" column="2">
                   <widget class="QSpinBox" name="sbSVSurfaceFluxesN2LossObservations"/>
-                 </item>
-                 <item row="3" column="3">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesN2OLossWeightPts"/>
-                 </item>
-                 <item row="5" column="3">
-                  <widget class="QSpinBox" name="sbSVSurfaceFluxesCh4LossWeightPts"/>
                  </item>
                  <item row="3" column="2">
                   <widget class="QSpinBox" name="sbSVSurfaceFluxesN2OLossObservations"/>
@@ -9248,6 +9218,36 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesEtLayers"/>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesNh3LossLayers"/>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesN2OLossLayers"/>
+                 </item>
+                 <item row="4" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesN2LossLayers"/>
+                 </item>
+                 <item row="5" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesCh4LossLayers"/>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesEtWeightPts"/>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesNh3LossWeightPts"/>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesN2OLossWeightPts"/>
+                 </item>
+                 <item row="4" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesN2LossWeightPts"/>
+                 </item>
+                 <item row="5" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVSurfaceFluxesCh4LossWeightPts"/>
                  </item>
                 </layout>
                </item>
@@ -9893,9 +9893,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="1">
-                  <widget class="QSpinBox" name="sbSVObservationsDamagesLayers"/>
-                 </item>
                  <item row="0" column="2">
                   <widget class="QLabel" name="lblSVObservationsObservationsHeader">
                    <property name="font">
@@ -9937,12 +9934,6 @@
                  <item row="3" column="2">
                   <widget class="QSpinBox" name="sbSVObservationsDamagesObservations"/>
                  </item>
-                 <item row="2" column="3">
-                  <widget class="QSpinBox" name="sbSVObservationsPestsOrDiseasesWeightPts"/>
-                 </item>
-                 <item row="1" column="1">
-                  <widget class="QSpinBox" name="sbSVObservationsLodgingLayers"/>
-                 </item>
                  <item row="3" column="5">
                   <widget class="QLabel" name="lblSVObservationsDamagesPoints">
                    <property name="font">
@@ -9957,9 +9948,6 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
-                 </item>
-                 <item row="2" column="1">
-                  <widget class="QSpinBox" name="sbSVObservationsPestsOrDiseasesLayers"/>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="lblSVObservationsMinDataHeader">
@@ -10027,12 +10015,6 @@
                    </property>
                   </widget>
                  </item>
-                 <item row="3" column="3">
-                  <widget class="QSpinBox" name="sbSVObservationsDamagesWeightPts"/>
-                 </item>
-                 <item row="1" column="3">
-                  <widget class="QSpinBox" name="sbSVObservationsLodgingWeightPts"/>
-                 </item>
                  <item row="3" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVObservationsDamagesReplicates"/>
                  </item>
@@ -10080,6 +10062,24 @@
                     <set>Qt::AlignCenter</set>
                    </property>
                   </widget>
+                 </item>
+                 <item row="1" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsLodgingLayers"/>
+                 </item>
+                 <item row="2" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsPestsOrDiseasesLayers"/>
+                 </item>
+                 <item row="3" column="1">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsDamagesLayers"/>
+                 </item>
+                 <item row="1" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsLodgingWeightPts"/>
+                 </item>
+                 <item row="2" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsPestsOrDiseasesWeightPts"/>
+                 </item>
+                 <item row="3" column="3">
+                  <widget class="QDoubleSpinBox" name="dsbSVObservationsDamagesWeightPts"/>
                  </item>
                 </layout>
                </item>

@@ -83,7 +83,7 @@ public:
   void setWiltingPointMeas(MadSubCategory theData);
   void setPfCurve(MadSubCategory theData);
   void setHydrCondCurve(MadSubCategory theData);
-  void setPH(MadSubCategory theData);
+  void setPh(MadSubCategory theData);
 
 private:
   MadSubCategory mCarbonOrganic;

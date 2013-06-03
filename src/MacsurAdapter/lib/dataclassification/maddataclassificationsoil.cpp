@@ -46,7 +46,7 @@ MadDataClassificationSoil::MadDataClassificationSoil(const MadDataClassification
   setWiltingPointMeas(theData.wiltingPointMeas());
   setPfCurve(theData.pfCurve());
   setHydrCondCurve(theData.hydrCondCurve());
-  setPH(theData.pH());
+  setPh(theData.pH());
 }
 
 MadDataClassificationSoil& MadDataClassificationSoil::operator =(const MadDataClassificationSoil& theData)
@@ -144,7 +144,7 @@ void MadDataClassificationSoil::setHydrCondCurve(MadSubCategory theData)
   mHydrCondCurve = theData;
 }
 
-void MadDataClassificationSoil::setPH(MadSubCategory theData)
+void MadDataClassificationSoil::setPh(MadSubCategory theData)
 {
   mPH = theData;
 }

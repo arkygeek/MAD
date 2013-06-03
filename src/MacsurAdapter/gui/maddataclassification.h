@@ -195,15 +195,15 @@ private slots:
   void on_sbSVCropWeightOrgansWeightPts_valueChanged();
   void on_dsbSVCropWeightOrgansReplicates_valueChanged();
 
-  void on_sbSVCropRootBioMassLayers_valueChanged();
-  void on_sbSVCropRootBioMassObservations_valueChanged();
-  void on_sbSVCropRootBioMassWeightPts_valueChanged();
-  void on_dsbSVCropRootBioMassReplicates_valueChanged();
+  void on_sbSVCropRootBiomassLayers_valueChanged();
+  void on_sbSVCropRootBiomassObservations_valueChanged();
+  void on_sbSVCropRootBiomassWeightPts_valueChanged();
+  void on_dsbSVCropRootBiomassReplicates_valueChanged();
 
-  void on_sbSVCropNInAGrBioMassLayers_valueChanged();
-  void on_sbSVCropNInAGrBioMassObservations_valueChanged();
-  void on_sbSVCropNInAGrBioMassWeightPts_valueChanged();
-  void on_dsbSVCropNInAGrBioMassReplicates_valueChanged();
+  void on_sbSVCropNInAGrBiomassLayers_valueChanged();
+  void on_sbSVCropNInAGrBiomassObservations_valueChanged();
+  void on_sbSVCropNInAGrBiomassWeightPts_valueChanged();
+  void on_dsbSVCropNInAGrBiomassReplicates_valueChanged();
 
   void on_sbSVCropNInOrgansLayers_valueChanged();
   void on_sbSVCropNInOrgansObservations_valueChanged();
@@ -370,8 +370,8 @@ private slots:
   // SV crop
   void updateSVCropAGrBiomassRatingLbl();
   void updateSVCropWeightOrgansRatingLbl();
-  void updateSVCropRootBioMassRatingLbl();
-  void updateSVCropNInAGrBioMassRatingLbl();
+  void updateSVCropRootBiomassRatingLbl();
+  void updateSVCropNInAGrBiomassRatingLbl();
   void updateSVCropNInOrgansRatingLbl();
   void updateSVCropLAIRatingLbl();
   void updateSVCropLabels();

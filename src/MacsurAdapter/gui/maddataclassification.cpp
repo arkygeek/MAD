@@ -245,185 +245,185 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
 
   // state vars connections
   //crop
-  connect ( sbSVCropAGrBiomassLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropAGrBiomassLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
   connect ( sbSVCropAGrBiomassObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
-  connect ( sbSVCropAGrBiomassWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropAGrBiomassWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
   connect ( dsbSVCropAGrBiomassReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
 
-  connect ( sbSVCropWeightOrgansLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropWeightOrgansLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
   connect ( sbSVCropWeightOrgansObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
-  connect ( sbSVCropWeightOrgansWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropWeightOrgansWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
   connect ( dsbSVCropWeightOrgansReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
 
-  connect ( sbSVCropRootBioMassLayers, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
-  connect ( sbSVCropRootBioMassObservations, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
-  connect ( sbSVCropRootBioMassWeightPts, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
-  connect ( dsbSVCropRootBioMassReplicates, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
+  connect ( dsbSVCropRootBiomassLayers, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropRootBiomassRatingLbl() ));
+  connect ( sbSVCropRootBiomassObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropRootBiomassRatingLbl() ));
+  connect ( dsbSVCropRootBiomassWeightPts, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropRootBiomassRatingLbl() ));
+  connect ( dsbSVCropRootBiomassReplicates, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropRootBiomassRatingLbl() ));
 
-  connect ( sbSVCropNInAGrBioMassLayers, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
-  connect ( sbSVCropNInAGrBioMassObservations, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
-  connect ( sbSVCropNInAGrBioMassWeightPts, SIGNAL ( valueChanged(int) ),
-            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
-  connect ( dsbSVCropNInAGrBioMassReplicates, SIGNAL ( valueChanged(double) ),
-            this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
+  connect ( dsbSVCropNInAGrBiomassLayers, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropNInAGrBiomassRatingLbl() ));
+  connect ( sbSVCropNInAGrBiomassObservations, SIGNAL ( valueChanged(int) ),
+            this, SLOT ( updateSVCropNInAGrBiomassRatingLbl() ));
+  connect ( dsbSVCropNInAGrBiomassWeightPts, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropNInAGrBiomassRatingLbl() ));
+  connect ( dsbSVCropNInAGrBiomassReplicates, SIGNAL ( valueChanged(double) ),
+            this, SLOT ( updateSVCropNInAGrBiomassRatingLbl() ));
 
-  connect ( sbSVCropNInOrgansLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropNInOrgansLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
   connect ( sbSVCropNInOrgansObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
-  connect ( sbSVCropNInOrgansWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropNInOrgansWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
   connect ( dsbSVCropNInOrgansReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
 
-  connect ( sbSVCropLAILayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropLAILayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
   connect ( sbSVCropLAIObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
-  connect ( sbSVCropLAIWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropLAIWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
   connect ( dsbSVCropLAIReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
 
   // soil
-  connect ( sbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( sbSVSoilSoilWaterSensorCalObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
-  connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
 
-  connect ( sbSVSoilPressureHeadsLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilPressureHeadsLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
   connect ( sbSVSoilPressureHeadsObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
-  connect ( sbSVSoilPressureHeadsWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilPressureHeadsWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
   connect ( dsbSVSoilPressureHeadsReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
 
-  connect ( sbSVSoilNMinLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNMinLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
   connect ( sbSVSoilNMinObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
-  connect ( sbSVSoilNMinWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNMinWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
   connect ( dsbSVSoilNMinReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
 
-  connect ( sbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( sbSVSoilSoilWaterSensorCalObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
-  connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
 
-  connect ( sbSVSoilWaterFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilWaterFluxBottomRootLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
   connect ( sbSVSoilWaterFluxBottomRootObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
-  connect ( sbSVSoilWaterFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilWaterFluxBottomRootWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
   connect ( dsbSVSoilWaterFluxBottomRootReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
 
-  connect ( sbSVSoilNFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNFluxBottomRootLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
   connect ( sbSVSoilNFluxBottomRootObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
-  connect ( sbSVSoilNFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNFluxBottomRootWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
   connect ( dsbSVSoilNFluxBottomRootReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
 
   // surface fluxes
-  connect ( sbSVSurfaceFluxesEtLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesEtLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
   connect ( sbSVSurfaceFluxesEtObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
-  connect ( sbSVSurfaceFluxesEtWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesEtWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
   connect ( dsbSVSurfaceFluxesEtReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
 
-  connect ( sbSVSurfaceFluxesNh3LossLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesNh3LossLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesNh3LossObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
-  connect ( sbSVSurfaceFluxesNh3LossWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesNh3LossWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
   connect ( dsbSVSurfaceFluxesNh3LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
 
-  connect ( sbSVSurfaceFluxesN2OLossLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2OLossLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
   connect ( sbSVSurfaceFluxesN2OLossObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
-  connect ( sbSVSurfaceFluxesN2OLossWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2OLossWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
   connect ( dsbSVSurfaceFluxesN2OLossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
 
-  connect ( sbSVSurfaceFluxesN2LossLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2LossLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesN2LossObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
-  connect ( sbSVSurfaceFluxesN2LossWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2LossWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
   connect ( dsbSVSurfaceFluxesN2LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
 
-  connect ( sbSVSurfaceFluxesCh4LossLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesCh4LossLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesCh4LossObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
-  connect ( sbSVSurfaceFluxesCh4LossWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesCh4LossWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
   connect ( dsbSVSurfaceFluxesCh4LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
 
   // observations
-  connect ( sbSVObservationsLodgingLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsLodgingLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
   connect ( sbSVObservationsLodgingObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
-  connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
   connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
 
-  connect ( sbSVObservationsPestsOrDiseasesLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsPestsOrDiseasesLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
   connect ( sbSVObservationsPestsOrDiseasesObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
-  connect ( sbSVObservationsPestsOrDiseasesWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsPestsOrDiseasesWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
   connect ( dsbSVObservationsPestsOrDiseasesReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
 
-  connect ( sbSVObservationsDamagesLayers, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsDamagesLayers, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
   connect ( sbSVObservationsDamagesObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
-  connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
   connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
@@ -1652,38 +1652,38 @@ void MadDataClassification::on_dsbSVCropWeightOrgansReplicates_valueChanged()
   updateSVCropWeightOrgansRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropRootBioMassLayers_valueChanged()
+void MadDataClassification::on_sbSVCropRootBiomassLayers_valueChanged()
 {
-  updateSVCropRootBioMassRatingLbl();
+  updateSVCropRootBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropRootBioMassObservations_valueChanged()
+void MadDataClassification::on_sbSVCropRootBiomassObservations_valueChanged()
 {
-  updateSVCropRootBioMassRatingLbl();
+  updateSVCropRootBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropRootBioMassWeightPts_valueChanged()
+void MadDataClassification::on_sbSVCropRootBiomassWeightPts_valueChanged()
 {
-  updateSVCropRootBioMassRatingLbl();
+  updateSVCropRootBiomassRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropRootBioMassReplicates_valueChanged()
+void MadDataClassification::on_dsbSVCropRootBiomassReplicates_valueChanged()
 {
-  updateSVCropRootBioMassRatingLbl();
+  updateSVCropRootBiomassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropNInAGrBioMassLayers_valueChanged()
+void MadDataClassification::on_sbSVCropNInAGrBiomassLayers_valueChanged()
 {
-  updateSVCropNInAGrBioMassRatingLbl();
+  updateSVCropNInAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInAGrBioMassObservations_valueChanged()
+void MadDataClassification::on_sbSVCropNInAGrBiomassObservations_valueChanged()
 {
-  updateSVCropNInAGrBioMassRatingLbl();
+  updateSVCropNInAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInAGrBioMassWeightPts_valueChanged()
+void MadDataClassification::on_sbSVCropNInAGrBiomassWeightPts_valueChanged()
 {
-  updateSVCropNInAGrBioMassRatingLbl();
+  updateSVCropNInAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_dsbSVCropNInAGrBioMassReplicates_valueChanged()
+void MadDataClassification::on_dsbSVCropNInAGrBiomassReplicates_valueChanged()
 {
-  updateSVCropNInAGrBioMassRatingLbl();
+  updateSVCropNInAGrBiomassRatingLbl();
 }
 
 void MadDataClassification::on_sbSVCropNInOrgansLayers_valueChanged()
@@ -2424,7 +2424,7 @@ void MadDataClassification::updateSVCropAGrBiomassRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropAGrBiomassObservations->value();
-  float myGivenWeighting = sbSVCropAGrBiomassWeightPts->value();
+  float myGivenWeighting = dsbSVCropAGrBiomassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropAGrBiomassPoints->setText(myText);
@@ -2434,27 +2434,27 @@ void MadDataClassification::updateSVCropWeightOrgansRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropWeightOrgansObservations->value();
-  float myGivenWeighting = sbSVCropWeightOrgansWeightPts->value();
+  float myGivenWeighting = dsbSVCropWeightOrgansWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropWeightOrgansPoints->setText(myText);
   updateSVCropLabels();
 }
-void MadDataClassification::updateSVCropRootBioMassRatingLbl()
+void MadDataClassification::updateSVCropRootBiomassRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbSVCropRootBioMassObservations->value();
-  float myGivenWeighting = sbSVCropRootBioMassWeightPts->value();
+  int myObservations = sbSVCropRootBiomassObservations->value();
+  float myGivenWeighting = dsbSVCropRootBiomassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropRootBiomassPoints->setText(myText);
   updateSVCropLabels();
 }
-void MadDataClassification::updateSVCropNInAGrBioMassRatingLbl()
+void MadDataClassification::updateSVCropNInAGrBiomassRatingLbl()
 {
   // calculate weight and update the label
-  int myObservations = sbSVCropNInAGrBioMassObservations->value();
-  float myGivenWeighting = sbSVCropNInAGrBioMassWeightPts->value();
+  int myObservations = sbSVCropNInAGrBiomassObservations->value();
+  float myGivenWeighting = dsbSVCropNInAGrBiomassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropNInAGrBiomassPoints->setText(myText);
@@ -2464,7 +2464,7 @@ void MadDataClassification::updateSVCropNInOrgansRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropNInOrgansObservations->value();
-  float myGivenWeighting = sbSVCropNInOrgansWeightPts->value();
+  float myGivenWeighting = dsbSVCropNInOrgansWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropNInOrgansPoints->setText(myText);
@@ -2474,7 +2474,7 @@ void MadDataClassification::updateSVCropLAIRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropLAIObservations->value();
-  float myGivenWeighting = sbSVCropLAIWeightPts->value();
+  float myGivenWeighting = dsbSVCropLAIWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropLAIPoints->setText(myText);
@@ -2486,7 +2486,7 @@ void MadDataClassification::updateSVSoilSoilWaterGravRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilSoilWaterGravObservations->value();
-  float myGivenWeighting = sbSVSoilSoilWaterGravWeightPts->value();
+  float myGivenWeighting = dsbSVSoilSoilWaterGravWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilSoilWaterGravPoints->setText(myText);
@@ -2496,7 +2496,7 @@ void MadDataClassification::updateSVSoilPressureHeadsRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilPressureHeadsObservations->value();
-  float myGivenWeighting = sbSVSoilPressureHeadsWeightPts->value();
+  float myGivenWeighting = dsbSVSoilPressureHeadsWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilPressureHeadsPoints->setText(myText);
@@ -2506,7 +2506,7 @@ void MadDataClassification::updateSVSoilNMinRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilNMinObservations->value();
-  float myGivenWeighting = sbSVSoilNMinWeightPts->value();
+  float myGivenWeighting = dsbSVSoilNMinWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilNMinPoints->setText(myText);
@@ -2516,7 +2516,7 @@ void MadDataClassification::updateSVSoilSoilWaterSensorCalRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilSoilWaterSensorCalObservations->value();
-  float myGivenWeighting = sbSVSoilSoilWaterSensorCalWeightPts->value();
+  float myGivenWeighting = dsbSVSoilSoilWaterSensorCalWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilSoilWaterSensorCalPoints->setText(myText);
@@ -2526,7 +2526,7 @@ void MadDataClassification::updateSVSoilWaterFluxBottomRootRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilWaterFluxBottomRootObservations->value();
-  float myGivenWeighting = sbSVSoilWaterFluxBottomRootWeightPts->value();
+  float myGivenWeighting = dsbSVSoilWaterFluxBottomRootWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilWaterFluxBottomRootPoints->setText(myText);
@@ -2536,7 +2536,7 @@ void MadDataClassification::updateSVSoilNFluxBottomRootRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSoilNFluxBottomRootObservations->value();
-  float myGivenWeighting = sbSVSoilNFluxBottomRootWeightPts->value();
+  float myGivenWeighting = dsbSVSoilNFluxBottomRootWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSoilNFluxBottomRootPoints->setText(myText);
@@ -2548,7 +2548,7 @@ void MadDataClassification::updateSVSurfaceFluxesEtRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSurfaceFluxesEtObservations->value();
-  float myGivenWeighting = sbSVSurfaceFluxesEtWeightPts->value();
+  float myGivenWeighting = dsbSVSurfaceFluxesEtWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSurfaceFluxesEtPoints->setText(myText);
@@ -2558,7 +2558,7 @@ void MadDataClassification::updateSVSurfaceFluxesNh3LossRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSurfaceFluxesNh3LossObservations->value();
-  float myGivenWeighting = sbSVSurfaceFluxesNh3LossWeightPts->value();
+  float myGivenWeighting = dsbSVSurfaceFluxesNh3LossWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSurfaceFluxesNh3LossPoints->setText(myText);
@@ -2568,7 +2568,7 @@ void MadDataClassification::updateSVSurfaceFluxesN2OLossRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSurfaceFluxesN2OLossObservations->value();
-  float myGivenWeighting = sbSVSurfaceFluxesN2OLossWeightPts->value();
+  float myGivenWeighting = dsbSVSurfaceFluxesN2OLossWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSurfaceFluxesN2OLossPoints->setText(myText);
@@ -2578,7 +2578,7 @@ void MadDataClassification::updateSVSurfaceFluxesN2LossRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSurfaceFluxesN2LossObservations->value();
-  float myGivenWeighting = sbSVSurfaceFluxesN2LossWeightPts->value();
+  float myGivenWeighting = dsbSVSurfaceFluxesN2LossWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSurfaceFluxesN2LossPoints->setText(myText);
@@ -2588,7 +2588,7 @@ void MadDataClassification::updateSVSurfaceFluxesCh4LossRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVSurfaceFluxesCh4LossObservations->value();
-  float myGivenWeighting = sbSVSurfaceFluxesCh4LossWeightPts->value();
+  float myGivenWeighting = dsbSVSurfaceFluxesCh4LossWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVSurfaceFluxesCh4LossPoints->setText(myText);
@@ -2600,7 +2600,7 @@ void MadDataClassification::updateSVObservationsLodgingRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVObservationsLodgingObservations->value();
-  float myGivenWeighting = sbSVObservationsLodgingWeightPts->value();
+  float myGivenWeighting = dsbSVObservationsLodgingWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVObservationsLodgingPoints->setText(myText);
@@ -2610,7 +2610,7 @@ void MadDataClassification::updateSVObservationsPestsOrDiseasesRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVObservationsPestsOrDiseasesObservations->value();
-  float myGivenWeighting = sbSVObservationsPestsOrDiseasesWeightPts->value();
+  float myGivenWeighting = dsbSVObservationsPestsOrDiseasesWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVObservationsPestsOrDiseasesPoints->setText(myText);
@@ -2620,7 +2620,7 @@ void MadDataClassification::updateSVObservationsDamagesRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVObservationsDamagesObservations->value();
-  float myGivenWeighting = sbSVObservationsDamagesWeightPts->value();
+  float myGivenWeighting = dsbSVObservationsDamagesWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVObservationsDamagesPoints->setText(myText);
@@ -3258,12 +3258,17 @@ void MadDataClassification::on_pbSave_clicked()
   // initialise variables
   MadDataClassificationCultivation myCultivation;
   MadDataClassificationPhenology myPhenology;
-  MadDataClassificationPrevCrop myPrevCropSet;
+  MadDataClassificationPrevCrop myPrevCrop;
   MadDataClassificationInitialValues myInitialValues;
   MadDataClassificationSoil mySoil;
-  MadDataClassificationSiteData mySiteData;
+  MadDataClassificationSiteData mySite;
   MadDataClassificationWeather myWeather;
-  MadStateVars myStateVars;
+  MadStateVars mySV;
+  MadSVCrop mySVCrop;
+  MadSVSoil mySVSoil;
+  MadSVSurfaceFluxes mySVSurfaceFluxes;
+  MadSVObservations mySVObservations;
+
 
   // cultivation (initialise variables)
   MadSubCategory myCultVariety;
@@ -3304,49 +3309,53 @@ void MadDataClassification::on_pbSave_clicked()
   MadSubCategory mySoilWiltingPoint;
   MadSubCategory mySoilPfCurve;
   MadSubCategory mySoilHydrCondCurve;
+  MadSubCategory mySoilPh;
 
   // site (initialise variables)
-  MadSubCategory mySiteDataLatitude;
-  MadSubCategory mySiteDataLongitude;
-  MadSubCategory mySiteDataAltitude;
+  MadSubCategory mySiteLatitude;
+  MadSubCategory mySiteLongitude;
+  MadSubCategory mySiteAltitude;
 
   //weather (initialise variables)
   MadSubCategory myWeatherPrecipitation;
   MadSubCategory myWeatherTAve;
   MadSubCategory myWeatherTMin;
   MadSubCategory myWeatherTMax;
-  MadSubCategory myWeatherRelativeHumidity;
+  MadSubCategory myWeatherRelHumidity;
   MadSubCategory myWeatherWindSpeed;
   MadSubCategory myWeatherGlobalRadiation;
   MadSubCategory myWeatherSunshineHours;
+  MadSubCategory myWeatherLeafWetness;
+  MadSubCategory myWeatherSoilTemp;
+
 
   //state vars - soil (initialise variables)
-  MadSubCategory myStateVarsSoilSoilWaterGrav;
-  MadSubCategory myStateVarsSoilPressureHeads;
-  MadSubCategory myStateVarsSoilNMin;
-  MadSubCategory myStateVarsSoilSoilWaterSensorCal;
-  MadSubCategory myStateVarsSoilWaterFluxBottomRoot;
-  MadSubCategory myStateVarsSoilNFluxBottomRoot;
+  MadSubCategory mySVSoilSoilWaterGrav;
+  MadSubCategory mySVSoilPressureHeads;
+  MadSubCategory mySVSoilNMin;
+  MadSubCategory mySVSoilSoilWaterSensorCal;
+  MadSubCategory mySVSoilWaterFluxBottomRoot;
+  MadSubCategory mySVSoilNFluxBottomRoot;
 
   // state vars - crop (initialise variables)
-  MadSubCategory myStateVarsCropAGrBiomass;
-  MadSubCategory myStateVarsCropWeightOrgans;
-  MadSubCategory myStateVarsCropRootBiomass;
-  MadSubCategory myStateVarsCropNInAGrBiomass;
-  MadSubCategory myStateVarsCropNInOrgans;
-  MadSubCategory myStateVarsCropLAI;
+  MadSubCategory mySVCropAGrBiomass;
+  MadSubCategory mySVCropWeightOrgans;
+  MadSubCategory mySVCropRootBiomass;
+  MadSubCategory mySVCropNInAGrBiomass;
+  MadSubCategory mySVCropNInOrgans;
+  MadSubCategory mySVCropLAI;
 
   // state vars - surface fluxes (initialise variables)
-  MadSubCategory myStateVarsSurfaceFluxesEt;
-  MadSubCategory myStateVarsSurfaceFluxesNh3Loss;
-  MadSubCategory myStateVarsSurfaceFluxesN2OLoss;
-  MadSubCategory myStateVarsSurfaceFluxesN2Loss;
-  MadSubCategory myStateVarsSurfaceFluxesCh4Loss;
+  MadSubCategory mySVSurfaceFluxesEt;
+  MadSubCategory mySVSurfaceFluxesNh3Loss;
+  MadSubCategory mySVSurfaceFluxesN2OLoss;
+  MadSubCategory mySVSurfaceFluxesN2Loss;
+  MadSubCategory mySVSurfaceFluxesCh4Loss;
 
   // state vars - observation data (initialise variables)
-  MadSubCategory myStateVarsObservationsLodging;
-  MadSubCategory myStateVarsObservationsPestsOrDiseases;
-  MadSubCategory myStateVarsObservationsDamages;
+  MadSubCategory mySVObservationsLodging;
+  MadSubCategory mySVObservationsPestsOrDiseases;
+  MadSubCategory mySVObservationsDamages;
 
      //------------------------------//
     //get the values from the form  //
@@ -3579,78 +3588,236 @@ void MadDataClassification::on_pbSave_clicked()
   //
 
   // latitude (set values from form)
+  mySiteLatitude.setMinData(chbxLatitudeSite->isChecked());
+  mySiteLatitude.setDepth(0);
+  mySiteLatitude.setWeightPoints(dsbLatitudeSite->value());
+  mySiteLatitude.setObservations(sbLatitudeSite->value());
+  mySiteLatitude.setReplicates(0);
 
   // longitude (set values from form)
+  mySiteLongitude.setMinData(chbxLongitudeSite->isChecked());
+  mySiteLongitude.setDepth(0);
+  mySiteLongitude.setWeightPoints(dsbLongitudeSite->value());
+  mySiteLongitude.setObservations(sbLongitudeSite->value());
+  mySiteLongitude.setReplicates(0);
 
   // altitude (set values from form)
+  mySiteAltitude.setMinData(chbxAltitudeSite->isChecked());
+  mySiteAltitude.setDepth(0);
+  mySiteAltitude.setWeightPoints(dsbAltitudeSite->value());
+  mySiteAltitude.setObservations(sbAltitudeSite->value());
+  mySiteAltitude.setReplicates(0);
+
 
   //
   // Weather set values from form
   //
 
   // precipitation (set values from form)
+  myWeatherPrecipitation.setMinData(chbxPrecipitationWeather->isChecked());
+  myWeatherPrecipitation.setDepth(0);
+  myWeatherPrecipitation.setWeightPoints(dsbPrecipitationWeather->value());
+  myWeatherPrecipitation.setObservations(sbPrecipitationWeather->value());
+  myWeatherPrecipitation.setReplicates(0);
 
   // T ave (set values from form)
+  myWeatherTAve.setMinData(chbxTAveWeather->isChecked());
+  myWeatherTAve.setDepth(0);
+  myWeatherTAve.setWeightPoints(dsbTAveWeather->value());
+  myWeatherTAve.setObservations(sbTAveWeather->value());
+  myWeatherTAve.setReplicates(0);
 
   // T min (set values from form)
+  myWeatherTMin.setMinData(chbxTMinWeather->isChecked());
+  myWeatherTMin.setDepth(0);
+  myWeatherTMin.setWeightPoints(dsbTMinWeather->value());
+  myWeatherTMin.setObservations(sbTMinWeather->value());
+  myWeatherTMin.setReplicates(0);
 
   // T max (set values from form)
+  myWeatherTMax.setMinData(chbxTMaxWeather->isChecked());
+  myWeatherTMax.setDepth(0);
+  myWeatherTMax.setWeightPoints(dsbTMaxWeather->value());
+  myWeatherTMax.setObservations(sbTMaxWeather->value());
+  myWeatherTMax.setReplicates(0);
 
   // relative humidity (set values from form)
+  myWeatherRelHumidity.setMinData(chbxRelHumidityWeather->isChecked());
+  myWeatherRelHumidity.setDepth(0);
+  myWeatherRelHumidity.setWeightPoints(dsbRelHumidityWeather->value());
+  myWeatherRelHumidity.setObservations(sbRelHumidityWeather->value());
+  myWeatherRelHumidity.setReplicates(0);
 
   // wind speed (set values from form)
+  myWeatherWindSpeed.setMinData(chbxWindSpeedWeather->isChecked());
+  myWeatherWindSpeed.setDepth(0);
+  myWeatherWindSpeed.setWeightPoints(dsbWindSpeedWeather->value());
+  myWeatherWindSpeed.setObservations(sbWindSpeedWeather->value());
+  myWeatherWindSpeed.setReplicates(0);
 
   // global radiation (set values from form)
+  myWeatherGlobalRadiation.setMinData(chbxGlobalRadiationWeather->isChecked());
+  myWeatherGlobalRadiation.setDepth(0);
+  myWeatherGlobalRadiation.setWeightPoints(dsbGlobalRadiationWeather->value());
+  myWeatherGlobalRadiation.setObservations(sbGlobalRadiationWeather->value());
+  myWeatherGlobalRadiation.setReplicates(0);
 
   // sunshine hours (set values from form)
+  myWeatherSunshineHours.setMinData(chbxSunshineHoursWeather->isChecked());
+  myWeatherSunshineHours.setDepth(0);
+  myWeatherSunshineHours.setWeightPoints(dsbSunshineHoursWeather->value());
+  myWeatherSunshineHours.setObservations(sbSunshineHoursWeather->value());
+  myWeatherSunshineHours.setReplicates(0);
+
 
   //
   // Sate Vars set from Form
   //
 
   // CROP a. gr. biomass (set values from form)
+  mySVCropAGrBiomass.setMinData(chbxSVCropAGrBiomass->isChecked());
+  mySVCropAGrBiomass.setDepth(dsbSVCropAGrBiomassLayers->value());
+  mySVCropAGrBiomass.setWeightPoints(dsbSVCropAGrBiomassWeightPts->value());
+  mySVCropAGrBiomass.setObservations(sbSVCropAGrBiomassObservations->value());
+  mySVCropAGrBiomass.setReplicates(dsbSVCropAGrBiomassReplicates->value());
 
   // CROP weight organs (set values from form)
+  mySVCropWeightOrgans.setMinData(chbxSVCropWeightOrgans->isChecked());
+  mySVCropWeightOrgans.setDepth(dsbSVCropWeightOrgansLayers->value());
+  mySVCropWeightOrgans.setWeightPoints(dsbSVCropWeightOrgansWeightPts->value());
+  mySVCropWeightOrgans.setObservations(sbSVCropWeightOrgansObservations->value());
+  mySVCropWeightOrgans.setReplicates(dsbSVCropWeightOrgansReplicates->value());
 
   // CROP root biomass (set values from form)
+  mySVCropRootBiomass.setMinData(chbxSVCropRootBiomass->isChecked());
+  mySVCropRootBiomass.setDepth(dsbSVCropRootBiomassLayers->value());
+  mySVCropRootBiomass.setWeightPoints(dsbSVCropRootBiomassWeightPts->value());
+  mySVCropRootBiomass.setObservations(sbSVCropRootBiomassObservations->value());
+  mySVCropRootBiomass.setReplicates(dsbSVCropRootBiomassReplicates->value());
 
   // CROP N in a. gr. biomass (set values from form)
+  mySVCropNInAGrBiomass.setMinData(chbxSVCropNInAGrBiomass->isChecked());
+  mySVCropNInAGrBiomass.setDepth(dsbSVCropNInAGrBiomassLayers->value());
+  mySVCropNInAGrBiomass.setWeightPoints(dsbSVCropNInAGrBiomassWeightPts->value());
+  mySVCropNInAGrBiomass.setObservations(sbSVCropNInAGrBiomassObservations->value());
+  mySVCropNInAGrBiomass.setReplicates(dsbSVCropNInAGrBiomassReplicates->value());
 
   // CROP N in organs (set values from form)
+  mySVCropNInOrgans.setMinData(chbxSVCropNInOrgans->isChecked());
+  mySVCropNInOrgans.setDepth(dsbSVCropNInOrgansLayers->value());
+  mySVCropNInOrgans.setWeightPoints(dsbSVCropNInOrgansWeightPts->value());
+  mySVCropNInOrgans.setObservations(sbSVCropNInOrgansObservations->value());
+  mySVCropNInOrgans.setReplicates(dsbSVCropNInOrgansReplicates->value());
 
   // CROP LAI (set values from form)
+  mySVCropLAI.setMinData(chbxSVCropLAI->isChecked());
+  mySVCropLAI.setDepth(dsbSVCropLAILayers->value());
+  mySVCropLAI.setWeightPoints(dsbSVCropLAIWeightPts->value());
+  mySVCropLAI.setObservations(sbSVCropLAIObservations->value());
+  mySVCropLAI.setReplicates(dsbSVCropLAIReplicates->value());
 
   // SOIL soil water grav. (set values from form)
+  mySVSoilSoilWaterGrav.setMinData(chbxSVSoilSoilWaterGrav->isChecked());
+  mySVSoilSoilWaterGrav.setDepth(dsbSVSoilSoilWaterGravLayers->value());
+  mySVSoilSoilWaterGrav.setWeightPoints(dsbSVSoilSoilWaterGravWeightPts->value());
+  mySVSoilSoilWaterGrav.setObservations(sbSVSoilSoilWaterGravObservations->value());
+  mySVSoilSoilWaterGrav.setReplicates(dsbSVSoilSoilWaterGravReplicates->value());
 
   // SOIL pressure heads (set values from form)
+  mySVSoilPressureHeads.setMinData(chbxSVSoilPressureHeads->isChecked());
+  mySVSoilPressureHeads.setDepth(dsbSVSoilPressureHeadsLayers->value());
+  mySVSoilPressureHeads.setWeightPoints(dsbSVSoilPressureHeadsWeightPts->value());
+  mySVSoilPressureHeads.setObservations(sbSVSoilPressureHeadsObservations->value());
+  mySVSoilPressureHeads.setReplicates(dsbSVSoilPressureHeadsReplicates->value());
 
-  // SOIL nitrogen min. (set values from form)
+  // SOIL N min. (set values from form)
+  mySVSoilNMin.setMinData(chbxSVSoilNMin->isChecked());
+  mySVSoilNMin.setDepth(dsbSVSoilNMinLayers->value());
+  mySVSoilNMin.setWeightPoints(dsbSVSoilNMinWeightPts->value());
+  mySVSoilNMin.setObservations(sbSVSoilNMinObservations->value());
+  mySVSoilNMin.setReplicates(dsbSVSoilNMinReplicates->value());
 
   // SOIL soil water sensor cal. (set values from form)
+  mySVSoilSoilWaterSensorCal.setMinData(chbxSVSoilSoilWaterSensorCal->isChecked());
+  mySVSoilSoilWaterSensorCal.setDepth(dsbSVSoilSoilWaterSensorCalLayers->value());
+  mySVSoilSoilWaterSensorCal.setWeightPoints(dsbSVSoilSoilWaterSensorCalWeightPts->value());
+  mySVSoilSoilWaterSensorCal.setObservations(sbSVSoilSoilWaterSensorCalObservations->value());
+  mySVSoilSoilWaterSensorCal.setReplicates(dsbSVSoilSoilWaterSensorCalReplicates->value());
 
   // SOIL water flux bottom root (set values from form)
+  mySVSoilWaterFluxBottomRoot.setMinData(chbxSVSoilWaterFluxBottomRoot->isChecked());
+  mySVSoilWaterFluxBottomRoot.setDepth(dsbSVSoilWaterFluxBottomRootLayers->value());
+  mySVSoilWaterFluxBottomRoot.setWeightPoints(dsbSVSoilWaterFluxBottomRootWeightPts->value());
+  mySVSoilWaterFluxBottomRoot.setObservations(sbSVSoilWaterFluxBottomRootObservations->value());
+  mySVSoilWaterFluxBottomRoot.setReplicates(dsbSVSoilWaterFluxBottomRootReplicates->value());
 
   // SOIL N flux bottom root (set values from form)
+  mySVSoilNFluxBottomRoot.setMinData(chbxSVSoilNFluxBottomRoot->isChecked());
+  mySVSoilNFluxBottomRoot.setDepth(dsbSVSoilNFluxBottomRootLayers->value());
+  mySVSoilNFluxBottomRoot.setWeightPoints(dsbSVSoilNFluxBottomRootWeightPts->value());
+  mySVSoilNFluxBottomRoot.setObservations(sbSVSoilNFluxBottomRootObservations->value());
+  mySVSoilNFluxBottomRoot.setReplicates(dsbSVSoilNFluxBottomRootReplicates->value());
 
   // SURFACEFLUXES ET (set values from form)
+  mySVSurfaceFluxesEt.setMinData(chbxSVSurfaceFluxesEt->isChecked());
+  mySVSurfaceFluxesEt.setDepth(dsbSVSurfaceFluxesEtLayers->value());
+  mySVSurfaceFluxesEt.setWeightPoints(dsbSVSurfaceFluxesEtWeightPts->value());
+  mySVSurfaceFluxesEt.setObservations(sbSVSurfaceFluxesEtObservations->value());
+  mySVSurfaceFluxesEt.setReplicates(dsbSVSurfaceFluxesEtReplicates->value());
 
   // SURFACEFLUXES NH3 Loss (set values from form)
+  mySVSurfaceFluxesNh3Loss.setMinData(chbxSVSurfaceFluxesNh3Loss->isChecked());
+  mySVSurfaceFluxesNh3Loss.setDepth(dsbSVSurfaceFluxesNh3LossLayers->value());
+  mySVSurfaceFluxesNh3Loss.setWeightPoints(dsbSVSurfaceFluxesNh3LossWeightPts->value());
+  mySVSurfaceFluxesNh3Loss.setObservations(sbSVSurfaceFluxesNh3LossObservations->value());
+  mySVSurfaceFluxesNh3Loss.setReplicates(dsbSVSurfaceFluxesNh3LossReplicates->value());
 
   // SURFACEFLUXES N2O Loss (set values from form)
+  mySVSurfaceFluxesN2OLoss.setMinData(chbxSVSurfaceFluxesN2OLoss->isChecked());
+  mySVSurfaceFluxesN2OLoss.setDepth(dsbSVSurfaceFluxesN2OLossLayers->value());
+  mySVSurfaceFluxesN2OLoss.setWeightPoints(dsbSVSurfaceFluxesN2OLossWeightPts->value());
+  mySVSurfaceFluxesN2OLoss.setObservations(sbSVSurfaceFluxesN2OLossObservations->value());
+  mySVSurfaceFluxesN2OLoss.setReplicates(dsbSVSurfaceFluxesN2OLossReplicates->value());
 
   // SURFACEFLUXES N2 Loss (set values from form)
+  mySVSurfaceFluxesN2Loss.setMinData(chbxSVSurfaceFluxesN2Loss->isChecked());
+  mySVSurfaceFluxesN2Loss.setDepth(dsbSVSurfaceFluxesN2LossLayers->value());
+  mySVSurfaceFluxesN2Loss.setWeightPoints(dsbSVSurfaceFluxesN2LossWeightPts->value());
+  mySVSurfaceFluxesN2Loss.setObservations(sbSVSurfaceFluxesN2LossObservations->value());
+  mySVSurfaceFluxesN2Loss.setReplicates(dsbSVSurfaceFluxesN2LossReplicates->value());
 
   // SURFACEFLUXES CH4 Loss (set values from form)
+  mySVSurfaceFluxesCh4Loss.setMinData(chbxSVSurfaceFluxesCh4Loss->isChecked());
+  mySVSurfaceFluxesCh4Loss.setDepth(dsbSVSurfaceFluxesCh4LossLayers->value());
+  mySVSurfaceFluxesCh4Loss.setWeightPoints(dsbSVSurfaceFluxesCh4LossWeightPts->value());
+  mySVSurfaceFluxesCh4Loss.setObservations(sbSVSurfaceFluxesCh4LossObservations->value());
+  mySVSurfaceFluxesCh4Loss.setReplicates(dsbSVSurfaceFluxesCh4LossReplicates->value());
 
   // OBSERVATIONS lodging (set values from form)
+  mySVObservationsLodging.setMinData(chbxSVObservationsLodging->isChecked());
+  mySVObservationsLodging.setDepth(dsbSVObservationsLodgingLayers->value());
+  mySVObservationsLodging.setWeightPoints(dsbSVObservationsLodgingWeightPts->value());
+  mySVObservationsLodging.setObservations(sbSVObservationsLodgingObservations->value());
+  mySVObservationsLodging.setReplicates(dsbSVObservationsLodgingReplicates->value());
 
   // OBSERVATIONS pests or diseases (set values from form)
+  mySVObservationsPestsOrDiseases.setMinData(chbxSVObservationsPestsOrDiseases->isChecked());
+  mySVObservationsPestsOrDiseases.setDepth(dsbSVObservationsPestsOrDiseasesLayers->value());
+  mySVObservationsPestsOrDiseases.setWeightPoints(dsbSVObservationsPestsOrDiseasesWeightPts->value());
+  mySVObservationsPestsOrDiseases.setObservations(sbSVObservationsPestsOrDiseasesObservations->value());
+  mySVObservationsPestsOrDiseases.setReplicates(dsbSVObservationsPestsOrDiseasesReplicates->value());
 
   // OBSERVATIONS damages (set values from form)
+  mySVObservationsDamages.setMinData(chbxSVObservationsDamages->isChecked());
+  mySVObservationsDamages.setDepth(dsbSVObservationsDamagesLayers->value());
+  mySVObservationsDamages.setWeightPoints(dsbSVObservationsDamagesWeightPts->value());
+  mySVObservationsDamages.setObservations(sbSVObservationsDamagesObservations->value());
+  mySVObservationsDamages.setReplicates(dsbSVObservationsDamagesReplicates->value());
 
-    /////////////////////
+
+    //-----------------//
    // set the values  //
-  /////////////////////
+  //-----------------//
 
   //
   // set cultivation values
@@ -3676,37 +3843,103 @@ void MadDataClassification::on_pbSave_clicked()
   //
   // set previous crop values
   //
-
+  myPrevCrop.setCrop(myPrevCropCrop);
+  myPrevCrop.setSowingDate(myPrevCropSowingDate);
+  myPrevCrop.setHarvestDate(myPrevCropHarvestDate);
+  myPrevCrop.setYield(myPrevCropYield);
+  myPrevCrop.setResidueMgmt(myPrevCropResidueMgmt);
+  myPrevCrop.setFertilisation(myPrevCropFertilisation);
+  myPrevCrop.setIrrigation(myPrevCropIrrigation);
 
   //
-  // set initial values values
+  // set InitialValues values
   //
-
+  myInitialValues.setSoilMoisture(myInitialValuesSoilMoisture);
+  myInitialValues.setNitrogenMin(myInitialValuesNMin);
 
   //
   // set soil values
   //
-
+  mySoil.setCarbonOrganic(mySoilCOrg);
+  mySoil.setNitrogenOrganic(mySoilNOrg);
+  mySoil.setTexture(mySoilTexture);
+  mySoil.setBulkDensity(mySoilBulkDensity);
+  mySoil.setFieldCapacityMeas(mySoilFieldCapacity);
+  mySoil.setWiltingPointMeas(mySoilWiltingPoint);
+  mySoil.setPfCurve(mySoilPfCurve);
+  mySoil.setHydrCondCurve(mySoilHydrCondCurve);
+  mySoil.setPh(mySoilPh);
 
   //
   // set site values
   //
-
+  mySite.setLatitude(mySiteLatitude);
+  mySite.setLongitude(mySiteLongitude);
+  mySite.setAltitude(mySiteAltitude);
 
   //
   // set weather values
   //
-
+  myWeather.setPrecipitation(myWeatherPrecipitation);
+  myWeather.setTAve(myWeatherTAve);
+  myWeather.setTMin(myWeatherTMin);
+  myWeather.setTMax(myWeatherTMax);
+  myWeather.setRelativeHumidity(myWeatherRelHumidity);
+  myWeather.setWindSpeed(myWeatherWindSpeed);
+  myWeather.setGlobalRadiation(myWeatherGlobalRadiation);
+  myWeather.setSunshineHours(myWeatherSunshineHours);
+  myWeather.setLeafWetness(myWeatherLeafWetness);
+  myWeather.setSoilTemp(myWeatherSoilTemp);
 
   //
   // set state vars values
   //
+  //state vars - soil (initialise variables)
+  mySVSoil.setSoilWaterGrav(mySVSoilSoilWaterGrav);
+  mySVSoil.setPressureHeads(mySVSoilPressureHeads);
+  mySVSoil.setNMin(mySVSoilNMin);
+  mySVSoil.setSoilWaterSensorCal(mySVSoilSoilWaterSensorCal);
+  mySVSoil.setWaterFluxBottomRoot(mySVSoilWaterFluxBottomRoot);
+  mySVSoil.setNitrogenFluxBottomRoot(mySVSoilNFluxBottomRoot);
 
+  mySV.setSoilCategories(mySVSoil);
 
+  // state vars - crop (initialise variables)
+  mySVCrop.setAgrBiomass(mySVCropAGrBiomass);
+  mySVCrop.setWeightOrgans(mySVCropWeightOrgans);
+  mySVCrop.setRootBiomass(mySVCropRootBiomass);
+  mySVCrop.setNInAGrBiomass(mySVCropNInAGrBiomass);
+  mySVCrop.setNInOrgans(mySVCropNInOrgans);
+  mySVCrop.setLai(mySVCropLAI);
+
+  mySV.setCropCategories(mySVCrop);
+
+  // state vars - surface fluxes (initialise variables)
+  mySVSurfaceFluxes.setEt(mySVSurfaceFluxesEt);
+  mySVSurfaceFluxes.setNh3Loss(mySVSurfaceFluxesNh3Loss);
+  mySVSurfaceFluxes.setN2oLoss(mySVSurfaceFluxesN2OLoss);
+  mySVSurfaceFluxes.setN2Loss(mySVSurfaceFluxesN2Loss);
+  mySVSurfaceFluxes.setCh4Loss(mySVSurfaceFluxesCh4Loss);
+
+  mySV.setSurfaceFluxesCategories(mySVSurfaceFluxes);
+
+  // state vars - observation data (initialise variables)
+  mySVObservations.setLodging(mySVObservationsLodging);
+  mySVObservations.setPestsOrDiseases(mySVObservationsPestsOrDiseases);
+  mySVObservations.setDamages(mySVObservationsDamages);
+
+  mySV.setObservationCategories(mySVObservations);
 
   QString myString;
   myString = myCultivation.toXml();
   myString += myPhenology.toXml();
+  myString += myPrevCrop.toXml();
+  myString += myInitialValues.toXml();
+  myString += mySoil.toXml();
+  myString += mySite.toXml();
+  myString += myWeather.toXml();
+  myString += mySV.toXml();
+
   textEditSide->setText(myString);
 
 
