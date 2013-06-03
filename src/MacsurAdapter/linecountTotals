@@ -10,10 +10,10 @@ find . -name "*build*" -prune -o -name "*."h -exec wc -l {} \+
 #find ./lib/ -name "*."h | xargs wc -l
 
 
-echo "src:"
-echo "cpp files:"
+#echo "src:"
+echo "number of lines in all .cpp files:"
 find . -name "*build*" -prune -o -name "*."cpp -exec wc -l {} \+ | grep total
-echo "header files:"
+echo "number of lines in all .h (header) files:"
 find . -name "*build*" -prune -o -name "*."h -exec wc -l {} \+ | grep total
 #echo " "
 #echo "gui:"

@@ -185,116 +185,116 @@ private slots:
   void  on_gbxSVCrop_clicked();
   void on_cbExamplesSVCrop_currentIndexChanged(const QString &theValue);
 
-  void on_sbSVCropAGrBiomassLayers_valueChanged();
+  void on_dsbSVCropAGrBiomassLayers_valueChanged();
   void on_sbSVCropAGrBiomassObservations_valueChanged();
-  void on_sbSVCropAGrBiomassWeightPts_valueChanged();
+  void on_dsbSVCropAGrBiomassWeightPts_valueChanged();
   void on_dsbSVCropAGrBiomassReplicates_valueChanged();
 
-  void on_sbSVCropWeightOrgansLayers_valueChanged();
+  void on_dsbSVCropWeightOrgansLayers_valueChanged();
   void on_sbSVCropWeightOrgansObservations_valueChanged();
-  void on_sbSVCropWeightOrgansWeightPts_valueChanged();
+  void on_dsbSVCropWeightOrgansWeightPts_valueChanged();
   void on_dsbSVCropWeightOrgansReplicates_valueChanged();
 
-  void on_sbSVCropRootBiomassLayers_valueChanged();
+  void on_dsbSVCropRootBiomassLayers_valueChanged();
   void on_sbSVCropRootBiomassObservations_valueChanged();
-  void on_sbSVCropRootBiomassWeightPts_valueChanged();
+  void on_dsbSVCropRootBiomassWeightPts_valueChanged();
   void on_dsbSVCropRootBiomassReplicates_valueChanged();
 
-  void on_sbSVCropNInAGrBiomassLayers_valueChanged();
+  void on_dsbSVCropNInAGrBiomassLayers_valueChanged();
   void on_sbSVCropNInAGrBiomassObservations_valueChanged();
-  void on_sbSVCropNInAGrBiomassWeightPts_valueChanged();
+  void on_dsbSVCropNInAGrBiomassWeightPts_valueChanged();
   void on_dsbSVCropNInAGrBiomassReplicates_valueChanged();
 
-  void on_sbSVCropNInOrgansLayers_valueChanged();
+  void on_dsbSVCropNInOrgansLayers_valueChanged();
   void on_sbSVCropNInOrgansObservations_valueChanged();
-  void on_sbSVCropNInOrgansWeightPts_valueChanged();
+  void on_dsbSVCropNInOrgansWeightPts_valueChanged();
   void on_dsbSVCropNInOrgansReplicates_valueChanged();
 
-  void on_sbSVCropLAILayers_valueChanged();
+  void on_dsbSVCropLAILayers_valueChanged();
   void on_sbSVCropLAIObservations_valueChanged();
-  void on_sbSVCropLAIWeightPts_valueChanged();
+  void on_dsbSVCropLAIWeightPts_valueChanged();
   void on_dsbSVCropLAIReplicates_valueChanged();
 
   // SV Soil
   void  on_gbxSVSoil_clicked();
   void on_cbExamplesSVSoil_currentIndexChanged(const QString &theValue);
 
-  void on_sbSVSoilSoilWaterGravLayers_valueChanged();
+  void on_dsbSVSoilSoilWaterGravLayers_valueChanged();
   void on_sbSVSoilSoilWaterGravObservations_valueChanged();
-  void on_sbSVSoilSoilWaterGravWeightPts_valueChanged();
+  void on_dsbSVSoilSoilWaterGravWeightPts_valueChanged();
   void on_dsbSVSoilSoilWaterGravReplicates_valueChanged();
 
-  void on_sbSVSoilPressureHeadsLayers_valueChanged();
+  void on_dsbSVSoilPressureHeadsLayers_valueChanged();
   void on_sbSVSoilPressureHeadsObservations_valueChanged();
-  void on_sbSVSoilPressureHeadsWeightPts_valueChanged();
+  void on_dsbSVSoilPressureHeadsWeightPts_valueChanged();
   void on_dsbSVSoilPressureHeadsReplicates_valueChanged();
 
-  void on_sbSVSoilNMinLayers_valueChanged();
+  void on_dsbSVSoilNMinLayers_valueChanged();
   void on_sbSVSoilNMinObservations_valueChanged();
-  void on_sbSVSoilNMinWeightPts_valueChanged();
+  void on_dsbSVSoilNMinWeightPts_valueChanged();
   void on_dsbSVSoilNMinReplicates_valueChanged();
 
-  void on_sbSVSoilSoilWaterSensorCalLayers_valueChanged();
+  void on_dsbSVSoilSoilWaterSensorCalLayers_valueChanged();
   void on_sbSVSoilSoilWaterSensorCalObservations_valueChanged();
-  void on_sbSVSoilSoilWaterSensorCalWeightPts_valueChanged();
+  void on_dsbSVSoilSoilWaterSensorCalWeightPts_valueChanged();
   void on_dsbSVSoilSoilWaterSensorCalReplicates_valueChanged();
 
-  void on_sbSVSoilWaterFluxBottomRootLayers_valueChanged();
+  void on_dsbSVSoilWaterFluxBottomRootLayers_valueChanged();
   void on_sbSVSoilWaterFluxBottomRootObservations_valueChanged();
-  void on_sbSVSoilWaterFluxBottomRootWeightPts_valueChanged();
+  void on_dsbSVSoilWaterFluxBottomRootWeightPts_valueChanged();
   void on_dsbSVSoilWaterFluxBottomRootReplicates_valueChanged();
 
-  void on_sbSVSoilNFluxBottomRootLayers_valueChanged();
+  void on_dsbSVSoilNFluxBottomRootLayers_valueChanged();
   void on_sbSVSoilNFluxBottomRootObservations_valueChanged();
-  void on_sbSVSoilNFluxBottomRootWeightPts_valueChanged();
+  void on_dsbSVSoilNFluxBottomRootWeightPts_valueChanged();
   void on_dsbSVSoilNFluxBottomRootReplicates_valueChanged();
 
   // SV surface fluxes
   void  on_gbxSVSurfaceFluxes_clicked();
   void on_cbExamplesSVSurfaceFluxes_currentIndexChanged(const QString &theValue);
 
-  void on_sbSVSurfaceFluxesEtLayers_valueChanged();
+  void on_dsbSVSurfaceFluxesEtLayers_valueChanged();
   void on_sbSVSurfaceFluxesEtObservations_valueChanged();
-  void on_sbSVSurfaceFluxesEtWeightPts_valueChanged();
+  void on_dsbSVSurfaceFluxesEtWeightPts_valueChanged();
   void on_dsbSVSurfaceFluxesEtReplicates_valueChanged();
 
-  void on_sbSVSurfaceFluxesNh3LossLayers_valueChanged();
+  void on_dsbSVSurfaceFluxesNh3LossLayers_valueChanged();
   void on_sbSVSurfaceFluxesNh3LossObservations_valueChanged();
-  void on_sbSVSurfaceFluxesNh3LossWeightPts_valueChanged();
+  void on_dsbSVSurfaceFluxesNh3LossWeightPts_valueChanged();
   void on_dsbSVSurfaceFluxesNh3LossReplicates_valueChanged();
 
-  void on_sbSVSurfaceFluxesN2OLossLayers_valueChanged();
+  void on_dsbSVSurfaceFluxesN2OLossLayers_valueChanged();
   void on_sbSVSurfaceFluxesN2OLossObservations_valueChanged();
-  void on_sbSVSurfaceFluxesN2OLossWeightPts_valueChanged();
+  void on_dsbSVSurfaceFluxesN2OLossWeightPts_valueChanged();
   void on_dsbSVSurfaceFluxesN2OLossReplicates_valueChanged();
 
-  void on_sbSVSurfaceFluxesN2LossLayers_valueChanged();
+  void on_dsbSVSurfaceFluxesN2LossLayers_valueChanged();
   void on_sbSVSurfaceFluxesN2LossObservations_valueChanged();
-  void on_sbSVSurfaceFluxesN2LossWeightPts_valueChanged();
+  void on_dsbSVSurfaceFluxesN2LossWeightPts_valueChanged();
   void on_dsbSVSurfaceFluxesN2LossReplicates_valueChanged();
 
-  void on_sbSVSurfaceFluxesCh4LossLayers_valueChanged();
+  void on_dsbSVSurfaceFluxesCh4LossLayers_valueChanged();
   void on_sbSVSurfaceFluxesCh4LossObservations_valueChanged();
-  void on_sbSVSurfaceFluxesCh4LossWeightPts_valueChanged();
+  void on_dsbSVSurfaceFluxesCh4LossWeightPts_valueChanged();
   void on_dsbSVSurfaceFluxesCh4LossReplicates_valueChanged();
 
   // SV observations
   void  on_gbxSVObservations_clicked();
   void on_cbExamplesSVObservations_currentIndexChanged(const QString &theValue);
 
-  void on_sbSVObservationsLodgingLayers_valueChanged();
+  void on_dsbSVObservationsLodgingLayers_valueChanged();
   void on_sbSVObservationsLodgingObservations_valueChanged();
-  void on_sbSVObservationsLodgingWeightPts_valueChanged();
+  void on_dsbSVObservationsLodgingWeightPts_valueChanged();
   void on_dsbSVObservationsLodgingReplicates_valueChanged();
 
-  void on_sbSVObservationsPestsOrDiseasesLayers_valueChanged();
+  void on_dsbSVObservationsPestsOrDiseasesLayers_valueChanged();
   void on_sbSVObservationsPestsOrDiseasesObservations_valueChanged();
-  void on_sbSVObservationsPestsOrDiseasesWeightPts_valueChanged();
+  void on_dsbSVObservationsPestsOrDiseasesWeightPts_valueChanged();
   void on_dsbSVObservationsPestsOrDiseasesReplicates_valueChanged();
 
-  void on_sbSVObservationsDamagesLayers_valueChanged();
+  void on_dsbSVObservationsDamagesLayers_valueChanged();
   void on_sbSVObservationsDamagesObservations_valueChanged();
-  void on_sbSVObservationsDamagesWeightPts_valueChanged();
+  void on_dsbSVObservationsDamagesWeightPts_valueChanged();
   void on_dsbSVObservationsDamagesReplicates_valueChanged();
 
 

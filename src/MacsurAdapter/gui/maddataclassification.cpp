@@ -1618,7 +1618,7 @@ void MadDataClassification::on_dsbSoilTempWeather_valueChanged(double theValue)
 }
 
 // SV crop tab (spin box changes)
-void MadDataClassification::on_sbSVCropAGrBiomassLayers_valueChanged()
+void MadDataClassification::on_dsbSVCropAGrBiomassLayers_valueChanged()
 {
   updateSVCropAGrBiomassRatingLbl();
 }
@@ -1626,7 +1626,7 @@ void MadDataClassification::on_sbSVCropAGrBiomassObservations_valueChanged()
 {
   updateSVCropAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropAGrBiomassWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropAGrBiomassWeightPts_valueChanged()
 {
   updateSVCropAGrBiomassRatingLbl();
 }
@@ -1635,7 +1635,7 @@ void MadDataClassification::on_dsbSVCropAGrBiomassReplicates_valueChanged()
   updateSVCropAGrBiomassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropWeightOrgansLayers_valueChanged()
+void MadDataClassification::on_dsbSVCropWeightOrgansLayers_valueChanged()
 {
   updateSVCropWeightOrgansRatingLbl();
 }
@@ -1643,7 +1643,7 @@ void MadDataClassification::on_sbSVCropWeightOrgansObservations_valueChanged()
 {
   updateSVCropWeightOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropWeightOrgansWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropWeightOrgansWeightPts_valueChanged()
 {
   updateSVCropWeightOrgansRatingLbl();
 }
@@ -1652,7 +1652,7 @@ void MadDataClassification::on_dsbSVCropWeightOrgansReplicates_valueChanged()
   updateSVCropWeightOrgansRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropRootBiomassLayers_valueChanged()
+void MadDataClassification::on_dsbSVCropRootBiomassLayers_valueChanged()
 {
   updateSVCropRootBiomassRatingLbl();
 }
@@ -1660,7 +1660,7 @@ void MadDataClassification::on_sbSVCropRootBiomassObservations_valueChanged()
 {
   updateSVCropRootBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropRootBiomassWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropRootBiomassWeightPts_valueChanged()
 {
   updateSVCropRootBiomassRatingLbl();
 }
@@ -1669,7 +1669,7 @@ void MadDataClassification::on_dsbSVCropRootBiomassReplicates_valueChanged()
   updateSVCropRootBiomassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropNInAGrBiomassLayers_valueChanged()
+void MadDataClassification::on_dsbSVCropNInAGrBiomassLayers_valueChanged()
 {
   updateSVCropNInAGrBiomassRatingLbl();
 }
@@ -1677,7 +1677,7 @@ void MadDataClassification::on_sbSVCropNInAGrBiomassObservations_valueChanged()
 {
   updateSVCropNInAGrBiomassRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInAGrBiomassWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropNInAGrBiomassWeightPts_valueChanged()
 {
   updateSVCropNInAGrBiomassRatingLbl();
 }
@@ -1686,7 +1686,7 @@ void MadDataClassification::on_dsbSVCropNInAGrBiomassReplicates_valueChanged()
   updateSVCropNInAGrBiomassRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropNInOrgansLayers_valueChanged()
+void MadDataClassification::on_dsbSVCropNInOrgansLayers_valueChanged()
 {
   updateSVCropNInOrgansRatingLbl();
 }
@@ -1694,7 +1694,7 @@ void MadDataClassification::on_sbSVCropNInOrgansObservations_valueChanged()
 {
   updateSVCropNInOrgansRatingLbl();
 }
-void MadDataClassification::on_sbSVCropNInOrgansWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropNInOrgansWeightPts_valueChanged()
 {
   updateSVCropNInOrgansRatingLbl();
 }
@@ -1703,7 +1703,7 @@ void MadDataClassification::on_dsbSVCropNInOrgansReplicates_valueChanged()
   updateSVCropNInOrgansRatingLbl();
 }
 
-void MadDataClassification::on_sbSVCropLAILayers_valueChanged()
+void MadDataClassification::on_dsbSVCropLAILayers_valueChanged()
 {
   updateSVCropLAIRatingLbl();
 }
@@ -1711,7 +1711,7 @@ void MadDataClassification::on_sbSVCropLAIObservations_valueChanged()
 {
   updateSVCropLAIRatingLbl();
 }
-void MadDataClassification::on_sbSVCropLAIWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVCropLAIWeightPts_valueChanged()
 {
   updateSVCropLAIRatingLbl();
 }
@@ -1721,7 +1721,7 @@ void MadDataClassification::on_dsbSVCropLAIReplicates_valueChanged()
 }
 
 // SV soil tab (spin box changes)
-void MadDataClassification::on_sbSVSoilSoilWaterGravLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilSoilWaterGravLayers_valueChanged()
 {
   updateSVSoilSoilWaterGravRatingLbl();
 }
@@ -1729,7 +1729,7 @@ void MadDataClassification::on_sbSVSoilSoilWaterGravObservations_valueChanged()
 {
   updateSVSoilSoilWaterGravRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterGravWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilSoilWaterGravWeightPts_valueChanged()
 {
   updateSVSoilSoilWaterGravRatingLbl();
 }
@@ -1738,7 +1738,7 @@ void MadDataClassification::on_dsbSVSoilSoilWaterGravReplicates_valueChanged()
   updateSVSoilSoilWaterGravRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilPressureHeadsLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilPressureHeadsLayers_valueChanged()
 {
   updateSVSoilPressureHeadsRatingLbl();
 }
@@ -1746,7 +1746,7 @@ void MadDataClassification::on_sbSVSoilPressureHeadsObservations_valueChanged()
 {
   updateSVSoilPressureHeadsRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilPressureHeadsWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilPressureHeadsWeightPts_valueChanged()
 {
   updateSVSoilPressureHeadsRatingLbl();
 }
@@ -1755,7 +1755,7 @@ void MadDataClassification::on_dsbSVSoilPressureHeadsReplicates_valueChanged()
   updateSVSoilPressureHeadsRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilNMinLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilNMinLayers_valueChanged()
 {
   updateSVSoilNMinRatingLbl();
 }
@@ -1763,7 +1763,7 @@ void MadDataClassification::on_sbSVSoilNMinObservations_valueChanged()
 {
   updateSVSoilNMinRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNMinWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilNMinWeightPts_valueChanged()
 {
   updateSVSoilNMinRatingLbl();
 }
@@ -1772,7 +1772,7 @@ void MadDataClassification::on_dsbSVSoilNMinReplicates_valueChanged()
   updateSVSoilNMinRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilSoilWaterSensorCalLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilSoilWaterSensorCalLayers_valueChanged()
 {
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
@@ -1780,7 +1780,7 @@ void MadDataClassification::on_sbSVSoilSoilWaterSensorCalObservations_valueChang
 {
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilSoilWaterSensorCalWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilSoilWaterSensorCalWeightPts_valueChanged()
 {
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
@@ -1789,7 +1789,7 @@ void MadDataClassification::on_dsbSVSoilSoilWaterSensorCalReplicates_valueChange
   updateSVSoilSoilWaterSensorCalRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilWaterFluxBottomRootLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilWaterFluxBottomRootLayers_valueChanged()
 {
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
@@ -1797,7 +1797,7 @@ void MadDataClassification::on_sbSVSoilWaterFluxBottomRootObservations_valueChan
 {
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilWaterFluxBottomRootWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilWaterFluxBottomRootWeightPts_valueChanged()
 {
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
@@ -1806,7 +1806,7 @@ void MadDataClassification::on_dsbSVSoilWaterFluxBottomRootReplicates_valueChang
   updateSVSoilWaterFluxBottomRootRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSoilNFluxBottomRootLayers_valueChanged()
+void MadDataClassification::on_dsbSVSoilNFluxBottomRootLayers_valueChanged()
 {
   updateSVSoilNFluxBottomRootRatingLbl();
 }
@@ -1814,7 +1814,7 @@ void MadDataClassification::on_sbSVSoilNFluxBottomRootObservations_valueChanged(
 {
   updateSVSoilNFluxBottomRootRatingLbl();
 }
-void MadDataClassification::on_sbSVSoilNFluxBottomRootWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSoilNFluxBottomRootWeightPts_valueChanged()
 {
   updateSVSoilNFluxBottomRootRatingLbl();
 }
@@ -1824,7 +1824,7 @@ void MadDataClassification::on_dsbSVSoilNFluxBottomRootReplicates_valueChanged()
 }
 
 // SV surface fluxes tab (spin box changes)
-void MadDataClassification::on_sbSVSurfaceFluxesEtLayers_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesEtLayers_valueChanged()
 {
   updateSVSurfaceFluxesEtRatingLbl();
 }
@@ -1832,7 +1832,7 @@ void MadDataClassification::on_sbSVSurfaceFluxesEtObservations_valueChanged()
 {
   updateSVSurfaceFluxesEtRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesEtWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesEtWeightPts_valueChanged()
 {
   updateSVSurfaceFluxesEtRatingLbl();
 }
@@ -1841,7 +1841,7 @@ void MadDataClassification::on_dsbSVSurfaceFluxesEtReplicates_valueChanged()
   updateSVSurfaceFluxesEtRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesNh3LossLayers_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesNh3LossLayers_valueChanged()
 {
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
@@ -1849,7 +1849,7 @@ void MadDataClassification::on_sbSVSurfaceFluxesNh3LossObservations_valueChanged
 {
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesNh3LossWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesNh3LossWeightPts_valueChanged()
 {
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
@@ -1858,7 +1858,7 @@ void MadDataClassification::on_dsbSVSurfaceFluxesNh3LossReplicates_valueChanged(
   updateSVSurfaceFluxesNh3LossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesN2OLossLayers_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesN2OLossLayers_valueChanged()
 {
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
@@ -1866,7 +1866,7 @@ void MadDataClassification::on_sbSVSurfaceFluxesN2OLossObservations_valueChanged
 {
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2OLossWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesN2OLossWeightPts_valueChanged()
 {
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
@@ -1875,7 +1875,7 @@ void MadDataClassification::on_dsbSVSurfaceFluxesN2OLossReplicates_valueChanged(
   updateSVSurfaceFluxesN2OLossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesN2LossLayers_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesN2LossLayers_valueChanged()
 {
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
@@ -1883,7 +1883,7 @@ void MadDataClassification::on_sbSVSurfaceFluxesN2LossObservations_valueChanged(
 {
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesN2LossWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesN2LossWeightPts_valueChanged()
 {
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
@@ -1892,7 +1892,7 @@ void MadDataClassification::on_dsbSVSurfaceFluxesN2LossReplicates_valueChanged()
   updateSVSurfaceFluxesN2LossRatingLbl();
 }
 
-void MadDataClassification::on_sbSVSurfaceFluxesCh4LossLayers_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesCh4LossLayers_valueChanged()
 {
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
@@ -1900,7 +1900,7 @@ void MadDataClassification::on_sbSVSurfaceFluxesCh4LossObservations_valueChanged
 {
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
-void MadDataClassification::on_sbSVSurfaceFluxesCh4LossWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVSurfaceFluxesCh4LossWeightPts_valueChanged()
 {
   updateSVSurfaceFluxesCh4LossRatingLbl();
 }
@@ -1910,7 +1910,7 @@ void MadDataClassification::on_dsbSVSurfaceFluxesCh4LossReplicates_valueChanged(
 }
 
 // SV observations tab (spin box changes)
-void MadDataClassification::on_sbSVObservationsLodgingLayers_valueChanged()
+void MadDataClassification::on_dsbSVObservationsLodgingLayers_valueChanged()
 {
   updateSVObservationsLodgingRatingLbl();
 }
@@ -1918,7 +1918,7 @@ void MadDataClassification::on_sbSVObservationsLodgingObservations_valueChanged(
 {
   updateSVObservationsLodgingRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsLodgingWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVObservationsLodgingWeightPts_valueChanged()
 {
   updateSVObservationsLodgingRatingLbl();
 }
@@ -1927,7 +1927,7 @@ void MadDataClassification::on_dsbSVObservationsLodgingReplicates_valueChanged()
   updateSVObservationsLodgingRatingLbl();
 }
 
-void MadDataClassification::on_sbSVObservationsPestsOrDiseasesLayers_valueChanged()
+void MadDataClassification::on_dsbSVObservationsPestsOrDiseasesLayers_valueChanged()
 {
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
@@ -1935,7 +1935,7 @@ void MadDataClassification::on_sbSVObservationsPestsOrDiseasesObservations_value
 {
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsPestsOrDiseasesWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVObservationsPestsOrDiseasesWeightPts_valueChanged()
 {
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
@@ -1944,7 +1944,7 @@ void MadDataClassification::on_dsbSVObservationsPestsOrDiseasesReplicates_valueC
   updateSVObservationsPestsOrDiseasesRatingLbl();
 }
 
-void MadDataClassification::on_sbSVObservationsDamagesLayers_valueChanged()
+void MadDataClassification::on_dsbSVObservationsDamagesLayers_valueChanged()
 {
   updateSVObservationsDamagesRatingLbl();
 }
@@ -1952,7 +1952,7 @@ void MadDataClassification::on_sbSVObservationsDamagesObservations_valueChanged(
 {
   updateSVObservationsDamagesRatingLbl();
 }
-void MadDataClassification::on_sbSVObservationsDamagesWeightPts_valueChanged()
+void MadDataClassification::on_dsbSVObservationsDamagesWeightPts_valueChanged()
 {
   updateSVObservationsDamagesRatingLbl();
 }

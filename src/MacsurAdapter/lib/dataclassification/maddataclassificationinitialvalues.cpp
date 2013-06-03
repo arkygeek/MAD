@@ -96,11 +96,17 @@ bool MadDataClassificationInitialValues::fromXml(const QString theXml)
 QString MadDataClassificationInitialValues::toXml()
 {
   QString myString;
-  myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  //myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  //myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=QString("  <imageFile>" + MadUtils::xmlEncode(mImageFile) + "</imageFile>\n");
-  myString+=QString("</dataset>\n");
+  myString+=QString("  <initialvalues guid=\"" + guid() + "\">\n");
+
+  myString+=QString("    <soilmoisture>\n");
+  myString+=mSoilMoisture.toXml();
+  myString+=QString("    </soilmoisture>\n");
+
+  myString+=QString("    <nmin>\n");
+  myString+=mNitrogenMin.toXml();
+  myString+=QString("    </nmin>\n");
+
+  myString+=QString("  </dataset>\n");
   return myString;
 
   /*   example structure of xml file
