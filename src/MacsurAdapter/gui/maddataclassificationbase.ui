@@ -38,7 +38,7 @@
        </font>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
        <attribute name="icon">
@@ -7546,7 +7546,7 @@
         <item row="0" column="0">
          <widget class="QToolBox" name="toolBoxStateVars">
           <property name="currentIndex">
-           <number>1</number>
+           <number>0</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -7623,7 +7623,7 @@
                   <widget class="QSpinBox" name="sbSVCropWeightOrgansLayers"/>
                  </item>
                  <item row="3" column="3">
-                  <widget class="QSpinBox" name="sbSVCropWeightOrgansWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropWeightOrgansWeightPts"/>
                  </item>
                  <item row="2" column="1">
                   <widget class="QSpinBox" name="sbSVCropAGrBiomassLayers"/>
@@ -7732,13 +7732,13 @@
                   </widget>
                  </item>
                  <item row="6" column="3">
-                  <widget class="QSpinBox" name="sbSVCropNInOrgansWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropNInOrgansWeightPts"/>
                  </item>
                  <item row="6" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVCropNInOrgansReplicates"/>
                  </item>
                  <item row="4" column="3">
-                  <widget class="QSpinBox" name="sbSVCropRootBioMassWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropRootBioMassWeightPts"/>
                  </item>
                  <item row="4" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVCropRootBioMassReplicates"/>
@@ -7797,7 +7797,7 @@
                   <widget class="QSpinBox" name="sbSVCropLAIObservations"/>
                  </item>
                  <item row="7" column="3">
-                  <widget class="QSpinBox" name="sbSVCropLAIWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropLAIWeightPts"/>
                  </item>
                  <item row="0" column="0">
                   <widget class="QLabel" name="lblSVCropMinDataHeader">
@@ -7833,7 +7833,7 @@
                   <widget class="QSpinBox" name="sbSVCropAGrBiomassObservations"/>
                  </item>
                  <item row="2" column="3">
-                  <widget class="QSpinBox" name="sbSVCropAGrBiomassWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropAGrBiomassWeightPts"/>
                  </item>
                  <item row="2" column="4">
                   <widget class="QDoubleSpinBox" name="dsbSVCropAGrBiomassReplicates"/>
@@ -7883,7 +7883,7 @@
                   <widget class="QSpinBox" name="sbSVCropNInAGrBioMassObservations"/>
                  </item>
                  <item row="5" column="3">
-                  <widget class="QSpinBox" name="sbSVCropNInAGrBioMassWeight"/>
+                  <widget class="QSpinBox" name="sbSVCropNInAGrBioMassWeightPts"/>
                  </item>
                  <item row="3" column="2">
                   <widget class="QSpinBox" name="sbSVCropWeightOrgansObservations"/>
@@ -8118,7 +8118,7 @@
                 </layout>
                </item>
                <item row="3" column="4">
-                <widget class="QLabel" name="lblMedalWeatherSVCrop">
+                <widget class="QLabel" name="lblMedalSVCrop">
                  <property name="minimumSize">
                   <size>
                    <width>30</width>
@@ -8155,7 +8155,7 @@
                 </widget>
                </item>
                <item row="3" column="3">
-                <widget class="QLabel" name="lblRankingWeatherSVCrop">
+                <widget class="QLabel" name="lblRankingSVCrop">
                  <property name="font">
                   <font>
                    <pointsize>13</pointsize>
@@ -8583,7 +8583,7 @@
                 </layout>
                </item>
                <item row="1" column="3">
-                <widget class="QLabel" name="lblMedalWeatherSVSoil">
+                <widget class="QLabel" name="lblMedalSVSoil">
                  <property name="minimumSize">
                   <size>
                    <width>30</width>
@@ -8633,7 +8633,7 @@
                 </spacer>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="lblRankingWeatherSVSoil">
+                <widget class="QLabel" name="lblRankingSVSoil">
                  <property name="font">
                   <font>
                    <pointsize>13</pointsize>
@@ -9448,7 +9448,7 @@
                 </layout>
                </item>
                <item row="1" column="1">
-                <widget class="QLabel" name="lblRankingWeatherSVSurfaceFluxes">
+                <widget class="QLabel" name="lblRankingSVSurfaceFluxes">
                  <property name="font">
                   <font>
                    <pointsize>13</pointsize>
@@ -9463,7 +9463,7 @@
                 </widget>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="lblMedalWeatherSVSurfaceFluxes">
+                <widget class="QLabel" name="lblMedalSVSurfaceFluxes">
                  <property name="minimumSize">
                   <size>
                    <width>30</width>
@@ -9520,8 +9520,8 @@
                 </widget>
                </item>
               </layout>
-              <zorder>lblMedalWeatherSVSurfaceFluxes</zorder>
-              <zorder>lblRankingWeatherSVSurfaceFluxes</zorder>
+              <zorder>lblMedalSVSurfaceFluxes</zorder>
+              <zorder>lblRankingSVSurfaceFluxes</zorder>
               <zorder>verticalSpacerSVSurfaceFluxes</zorder>
               <zorder>cbExamplesSVSurfaceFluxes</zorder>
               <zorder>lblExampleSVSurfaceFluxes</zorder>
@@ -9534,8 +9534,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>473</width>
-             <height>281</height>
+             <width>674</width>
+             <height>377</height>
             </rect>
            </property>
            <attribute name="icon">
@@ -9588,7 +9588,7 @@
                 </widget>
                </item>
                <item row="1" column="3">
-                <widget class="QLabel" name="lblMedalWeatherSVObservations">
+                <widget class="QLabel" name="lblMedalSVObservations">
                  <property name="minimumSize">
                   <size>
                    <width>30</width>
@@ -9821,7 +9821,7 @@
                 </layout>
                </item>
                <item row="1" column="2">
-                <widget class="QLabel" name="lblRankingWeatherSVObservations">
+                <widget class="QLabel" name="lblRankingSVObservations">
                  <property name="font">
                   <font>
                    <pointsize>13</pointsize>

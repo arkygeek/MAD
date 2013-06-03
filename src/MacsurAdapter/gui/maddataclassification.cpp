@@ -249,54 +249,54 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
   connect ( sbSVCropAGrBiomassObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
-  connect ( sbSVCropAGrBiomassWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropAGrBiomassWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
-  connect ( dsbSVCropAGrBiomassReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropAGrBiomassReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropAGrBiomassRatingLbl() ));
 
   connect ( sbSVCropWeightOrgansLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
   connect ( sbSVCropWeightOrgansObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
-  connect ( sbSVCropWeightOrgansWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropWeightOrgansWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
-  connect ( dsbSVCropWeightOrgansReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropWeightOrgansReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropWeightOrgansRatingLbl() ));
 
   connect ( sbSVCropRootBioMassLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
   connect ( sbSVCropRootBioMassObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
-  connect ( sbSVCropRootBioMassWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropRootBioMassWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
-  connect ( dsbSVCropRootBioMassReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropRootBioMassReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropRootBioMassRatingLbl() ));
 
   connect ( sbSVCropNInAGrBioMassLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
   connect ( sbSVCropNInAGrBioMassObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
-  connect ( sbSVCropNInAGrBioMassWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropNInAGrBioMassWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
-  connect ( dsbSVCropNInAGrBioMassReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropNInAGrBioMassReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropNInAGrBioMassRatingLbl() ));
 
   connect ( sbSVCropNInOrgansLayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
   connect ( sbSVCropNInOrgansObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
-  connect ( sbSVCropNInOrgansWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropNInOrgansWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
-  connect ( dsbSVCropNInOrgansReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropNInOrgansReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropNInOrgansRatingLbl() ));
 
   connect ( sbSVCropLAILayers, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
   connect ( sbSVCropLAIObservations, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
-  connect ( sbSVCropLAIWeight, SIGNAL ( valueChanged(int) ),
+  connect ( sbSVCropLAIWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
-  connect ( dsbSVCropLAIReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVCropLAIReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVCropLAIRatingLbl() ));
 
   // soil
@@ -306,7 +306,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
-  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
 
   connect ( sbSVSoilPressureHeadsLayers, SIGNAL ( valueChanged(int) ),
@@ -315,7 +315,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
   connect ( sbSVSoilPressureHeadsWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
-  connect ( dsbSVSoilPressureHeadsReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilPressureHeadsReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilPressureHeadsRatingLbl() ));
 
   connect ( sbSVSoilNMinLayers, SIGNAL ( valueChanged(int) ),
@@ -324,7 +324,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
   connect ( sbSVSoilNMinWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
-  connect ( dsbSVSoilNMinReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNMinReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNMinRatingLbl() ));
 
   connect ( sbSVSoilSoilWaterSensorCalLayers, SIGNAL ( valueChanged(int) ),
@@ -333,7 +333,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
   connect ( sbSVSoilSoilWaterSensorCalWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
-  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilSoilWaterSensorCalReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilSoilWaterSensorCalRatingLbl() ));
 
   connect ( sbSVSoilWaterFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
@@ -342,7 +342,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
   connect ( sbSVSoilWaterFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
-  connect ( dsbSVSoilWaterFluxBottomRootReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilWaterFluxBottomRootReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilWaterFluxBottomRootRatingLbl() ));
 
   connect ( sbSVSoilNFluxBottomRootLayers, SIGNAL ( valueChanged(int) ),
@@ -351,7 +351,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
   connect ( sbSVSoilNFluxBottomRootWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
-  connect ( dsbSVSoilNFluxBottomRootReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSoilNFluxBottomRootReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSoilNFluxBottomRootRatingLbl() ));
 
   // surface fluxes
@@ -361,7 +361,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
   connect ( sbSVSurfaceFluxesEtWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
-  connect ( dsbSVSurfaceFluxesEtReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesEtReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesEtRatingLbl() ));
 
   connect ( sbSVSurfaceFluxesNh3LossLayers, SIGNAL ( valueChanged(int) ),
@@ -370,7 +370,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesNh3LossWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
-  connect ( dsbSVSurfaceFluxesNh3LossReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesNh3LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesNh3LossRatingLbl() ));
 
   connect ( sbSVSurfaceFluxesN2OLossLayers, SIGNAL ( valueChanged(int) ),
@@ -379,7 +379,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
   connect ( sbSVSurfaceFluxesN2OLossWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
-  connect ( dsbSVSurfaceFluxesN2OLossReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2OLossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2OLossRatingLbl() ));
 
   connect ( sbSVSurfaceFluxesN2LossLayers, SIGNAL ( valueChanged(int) ),
@@ -388,7 +388,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesN2LossWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
-  connect ( dsbSVSurfaceFluxesN2LossReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesN2LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesN2LossRatingLbl() ));
 
   connect ( sbSVSurfaceFluxesCh4LossLayers, SIGNAL ( valueChanged(int) ),
@@ -397,7 +397,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
   connect ( sbSVSurfaceFluxesCh4LossWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
-  connect ( dsbSVSurfaceFluxesCh4LossReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVSurfaceFluxesCh4LossReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVSurfaceFluxesCh4LossRatingLbl() ));
 
   // observations
@@ -407,7 +407,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
   connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
-  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsLodgingRatingLbl() ));
 
   connect ( sbSVObservationsPestsOrDiseasesLayers, SIGNAL ( valueChanged(int) ),
@@ -416,7 +416,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
   connect ( sbSVObservationsPestsOrDiseasesWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
-  connect ( dsbSVObservationsPestsOrDiseasesReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsPestsOrDiseasesReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsPestsOrDiseasesRatingLbl() ));
 
   connect ( sbSVObservationsDamagesLayers, SIGNAL ( valueChanged(int) ),
@@ -425,7 +425,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
   connect ( sbSVObservationsLodgingWeightPts, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
-  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(int) ),
+  connect ( dsbSVObservationsLodgingReplicates, SIGNAL ( valueChanged(double) ),
             this, SLOT ( updateSVObservationsDamagesRatingLbl() ));
 }
 void MadDataClassification::changeEvent(QEvent *e)
@@ -1179,7 +1179,7 @@ void MadDataClassification::on_hsldrTMaxWeather_valueChanged(int theSliderValue)
   dsbTMaxWeather->setValue(myPreciseValue);
   updateWeatherTMaxRatingLbl();
 }
-void MadDataClassification::on_hsldrRelativeHumidityWeather_valueChanged(int theSliderValue)
+void MadDataClassification::on_hsldrRelHumidityWeather_valueChanged(int theSliderValue)
 {
   // update label according to desired resolution
   // hardcoded for now at a range of 1 to 5
@@ -1568,7 +1568,7 @@ void MadDataClassification::on_dsbTMaxWeather_valueChanged(double theValue)
   float myResult = dsbTMaxWeather->value() * sbTMaxWeather->value();
   lblTMaxRatingWeather->setText(makeString(myResult));
 }
-void MadDataClassification::on_dsbRelativeHumidityWeather_valueChanged(double theValue)
+void MadDataClassification::on_dsbRelHumidityWeather_valueChanged(double theValue)
 {
   int myPosition;
   myPosition = theValue * 200;
@@ -2424,7 +2424,7 @@ void MadDataClassification::updateSVCropAGrBiomassRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropAGrBiomassObservations->value();
-  float myGivenWeighting = sbSVCropAGrBiomassWeight->value();
+  float myGivenWeighting = sbSVCropAGrBiomassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropAGrBiomassPoints->setText(myText);
@@ -2434,7 +2434,7 @@ void MadDataClassification::updateSVCropWeightOrgansRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropWeightOrgansObservations->value();
-  float myGivenWeighting = sbSVCropWeightOrgansWeight->value();
+  float myGivenWeighting = sbSVCropWeightOrgansWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropWeightOrgansPoints->setText(myText);
@@ -2444,7 +2444,7 @@ void MadDataClassification::updateSVCropRootBioMassRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropRootBioMassObservations->value();
-  float myGivenWeighting = sbSVCropRootBioMassWeight->value();
+  float myGivenWeighting = sbSVCropRootBioMassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropRootBiomassPoints->setText(myText);
@@ -2454,7 +2454,7 @@ void MadDataClassification::updateSVCropNInAGrBioMassRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropNInAGrBioMassObservations->value();
-  float myGivenWeighting = sbSVCropNInAGrBioMassWeight->value();
+  float myGivenWeighting = sbSVCropNInAGrBioMassWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropNInAGrBiomassPoints->setText(myText);
@@ -2464,7 +2464,7 @@ void MadDataClassification::updateSVCropNInOrgansRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropNInOrgansObservations->value();
-  float myGivenWeighting = sbSVCropNInOrgansWeight->value();
+  float myGivenWeighting = sbSVCropNInOrgansWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropNInOrgansPoints->setText(myText);
@@ -2474,7 +2474,7 @@ void MadDataClassification::updateSVCropLAIRatingLbl()
 {
   // calculate weight and update the label
   int myObservations = sbSVCropLAIObservations->value();
-  float myGivenWeighting = sbSVCropLAIWeight->value();
+  float myGivenWeighting = sbSVCropLAIWeightPts->value();
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSVCropLAIPoints->setText(myText);
@@ -2745,22 +2745,506 @@ void MadDataClassification::updatePhenologyLabels()
 }
 
 // prev crop tab (ranking labels and pixmaps)
+void MadDataClassification::updatePrevCropLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblCropRatingPrevCrop->text().toFloat();
+  myTotal += lblSowingDateRatingPrevCrop->text().toFloat();
+  myTotal += lblHarvestDateRatingPrevCrop->text().toFloat();
+  myTotal += lblYieldRatingPrevCrop->text().toFloat();
+  myTotal += lblResidueMgmtRatingPrevCrop->text().toFloat();
+  myTotal += lblFertilisationRatingPrevCrop->text().toFloat();
+  myTotal += lblIrrigationRatingPrevCrop->text().toFloat();
+  lblOverallRatingPrevCrop->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalPrevCrop->setVisible(true);
+             lblMedalPrevCrop->setScaledContents(true);
+             lblMedalPrevCrop->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingPrevCrop->setVisible(true);
+             lblRankingPrevCrop->setText("Platinum");
+      break;
+
+    case 23: lblMedalPrevCrop->setVisible(true);
+             lblMedalPrevCrop->setScaledContents(true);
+             lblMedalPrevCrop->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingPrevCrop->setVisible(true);
+             lblRankingPrevCrop->setText("Gold");
+      break;
+
+    case 22: lblMedalPrevCrop->setVisible(true);
+             lblMedalPrevCrop->setScaledContents(true);
+             lblMedalPrevCrop->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingPrevCrop->setVisible(true);
+             lblRankingPrevCrop->setText("Silver");
+      break;
+
+    case 21: lblMedalPrevCrop->setVisible(true);
+             lblMedalPrevCrop->setScaledContents(true);
+             lblMedalPrevCrop->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingPrevCrop->setVisible(true);
+             lblRankingPrevCrop->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingPrevCrop->setVisible(false);
+             lblMedalPrevCrop->setVisible(false);
+      break;
+  }
+}
 
 // initial values tab (ranking labels and pixmaps)
+void MadDataClassification::updateInitialValuesLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblSoilMoistureRatingInitialValues->text().toFloat();
+  myTotal += lblNMinRatingInitialValues->text().toFloat();
+  lblOverallRatingInitialValues->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalInitialValues->setVisible(true);
+             lblMedalInitialValues->setScaledContents(true);
+             lblMedalInitialValues->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingInitialValues->setVisible(true);
+             lblRankingInitialValues->setText("Platinum");
+      break;
+
+    case 23: lblMedalInitialValues->setVisible(true);
+             lblMedalInitialValues->setScaledContents(true);
+             lblMedalInitialValues->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingInitialValues->setVisible(true);
+             lblRankingInitialValues->setText("Gold");
+      break;
+
+    case 22: lblMedalInitialValues->setVisible(true);
+             lblMedalInitialValues->setScaledContents(true);
+             lblMedalInitialValues->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingInitialValues->setVisible(true);
+             lblRankingInitialValues->setText("Silver");
+      break;
+
+    case 21: lblMedalInitialValues->setVisible(true);
+             lblMedalInitialValues->setScaledContents(true);
+             lblMedalInitialValues->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingInitialValues->setVisible(true);
+             lblRankingInitialValues->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingInitialValues->setVisible(false);
+             lblMedalInitialValues->setVisible(false);
+      break;
+  }
+}
 
 // soil tab (ranking labels and pixmaps)
+void MadDataClassification::updateSoilLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblCOrgRatingSoil->text().toFloat();
+  myTotal += lblNOrgRatingSoil->text().toFloat();
+  myTotal += lblTextureRatingSoil->text().toFloat();
+  myTotal += lblBulkDensityRatingSoil->text().toFloat();
+  myTotal += lblFieldCapacityRatingSoil->text().toFloat();
+  myTotal += lblWiltingPointRatingSoil->text().toFloat();
+  myTotal += lblPfCurveRatingSoil->text().toFloat();
+  myTotal += lblHydrCondCurveRatingSoil->text().toFloat();
+  myTotal += lblPhRatingSoil->text().toFloat();
+  lblOverallRatingSoil->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSoil->setVisible(true);
+             lblMedalSoil->setScaledContents(true);
+             lblMedalSoil->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSoil->setVisible(true);
+             lblRankingSoil->setText("Platinum");
+      break;
+
+    case 23: lblMedalSoil->setVisible(true);
+             lblMedalSoil->setScaledContents(true);
+             lblMedalSoil->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSoil->setVisible(true);
+             lblRankingSoil->setText("Gold");
+      break;
+
+    case 22: lblMedalSoil->setVisible(true);
+             lblMedalSoil->setScaledContents(true);
+             lblMedalSoil->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSoil->setVisible(true);
+             lblRankingSoil->setText("Silver");
+      break;
+
+    case 21: lblMedalSoil->setVisible(true);
+             lblMedalSoil->setScaledContents(true);
+             lblMedalSoil->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSoil->setVisible(true);
+             lblRankingSoil->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSoil->setVisible(false);
+             lblMedalSoil->setVisible(false);
+      break;
+  }
+}
 
 // site tab (ranking labels and pixmaps)
+void MadDataClassification::updateSiteLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblLatitudeRatingSite->text().toFloat();
+  myTotal += lblLongitudeRatingSite->text().toFloat();
+  myTotal += lblAltitudeRatingSite->text().toFloat();
+  lblOverallRatingSite->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSite->setVisible(true);
+             lblMedalSite->setScaledContents(true);
+             lblMedalSite->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSite->setVisible(true);
+             lblRankingSite->setText("Platinum");
+      break;
+
+    case 23: lblMedalSite->setVisible(true);
+             lblMedalSite->setScaledContents(true);
+             lblMedalSite->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSite->setVisible(true);
+             lblRankingSite->setText("Gold");
+      break;
+
+    case 22: lblMedalSite->setVisible(true);
+             lblMedalSite->setScaledContents(true);
+             lblMedalSite->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSite->setVisible(true);
+             lblRankingSite->setText("Silver");
+      break;
+
+    case 21: lblMedalSite->setVisible(true);
+             lblMedalSite->setScaledContents(true);
+             lblMedalSite->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSite->setVisible(true);
+             lblRankingSite->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSite->setVisible(false);
+             lblMedalSite->setVisible(false);
+      break;
+  }
+}
 
 // weather tab (ranking labels and pixmaps)
+void MadDataClassification::updateWeatherLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblPrecipitationRatingWeather->text().toFloat();
+  myTotal += lblTAveRatingWeather->text().toFloat();
+  myTotal += lblTMinRatingWeather->text().toFloat();
+  myTotal += lblTMaxRatingWeather->text().toFloat();
+  myTotal += lblRelHumidityRatingWeather->text().toFloat();
+  myTotal += lblWindSpeedRatingWeather->text().toFloat();
+  myTotal += lblGlobalRadiationRatingWeather->text().toFloat();
+  myTotal += lblSunshineHoursRatingWeather->text().toFloat();
+  myTotal += lblLeafWetnessRatingWeather->text().toFloat();
+  myTotal += lblSoilTempRatingWeather->text().toFloat();
+  lblOverallRatingWeather->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalWeather->setVisible(true);
+             lblMedalWeather->setScaledContents(true);
+             lblMedalWeather->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingWeather->setVisible(true);
+             lblRankingWeather->setText("Platinum");
+      break;
+
+    case 23: lblMedalWeather->setVisible(true);
+             lblMedalWeather->setScaledContents(true);
+             lblMedalWeather->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingWeather->setVisible(true);
+             lblRankingWeather->setText("Gold");
+      break;
+
+    case 22: lblMedalWeather->setVisible(true);
+             lblMedalWeather->setScaledContents(true);
+             lblMedalWeather->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingWeather->setVisible(true);
+             lblRankingWeather->setText("Silver");
+      break;
+
+    case 21: lblMedalWeather->setVisible(true);
+             lblMedalWeather->setScaledContents(true);
+             lblMedalWeather->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingWeather->setVisible(true);
+             lblRankingWeather->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingWeather->setVisible(false);
+             lblMedalWeather->setVisible(false);
+      break;
+  }
+}
 
 // SV crop tab (ranking labels and pixmaps)
+void MadDataClassification::updateSVCropLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblSVCropAGrBiomassPoints->text().toFloat();
+  myTotal += lblSVCropWeightOrgansPoints->text().toFloat();
+  myTotal += lblSVCropRootBiomassPoints->text().toFloat();
+  myTotal += lblSVCropNInAGrBiomassPoints->text().toFloat();
+  myTotal += lblSVCropNInOrgansPoints->text().toFloat();
+  myTotal += lblSVCropLAIPoints->text().toFloat();
+  lblOverallRatingSVCrop->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSVCrop->setVisible(true);
+             lblMedalSVCrop->setScaledContents(true);
+             lblMedalSVCrop->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSVCrop->setVisible(true);
+             lblRankingSVCrop->setText("Platinum");
+      break;
+
+    case 23: lblMedalSVCrop->setVisible(true);
+             lblMedalSVCrop->setScaledContents(true);
+             lblMedalSVCrop->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSVCrop->setVisible(true);
+             lblRankingSVCrop->setText("Gold");
+      break;
+
+    case 22: lblMedalSVCrop->setVisible(true);
+             lblMedalSVCrop->setScaledContents(true);
+             lblMedalSVCrop->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSVCrop->setVisible(true);
+             lblRankingSVCrop->setText("Silver");
+      break;
+
+    case 21: lblMedalSVCrop->setVisible(true);
+             lblMedalSVCrop->setScaledContents(true);
+             lblMedalSVCrop->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSVCrop->setVisible(true);
+             lblRankingSVCrop->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSVCrop->setVisible(false);
+             lblMedalSVCrop->setVisible(false);
+      break;
+  }
+}
 
 // SV soil tab (ranking labels and pixmaps)
+void MadDataClassification::updateSVSoilLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblSVSoilSoilWaterGravPoints->text().toFloat();
+  myTotal += lblSVSoilPressureHeadsPoints->text().toFloat();
+  myTotal += lblSVSoilNMinPoints->text().toFloat();
+  myTotal += lblSVSoilSoilWaterSensorCalPoints->text().toFloat();
+  myTotal += lblSVSoilWaterFluxBottomRootPoints->text().toFloat();
+  myTotal += lblSVSoilNFluxBottomRootPoints->text().toFloat();
+  lblOverallRatingSVSoil->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSVSoil->setVisible(true);
+             lblMedalSVSoil->setScaledContents(true);
+             lblMedalSVSoil->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSVSoil->setVisible(true);
+             lblRankingSVSoil->setText("Platinum");
+      break;
+
+    case 23: lblMedalSVSoil->setVisible(true);
+             lblMedalSVSoil->setScaledContents(true);
+             lblMedalSVSoil->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSVSoil->setVisible(true);
+             lblRankingSVSoil->setText("Gold");
+      break;
+
+    case 22: lblMedalSVSoil->setVisible(true);
+             lblMedalSVSoil->setScaledContents(true);
+             lblMedalSVSoil->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSVSoil->setVisible(true);
+             lblRankingSVSoil->setText("Silver");
+      break;
+
+    case 21: lblMedalSVSoil->setVisible(true);
+             lblMedalSVSoil->setScaledContents(true);
+             lblMedalSVSoil->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSVSoil->setVisible(true);
+             lblRankingSVSoil->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSVSoil->setVisible(false);
+             lblMedalSVSoil->setVisible(false);
+      break;
+  }
+}
 
 // SV surface fluxes tab (ranking labels and pixmaps)
+void MadDataClassification::updateSVSurfaceFluxesLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblSVSurfaceFluxesEtPoints->text().toFloat();
+  myTotal += lblSVSurfaceFluxesNh3LossPoints->text().toFloat();
+  myTotal += lblSVSurfaceFluxesN2OLossPoints->text().toFloat();
+  myTotal += lblSVSurfaceFluxesN2LossPoints->text().toFloat();
+  myTotal += lblSVSurfaceFluxesCh4LossPoints->text().toFloat();
+  lblOverallRatingSVSurfaceFluxes->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSVSurfaceFluxes->setVisible(true);
+             lblMedalSVSurfaceFluxes->setScaledContents(true);
+             lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSVSurfaceFluxes->setVisible(true);
+             lblRankingSVSurfaceFluxes->setText("Platinum");
+      break;
+
+    case 23: lblMedalSVSurfaceFluxes->setVisible(true);
+             lblMedalSVSurfaceFluxes->setScaledContents(true);
+             lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSVSurfaceFluxes->setVisible(true);
+             lblRankingSVSurfaceFluxes->setText("Gold");
+      break;
+
+    case 22: lblMedalSVSurfaceFluxes->setVisible(true);
+             lblMedalSVSurfaceFluxes->setScaledContents(true);
+             lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSVSurfaceFluxes->setVisible(true);
+             lblRankingSVSurfaceFluxes->setText("Silver");
+      break;
+
+    case 21: lblMedalSVSurfaceFluxes->setVisible(true);
+             lblMedalSVSurfaceFluxes->setScaledContents(true);
+             lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSVSurfaceFluxes->setVisible(true);
+             lblRankingSVSurfaceFluxes->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSVSurfaceFluxes->setVisible(false);
+             lblMedalSVSurfaceFluxes->setVisible(false);
+      break;
+  }
+}
 
 // SV observations tab (ranking labels and pixmaps)
+void MadDataClassification::updateSVObservationsLabels()
+{
+  // updates totals
+  float myTotal = 0.0;
+  //QPixmap pixmap;
+  myTotal += lblSVObservationsLodgingPoints->text().toFloat();
+  myTotal += lblSVObservationsPestsOrDiseasesPoints->text().toFloat();
+  myTotal += lblSVObservationsDamagesPoints->text().toFloat();
+  lblOverallRatingSVObservations->setText(makeString(myTotal));
+  int myRank = 0;
+  if (myTotal >= 24) myRank=24;
+  else if (myTotal >= 23) myRank=23;
+  else if (myTotal >= 22) myRank=22;
+  else if (myTotal >= 21) myRank=21;
+
+  switch (myRank)
+  {
+    case 24: lblMedalSVObservations->setVisible(true);
+             lblMedalSVObservations->setScaledContents(true);
+             lblMedalSVObservations->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingSVObservations->setVisible(true);
+             lblRankingSVObservations->setText("Platinum");
+      break;
+
+    case 23: lblMedalSVObservations->setVisible(true);
+             lblMedalSVObservations->setScaledContents(true);
+             lblMedalSVObservations->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingSVObservations->setVisible(true);
+             lblRankingSVObservations->setText("Gold");
+      break;
+
+    case 22: lblMedalSVObservations->setVisible(true);
+             lblMedalSVObservations->setScaledContents(true);
+             lblMedalSVObservations->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingSVObservations->setVisible(true);
+             lblRankingSVObservations->setText("Silver");
+      break;
+
+    case 21: lblMedalSVObservations->setVisible(true);
+             lblMedalSVObservations->setScaledContents(true);
+             lblMedalSVObservations->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingSVObservations->setVisible(true);
+             lblRankingSVObservations->setText("Bronze");
+      break;
+
+    default: // hide
+             lblRankingSVObservations->setVisible(false);
+             lblMedalSVObservations->setVisible(false);
+      break;
+  }
+}
+
 
    //-------------------//
   //  Saving the form  //

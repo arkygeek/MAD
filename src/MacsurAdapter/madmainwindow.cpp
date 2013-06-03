@@ -43,7 +43,6 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
     // this file (madmainform.cpp)
     lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
                         + QString("$Revision$").replace("$",""));
-
 }
 
 QString MadMainWindow::modelText() const

@@ -162,7 +162,7 @@ private slots:
   void on_hsldrTAveWeather_valueChanged(int theSliderValue);
   void on_hsldrTMinWeather_valueChanged(int theSliderValue);
   void on_hsldrTMaxWeather_valueChanged(int theSliderValue);
-  void on_hsldrRelativeHumidityWeather_valueChanged(int theSliderValue);
+  void on_hsldrRelHumidityWeather_valueChanged(int theSliderValue);
   void on_hsldrWindSpeedWeather_valueChanged(int theSliderValue);
   void on_hsldrGlobalRadiationWeather_valueChanged(int theSliderValue);
   void on_hsldrSunshineHoursWeather_valueChanged(int theSliderValue);
@@ -173,7 +173,7 @@ private slots:
   void on_dsbTAveWeather_valueChanged(double theValue);
   void on_dsbTMinWeather_valueChanged(double theValue);
   void on_dsbTMaxWeather_valueChanged(double theValue);
-  void on_dsbRelativeHumidityWeather_valueChanged(double theValue);
+  void on_dsbRelHumidityWeather_valueChanged(double theValue);
   void on_dsbWindSpeedWeather_valueChanged(double theValue);
   void on_dsbGlobalRadiationWeather_valueChanged(double theValue);
   void on_dsbSunshineHoursWeather_valueChanged(double theValue);
