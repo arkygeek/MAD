@@ -41,6 +41,7 @@ public:
 
 
   // Accessors
+  bool minData() const;
   MadSubCategory precipitation() const;
   MadSubCategory tAve() const;
   MadSubCategory tMin() const;
@@ -77,6 +78,7 @@ public:
   bool fromXml(const QString theXml);
 
   // Mutators
+  void setMinData(bool theBool);
   void setPrecipitation(MadSubCategory theData);
   void setTAve(MadSubCategory theData);
   void setTMin(MadSubCategory theData);
@@ -89,6 +91,7 @@ public:
   void setSoilTemp(MadSubCategory theData);
 
 private:
+  bool mMinData;
   MadSubCategory mPrecipitation;
   MadSubCategory mTAve;
   MadSubCategory mTMin;

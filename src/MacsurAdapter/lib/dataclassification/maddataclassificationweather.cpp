@@ -70,6 +70,10 @@ MadDataClassificationWeather& MadDataClassificationWeather::operator =(const Mad
 }
 
 // Accessors
+bool MadDataClassificationWeather::minData() const
+{
+  return mMinData;
+}
 MadSubCategory MadDataClassificationWeather::precipitation() const
 {
   return mPrecipitation;
@@ -112,6 +116,10 @@ MadSubCategory MadDataClassificationWeather::soilTemp() const
 }
 
 // Mutators
+void MadDataClassificationWeather::setMinData(bool theBool)
+{
+  mMinData = theBool;
+}
 void MadDataClassificationWeather::setPrecipitation(MadSubCategory theData)
 {
   mPrecipitation = theData;
@@ -164,20 +172,34 @@ void MadDataClassificationWeather::setSoilTemp(MadSubCategory theData)
 
 bool MadDataClassificationWeather::fromXml(const QString theXml)
 {
-    QDomDocument myDocument("mydocument");
-    myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
-    if (myTopElement.isNull())
-    {
-        //TODO - just make this a warning
-        qDebug("the top element couldn't be found!");
-        setGuid(myTopElement.attribute("guid"));
-        //mName=MadUtils::xmlDecode(myTopElement.firstChildElement("name").text());
-        //mDescription=MadUtils::xmlDecode(myTopElement.firstChildElement("description").text());
-        //mImageFile=QString(myTopElement.firstChildElement("imageFile").text());
-        return true;
-    }
-    else
+  QDomDocument myDocument("mydocument");
+  myDocument.setContent(theXml);
+  QDomElement myTopElement = myDocument.firstChildElement("model");
+  if (myTopElement.isNull())
+  {
+    // TODO - just make this a warning
+    qDebug("the top element couldn't be found!");
+    setGuid(myTopElement.attribute("guid"));
+
+    // the line below works and does the same as the line below it.
+    // (QString(myTopElement.firstChildElement("mindata").text() ))=="0" ? mMinData=false : mMinData=true;
+    mMinData = QString(myTopElement.firstChildElement("mindata").text()).toInt();
+
+    /* the following doesn't work
+    mPrecipitation = MadUtils::xmlDecode(myTopElement.firstChildElement("precipitation").text()).toInt();
+    mTAve = MadUtils::xmlDecode(myTopElement.firstChildElement("tave").text()).toInt();
+    mTMin = MadUtils::xmlDecode(myTopElement.firstChildElement("tmin").text()).toFloat();
+    mTMax = MadUtils::xmlDecode(myTopElement.firstChildElement("tmax").text()).toInt();
+    mRelativeHumidity = MadUtils::xmlDecode(myTopElement.firstChildElement("relativehumidity").text()).toInt();
+    mWindSpeed = MadUtils::xmlDecode(myTopElement.firstChildElement("windspeed").text()).toInt();
+    mGlobalRadiation = MadUtils::xmlDecode(myTopElement.firstChildElement("globalradiation").text()).toInt();
+    mSunshineHours = MadUtils::xmlDecode(myTopElement.firstChildElement("sunshinehours").text()).toInt();
+    mLeafWetness = MadUtils::xmlDecode(myTopElement.firstChildElement("leafwetness").text()).toInt();
+    mSoilTemp = MadUtils::xmlDecode(myTopElement.firstChildElement("soiltemp").text()).toInt();
+    */
+    return true;
+  }
+  else
     return false;
 }
 

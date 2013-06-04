@@ -119,20 +119,27 @@ void MadSubCategory::setReplicates(int theValue)
 
 bool MadSubCategory::fromXml(const QString theXml)
 {
-    QDomDocument myDocument("mydocument");
-    myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
-    if (myTopElement.isNull())
-    {
-        //TODO - just make this a warning
-        qDebug("the top element couldn't be found!");
-        setGuid(myTopElement.attribute("guid"));
-        //mName=MadUtils::xmlDecode(myTopElement.firstChildElement("name").text());
-        //mDescription=MadUtils::xmlDecode(myTopElement.firstChildElement("description").text());
-        //mImageFile=QString(myTopElement.firstChildElement("imageFile").text());
-        return true;
-    }
-    else
+  QDomDocument myDocument("mydocument");
+  myDocument.setContent(theXml);
+  QDomElement myTopElement = myDocument.firstChildElement("model");
+  if (myTopElement.isNull())
+  {
+    // TODO - just make this a warning
+    qDebug("the top element couldn't be found!");
+    setGuid(myTopElement.attribute("guid"));
+
+    // the line below works and does the same as the line below it.
+    // (QString(myTopElement.firstChildElement("mindata").text() ))=="0" ? mMinData=false : mMinData=true;
+    mMinData = QString(myTopElement.firstChildElement("mindata").text()).toInt();
+
+    mDepth = MadUtils::xmlDecode(myTopElement.firstChildElement("depth").text()).toFloat();
+    mObservations = MadUtils::xmlDecode(myTopElement.firstChildElement("observations").text()).toInt();
+    mWeightPoints = MadUtils::xmlDecode(myTopElement.firstChildElement("weightpoints").text()).toFloat();
+    mReplicates = MadUtils::xmlDecode(myTopElement.firstChildElement("replicates").text()).toInt();
+
+    return true;
+  }
+  else
     return false;
 }
 
@@ -166,11 +173,10 @@ QString MadSubCategory::toHtml()
 {
   QString myString;
   myString+="<h3>Details for values in the form:</h3>";
-    //myString+="<p>GUID:" + guid() + "</p>";
   myString+="<table>";
   //myString+="<tr><td><b>Description: </b></td><td>" + mDescription + "</td></tr>";
+  myString+="<p>GUID:" + guid() + "</p>";
 
-  // the following shows example of how to do a couple of things
 
   QString myMinData = (mMinData==0) ? "false" : "true";
 
