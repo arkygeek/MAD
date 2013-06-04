@@ -126,12 +126,22 @@ bool MadSVCrop::fromXml(const QString theXml)
 {
     QDomDocument myDocument("mydocument");
     myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
+    QDomElement myTopElement = myDocument.firstChildElement("svcrop");
     if (myTopElement.isNull())
     {
         //TODO - just make this a warning
         qDebug("the top element couldn't be found!");
         setGuid(myTopElement.attribute("guid"));
+        //QDomElement myCategory;
+        //QDomElement myDetails;
+
+        //myCategory=QString(myTopElement.firstChildElement("agrbiomass").text());
+        //myDetails=QString(myCategory.firstChildElement("details").text());
+        //mWeightOrgans.depth()=QString(myDetails.firstChildElement("weightorgans").text()).toFloat();
+
+        //MadSubCategory mySVCropDetails;
+        //mySVCropDetails = QString(myTopElement.firstChildElement("details").text.());
+
         //mName=MadUtils::xmlDecode(myTopElement.firstChildElement("name").text());
         //mDescription=MadUtils::xmlDecode(myTopElement.firstChildElement("description").text());
         //mImageFile=QString(myTopElement.firstChildElement("imageFile").text());
@@ -144,7 +154,7 @@ bool MadSVCrop::fromXml(const QString theXml)
 QString MadSVCrop::toXml()
 {
   QString myString;
-  myString+=QString("    <crop guid=\"" + guid() + "\">\n");
+  myString+=QString("    <svcrop guid=\"" + guid() + "\">\n");
 
   myString+=QString("     <agrbiomass>\n");
   myString+=mAgrBiomass.toXml();
@@ -170,7 +180,7 @@ QString MadSVCrop::toXml()
   myString+=mLai.toXml();
   myString+=QString("     </lai>\n");
 
-  myString+=QString("    </crop>\n");
+  myString+=QString("    </svcrop>\n");
   return myString;
 
 

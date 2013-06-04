@@ -133,7 +133,7 @@ bool MadDataClassificationPrevCrop::fromXml(const QString theXml)
 {
     QDomDocument myDocument("mydocument");
     myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
+    QDomElement myTopElement = myDocument.firstChildElement("prevcrop");
     if (myTopElement.isNull())
     {
         //TODO - just make this a warning

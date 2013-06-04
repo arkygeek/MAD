@@ -174,16 +174,23 @@ bool MadDataClassificationWeather::fromXml(const QString theXml)
 {
   QDomDocument myDocument("mydocument");
   myDocument.setContent(theXml);
-  QDomElement myTopElement = myDocument.firstChildElement("model");
+  QDomElement myTopElement = myDocument.firstChildElement("weather");
   if (myTopElement.isNull())
   {
     // TODO - just make this a warning
     qDebug("the top element couldn't be found!");
     setGuid(myTopElement.attribute("guid"));
 
+    //MadDataClassificationWeather myWeather;
+    //QString myPrecipitationXml = QString(QDomDocumentFragment().firstChildElement("precipitation").text());
+    //myWeather.setPrecipitation(MadSubCategory::fromXml(myPrecipitationXml));
+
     // the line below works and does the same as the line below it.
     // (QString(myTopElement.firstChildElement("mindata").text() ))=="0" ? mMinData=false : mMinData=true;
     mMinData = QString(myTopElement.firstChildElement("mindata").text()).toInt();
+    MadSubCategory myPrecipitationDetails;
+    myPrecipitationDetails.setDepth( QString(myTopElement.firstChildElement("precipitation").nextSiblingElement("details").nextSiblingElement("depth").text()).toFloat());
+    //qDebug()
 
     /* the following doesn't work
     mPrecipitation = MadUtils::xmlDecode(myTopElement.firstChildElement("precipitation").text()).toInt();

@@ -88,7 +88,7 @@ bool MadSVObservations::fromXml(const QString theXml)
 {
     QDomDocument myDocument("mydocument");
     myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
+    QDomElement myTopElement = myDocument.firstChildElement("svobservations");
     if (myTopElement.isNull())
     {
         //TODO - just make this a warning
@@ -106,7 +106,7 @@ bool MadSVObservations::fromXml(const QString theXml)
 QString MadSVObservations::toXml()
 {
   QString myString;
-  myString+=QString("    <observations guid=\"" + guid() + "\">\n");
+  myString+=QString("    <svobservations guid=\"" + guid() + "\">\n");
 
   myString+=QString("     <lodging>\n");
   myString+=mLodging.toXml();
@@ -120,7 +120,7 @@ QString MadSVObservations::toXml()
   myString+=mDamages.toXml();
   myString+=QString("     </damage>\n");
 
-  myString+=QString("    </observations>\n");
+  myString+=QString("    </svobservations>\n");
   return myString;
 
 }

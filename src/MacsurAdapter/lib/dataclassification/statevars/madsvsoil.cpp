@@ -128,7 +128,7 @@ bool MadSVSoil::fromXml(const QString theXml)
 {
     QDomDocument myDocument("mydocument");
     myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("model");
+    QDomElement myTopElement = myDocument.firstChildElement("svsoil");
     if (myTopElement.isNull())
     {
         //TODO - just make this a warning
@@ -146,7 +146,7 @@ bool MadSVSoil::fromXml(const QString theXml)
 QString MadSVSoil::toXml()
 {
   QString myString;
-  myString+=QString("    <soil guid=\"" + guid() + "\">\n");
+  myString+=QString("    <svsoil guid=\"" + guid() + "\">\n");
 
   myString+=QString("     <soilwatergrav>\n");
   myString+=mSoilWaterGrav.toXml();
@@ -172,7 +172,7 @@ QString MadSVSoil::toXml()
   myString+=mNitrogenFluxBottomRoot.toXml();
   myString+=QString("     </nitrogenfluxbottomroot>\n");
 
-  myString+=QString("    </soil>\n");
+  myString+=QString("    </svsoil>\n");
   return myString;
 
 

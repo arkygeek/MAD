@@ -121,7 +121,7 @@ bool MadSubCategory::fromXml(const QString theXml)
 {
   QDomDocument myDocument("mydocument");
   myDocument.setContent(theXml);
-  QDomElement myTopElement = myDocument.firstChildElement("model");
+  QDomElement myTopElement = myDocument.firstChildElement("details");
   if (myTopElement.isNull())
   {
     // TODO - just make this a warning
@@ -146,11 +146,14 @@ bool MadSubCategory::fromXml(const QString theXml)
 QString MadSubCategory::toXml()
 {
   QString myString;
+  myString+=QString("       <details>\n");
   myString+=QString("        <mindata>" + QString::number(mMinData) + "</mindata>\n");
   myString+=QString("        <depth>" + QString::number(mDepth) + "</depth>\n");
   myString+=QString("        <observations>" + QString::number(mObservations) + "</observations>\n");
   myString+=QString("        <weightpoints>" + QString::number(mWeightPoints) + "</weightpoints>\n");
   myString+=QString("        <replicates>" + QString::number(mReplicates) + "</replicates>\n");
+  myString+=QString("       </details>\n");
+
   return myString;
 }
 
