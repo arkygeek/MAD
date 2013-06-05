@@ -41,10 +41,6 @@
        <number>0</number>
       </property>
       <widget class="QWidget" name="tabCultivation">
-       <attribute name="icon">
-        <iconset resource="../resources/resources.qrc">
-         <normaloff>:/gold.png</normaloff>:/gold.png</iconset>
-       </attribute>
        <attribute name="title">
         <string>Cultivation</string>
        </attribute>
@@ -7543,13 +7539,38 @@
         <string>State Vars</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_11">
-        <item row="0" column="0">
+        <item row="0" column="1">
+         <widget class="QLabel" name="lblSVTotalPointsHeader">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>SV Total Pts</string>
+          </property>
+         </widget>
+        </item>
+        <item row="4" column="1">
+         <spacer name="verticalSpacer">
+          <property name="orientation">
+           <enum>Qt::Vertical</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>20</width>
+            <height>40</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="0" column="0" rowspan="7">
          <widget class="QToolBox" name="toolBoxStateVars">
           <property name="enabled">
-           <bool>false</bool>
+           <bool>true</bool>
           </property>
           <property name="currentIndex">
-           <number>2</number>
+           <number>0</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -7559,14 +7580,10 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>458</width>
-             <height>383</height>
+             <width>606</width>
+             <height>389</height>
             </rect>
            </property>
-           <attribute name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/gold.png</normaloff>:/gold.png</iconset>
-           </attribute>
            <attribute name="label">
             <string>Crop</string>
            </attribute>
@@ -8218,14 +8235,10 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>516</width>
+             <width>602</width>
              <height>383</height>
             </rect>
            </property>
-           <attribute name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/platinum.png</normaloff>:/platinum.png</iconset>
-           </attribute>
            <attribute name="label">
             <string>Soil</string>
            </attribute>
@@ -8892,14 +8905,10 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>377</height>
+             <width>602</width>
+             <height>349</height>
             </rect>
            </property>
-           <attribute name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/bronze.png</normaloff>:/bronze.png</iconset>
-           </attribute>
            <attribute name="label">
             <string>Surface Fluxes</string>
            </attribute>
@@ -9537,14 +9546,10 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>473</width>
-             <height>281</height>
+             <width>674</width>
+             <height>389</height>
             </rect>
            </property>
-           <attribute name="icon">
-            <iconset resource="../resources/resources.qrc">
-             <normaloff>:/silver.png</normaloff>:/silver.png</iconset>
-           </attribute>
            <attribute name="label">
             <string>Observations</string>
            </attribute>
@@ -10100,6 +10105,61 @@
           </widget>
          </widget>
         </item>
+        <item row="1" column="1">
+         <widget class="QLabel" name="lblSVTotalPoints">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>0</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLabel" name="lblSVMedalCombined">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="1">
+         <widget class="QLabel" name="lblSVRankOverall">
+          <property name="text">
+           <string>Rank</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
        </layout>
       </widget>
       <widget class="QWidget" name="tabInfo">
@@ -10331,6 +10391,20 @@
         <widget class="QTextEdit" name="textEditBottom"/>
        </item>
        <item>
+        <widget class="QLabel" name="lblRankOverall">
+         <property name="text">
+          <string>Rank</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblMedalOverall">
+         <property name="text">
+          <string>Image</string>
+         </property>
+        </widget>
+       </item>
+       <item>
         <layout class="QVBoxLayout" name="verticalLayoutLoadSave">
          <item>
           <widget class="QPushButton" name="pbLoad">
@@ -10367,5 +10441,38 @@
  <resources>
   <include location="../resources/resources.qrc"/>
  </resources>
- <connections/>
+ <connections>
+  <connection>
+   <sender>cbDatasets</sender>
+   <signal>currentIndexChanged(QString)</signal>
+   <receiver>leDatasetName</receiver>
+   <slot>setText(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>560</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>169</x>
+     <y>592</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>leDescription</sender>
+   <signal>textChanged(QString)</signal>
+   <receiver>textEditBottom</receiver>
+   <slot>append(QString)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>588</x>
+     <y>591</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>553</x>
+     <y>650</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
 </ui>

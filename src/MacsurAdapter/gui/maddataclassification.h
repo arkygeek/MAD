@@ -32,6 +32,15 @@
 #include "lib/dataclassification/maddataclassificationsoil.h"
 #include "lib/dataclassification/maddataclassificationweather.h"
 #include "lib/dataclassification/statevars/madstatevars.h"
+#include "lib/maddataset.h"
+
+
+#include "lib/madutils.h"
+#include "lib/madguid.h"
+#include "lib/madserialisable.h"
+#include "lib/madserialisable.h"
+
+
 
 // Qt includes
 

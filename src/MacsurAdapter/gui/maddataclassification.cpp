@@ -23,10 +23,14 @@
 //Qt includes
 #include <QString>
 #include <QPixmap>
+#include <QDomDocument>
+#include <QDomElement>
 
 //Local includes
 #include "maddataclassification.h"
 #include "lib/mad.h"
+#include "lib/madutils.h"
+#include "lib/madguid.h"
 
 QString makeString();
 
@@ -3099,7 +3103,7 @@ void MadDataClassification::updateSVCropLabels()
              lblRankingSVCrop->setVisible(true);
              lblRankingSVCrop->setText("Platinum");
              //tabWidgetDataClassification->tab setTabIcon(7, (QIcon( ":platinum.png")));
-
+             toolBoxStateVars->setItemIcon(0, (QIcon( ":platinum.png")));
       break;
 
     case 23: lblMedalSVCrop->setVisible(true);
@@ -3107,6 +3111,7 @@ void MadDataClassification::updateSVCropLabels()
              lblMedalSVCrop->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSVCrop->setVisible(true);
              lblRankingSVCrop->setText("Gold");
+             toolBoxStateVars->setItemIcon(0, (QIcon( ":gold.png")));
       break;
 
     case 22: lblMedalSVCrop->setVisible(true);
@@ -3114,6 +3119,7 @@ void MadDataClassification::updateSVCropLabels()
              lblMedalSVCrop->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSVCrop->setVisible(true);
              lblRankingSVCrop->setText("Silver");
+             toolBoxStateVars->setItemIcon(0, (QIcon( ":silver.png")));
       break;
 
     case 21: lblMedalSVCrop->setVisible(true);
@@ -3121,11 +3127,13 @@ void MadDataClassification::updateSVCropLabels()
              lblMedalSVCrop->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSVCrop->setVisible(true);
              lblRankingSVCrop->setText("Bronze");
+             toolBoxStateVars->setItemIcon(0, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSVCrop->setVisible(false);
              lblMedalSVCrop->setVisible(false);
+             toolBoxStateVars->setItemIcon(0, (QIcon()));
       break;
   }
 }
@@ -3156,6 +3164,7 @@ void MadDataClassification::updateSVSoilLabels()
              lblMedalSVSoil->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSVSoil->setVisible(true);
              lblRankingSVSoil->setText("Platinum");
+             toolBoxStateVars->setItemIcon(1, (QIcon( ":platinum.png")));
       break;
 
     case 23: lblMedalSVSoil->setVisible(true);
@@ -3163,6 +3172,7 @@ void MadDataClassification::updateSVSoilLabels()
              lblMedalSVSoil->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSVSoil->setVisible(true);
              lblRankingSVSoil->setText("Gold");
+             toolBoxStateVars->setItemIcon(1, (QIcon( ":gold.png")));
       break;
 
     case 22: lblMedalSVSoil->setVisible(true);
@@ -3170,6 +3180,7 @@ void MadDataClassification::updateSVSoilLabels()
              lblMedalSVSoil->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSVSoil->setVisible(true);
              lblRankingSVSoil->setText("Silver");
+             toolBoxStateVars->setItemIcon(1, (QIcon( ":silver.png")));
       break;
 
     case 21: lblMedalSVSoil->setVisible(true);
@@ -3177,11 +3188,13 @@ void MadDataClassification::updateSVSoilLabels()
              lblMedalSVSoil->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSVSoil->setVisible(true);
              lblRankingSVSoil->setText("Bronze");
+             toolBoxStateVars->setItemIcon(1, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSVSoil->setVisible(false);
              lblMedalSVSoil->setVisible(false);
+             toolBoxStateVars->setItemIcon(1, (QIcon()));
       break;
   }
 }
@@ -3211,6 +3224,7 @@ void MadDataClassification::updateSVSurfaceFluxesLabels()
              lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSVSurfaceFluxes->setVisible(true);
              lblRankingSVSurfaceFluxes->setText("Platinum");
+             toolBoxStateVars->setItemIcon(2, (QIcon( ":platinum.png")));
       break;
 
     case 23: lblMedalSVSurfaceFluxes->setVisible(true);
@@ -3218,6 +3232,7 @@ void MadDataClassification::updateSVSurfaceFluxesLabels()
              lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSVSurfaceFluxes->setVisible(true);
              lblRankingSVSurfaceFluxes->setText("Gold");
+             toolBoxStateVars->setItemIcon(2, (QIcon( ":gold.png")));
       break;
 
     case 22: lblMedalSVSurfaceFluxes->setVisible(true);
@@ -3225,6 +3240,7 @@ void MadDataClassification::updateSVSurfaceFluxesLabels()
              lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSVSurfaceFluxes->setVisible(true);
              lblRankingSVSurfaceFluxes->setText("Silver");
+             toolBoxStateVars->setItemIcon(2, (QIcon( ":silver.png")));
       break;
 
     case 21: lblMedalSVSurfaceFluxes->setVisible(true);
@@ -3232,11 +3248,13 @@ void MadDataClassification::updateSVSurfaceFluxesLabels()
              lblMedalSVSurfaceFluxes->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSVSurfaceFluxes->setVisible(true);
              lblRankingSVSurfaceFluxes->setText("Bronze");
+             toolBoxStateVars->setItemIcon(2, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSVSurfaceFluxes->setVisible(false);
              lblMedalSVSurfaceFluxes->setVisible(false);
+             toolBoxStateVars->setItemIcon(2, (QIcon()));
       break;
   }
 }
@@ -3264,6 +3282,7 @@ void MadDataClassification::updateSVObservationsLabels()
              lblMedalSVObservations->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSVObservations->setVisible(true);
              lblRankingSVObservations->setText("Platinum");
+             toolBoxStateVars->setItemIcon(3, (QIcon( ":platinum.png")));
       break;
 
     case 23: lblMedalSVObservations->setVisible(true);
@@ -3271,6 +3290,7 @@ void MadDataClassification::updateSVObservationsLabels()
              lblMedalSVObservations->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSVObservations->setVisible(true);
              lblRankingSVObservations->setText("Gold");
+             toolBoxStateVars->setItemIcon(3, (QIcon( ":gold.png")));
       break;
 
     case 22: lblMedalSVObservations->setVisible(true);
@@ -3278,6 +3298,7 @@ void MadDataClassification::updateSVObservationsLabels()
              lblMedalSVObservations->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSVObservations->setVisible(true);
              lblRankingSVObservations->setText("Silver");
+             toolBoxStateVars->setItemIcon(3, (QIcon( ":silver.png")));
       break;
 
     case 21: lblMedalSVObservations->setVisible(true);
@@ -3285,11 +3306,13 @@ void MadDataClassification::updateSVObservationsLabels()
              lblMedalSVObservations->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSVObservations->setVisible(true);
              lblRankingSVObservations->setText("Bronze");
+             toolBoxStateVars->setItemIcon(3, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSVObservations->setVisible(false);
              lblMedalSVObservations->setVisible(false);
+             toolBoxStateVars->setItemIcon(3, (QIcon()));
       break;
   }
 }
@@ -3305,6 +3328,7 @@ void MadDataClassification::on_pbSave_clicked()
 
   // first we have to get the values
   // initialise variables
+  MadDataset myDataset;
   MadDataClassificationCultivation myCultivation;
   MadDataClassificationPhenology myPhenology;
   MadDataClassificationPrevCrop myPrevCrop;
@@ -3318,6 +3342,9 @@ void MadDataClassification::on_pbSave_clicked()
   MadSVSurfaceFluxes mySVSurfaceFluxes;
   MadSVObservations mySVObservations;
 
+  // dataset (initialise variables)
+  QString mName;// = leDatasetName->text();
+  QString mDescription; // = leDescription->text();
 
   // cultivation (initialise variables)
   MadSubCategory myCultVariety;
@@ -3409,6 +3436,11 @@ void MadDataClassification::on_pbSave_clicked()
      //------------------------------//
     //get the values from the form  //
    //------------------------------//
+
+  // Dataset
+  myDataset.setName(leDatasetName->text());
+  myDataset.setDescription(leDescription->text());
+
 
   //
   // Cultivation - set the values from form
@@ -3979,8 +4011,15 @@ void MadDataClassification::on_pbSave_clicked()
 
   mySV.setObservationCategories(mySVObservations);
 
+
+
+
   QString myString;
-  myString = myCultivation.toXml();
+  //myString+=QString("<dataset guid=\"" + guid() + "\">\n");
+  //myString+=QString(" <name>" + MadUtils::xmlEncode(myName) + "</name>\n");
+  //myString+=QString(" <description>" + MadUtils::xmlEncode(myDescription) + "</description>\n");
+  myString += myDataset.toXml();
+  myString += myCultivation.toXml();
   myString += myPhenology.toXml();
   myString += myPrevCrop.toXml();
   myString += myInitialValues.toXml();
@@ -3988,6 +4027,8 @@ void MadDataClassification::on_pbSave_clicked()
   myString += mySite.toXml();
   myString += myWeather.toXml();
   myString += mySV.toXml();
+
+  myString+=QString("</dataset>\n");
 
   textEditSide->setText(myString);
 

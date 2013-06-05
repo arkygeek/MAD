@@ -191,17 +191,17 @@ QString MadDataset::toXml()
 {
   QString myString;
   myString+=QString("<dataset guid=\"" + guid() + "\">\n");
-  myString+=QString("  <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
-  myString+=QString("  <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  myString+=mCultivation.toXml();
-  myString+=mPhenology.toXml();
-  myString+=mPrevCrop.toXml();
-  myString+=mInitialValues.toXml();
-  myString+=mSoil.toXml();
-  myString+=mSiteData.toXml();
-  myString+=mWeather.toXml();
-  myString+=mStateVars.toXml();
-  myString+=QString("</dataset>\n");
+  myString+=QString(" <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
+  myString+=QString(" <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
+  //myString+=mCultivation.toXml();
+  //myString+=mPhenology.toXml();
+  //myString+=mPrevCrop.toXml();
+  //myString+=mInitialValues.toXml();
+  //myString+=mSoil.toXml();
+  //myString+=mSiteData.toXml();
+  //myString+=mWeather.toXml();
+  //myString+=mStateVars.toXml();
+  //myString+=QString("</dataset>\n");
   return myString;
 }
 
