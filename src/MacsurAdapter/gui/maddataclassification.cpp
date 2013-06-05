@@ -2659,6 +2659,8 @@ void MadDataClassification::updateCultivationLabels()
              lblMedalCultivation->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingCultivation->setVisible(true);
              lblRankingCultivation->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(0, (QIcon( ":platinum.png")));
+
       break;
 
     case 23: lblMedalCultivation->setVisible(true);
@@ -2666,6 +2668,8 @@ void MadDataClassification::updateCultivationLabels()
              lblMedalCultivation->setPixmap(QPixmap( ":gold.png" ));
              lblRankingCultivation->setVisible(true);
              lblRankingCultivation->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(0, (QIcon( ":gold.png")));
+
       break;
 
     case 22: lblMedalCultivation->setVisible(true);
@@ -2673,6 +2677,8 @@ void MadDataClassification::updateCultivationLabels()
              lblMedalCultivation->setPixmap(QPixmap( ":silver.png" ));
              lblRankingCultivation->setVisible(true);
              lblRankingCultivation->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(0, (QIcon( ":silver.png")));
+
       break;
 
     case 21: lblMedalCultivation->setVisible(true);
@@ -2680,11 +2686,15 @@ void MadDataClassification::updateCultivationLabels()
              lblMedalCultivation->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingCultivation->setVisible(true);
              lblRankingCultivation->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(0, (QIcon( ":bronze.png")));
+
       break;
 
     default: // hide
              lblRankingCultivation->setVisible(false);
              lblMedalCultivation->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(0, (QIcon()));
+
       break;
   }
 }
@@ -2702,44 +2712,50 @@ void MadDataClassification::updatePhenologyLabels()
   myTotal += lblYellowRipenessRatingPhenology->text().toFloat();
   lblCombinedTotalPhenology->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 14) myRank=14;
+  else if (myTotal >= 14) myRank=14;
+  else if (myTotal >= 11) myRank=11;
+  else if (myTotal >= 8) myRank=8;
 
   switch (myRank)
   {
-    case 24: lblMedalPhenology->setVisible(true);
+    case 14: lblMedalPhenology->setVisible(true);
              lblMedalPhenology->setScaledContents(true);
              lblMedalPhenology->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingPhenology->setVisible(true);
              lblRankingPhenology->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(1, (QIcon( ":platinum.png")));
+
       break;
 
-    case 23: lblMedalPhenology->setVisible(true);
+    case 11: lblMedalPhenology->setVisible(true);
              lblMedalPhenology->setScaledContents(true);
              lblMedalPhenology->setPixmap(QPixmap( ":gold.png" ));
              lblRankingPhenology->setVisible(true);
              lblRankingPhenology->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(1, (QIcon( ":gold.png")));
       break;
 
-    case 22: lblMedalPhenology->setVisible(true);
+    case 10: lblMedalPhenology->setVisible(true);
              lblMedalPhenology->setScaledContents(true);
              lblMedalPhenology->setPixmap(QPixmap( ":silver.png" ));
              lblRankingPhenology->setVisible(true);
              lblRankingPhenology->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(1, (QIcon( ":silver.png")));
       break;
 
-    case 21: lblMedalPhenology->setVisible(true);
+    case 8: lblMedalPhenology->setVisible(true);
              lblMedalPhenology->setScaledContents(true);
              lblMedalPhenology->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingPhenology->setVisible(true);
              lblRankingPhenology->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(1, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingPhenology->setVisible(false);
              lblMedalPhenology->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(1, (QIcon()));
       break;
   }
 }
@@ -2759,44 +2775,50 @@ void MadDataClassification::updatePrevCropLabels()
   myTotal += lblIrrigationRatingPrevCrop->text().toFloat();
   lblOverallRatingPrevCrop->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 11) myRank=11;
+  else if (myTotal >= 10) myRank=10;
+  else if (myTotal >= 8) myRank=8;
+  else if (myTotal >= 5) myRank=5;
 
   switch (myRank)
   {
-    case 24: lblMedalPrevCrop->setVisible(true);
+    case 11: lblMedalPrevCrop->setVisible(true);
              lblMedalPrevCrop->setScaledContents(true);
              lblMedalPrevCrop->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingPrevCrop->setVisible(true);
              lblRankingPrevCrop->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(2, (QIcon( ":platinum.png")));
       break;
 
-    case 23: lblMedalPrevCrop->setVisible(true);
+    case 12: lblMedalPrevCrop->setVisible(true);
              lblMedalPrevCrop->setScaledContents(true);
              lblMedalPrevCrop->setPixmap(QPixmap( ":gold.png" ));
              lblRankingPrevCrop->setVisible(true);
              lblRankingPrevCrop->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(2, (QIcon( ":gold.png")));
       break;
 
-    case 22: lblMedalPrevCrop->setVisible(true);
+    case 10: lblMedalPrevCrop->setVisible(true);
              lblMedalPrevCrop->setScaledContents(true);
              lblMedalPrevCrop->setPixmap(QPixmap( ":silver.png" ));
              lblRankingPrevCrop->setVisible(true);
              lblRankingPrevCrop->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(2, (QIcon( ":silver.png")));
       break;
 
-    case 21: lblMedalPrevCrop->setVisible(true);
+    case 8: lblMedalPrevCrop->setVisible(true);
              lblMedalPrevCrop->setScaledContents(true);
              lblMedalPrevCrop->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingPrevCrop->setVisible(true);
              lblRankingPrevCrop->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(2, (QIcon( ":bronze.png")));
+
       break;
 
     default: // hide
              lblRankingPrevCrop->setVisible(false);
              lblMedalPrevCrop->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(2, (QIcon()));
       break;
   }
 }
@@ -2811,44 +2833,49 @@ void MadDataClassification::updateInitialValuesLabels()
   myTotal += lblNMinRatingInitialValues->text().toFloat();
   lblOverallRatingInitialValues->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 8) myRank=8;
+  else if (myTotal >= 7) myRank=7;
+  else if (myTotal >= 6) myRank=6;
+  else if (myTotal >= 4) myRank=4;
 
   switch (myRank)
   {
-    case 24: lblMedalInitialValues->setVisible(true);
+    case 8: lblMedalInitialValues->setVisible(true);
              lblMedalInitialValues->setScaledContents(true);
              lblMedalInitialValues->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingInitialValues->setVisible(true);
              lblRankingInitialValues->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(3, (QIcon( ":platinum.png")));
       break;
 
-    case 23: lblMedalInitialValues->setVisible(true);
+    case 7: lblMedalInitialValues->setVisible(true);
              lblMedalInitialValues->setScaledContents(true);
              lblMedalInitialValues->setPixmap(QPixmap( ":gold.png" ));
              lblRankingInitialValues->setVisible(true);
              lblRankingInitialValues->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(3, (QIcon( ":gold.png")));
       break;
 
-    case 22: lblMedalInitialValues->setVisible(true);
+    case 6: lblMedalInitialValues->setVisible(true);
              lblMedalInitialValues->setScaledContents(true);
              lblMedalInitialValues->setPixmap(QPixmap( ":silver.png" ));
              lblRankingInitialValues->setVisible(true);
              lblRankingInitialValues->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(3, (QIcon( ":silver.png")));
       break;
 
-    case 21: lblMedalInitialValues->setVisible(true);
+    case 4: lblMedalInitialValues->setVisible(true);
              lblMedalInitialValues->setScaledContents(true);
              lblMedalInitialValues->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingInitialValues->setVisible(true);
              lblRankingInitialValues->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(3, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingInitialValues->setVisible(false);
              lblMedalInitialValues->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(3, (QIcon()));
       break;
   }
 }
@@ -2870,44 +2897,50 @@ void MadDataClassification::updateSoilLabels()
   myTotal += lblPhRatingSoil->text().toFloat();
   lblOverallRatingSoil->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 40) myRank=40;
+  else if (myTotal >= 29) myRank=29;
+  else if (myTotal >= 14) myRank=14;
+  else if (myTotal >= 5) myRank=5;
 
   switch (myRank)
   {
-    case 24: lblMedalSoil->setVisible(true);
+    case 40: lblMedalSoil->setVisible(true);
              lblMedalSoil->setScaledContents(true);
              lblMedalSoil->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSoil->setVisible(true);
              lblRankingSoil->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(4, (QIcon( ":platinum.png")));
       break;
 
-    case 23: lblMedalSoil->setVisible(true);
+    case 29: lblMedalSoil->setVisible(true);
              lblMedalSoil->setScaledContents(true);
              lblMedalSoil->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSoil->setVisible(true);
              lblRankingSoil->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(4, (QIcon( ":gold.png")));
+
       break;
 
-    case 22: lblMedalSoil->setVisible(true);
+    case 14: lblMedalSoil->setVisible(true);
              lblMedalSoil->setScaledContents(true);
              lblMedalSoil->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSoil->setVisible(true);
              lblRankingSoil->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(4, (QIcon( ":silver.png")));
       break;
 
-    case 21: lblMedalSoil->setVisible(true);
+    case 5: lblMedalSoil->setVisible(true);
              lblMedalSoil->setScaledContents(true);
              lblMedalSoil->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSoil->setVisible(true);
              lblRankingSoil->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(4, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSoil->setVisible(false);
              lblMedalSoil->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(4, (QIcon()));
       break;
   }
 }
@@ -2923,44 +2956,49 @@ void MadDataClassification::updateSiteLabels()
   myTotal += lblAltitudeRatingSite->text().toFloat();
   lblOverallRatingSite->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 8) myRank=8;
+  else if (myTotal >= 7) myRank=7;
+  else if (myTotal >= 6) myRank=6;
+  else if (myTotal >= 5) myRank=5;
 
   switch (myRank)
   {
-    case 24: lblMedalSite->setVisible(true);
+    case 8: lblMedalSite->setVisible(true);
              lblMedalSite->setScaledContents(true);
              lblMedalSite->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSite->setVisible(true);
              lblRankingSite->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(5, (QIcon( ":platinum.png")));
       break;
 
-    case 23: lblMedalSite->setVisible(true);
+    case 9: lblMedalSite->setVisible(true);
              lblMedalSite->setScaledContents(true);
              lblMedalSite->setPixmap(QPixmap( ":gold.png" ));
              lblRankingSite->setVisible(true);
              lblRankingSite->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(5, (QIcon( ":gold.png")));
       break;
 
-    case 22: lblMedalSite->setVisible(true);
+    case 10: lblMedalSite->setVisible(true);
              lblMedalSite->setScaledContents(true);
              lblMedalSite->setPixmap(QPixmap( ":silver.png" ));
              lblRankingSite->setVisible(true);
              lblRankingSite->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(5, (QIcon( ":silver.png")));
       break;
 
-    case 21: lblMedalSite->setVisible(true);
+    case 11: lblMedalSite->setVisible(true);
              lblMedalSite->setScaledContents(true);
              lblMedalSite->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingSite->setVisible(true);
              lblRankingSite->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(5, (QIcon( ":bronze.png")));
       break;
 
     default: // hide
              lblRankingSite->setVisible(false);
              lblMedalSite->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(5, (QIcon()));
       break;
   }
 }
@@ -2983,44 +3021,53 @@ void MadDataClassification::updateWeatherLabels()
   myTotal += lblSoilTempRatingWeather->text().toFloat();
   lblOverallRatingWeather->setText(makeString(myTotal));
   int myRank = 0;
-  if (myTotal >= 24) myRank=24;
-  else if (myTotal >= 23) myRank=23;
-  else if (myTotal >= 22) myRank=22;
-  else if (myTotal >= 21) myRank=21;
+  if (myTotal >= 30) myRank=30;
+  else if (myTotal >= 20) myRank=20;
+  else if (myTotal >= 10) myRank=10;
+  else if (myTotal >= 5) myRank=5;
 
   switch (myRank)
   {
-    case 24: lblMedalWeather->setVisible(true);
+    case 30: lblMedalWeather->setVisible(true);
              lblMedalWeather->setScaledContents(true);
              lblMedalWeather->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingWeather->setVisible(true);
              lblRankingWeather->setText("Platinum");
+             tabWidgetDataClassification->setTabIcon(6, (QIcon( ":platinum.png")));
       break;
 
-    case 23: lblMedalWeather->setVisible(true);
+    case 99: lblMedalWeather->setVisible(true);
              lblMedalWeather->setScaledContents(true);
              lblMedalWeather->setPixmap(QPixmap( ":gold.png" ));
              lblRankingWeather->setVisible(true);
              lblRankingWeather->setText("Gold");
+             tabWidgetDataClassification->setTabIcon(6, (QIcon( ":gold.png")));
+
       break;
 
-    case 22: lblMedalWeather->setVisible(true);
+    case 20: lblMedalWeather->setVisible(true);
              lblMedalWeather->setScaledContents(true);
              lblMedalWeather->setPixmap(QPixmap( ":silver.png" ));
              lblRankingWeather->setVisible(true);
              lblRankingWeather->setText("Silver");
+             tabWidgetDataClassification->setTabIcon(6, (QIcon( ":silver.png")));
+
       break;
 
-    case 21: lblMedalWeather->setVisible(true);
+    case 10: lblMedalWeather->setVisible(true);
              lblMedalWeather->setScaledContents(true);
              lblMedalWeather->setPixmap(QPixmap( ":bronze.png" ));
              lblRankingWeather->setVisible(true);
              lblRankingWeather->setText("Bronze");
+             tabWidgetDataClassification->setTabIcon(6, (QIcon( ":bronze.png")));
+
       break;
 
     default: // hide
              lblRankingWeather->setVisible(false);
              lblMedalWeather->setVisible(false);
+             tabWidgetDataClassification->setTabIcon(6, (QIcon()));
+
       break;
   }
 }
@@ -3051,6 +3098,8 @@ void MadDataClassification::updateSVCropLabels()
              lblMedalSVCrop->setPixmap(QPixmap( ":platinum.png" ));
              lblRankingSVCrop->setVisible(true);
              lblRankingSVCrop->setText("Platinum");
+             //tabWidgetDataClassification->tab setTabIcon(7, (QIcon( ":platinum.png")));
+
       break;
 
     case 23: lblMedalSVCrop->setVisible(true);
