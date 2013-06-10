@@ -40,9 +40,9 @@
       <property name="currentIndex">
        <number>0</number>
       </property>
-      <widget class="QWidget" name="tabCultivation">
+      <widget class="QWidget" name="tabManagement">
        <attribute name="title">
-        <string>Cultivation</string>
+        <string>Management</string>
        </attribute>
        <layout class="QGridLayout" name="gridLayout_20">
         <item row="1" column="2">
@@ -119,7 +119,7 @@
          </widget>
         </item>
         <item row="14" column="3">
-         <widget class="QLabel" name="lblCultivationGoldMinVal">
+         <widget class="QLabel" name="lblManagementGoldMinVal">
           <property name="minimumSize">
            <size>
             <width>25</width>
@@ -167,7 +167,7 @@
          </widget>
         </item>
         <item row="14" column="1" colspan="2">
-         <widget class="QLabel" name="lblCultivationGoldMin">
+         <widget class="QLabel" name="lblManagementGoldMin">
           <property name="font">
            <font>
             <pointsize>9</pointsize>
@@ -242,7 +242,7 @@
          </widget>
         </item>
         <item row="15" column="3">
-         <widget class="QLabel" name="lblCultivationSilverMinVal">
+         <widget class="QLabel" name="lblManagementSilverMinVal">
           <property name="minimumSize">
            <size>
             <width>25</width>
@@ -399,7 +399,7 @@
          </widget>
         </item>
         <item row="15" column="1" colspan="2">
-         <widget class="QLabel" name="lblCultivationSilverMin">
+         <widget class="QLabel" name="lblManagementSilverMin">
           <property name="font">
            <font>
             <pointsize>9</pointsize>
@@ -441,7 +441,7 @@
          </widget>
         </item>
         <item row="13" column="3">
-         <widget class="QLabel" name="lblCultivationPlatinumMinVal">
+         <widget class="QLabel" name="lblManagementPlatinumMinVal">
           <property name="minimumSize">
            <size>
             <width>25</width>
@@ -534,7 +534,7 @@
          </widget>
         </item>
         <item row="16" column="3">
-         <widget class="QLabel" name="lblCultivationBronzeMinVal">
+         <widget class="QLabel" name="lblManagementBronzeMinVal">
           <property name="minimumSize">
            <size>
             <width>25</width>
@@ -594,7 +594,7 @@
          </widget>
         </item>
         <item row="16" column="1" colspan="2">
-         <widget class="QLabel" name="lblCultivationBronzeMin">
+         <widget class="QLabel" name="lblManagementBronzeMin">
           <property name="font">
            <font>
             <pointsize>9</pointsize>
@@ -615,7 +615,7 @@
          </widget>
         </item>
         <item row="13" column="1" colspan="2">
-         <widget class="QLabel" name="lblCultivationPlatinumMin">
+         <widget class="QLabel" name="lblManagementPlatinumMin">
           <property name="font">
            <font>
             <pointsize>9</pointsize>
@@ -725,9 +725,9 @@
          </widget>
         </item>
         <item row="11" column="2" colspan="2">
-         <layout class="QHBoxLayout" name="horizontalLayoutCultivationRank">
+         <layout class="QHBoxLayout" name="horizontalLayoutManagementRank">
           <item>
-           <spacer name="horizontalSpacerCultivationRank">
+           <spacer name="horizontalSpacerManagementRank">
             <property name="orientation">
              <enum>Qt::Horizontal</enum>
             </property>
@@ -740,7 +740,7 @@
            </spacer>
           </item>
           <item>
-           <widget class="QLabel" name="lblRankingCultivation">
+           <widget class="QLabel" name="lblRankingManagement">
             <property name="font">
              <font>
               <pointsize>10</pointsize>
@@ -755,7 +755,7 @@
            </widget>
           </item>
           <item>
-           <widget class="QLabel" name="lblMedalCultivation">
+           <widget class="QLabel" name="lblMedalManagement">
             <property name="minimumSize">
              <size>
               <width>30</width>
@@ -794,7 +794,7 @@
          </layout>
         </item>
         <item row="0" column="0" rowspan="17">
-         <widget class="QGroupBox" name="gbxCultivation">
+         <widget class="QGroupBox" name="gbxManagement">
           <property name="sizePolicy">
            <sizepolicy hsizetype="Minimum" vsizetype="Preferred">
             <horstretch>0</horstretch>
@@ -1735,7 +1735,7 @@
          </widget>
         </item>
         <item row="17" column="0">
-         <spacer name="verticalSpacerCultivationLeft">
+         <spacer name="verticalSpacerManagementLeft">
           <property name="orientation">
            <enum>Qt::Vertical</enum>
           </property>
@@ -1748,7 +1748,7 @@
          </spacer>
         </item>
        </layout>
-       <zorder>gbxCultivation</zorder>
+       <zorder>gbxManagement</zorder>
        <zorder>line_4</zorder>
        <zorder>lblVarietyRating</zorder>
        <zorder>lblSowingRating</zorder>
@@ -1764,21 +1764,21 @@
        <zorder>line</zorder>
        <zorder>lblCombined</zorder>
        <zorder>line_2</zorder>
-       <zorder>lblCultivationPlatinumMin</zorder>
-       <zorder>lblCultivationPlatinumMinVal</zorder>
-       <zorder>lblCultivationGoldMin</zorder>
-       <zorder>lblCultivationGoldMinVal</zorder>
-       <zorder>lblCultivationSilverMin</zorder>
-       <zorder>lblCultivationSilverMinVal</zorder>
-       <zorder>lblCultivationBronzeMin</zorder>
-       <zorder>lblCultivationBronzeMinVal</zorder>
+       <zorder>lblManagementPlatinumMin</zorder>
+       <zorder>lblManagementPlatinumMinVal</zorder>
+       <zorder>lblManagementGoldMin</zorder>
+       <zorder>lblManagementGoldMinVal</zorder>
+       <zorder>lblManagementSilverMin</zorder>
+       <zorder>lblManagementSilverMinVal</zorder>
+       <zorder>lblManagementBronzeMin</zorder>
+       <zorder>lblManagementBronzeMinVal</zorder>
        <zorder>lblCombinedTotal</zorder>
        <zorder>lblVariety</zorder>
        <zorder>lblSowing</zorder>
        <zorder>lblHarvest</zorder>
        <zorder>lblYield</zorder>
        <zorder>lblTillage</zorder>
-       <zorder>verticalSpacerCultivationLeft</zorder>
+       <zorder>verticalSpacerManagementLeft</zorder>
       </widget>
       <widget class="QWidget" name="tabPhenology">
        <attribute name="title">
@@ -7581,7 +7581,7 @@
              <x>0</x>
              <y>0</y>
              <width>606</width>
-             <height>389</height>
+             <height>383</height>
             </rect>
            </property>
            <attribute name="label">
@@ -9546,8 +9546,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>674</width>
-             <height>389</height>
+             <width>606</width>
+             <height>359</height>
             </rect>
            </property>
            <attribute name="label">
@@ -10103,6 +10103,11 @@
             </item>
            </layout>
           </widget>
+          <widget class="QWidget" name="page">
+           <attribute name="label">
+            <string>Page</string>
+           </attribute>
+          </widget>
          </widget>
         </item>
         <item row="1" column="1">
@@ -10393,14 +10398,17 @@
        <item>
         <widget class="QLabel" name="lblRankOverall">
          <property name="text">
-          <string>Rank</string>
+          <string>Gold</string>
          </property>
         </widget>
        </item>
        <item>
         <widget class="QLabel" name="lblMedalOverall">
          <property name="text">
-          <string>Image</string>
+          <string/>
+         </property>
+         <property name="pixmap">
+          <pixmap resource="../resources/resources.qrc">:/gold.png</pixmap>
          </property>
         </widget>
        </item>

@@ -37,12 +37,12 @@ QString makeString();
 MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
 {
   setupUi(this);
-  gbxCultivation->setChecked(false);
+  gbxManagement->setChecked(false);
   cbExamples->setEnabled(true);
   lblExample->setVisible(true);
   lblExample->setText("Select Example");
-  lblMedalCultivation->setVisible(false);
-  lblRankingCultivation->setVisible(false);
+  lblMedalManagement->setVisible(false);
+  lblRankingManagement->setVisible(false);
   lblExample->setVisible(true);
   cbExamples->setDisabled(false);
 
@@ -57,7 +57,7 @@ MadDataClassification::MadDataClassification(QWidget *parent) : QDialog(parent)
 
   // These must stay here at the end
 
-  // cultivation connections
+  // management connections
   connect ( sbVariety, SIGNAL ( valueChanged(int) ),
             this, SLOT ( updateVarietyRatingLbl() ));
   connect ( dsbVariety, SIGNAL ( valueChanged(double) ),
@@ -463,12 +463,12 @@ QString MadDataClassification::makeString(double theValue)
    //----------------------------------------//
   //  group box edit and examples combobox  //
  //----------------------------------------//
-// cultivation tab (group box edit and examples combobox)
-void MadDataClassification::on_gbxCultivation_clicked()
+// management tab (group box edit and examples combobox)
+void MadDataClassification::on_gbxManagement_clicked()
 {
   // if values are editable, should not be able to select for any
   // examples to be shown as it will destroy destroy current settings
-  if (gbxCultivation->isChecked())
+  if (gbxManagement->isChecked())
   {
     lblExample->setVisible(false);
     cbExamples->setDisabled(true);
@@ -807,7 +807,7 @@ void MadDataClassification::on_cbExamplesSVObservations_currentIndexChanged (con
    //----------------------------------//
   //  slider linking and point calcs  //
  //----------------------------------//
-// cultivation (slider linking and point calcs)
+// management (slider linking and point calcs)
 void MadDataClassification::on_hsldrVariety_valueChanged(int theSliderValue)
 {
   // update label according to desired resolution
@@ -1255,7 +1255,7 @@ void MadDataClassification::on_hsldrSoilTempWeather_valueChanged(int theSliderVa
    //---------------------------//
   //  double spin box changes  //
  //---------------------------//
-// cultivation (double spin box changes)
+// management (double spin box changes)
 void MadDataClassification::on_dsbVariety_valueChanged(double theValue)
 {
   int myPosition;
@@ -1969,7 +1969,7 @@ void MadDataClassification::on_dsbSVObservationsDamagesReplicates_valueChanged()
    //-----------------------------//
   // label updates (with calcs)  //
  //-----------------------------//
-// cultivation tab (label updates (with calcs))
+// management tab (label updates (with calcs))
 void MadDataClassification::updateVarietyRatingLbl()
 {
   // calculate weight and update the label
@@ -1978,7 +1978,7 @@ void MadDataClassification::updateVarietyRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblVarietyRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateSowingRatingLbl()
 {
@@ -1988,7 +1988,7 @@ void MadDataClassification::updateSowingRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSowingRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateHarvestRatingLbl()
 {
@@ -1998,7 +1998,7 @@ void MadDataClassification::updateHarvestRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblHarvestRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateFertilisationRatingLbl()
 {
@@ -2008,7 +2008,7 @@ void MadDataClassification::updateFertilisationRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblFertilisationRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateIrrigationRatingLbl()
 {
@@ -2018,7 +2018,7 @@ void MadDataClassification::updateIrrigationRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblIrrigationRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateSeedDensityRatingLbl()
 {
@@ -2028,7 +2028,7 @@ void MadDataClassification::updateSeedDensityRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblSeedDensityRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateYieldRatingLbl()
 {
@@ -2038,7 +2038,7 @@ void MadDataClassification::updateYieldRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblYieldRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 void MadDataClassification::updateTillageRatingLbl()
 {
@@ -2048,7 +2048,7 @@ void MadDataClassification::updateTillageRatingLbl()
   float myWeight = myObservations * myGivenWeighting;
   QString myText = makeString(myWeight);
   lblTillageRating->setText(myText);
-  updateCultivationLabels();
+  updateManagementLabels();
 }
 
 // phenology tab (label updates (with calcs))
@@ -2635,8 +2635,8 @@ void MadDataClassification::updateSVObservationsDamagesRatingLbl()
    //-------------------------------------//
   //  Update ranking labels and pixmaps  //
  //-------------------------------------//
-// cultivation (ranking labels and pixmaps)
-void MadDataClassification::updateCultivationLabels()
+// management (ranking labels and pixmaps)
+void MadDataClassification::updateManagementLabels()
 {
   // updates totals
   float myTotal = 0.0;
@@ -2658,45 +2658,45 @@ void MadDataClassification::updateCultivationLabels()
 
   switch (myRank)
   {
-    case 24: lblMedalCultivation->setVisible(true);
-             lblMedalCultivation->setScaledContents(true);
-             lblMedalCultivation->setPixmap(QPixmap( ":platinum.png" ));
-             lblRankingCultivation->setVisible(true);
-             lblRankingCultivation->setText("Platinum");
+    case 24: lblMedalManagement->setVisible(true);
+             lblMedalManagement->setScaledContents(true);
+             lblMedalManagement->setPixmap(QPixmap( ":platinum.png" ));
+             lblRankingManagement->setVisible(true);
+             lblRankingManagement->setText("Platinum");
              tabWidgetDataClassification->setTabIcon(0, (QIcon( ":platinum.png")));
 
       break;
 
-    case 23: lblMedalCultivation->setVisible(true);
-             lblMedalCultivation->setScaledContents(true);
-             lblMedalCultivation->setPixmap(QPixmap( ":gold.png" ));
-             lblRankingCultivation->setVisible(true);
-             lblRankingCultivation->setText("Gold");
+    case 23: lblMedalManagement->setVisible(true);
+             lblMedalManagement->setScaledContents(true);
+             lblMedalManagement->setPixmap(QPixmap( ":gold.png" ));
+             lblRankingManagement->setVisible(true);
+             lblRankingManagement->setText("Gold");
              tabWidgetDataClassification->setTabIcon(0, (QIcon( ":gold.png")));
 
       break;
 
-    case 22: lblMedalCultivation->setVisible(true);
-             lblMedalCultivation->setScaledContents(true);
-             lblMedalCultivation->setPixmap(QPixmap( ":silver.png" ));
-             lblRankingCultivation->setVisible(true);
-             lblRankingCultivation->setText("Silver");
+    case 22: lblMedalManagement->setVisible(true);
+             lblMedalManagement->setScaledContents(true);
+             lblMedalManagement->setPixmap(QPixmap( ":silver.png" ));
+             lblRankingManagement->setVisible(true);
+             lblRankingManagement->setText("Silver");
              tabWidgetDataClassification->setTabIcon(0, (QIcon( ":silver.png")));
 
       break;
 
-    case 21: lblMedalCultivation->setVisible(true);
-             lblMedalCultivation->setScaledContents(true);
-             lblMedalCultivation->setPixmap(QPixmap( ":bronze.png" ));
-             lblRankingCultivation->setVisible(true);
-             lblRankingCultivation->setText("Bronze");
+    case 21: lblMedalManagement->setVisible(true);
+             lblMedalManagement->setScaledContents(true);
+             lblMedalManagement->setPixmap(QPixmap( ":bronze.png" ));
+             lblRankingManagement->setVisible(true);
+             lblRankingManagement->setText("Bronze");
              tabWidgetDataClassification->setTabIcon(0, (QIcon( ":bronze.png")));
 
       break;
 
     default: // hide
-             lblRankingCultivation->setVisible(false);
-             lblMedalCultivation->setVisible(false);
+             lblRankingManagement->setVisible(false);
+             lblMedalManagement->setVisible(false);
              tabWidgetDataClassification->setTabIcon(0, (QIcon()));
 
       break;
@@ -3329,7 +3329,7 @@ void MadDataClassification::on_pbSave_clicked()
   // first we have to get the values
   // initialise variables
   MadDataset myDataset;
-  MadDataClassificationCultivation myCultivation;
+  MadDataClassificationManagement myManagement;
   MadDataClassificationPhenology myPhenology;
   MadDataClassificationPrevCrop myPrevCrop;
   MadDataClassificationInitialValues myInitialValues;
@@ -3346,7 +3346,7 @@ void MadDataClassification::on_pbSave_clicked()
   QString mName;// = leDatasetName->text();
   QString mDescription; // = leDescription->text();
 
-  // cultivation (initialise variables)
+  // management (initialise variables)
   MadSubCategory myCultVariety;
   MadSubCategory myCultSowing;
   MadSubCategory myCultHarvest;
@@ -3443,7 +3443,7 @@ void MadDataClassification::on_pbSave_clicked()
 
 
   //
-  // Cultivation - set the values from form
+  // Management - set the values from form
   //
 
   // variety (set values from form)
@@ -3901,16 +3901,16 @@ void MadDataClassification::on_pbSave_clicked()
   //-----------------//
 
   //
-  // set cultivation values
+  // set management values
   //
-  myCultivation.setVariety(myCultVariety);
-  myCultivation.setSowing(myCultSowing);
-  myCultivation.setHarvest(myCultHarvest);
-  myCultivation.setFertilisation(myCultFertilisation);
-  myCultivation.setIrrigation(myCultIrrigation);
-  myCultivation.setSeedDensity(myCultSeedDensity);
-  myCultivation.setYield(myCultYield);
-  myCultivation.setTillage(myCultTillage);
+  myManagement.setVariety(myCultVariety);
+  myManagement.setSowing(myCultSowing);
+  myManagement.setHarvest(myCultHarvest);
+  myManagement.setFertilisation(myCultFertilisation);
+  myManagement.setIrrigation(myCultIrrigation);
+  myManagement.setSeedDensity(myCultSeedDensity);
+  myManagement.setYield(myCultYield);
+  myManagement.setTillage(myCultTillage);
 
   //
   // set phenology values
@@ -4019,7 +4019,7 @@ void MadDataClassification::on_pbSave_clicked()
   //myString+=QString(" <name>" + MadUtils::xmlEncode(myName) + "</name>\n");
   //myString+=QString(" <description>" + MadUtils::xmlEncode(myDescription) + "</description>\n");
   myString += myDataset.toXml();
-  myString += myCultivation.toXml();
+  myString += myManagement.toXml();
   myString += myPhenology.toXml();
   myString += myPrevCrop.toXml();
   myString += myInitialValues.toXml();

@@ -28,7 +28,7 @@
 #include "ui_maddataclassificationbase.h"
 #include "maddataset.h"
 
-#include "dataclassification/maddataclassificationcultivation.h"
+#include "dataclassification/maddataclassificationmanagement.h"
 #include "dataclassification/maddataclassificationinitialvalues.h"
 #include "dataclassification/maddataclassificationphenology.h"
 #include "dataclassification/maddataclassificationprevcrop.h"
@@ -51,7 +51,7 @@ public:
   // Accessors
   QString name() const;
   QString description() const;
-  MadDataClassificationCultivation cultivation() const;
+  MadDataClassificationManagement management() const;
   MadDataClassificationInitialValues initialValues() const;
   MadDataClassificationPhenology phenology() const;
   MadDataClassificationPrevCrop prevCrop() const;
@@ -87,7 +87,7 @@ public:
   // Mutators
   void setName(QString theName);
   void setDescription(QString theDescription);
-  void setCultivation(MadDataClassificationCultivation theCultivationData);
+  void setManagement(MadDataClassificationManagement theManagementData);
   void setInitialValues(MadDataClassificationInitialValues theInitialValues);
   void setPhenology(MadDataClassificationPhenology thePhenologyData);
   void setPrevCrop(MadDataClassificationPrevCrop thePrevCropData);
@@ -99,7 +99,7 @@ public:
 private:
   QString mName;
   QString mDescription;
-  MadDataClassificationCultivation mCultivation;
+  MadDataClassificationManagement mManagement;
   MadDataClassificationInitialValues mInitialValues;
   MadDataClassificationPhenology mPhenology;
   MadDataClassificationPrevCrop mPrevCrop;

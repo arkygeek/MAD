@@ -24,7 +24,7 @@
 
 // Local includes
 #include "ui_maddataclassificationbase.h"
-#include "lib/dataclassification/maddataclassificationcultivation.h"
+#include "lib/dataclassification/maddataclassificationmanagement.h"
 #include "lib/dataclassification/maddataclassificationinitialvalues.h"
 #include "lib/dataclassification/maddataclassificationphenology.h"
 #include "lib/dataclassification/maddataclassificationprevcrop.h"
@@ -59,8 +59,8 @@ private slots:
      //-------------------------------------//
     //  link sliders and calculate points  //
    //-------------------------------------//
-  // cultivation
-  void on_gbxCultivation_clicked();
+  // management
+  void on_gbxManagement_clicked();
   void on_cbExamples_currentIndexChanged(const QString &theValue);
 
   void on_hsldrVariety_valueChanged(int theSliderValue);
@@ -310,7 +310,7 @@ private slots:
      //----------------//
     // update labels  //
    //----------------//
-  // cultivation
+  // management
   void updateVarietyRatingLbl();
   void updateSowingRatingLbl();
   void updateHarvestRatingLbl();
@@ -319,7 +319,7 @@ private slots:
   void updateSeedDensityRatingLbl();
   void updateYieldRatingLbl();
   void updateTillageRatingLbl();
-  void updateCultivationLabels();
+  void updateManagementLabels();
 
   // phenology
   void updatePhenologyEmergenceRatingLbl();

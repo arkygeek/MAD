@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madcultivation.h created: 20/05/2013                           *
- *   Class info: MADCultivation                                            *
+ *   File:  madmanagement.h created: 20/05/2013                           *
+ *   Class info: MADManagement                                            *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *

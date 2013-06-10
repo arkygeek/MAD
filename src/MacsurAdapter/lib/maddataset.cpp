@@ -45,7 +45,7 @@ MadDataset::MadDataset(const MadDataset &theData)
   mName=theData.name();
   mDescription=theData.description();
   setGuid(theData.guid());
-  mCultivation=theData.cultivation();
+  mManagement=theData.management();
   mInitialValues=theData.initialValues();
   mPhenology=theData.phenology();
   mPrevCrop=theData.prevCrop();
@@ -62,7 +62,7 @@ MadDataset& MadDataset::operator =(const MadDataset& theData)
  mName=theData.name();
  mDescription=theData.description();
  setGuid(theData.guid());
- mCultivation=theData.cultivation();
+ mManagement=theData.management();
  mInitialValues=theData.initialValues();
  mPhenology=theData.phenology();
  mPrevCrop=theData.prevCrop();
@@ -83,9 +83,9 @@ QString MadDataset::description() const
   return mDescription;
 }
 
-MadDataClassificationCultivation MadDataset::cultivation() const
+MadDataClassificationManagement MadDataset::management() const
 {
-  return mCultivation;
+  return mManagement;
 }
 MadDataClassificationInitialValues MadDataset::initialValues() const
 {
@@ -128,9 +128,9 @@ void MadDataset::setDescription(QString theDescription)
   mDescription = theDescription;
 }
 
-void MadDataset::setCultivation(MadDataClassificationCultivation theCultivationData)
+void MadDataset::setManagement(MadDataClassificationManagement theManagementData)
 {
-  mCultivation = theCultivationData;
+  mManagement = theManagementData;
 }
 
 void MadDataset::setInitialValues(MadDataClassificationInitialValues theInitialValues)
@@ -193,7 +193,7 @@ QString MadDataset::toXml()
   myString+=QString("<dataset guid=\"" + guid() + "\">\n");
   myString+=QString(" <name>" + MadUtils::xmlEncode(mName) + "</name>\n");
   myString+=QString(" <description>" + MadUtils::xmlEncode(mDescription) + "</description>\n");
-  //myString+=mCultivation.toXml();
+  //myString+=mManagement.toXml();
   //myString+=mPhenology.toXml();
   //myString+=mPrevCrop.toXml();
   //myString+=mInitialValues.toXml();

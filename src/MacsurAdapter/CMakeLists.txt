@@ -25,7 +25,7 @@ set ( MacsurAdapter_HDRS
         lib/madguid.h
         lib/maddataset.h
         lib/dataclassification/madsubcategory.h
-        lib/dataclassification/maddataclassificationcultivation.h
+        lib/dataclassification/maddataclassificationmanagement.h
         lib/dataclassification/maddataclassificationinitialvalues.h
         lib/dataclassification/maddataclassificationphenology.h
         lib/dataclassification/maddataclassificationprevcrop.h
@@ -51,7 +51,7 @@ set ( MacsurAdapter_SRCS
         lib/madguid.cpp
         lib/maddataset.cpp
         lib/dataclassification/madsubcategory.cpp
-        lib/dataclassification/maddataclassificationcultivation.cpp
+        lib/dataclassification/maddataclassificationmanagement.cpp
         lib/dataclassification/maddataclassificationinitialvalues.cpp
         lib/dataclassification/maddataclassificationphenology.cpp
         lib/dataclassification/maddataclassificationprevcrop.cpp

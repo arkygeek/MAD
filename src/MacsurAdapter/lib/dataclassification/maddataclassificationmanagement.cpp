@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  maddataclassificationcultivation.cpp created: 22/05/2013       *
- *   Class info: MadDataClassificationCultivation                          *
+ *   File:  maddataclassificationmanagement.cpp created: 22/05/2013       *
+ *   Class info: MadDataClassificationManagement                          *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -20,7 +20,7 @@
  ***************************************************************************/
 
 // Local includes
-#include "maddataclassificationcultivation.h"
+#include "maddataclassificationmanagement.h"
 #include "madsubcategory.h"
 #include "../madutils.h"
 
@@ -30,12 +30,12 @@
 #include <QDomElement>
 #include <QDebug>
 
-MadDataClassificationCultivation::MadDataClassificationCultivation() : MadSerialisable(), MadGuid()
+MadDataClassificationManagement::MadDataClassificationManagement() : MadSerialisable(), MadGuid()
 {
     setGuid();
 }
 
-MadDataClassificationCultivation::MadDataClassificationCultivation(const MadDataClassificationCultivation &theData)
+MadDataClassificationManagement::MadDataClassificationManagement(const MadDataClassificationManagement &theData)
 {
     setGuid(theData.guid());
     setVariety(theData.variety());
@@ -48,7 +48,7 @@ MadDataClassificationCultivation::MadDataClassificationCultivation(const MadData
     setTillage(theData.tillage());
 }
 
-MadDataClassificationCultivation& MadDataClassificationCultivation::operator = (const MadDataClassificationCultivation& theData)
+MadDataClassificationManagement& MadDataClassificationManagement::operator = (const MadDataClassificationManagement& theData)
 {
     // gracefully handles self assignment
     if (this == &theData) return *this;
@@ -65,79 +65,79 @@ MadDataClassificationCultivation& MadDataClassificationCultivation::operator = (
 }
 
 // Accessors
-MadSubCategory MadDataClassificationCultivation::variety () const
+MadSubCategory MadDataClassificationManagement::variety () const
 {
     return mVariety;
 }
-MadSubCategory MadDataClassificationCultivation::sowing () const
+MadSubCategory MadDataClassificationManagement::sowing () const
 {
     return mSowing;
 }
-MadSubCategory MadDataClassificationCultivation::harvest () const
+MadSubCategory MadDataClassificationManagement::harvest () const
 {
     return mHarvest;
 }
-MadSubCategory MadDataClassificationCultivation::fertilisation () const
+MadSubCategory MadDataClassificationManagement::fertilisation () const
 {
     return mFertilisation;
 }
-MadSubCategory MadDataClassificationCultivation::irrigation () const
+MadSubCategory MadDataClassificationManagement::irrigation () const
 {
     return mIrrigation;
 }
-MadSubCategory MadDataClassificationCultivation::seedDensity () const
+MadSubCategory MadDataClassificationManagement::seedDensity () const
 {
     return mSeedDensity;
 }
-MadSubCategory MadDataClassificationCultivation::yield () const
+MadSubCategory MadDataClassificationManagement::yield () const
 {
     return mYield;
 }
-MadSubCategory MadDataClassificationCultivation::tillage () const
+MadSubCategory MadDataClassificationManagement::tillage () const
 {
     return mTillage;
 }
 
 // Mutators
-void MadDataClassificationCultivation::setVariety(MadSubCategory theData)
+void MadDataClassificationManagement::setVariety(MadSubCategory theData)
 {
     mVariety = theData;
 }
-void MadDataClassificationCultivation::setSowing(MadSubCategory theData)
+void MadDataClassificationManagement::setSowing(MadSubCategory theData)
 {
     mSowing = theData;
 }
-void MadDataClassificationCultivation::setHarvest(MadSubCategory theData)
+void MadDataClassificationManagement::setHarvest(MadSubCategory theData)
 {
     mHarvest = theData;
 }
-void MadDataClassificationCultivation::setFertilisation(MadSubCategory theData)
+void MadDataClassificationManagement::setFertilisation(MadSubCategory theData)
 {
     mFertilisation = theData;
 }
-void MadDataClassificationCultivation::setIrrigation(MadSubCategory theData)
+void MadDataClassificationManagement::setIrrigation(MadSubCategory theData)
 {
     mIrrigation = theData;
 }
-void MadDataClassificationCultivation::setSeedDensity(MadSubCategory theData)
+void MadDataClassificationManagement::setSeedDensity(MadSubCategory theData)
 {
     mSeedDensity = theData;
 }
-void MadDataClassificationCultivation::setYield(MadSubCategory theData)
+void MadDataClassificationManagement::setYield(MadSubCategory theData)
 {
     mYield = theData;
 }
-void MadDataClassificationCultivation::setTillage(MadSubCategory theData)
+void MadDataClassificationManagement::setTillage(MadSubCategory theData)
 {
     mTillage = theData;
 }
 
 
-bool MadDataClassificationCultivation::fromXml(const QString theXml)
+bool MadDataClassificationManagement::fromXml(const QString theXml)
 {
     QDomDocument myDocument("mydocument");
     myDocument.setContent(theXml);
-    QDomElement myTopElement = myDocument.firstChildElement("cultivation");
+    QDomElement myTopElement = myDocument.firstChildElement("management");
     if (myTopElement.isNull())
     {
         //TODO - just make this a warning
@@ -152,10 +152,10 @@ bool MadDataClassificationCultivation::fromXml(const QString theXml)
     return false;
 }
 
-QString MadDataClassificationCultivation::toXml()
+QString MadDataClassificationManagement::toXml()
 {
   QString myString;
-  myString+=QString("  <cultivation guid=\"" + guid() + "\">\n");
+  myString+=QString("  <management guid=\"" + guid() + "\">\n");
 
   myString+=QString("    <variety>\n");
   myString+=mVariety.toXml();
@@ -189,12 +189,12 @@ QString MadDataClassificationCultivation::toXml()
   myString+=mTillage.toXml();
   myString+=QString("    </tillage>\n");
 
-  myString+=QString("  </cultivation>\n");
+  myString+=QString("  </management>\n");
 
   return myString;
 }
 
-QString MadDataClassificationCultivation::toText()
+QString MadDataClassificationManagement::toText()
 {
   QString myString;
   myString+=QString("guid=>" + guid() + "\n");
@@ -203,7 +203,7 @@ QString MadDataClassificationCultivation::toText()
   return myString;
 }
 
-QString MadDataClassificationCultivation::toHtml()
+QString MadDataClassificationManagement::toHtml()
 {
   QString myString;
   //myString+="<h3>Details for " + MadUtils::xmlEncode(mName) + "</h3>";
