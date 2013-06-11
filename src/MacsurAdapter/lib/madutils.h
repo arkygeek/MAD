@@ -59,10 +59,10 @@ public:
      *
      * @return QString containing the relevant directory name
      */
-    static const QString userModelProfilesDirPath();
+    static const QString userDatasetClassificationDirPath();
 
     /**
-     * @brief userModelParametersDirPath
+     * @brief userDatasetParametersDirPath
      * Find the place on the filesystem where user defined model
      * parameter profiles are stored.
      *
@@ -70,7 +70,7 @@ public:
      *
      * @return QString containing the relevant directory name
      */
-    static const QString userModelParametersDirPath();
+    static const QString userDatasetParametersDirPath();
 
     /**
      * @brief getModelOutputDir

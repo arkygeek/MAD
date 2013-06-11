@@ -25,6 +25,7 @@
 #include <QPixmap>
 #include <QDomDocument>
 #include <QDomElement>
+#include <QDir>
 
 //Local includes
 #include "maddataclassification.h"
@@ -4031,7 +4032,7 @@ void MadDataClassification::on_pbSave_clicked()
   myString+=QString("</dataset>\n");
 
   textEditSide->setText(myString);
-
+  myDataset.toXmlFile( MadUtils::userDatasetClassificationDirPath() + QDir::separator() + myDataset.guid() + ".xml");
 
   //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
   //    QDir::separator() + mCrop.guid() + ".xml");

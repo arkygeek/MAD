@@ -64,20 +64,20 @@ const QString MadUtils::getModelOutputDir()
   return myPath;
 }
 
-const QString MadUtils::userModelProfilesDirPath()
+const QString MadUtils::userDatasetClassificationDirPath()
 {
     //alg profiles are always saved in the users home dir under .macsurAdapter
     QString myPath = QDir::homePath() + QString("/.macsurAdapter/") +
-      QDir::separator()+"animalProfiles"+QDir::separator();
+      QDir::separator()+"datasetClassifications"+QDir::separator();
     QDir().mkpath(myPath);
     return myPath;
 }
 
-const QString MadUtils::userModelParametersDirPath()
+const QString MadUtils::userDatasetParametersDirPath()
 {
     //alg profiles are always saved in the users home dir under .macsurAdapter/
   QString myPath = QDir::homePath() + QString("/.macsurAdapter/") +
-    QDir::separator() + "modelParameterProfiles" + QDir::separator();
+    QDir::separator() + "datasetParameters" + QDir::separator();
   QDir().mkpath(myPath);
   return myPath;
 }
@@ -93,7 +93,7 @@ const QString MadUtils::userImagesDirPath()
 MadUtils::ModelMap MadUtils::getAvailableModels()
 {
   MadUtils::ModelMap myMap;
-  QDir myDirectory(userModelProfilesDirPath());
+  QDir myDirectory(userDatasetClassificationDirPath());
   myDirectory.setFilter(QDir::Dirs | QDir::Files | QDir::NoSymLinks );
   QFileInfoList myList = myDirectory.entryInfoList();
   for (unsigned int i = 0; i < static_cast<unsigned int>(myList.size()); ++i)
