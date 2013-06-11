@@ -151,37 +151,37 @@ bool MadDataClassificationPrevCrop::fromXml(const QString theXml)
 QString MadDataClassificationPrevCrop::toXml()
 {
   QString myString;
-  myString+=QString("  <prevcrop guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"prevCrop\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("    <crop>\n");
+  myString+=QString("    <tab name=\"crop\">\n");
   myString+=mCrop.toXml();
-  myString+=QString("    </crop>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <sowingdate>\n");
+  myString+=QString("    <tab name=\"sowingDate\">\n");
   myString+=mSowingDate.toXml();
-  myString+=QString("    </sowingdate>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <harvestdate>\n");
+  myString+=QString("    <tab name=\"harvestDate\">\n");
   myString+=mHarvestDate.toXml();
-  myString+=QString("    </harvestdate>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <yield>\n");
+  myString+=QString("    <tab name=\"yield\">\n");
   myString+=mYield.toXml();
-  myString+=QString("    </yield>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <residuemgmt>\n");
+  myString+=QString("    <tab name=\"residueMgmt\">\n");
   myString+=mResidueMgmt.toXml();
-  myString+=QString("    </residuemgmt>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <fertilisation>\n");
+  myString+=QString("    <tab name=\"fertilisation\">\n");
   myString+=mFertilisation.toXml();
-  myString+=QString("    </fertilisation>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <irrigation>\n");
+  myString+=QString("    <tab name=\"irrigation\">\n");
   myString+=mIrrigation.toXml();
-  myString+=QString("    </irrigation>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("  </prevcrop>\n");
+  myString+=QString("  </category>\n");
   return myString;
 
 }

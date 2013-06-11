@@ -31,7 +31,6 @@
 #include "gui/maddataclassification.h"
 #include "gui/madtextdisplayform.h"
 
-
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {

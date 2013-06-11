@@ -106,21 +106,21 @@ bool MadSVObservations::fromXml(const QString theXml)
 QString MadSVObservations::toXml()
 {
   QString myString;
-  myString+=QString("    <svobservations guid=\"" + guid() + "\">\n");
+  myString+=QString("    <subTab name=\"svobservations\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("     <lodging>\n");
+  myString+=QString("     <subCategory name=\"lodging\">\n");
   myString+=mLodging.toXml();
-  myString+=QString("     </lodging>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <pestsordiseases>\n");
+  myString+=QString("     <subCategory name=\"pestsordiseases\">\n");
   myString+=mPestsOrDiseases.toXml();
-  myString+=QString("     </pestsordiseases>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <damage>\n");
+  myString+=QString("     <subCategory name=\"damage\">\n");
   myString+=mDamages.toXml();
-  myString+=QString("     </damage>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("    </svobservations>\n");
+  myString+=QString("    </subTab>\n");
   return myString;
 
 }

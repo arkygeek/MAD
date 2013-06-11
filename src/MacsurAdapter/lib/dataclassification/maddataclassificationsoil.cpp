@@ -172,45 +172,45 @@ bool MadDataClassificationSoil::fromXml(const QString theXml)
 QString MadDataClassificationSoil::toXml()
 {
   QString myString;
-  myString+=QString("  <soil guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"soil\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("    <corg>\n");
+  myString+=QString("    <tab name=\"Corg\">\n");
   myString+=mCarbonOrganic.toXml();
-  myString+=QString("    </corg>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <norg>\n");
+  myString+=QString("    <tab name=\"Norg\">\n");
   myString+=mNitrogenOrganic.toXml();
-  myString+=QString("    </norg>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <texture>\n");
+  myString+=QString("    <tab name=\"texture\">\n");
   myString+=mTexture.toXml();
-  myString+=QString("    </texture>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <bulkdensity>\n");
+  myString+=QString("    <tab name=\"bulkDensity\">\n");
   myString+=mBulkDensity.toXml();
-  myString+=QString("    </bulkdensity>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <fieldcapacity>\n");
+  myString+=QString("    <tab name=\"fieldCapacity\">\n");
   myString+=mFieldCapacityMeas.toXml();
-  myString+=QString("    </fieldcapacity>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <wiltingpoint>\n");
+  myString+=QString("    <tab name=\"wiltingPoint\">\n");
   myString+=mWiltingPointMeas.toXml();
-  myString+=QString("    </wiltingpoint>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <pfcurve>\n");
+  myString+=QString("    <tab name=\"pfCurve\">\n");
   myString+=mPfCurve.toXml();
-  myString+=QString("    </pfcurve>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <hydrcondcurve>\n");
+  myString+=QString("    <tab name=\"hydrCondCurve\">\n");
   myString+=mHydrCondCurve.toXml();
-  myString+=QString("    </hydrcondcurve>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <ph>\n");
+  myString+=QString("    <tab name=\"pH\">\n");
   myString+=mPH.toXml();
-  myString+=QString("    </ph>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("  </soil>\n");
+  myString+=QString("  </category>\n");
   return myString;
 
 }

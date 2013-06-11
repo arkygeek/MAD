@@ -138,29 +138,29 @@ bool MadSVSurfaceFluxes::fromXml(const QString theXml)
 QString MadSVSurfaceFluxes::toXml()
 {
   QString myString;
-  myString+=QString("     <surfacefluxes guid=\"" + guid() + "\">\n");
+  myString+=QString("     <subTab name=\"surfaceFluxes\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("      <et>\n");
+  myString+=QString("      <subCategory name=\"ET\">\n");
   myString+=mEt.toXml();
-  myString+=QString("      </et>\n");
+  myString+=QString("      </subCategory>\n");
 
-  myString+=QString("      <nh3loss>");
+  myString+=QString("      <subCategory name=\"NH3loss\">\n");
   myString+=mNh3Loss.toXml();
-  myString+=QString("      </nh3loss>\n");
+  myString+=QString("      </subCategory>\n");
 
-  myString+=QString("      <n2oloss>");
+  myString+=QString("      <subCategory name=\"N2Oloss\">\n");
   myString+=mN2oLoss.toXml();
-  myString+=QString("      </n2oloss>\n");
+  myString+=QString("      </subCategory>\n");
 
-  myString+=QString("      <n2loss>");
+  myString+=QString("      <subCategory name=\"N2loss\">\n");
   myString+=mN2Loss.toXml();
-  myString+=QString("      </n2loss>\n");
+  myString+=QString("      </subCategory>\n");
 
-  myString+=QString("      <ch4loss>");
+  myString+=QString("      <subCategory name=\"CH4loss\">\n");
   myString+=mCh4Loss.toXml();
-  myString+=QString("      </ch4loss>\n");
+  myString+=QString("      </subCategory>\n");
 
-  myString+=QString("     </surfacefluxes>\n");
+  myString+=QString("     </subTab>\n");
   return myString;
 }
 

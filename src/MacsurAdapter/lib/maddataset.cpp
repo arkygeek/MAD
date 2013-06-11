@@ -178,8 +178,11 @@ bool MadDataset::fromXml(const QString theXml)
         //TODO - just make this a warning
         qDebug("the top element couldn't be found!");
         setGuid(myTopElement.attribute("guid"));
-        //mName=MadUtils::xmlDecode(myTopElement.firstChildElement("name").text());
-        //mDescription=MadUtils::xmlDecode(myTopElement.firstChildElement("description").text());
+        mName=MadUtils::xmlDecode(myTopElement.firstChildElement("name").text());
+        mDescription=MadUtils::xmlDecode(myTopElement.firstChildElement("description").text());
+
+
+
         //mImageFile=QString(myTopElement.firstChildElement("imageFile").text());
         return true;
     }

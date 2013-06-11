@@ -213,49 +213,49 @@ bool MadDataClassificationWeather::fromXml(const QString theXml)
 QString MadDataClassificationWeather::toXml()
 {
   QString myString;
-  myString+=QString("  <weather guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"weather\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("    <precipitation>\n");
+  myString+=QString("    <tab name=\"precipitation\">\n");
   myString+=mPrecipitation.toXml();
-  myString+=QString("    </precipitation>\n");
+  myString+=QString("    </tab>\n");
   
-  myString+=QString("    <tave>\n");
+  myString+=QString("    <tab name=\"tAve\">\n");
   myString+=mTAve.toXml();
-  myString+=QString("    </tave>\n");
-  
-  myString+=QString("    <tmin>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"tMin\">\n");
   myString+=mTMin.toXml();
-  myString+=QString("    </tmin>\n");
-  
-  myString+=QString("    <tmax>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"tMax\">\n");
   myString+=mTMax.toXml();
-  myString+=QString("    </tmax>\n");
-  
-  myString+=QString("    <relativehumidity>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"relativeHumidity\">\n");
   myString+=mRelativeHumidity.toXml();
-  myString+=QString("    </relativehumidity>\n");
-  
-  myString+=QString("    <windspeed>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"windSpeed\">\n");
   myString+=mWindSpeed.toXml();
-  myString+=QString("    </windspeed>\n");
-  
-  myString+=QString("    <globalradiation>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"globalRadiation\">\n");
   myString+=mGlobalRadiation.toXml();
-  myString+=QString("    </globalradiation>\n");
-  
-  myString+=QString("    <sunshinehours>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"sunshineHours\">\n");
   myString+=mSunshineHours.toXml();
-  myString+=QString("    </sunshinehours>\n");
-  
-  myString+=QString("    <leafwetness>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"leafWetness\">\n");
   myString+=mLeafWetness.toXml();
-  myString+=QString("    </leafwetness>\n");
-  
-  myString+=QString("    <soiltemp>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("    <tab name=\"soilTemp\">\n");
   myString+=mSoilTemp.toXml();
-  myString+=QString("    </soiltemp>\n");
-  
-  myString+=QString("  </weather>\n");
+  myString+=QString("    </tab>\n");
+
+  myString+=QString("  </category>\n");
   return myString;
 
 }

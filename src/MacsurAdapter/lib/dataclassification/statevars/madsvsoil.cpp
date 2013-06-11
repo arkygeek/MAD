@@ -146,33 +146,33 @@ bool MadSVSoil::fromXml(const QString theXml)
 QString MadSVSoil::toXml()
 {
   QString myString;
-  myString+=QString("    <svsoil guid=\"" + guid() + "\">\n");
+  myString+=QString("    <subTab name=\"svsoil\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("     <soilwatergrav>\n");
+  myString+=QString("     <subCategory name=\"soilWaterGrav\">\n");
   myString+=mSoilWaterGrav.toXml();
-  myString+=QString("     </soilwatergrav>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <pressureheads>\n");
+  myString+=QString("     <subCategory name=\"pressureHeads\">\n");
   myString+=mPressureHeads.toXml();
-  myString+=QString("     </pressureheads>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <nmin>\n");
+  myString+=QString("     <subCategory name=\"Nmin\">\n");
   myString+=mNMin.toXml();
-  myString+=QString("     </nmin>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <soilwatersensorcal>\n");
+  myString+=QString("     <subCategory name=\"soilWaterSensorCal\">\n");
   myString+=mSoilWaterSensorCal.toXml();
-  myString+=QString("     </soilwatersensorcal>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <waterfluxbottomroot>\n");
+  myString+=QString("     <subCategory name=\"waterFluxBottomRoot\">\n");
   myString+=mWaterFluxBottomRoot.toXml();
-  myString+=QString("     </waterfluxbottomroot>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <nitrogenfluxbottomroot>\n");
+  myString+=QString("     <subCategory name=\"NitrogenFluxBottomRoot\">\n");
   myString+=mNitrogenFluxBottomRoot.toXml();
-  myString+=QString("     </nitrogenfluxbottomroot>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("    </svsoil>\n");
+  myString+=QString("    </subTab>\n");
   return myString;
 
 

@@ -155,41 +155,41 @@ bool MadDataClassificationManagement::fromXml(const QString theXml)
 QString MadDataClassificationManagement::toXml()
 {
   QString myString;
-  myString+=QString("  <management guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"management\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("    <variety>\n");
+  myString+=QString("    <tab name=\"variety\">\n");
   myString+=mVariety.toXml();
-  myString+=QString("    </variety>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <sowing>\n");
+  myString+=QString("    <tab name=\"sowing\">\n");
   myString+=mSowing.toXml();
-  myString+=QString("    </sowing>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <harvest>\n");
+  myString+=QString("    <tab name=\"harvest\">\n");
   myString+=mHarvest.toXml();
-  myString+=QString("    </harvest>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <fertilisation>\n");
+  myString+=QString("    <tab name=\"fertilisation\">\n");
   myString+=mFertilisation.toXml();
-  myString+=QString("    </fertilisation>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <irrigation>\n");
+  myString+=QString("    <tab name=\"irrigation\">\n");
   myString+=mIrrigation.toXml();
-  myString+=QString("    </irrigation>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <seeddensity>\n");
+  myString+=QString("    <tab name=\"seeddensity\">\n");
   myString+=mSeedDensity.toXml();
-  myString+=QString("    </seeddensity>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <yield>\n");
+  myString+=QString("    <tab name=\"yield\">\n");
   myString+=mYield.toXml();
-  myString+=QString("    </yield>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <tillage>\n");
+  myString+=QString("    <tab name=\"tillage\">\n");
   myString+=mTillage.toXml();
-  myString+=QString("    </tillage>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("  </management>\n");
+  myString+=QString("  </category>\n");
 
   return myString;
 }

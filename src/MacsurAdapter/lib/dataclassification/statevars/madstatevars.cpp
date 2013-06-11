@@ -121,7 +121,7 @@ bool MadStateVars::fromXml(const QString theXml)
 QString MadStateVars::toXml()
 {
   QString myString;
-  myString+=QString("  <statevars guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"stateVars\" guid=\"" + guid() + "\">\n");
 
 //  myString+=QString("     <crop>\n");
   myString+=mCropCategories.toXml();
@@ -139,7 +139,7 @@ QString MadStateVars::toXml()
   myString+=mObservations.toXml();
 //  myString+=QString("     </observations>\n");
 
-  myString+=QString("  </statevars>\n");
+  myString+=QString("  </category>\n");
   return myString;
 
 }

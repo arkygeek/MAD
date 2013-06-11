@@ -128,29 +128,29 @@ bool MadDataClassificationPhenology::fromXml(const QString theXml)
 QString MadDataClassificationPhenology::toXml()
 {
   QString myString;
-  myString+=QString("  <phenology guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"phenology\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("    <emergence>\n");
+  myString+=QString("    <tab name=\"emergence\">\n");
   myString+=mEmergence.toXml();
-  myString+=QString("    </emergence>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <stemelongation>\n");
+  myString+=QString("    <tab name=\"stemelongation\">\n");
   myString+=mStemElongation.toXml();
-  myString+=QString("    </stemelongation>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <earemergence>\n");
+  myString+=QString("    <tab name=\"earemergence\">\n");
   myString+=mEarEmergence.toXml();
-  myString+=QString("    </earemergence>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <flowering>\n");
+  myString+=QString("    <tab name=\"flowering\">\n");
   myString+=mFlowering.toXml();
-  myString+=QString("    </flowering>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("    <yellowripeness>\n");
+  myString+=QString("    <tab name=\"yellowripeness\">\n");
   myString+=mYellowRipeness.toXml();
-  myString+=QString("    </yellowripeness>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("  </phenology>\n");
+  myString+=QString("  </category>\n");
   return myString;
 }
 

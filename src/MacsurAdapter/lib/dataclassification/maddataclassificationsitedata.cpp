@@ -105,21 +105,21 @@ bool MadDataClassificationSiteData::fromXml(const QString theXml)
 QString MadDataClassificationSiteData::toXml()
 {
   QString myString;
-  myString+=QString("  <site guid=\"" + guid() + "\">\n");
+  myString+=QString("  <category name=\"site\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("     <latitude>\n");
+  myString+=QString("     <tab name=\"latitude\">\n");
   myString+=mLatitude.toXml();
-  myString+=QString("     </latitude>\n");
+  myString+=QString("     </tab>\n");
 
-  myString+=QString("     <longitude>\n");
+  myString+=QString("     <tab name=\"longitude\">\n");
   myString+=mLongitude.toXml();
-  myString+=QString("     </longitude>\n");
+  myString+=QString("     </tab>\n");
 
-  myString+=QString("     <altitude>\n");
+  myString+=QString("     <tab name=\"altitude\">\n");
   myString+=mAltitude.toXml();
-  myString+=QString("     </altitude>\n");
+  myString+=QString("     </tab>\n");
 
-  myString+=QString("  </site>\n");
+  myString+=QString("  </category>\n");
   return myString;
 
 }

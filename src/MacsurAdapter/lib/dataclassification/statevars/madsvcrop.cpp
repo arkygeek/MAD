@@ -154,33 +154,33 @@ bool MadSVCrop::fromXml(const QString theXml)
 QString MadSVCrop::toXml()
 {
   QString myString;
-  myString+=QString("    <svcrop guid=\"" + guid() + "\">\n");
+  myString+=QString("    <subTab name=\"svcrop\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("     <agrbiomass>\n");
+  myString+=QString("     <subCategory name=\"agrbiomass\">\n");
   myString+=mAgrBiomass.toXml();
-  myString+=QString("     </agrbiomass>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <weightorgans>\n");
+  myString+=QString("     <subCategory name=\"weightorgans\">\n");
   myString+=mWeightOrgans.toXml();
-  myString+=QString("     </weightorgans>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <rootbiomass>\n");
+  myString+=QString("     <subCategory name=\"rootbiomass\">\n");
   myString+=mRootBiomass.toXml();
-  myString+=QString("     </rootbiomass>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <ninagrbiomass>\n");
+  myString+=QString("     <subCategory name=\"ninagrbiomass\">\n");
   myString+=mNInAGrBiomass.toXml();
-  myString+=QString("     </ninagrbiomass>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <ninorgans>\n");
+  myString+=QString("     <subCategory name=\"ninorgans\">\n");
   myString+=mNInOrgans.toXml();
-  myString+=QString("     </ninorgans>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("     <lai>\n");
+  myString+=QString("     <subCategory name=\"lai\">\n");
   myString+=mLai.toXml();
-  myString+=QString("     </lai>\n");
+  myString+=QString("     </subCategory>\n");
 
-  myString+=QString("    </svcrop>\n");
+  myString+=QString("    </subTab>\n");
   return myString;
 
 

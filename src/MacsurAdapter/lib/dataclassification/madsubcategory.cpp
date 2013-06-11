@@ -146,13 +146,13 @@ bool MadSubCategory::fromXml(const QString theXml)
 QString MadSubCategory::toXml()
 {
   QString myString;
-  myString+=QString("       <details>\n");
-  myString+=QString("        <mindata>" + QString::number(mMinData) + "</mindata>\n");
-  myString+=QString("        <depth>" + QString::number(mDepth) + "</depth>\n");
-  myString+=QString("        <observations>" + QString::number(mObservations) + "</observations>\n");
-  myString+=QString("        <weightpoints>" + QString::number(mWeightPoints) + "</weightpoints>\n");
-  myString+=QString("        <replicates>" + QString::number(mReplicates) + "</replicates>\n");
-  myString+=QString("       </details>\n");
+  //myString+=QString("       <details>\n");
+  myString+=QString("        <details minData=\"" + QString::number(mMinData) + "\"/>\n");
+  myString+=QString("        <details depth=\"" + QString::number(mDepth) + "\"/>\n");
+  myString+=QString("        <details observations=\"" + QString::number(mObservations) + "\"/>\n");
+  myString+=QString("        <details weightPoints=\"" + QString::number(mWeightPoints) + "\"/>\n");
+  myString+=QString("        <details replicates=\"" + QString::number(mReplicates) + "\"/>\n");
+  //myString+=QString("       </details>\n");
 
   return myString;
 }
