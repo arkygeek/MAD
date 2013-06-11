@@ -138,7 +138,7 @@ bool MadSVSurfaceFluxes::fromXml(const QString theXml)
 QString MadSVSurfaceFluxes::toXml()
 {
   QString myString;
-  myString+=QString("     <subTab name=\"surfaceFluxes\" guid=\"" + guid() + "\">\n");
+  myString+=QString("    <subTab name=\"surfaceFluxes\" guid=\"" + guid() + "\">\n");
 
   myString+=QString("      <subCategory name=\"ET\">\n");
   myString+=mEt.toXml();
@@ -160,7 +160,7 @@ QString MadSVSurfaceFluxes::toXml()
   myString+=mCh4Loss.toXml();
   myString+=QString("      </subCategory>\n");
 
-  myString+=QString("     </subTab>\n");
+  myString+=QString("    </subTab>\n");
   return myString;
 }
 

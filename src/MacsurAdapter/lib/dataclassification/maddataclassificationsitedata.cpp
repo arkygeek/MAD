@@ -107,17 +107,17 @@ QString MadDataClassificationSiteData::toXml()
   QString myString;
   myString+=QString("  <category name=\"site\" guid=\"" + guid() + "\">\n");
 
-  myString+=QString("     <tab name=\"latitude\">\n");
+  myString+=QString("    <tab name=\"latitude\">\n");
   myString+=mLatitude.toXml();
-  myString+=QString("     </tab>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("     <tab name=\"longitude\">\n");
+  myString+=QString("    <tab name=\"longitude\">\n");
   myString+=mLongitude.toXml();
-  myString+=QString("     </tab>\n");
+  myString+=QString("    </tab>\n");
 
-  myString+=QString("     <tab name=\"altitude\">\n");
+  myString+=QString("    <tab name=\"altitude\">\n");
   myString+=mAltitude.toXml();
-  myString+=QString("     </tab>\n");
+  myString+=QString("    </tab>\n");
 
   myString+=QString("  </category>\n");
   return myString;
