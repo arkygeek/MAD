@@ -4032,7 +4032,19 @@ void MadDataClassification::on_pbSave_clicked()
   myString+=QString("</dataset>\n");
 
   textEditSide->setText(myString);
-  myDataset.toXmlFile( MadUtils::userDatasetClassificationDirPath() + QDir::separator() + myDataset.guid() + ".xml");
+
+  // send values to MadDataset so it has the proper values to write instead of all zeros!
+  myDataset.setManagement(myManagement);
+  myDataset.setPhenology(myPhenology);
+  myDataset.setPrevCrop(myPrevCrop);
+  myDataset.setInitialValues(myInitialValues);
+  myDataset.setSoil(mySoil);
+  myDataset.setSiteData(mySite);
+  myDataset.setWeather(myWeather);
+  myDataset.setStateVars(mySV);
+
+  myDataset.toXmlFile( MadUtils::userDatasetClassificationDirPath()
+                       + QDir::separator() + myDataset.guid() + ".xml");
 
   //mCrop.toXmlFile( LaUtils::userCropProfilesDirPath() +
   //    QDir::separator() + mCrop.guid() + ".xml");
