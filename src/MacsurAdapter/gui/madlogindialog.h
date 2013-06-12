@@ -92,7 +92,7 @@ public:
       *\param username the string that represents the current username
       * to display
       */
-    void setUsername( QString& username );
+    void setUsername(const QString& username );
 
     /*!
       * Sets the current password to propose to the user for the login.

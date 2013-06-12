@@ -133,7 +133,7 @@ private:
     void on_pbTableView_clicked();
     void on_modelNameComboBox_currentIndexChanged(const QString &theSelection);
     void on_pbLogin_clicked();
-    void slotAcceptUserLogin (QString&,QString&);
+    void slotAcceptUserLogin (QString& theUsername,QString& thePassword);
 };
 
 #endif // MADMAINWINDOW_H

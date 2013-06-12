@@ -254,9 +254,9 @@ void MadMainWindow::setUserName(const QString &theUserName)
 }
 
 
-void MadMainWindow::slotAcceptUserLogin (QString&,QString&)
+void MadMainWindow::slotAcceptUserLogin (QString&theUsername, QString&thePassword)
 {
   // accept the user login details and update label
   //MadLoginDialog myMadLoginDialog;
-  //lblLoginStatus->setText(QString&);
+  lblLoginStatus->setText(theUsername);
 }

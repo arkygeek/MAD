@@ -91,7 +91,7 @@ void MadLoginDialog::setUpGUI()
 }
 
 
-void MadLoginDialog::setUsername(QString &username)
+void MadLoginDialog::setUsername(const QString &username)
 {
   bool found = false;
   for ( int i = 0; i < comboUsername->count() && ! found ; i++ )
