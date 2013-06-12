@@ -4050,3 +4050,18 @@ void MadDataClassification::on_pbSave_clicked()
   //    QDir::separator() + mCrop.guid() + ".xml");
 }
 
+
+void MadDataClassification::on_cbDatasets_currentIndexChanged(const QString &theText)
+{
+  if (cbDatasets->currentText()=="Other/New")
+  {
+    leDatasetName->setEnabled(true);
+    leDatasetName->setText("");
+    leDatasetName->setFocus();
+  }
+  else
+  {
+    leDatasetName->setEnabled(false);
+
+  }
+}

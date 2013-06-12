@@ -239,9 +239,9 @@ void MadMainWindow::on_pbLogin_clicked()
   MadLoginDialog* myMadLoginDialog = new MadLoginDialog( this );
   myMadLoginDialog->setUsername( "Jason" );  // optional
   connect (myMadLoginDialog,
-            SIGNAL (acceptLogin (QString&,QString&,int&) ),
+            SIGNAL (acceptLogin (QString&, QString&,int&) ),
             this,
-            SLOT (slotAcceptUserLogin (QString&,QString&) )
+            SLOT (slotAcceptUserLogin (QString&, QString&) )
           );
 
   myMadLoginDialog->exec();
@@ -254,9 +254,9 @@ void MadMainWindow::setUserName(const QString &theUserName)
 }
 
 
-void MadMainWindow::slotAcceptUserLogin (QString&theUsername, QString&thePassword)
+void MadMainWindow::slotAcceptUserLogin (QString &theUsername, QString &thePassword)
 {
   // accept the user login details and update label
-  //MadLoginDialog myMadLoginDialog;
+
   lblLoginStatus->setText(theUsername);
 }

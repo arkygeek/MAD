@@ -416,6 +416,7 @@ private slots:
   void on_pbSave_clicked();
   void on_leDatasetName_textChanged(const QString &theText);
 
+  void on_cbDatasets_currentIndexChanged(const QString &theText);
 };
 
 #endif // MADDATACLASSIFICATION_H
