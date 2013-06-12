@@ -43,5 +43,12 @@
         <file>CRU-TS-2.0.html</file>
         <file>I-COADS.html</file>
         <file>cmap.html</file>
+        <file>copy.png</file>
+        <file>delete.png</file>
+        <file>exceptions.png</file>
+        <file>infoIcon.png</file>
+        <file>new.png</file>
+        <file>status_error.png</file>
+        <file>status_ok.png</file>
     </qresource>
 </RCC>

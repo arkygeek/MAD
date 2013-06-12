@@ -33,7 +33,7 @@
 
 //Local includes
 #include "madmodel.h"
-#include "maddata.h"
+//#include "maddataset.h"
 
 //Doxygen stuff for includes - is this required?
 /**
@@ -41,46 +41,19 @@
  * @file maddata.h
  */
 
-/**
- * @brief MadTripleMap
- */
 typedef QMap <QString,QPair<bool,QString> > MadTripleMap;
-/**
- * @brief MadModelInfo
- */
 typedef QPair <QPair<QString,QString>, QPair<QString,QString> > MadModelInfo;
-/**
- * @brief MadModelMap
- */
+typedef QPair <QPair<QString,QString>, QPair<QString,QString> > MadDatasetInfo;
+
 //typedef QMap < QString, MadModel > MadModelMap;
 //typedef QMap <QString,QPair<QString,float> > MadReportMap;
-/**
- * @brief The ModelTheme enum
- */
+
 enum ModelTheme {CropM, LiveM, TradeM};
-/**
- * @brief The Scale enum
- */
 enum Scale {Farm, Locality, Regional, National, International, Global};
-/**
- * @brief The Nuts enum
- */
 enum Nuts {Nuts1, Nuts2, Nuts3};
-/**
- * @brief The AreaUnits enum
- */
 enum AreaUnits {Dunum, Hectare, Acre, SquareKm, SquareMile};
-/**
- * @brief The FileType enum
- */
 enum FileType {CSV, TAB, OtherDelimited, Binary};
-/**
- * @brief The EnergyType enum
- */
 enum EnergyType {KCalories, TDN};
-/**
- * @brief The DataClass enum
- */
 enum DataClass {Platinum, Gold, Silver, Bronze};
 
 #endif // MAD_H
