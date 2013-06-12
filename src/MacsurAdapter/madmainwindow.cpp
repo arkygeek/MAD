@@ -237,7 +237,7 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
 void MadMainWindow::on_pbLogin_clicked()
 {
   MadLoginDialog* myMadLoginDialog = new MadLoginDialog( this );
-  //myMadLoginDialog->setUsername( "Jason" );  // optional
+  myMadLoginDialog->setUsername( "Jason" );  // optional
   connect (myMadLoginDialog,
             SIGNAL (acceptLogin (QString&,QString&,int&) ),
             this,
@@ -248,7 +248,7 @@ void MadMainWindow::on_pbLogin_clicked()
 
 }
 
-void MadMainWindow::setUserName(QString theUserName)
+void MadMainWindow::setUserName(const QString &theUserName)
 {
   mUserName=theUserName;
 }

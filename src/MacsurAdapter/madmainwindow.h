@@ -65,7 +65,7 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
   //
 
   void setModelText(QString theModelText);
-  void setUserName(QString theUserName);
+  void setUserName(const QString& theUserName);
 
 private:
     MadDataClassification *mpMadDataClassification;
