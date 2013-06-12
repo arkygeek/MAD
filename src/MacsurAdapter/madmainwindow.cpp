@@ -30,6 +30,7 @@
 #include "lib/madversion.h"
 #include "gui/maddataclassification.h"
 #include "gui/madtextdisplayform.h"
+#include "gui/madlogindialog.h"
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -43,11 +44,18 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
     // this file (madmainform.cpp)
     lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
                         + QString("$Revision$").replace("$",""));
+
+    //connect ( pbLogin, SIGNAL ( valueChanged(int) ), this, SLOT ( slotAcceptUserLogin() ));
 }
 
 QString MadMainWindow::modelText() const
 {
   return mModelText;
+}
+
+QString MadMainWindow::userName() const
+{
+  return mUserName;
 }
 
 void MadMainWindow::setModelText(QString theModelText)
@@ -180,24 +188,42 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
     txtbrwsData->append(theSelection);
 
     QString mySelection = theSelection.toLower(); // converts to all lowercase
-    if (theSelection == "CMAP") loadHtmlFile("cmap");
-    if (theSelection == "Dai") loadHtmlFile("Dai");
-    if (theSelection == "I-COADS") loadHtmlFile("I-COADS");
-    if (theSelection == "CRU TS 2.0") loadHtmlFile("CRU-TS-2.0");
-    if (theSelection == "HadISST") loadHtmlFile("HadISST");
-    if (theSelection == "Hulme (CRU)") loadHtmlFile("Hulme-CRU");
-    if (theSelection == "Jones (CRU) Air Temperature") loadHtmlFile("JonesCRUAirTemp");
-    if (theSelection == "Jones (CRU) SLP") loadHtmlFile("Jones-CRU-SLP");
-    if (theSelection == "Kaplan (SLP)") loadHtmlFile("Kaplan-SLP");
-    if (theSelection == "Kaplan (SST)") loadHtmlFile("Kaplan-SST");
-    if (theSelection == "Lucas and Waliser Satellite ECT-Corrected OLR") loadHtmlFile("Lucas-Waliser-Satellite-ECT-Corrected-OLR");
-    if (theSelection == "NCAR Sea Level Pressure") loadHtmlFile("NCAR-Sea-Level-Pressure");
-    if (theSelection == "NCEP/NCAR Reanalysis") loadHtmlFile("NCEP-NCAR-Reanalysis");
-    if (theSelection == "Reynold Reconstructed SST") loadHtmlFile("Reynolds-Reconstructed-SST");
-    if (theSelection == "Reynolds Optimum Interpolation (OI) SST") loadHtmlFile("Reynolds-Optimum-Interpolation-OI-SST");
-    if (theSelection == "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST") loadHtmlFile("Reynolds-Optimum-Interpolation-Ver-2-OIv2");
-    if (theSelection == "Smith and Reynolds Extended Reconstructed SLP (ERSLP)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP");
-    if (theSelection == "Smith and Reynolds Extended Reconstructed SST (ERSST)") loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SST-ERSST");
+    if (theSelection == "CMAP")
+       loadHtmlFile("cmap");
+    if (theSelection == "Dai")
+       loadHtmlFile("Dai");
+    if (theSelection == "I-COADS")
+       loadHtmlFile("I-COADS");
+    if (theSelection == "CRU TS 2.0")
+       loadHtmlFile("CRU-TS-2.0");
+    if (theSelection == "HadISST")
+       loadHtmlFile("HadISST");
+    if (theSelection == "Hulme (CRU)")
+       loadHtmlFile("Hulme-CRU");
+    if (theSelection == "Jones (CRU) Air Temperature")
+       loadHtmlFile("JonesCRUAirTemp");
+    if (theSelection == "Jones (CRU) SLP")
+       loadHtmlFile("Jones-CRU-SLP");
+    if (theSelection == "Kaplan (SLP)")
+       loadHtmlFile("Kaplan-SLP");
+    if (theSelection == "Kaplan (SST)")
+       loadHtmlFile("Kaplan-SST");
+    if (theSelection == "Lucas and Waliser Satellite ECT-Corrected OLR")
+       loadHtmlFile("Lucas-Waliser-Satellite-ECT-Corrected-OLR");
+    if (theSelection == "NCAR Sea Level Pressure")
+       loadHtmlFile("NCAR-Sea-Level-Pressure");
+    if (theSelection == "NCEP/NCAR Reanalysis")
+       loadHtmlFile("NCEP-NCAR-Reanalysis");
+    if (theSelection == "Reynold Reconstructed SST")
+       loadHtmlFile("Reynolds-Reconstructed-SST");
+    if (theSelection == "Reynolds Optimum Interpolation (OI) SST")
+       loadHtmlFile("Reynolds-Optimum-Interpolation-OI-SST");
+    if (theSelection == "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST")
+       loadHtmlFile("Reynolds-Optimum-Interpolation-Ver-2-OIv2");
+    if (theSelection == "Smith and Reynolds Extended Reconstructed SLP (ERSLP)")
+       loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SLP-ERSLP");
+    if (theSelection == "Smith and Reynolds Extended Reconstructed SST (ERSST)")
+       loadHtmlFile("Smith-Reynolds-Extended-Reconstructed-SST-ERSST");
 
     if (theSelection == "Credits")
     {
@@ -206,4 +232,31 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
       plainTextEdit->setUndoRedoEnabled(false);
     }
 
+}
+
+void MadMainWindow::on_pbLogin_clicked()
+{
+  MadLoginDialog* myMadLoginDialog = new MadLoginDialog( this );
+  //myMadLoginDialog->setUsername( "Jason" );  // optional
+  connect (myMadLoginDialog,
+            SIGNAL (acceptLogin (QString&,QString&,int&) ),
+            this,
+            SLOT (slotAcceptUserLogin (QString&,QString&) )
+          );
+
+  myMadLoginDialog->exec();
+
+}
+
+void MadMainWindow::setUserName(QString theUserName)
+{
+  mUserName=theUserName;
+}
+
+
+void MadMainWindow::slotAcceptUserLogin (QString&,QString&)
+{
+  // accept the user login details and update label
+  //MadLoginDialog myMadLoginDialog;
+  //lblLoginStatus->setText(QString&);
 }

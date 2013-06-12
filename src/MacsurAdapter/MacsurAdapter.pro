@@ -36,7 +36,8 @@ SOURCES += main.cpp\
     lib/dataclassification/maddataclassificationsoil.cpp \
     lib/dataclassification/maddataclassificationsitedata.cpp \
     lib/dataclassification/maddataclassificationweather.cpp \
-    lib/maddataset.cpp
+    lib/maddataset.cpp \
+    gui/madlogindialog.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -62,7 +63,8 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/maddataclassificationsoil.h \
     lib/dataclassification/maddataclassificationsitedata.h \
     lib/dataclassification/maddataclassificationweather.h \
-    lib/maddataset.h
+    lib/maddataset.h \
+    gui/madlogindialog.h
 
 
 FORMS    += madmainwindowbase.ui \

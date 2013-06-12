@@ -58,19 +58,22 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
   //
 
   QString modelText() const;
+  QString userName() const;
 
   //
   // Mutators
   //
 
   void setModelText(QString theModelText);
-
+  void setUserName(QString theUserName);
 
 private:
     MadDataClassification *mpMadDataClassification;
     MadTextDisplayForm *mpMadTextDisplayForm;
 
     QString mModelText;
+
+    QString mUserName;
 
     /**
      * @brief loadTextFile to display in the 'about' text display on main page
@@ -129,6 +132,8 @@ private:
      */
     void on_pbTableView_clicked();
     void on_modelNameComboBox_currentIndexChanged(const QString &theSelection);
+    void on_pbLogin_clicked();
+    void slotAcceptUserLogin (QString&,QString&);
 };
 
 #endif // MADMAINWINDOW_H
