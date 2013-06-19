@@ -1,0 +1,70 @@
+CLIM_ID,,
+"! The naming convention for CLIM_ID indicates the climate models/data used to generate the scenario, the type of downscaling approach applied, and the type of scenario represented. Each ID is made up of 4-characters which are defined below.",,
+! Additional values may also be introduced according to the participation/inclusion of new methods for scenario generation and requested scenarios.,,
+! First character indicates time period and emissions scenario (additional values will be generated to indicate CMIP5 RCP simulations),,
+Code_display_char,Value,Definition
+CLIM_ID_1,0,1980-2009 baseline
+CLIM_ID_1,1,A2 2010-2039 (Near-term)
+CLIM_ID_1,2,B1 2010-2039 (Near-term)
+CLIM_ID_1,3,A2 2040-2069 (Mid-Century)
+CLIM_ID_1,4,B1 2040-2069 (Mid-Century)
+CLIM_ID_1,5,A2 2070-2099 (End-of-Century)
+CLIM_ID_1,6,B1 2070-2099 (End-of-Century)
+CLIM_ID_1,A ,RCP8.5 2010-2039 (Near-term)
+CLIM_ID_1,B ,RCP4.5 2010-2039 (Near-term)
+CLIM_ID_1,C ,RCP8.5 2040-2069 (Mid-Century)
+CLIM_ID_1,D ,RCP4.5 2040-2069 (Mid-Century)
+CLIM_ID_1,E ,RCP8.5 2070-2099 (End-of-Century)
+CLIM_ID_1,F ,RCP4.5 2070-2099 (End-of-Century)
+"! Second character is GCM/data source (here listed as CMIP3, subject to change for CMIP5):",,
+Code_display_char,Value,Definition
+CLIM_ID_2,X ,no GCM used (observations)
+CLIM_ID_2,0,imposed values (sensitivity tests)
+CLIM_ID_2,A ,bccr
+CLIM_ID_2,B ,cccma cgcm3
+CLIM_ID_2,C ,cnrm
+CLIM_ID_2,D ,csiro
+CLIM_ID_2,E ,gfdl 2.0
+CLIM_ID_2,F ,gfdl 2.1
+CLIM_ID_2,G ,giss er
+CLIM_ID_2,H ,inmcm 3.0
+CLIM_ID_2,I ,ipsl cm4
+CLIM_ID_2,J ,miroc3 2 medres
+CLIM_ID_2,K ,miub echo g
+CLIM_ID_2,L ,mpi echam5 M = mri cgcm2
+CLIM_ID_2,N ,ncar ccsm3
+CLIM_ID_2,O ,ncar pcm1
+CLIM_ID_2,P ,ukmo hadcm3
+CLIM_ID_2,W ,MERRA
+CLIM_ID_2,Y ,NCEP CFSR
+CLIM_ID_2,Z ,NCEP/DoE Reanalysis-2
+! Third character describes downscaling/scenario methodology,,
+Code_display_char,Value,Definition
+CLIM_ID_3,X ,no additional downscaling
+CLIM_ID_3,0,imposed values (sensitivity tests)
+CLIM_ID_3,1,WRF
+CLIM_ID_3,2,RegCM3
+CLIM_ID_3,3,ecpc
+CLIM_ID_3,4,hrm3
+CLIM_ID_3,5,crcm
+CLIM_ID_3,6,mm5i
+CLIM_ID_3,7,RegCM4
+CLIM_ID_3,A ,GiST
+CLIM_ID_3,B ,MarkSIM
+CLIM_ID_3,C ,WM2
+CLIM_ID_3,D ,1/8 degree BCSD
+CLIM_ID_3,E ,1/2 degree BCSD
+! Fourth character is Type of Scenario:,,
+Code_display_char,Value,Definition
+CLIM_ID_4,X ,Observations (no scenario)
+CLIM_ID_4,A ,Mean Change from GCM
+CLIM_ID_4,B ,Mean Change from RCM
+CLIM_ID_4,C ,Mean Change from GCM modified by RCM
+CLIM_ID_4,D ,Mean Temperature Changes Only
+CLIM_ID_4,E ,Mean Precipitation Changes Only
+CLIM_ID_4,F ,"Mean and daily variability change for Tmax, Tmin, and P"
+CLIM_ID_4,G ,"P, Tmax and Tmin daily variability change only"
+CLIM_ID_4,H ,Tmax and Tmin daily variability and mean change only
+CLIM_ID_4,I ,P daily variability and mean change pm;y
+CLIM_ID_4,J ,Tmax and Tmin daily variability change only
+CLIM_ID_4,K ,P daily variability change only

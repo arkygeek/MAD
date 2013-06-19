@@ -1,0 +1,82 @@
+Code_display,Crop_code,Common_name,Latin_name,Crop_usage,Crop_comments,DSSAT_code,APSIM_code
+CRID,ALF,Alfalfa/Lucerne,Medicago sativa,Forage,,AL,Lucerne
+CRID,APL,Apple,Malus domestica,Fruit,,,Apple
+CRID,APR,Apricot,Prunus armeniaca,Fruit,,,Apricot
+CRID,BAR,Barley,Hordeum vulgare,"Grain, fodder",,BA,Barley
+CRID,BHG,Bahia grass,Paspalum spp.,Forage,,G0,Bahia
+CRID,BLW,Broad leaf weeds,(various),,,BW,Weed
+CRID,BND,Dry bean,Phaseolus vulgaris,Pulse,,BN,Drybean
+CRID,BNG,Green bean,Phaseolus vulgaris,Vegetable,Snap bean,GB,Greenbean
+CRID,BNN,Banana,Musa paradisiaca,Fruit,,NN,Banana
+CRID,BRC,Brachiaria,Brachiaria spp.,Forage,Check which species,BR,Brachiaria
+CRID,BWH,Buckwheat,Fagopyrum esculentum,Pseudocereal,,,Buckwheat
+CRID,CAM,Camelina,Camelina sativa,Oil seed,,CM,Camelina
+CRID,CAR,Carrot,Daucus carota,,,,Carrot
+CRID,CBG,Cabbage,Brassica,Vegetable,,CB,Cabbage
+CRID,CCN,Coconut,Cocos nucifera,Oil seed,,CC,Coconut
+CRID,CFE,Coffee,Coffea spp.,Beverage,"C. arabica, C. rustica",CF,Coffee
+CRID,CGR,Concord grape,Vitis labrusca,Fruit,Concord grape,,Concordgrape
+CRID,CHP,Chickpea,Cicer arietenum,Pulse,,CH,Chickpea
+CRID,CHR,Cherry,Prunus spp.,Fruit,Many species,,Cherry
+CRID,CIT,Citrus,Citrus spp.,Fruit,,CT,Citrus
+CRID,CLV,Clover,Trifolium spp.,Forage,,CV,Clover
+CRID,CNL,Canola,Brassica spp.,Oil seed,"B. rapa, B. juncea, B. napus",CN,Canola
+CRID,COT,Cotton,Gossypium spp.,Fibre,"G. hirsutum, G barbadense",CO,Cotton
+CRID,CRM,Crambe,Crambe abyssinica,Oil seed,,CR,Crambe
+CRID,CST,Castor bean,Ricinus castorum,Oil seed,,,Castorbean
+CRID,CSV,Cassava,Manihot esculenta,Root crop,,CS,Cassava
+CRID,CWP,Cowpea,Vigna unguiculata,Pulse,,CP,Cowpea
+CRID,FAL,Fallow,(not applicable),,,FA,Fallow
+CRID,FBN,Faba bean,Vicia faba,Pulse,,FB,Fababean
+CRID,FIG,Fig,Ficus carica,Fruit,,,Fig
+CRID,FXM,Foxtail millet,Setaria italica,Cereal,,,Foxtailmillet
+CRID,GRV,Grass vegetations,(various),,,GR,Grassvegetations
+CRID,GRW,Grass weeds,(various),,,GW,Weed
+CRID,GUA,Guayule,Parthenium argentatum,Latex,,,Guayule
+CRID,HOP,Hops,Humulus lupulus,Specialty,For brewing,,Hops
+CRID,JBN,Jack bean,Canavalia ensiformis,Pulse,,,Jackbean
+CRID,JUT,Jute,Corchorus spp.,Fibre,,,Jute
+CRID,LBN,Lima bean,Phaseolus lunatus,Pulse,,,Limabean
+CRID,LEN,Lentil,Lens culinarus,Pulse,,LN,Lentil
+CRID,MAZ,Maize,Zea mays,Grain,,MZ,Maize
+CRID,NPG,Napier grass,Pennisetum_purpureum,"Forage, biofuel",Elephant grass,NP,Napiergrass
+CRID,OAT,Oats,Avena sativa,"Grain, forage",,OA,Oats
+CRID,OLP,Oil palm,Elaeis spp.,Oil seed,E. guineensis & others,,Oilpalm
+CRID,ONN,Onion,Allium sativum,Vegetable,,,Onion
+CRID,PEA,Pea,Pisum sativum,Pulse,,PE,Pea
+CRID,PER,Pear,Pyrus spp.,Fruit,,,Pear
+CRID,PGP,Pigeonpea,Cajanus cajan,Pulse,,PP,Pigeonpea
+CRID,PML,Pearl millet,Pennisetum glaucum,Grain,,ML,Millet
+CRID,PNA,Pineapple,Ananas comosus,Fruit,,PI,Pineapple
+CRID,PNT,Peanut,Arachis hypogea,"Oil seed, pulse",,PN,Peanut
+CRID,POT,Potato,Solanum tunerosum,Tuber crop,,PT,Potato
+CRID,PPN,Perennial peanut,Arachis spp.,Forage,,PO,Peanut
+CRID,PPR,Capsicum pepper,Capsicum annum,Vegetable,Includes bell and chile,PR,Capsicumpepper
+CRID,PRM,Proso millet,Panicum miliaceum,Cereal,,,Prosomillet
+CRID,QUN,Quinoa,Chenopodium quinoa,Pseudocereal,,,Quinoa
+CRID,RAP,Rape,Brassica rapa,Oil seed,,RA,Rape
+CRID,RCL,Red clover,Trifolium pratense,Forage,,,Redclover
+CRID,RHP,Rhizoma peanut,Arachis glabrata,Forage,,RP,Rhizomapeanut
+CRID,RIC,Rice,Oryza sativa ,Grain,,RI,Rice
+CRID,SAF,Safflower,Carthamus tinctorius,Oil seed,,,Safflower
+CRID,SBN,Soybean,Glycine max,Pulse,,SB,Soybean
+CRID,SBT,Beet sugar,Beta vulgaris,Sugar,,BS,Beetsugar
+CRID,SES,Sesame,Sesamum indicum,Oil seed,,SS,Sesame
+CRID,SGG,Grain sorghum,Sorghum bicolor ,Cereal,,SG,Sorghum
+CRID,STR,Shrubs/trees,,,,ST,Tree
+CRID,SUC,Sugarcane,Saccharum spp. ,Sugar,,SC,Sugar
+CRID,SUN,Sunflower,Helianthus annuus ,Oil seed,,SU,Sunflower
+CRID,SWC,Sweet corn,Zea mays,Vegetable,,SW,Sweetcorn
+CRID,SWG,Switch grass,Panicum virgatum,Biomass,,SI,Switchgrass
+CRID,SWP,Sweet potato,Ipomoea batata,Root crop,,SP,Sweetpotato
+CRID,TFS,Tall fescue,Lolium arundinaceum ,Forage,,TF,Tallfescue
+CRID,TAN,Tanier,Xanthosoma spp,Root crop,,TN,Tanier
+CRID,TAR,Taro,Colocasia esculenta,Root crop,,TR,Taro
+CRID,TBN,Tepary bean,Phaseolus acutifolius,Pulse,,,Teparybean
+CRID,TGR,Table grape,Vitis spp.,Fruit,Various edible (non-wine) types,,Tablegrape
+CRID,TOM,Tomato,Lycopersicon esculentum,Vegetable,,TM,Tomato
+CRID,TRT,Triticale,x Triticosecale ,"Cereal, forage",,TL,Triticale
+CRID,VBN,Velvet bean,Mucuna pruriens,Green manure,,VB,Velvetbean
+CRID,VIN,Wine grape,Vitis spp.,Fruit,,VI,Vine
+CRID,WHB,Bread wheat,Triticum aestivum,Cereal,,WH,Wheat
+CRID,WHD,Durum wheat,Triticum turgidum durum,Cereal,,WH,Wheat
