@@ -448,7 +448,8 @@ void MadDataClassification::on_leDatasetName_textChanged(const QString &theText)
 {
     if (theText != "")
     {
-      pbSave->setEnabled(true);
+      // determine if the form has been filled out before saving
+      if (formIsCompleted()==true) pbSave->setEnabled(true);
     }
     else
     {
@@ -459,6 +460,64 @@ QString MadDataClassification::makeString(double theValue)
 {
   QString myString = QString::number(theValue);
   return myString;
+}
+
+bool MadDataClassification::formIsCompleted()
+{
+  // check that the form is completed
+  // this verifies that all group boxes are checked as complete
+  if (gbxManagement->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxInitialValues->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxPhenology->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxPrevCrop->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSite->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSoil->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSVCrop->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSVObservations->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSVSoil->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  if (gbxSVSurfaceFluxes->isChecked()==false)
+  {
+    pbSave->setEnabled(false);
+    return false;
+  }
+  pbSave->setEnabled(true);
+  return true;
 }
 
    //----------------------------------------//
@@ -4014,7 +4073,6 @@ void MadDataClassification::on_pbSave_clicked()
 
 
 
-
   QString myString;
   //myString+=QString("<dataset guid=\"" + guid() + "\">\n");
   //myString+=QString(" <name>" + MadUtils::xmlEncode(myName) + "</name>\n");
@@ -4053,7 +4111,8 @@ void MadDataClassification::on_pbSave_clicked()
 
 void MadDataClassification::on_cbDatasets_currentIndexChanged(const QString &theText)
 {
-  if (cbDatasets->currentText()=="Other/New")
+  //if (cbDatasets->currentText()=="Other/New")
+  if (theText=="Other/New")
   {
     leDatasetName->setEnabled(true);
     leDatasetName->setText("");
@@ -4064,4 +4123,59 @@ void MadDataClassification::on_cbDatasets_currentIndexChanged(const QString &the
     leDatasetName->setEnabled(false);
 
   }
+}
+
+void MadDataClassification::on_gbxManagement_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxPhenology_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxPrevCrop_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxInitialValues_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSoil_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSite_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxWeather_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSVCrop_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSVSoil_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSVSurfaceFluxes_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
+}
+
+void MadDataClassification::on_gbxSVObservations_toggled(bool theCheckState)
+{
+  if (theCheckState==true)  formIsCompleted();
 }

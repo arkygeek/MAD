@@ -237,7 +237,10 @@ void MadMainWindow::on_modelNameComboBox_currentIndexChanged(
 void MadMainWindow::on_pbLogin_clicked()
 {
   MadLoginDialog* myMadLoginDialog = new MadLoginDialog( this );
-  myMadLoginDialog->setUsername( "Jason" );  // optional
+  //myMadLoginDialog->setUsername( "Jason" );  // optional
+  QStringList myUsernameList;
+  myUsernameList << "Jason" << "Martin" << "Katharina";
+  myMadLoginDialog->setUsernamesList(myUsernameList);
   connect (myMadLoginDialog,
             SIGNAL (acceptLogin (QString&, QString&,int&) ),
             this,
@@ -259,4 +262,9 @@ void MadMainWindow::slotAcceptUserLogin (QString &theUsername, QString &thePassw
   // accept the user login details and update label
 
   lblLoginStatus->setText(theUsername);
+}
+
+void MadMainWindow::on_pbAddVariable_clicked()
+{
+    //TODO open a dialog to add and map a new variable
 }

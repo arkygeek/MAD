@@ -134,6 +134,7 @@ private:
     void on_modelNameComboBox_currentIndexChanged(const QString &theSelection);
     void on_pbLogin_clicked();
     void slotAcceptUserLogin (QString& theUsername,QString& thePassword);
+    void on_pbAddVariable_clicked();
 };
 
 #endif // MADMAINWINDOW_H

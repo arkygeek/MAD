@@ -54,6 +54,11 @@ public:
 protected:
   void changeEvent(QEvent *e);
 
+
+private:
+  bool formIsCompleted();
+
+
 private slots:
 
      //-------------------------------------//
@@ -417,6 +422,17 @@ private slots:
   void on_leDatasetName_textChanged(const QString &theText);
 
   void on_cbDatasets_currentIndexChanged(const QString &theText);
+  void on_gbxManagement_toggled(bool theCheckState);
+  void on_gbxPhenology_toggled(bool theCheckState);
+  void on_gbxPrevCrop_toggled(bool theCheckState);
+  void on_gbxInitialValues_toggled(bool theCheckState);
+  void on_gbxSoil_toggled(bool theCheckState);
+  void on_gbxSite_toggled(bool theCheckState);
+  void on_gbxWeather_toggled(bool theCheckState);
+  void on_gbxSVCrop_toggled(bool theCheckState);
+  void on_gbxSVSoil_toggled(bool theCheckState);
+  void on_gbxSVSurfaceFluxes_toggled(bool theCheckState);
+  void on_gbxSVObservations_toggled(bool theCheckState);
 };
 
 #endif // MADDATACLASSIFICATION_H

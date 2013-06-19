@@ -37,7 +37,8 @@ SOURCES += main.cpp\
     lib/dataclassification/maddataclassificationsitedata.cpp \
     lib/dataclassification/maddataclassificationweather.cpp \
     lib/maddataset.cpp \
-    gui/madlogindialog.cpp
+    gui/madlogindialog.cpp \
+    gui/madvariablemanager.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -64,12 +65,14 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/maddataclassificationsitedata.h \
     lib/dataclassification/maddataclassificationweather.h \
     lib/maddataset.h \
-    gui/madlogindialog.h
+    gui/madlogindialog.h \
+    gui/madvariablemanager.h
 
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \
-    gui/madtextdisplayformbase.ui
+    gui/madtextdisplayformbase.ui \
+    gui/madvariablemanagerbase.ui
 
 RESOURCES += \
     resources/resources.qrc

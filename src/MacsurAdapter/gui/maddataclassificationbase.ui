@@ -7,7 +7,7 @@
     <x>0</x>
     <y>0</y>
     <width>952</width>
-    <height>712</height>
+    <height>731</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -339,7 +339,7 @@
            </size>
           </property>
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -2386,7 +2386,7 @@
         <item row="0" column="0" rowspan="13">
          <widget class="QGroupBox" name="gbxPhenology">
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -2910,7 +2910,7 @@
         <item row="0" column="0" rowspan="16">
          <widget class="QGroupBox" name="gbxPrevCrop">
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -4192,7 +4192,7 @@
            </sizepolicy>
           </property>
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -4942,7 +4942,7 @@
         <item row="0" column="0" rowspan="18">
          <widget class="QGroupBox" name="gbxSoil">
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -5784,7 +5784,7 @@
         <item row="0" column="0" rowspan="6">
          <widget class="QGroupBox" name="gbxSite">
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -6470,7 +6470,7 @@
         <item row="0" column="0" rowspan="18">
          <widget class="QGroupBox" name="gbxWeather">
           <property name="title">
-           <string>Edit</string>
+           <string>Complete</string>
           </property>
           <property name="checkable">
            <bool>true</bool>
@@ -7830,7 +7830,7 @@
            <bool>true</bool>
           </property>
           <property name="currentIndex">
-           <number>0</number>
+           <number>3</number>
           </property>
           <property name="tabSpacing">
            <number>0</number>
@@ -7840,7 +7840,7 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>606</width>
+             <width>458</width>
              <height>383</height>
             </rect>
            </property>
@@ -7851,7 +7851,7 @@
             <item row="1" column="0">
              <widget class="QGroupBox" name="gbxSVCrop">
               <property name="title">
-               <string>Edit</string>
+               <string>Complete</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -8506,7 +8506,7 @@
             <item row="0" column="0">
              <widget class="QGroupBox" name="gbxSVSoil">
               <property name="title">
-               <string>Edit</string>
+               <string>Complete</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -9176,7 +9176,7 @@
             <item row="1" column="0">
              <widget class="QGroupBox" name="gbxSVSurfaceFluxes">
               <property name="title">
-               <string>Edit</string>
+               <string>Complete</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -9806,8 +9806,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>473</width>
-             <height>281</height>
+             <width>606</width>
+             <height>333</height>
             </rect>
            </property>
            <attribute name="label">
@@ -9817,7 +9817,7 @@
             <item row="0" column="0">
              <widget class="QGroupBox" name="gbxSVObservations">
               <property name="title">
-               <string>edit</string>
+               <string>Complete</string>
               </property>
               <property name="checkable">
                <bool>true</bool>
@@ -10368,8 +10368,8 @@
             <rect>
              <x>0</x>
              <y>0</y>
-             <width>100</width>
-             <height>30</height>
+             <width>98</width>
+             <height>28</height>
             </rect>
            </property>
            <attribute name="label">
@@ -10507,12 +10507,12 @@
    <slot>setText(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>149</x>
-     <y>560</y>
+     <x>161</x>
+     <y>519</y>
     </hint>
     <hint type="destinationlabel">
-     <x>169</x>
-     <y>592</y>
+     <x>279</x>
+     <y>550</y>
     </hint>
    </hints>
   </connection>
@@ -10523,12 +10523,12 @@
    <slot>append(QString)</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>588</x>
-     <y>591</y>
+     <x>470</x>
+     <y>581</y>
     </hint>
     <hint type="destinationlabel">
-     <x>553</x>
-     <y>650</y>
+     <x>939</x>
+     <y>699</y>
     </hint>
    </hints>
   </connection>

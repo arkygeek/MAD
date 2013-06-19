@@ -51,4 +51,15 @@
         <file>status_error.png</file>
         <file>status_ok.png</file>
     </qresource>
+    <qresource prefix="/agmip">
+        <file>agmip/pest_codes.csv</file>
+        <file>agmip/other_codes.csv</file>
+        <file>agmip/climate_codes.csv</file>
+        <file>agmip/management_codes.csv</file>
+        <file>agmip/crop_codes.csv</file>
+        <file>agmip/metadata_codes.csv</file>
+        <file>agmip/explanatory_notes.csv</file>
+        <file>agmip/measured_data.csv</file>
+        <file>agmip/management_info.csv</file>
+    </qresource>
 </RCC>

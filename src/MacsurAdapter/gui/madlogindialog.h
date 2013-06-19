@@ -56,18 +56,18 @@ private:
     /*!
       * A label for the username component.
       */
-    QLabel* labelUsername;
+    QLabel* lblUsername;
 
     /*!
       * A label for the password.
       */
-    QLabel* labelPassword;
+    QLabel* lblPassword;
 
     /*!
       * An editable combo box for allowing the user
       * to enter his username or select it from a list.
       */
-    QComboBox* comboUsername;
+    QComboBox* cbUsername;
 
     /*!
       * A field to let the user enters his password.
@@ -100,7 +100,7 @@ public:
       * Sets the current password to propose to the user for the login.
       * \param password the password to fill into the dialog form
       */
-    void setPassword( QString& password );
+    void setPassword(QString& thePassword );
 
     /*!
       * Sets a list of allowed usernames from which the user

@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madlogindialog.cpp created: 12/06/2013                                    *
- *   Class info: MADLoginDialog                                               *
+ *   File:  madlogindialog.cpp created: 12/06/2013                         *
+ *   Class info: MADLoginDialog                                            *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -45,20 +45,20 @@ void MadLoginDialog::setUpGUI()
   QGridLayout* formGridLayout = new QGridLayout( this );
 
   // initialize the username combo box so that it is editable
-  comboUsername = new QComboBox( this );
-  comboUsername->setEditable( true );
+  cbUsername = new QComboBox( this );
+  cbUsername->setEditable( true );
   // initialize the password field so that it does not echo
   // characters
   editPassword = new QLineEdit( this );
   editPassword->setEchoMode( QLineEdit::Password );
 
   // initialize the labels
-  labelUsername = new QLabel( this );
-  labelPassword = new QLabel( this );
-  labelUsername->setText( tr( "Username" ) );
-  labelUsername->setBuddy( comboUsername );
-  labelPassword->setText( tr( "Password" ) );
-  labelPassword->setBuddy( editPassword );
+  lblUsername = new QLabel( this );
+  lblPassword = new QLabel( this );
+  lblUsername->setText( tr( "Username" ) );
+  lblUsername->setBuddy( cbUsername );
+  lblPassword->setText( tr( "Password" ) );
+  lblPassword->setBuddy( editPassword );
 
   // initialize buttons
   buttons = new QDialogButtonBox( this );
@@ -81,9 +81,9 @@ void MadLoginDialog::setUpGUI()
          );
 
   // place components into the dialog
-  formGridLayout->addWidget( labelUsername, 0, 0 );
-  formGridLayout->addWidget( comboUsername, 0, 1 );
-  formGridLayout->addWidget( labelPassword, 1, 0 );
+  formGridLayout->addWidget( lblUsername, 0, 0 );
+  formGridLayout->addWidget( cbUsername, 0, 1 );
+  formGridLayout->addWidget( lblPassword, 1, 0 );
   formGridLayout->addWidget( editPassword, 1, 1 );
   formGridLayout->addWidget( buttons, 2, 0, 1, 2 );
 
@@ -94,20 +94,20 @@ void MadLoginDialog::setUpGUI()
 void MadLoginDialog::setUsername(const QString &username)
 {
   bool found = false;
-  for ( int i = 0; i < comboUsername->count() && ! found ; i++ )
-      if( comboUsername->itemText( i ) == username  )
+  for ( int i = 0; i < cbUsername->count() && ! found ; i++ )
+      if( cbUsername->itemText( i ) == username  )
       {
-        comboUsername->setCurrentIndex( i );
+        cbUsername->setCurrentIndex( i );
         found = true;
       }
 
     if( ! found )
     {
-      int index = comboUsername->count();
+      int index = cbUsername->count();
       qDebug() << "Select username " << index;
-      comboUsername->addItem( username );
+      cbUsername->addItem( username );
 
-      comboUsername->setCurrentIndex( index );
+      cbUsername->setCurrentIndex( index );
     }
 
   // place the focus on the password field
@@ -115,16 +115,16 @@ void MadLoginDialog::setUsername(const QString &username)
 }
 
 
-void MadLoginDialog::setPassword(QString &password)
+void MadLoginDialog::setPassword(QString &thePassword)
 {
-    editPassword->setText( password );
+    editPassword->setText( thePassword );
 }
 
 void MadLoginDialog::slotAcceptUserLogin()
 {
-    QString username = comboUsername->currentText();
+    QString username = cbUsername->currentText();
     QString password = editPassword->text();
-    int     index    = comboUsername->currentIndex();
+    int     index    = cbUsername->currentIndex();
 
     emit acceptLogin( username,  // current username
                       password,  // current password
@@ -137,5 +137,5 @@ void MadLoginDialog::slotAcceptUserLogin()
 
 void MadLoginDialog::setUsernamesList(const QStringList &usernames)
 {
-    comboUsername->addItems( usernames );
+    cbUsername->addItems( usernames );
 }
