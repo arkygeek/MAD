@@ -39,6 +39,8 @@ set ( MacsurAdapter_HDRS
         lib/dataclassification/statevars/madsvsurfacefluxes.h
         gui/madtextdisplayform.h
         gui/maddataclassification.h
+        gui/madlogindialog.h
+        gui/madvariablemanager.h
         )
 
 set ( MacsurAdapter_SRCS
@@ -66,12 +68,19 @@ set ( MacsurAdapter_SRCS
         gui/maddataclassification.cpp
         gui/madtextdisplayform.cpp
         gui/maddataclassification.cpp
+        gui/madlogindialog.cpp
+        gui/madvariablemanager.cpp
+
+
+
+
         )
 
 set ( MacsurAdapter_UIS
         madmainwindowbase.ui
         gui/maddataclassificationbase.ui
         gui/madtextdisplayformbase.ui
+        gui/madvariablemanagerbase.ui
         )
 QT4_WRAP_UI(UIS ${MacsurAdapter_UIS})
 
@@ -84,6 +93,8 @@ set ( MacsurAdapter_MOCS
         madmainwindow.h
         gui/maddataclassification.h
         gui/madtextdisplayform.h
+        gui/madvariablemanager.h
+        gui/madlogindialog.h
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 
@@ -103,5 +114,6 @@ target_link_libraries (
                         ${QT_QTGUI_LIBRARY}
                         ${QT_QTXML_LIBRARY}
                         ${QT_QTWEBKIT_LIBRARY}
+                        ${QT_QXT_LIBRARY}
                       )
 
