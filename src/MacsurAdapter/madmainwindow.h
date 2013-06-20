@@ -25,6 +25,7 @@
 
 //Qt includes
 #include <QModelIndex>
+#include <QxtCsvModel>
 
 
 //Local includes
@@ -72,7 +73,7 @@ private:
     MadTextDisplayForm *mpMadTextDisplayForm;
 
     QString mModelText;
-
+    QxtCsvModel *pCsvModel;
     QString mUserName;
 
     /**
@@ -80,6 +81,8 @@ private:
      * @param theFileToLoad
      */
     void loadTextFile(const QString &theFileToLoad);
+    void loadCsvFile(const QString &theFileToLoad);
+
     void loadHtmlFile(const QString &theFileToLoad);
 
   public slots:
@@ -135,6 +138,7 @@ private:
     void on_pbLogin_clicked();
     void slotAcceptUserLogin (QString& theUsername,QString& thePassword);
     void on_pbAddVariable_clicked();
+    void on_comboBox_currentIndexChanged(const QString &theSelection);
 };
 
 #endif // MADMAINWINDOW_H

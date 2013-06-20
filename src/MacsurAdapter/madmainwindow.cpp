@@ -24,6 +24,8 @@
 #include <QTreeView>
 #include <QPixmap>
 #include <QGraphicsObject>
+#include <QxtCsvModel>
+#include <Qxt>
 
 //Local includes
 #include "madmainwindow.h"
@@ -35,17 +37,22 @@
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {
-    setupUi(this);
-    // the key to making the revision autoupdate is to use a feature in svn
-    // that will update keywords on commits.  to make this work, you need to:
-    //   svn propset svn:keywords "Revision" madmainwindow.cpp
-    // and then it works!  note that you need to 'touch' madmainform.cpp every
-    // commit for this to work.  This could be simply adding/removing a LF in
-    // this file (madmainform.cpp)
-    lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
+  setupUi(this);
+  // the key to making the revision autoupdate is to use a feature in svn
+  // that will update keywords on commits.  to make this work, you need to:
+  //   svn propset svn:keywords "Revision" madmainwindow.cpp
+  // and then it works!  note that you need to 'touch' madmainform.cpp every
+  // commit for this to work.  This could be simply adding/removing a LF in
+  // this file (madmainform.cpp)
+  lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
                         + QString("$Revision$").replace("$",""));
 
-    //connect ( pbLogin, SIGNAL ( valueChanged(int) ), this, SLOT ( slotAcceptUserLogin() ));
+  QxtCsvModel myQxtCsvModel;
+
+
+
+
+  //connect ( pbLogin, SIGNAL ( valueChanged(int) ), this, SLOT ( slotAcceptUserLogin() ));
 }
 
 QString MadMainWindow::modelText() const
@@ -147,6 +154,24 @@ void MadMainWindow::loadTextFile(const QString &theFileToLoad)
   plainTextEdit->clear();
   plainTextEdit->appendPlainText(line);
   plainTextEdit->setUndoRedoEnabled(false);
+}
+
+void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
+{
+  QString myFilename = "://agmip/agmip/" + theFileToLoad + ".csv";
+  QFile inputFile(myFilename);
+  inputFile.open(QIODevice::ReadOnly);
+  QTextStream in(&inputFile);
+  QString line = in.readAll();
+  inputFile.close();
+
+  pCsvModel = new QxtCsvModel(this);
+  pCsvModel->setSource(myFilename, true);
+
+  tvVariables->setModel(pCsvModel);
+  //tedVariableTree->clear();
+  //tedVariableTree->setText(line);
+  //tedVariableTree->setUndoRedoEnabled(false);
 }
 
 void MadMainWindow::loadHtmlFile(const QString &theFileToLoad)
@@ -267,4 +292,12 @@ void MadMainWindow::slotAcceptUserLogin (QString &theUsername, QString &thePassw
 void MadMainWindow::on_pbAddVariable_clicked()
 {
     //TODO open a dialog to add and map a new variable
+}
+
+void MadMainWindow::on_comboBox_currentIndexChanged(const QString &theSelection)
+{
+  if (theSelection=="ICASA")
+  {
+    loadCsvFile("management_info");
+  }
 }

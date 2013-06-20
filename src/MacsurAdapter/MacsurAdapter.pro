@@ -5,6 +5,8 @@
 #-------------------------------------------------
 
 QT       +=  xml
+CONFIG   += qxt
+QXT      += core gui
 
 lessThan(QT_MAJOR_VERSION, 5): QT += webkit core gui
 

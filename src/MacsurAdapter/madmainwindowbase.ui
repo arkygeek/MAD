@@ -174,7 +174,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <layout class="QVBoxLayout" name="vLayout">
             <item>
              <widget class="QLabel" name="lblCurrentInventory">
@@ -267,7 +267,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
             </item>
            </layout>
           </widget>
-          <widget class="QWidget" name="">
+          <widget class="QWidget" name="layoutWidget">
            <layout class="QGridLayout" name="gridLayout_11">
             <item row="0" column="0">
              <widget class="QLabel" name="lblModelSpecs">
@@ -415,24 +415,18 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
           </property>
           <layout class="QGridLayout" name="gridLayout_10">
            <item row="0" column="0">
-            <widget class="QSplitter" name="splitter">
+            <widget class="QSplitter" name="splitter_3">
              <property name="orientation">
               <enum>Qt::Horizontal</enum>
              </property>
-             <widget class="QWidget" name="">
+             <widget class="QWidget" name="layoutWidget">
               <layout class="QGridLayout" name="gridLayout_9">
-               <item row="0" column="0">
-                <widget class="QLabel" name="lblVariableTree">
+               <item row="2" column="1">
+                <widget class="QPushButton" name="pbAddVariable">
                  <property name="text">
-                  <string>Variable Tree</string>
-                 </property>
-                 <property name="buddy">
-                  <cstring>tedVariableTree</cstring>
+                  <string>Add/Map Variable</string>
                  </property>
                 </widget>
-               </item>
-               <item row="1" column="0" colspan="2">
-                <widget class="QTextEdit" name="tedVariableTree"/>
                </item>
                <item row="2" column="0">
                 <widget class="QComboBox" name="comboBox">
@@ -468,12 +462,15 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
                  </item>
                 </widget>
                </item>
-               <item row="2" column="1">
-                <widget class="QPushButton" name="pbAddVariable">
+               <item row="0" column="0">
+                <widget class="QLabel" name="lblVariableTree">
                  <property name="text">
-                  <string>Add/Map Variable</string>
+                  <string>Variable Tree</string>
                  </property>
                 </widget>
+               </item>
+               <item row="1" column="0" colspan="2">
+                <widget class="QTableView" name="tvVariables"/>
                </item>
               </layout>
              </widget>
@@ -490,7 +487,13 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
                 </widget>
                </item>
                <item row="1" column="0" colspan="2">
-                <widget class="QTextEdit" name="tedVariableMapping"/>
+                <widget class="QSplitter" name="splitter">
+                 <property name="orientation">
+                  <enum>Qt::Vertical</enum>
+                 </property>
+                 <widget class="QTreeView" name="treeViewVariables"/>
+                 <widget class="QTextEdit" name="tedVariableMapping"/>
+                </widget>
                </item>
                <item row="2" column="0">
                 <widget class="QComboBox" name="comboBox_2">

@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madvariablemanager.cpp created: 19/06/2013                                    *
- *   Class info: MadVariableManager                                               *
+ *   File:  madvariablemanager.cpp created: 19/06/2013                     *
+ *   Class info: MadVariableManager                                        *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,6 +19,10 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
+// Qt includes
+#include <QxtCsvModel>
+
+// Local includes
 #include "madvariablemanager.h"
 #include "ui_madvariablemanagerbase.h"
 
@@ -33,3 +37,4 @@ MadVariableManager::~MadVariableManager()
 {
   delete ui;
 }
+//QxtCsvModel
