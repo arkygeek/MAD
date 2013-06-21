@@ -156,24 +156,6 @@ void MadMainWindow::loadTextFile(const QString &theFileToLoad)
   plainTextEdit->setUndoRedoEnabled(false);
 }
 
-void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
-{
-  QString myFilename = "://agmip/agmip/" + theFileToLoad + ".csv";
-  QFile inputFile(myFilename);
-  inputFile.open(QIODevice::ReadOnly);
-  QTextStream in(&inputFile);
-  QString line = in.readAll();
-  inputFile.close();
-
-  pCsvModel = new QxtCsvModel(this);
-  pCsvModel->setSource(myFilename, true);
-
-  tvVariables->setModel(pCsvModel);
-  //tedVariableTree->clear();
-  //tedVariableTree->setText(line);
-  //tedVariableTree->setUndoRedoEnabled(false);
-}
-
 void MadMainWindow::loadHtmlFile(const QString &theFileToLoad)
 {
   QString myFilename = "://" + theFileToLoad + ".html";
@@ -285,7 +267,6 @@ void MadMainWindow::setUserName(const QString &theUserName)
 void MadMainWindow::slotAcceptUserLogin (QString &theUsername, QString &thePassword)
 {
   // accept the user login details and update label
-
   lblLoginStatus->setText(theUsername);
 }
 
@@ -300,4 +281,22 @@ void MadMainWindow::on_comboBox_currentIndexChanged(const QString &theSelection)
   {
     loadCsvFile("management_info");
   }
+}
+
+void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
+{
+  QString myFilename = "://agmip/agmip/" + theFileToLoad + ".csv";
+  QFile inputFile(myFilename);
+  inputFile.open(QIODevice::ReadOnly);
+  QTextStream in(&inputFile);
+  QString line = in.readAll();
+  inputFile.close();
+
+  pCsvModel = new QxtCsvModel(this);
+  pCsvModel->setSource(myFilename, true);
+
+  tvVariables->setModel(pCsvModel);
+  //tedVariableTree->clear();
+  //tedVariableTree->setText(line);
+  //tedVariableTree->setUndoRedoEnabled(false);
 }

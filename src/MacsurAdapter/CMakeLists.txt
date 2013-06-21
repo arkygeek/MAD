@@ -15,6 +15,9 @@ include_directories (
         ${QT_QTXML_INCLUDE_DIR}
         ${QT_QTWEBKIT_INCLUDE_DIR}
         )
+# The following line will add additional finders to CMake without the need to be placed in the CMake install path
+LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
+
 set ( MacsurAdapter_HDRS
         lib/madmodel.h
         lib/mad.h
