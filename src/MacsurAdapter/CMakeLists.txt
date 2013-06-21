@@ -2,6 +2,13 @@ project( MacsurAdapter )
 cmake_minimum_required( VERSION 2.6 )
 set ( CMAKE_BUILD_TYPE Release )
 set ( QT_USE_QTWEBKIT TRUE )
+
+# The following line will add additional finders to CMake without the need to be placed in the CMake install path
+LIST (APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
+SET(QXT_FIND_COMPONENTS QxtCore, QxtGui)
+SET(QXT_USE_QXTCORE TRUE)
+FIND_PACKAGE(Qxt REQUIRED)
+
 add_definitions ( -Wall )
 find_package ( Qt4 REQUIRED )
 include ( ${QT_USE_FILE} )
@@ -15,8 +22,6 @@ include_directories (
         ${QT_QTXML_INCLUDE_DIR}
         ${QT_QTWEBKIT_INCLUDE_DIR}
         )
-# The following line will add additional finders to CMake without the need to be placed in the CMake install path
-LIST(APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
 
 set ( MacsurAdapter_HDRS
         lib/madmodel.h
@@ -73,10 +78,6 @@ set ( MacsurAdapter_SRCS
         gui/maddataclassification.cpp
         gui/madlogindialog.cpp
         gui/madvariablemanager.cpp
-
-
-
-
         )
 
 set ( MacsurAdapter_UIS
@@ -117,6 +118,5 @@ target_link_libraries (
                         ${QT_QTGUI_LIBRARY}
                         ${QT_QTXML_LIBRARY}
                         ${QT_QTWEBKIT_LIBRARY}
-                        ${QT_QXT_LIBRARY}
                       )
 
