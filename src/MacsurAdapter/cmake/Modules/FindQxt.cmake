@@ -56,11 +56,11 @@ SET(QXT_QXTQSQL_DEPENDSON QxtCore)
 SET(QXT_QXTBERKELEY_DEPENDSON QxtCore)
 
 FIND_PATH(QXT_DIR libqxt.pro Qxt/include/QxtCore/Qxt)
-FIND_PATH(QXT_BINARY_DIR
-    NAMES QxtCore.dll QxtCored.dll
-    PATHS
-    ${QXT_DIR}/bin
-    ${QXT_DIR}/Bin
+FIND_PATH(QXT_BINARY_DIR 
+    NAMES QxtCore.dll QxtCored.dll 
+    PATHS 
+    ${QXT_DIR}/bin  
+    ${QXT_DIR}/Bin 
     NO_DEFAULT_PATH
 )
 
@@ -71,12 +71,12 @@ FOREACH(mod ${QXT_MODULES})
     FIND_PATH(QXT_${U_MOD}_INCLUDE_DIR ${mod}
         PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod}
         PATHS
-        ~/Library/Frameworks/
-        /Library/Frameworks/
-        /sw/
-        /usr/local/
+        ~/Library/Frameworks
+        /Library/Frameworks
+        /sw
+        /usr/local
         /usr
-        /opt/local/
+        /opt/local
         /opt/csw
         /opt
         "C:\\"
@@ -168,4 +168,3 @@ ENDFOREACH(module)
 MESSAGE(STATUS "Found Qxt Libraries:${QXT_FOUND_MODULES}")
 
 MESSAGE(STATUS "Include directories:${QXT_INCLUDE_DIRS}")
-

@@ -26,6 +26,8 @@
 //Qt includes
 #include <QModelIndex>
 #include <QxtCsvModel>
+#include <QSortFilterProxyModel>
+
 
 
 //Local includes
@@ -74,6 +76,8 @@ private:
 
     QString mModelText;
     QxtCsvModel *pCsvModel;
+    QSortFilterProxyModel *pFilterModel;
+
     QString mUserName;
 
     /**

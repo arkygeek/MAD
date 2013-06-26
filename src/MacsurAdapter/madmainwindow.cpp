@@ -26,6 +26,8 @@
 #include <QGraphicsObject>
 #include <QxtCsvModel>
 #include <Qxt>
+#include <QSortFilterProxyModel>
+
 
 //Local includes
 #include "madmainwindow.h"
@@ -295,7 +297,56 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   pCsvModel = new QxtCsvModel(this);
   pCsvModel->setSource(myFilename, true);
 
-  tvVariables->setModel(pCsvModel);
+  //pCsvModel->
+  tblvVariables->setModel(pCsvModel);
+  int myIndexRow = 0;
+  int myIndexColumn = 12;
+  //QModelIndex pCsvModel->(myIndexRow, myIndexColumn);
+
+  //need to sort the data using columns 12,13,14,15 to put into tree
+
+  //QModelIndex  Dataset,Subset,Group,Sub-group
+
+  QList<QString> myDataSetList;
+  QList<QString> mySubSetList;
+  QList<QString> myGroupList;
+  QList<QString> mySubGroupList;
+
+  /*int myRowCount = pCsvModel->rowCount();
+  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
+  {
+    // below verifies proper row count is happening - just for testing
+    QString myConvertedValue = QString::number(myLoopCounter);
+    tedVariableMapping->append(myConvertedValue);
+
+    myDataSetList.append(pCsvModel->text(myLoopCounter, 11));
+    mySubSetList.append(pCsvModel->text(myLoopCounter, 12));
+    myGroupList.append(pCsvModel->text(myLoopCounter, 13));
+    mySubGroupList.append(pCsvModel->text(myLoopCounter, 14));
+    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 11));
+    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
+    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
+    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
+
+  }
+  */
+
+  //treeViewVariables->setModel(pCsvModel);
+  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
+
+
+
+  pFilterModel->setSourceModel(pCsvModel);
+
+  QTreeView *pFilteredView = new QTreeView;
+  pFilterModel->setFilterKeyColumn(11);
+  pFilterModel->sort(11);
+  pFilterModel->removeColumns(1, 10);
+
+  treeViewVariables->setModel(pFilterModel);
+
+
+
   //tedVariableTree->clear();
   //tedVariableTree->setText(line);
   //tedVariableTree->setUndoRedoEnabled(false);
