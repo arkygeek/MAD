@@ -39,7 +39,7 @@
 ##############
 
 ###### setup
-SET(QXT_MODULES QxtWidgets QxtWeb QxtZeroConf QxtNetwork QxtSql Qxtbdb QxtCore)
+SET(QXT_MODULES QxtWidgets QxtWeb QxtZeroConf QxtNetwork QxtSql Qxtbdb QxtCore QxtGui)
 SET(QXT_FOUND_MODULES)
 FOREACH(mod ${QXT_MODULES})
     STRING(TOUPPER ${mod} U_MOD)
@@ -49,6 +49,7 @@ FOREACH(mod ${QXT_MODULES})
     SET(QXT_FOUND_${U_MOD} FALSE)
 ENDFOREACH(mod)
 SET(QXT_QXTWIDGETS_DEPENDSON QxtCore)
+SET(QXT_QXTGUI_DEPENDSON QxtCore)
 SET(QXT_QXTWEB_DEPENDSON QxtCore QxtNetwork)
 SET(QXT_QXTZEROCONF_DEPENDSON QxtCore QxtNetwork)
 SET(QXT_QXTNETWORK_DEPENDSON QxtCore)
@@ -58,7 +59,7 @@ SET(QXT_QXTBDB_DEPENDSON QxtCore)
 FOREACH(mod ${QXT_MODULES})
     STRING(TOUPPER ${mod} U_MOD)
     FIND_PATH(QXT_${U_MOD}_INCLUDE_DIR ${mod}
-        PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod}
+        PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod} include/qxt/${mod} qxt/include/${mod}
         PATHS
         ~/Library/Frameworks/
         /Library/Frameworks/
@@ -74,10 +75,11 @@ FOREACH(mod ${QXT_MODULES})
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(QXT_${U_MOD}_LIB_RELEASE NAME ${mod}
-        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib
+        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib qxt/lib64 qxt/lib
         PATHS
         ~/Library/Frameworks/
         /Library/Frameworks/
+        /usr/lib/i386-linux-gnu/
         /sw/
         /usr/local/
         /usr/
@@ -90,10 +92,11 @@ FOREACH(mod ${QXT_MODULES})
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(QXT_${U_MOD}_LIB_DEBUG NAME ${mod}
-        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib
+        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib qxt/lib64 qxt/lib
         PATHS
         ~/Library/Frameworks/
         /Library/Frameworks/
+        /usr/lib/i386-linux-gnu/
         /sw/
         /usr/local/
         /usr/

@@ -86,4 +86,5 @@ OTHER_FILES += \
     resources/tradem.txt \
     README.txt \
     CMakeLists.txt \
-    notes.txt
+    notes.txt \
+    CMake/Modules/FindQxt.cmake

@@ -322,14 +322,14 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
     QString myConvertedValue = QString::number(myLoopCounter);
     tedVariableMapping->append(myConvertedValue);
 
-    myDataSetList.append(pCsvModel->text(myLoopCounter, 11));
-    mySubSetList.append(pCsvModel->text(myLoopCounter, 12));
-    myGroupList.append(pCsvModel->text(myLoopCounter, 13));
-    mySubGroupList.append(pCsvModel->text(myLoopCounter, 14));
-    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 11));
-    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
-    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
-    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
+    //myDataSetList.append(pCsvModel->text(myLoopCounter, 11));
+    //mySubSetList.append(pCsvModel->text(myLoopCounter, 12));
+    //myGroupList.append(pCsvModel->text(myLoopCounter, 13));
+    //mySubGroupList.append(pCsvModel->text(myLoopCounter, 14));
+    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 11));
+    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
+    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
+    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
   }
 
   // error treeWidget->addTopLevelItems(myDataSetList);
