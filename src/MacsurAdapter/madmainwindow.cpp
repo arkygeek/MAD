@@ -312,7 +312,10 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   QList<QString> myGroupList;
   QList<QString> mySubGroupList;
 
-  /*int myRowCount = pCsvModel->rowCount();
+  QTreeWidget myTree;
+  myTree.setColumnCount(5);
+
+  int myRowCount = pCsvModel->rowCount();
   for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
   {
     // below verifies proper row count is happening - just for testing
@@ -327,13 +330,14 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
     tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
     tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
     tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
-
   }
-  */
+
+  // error treeWidget->addTopLevelItems(myDataSetList);
 
   //treeViewVariables->setModel(pCsvModel);
-  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
 
+
+  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
 
 
   pFilterModel->setSourceModel(pCsvModel);
@@ -341,7 +345,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   QTreeView *pFilteredView = new QTreeView;
   pFilterModel->setFilterKeyColumn(11);
   pFilterModel->sort(11);
-  pFilterModel->removeColumns(1, 10);
+  //pFilterModel->removeColumns(1, 10);
 
   treeViewVariables->setModel(pFilterModel);
 

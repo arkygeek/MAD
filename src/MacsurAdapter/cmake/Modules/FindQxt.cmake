@@ -39,7 +39,7 @@
 ##############
 
 ###### setup
-SET(QXT_MODULES QxtGui QxtWeb QxtZeroConf QxtNetwork QxtSql QxtBerkeley QxtCore)
+SET(QXT_MODULES QxtWidgets QxtWeb QxtZeroConf QxtNetwork QxtSql Qxtbdb QxtCore)
 SET(QXT_FOUND_MODULES)
 FOREACH(mod ${QXT_MODULES})
     STRING(TOUPPER ${mod} U_MOD)
@@ -48,71 +48,61 @@ FOREACH(mod ${QXT_MODULES})
     SET(QXT_${U_MOD}_LIB_RELEASE NOTFOUND)
     SET(QXT_FOUND_${U_MOD} FALSE)
 ENDFOREACH(mod)
-SET(QXT_QXTGUI_DEPENDSON QxtCore)
+SET(QXT_QXTWIDGETS_DEPENDSON QxtCore)
 SET(QXT_QXTWEB_DEPENDSON QxtCore QxtNetwork)
 SET(QXT_QXTZEROCONF_DEPENDSON QxtCore QxtNetwork)
 SET(QXT_QXTNETWORK_DEPENDSON QxtCore)
 SET(QXT_QXTQSQL_DEPENDSON QxtCore)
-SET(QXT_QXTBERKELEY_DEPENDSON QxtCore)
-
-FIND_PATH(QXT_DIR libqxt.pro Qxt/include/QxtCore/Qxt)
-FIND_PATH(QXT_BINARY_DIR 
-    NAMES QxtCore.dll QxtCored.dll 
-    PATHS 
-    ${QXT_DIR}/bin  
-    ${QXT_DIR}/Bin 
-    NO_DEFAULT_PATH
-)
-
-#SET(QXT_BINARY_DIR "${QXT_DIR}/bin" CACHE PATH "${QXT_DIR}/bin")
+SET(QXT_QXTBDB_DEPENDSON QxtCore)
 
 FOREACH(mod ${QXT_MODULES})
     STRING(TOUPPER ${mod} U_MOD)
     FIND_PATH(QXT_${U_MOD}_INCLUDE_DIR ${mod}
         PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod}
         PATHS
-        ~/Library/Frameworks
-        /Library/Frameworks
-        /sw
-        /usr/local
-        /usr
-        /opt/local
-        /opt/csw
-        /opt
+        ~/Library/Frameworks/
+        /Library/Frameworks/
+        /sw/
+        /usr/local/
+        /usr/
+        /opt/local/
+        /opt/csw/
+        /opt/
         "C:\\"
         "C:\\Program Files\\"
         "C:\\Program Files(x86)\\"
-        ${QXT_DIR}
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(QXT_${U_MOD}_LIB_RELEASE NAME ${mod}
         PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib
         PATHS
-        /sw
-        /usr/local
-        /usr
-        /opt/local
-        /opt/csw
-        /opt
+        ~/Library/Frameworks/
+        /Library/Frameworks/
+        /sw/
+        /usr/local/
+        /usr/
+        /opt/local/
+        /opt/csw/
+        /opt/
         "C:\\"
-        "C:\\Program Files"
-        "C:\\Program Files(x86)"
-        ${QXT_DIR}
+        "C:\\Program Files\\"
+        "C:\\Program Files(x86)\\"
         NO_DEFAULT_PATH
     )
-    FIND_LIBRARY(QXT_${U_MOD}_LIB_DEBUG NAME ${mod}d
+    FIND_LIBRARY(QXT_${U_MOD}_LIB_DEBUG NAME ${mod}
         PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib
         PATHS
-        /sw
-        /usr/local
-        /usr
-        /opt/local
-        /opt/csw
-        /opt
+        ~/Library/Frameworks/
+        /Library/Frameworks/
+        /sw/
+        /usr/local/
+        /usr/
+        /opt/local/
+        /opt/csw/
+        /opt/
         "C:\\"
-        "C:\\Program Files"
-        "C:\\Program Files(x86)"
-        ${QXT_DIR}
+        "C:\\Program Files\\"
+        "C:\\Program Files(x86)\\"
         NO_DEFAULT_PATH
     )
     IF (QXT_${U_MOD}_LIB_RELEASE)
@@ -155,16 +145,15 @@ FOREACH( module ${QXT_MODULES} )
             ADD_DEFINITIONS(-DQXT_${qxt_module_def}_LIB)
             SET(QXT_INCLUDE_DIRS ${QXT_INCLUDE_DIRS} ${QXT_${U_MOD}_INCLUDE_DIR})
             INCLUDE_DIRECTORIES(${QXT_${U_MOD}_INCLUDE_DIR})
-            SET(QXT_LIBRARIES ${QXT_LIBRARIES};optimized;${QXT_${U_MOD}_LIB_RELEASE};debug;${QXT_${U_MOD}_LIB_DEBUG})
+            SET(QXT_LIBRARIES ${QXT_LIBRARIES} ${QXT_${U_MOD}_LIB_RELEASE})
         ELSE(QXT_FOUND_${U_MOD})
             MESSAGE("Could not find Qxt Module ${module}")
             RETURN()
         ENDIF(QXT_FOUND_${U_MOD})
-        FOREACH(dep QXT_${U_MOD}_DEPENDSON)
-            SET(QXT_DEPENDS_${dep} TRUE)
+        FOREACH(dep ${QXT_${U_MOD}_DEPENDSON})
+            STRING(TOUPPER ${dep} U_DEP)
+            SET(QXT_DEPENDS_${U_DEP} TRUE)
         ENDFOREACH(dep)
     ENDIF(QXT_USE_${U_MOD} OR QXT_DEPENDS_${U_MOD})
 ENDFOREACH(module)
 MESSAGE(STATUS "Found Qxt Libraries:${QXT_FOUND_MODULES}")
-
-MESSAGE(STATUS "Include directories:${QXT_INCLUDE_DIRS}")

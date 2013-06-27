@@ -1,17 +1,21 @@
 project( MacsurAdapter )
 cmake_minimum_required( VERSION 2.6 )
+# The following line will add additional finders to CMake without the need to be placed in the CMake install path
+LIST (APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
+
 set ( CMAKE_BUILD_TYPE Release )
 set ( QT_USE_QTWEBKIT TRUE )
 
-# The following line will add additional finders to CMake without the need to be placed in the CMake install path
-#LIST (APPEND CMAKE_MODULE_PATH ${PROJECT_SOURCE_DIR}/cmake/Modules)
-#SET(QXT_FIND_COMPONENTS QxtCore, QxtGui)
-#SET(QXT_USE_QXTCORE TRUE)
-#FIND_PACKAGE(Qxt REQUIRED)
-
 add_definitions ( -Wall )
 find_package ( Qt4 REQUIRED )
+
+find_package ( Qxt REQUIRED )
+set ( QXT_FIND_COMPONENTS QxtCore)
+set ( QXT_USE_QXTCORE TRUE )
+set ( QXT_USE_QXTWIDGETS FALSE )
+
 include ( ${QT_USE_FILE} )
+
 include_directories (
         ${CMAKE_SOURCE_DIR}
         ${CMAKE_CURRENT_BINARY_DIR}
@@ -21,7 +25,7 @@ include_directories (
         ${QT_QTGUI_INCLUDE_DIR}
         ${QT_QTXML_INCLUDE_DIR}
         ${QT_QTWEBKIT_INCLUDE_DIR}
-        /usr/local/Qxt/include/QxtCore
+        ${QXT_QXTCORE_INCLUDE_DIR}
         )
 
 set ( MacsurAdapter_HDRS
@@ -100,7 +104,6 @@ set ( MacsurAdapter_MOCS
         gui/madtextdisplayform.h
         gui/madvariablemanager.h
         gui/madlogindialog.h
-        /usr/local/Qxt/include/QxtCore
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 
@@ -120,6 +123,6 @@ target_link_libraries (
                         ${QT_QTGUI_LIBRARY}
                         ${QT_QTXML_LIBRARY}
                         ${QT_QTWEBKIT_LIBRARY}
-                        ${QT_QXTCORE_LIBRARY}
+                        ${QXT_QXTCORE_LIBRARY}
                       )
 
