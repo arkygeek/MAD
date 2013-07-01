@@ -75,7 +75,7 @@ FOREACH(mod ${QXT_MODULES})
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(QXT_${U_MOD}_LIB_RELEASE NAME ${mod}
-        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib qxt/lib64 qxt/lib
+        PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod} include/qxt/${mod} qxt/include/${mod}
         PATHS
         ~/Library/Frameworks/
         /Library/Frameworks/
@@ -92,7 +92,7 @@ FOREACH(mod ${QXT_MODULES})
         NO_DEFAULT_PATH
     )
     FIND_LIBRARY(QXT_${U_MOD}_LIB_DEBUG NAME ${mod}
-        PATH_SUFFIXES Qxt/lib64 Qxt/lib lib64 lib qxt/lib64 qxt/lib
+        PATH_SUFFIXES ${mod} include/${mod} Qxt/include/${mod} include/Qxt/${mod} include/qxt/${mod} qxt/include/${mod}
         PATHS
         ~/Library/Frameworks/
         /Library/Frameworks/

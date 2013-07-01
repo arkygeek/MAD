@@ -9,11 +9,6 @@ set ( QT_USE_QTWEBKIT TRUE )
 add_definitions ( -Wall )
 find_package ( Qt4 REQUIRED )
 
-find_package ( Qxt REQUIRED )
-set ( QXT_FIND_COMPONENTS QxtCore)
-set ( QXT_USE_QXTCORE TRUE )
-set ( QXT_USE_QXTWIDGETS FALSE )
-
 include ( ${QT_USE_FILE} )
 
 include_directories (
@@ -25,7 +20,6 @@ include_directories (
         ${QT_QTGUI_INCLUDE_DIR}
         ${QT_QTXML_INCLUDE_DIR}
         ${QT_QTWEBKIT_INCLUDE_DIR}
-        ${QXT_QXTCORE_INCLUDE_DIR}
         )
 
 set ( MacsurAdapter_HDRS
@@ -123,6 +117,5 @@ target_link_libraries (
                         ${QT_QTGUI_LIBRARY}
                         ${QT_QTXML_LIBRARY}
                         ${QT_QTWEBKIT_LIBRARY}
-                        ${QXT_QXTCORE_LIBRARY}
                       )
 

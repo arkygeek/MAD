@@ -25,13 +25,15 @@
 
 //Qt includes
 #include <QModelIndex>
-#include <QxtCsvModel>
 #include <QSortFilterProxyModel>
-
-
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
+#include <QDebug>
+#include <QString>
+#include <QStandardItemModel>
 
 //Local includes
-
 #include "ui_madmainwindowbase.h"
 #include "gui/maddataclassification.h" //needed if non-modal
 #include "gui/madtextdisplayform.h" //needed if non-modal
@@ -75,10 +77,17 @@ private:
     MadTextDisplayForm *mpMadTextDisplayForm;
 
     QString mModelText;
-    QxtCsvModel *pCsvModel;
+    //QxtCsvModel *pCsvModel;
     QSortFilterProxyModel *pFilterModel;
 
     QString mUserName;
+
+    //
+    // the CSV stuff
+    //
+    QList<QStringList> csv;
+    QStandardItemModel *mpModel;
+    QList<QStandardItem*> mStandardItemList;
 
     /**
      * @brief loadTextFile to display in the 'about' text display on main page
@@ -100,6 +109,9 @@ private:
     void changeEvent(QEvent *e);
 
   private slots:
+
+    void checkString(QString &theTemporary, QChar theCharacter = 0);
+
 
     /**
      * @brief on_pbClassification_clicked

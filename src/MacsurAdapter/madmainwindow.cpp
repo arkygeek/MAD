@@ -24,10 +24,7 @@
 #include <QTreeView>
 #include <QPixmap>
 #include <QGraphicsObject>
-#include <QxtCsvModel>
-#include <Qxt>
 #include <QSortFilterProxyModel>
-
 
 //Local includes
 #include "madmainwindow.h"
@@ -49,7 +46,7 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
   lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
                         + QString("$Revision$").replace("$",""));
 
-  QxtCsvModel myQxtCsvModel;
+  //QxtCsvModel myQxtCsvModel;
 
 
 
@@ -287,71 +284,215 @@ void MadMainWindow::on_comboBox_currentIndexChanged(const QString &theSelection)
 
 void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
 {
-  QString myFilename = "://agmip/agmip/" + theFileToLoad + ".csv";
-  QFile inputFile(myFilename);
-  inputFile.open(QIODevice::ReadOnly);
-  QTextStream in(&inputFile);
-  QString line = in.readAll();
-  inputFile.close();
+  mpModel = new QStandardItemModel(this);
+  tblvVariables->setModel(mpModel);
+  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
 
-  pCsvModel = new QxtCsvModel(this);
-  pCsvModel->setSource(myFilename, true);
-
-  //pCsvModel->
-  tblvVariables->setModel(pCsvModel);
-  int myIndexRow = 0;
-  int myIndexColumn = 12;
-  //QModelIndex pCsvModel->(myIndexRow, myIndexColumn);
-
-  //need to sort the data using columns 12,13,14,15 to put into tree
-
-  //QModelIndex  Dataset,Subset,Group,Sub-group
-
-  QList<QString> myDataSetList;
-  QList<QString> mySubSetList;
-  QList<QString> myGroupList;
-  QList<QString> mySubGroupList;
-
-  QTreeWidget myTree;
-  myTree.setColumnCount(5);
-
-  int myRowCount = pCsvModel->rowCount();
-  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
+  QFile myFile (myFileName);
+  if (myFile.open(QIODevice::ReadOnly))
   {
-    // below verifies proper row count is happening - just for testing
-    QString myConvertedValue = QString::number(myLoopCounter);
-    tedVariableMapping->append(myConvertedValue);
+    QString data = myFile.readAll();
 
-    //myDataSetList.append(pCsvModel->text(myLoopCounter, 11));
-    //mySubSetList.append(pCsvModel->text(myLoopCounter, 12));
-    //myGroupList.append(pCsvModel->text(myLoopCounter, 13));
-    //mySubGroupList.append(pCsvModel->text(myLoopCounter, 14));
-    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 11));
-    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
-    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
-    //tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
-  }
+    //remove all Carriage Returns
+    data.remove( QRegExp("\r") );
 
-  // error treeWidget->addTopLevelItems(myDataSetList);
+    QString myTemp;
+    QChar myCharacter;
+    QTextStream myTextStream(&data);
 
-  //treeViewVariables->setModel(pCsvModel);
+    while (!myTextStream.atEnd())
+    {
+      myTextStream >> myCharacter;
+      if (myCharacter == ',')
+      {
+        checkString(myTemp, myCharacter);
+      }
 
+      else if (myCharacter == '\n')
+      {
+        checkString(myTemp, myCharacter);
+      }
 
-  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
+      else if (myTextStream.atEnd())
+      {
+        myTemp.append(myCharacter);
+        checkString(myTemp);
+      }
 
-
-  pFilterModel->setSourceModel(pCsvModel);
-
-  QTreeView *pFilteredView = new QTreeView;
-  pFilterModel->setFilterKeyColumn(11);
-  pFilterModel->sort(11);
-  //pFilterModel->removeColumns(1, 10);
-
-  treeViewVariables->setModel(pFilterModel);
-
-
-
-  //tedVariableTree->clear();
-  //tedVariableTree->setText(line);
-  //tedVariableTree->setUndoRedoEnabled(false);
+      else
+      {
+        myTemp.append(myCharacter);
+      } // end else
+    } // end while
+  } // end if
 }
+
+void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
+{
+    if(theTemporary.count("\"")%2 == 0)
+    {
+        //if (theTemp.size() == 0 && theCharacter != ',') //problem with line endings
+        //    return;
+        if (theTemporary.startsWith( QChar('\"')) && theTemporary.endsWith( QChar('\"') ) )
+        {
+             theTemporary.remove( QRegExp("^\"") );
+             theTemporary.remove( QRegExp("\"$") );
+        }
+        //TODO this might fail if there are 4 or more reapeating double quotes
+        theTemporary.replace("\"\"", "\"");
+        QStandardItem *mypItem = new QStandardItem(theTemporary);
+        mStandardItemList.append(mypItem);
+        if (theCharacter != QChar(',')) {
+            mpModel->appendRow(mStandardItemList);
+            mStandardItemList.clear();
+        }
+        theTemporary.clear();
+    } else {
+        theTemporary.append(theCharacter);
+    }
+}
+
+//void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
+//{
+//  QString myFilename = "://agmip/agmip/" + theFileToLoad + ".csv";
+//  QFile inputFile(myFilename);
+//  inputFile.open(QIODevice::ReadOnly);
+//  QTextStream in(&inputFile);
+//  QString line = in.readAll();
+//  inputFile.close();
+
+//  //QList myCsvHeader;
+
+
+
+//  pCsvModel = new QxtCsvModel(this);
+//  pCsvModel->setSource(myFilename, true);
+
+//  //pCsvModel->
+//  tblvVariables->setModel(pCsvModel);
+//  int myIndexRow = 0;
+//  int myIndexColumn = 12;
+//  //QModelIndex pCsvModel->(myIndexRow, myIndexColumn);
+
+//  //need to sort the data using columns 12,13,14,15 to put into tree
+
+//  //QModelIndex  Dataset,Subset,Group,Sub-group
+
+//  QList<QString> myDataSetList;
+//  QList<QString> mySubSetList;
+//  QList<QString> myGroupList;
+//  QList<QString> mySubGroupList;
+
+//  QTreeWidget myTree;
+//  myTree.setColumnCount(5);
+
+//  int myRowCount = pCsvModel->rowCount();
+
+//  QString myDataSetHolder = pCsvModel->text(0, 11);
+//  QString mySubSetHolder = pCsvModel->text(0, 12);
+//  QString myGroupHolder = pCsvModel->text(0, 13);
+//  QString mySubGroupHolder = pCsvModel->text(0, 14);
+
+//  //QTreeWidgetItem myTreeItem;
+//  //treeWidget->setHeader(QHeaderView(pCsvModel->text( 0, 11)));
+//  //myTreeItem mySubSetHolder;
+//  //myTreeItem myGroupHolder;
+//  //myTreeItem mySubGroupHolder;
+
+
+//  // below verifies proper row count is happening - just for testing
+
+//  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
+//  {
+//    QString myConvertedValue = QString::number(myLoopCounter);
+//    tedVariableMapping->append(myConvertedValue);
+
+//    if (myDataSetHolder == pCsvModel->text(myLoopCounter, 11))
+//    {
+//      // the value is the same, do not make new parent entry
+//      tedVariableMapping->append("DataSet is the same, do not make new parent");
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new parent entry
+//      tedVariableMapping->append("DataSet is different, make new child");
+//      myDataSetHolder = pCsvModel->text(myLoopCounter, 11);
+//    }
+//    if (mySubSetHolder == pCsvModel->text(myLoopCounter, 12))
+//    {
+//      // the value is the same, do not make new child entry
+//      tedVariableMapping->append("  SubSet is the same, do not make new child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new child entry
+//      tedVariableMapping->append("  SubSet is different, make new child");
+//      mySubSetHolder = pCsvModel->text(myLoopCounter, 12);
+//    }
+//    if (myGroupHolder == pCsvModel->text(myLoopCounter, 13))
+//    {
+//      // the value is the same, do not make new grand child entry
+//      tedVariableMapping->append("    Group is the same, do not make new grand child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new grand child entry
+//      tedVariableMapping->append("    Group is different, make new grand child");
+//      myGroupHolder = pCsvModel->text(myLoopCounter, 13);
+//    }
+//    if (mySubGroupHolder == pCsvModel->text(myLoopCounter, 14))
+//    {
+//      // the value is the same, do not make new grand grand child entry
+//      tedVariableMapping->append("      SubGroup is the same, do not make new grand grand child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new grand grand child entry
+//      tedVariableMapping->append("      SubGroup is different, make new grand grand child");
+//      mySubGroupHolder = pCsvModel->text(myLoopCounter, 14);
+
+//    }
+
+
+//    myDataSetList.append(pCsvModel->text(myLoopCounter, 11));
+//    mySubSetList.append(pCsvModel->text(myLoopCounter, 12));
+//    myGroupList.append(pCsvModel->text(myLoopCounter, 13));
+//    mySubGroupList.append(pCsvModel->text(myLoopCounter, 14));
+
+
+
+//    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 11));
+//    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 12));
+//    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 13));
+//    tedVariableMapping->append(pCsvModel->text(myLoopCounter, 14));
+
+//  }
+
+
+
+//  // error treeWidget->addTopLevelItems(myDataSetList);
+
+//  treeViewVariables->setModel(pCsvModel);
+
+
+//  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
+
+
+//  pFilterModel->setSourceModel(pCsvModel);
+
+//  QTreeView *pFilteredView = new QTreeView;
+//  pFilterModel->setFilterKeyColumn(11);
+//  pFilterModel->sort(11);
+//  //pFilterModel->removeColumns(1, 10);
+
+//  treeViewVariables->setModel(pFilterModel);
+
+
+
+//  //tedVariableTree->clear();
+//  //tedVariableTree->setText(line);
+//  //tedVariableTree->setUndoRedoEnabled(false);
+//}

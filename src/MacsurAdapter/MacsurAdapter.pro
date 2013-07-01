@@ -6,7 +6,7 @@
 
 QT       +=  xml
 CONFIG   += qxt
-QXT      += core gui
+QXT      += core
 
 lessThan(QT_MAJOR_VERSION, 5): QT += webkit core gui
 

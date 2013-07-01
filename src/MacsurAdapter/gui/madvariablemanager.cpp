@@ -20,7 +20,6 @@
  ***************************************************************************/
 
 // Qt includes
-#include <QxtCsvModel>
 
 // Local includes
 #include "madvariablemanager.h"
@@ -37,4 +36,3 @@ MadVariableManager::~MadVariableManager()
 {
   delete ui;
 }
-//QxtCsvModel
