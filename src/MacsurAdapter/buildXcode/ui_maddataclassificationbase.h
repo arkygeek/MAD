@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'maddataclassificationbase.ui'
 **
-** Created: Mon Jun 3 17:38:45 2013
+** Created: Wed Jul 3 15:26:41 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -42,44 +42,32 @@ QT_BEGIN_NAMESPACE
 class Ui_MadDataClassification
 {
 public:
-    QGridLayout *gridLayout_28;
+    QGridLayout *gridLayout_10;
+    QLabel *lblRankOverall;
+    QLabel *lblDescription;
+    QLineEdit *leEmail;
+    QVBoxLayout *verticalLayoutLoadSave;
+    QPushButton *pbLoad;
+    QPushButton *pbSave;
+    QLabel *lblDataSetName;
+    QLineEdit *leDatasetName;
+    QLabel *lblUsername;
+    QLineEdit *leUsername;
+    QSpacerItem *verticalSpacerbottomLeft;
+    QLabel *lblMedalOverall;
+    QHBoxLayout *horizontalLayout;
+    QComboBox *cbDatasets;
+    QComboBox *cbRankedDatasets;
+    QComboBox *cbThemes;
+    QTextEdit *textEditBottom;
+    QLineEdit *leDescription;
+    QLabel *lblEmail;
     QSplitter *splitter;
     QTabWidget *tabWidgetDataClassification;
-    QWidget *tabCultivation;
-    QGridLayout *gridLayout_20;
-    QLabel *lblVariety;
-    QFrame *line_4;
-    QLabel *lblIrrigation;
-    QLabel *lblTillage;
-    QLabel *lblCultivationGoldMinVal;
-    QLabel *lblSowing;
-    QLabel *lblCultivationGoldMin;
-    QLabel *lblYield;
+    QWidget *tabManagement;
+    QGridLayout *gridLayout_9;
     QLabel *lblFertilisationRating;
-    QLabel *lblCultivationSilverMinVal;
-    QLabel *lblSowingRating;
-    QLabel *lblFertilisation;
-    QFrame *line_2;
-    QLabel *lblVarietyRating;
-    QLabel *lblSeedDensityRating;
-    QLabel *lblCultivationSilverMin;
-    QLabel *lblHarvest;
-    QLabel *lblCultivationPlatinumMinVal;
-    QLabel *lblYieldRating;
-    QLabel *lblIrrigationRating;
-    QLabel *lblCultivationBronzeMinVal;
-    QLabel *lblHarvestRating;
-    QLabel *lblCultivationBronzeMin;
-    QLabel *lblCultivationPlatinumMin;
-    QFrame *line;
-    QLabel *lblSeedDensity;
-    QLabel *lblCombinedTotal;
-    QLabel *lblCombined;
-    QHBoxLayout *horizontalLayoutCultivationRank;
-    QSpacerItem *horizontalSpacerCultivationRank;
-    QLabel *lblRankingCultivation;
-    QLabel *lblMedalCultivation;
-    QGroupBox *gbxCultivation;
+    QGroupBox *gbxManagement;
     QGridLayout *gridLayout;
     QCheckBox *chbxHarvest;
     QDoubleSpinBox *dsbVariety;
@@ -118,8 +106,40 @@ public:
     QCheckBox *chbxFertilisation;
     QSlider *hsldrYield;
     QDoubleSpinBox *dsbTillage;
+    QSpacerItem *verticalSpacer_2;
+    QFrame *line_4;
+    QLabel *lblVariety;
+    QLabel *lblVarietyRating;
+    QLabel *lblSowing;
+    QLabel *lblYieldRating;
     QLabel *lblTillageRating;
-    QSpacerItem *verticalSpacerCultivationLeft;
+    QLabel *lblHarvestRating;
+    QLabel *lblFertilisation;
+    QLabel *lblSowingRating;
+    QLabel *lblHarvest;
+    QLabel *lblCombinedTotal;
+    QLabel *lblCombined;
+    QLabel *lblYield;
+    QLabel *lblIrrigationRating;
+    QLabel *lblSeedDensity;
+    QLabel *lblSeedDensityRating;
+    QLabel *lblIrrigation;
+    QLabel *lblTillage;
+    QLabel *lblManagementPlatinumMin;
+    QLabel *lblManagementGoldMin;
+    QLabel *lblManagementSilverMin;
+    QLabel *lblManagementBronzeMin;
+    QLabel *lblManagementPlatinumMinVal;
+    QLabel *lblManagementGoldMinVal;
+    QLabel *lblManagementSilverMinVal;
+    QLabel *lblManagementBronzeMinVal;
+    QFrame *line;
+    QFrame *line_2;
+    QHBoxLayout *horizontalLayoutManagementRank;
+    QSpacerItem *horizontalSpacerManagementRank;
+    QLabel *lblRankingManagement;
+    QLabel *lblMedalManagement;
+    QSpacerItem *verticalSpacer_3;
     QWidget *tabPhenology;
     QGridLayout *gridLayout_2;
     QLabel *lblEarEmergencePhenology;
@@ -484,6 +504,8 @@ public:
     QLabel *lblSoilTempRatingWeather;
     QWidget *tabStateVars;
     QGridLayout *gridLayout_11;
+    QLabel *lblSVTotalPointsHeader;
+    QSpacerItem *verticalSpacer;
     QToolBox *toolBoxStateVars;
     QWidget *pageCrop;
     QGridLayout *gridLayout_14;
@@ -713,39 +735,128 @@ public:
     QDoubleSpinBox *dsbSVObservationsPestsOrDiseasesWeightPts;
     QDoubleSpinBox *dsbSVObservationsDamagesWeightPts;
     QLabel *lblExampleSVObservations;
+    QWidget *pageElevation;
+    QLabel *lblSVTotalPoints;
+    QLabel *lblSVMedalCombined;
+    QLabel *lblSVRankOverall;
     QWidget *tabInfo;
     QGridLayout *gridLayout_19;
     QWebView *webView;
     QTextEdit *textEditSide;
-    QVBoxLayout *verticalLayout_2;
-    QHBoxLayout *horizontalLayout;
-    QComboBox *cbDatasets;
-    QComboBox *cbRankedDatasets;
-    QComboBox *cbThemes;
-    QHBoxLayout *horizontalLayoutNameDescription;
-    QLabel *lblDataSetName;
-    QLineEdit *leDatasetName;
-    QLabel *lblDescription;
-    QLineEdit *leDescription;
-    QHBoxLayout *horizontalLayoutTedLoadSave;
-    QTextEdit *textEditBottom;
-    QVBoxLayout *verticalLayoutLoadSave;
-    QPushButton *pbLoad;
-    QPushButton *pbSave;
 
     void setupUi(QDialog *MadDataClassification)
     {
         if (MadDataClassification->objectName().isEmpty())
             MadDataClassification->setObjectName(QString::fromUtf8("MadDataClassification"));
-        MadDataClassification->resize(952, 712);
-        gridLayout_28 = new QGridLayout(MadDataClassification);
-        gridLayout_28->setObjectName(QString::fromUtf8("gridLayout_28"));
+        MadDataClassification->resize(1048, 792);
+        gridLayout_10 = new QGridLayout(MadDataClassification);
+        gridLayout_10->setObjectName(QString::fromUtf8("gridLayout_10"));
+        lblRankOverall = new QLabel(MadDataClassification);
+        lblRankOverall->setObjectName(QString::fromUtf8("lblRankOverall"));
+
+        gridLayout_10->addWidget(lblRankOverall, 6, 2, 1, 1);
+
+        lblDescription = new QLabel(MadDataClassification);
+        lblDescription->setObjectName(QString::fromUtf8("lblDescription"));
+
+        gridLayout_10->addWidget(lblDescription, 3, 0, 1, 1);
+
+        leEmail = new QLineEdit(MadDataClassification);
+        leEmail->setObjectName(QString::fromUtf8("leEmail"));
+
+        gridLayout_10->addWidget(leEmail, 3, 3, 1, 2);
+
+        verticalLayoutLoadSave = new QVBoxLayout();
+        verticalLayoutLoadSave->setObjectName(QString::fromUtf8("verticalLayoutLoadSave"));
+        pbLoad = new QPushButton(MadDataClassification);
+        pbLoad->setObjectName(QString::fromUtf8("pbLoad"));
+
+        verticalLayoutLoadSave->addWidget(pbLoad);
+
+        pbSave = new QPushButton(MadDataClassification);
+        pbSave->setObjectName(QString::fromUtf8("pbSave"));
+        pbSave->setEnabled(false);
+
+        verticalLayoutLoadSave->addWidget(pbSave);
+
+
+        gridLayout_10->addLayout(verticalLayoutLoadSave, 6, 4, 1, 1);
+
+        lblDataSetName = new QLabel(MadDataClassification);
+        lblDataSetName->setObjectName(QString::fromUtf8("lblDataSetName"));
+
+        gridLayout_10->addWidget(lblDataSetName, 2, 0, 1, 1);
+
+        leDatasetName = new QLineEdit(MadDataClassification);
+        leDatasetName->setObjectName(QString::fromUtf8("leDatasetName"));
+        leDatasetName->setEnabled(false);
+
+        gridLayout_10->addWidget(leDatasetName, 2, 1, 1, 1);
+
+        lblUsername = new QLabel(MadDataClassification);
+        lblUsername->setObjectName(QString::fromUtf8("lblUsername"));
+
+        gridLayout_10->addWidget(lblUsername, 2, 2, 1, 1);
+
+        leUsername = new QLineEdit(MadDataClassification);
+        leUsername->setObjectName(QString::fromUtf8("leUsername"));
+
+        gridLayout_10->addWidget(leUsername, 2, 3, 1, 2);
+
+        verticalSpacerbottomLeft = new QSpacerItem(20, 95, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_10->addItem(verticalSpacerbottomLeft, 5, 0, 2, 1);
+
+        lblMedalOverall = new QLabel(MadDataClassification);
+        lblMedalOverall->setObjectName(QString::fromUtf8("lblMedalOverall"));
+        lblMedalOverall->setPixmap(QPixmap(QString::fromUtf8(":/gold.png")));
+
+        gridLayout_10->addWidget(lblMedalOverall, 6, 3, 1, 1);
+
+        horizontalLayout = new QHBoxLayout();
+        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
+        cbDatasets = new QComboBox(MadDataClassification);
+        cbDatasets->setObjectName(QString::fromUtf8("cbDatasets"));
+        cbDatasets->setEnabled(true);
+        cbDatasets->setModelColumn(0);
+
+        horizontalLayout->addWidget(cbDatasets);
+
+        cbRankedDatasets = new QComboBox(MadDataClassification);
+        cbRankedDatasets->setObjectName(QString::fromUtf8("cbRankedDatasets"));
+
+        horizontalLayout->addWidget(cbRankedDatasets);
+
+        cbThemes = new QComboBox(MadDataClassification);
+        cbThemes->setObjectName(QString::fromUtf8("cbThemes"));
+
+        horizontalLayout->addWidget(cbThemes);
+
+
+        gridLayout_10->addLayout(horizontalLayout, 1, 0, 1, 5);
+
+        textEditBottom = new QTextEdit(MadDataClassification);
+        textEditBottom->setObjectName(QString::fromUtf8("textEditBottom"));
+
+        gridLayout_10->addWidget(textEditBottom, 1, 5, 6, 1);
+
+        leDescription = new QLineEdit(MadDataClassification);
+        leDescription->setObjectName(QString::fromUtf8("leDescription"));
+        leDescription->setEnabled(true);
+
+        gridLayout_10->addWidget(leDescription, 3, 1, 1, 1);
+
+        lblEmail = new QLabel(MadDataClassification);
+        lblEmail->setObjectName(QString::fromUtf8("lblEmail"));
+
+        gridLayout_10->addWidget(lblEmail, 3, 2, 1, 1);
+
         splitter = new QSplitter(MadDataClassification);
         splitter->setObjectName(QString::fromUtf8("splitter"));
         splitter->setOrientation(Qt::Horizontal);
         tabWidgetDataClassification = new QTabWidget(splitter);
         tabWidgetDataClassification->setObjectName(QString::fromUtf8("tabWidgetDataClassification"));
-        QSizePolicy sizePolicy(QSizePolicy::Minimum, QSizePolicy::Expanding);
+        QSizePolicy sizePolicy(QSizePolicy::Preferred, QSizePolicy::Expanding);
         sizePolicy.setHorizontalStretch(0);
         sizePolicy.setVerticalStretch(0);
         sizePolicy.setHeightForWidth(tabWidgetDataClassification->sizePolicy().hasHeightForWidth());
@@ -754,89 +865,15 @@ public:
         QFont font;
         font.setPointSize(11);
         tabWidgetDataClassification->setFont(font);
-        tabCultivation = new QWidget();
-        tabCultivation->setObjectName(QString::fromUtf8("tabCultivation"));
-        gridLayout_20 = new QGridLayout(tabCultivation);
-        gridLayout_20->setObjectName(QString::fromUtf8("gridLayout_20"));
-        lblVariety = new QLabel(tabCultivation);
-        lblVariety->setObjectName(QString::fromUtf8("lblVariety"));
-        QFont font1;
-        font1.setPointSize(10);
-        lblVariety->setFont(font1);
-        lblVariety->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblVariety->setMargin(-1);
-        lblVariety->setIndent(2);
-
-        gridLayout_20->addWidget(lblVariety, 1, 2, 1, 1);
-
-        line_4 = new QFrame(tabCultivation);
-        line_4->setObjectName(QString::fromUtf8("line_4"));
-        line_4->setLineWidth(0);
-        line_4->setFrameShape(QFrame::HLine);
-        line_4->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_20->addWidget(line_4, 0, 1, 2, 3);
-
-        lblIrrigation = new QLabel(tabCultivation);
-        lblIrrigation->setObjectName(QString::fromUtf8("lblIrrigation"));
-        lblIrrigation->setFont(font1);
-        lblIrrigation->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblIrrigation->setMargin(-1);
-        lblIrrigation->setIndent(2);
-
-        gridLayout_20->addWidget(lblIrrigation, 5, 1, 1, 2);
-
-        lblTillage = new QLabel(tabCultivation);
-        lblTillage->setObjectName(QString::fromUtf8("lblTillage"));
-        lblTillage->setFont(font1);
-        lblTillage->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblTillage->setMargin(-1);
-        lblTillage->setIndent(2);
-
-        gridLayout_20->addWidget(lblTillage, 8, 2, 1, 1);
-
-        lblCultivationGoldMinVal = new QLabel(tabCultivation);
-        lblCultivationGoldMinVal->setObjectName(QString::fromUtf8("lblCultivationGoldMinVal"));
-        lblCultivationGoldMinVal->setMinimumSize(QSize(25, 0));
-        QFont font2;
-        font2.setPointSize(9);
-        lblCultivationGoldMinVal->setFont(font2);
-        lblCultivationGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationGoldMinVal->setMargin(-1);
-        lblCultivationGoldMinVal->setIndent(1);
-
-        gridLayout_20->addWidget(lblCultivationGoldMinVal, 14, 3, 1, 1);
-
-        lblSowing = new QLabel(tabCultivation);
-        lblSowing->setObjectName(QString::fromUtf8("lblSowing"));
-        lblSowing->setFont(font1);
-        lblSowing->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblSowing->setMargin(-1);
-        lblSowing->setIndent(2);
-
-        gridLayout_20->addWidget(lblSowing, 2, 2, 1, 1);
-
-        lblCultivationGoldMin = new QLabel(tabCultivation);
-        lblCultivationGoldMin->setObjectName(QString::fromUtf8("lblCultivationGoldMin"));
-        lblCultivationGoldMin->setFont(font2);
-        lblCultivationGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationGoldMin->setMargin(-2);
-        lblCultivationGoldMin->setIndent(0);
-
-        gridLayout_20->addWidget(lblCultivationGoldMin, 14, 1, 1, 2);
-
-        lblYield = new QLabel(tabCultivation);
-        lblYield->setObjectName(QString::fromUtf8("lblYield"));
-        lblYield->setFont(font1);
-        lblYield->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblYield->setMargin(-1);
-        lblYield->setIndent(2);
-
-        gridLayout_20->addWidget(lblYield, 7, 2, 1, 1);
-
-        lblFertilisationRating = new QLabel(tabCultivation);
+        tabManagement = new QWidget();
+        tabManagement->setObjectName(QString::fromUtf8("tabManagement"));
+        gridLayout_9 = new QGridLayout(tabManagement);
+        gridLayout_9->setObjectName(QString::fromUtf8("gridLayout_9"));
+        lblFertilisationRating = new QLabel(tabManagement);
         lblFertilisationRating->setObjectName(QString::fromUtf8("lblFertilisationRating"));
         lblFertilisationRating->setMinimumSize(QSize(25, 0));
+        QFont font1;
+        font1.setPointSize(10);
         lblFertilisationRating->setFont(font1);
         lblFertilisationRating->setLineWidth(1);
         lblFertilisationRating->setMidLineWidth(1);
@@ -844,278 +881,51 @@ public:
         lblFertilisationRating->setMargin(-1);
         lblFertilisationRating->setIndent(1);
 
-        gridLayout_20->addWidget(lblFertilisationRating, 4, 3, 1, 1);
+        gridLayout_9->addWidget(lblFertilisationRating, 4, 3, 1, 1);
 
-        lblCultivationSilverMinVal = new QLabel(tabCultivation);
-        lblCultivationSilverMinVal->setObjectName(QString::fromUtf8("lblCultivationSilverMinVal"));
-        lblCultivationSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblCultivationSilverMinVal->setFont(font2);
-        lblCultivationSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationSilverMinVal->setMargin(-1);
-        lblCultivationSilverMinVal->setIndent(1);
-
-        gridLayout_20->addWidget(lblCultivationSilverMinVal, 15, 3, 1, 1);
-
-        lblSowingRating = new QLabel(tabCultivation);
-        lblSowingRating->setObjectName(QString::fromUtf8("lblSowingRating"));
-        lblSowingRating->setMinimumSize(QSize(25, 0));
-        lblSowingRating->setFont(font1);
-        lblSowingRating->setLineWidth(1);
-        lblSowingRating->setMidLineWidth(1);
-        lblSowingRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblSowingRating->setMargin(-1);
-        lblSowingRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblSowingRating, 2, 3, 1, 1);
-
-        lblFertilisation = new QLabel(tabCultivation);
-        lblFertilisation->setObjectName(QString::fromUtf8("lblFertilisation"));
-        lblFertilisation->setFont(font1);
-        lblFertilisation->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblFertilisation->setMargin(-1);
-        lblFertilisation->setIndent(2);
-
-        gridLayout_20->addWidget(lblFertilisation, 4, 1, 1, 2);
-
-        line_2 = new QFrame(tabCultivation);
-        line_2->setObjectName(QString::fromUtf8("line_2"));
-        line_2->setLineWidth(1);
-        line_2->setFrameShape(QFrame::HLine);
-        line_2->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_20->addWidget(line_2, 12, 2, 1, 2);
-
-        lblVarietyRating = new QLabel(tabCultivation);
-        lblVarietyRating->setObjectName(QString::fromUtf8("lblVarietyRating"));
-        lblVarietyRating->setMinimumSize(QSize(25, 0));
-        lblVarietyRating->setFont(font1);
-        lblVarietyRating->setLineWidth(1);
-        lblVarietyRating->setMidLineWidth(1);
-        lblVarietyRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblVarietyRating->setMargin(-1);
-        lblVarietyRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblVarietyRating, 1, 3, 1, 1);
-
-        lblSeedDensityRating = new QLabel(tabCultivation);
-        lblSeedDensityRating->setObjectName(QString::fromUtf8("lblSeedDensityRating"));
-        lblSeedDensityRating->setMinimumSize(QSize(25, 0));
-        lblSeedDensityRating->setFont(font1);
-        lblSeedDensityRating->setLineWidth(1);
-        lblSeedDensityRating->setMidLineWidth(1);
-        lblSeedDensityRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblSeedDensityRating->setMargin(-1);
-        lblSeedDensityRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblSeedDensityRating, 6, 3, 1, 1);
-
-        lblCultivationSilverMin = new QLabel(tabCultivation);
-        lblCultivationSilverMin->setObjectName(QString::fromUtf8("lblCultivationSilverMin"));
-        lblCultivationSilverMin->setFont(font2);
-        lblCultivationSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationSilverMin->setMargin(-2);
-        lblCultivationSilverMin->setIndent(0);
-
-        gridLayout_20->addWidget(lblCultivationSilverMin, 15, 1, 1, 2);
-
-        lblHarvest = new QLabel(tabCultivation);
-        lblHarvest->setObjectName(QString::fromUtf8("lblHarvest"));
-        lblHarvest->setFont(font1);
-        lblHarvest->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblHarvest->setMargin(-1);
-        lblHarvest->setIndent(2);
-
-        gridLayout_20->addWidget(lblHarvest, 3, 2, 1, 1);
-
-        lblCultivationPlatinumMinVal = new QLabel(tabCultivation);
-        lblCultivationPlatinumMinVal->setObjectName(QString::fromUtf8("lblCultivationPlatinumMinVal"));
-        lblCultivationPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblCultivationPlatinumMinVal->setFont(font2);
-        lblCultivationPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationPlatinumMinVal->setMargin(-1);
-        lblCultivationPlatinumMinVal->setIndent(1);
-
-        gridLayout_20->addWidget(lblCultivationPlatinumMinVal, 13, 3, 1, 1);
-
-        lblYieldRating = new QLabel(tabCultivation);
-        lblYieldRating->setObjectName(QString::fromUtf8("lblYieldRating"));
-        lblYieldRating->setMinimumSize(QSize(25, 0));
-        lblYieldRating->setFont(font1);
-        lblYieldRating->setLineWidth(1);
-        lblYieldRating->setMidLineWidth(1);
-        lblYieldRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblYieldRating->setMargin(-1);
-        lblYieldRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblYieldRating, 7, 3, 1, 1);
-
-        lblIrrigationRating = new QLabel(tabCultivation);
-        lblIrrigationRating->setObjectName(QString::fromUtf8("lblIrrigationRating"));
-        lblIrrigationRating->setMinimumSize(QSize(25, 0));
-        lblIrrigationRating->setFont(font1);
-        lblIrrigationRating->setLineWidth(1);
-        lblIrrigationRating->setMidLineWidth(1);
-        lblIrrigationRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblIrrigationRating->setMargin(-1);
-        lblIrrigationRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblIrrigationRating, 5, 3, 1, 1);
-
-        lblCultivationBronzeMinVal = new QLabel(tabCultivation);
-        lblCultivationBronzeMinVal->setObjectName(QString::fromUtf8("lblCultivationBronzeMinVal"));
-        lblCultivationBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblCultivationBronzeMinVal->setFont(font2);
-        lblCultivationBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationBronzeMinVal->setMargin(-1);
-        lblCultivationBronzeMinVal->setIndent(1);
-
-        gridLayout_20->addWidget(lblCultivationBronzeMinVal, 16, 3, 1, 1);
-
-        lblHarvestRating = new QLabel(tabCultivation);
-        lblHarvestRating->setObjectName(QString::fromUtf8("lblHarvestRating"));
-        lblHarvestRating->setMinimumSize(QSize(25, 0));
-        lblHarvestRating->setFont(font1);
-        lblHarvestRating->setLineWidth(1);
-        lblHarvestRating->setMidLineWidth(1);
-        lblHarvestRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblHarvestRating->setMargin(-1);
-        lblHarvestRating->setIndent(1);
-
-        gridLayout_20->addWidget(lblHarvestRating, 3, 3, 1, 1);
-
-        lblCultivationBronzeMin = new QLabel(tabCultivation);
-        lblCultivationBronzeMin->setObjectName(QString::fromUtf8("lblCultivationBronzeMin"));
-        lblCultivationBronzeMin->setFont(font2);
-        lblCultivationBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationBronzeMin->setMargin(-2);
-        lblCultivationBronzeMin->setIndent(0);
-
-        gridLayout_20->addWidget(lblCultivationBronzeMin, 16, 1, 1, 2);
-
-        lblCultivationPlatinumMin = new QLabel(tabCultivation);
-        lblCultivationPlatinumMin->setObjectName(QString::fromUtf8("lblCultivationPlatinumMin"));
-        lblCultivationPlatinumMin->setFont(font2);
-        lblCultivationPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCultivationPlatinumMin->setMargin(-1);
-        lblCultivationPlatinumMin->setIndent(0);
-
-        gridLayout_20->addWidget(lblCultivationPlatinumMin, 13, 1, 1, 2);
-
-        line = new QFrame(tabCultivation);
-        line->setObjectName(QString::fromUtf8("line"));
-        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        gbxManagement = new QGroupBox(tabManagement);
+        gbxManagement->setObjectName(QString::fromUtf8("gbxManagement"));
+        QSizePolicy sizePolicy1(QSizePolicy::Minimum, QSizePolicy::Preferred);
         sizePolicy1.setHorizontalStretch(0);
         sizePolicy1.setVerticalStretch(0);
-        sizePolicy1.setHeightForWidth(line->sizePolicy().hasHeightForWidth());
-        line->setSizePolicy(sizePolicy1);
-        line->setMinimumSize(QSize(108, 0));
-        line->setFrameShape(QFrame::HLine);
-        line->setFrameShadow(QFrame::Sunken);
-
-        gridLayout_20->addWidget(line, 9, 2, 1, 2);
-
-        lblSeedDensity = new QLabel(tabCultivation);
-        lblSeedDensity->setObjectName(QString::fromUtf8("lblSeedDensity"));
-        lblSeedDensity->setFont(font1);
-        lblSeedDensity->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
-        lblSeedDensity->setMargin(-1);
-        lblSeedDensity->setIndent(2);
-
-        gridLayout_20->addWidget(lblSeedDensity, 6, 1, 1, 2);
-
-        lblCombinedTotal = new QLabel(tabCultivation);
-        lblCombinedTotal->setObjectName(QString::fromUtf8("lblCombinedTotal"));
-        lblCombinedTotal->setMinimumSize(QSize(25, 0));
-        QFont font3;
-        font3.setPointSize(10);
-        font3.setBold(true);
-        font3.setWeight(75);
-        lblCombinedTotal->setFont(font3);
-        lblCombinedTotal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCombinedTotal->setMargin(-1);
-        lblCombinedTotal->setIndent(1);
-
-        gridLayout_20->addWidget(lblCombinedTotal, 10, 3, 1, 1);
-
-        lblCombined = new QLabel(tabCultivation);
-        lblCombined->setObjectName(QString::fromUtf8("lblCombined"));
-        lblCombined->setFont(font3);
-        lblCombined->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblCombined->setMargin(0);
-
-        gridLayout_20->addWidget(lblCombined, 10, 1, 1, 2);
-
-        horizontalLayoutCultivationRank = new QHBoxLayout();
-        horizontalLayoutCultivationRank->setObjectName(QString::fromUtf8("horizontalLayoutCultivationRank"));
-        horizontalSpacerCultivationRank = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
-
-        horizontalLayoutCultivationRank->addItem(horizontalSpacerCultivationRank);
-
-        lblRankingCultivation = new QLabel(tabCultivation);
-        lblRankingCultivation->setObjectName(QString::fromUtf8("lblRankingCultivation"));
-        lblRankingCultivation->setFont(font1);
-        lblRankingCultivation->setAlignment(Qt::AlignCenter);
-
-        horizontalLayoutCultivationRank->addWidget(lblRankingCultivation);
-
-        lblMedalCultivation = new QLabel(tabCultivation);
-        lblMedalCultivation->setObjectName(QString::fromUtf8("lblMedalCultivation"));
-        lblMedalCultivation->setMinimumSize(QSize(30, 30));
-        lblMedalCultivation->setMaximumSize(QSize(30, 30));
-        lblMedalCultivation->setBaseSize(QSize(20, 60));
-        lblMedalCultivation->setLineWidth(0);
-        lblMedalCultivation->setPixmap(QPixmap(QString::fromUtf8(":/platinum.png")));
-        lblMedalCultivation->setScaledContents(true);
-        lblMedalCultivation->setAlignment(Qt::AlignJustify|Qt::AlignVCenter);
-
-        horizontalLayoutCultivationRank->addWidget(lblMedalCultivation);
-
-
-        gridLayout_20->addLayout(horizontalLayoutCultivationRank, 11, 2, 1, 2);
-
-        gbxCultivation = new QGroupBox(tabCultivation);
-        gbxCultivation->setObjectName(QString::fromUtf8("gbxCultivation"));
-        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Preferred);
-        sizePolicy2.setHorizontalStretch(0);
-        sizePolicy2.setVerticalStretch(0);
-        sizePolicy2.setHeightForWidth(gbxCultivation->sizePolicy().hasHeightForWidth());
-        gbxCultivation->setSizePolicy(sizePolicy2);
-        gbxCultivation->setMinimumSize(QSize(440, 0));
-        gbxCultivation->setCheckable(true);
-        gbxCultivation->setChecked(false);
-        gridLayout = new QGridLayout(gbxCultivation);
+        sizePolicy1.setHeightForWidth(gbxManagement->sizePolicy().hasHeightForWidth());
+        gbxManagement->setSizePolicy(sizePolicy1);
+        gbxManagement->setMinimumSize(QSize(440, 0));
+        gbxManagement->setCheckable(true);
+        gbxManagement->setChecked(false);
+        gridLayout = new QGridLayout(gbxManagement);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
-        chbxHarvest = new QCheckBox(gbxCultivation);
+        chbxHarvest = new QCheckBox(gbxManagement);
         chbxHarvest->setObjectName(QString::fromUtf8("chbxHarvest"));
-        QFont font4;
-        font4.setPointSize(12);
-        chbxHarvest->setFont(font4);
+        QFont font2;
+        font2.setPointSize(12);
+        chbxHarvest->setFont(font2);
         chbxHarvest->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxHarvest, 4, 0, 1, 1);
 
-        dsbVariety = new QDoubleSpinBox(gbxCultivation);
+        dsbVariety = new QDoubleSpinBox(gbxManagement);
         dsbVariety->setObjectName(QString::fromUtf8("dsbVariety"));
-        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Minimum);
-        sizePolicy3.setHorizontalStretch(0);
-        sizePolicy3.setVerticalStretch(0);
-        sizePolicy3.setHeightForWidth(dsbVariety->sizePolicy().hasHeightForWidth());
-        dsbVariety->setSizePolicy(sizePolicy3);
-        dsbVariety->setFont(font4);
+        QSizePolicy sizePolicy2(QSizePolicy::Minimum, QSizePolicy::Minimum);
+        sizePolicy2.setHorizontalStretch(0);
+        sizePolicy2.setVerticalStretch(0);
+        sizePolicy2.setHeightForWidth(dsbVariety->sizePolicy().hasHeightForWidth());
+        dsbVariety->setSizePolicy(sizePolicy2);
+        dsbVariety->setFont(font2);
         dsbVariety->setDecimals(1);
         dsbVariety->setMaximum(5);
         dsbVariety->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbVariety, 2, 3, 1, 1);
 
-        chbxYield = new QCheckBox(gbxCultivation);
+        chbxYield = new QCheckBox(gbxManagement);
         chbxYield->setObjectName(QString::fromUtf8("chbxYield"));
-        chbxYield->setFont(font4);
+        chbxYield->setFont(font2);
         chbxYield->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxYield, 8, 0, 1, 1);
 
-        hsldrTillage = new QSlider(gbxCultivation);
+        hsldrTillage = new QSlider(gbxManagement);
         hsldrTillage->setObjectName(QString::fromUtf8("hsldrTillage"));
         hsldrTillage->setMinimumSize(QSize(150, 0));
         hsldrTillage->setMaximumSize(QSize(150, 16777215));
@@ -1129,91 +939,91 @@ public:
 
         gridLayout->addWidget(hsldrTillage, 9, 2, 1, 1);
 
-        sbTillage = new QSpinBox(gbxCultivation);
+        sbTillage = new QSpinBox(gbxManagement);
         sbTillage->setObjectName(QString::fromUtf8("sbTillage"));
-        sizePolicy3.setHeightForWidth(sbTillage->sizePolicy().hasHeightForWidth());
-        sbTillage->setSizePolicy(sizePolicy3);
-        sbTillage->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbTillage->sizePolicy().hasHeightForWidth());
+        sbTillage->setSizePolicy(sizePolicy2);
+        sbTillage->setFont(font2);
 
         gridLayout->addWidget(sbTillage, 9, 1, 1, 1);
 
-        sbIrrigation = new QSpinBox(gbxCultivation);
+        sbIrrigation = new QSpinBox(gbxManagement);
         sbIrrigation->setObjectName(QString::fromUtf8("sbIrrigation"));
-        sizePolicy3.setHeightForWidth(sbIrrigation->sizePolicy().hasHeightForWidth());
-        sbIrrigation->setSizePolicy(sizePolicy3);
-        sbIrrigation->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbIrrigation->sizePolicy().hasHeightForWidth());
+        sbIrrigation->setSizePolicy(sizePolicy2);
+        sbIrrigation->setFont(font2);
 
         gridLayout->addWidget(sbIrrigation, 6, 1, 1, 1);
 
-        sbYield = new QSpinBox(gbxCultivation);
+        sbYield = new QSpinBox(gbxManagement);
         sbYield->setObjectName(QString::fromUtf8("sbYield"));
-        sizePolicy3.setHeightForWidth(sbYield->sizePolicy().hasHeightForWidth());
-        sbYield->setSizePolicy(sizePolicy3);
-        sbYield->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbYield->sizePolicy().hasHeightForWidth());
+        sbYield->setSizePolicy(sizePolicy2);
+        sbYield->setFont(font2);
 
         gridLayout->addWidget(sbYield, 8, 1, 1, 1);
 
-        sbHarvest = new QSpinBox(gbxCultivation);
+        sbHarvest = new QSpinBox(gbxManagement);
         sbHarvest->setObjectName(QString::fromUtf8("sbHarvest"));
-        sizePolicy3.setHeightForWidth(sbHarvest->sizePolicy().hasHeightForWidth());
-        sbHarvest->setSizePolicy(sizePolicy3);
-        sbHarvest->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbHarvest->sizePolicy().hasHeightForWidth());
+        sbHarvest->setSizePolicy(sizePolicy2);
+        sbHarvest->setFont(font2);
 
         gridLayout->addWidget(sbHarvest, 4, 1, 1, 1);
 
-        sbSeedDensity = new QSpinBox(gbxCultivation);
+        sbSeedDensity = new QSpinBox(gbxManagement);
         sbSeedDensity->setObjectName(QString::fromUtf8("sbSeedDensity"));
-        sizePolicy3.setHeightForWidth(sbSeedDensity->sizePolicy().hasHeightForWidth());
-        sbSeedDensity->setSizePolicy(sizePolicy3);
-        sbSeedDensity->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbSeedDensity->sizePolicy().hasHeightForWidth());
+        sbSeedDensity->setSizePolicy(sizePolicy2);
+        sbSeedDensity->setFont(font2);
 
         gridLayout->addWidget(sbSeedDensity, 7, 1, 1, 1);
 
-        chbxSowing = new QCheckBox(gbxCultivation);
+        chbxSowing = new QCheckBox(gbxManagement);
         chbxSowing->setObjectName(QString::fromUtf8("chbxSowing"));
-        chbxSowing->setFont(font4);
+        chbxSowing->setFont(font2);
         chbxSowing->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxSowing, 3, 0, 1, 1);
 
-        dsbYield = new QDoubleSpinBox(gbxCultivation);
+        dsbYield = new QDoubleSpinBox(gbxManagement);
         dsbYield->setObjectName(QString::fromUtf8("dsbYield"));
-        sizePolicy3.setHeightForWidth(dsbYield->sizePolicy().hasHeightForWidth());
-        dsbYield->setSizePolicy(sizePolicy3);
-        dsbYield->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbYield->sizePolicy().hasHeightForWidth());
+        dsbYield->setSizePolicy(sizePolicy2);
+        dsbYield->setFont(font2);
         dsbYield->setDecimals(1);
         dsbYield->setMaximum(5);
         dsbYield->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbYield, 8, 3, 1, 1);
 
-        dsbSeedDensity = new QDoubleSpinBox(gbxCultivation);
+        dsbSeedDensity = new QDoubleSpinBox(gbxManagement);
         dsbSeedDensity->setObjectName(QString::fromUtf8("dsbSeedDensity"));
-        sizePolicy3.setHeightForWidth(dsbSeedDensity->sizePolicy().hasHeightForWidth());
-        dsbSeedDensity->setSizePolicy(sizePolicy3);
-        dsbSeedDensity->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbSeedDensity->sizePolicy().hasHeightForWidth());
+        dsbSeedDensity->setSizePolicy(sizePolicy2);
+        dsbSeedDensity->setFont(font2);
         dsbSeedDensity->setDecimals(1);
         dsbSeedDensity->setMaximum(5);
         dsbSeedDensity->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbSeedDensity, 7, 3, 1, 1);
 
-        sbVariety = new QSpinBox(gbxCultivation);
+        sbVariety = new QSpinBox(gbxManagement);
         sbVariety->setObjectName(QString::fromUtf8("sbVariety"));
-        sizePolicy3.setHeightForWidth(sbVariety->sizePolicy().hasHeightForWidth());
-        sbVariety->setSizePolicy(sizePolicy3);
-        sbVariety->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbVariety->sizePolicy().hasHeightForWidth());
+        sbVariety->setSizePolicy(sizePolicy2);
+        sbVariety->setFont(font2);
 
         gridLayout->addWidget(sbVariety, 2, 1, 1, 1);
 
-        chbxIrrigation = new QCheckBox(gbxCultivation);
+        chbxIrrigation = new QCheckBox(gbxManagement);
         chbxIrrigation->setObjectName(QString::fromUtf8("chbxIrrigation"));
-        chbxIrrigation->setFont(font4);
+        chbxIrrigation->setFont(font2);
         chbxIrrigation->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxIrrigation, 6, 0, 1, 1);
 
-        hsldrFertilisation = new QSlider(gbxCultivation);
+        hsldrFertilisation = new QSlider(gbxManagement);
         hsldrFertilisation->setObjectName(QString::fromUtf8("hsldrFertilisation"));
         hsldrFertilisation->setMinimumSize(QSize(150, 0));
         hsldrFertilisation->setMaximumSize(QSize(150, 16777215));
@@ -1227,40 +1037,40 @@ public:
 
         gridLayout->addWidget(hsldrFertilisation, 5, 2, 1, 1);
 
-        chbxSeedDensity = new QCheckBox(gbxCultivation);
+        chbxSeedDensity = new QCheckBox(gbxManagement);
         chbxSeedDensity->setObjectName(QString::fromUtf8("chbxSeedDensity"));
-        chbxSeedDensity->setFont(font4);
+        chbxSeedDensity->setFont(font2);
         chbxSeedDensity->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxSeedDensity, 7, 0, 1, 1);
 
-        chbxTillage = new QCheckBox(gbxCultivation);
+        chbxTillage = new QCheckBox(gbxManagement);
         chbxTillage->setObjectName(QString::fromUtf8("chbxTillage"));
-        chbxTillage->setFont(font4);
+        chbxTillage->setFont(font2);
         chbxTillage->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxTillage, 9, 0, 1, 1);
 
-        dsbSowing = new QDoubleSpinBox(gbxCultivation);
+        dsbSowing = new QDoubleSpinBox(gbxManagement);
         dsbSowing->setObjectName(QString::fromUtf8("dsbSowing"));
-        sizePolicy3.setHeightForWidth(dsbSowing->sizePolicy().hasHeightForWidth());
-        dsbSowing->setSizePolicy(sizePolicy3);
-        dsbSowing->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbSowing->sizePolicy().hasHeightForWidth());
+        dsbSowing->setSizePolicy(sizePolicy2);
+        dsbSowing->setFont(font2);
         dsbSowing->setDecimals(1);
         dsbSowing->setMaximum(5);
         dsbSowing->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbSowing, 3, 3, 1, 1);
 
-        sbSowing = new QSpinBox(gbxCultivation);
+        sbSowing = new QSpinBox(gbxManagement);
         sbSowing->setObjectName(QString::fromUtf8("sbSowing"));
-        sizePolicy3.setHeightForWidth(sbSowing->sizePolicy().hasHeightForWidth());
-        sbSowing->setSizePolicy(sizePolicy3);
-        sbSowing->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbSowing->sizePolicy().hasHeightForWidth());
+        sbSowing->setSizePolicy(sizePolicy2);
+        sbSowing->setFont(font2);
 
         gridLayout->addWidget(sbSowing, 3, 1, 1, 1);
 
-        hsldrHarvest = new QSlider(gbxCultivation);
+        hsldrHarvest = new QSlider(gbxManagement);
         hsldrHarvest->setObjectName(QString::fromUtf8("hsldrHarvest"));
         hsldrHarvest->setMinimumSize(QSize(150, 0));
         hsldrHarvest->setMaximumSize(QSize(150, 16777215));
@@ -1274,28 +1084,30 @@ public:
 
         gridLayout->addWidget(hsldrHarvest, 4, 2, 1, 1);
 
-        label_53 = new QLabel(gbxCultivation);
+        label_53 = new QLabel(gbxManagement);
         label_53->setObjectName(QString::fromUtf8("label_53"));
-        label_53->setFont(font2);
+        QFont font3;
+        font3.setPointSize(9);
+        label_53->setFont(font3);
         label_53->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
 
         gridLayout->addWidget(label_53, 1, 0, 1, 1);
 
-        sbFertilisation = new QSpinBox(gbxCultivation);
+        sbFertilisation = new QSpinBox(gbxManagement);
         sbFertilisation->setObjectName(QString::fromUtf8("sbFertilisation"));
-        sizePolicy3.setHeightForWidth(sbFertilisation->sizePolicy().hasHeightForWidth());
-        sbFertilisation->setSizePolicy(sizePolicy3);
-        sbFertilisation->setFont(font4);
+        sizePolicy2.setHeightForWidth(sbFertilisation->sizePolicy().hasHeightForWidth());
+        sbFertilisation->setSizePolicy(sizePolicy2);
+        sbFertilisation->setFont(font2);
 
         gridLayout->addWidget(sbFertilisation, 5, 1, 1, 1);
 
-        label_51 = new QLabel(gbxCultivation);
+        label_51 = new QLabel(gbxManagement);
         label_51->setObjectName(QString::fromUtf8("label_51"));
-        label_51->setFont(font2);
+        label_51->setFont(font3);
 
         gridLayout->addWidget(label_51, 1, 1, 1, 1);
 
-        hsldrSeedDensity = new QSlider(gbxCultivation);
+        hsldrSeedDensity = new QSlider(gbxManagement);
         hsldrSeedDensity->setObjectName(QString::fromUtf8("hsldrSeedDensity"));
         hsldrSeedDensity->setMinimumSize(QSize(150, 0));
         hsldrSeedDensity->setMaximumSize(QSize(150, 16777215));
@@ -1309,7 +1121,7 @@ public:
 
         gridLayout->addWidget(hsldrSeedDensity, 7, 2, 1, 1);
 
-        hsldrSowing = new QSlider(gbxCultivation);
+        hsldrSowing = new QSlider(gbxManagement);
         hsldrSowing->setObjectName(QString::fromUtf8("hsldrSowing"));
         hsldrSowing->setMinimumSize(QSize(150, 0));
         hsldrSowing->setMaximumSize(QSize(150, 16777215));
@@ -1323,43 +1135,43 @@ public:
 
         gridLayout->addWidget(hsldrSowing, 3, 2, 1, 1);
 
-        cbExamples = new QComboBox(gbxCultivation);
+        cbExamples = new QComboBox(gbxManagement);
         cbExamples->setObjectName(QString::fromUtf8("cbExamples"));
         cbExamples->setEnabled(false);
 
         gridLayout->addWidget(cbExamples, 0, 2, 1, 1);
 
-        lblExample = new QLabel(gbxCultivation);
+        lblExample = new QLabel(gbxManagement);
         lblExample->setObjectName(QString::fromUtf8("lblExample"));
 
         gridLayout->addWidget(lblExample, 0, 0, 1, 1);
 
-        dsbHarvest = new QDoubleSpinBox(gbxCultivation);
+        dsbHarvest = new QDoubleSpinBox(gbxManagement);
         dsbHarvest->setObjectName(QString::fromUtf8("dsbHarvest"));
-        sizePolicy3.setHeightForWidth(dsbHarvest->sizePolicy().hasHeightForWidth());
-        dsbHarvest->setSizePolicy(sizePolicy3);
-        dsbHarvest->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbHarvest->sizePolicy().hasHeightForWidth());
+        dsbHarvest->setSizePolicy(sizePolicy2);
+        dsbHarvest->setFont(font2);
         dsbHarvest->setDecimals(1);
         dsbHarvest->setMaximum(5);
         dsbHarvest->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbHarvest, 4, 3, 1, 1);
 
-        chbxVariety = new QCheckBox(gbxCultivation);
+        chbxVariety = new QCheckBox(gbxManagement);
         chbxVariety->setObjectName(QString::fromUtf8("chbxVariety"));
-        chbxVariety->setFont(font4);
+        chbxVariety->setFont(font2);
         chbxVariety->setLayoutDirection(Qt::RightToLeft);
         chbxVariety->setTristate(false);
 
         gridLayout->addWidget(chbxVariety, 2, 0, 1, 1);
 
-        label_52 = new QLabel(gbxCultivation);
+        label_52 = new QLabel(gbxManagement);
         label_52->setObjectName(QString::fromUtf8("label_52"));
-        label_52->setFont(font2);
+        label_52->setFont(font3);
 
         gridLayout->addWidget(label_52, 1, 3, 1, 1);
 
-        hsldrIrrigation = new QSlider(gbxCultivation);
+        hsldrIrrigation = new QSlider(gbxManagement);
         hsldrIrrigation->setObjectName(QString::fromUtf8("hsldrIrrigation"));
         hsldrIrrigation->setMinimumSize(QSize(150, 0));
         hsldrIrrigation->setMaximumSize(QSize(150, 16777215));
@@ -1373,29 +1185,29 @@ public:
 
         gridLayout->addWidget(hsldrIrrigation, 6, 2, 1, 1);
 
-        dsbIrrigation = new QDoubleSpinBox(gbxCultivation);
+        dsbIrrigation = new QDoubleSpinBox(gbxManagement);
         dsbIrrigation->setObjectName(QString::fromUtf8("dsbIrrigation"));
-        sizePolicy3.setHeightForWidth(dsbIrrigation->sizePolicy().hasHeightForWidth());
-        dsbIrrigation->setSizePolicy(sizePolicy3);
-        dsbIrrigation->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbIrrigation->sizePolicy().hasHeightForWidth());
+        dsbIrrigation->setSizePolicy(sizePolicy2);
+        dsbIrrigation->setFont(font2);
         dsbIrrigation->setDecimals(1);
         dsbIrrigation->setMaximum(5);
         dsbIrrigation->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbIrrigation, 6, 3, 1, 1);
 
-        dsbFertilisation = new QDoubleSpinBox(gbxCultivation);
+        dsbFertilisation = new QDoubleSpinBox(gbxManagement);
         dsbFertilisation->setObjectName(QString::fromUtf8("dsbFertilisation"));
-        sizePolicy3.setHeightForWidth(dsbFertilisation->sizePolicy().hasHeightForWidth());
-        dsbFertilisation->setSizePolicy(sizePolicy3);
-        dsbFertilisation->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbFertilisation->sizePolicy().hasHeightForWidth());
+        dsbFertilisation->setSizePolicy(sizePolicy2);
+        dsbFertilisation->setFont(font2);
         dsbFertilisation->setDecimals(1);
         dsbFertilisation->setMaximum(5);
         dsbFertilisation->setSingleStep(0.5);
 
         gridLayout->addWidget(dsbFertilisation, 5, 3, 1, 1);
 
-        hsldrVariety = new QSlider(gbxCultivation);
+        hsldrVariety = new QSlider(gbxManagement);
         hsldrVariety->setObjectName(QString::fromUtf8("hsldrVariety"));
         hsldrVariety->setMinimumSize(QSize(150, 0));
         hsldrVariety->setMaximumSize(QSize(150, 16777215));
@@ -1409,14 +1221,14 @@ public:
 
         gridLayout->addWidget(hsldrVariety, 2, 2, 1, 1);
 
-        chbxFertilisation = new QCheckBox(gbxCultivation);
+        chbxFertilisation = new QCheckBox(gbxManagement);
         chbxFertilisation->setObjectName(QString::fromUtf8("chbxFertilisation"));
-        chbxFertilisation->setFont(font4);
+        chbxFertilisation->setFont(font2);
         chbxFertilisation->setLayoutDirection(Qt::RightToLeft);
 
         gridLayout->addWidget(chbxFertilisation, 5, 0, 1, 1);
 
-        hsldrYield = new QSlider(gbxCultivation);
+        hsldrYield = new QSlider(gbxManagement);
         hsldrYield->setObjectName(QString::fromUtf8("hsldrYield"));
         hsldrYield->setMinimumSize(QSize(150, 0));
         hsldrYield->setMaximumSize(QSize(150, 16777215));
@@ -1430,11 +1242,11 @@ public:
 
         gridLayout->addWidget(hsldrYield, 8, 2, 1, 1);
 
-        dsbTillage = new QDoubleSpinBox(gbxCultivation);
+        dsbTillage = new QDoubleSpinBox(gbxManagement);
         dsbTillage->setObjectName(QString::fromUtf8("dsbTillage"));
-        sizePolicy3.setHeightForWidth(dsbTillage->sizePolicy().hasHeightForWidth());
-        dsbTillage->setSizePolicy(sizePolicy3);
-        dsbTillage->setFont(font4);
+        sizePolicy2.setHeightForWidth(dsbTillage->sizePolicy().hasHeightForWidth());
+        dsbTillage->setSizePolicy(sizePolicy2);
+        dsbTillage->setFont(font2);
         dsbTillage->setDecimals(1);
         dsbTillage->setMaximum(5);
         dsbTillage->setSingleStep(0.5);
@@ -1442,9 +1254,63 @@ public:
         gridLayout->addWidget(dsbTillage, 9, 3, 1, 1);
 
 
-        gridLayout_20->addWidget(gbxCultivation, 0, 0, 17, 1);
+        gridLayout_9->addWidget(gbxManagement, 0, 0, 21, 1);
 
-        lblTillageRating = new QLabel(tabCultivation);
+        verticalSpacer_2 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_9->addItem(verticalSpacer_2, 21, 0, 1, 1);
+
+        line_4 = new QFrame(tabManagement);
+        line_4->setObjectName(QString::fromUtf8("line_4"));
+        line_4->setLineWidth(0);
+        line_4->setFrameShape(QFrame::HLine);
+        line_4->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_9->addWidget(line_4, 0, 1, 2, 3);
+
+        lblVariety = new QLabel(tabManagement);
+        lblVariety->setObjectName(QString::fromUtf8("lblVariety"));
+        lblVariety->setFont(font1);
+        lblVariety->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblVariety->setMargin(-1);
+        lblVariety->setIndent(2);
+
+        gridLayout_9->addWidget(lblVariety, 1, 2, 1, 1);
+
+        lblVarietyRating = new QLabel(tabManagement);
+        lblVarietyRating->setObjectName(QString::fromUtf8("lblVarietyRating"));
+        lblVarietyRating->setMinimumSize(QSize(25, 0));
+        lblVarietyRating->setFont(font1);
+        lblVarietyRating->setLineWidth(1);
+        lblVarietyRating->setMidLineWidth(1);
+        lblVarietyRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblVarietyRating->setMargin(-1);
+        lblVarietyRating->setIndent(1);
+
+        gridLayout_9->addWidget(lblVarietyRating, 1, 3, 1, 1);
+
+        lblSowing = new QLabel(tabManagement);
+        lblSowing->setObjectName(QString::fromUtf8("lblSowing"));
+        lblSowing->setFont(font1);
+        lblSowing->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblSowing->setMargin(-1);
+        lblSowing->setIndent(2);
+
+        gridLayout_9->addWidget(lblSowing, 2, 2, 1, 1);
+
+        lblYieldRating = new QLabel(tabManagement);
+        lblYieldRating->setObjectName(QString::fromUtf8("lblYieldRating"));
+        lblYieldRating->setMinimumSize(QSize(25, 0));
+        lblYieldRating->setFont(font1);
+        lblYieldRating->setLineWidth(1);
+        lblYieldRating->setMidLineWidth(1);
+        lblYieldRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblYieldRating->setMargin(-1);
+        lblYieldRating->setIndent(1);
+
+        gridLayout_9->addWidget(lblYieldRating, 7, 3, 1, 1);
+
+        lblTillageRating = new QLabel(tabManagement);
         lblTillageRating->setObjectName(QString::fromUtf8("lblTillageRating"));
         lblTillageRating->setMinimumSize(QSize(25, 0));
         lblTillageRating->setFont(font1);
@@ -1454,45 +1320,292 @@ public:
         lblTillageRating->setMargin(-1);
         lblTillageRating->setIndent(1);
 
-        gridLayout_20->addWidget(lblTillageRating, 8, 3, 1, 1);
+        gridLayout_9->addWidget(lblTillageRating, 8, 3, 1, 1);
 
-        verticalSpacerCultivationLeft = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+        lblHarvestRating = new QLabel(tabManagement);
+        lblHarvestRating->setObjectName(QString::fromUtf8("lblHarvestRating"));
+        lblHarvestRating->setMinimumSize(QSize(25, 0));
+        lblHarvestRating->setFont(font1);
+        lblHarvestRating->setLineWidth(1);
+        lblHarvestRating->setMidLineWidth(1);
+        lblHarvestRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblHarvestRating->setMargin(-1);
+        lblHarvestRating->setIndent(1);
 
-        gridLayout_20->addItem(verticalSpacerCultivationLeft, 17, 0, 1, 1);
+        gridLayout_9->addWidget(lblHarvestRating, 3, 3, 1, 1);
 
-        QIcon icon;
-        icon.addFile(QString::fromUtf8(":/gold.png"), QSize(), QIcon::Normal, QIcon::Off);
-        tabWidgetDataClassification->addTab(tabCultivation, icon, QString());
-        gbxCultivation->raise();
+        lblFertilisation = new QLabel(tabManagement);
+        lblFertilisation->setObjectName(QString::fromUtf8("lblFertilisation"));
+        lblFertilisation->setFont(font1);
+        lblFertilisation->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblFertilisation->setMargin(-1);
+        lblFertilisation->setIndent(2);
+
+        gridLayout_9->addWidget(lblFertilisation, 4, 1, 1, 2);
+
+        lblSowingRating = new QLabel(tabManagement);
+        lblSowingRating->setObjectName(QString::fromUtf8("lblSowingRating"));
+        lblSowingRating->setMinimumSize(QSize(25, 0));
+        lblSowingRating->setFont(font1);
+        lblSowingRating->setLineWidth(1);
+        lblSowingRating->setMidLineWidth(1);
+        lblSowingRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblSowingRating->setMargin(-1);
+        lblSowingRating->setIndent(1);
+
+        gridLayout_9->addWidget(lblSowingRating, 2, 3, 1, 1);
+
+        lblHarvest = new QLabel(tabManagement);
+        lblHarvest->setObjectName(QString::fromUtf8("lblHarvest"));
+        lblHarvest->setFont(font1);
+        lblHarvest->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblHarvest->setMargin(-1);
+        lblHarvest->setIndent(2);
+
+        gridLayout_9->addWidget(lblHarvest, 3, 2, 1, 1);
+
+        lblCombinedTotal = new QLabel(tabManagement);
+        lblCombinedTotal->setObjectName(QString::fromUtf8("lblCombinedTotal"));
+        lblCombinedTotal->setMinimumSize(QSize(25, 0));
+        QFont font4;
+        font4.setPointSize(10);
+        font4.setBold(true);
+        font4.setWeight(75);
+        lblCombinedTotal->setFont(font4);
+        lblCombinedTotal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblCombinedTotal->setMargin(-1);
+        lblCombinedTotal->setIndent(1);
+
+        gridLayout_9->addWidget(lblCombinedTotal, 10, 3, 1, 1);
+
+        lblCombined = new QLabel(tabManagement);
+        lblCombined->setObjectName(QString::fromUtf8("lblCombined"));
+        lblCombined->setFont(font4);
+        lblCombined->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblCombined->setMargin(0);
+
+        gridLayout_9->addWidget(lblCombined, 10, 2, 1, 1);
+
+        lblYield = new QLabel(tabManagement);
+        lblYield->setObjectName(QString::fromUtf8("lblYield"));
+        lblYield->setFont(font1);
+        lblYield->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblYield->setMargin(-1);
+        lblYield->setIndent(2);
+
+        gridLayout_9->addWidget(lblYield, 7, 2, 1, 1);
+
+        lblIrrigationRating = new QLabel(tabManagement);
+        lblIrrigationRating->setObjectName(QString::fromUtf8("lblIrrigationRating"));
+        lblIrrigationRating->setMinimumSize(QSize(25, 0));
+        lblIrrigationRating->setFont(font1);
+        lblIrrigationRating->setLineWidth(1);
+        lblIrrigationRating->setMidLineWidth(1);
+        lblIrrigationRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblIrrigationRating->setMargin(-1);
+        lblIrrigationRating->setIndent(1);
+
+        gridLayout_9->addWidget(lblIrrigationRating, 5, 3, 1, 1);
+
+        lblSeedDensity = new QLabel(tabManagement);
+        lblSeedDensity->setObjectName(QString::fromUtf8("lblSeedDensity"));
+        lblSeedDensity->setFont(font1);
+        lblSeedDensity->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblSeedDensity->setMargin(-1);
+        lblSeedDensity->setIndent(2);
+
+        gridLayout_9->addWidget(lblSeedDensity, 6, 1, 1, 2);
+
+        lblSeedDensityRating = new QLabel(tabManagement);
+        lblSeedDensityRating->setObjectName(QString::fromUtf8("lblSeedDensityRating"));
+        lblSeedDensityRating->setMinimumSize(QSize(25, 0));
+        lblSeedDensityRating->setFont(font1);
+        lblSeedDensityRating->setLineWidth(1);
+        lblSeedDensityRating->setMidLineWidth(1);
+        lblSeedDensityRating->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblSeedDensityRating->setMargin(-1);
+        lblSeedDensityRating->setIndent(1);
+
+        gridLayout_9->addWidget(lblSeedDensityRating, 6, 3, 1, 1);
+
+        lblIrrigation = new QLabel(tabManagement);
+        lblIrrigation->setObjectName(QString::fromUtf8("lblIrrigation"));
+        lblIrrigation->setFont(font1);
+        lblIrrigation->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblIrrigation->setMargin(-1);
+        lblIrrigation->setIndent(2);
+
+        gridLayout_9->addWidget(lblIrrigation, 5, 2, 1, 1);
+
+        lblTillage = new QLabel(tabManagement);
+        lblTillage->setObjectName(QString::fromUtf8("lblTillage"));
+        lblTillage->setFont(font1);
+        lblTillage->setAlignment(Qt::AlignBottom|Qt::AlignRight|Qt::AlignTrailing);
+        lblTillage->setMargin(-1);
+        lblTillage->setIndent(2);
+
+        gridLayout_9->addWidget(lblTillage, 8, 2, 1, 1);
+
+        lblManagementPlatinumMin = new QLabel(tabManagement);
+        lblManagementPlatinumMin->setObjectName(QString::fromUtf8("lblManagementPlatinumMin"));
+        lblManagementPlatinumMin->setFont(font3);
+        lblManagementPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementPlatinumMin->setMargin(-1);
+        lblManagementPlatinumMin->setIndent(0);
+
+        gridLayout_9->addWidget(lblManagementPlatinumMin, 13, 2, 1, 1);
+
+        lblManagementGoldMin = new QLabel(tabManagement);
+        lblManagementGoldMin->setObjectName(QString::fromUtf8("lblManagementGoldMin"));
+        lblManagementGoldMin->setFont(font3);
+        lblManagementGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementGoldMin->setMargin(-2);
+        lblManagementGoldMin->setIndent(0);
+
+        gridLayout_9->addWidget(lblManagementGoldMin, 14, 2, 1, 1);
+
+        lblManagementSilverMin = new QLabel(tabManagement);
+        lblManagementSilverMin->setObjectName(QString::fromUtf8("lblManagementSilverMin"));
+        lblManagementSilverMin->setFont(font3);
+        lblManagementSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementSilverMin->setMargin(-2);
+        lblManagementSilverMin->setIndent(0);
+
+        gridLayout_9->addWidget(lblManagementSilverMin, 15, 2, 1, 1);
+
+        lblManagementBronzeMin = new QLabel(tabManagement);
+        lblManagementBronzeMin->setObjectName(QString::fromUtf8("lblManagementBronzeMin"));
+        lblManagementBronzeMin->setFont(font3);
+        lblManagementBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementBronzeMin->setMargin(-2);
+        lblManagementBronzeMin->setIndent(0);
+
+        gridLayout_9->addWidget(lblManagementBronzeMin, 16, 2, 1, 1);
+
+        lblManagementPlatinumMinVal = new QLabel(tabManagement);
+        lblManagementPlatinumMinVal->setObjectName(QString::fromUtf8("lblManagementPlatinumMinVal"));
+        lblManagementPlatinumMinVal->setMinimumSize(QSize(25, 0));
+        lblManagementPlatinumMinVal->setFont(font3);
+        lblManagementPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementPlatinumMinVal->setMargin(-1);
+        lblManagementPlatinumMinVal->setIndent(1);
+
+        gridLayout_9->addWidget(lblManagementPlatinumMinVal, 13, 3, 1, 1);
+
+        lblManagementGoldMinVal = new QLabel(tabManagement);
+        lblManagementGoldMinVal->setObjectName(QString::fromUtf8("lblManagementGoldMinVal"));
+        lblManagementGoldMinVal->setMinimumSize(QSize(25, 0));
+        lblManagementGoldMinVal->setFont(font3);
+        lblManagementGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementGoldMinVal->setMargin(-1);
+        lblManagementGoldMinVal->setIndent(1);
+
+        gridLayout_9->addWidget(lblManagementGoldMinVal, 14, 3, 1, 1);
+
+        lblManagementSilverMinVal = new QLabel(tabManagement);
+        lblManagementSilverMinVal->setObjectName(QString::fromUtf8("lblManagementSilverMinVal"));
+        lblManagementSilverMinVal->setMinimumSize(QSize(25, 0));
+        lblManagementSilverMinVal->setFont(font3);
+        lblManagementSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementSilverMinVal->setMargin(-1);
+        lblManagementSilverMinVal->setIndent(1);
+
+        gridLayout_9->addWidget(lblManagementSilverMinVal, 15, 3, 1, 1);
+
+        lblManagementBronzeMinVal = new QLabel(tabManagement);
+        lblManagementBronzeMinVal->setObjectName(QString::fromUtf8("lblManagementBronzeMinVal"));
+        lblManagementBronzeMinVal->setMinimumSize(QSize(25, 0));
+        lblManagementBronzeMinVal->setFont(font3);
+        lblManagementBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
+        lblManagementBronzeMinVal->setMargin(-1);
+        lblManagementBronzeMinVal->setIndent(1);
+
+        gridLayout_9->addWidget(lblManagementBronzeMinVal, 16, 3, 1, 1);
+
+        line = new QFrame(tabManagement);
+        line->setObjectName(QString::fromUtf8("line"));
+        QSizePolicy sizePolicy3(QSizePolicy::Minimum, QSizePolicy::Fixed);
+        sizePolicy3.setHorizontalStretch(0);
+        sizePolicy3.setVerticalStretch(0);
+        sizePolicy3.setHeightForWidth(line->sizePolicy().hasHeightForWidth());
+        line->setSizePolicy(sizePolicy3);
+        line->setMinimumSize(QSize(108, 0));
+        line->setFrameShape(QFrame::HLine);
+        line->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_9->addWidget(line, 9, 2, 1, 2);
+
+        line_2 = new QFrame(tabManagement);
+        line_2->setObjectName(QString::fromUtf8("line_2"));
+        line_2->setLineWidth(1);
+        line_2->setFrameShape(QFrame::HLine);
+        line_2->setFrameShadow(QFrame::Sunken);
+
+        gridLayout_9->addWidget(line_2, 12, 2, 1, 2);
+
+        horizontalLayoutManagementRank = new QHBoxLayout();
+        horizontalLayoutManagementRank->setObjectName(QString::fromUtf8("horizontalLayoutManagementRank"));
+        horizontalSpacerManagementRank = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayoutManagementRank->addItem(horizontalSpacerManagementRank);
+
+        lblRankingManagement = new QLabel(tabManagement);
+        lblRankingManagement->setObjectName(QString::fromUtf8("lblRankingManagement"));
+        lblRankingManagement->setFont(font1);
+        lblRankingManagement->setAlignment(Qt::AlignCenter);
+
+        horizontalLayoutManagementRank->addWidget(lblRankingManagement);
+
+        lblMedalManagement = new QLabel(tabManagement);
+        lblMedalManagement->setObjectName(QString::fromUtf8("lblMedalManagement"));
+        lblMedalManagement->setMinimumSize(QSize(30, 30));
+        lblMedalManagement->setMaximumSize(QSize(30, 30));
+        lblMedalManagement->setBaseSize(QSize(20, 60));
+        lblMedalManagement->setLineWidth(0);
+        lblMedalManagement->setPixmap(QPixmap(QString::fromUtf8(":/platinum.png")));
+        lblMedalManagement->setScaledContents(true);
+        lblMedalManagement->setAlignment(Qt::AlignJustify|Qt::AlignVCenter);
+
+        horizontalLayoutManagementRank->addWidget(lblMedalManagement);
+
+
+        gridLayout_9->addLayout(horizontalLayoutManagementRank, 11, 2, 1, 2);
+
+        verticalSpacer_3 = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_9->addItem(verticalSpacer_3, 17, 2, 3, 2);
+
+        tabWidgetDataClassification->addTab(tabManagement, QString());
+        gbxManagement->raise();
         line_4->raise();
         lblVarietyRating->raise();
         lblSowingRating->raise();
         lblHarvestRating->raise();
         lblFertilisation->raise();
         lblFertilisationRating->raise();
-        lblIrrigation->raise();
         lblIrrigationRating->raise();
         lblSeedDensity->raise();
         lblSeedDensityRating->raise();
         lblYieldRating->raise();
         lblTillageRating->raise();
-        line->raise();
-        lblCombined->raise();
-        line_2->raise();
-        lblCultivationPlatinumMin->raise();
-        lblCultivationPlatinumMinVal->raise();
-        lblCultivationGoldMin->raise();
-        lblCultivationGoldMinVal->raise();
-        lblCultivationSilverMin->raise();
-        lblCultivationSilverMinVal->raise();
-        lblCultivationBronzeMin->raise();
-        lblCultivationBronzeMinVal->raise();
-        lblCombinedTotal->raise();
         lblVariety->raise();
         lblSowing->raise();
         lblHarvest->raise();
         lblYield->raise();
         lblTillage->raise();
+        lblIrrigation->raise();
+        line->raise();
+        lblCombined->raise();
+        lblCombinedTotal->raise();
+        line_2->raise();
+        lblManagementPlatinumMin->raise();
+        lblManagementGoldMin->raise();
+        lblManagementSilverMin->raise();
+        lblManagementBronzeMin->raise();
+        lblManagementPlatinumMinVal->raise();
+        lblManagementGoldMinVal->raise();
+        lblManagementSilverMinVal->raise();
+        lblManagementBronzeMinVal->raise();
         tabPhenology = new QWidget();
         tabPhenology->setObjectName(QString::fromUtf8("tabPhenology"));
         gridLayout_2 = new QGridLayout(tabPhenology);
@@ -1513,7 +1626,7 @@ public:
 
         lblPhenologyBronzeMin = new QLabel(tabPhenology);
         lblPhenologyBronzeMin->setObjectName(QString::fromUtf8("lblPhenologyBronzeMin"));
-        lblPhenologyBronzeMin->setFont(font2);
+        lblPhenologyBronzeMin->setFont(font3);
         lblPhenologyBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyBronzeMin->setMargin(-2);
         lblPhenologyBronzeMin->setIndent(0);
@@ -1542,7 +1655,7 @@ public:
         lblPhenologyBronzeMinVal = new QLabel(tabPhenology);
         lblPhenologyBronzeMinVal->setObjectName(QString::fromUtf8("lblPhenologyBronzeMinVal"));
         lblPhenologyBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblPhenologyBronzeMinVal->setFont(font2);
+        lblPhenologyBronzeMinVal->setFont(font3);
         lblPhenologyBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyBronzeMinVal->setMargin(-1);
         lblPhenologyBronzeMinVal->setIndent(1);
@@ -1552,7 +1665,7 @@ public:
         lblPhenologySilverMinVal = new QLabel(tabPhenology);
         lblPhenologySilverMinVal->setObjectName(QString::fromUtf8("lblPhenologySilverMinVal"));
         lblPhenologySilverMinVal->setMinimumSize(QSize(25, 0));
-        lblPhenologySilverMinVal->setFont(font2);
+        lblPhenologySilverMinVal->setFont(font3);
         lblPhenologySilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologySilverMinVal->setMargin(-1);
         lblPhenologySilverMinVal->setIndent(1);
@@ -1573,7 +1686,7 @@ public:
 
         lblPhenologyGoldMin = new QLabel(tabPhenology);
         lblPhenologyGoldMin->setObjectName(QString::fromUtf8("lblPhenologyGoldMin"));
-        lblPhenologyGoldMin->setFont(font2);
+        lblPhenologyGoldMin->setFont(font3);
         lblPhenologyGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyGoldMin->setMargin(-2);
         lblPhenologyGoldMin->setIndent(0);
@@ -1582,7 +1695,7 @@ public:
 
         lblPhenologySilverMin = new QLabel(tabPhenology);
         lblPhenologySilverMin->setObjectName(QString::fromUtf8("lblPhenologySilverMin"));
-        lblPhenologySilverMin->setFont(font2);
+        lblPhenologySilverMin->setFont(font3);
         lblPhenologySilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologySilverMin->setMargin(-2);
         lblPhenologySilverMin->setIndent(0);
@@ -1626,7 +1739,7 @@ public:
         lblPhenologyGoldMinVal = new QLabel(tabPhenology);
         lblPhenologyGoldMinVal->setObjectName(QString::fromUtf8("lblPhenologyGoldMinVal"));
         lblPhenologyGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblPhenologyGoldMinVal->setFont(font2);
+        lblPhenologyGoldMinVal->setFont(font3);
         lblPhenologyGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyGoldMinVal->setMargin(-1);
         lblPhenologyGoldMinVal->setIndent(1);
@@ -1835,7 +1948,7 @@ public:
         lblPhenologyPlatinumMinVal = new QLabel(tabPhenology);
         lblPhenologyPlatinumMinVal->setObjectName(QString::fromUtf8("lblPhenologyPlatinumMinVal"));
         lblPhenologyPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblPhenologyPlatinumMinVal->setFont(font2);
+        lblPhenologyPlatinumMinVal->setFont(font3);
         lblPhenologyPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyPlatinumMinVal->setMargin(-1);
         lblPhenologyPlatinumMinVal->setIndent(1);
@@ -1850,7 +1963,7 @@ public:
 
         lblPhenologyPlatinumMin = new QLabel(tabPhenology);
         lblPhenologyPlatinumMin->setObjectName(QString::fromUtf8("lblPhenologyPlatinumMin"));
-        lblPhenologyPlatinumMin->setFont(font2);
+        lblPhenologyPlatinumMin->setFont(font3);
         lblPhenologyPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPhenologyPlatinumMin->setMargin(-1);
         lblPhenologyPlatinumMin->setIndent(0);
@@ -2272,7 +2385,7 @@ public:
 
         lblPrevCropPlatinumMin = new QLabel(tabPrevCrop);
         lblPrevCropPlatinumMin->setObjectName(QString::fromUtf8("lblPrevCropPlatinumMin"));
-        lblPrevCropPlatinumMin->setFont(font2);
+        lblPrevCropPlatinumMin->setFont(font3);
         lblPrevCropPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropPlatinumMin->setMargin(-1);
         lblPrevCropPlatinumMin->setIndent(0);
@@ -2282,7 +2395,7 @@ public:
         lblPrevCropPlatinumMinVal = new QLabel(tabPrevCrop);
         lblPrevCropPlatinumMinVal->setObjectName(QString::fromUtf8("lblPrevCropPlatinumMinVal"));
         lblPrevCropPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblPrevCropPlatinumMinVal->setFont(font2);
+        lblPrevCropPlatinumMinVal->setFont(font3);
         lblPrevCropPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropPlatinumMinVal->setMargin(-1);
         lblPrevCropPlatinumMinVal->setIndent(1);
@@ -2291,7 +2404,7 @@ public:
 
         lblPrevCropGoldMin = new QLabel(tabPrevCrop);
         lblPrevCropGoldMin->setObjectName(QString::fromUtf8("lblPrevCropGoldMin"));
-        lblPrevCropGoldMin->setFont(font2);
+        lblPrevCropGoldMin->setFont(font3);
         lblPrevCropGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropGoldMin->setMargin(-2);
         lblPrevCropGoldMin->setIndent(0);
@@ -2301,7 +2414,7 @@ public:
         lblPrevCropGoldMinVal = new QLabel(tabPrevCrop);
         lblPrevCropGoldMinVal->setObjectName(QString::fromUtf8("lblPrevCropGoldMinVal"));
         lblPrevCropGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblPrevCropGoldMinVal->setFont(font2);
+        lblPrevCropGoldMinVal->setFont(font3);
         lblPrevCropGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropGoldMinVal->setMargin(-1);
         lblPrevCropGoldMinVal->setIndent(1);
@@ -2310,7 +2423,7 @@ public:
 
         lblPrevCropSilverMin = new QLabel(tabPrevCrop);
         lblPrevCropSilverMin->setObjectName(QString::fromUtf8("lblPrevCropSilverMin"));
-        lblPrevCropSilverMin->setFont(font2);
+        lblPrevCropSilverMin->setFont(font3);
         lblPrevCropSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropSilverMin->setMargin(-2);
         lblPrevCropSilverMin->setIndent(0);
@@ -2320,7 +2433,7 @@ public:
         lblPrevCropSilverMinVal = new QLabel(tabPrevCrop);
         lblPrevCropSilverMinVal->setObjectName(QString::fromUtf8("lblPrevCropSilverMinVal"));
         lblPrevCropSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblPrevCropSilverMinVal->setFont(font2);
+        lblPrevCropSilverMinVal->setFont(font3);
         lblPrevCropSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropSilverMinVal->setMargin(-1);
         lblPrevCropSilverMinVal->setIndent(1);
@@ -2329,7 +2442,7 @@ public:
 
         lblPrevCropBronzeMin = new QLabel(tabPrevCrop);
         lblPrevCropBronzeMin->setObjectName(QString::fromUtf8("lblPrevCropBronzeMin"));
-        lblPrevCropBronzeMin->setFont(font2);
+        lblPrevCropBronzeMin->setFont(font3);
         lblPrevCropBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropBronzeMin->setMargin(-2);
         lblPrevCropBronzeMin->setIndent(0);
@@ -2339,7 +2452,7 @@ public:
         lblPrevCropBronzeMinVal = new QLabel(tabPrevCrop);
         lblPrevCropBronzeMinVal->setObjectName(QString::fromUtf8("lblPrevCropBronzeMinVal"));
         lblPrevCropBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblPrevCropBronzeMinVal->setFont(font2);
+        lblPrevCropBronzeMinVal->setFont(font3);
         lblPrevCropBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblPrevCropBronzeMinVal->setMargin(-1);
         lblPrevCropBronzeMinVal->setIndent(1);
@@ -2389,7 +2502,7 @@ public:
 
         lblInitialValuesBronzeMin = new QLabel(tabInitialValues);
         lblInitialValuesBronzeMin->setObjectName(QString::fromUtf8("lblInitialValuesBronzeMin"));
-        lblInitialValuesBronzeMin->setFont(font2);
+        lblInitialValuesBronzeMin->setFont(font3);
         lblInitialValuesBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesBronzeMin->setMargin(-2);
         lblInitialValuesBronzeMin->setIndent(0);
@@ -2399,7 +2512,7 @@ public:
         lblInitialValuesSilverMinVal = new QLabel(tabInitialValues);
         lblInitialValuesSilverMinVal->setObjectName(QString::fromUtf8("lblInitialValuesSilverMinVal"));
         lblInitialValuesSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblInitialValuesSilverMinVal->setFont(font2);
+        lblInitialValuesSilverMinVal->setFont(font3);
         lblInitialValuesSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesSilverMinVal->setMargin(-1);
         lblInitialValuesSilverMinVal->setIndent(1);
@@ -2409,7 +2522,7 @@ public:
         lblInitialValuesBronzeMinVal = new QLabel(tabInitialValues);
         lblInitialValuesBronzeMinVal->setObjectName(QString::fromUtf8("lblInitialValuesBronzeMinVal"));
         lblInitialValuesBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblInitialValuesBronzeMinVal->setFont(font2);
+        lblInitialValuesBronzeMinVal->setFont(font3);
         lblInitialValuesBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesBronzeMinVal->setMargin(-1);
         lblInitialValuesBronzeMinVal->setIndent(1);
@@ -2418,7 +2531,7 @@ public:
 
         lblInitialValuesGoldMin = new QLabel(tabInitialValues);
         lblInitialValuesGoldMin->setObjectName(QString::fromUtf8("lblInitialValuesGoldMin"));
-        lblInitialValuesGoldMin->setFont(font2);
+        lblInitialValuesGoldMin->setFont(font3);
         lblInitialValuesGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesGoldMin->setMargin(-2);
         lblInitialValuesGoldMin->setIndent(0);
@@ -2427,7 +2540,7 @@ public:
 
         lblInitialValuesSilverMin = new QLabel(tabInitialValues);
         lblInitialValuesSilverMin->setObjectName(QString::fromUtf8("lblInitialValuesSilverMin"));
-        lblInitialValuesSilverMin->setFont(font2);
+        lblInitialValuesSilverMin->setFont(font3);
         lblInitialValuesSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesSilverMin->setMargin(-2);
         lblInitialValuesSilverMin->setIndent(0);
@@ -2437,7 +2550,7 @@ public:
         lblInitialValuesGoldMinVal = new QLabel(tabInitialValues);
         lblInitialValuesGoldMinVal->setObjectName(QString::fromUtf8("lblInitialValuesGoldMinVal"));
         lblInitialValuesGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblInitialValuesGoldMinVal->setFont(font2);
+        lblInitialValuesGoldMinVal->setFont(font3);
         lblInitialValuesGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesGoldMinVal->setMargin(-1);
         lblInitialValuesGoldMinVal->setIndent(1);
@@ -2566,7 +2679,7 @@ public:
 
         lblInitialValuesPlatinumMin = new QLabel(tabInitialValues);
         lblInitialValuesPlatinumMin->setObjectName(QString::fromUtf8("lblInitialValuesPlatinumMin"));
-        lblInitialValuesPlatinumMin->setFont(font2);
+        lblInitialValuesPlatinumMin->setFont(font3);
         lblInitialValuesPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesPlatinumMin->setMargin(-1);
         lblInitialValuesPlatinumMin->setIndent(0);
@@ -2601,7 +2714,7 @@ public:
         lblInitialValuesPlatinumMinVal = new QLabel(tabInitialValues);
         lblInitialValuesPlatinumMinVal->setObjectName(QString::fromUtf8("lblInitialValuesPlatinumMinVal"));
         lblInitialValuesPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblInitialValuesPlatinumMinVal->setFont(font2);
+        lblInitialValuesPlatinumMinVal->setFont(font3);
         lblInitialValuesPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblInitialValuesPlatinumMinVal->setMargin(-1);
         lblInitialValuesPlatinumMinVal->setIndent(1);
@@ -2656,7 +2769,7 @@ public:
 
         lblSoilPlatinumMin = new QLabel(tabSoil);
         lblSoilPlatinumMin->setObjectName(QString::fromUtf8("lblSoilPlatinumMin"));
-        lblSoilPlatinumMin->setFont(font2);
+        lblSoilPlatinumMin->setFont(font3);
         lblSoilPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilPlatinumMin->setMargin(-1);
         lblSoilPlatinumMin->setIndent(0);
@@ -2716,7 +2829,7 @@ public:
         lblSoilPlatinumMinVal = new QLabel(tabSoil);
         lblSoilPlatinumMinVal->setObjectName(QString::fromUtf8("lblSoilPlatinumMinVal"));
         lblSoilPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblSoilPlatinumMinVal->setFont(font2);
+        lblSoilPlatinumMinVal->setFont(font3);
         lblSoilPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilPlatinumMinVal->setMargin(-1);
         lblSoilPlatinumMinVal->setIndent(1);
@@ -2725,7 +2838,7 @@ public:
 
         lblSoilGoldMin = new QLabel(tabSoil);
         lblSoilGoldMin->setObjectName(QString::fromUtf8("lblSoilGoldMin"));
-        lblSoilGoldMin->setFont(font2);
+        lblSoilGoldMin->setFont(font3);
         lblSoilGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilGoldMin->setMargin(-2);
         lblSoilGoldMin->setIndent(0);
@@ -2735,7 +2848,7 @@ public:
         lblSoilGoldMinVal = new QLabel(tabSoil);
         lblSoilGoldMinVal->setObjectName(QString::fromUtf8("lblSoilGoldMinVal"));
         lblSoilGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblSoilGoldMinVal->setFont(font2);
+        lblSoilGoldMinVal->setFont(font3);
         lblSoilGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilGoldMinVal->setMargin(-1);
         lblSoilGoldMinVal->setIndent(1);
@@ -2744,7 +2857,7 @@ public:
 
         lblSoilSilverMin = new QLabel(tabSoil);
         lblSoilSilverMin->setObjectName(QString::fromUtf8("lblSoilSilverMin"));
-        lblSoilSilverMin->setFont(font2);
+        lblSoilSilverMin->setFont(font3);
         lblSoilSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilSilverMin->setMargin(-2);
         lblSoilSilverMin->setIndent(0);
@@ -2754,7 +2867,7 @@ public:
         lblSoilSilverMinVal = new QLabel(tabSoil);
         lblSoilSilverMinVal->setObjectName(QString::fromUtf8("lblSoilSilverMinVal"));
         lblSoilSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblSoilSilverMinVal->setFont(font2);
+        lblSoilSilverMinVal->setFont(font3);
         lblSoilSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilSilverMinVal->setMargin(-1);
         lblSoilSilverMinVal->setIndent(1);
@@ -2763,7 +2876,7 @@ public:
 
         lblSoilBronzeMin = new QLabel(tabSoil);
         lblSoilBronzeMin->setObjectName(QString::fromUtf8("lblSoilBronzeMin"));
-        lblSoilBronzeMin->setFont(font2);
+        lblSoilBronzeMin->setFont(font3);
         lblSoilBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilBronzeMin->setMargin(-2);
         lblSoilBronzeMin->setIndent(0);
@@ -2773,7 +2886,7 @@ public:
         lblSoilBronzeMinVal = new QLabel(tabSoil);
         lblSoilBronzeMinVal->setObjectName(QString::fromUtf8("lblSoilBronzeMinVal"));
         lblSoilBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblSoilBronzeMinVal->setFont(font2);
+        lblSoilBronzeMinVal->setFont(font3);
         lblSoilBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSoilBronzeMinVal->setMargin(-1);
         lblSoilBronzeMinVal->setIndent(1);
@@ -3341,7 +3454,7 @@ public:
 
         lblSitePlatinumMin = new QLabel(tabSite);
         lblSitePlatinumMin->setObjectName(QString::fromUtf8("lblSitePlatinumMin"));
-        lblSitePlatinumMin->setFont(font2);
+        lblSitePlatinumMin->setFont(font3);
         lblSitePlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSitePlatinumMin->setMargin(-1);
         lblSitePlatinumMin->setIndent(0);
@@ -3350,7 +3463,7 @@ public:
 
         lblSiteGoldMin = new QLabel(tabSite);
         lblSiteGoldMin->setObjectName(QString::fromUtf8("lblSiteGoldMin"));
-        lblSiteGoldMin->setFont(font2);
+        lblSiteGoldMin->setFont(font3);
         lblSiteGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteGoldMin->setMargin(-2);
         lblSiteGoldMin->setIndent(0);
@@ -3360,7 +3473,7 @@ public:
         lblSitePlatinumMinVal = new QLabel(tabSite);
         lblSitePlatinumMinVal->setObjectName(QString::fromUtf8("lblSitePlatinumMinVal"));
         lblSitePlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblSitePlatinumMinVal->setFont(font2);
+        lblSitePlatinumMinVal->setFont(font3);
         lblSitePlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSitePlatinumMinVal->setMargin(-1);
         lblSitePlatinumMinVal->setIndent(1);
@@ -3369,7 +3482,7 @@ public:
 
         lblSiteBronzeMin = new QLabel(tabSite);
         lblSiteBronzeMin->setObjectName(QString::fromUtf8("lblSiteBronzeMin"));
-        lblSiteBronzeMin->setFont(font2);
+        lblSiteBronzeMin->setFont(font3);
         lblSiteBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteBronzeMin->setMargin(-2);
         lblSiteBronzeMin->setIndent(0);
@@ -3379,7 +3492,7 @@ public:
         lblSiteBronzeMinVal = new QLabel(tabSite);
         lblSiteBronzeMinVal->setObjectName(QString::fromUtf8("lblSiteBronzeMinVal"));
         lblSiteBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblSiteBronzeMinVal->setFont(font2);
+        lblSiteBronzeMinVal->setFont(font3);
         lblSiteBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteBronzeMinVal->setMargin(-1);
         lblSiteBronzeMinVal->setIndent(1);
@@ -3445,7 +3558,7 @@ public:
 
         lblSiteSilverMin = new QLabel(tabSite);
         lblSiteSilverMin->setObjectName(QString::fromUtf8("lblSiteSilverMin"));
-        lblSiteSilverMin->setFont(font2);
+        lblSiteSilverMin->setFont(font3);
         lblSiteSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteSilverMin->setMargin(-2);
         lblSiteSilverMin->setIndent(0);
@@ -3455,7 +3568,7 @@ public:
         lblSiteGoldMinVal = new QLabel(tabSite);
         lblSiteGoldMinVal->setObjectName(QString::fromUtf8("lblSiteGoldMinVal"));
         lblSiteGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblSiteGoldMinVal->setFont(font2);
+        lblSiteGoldMinVal->setFont(font3);
         lblSiteGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteGoldMinVal->setMargin(-1);
         lblSiteGoldMinVal->setIndent(1);
@@ -3471,7 +3584,7 @@ public:
         lblSiteSilverMinVal = new QLabel(tabSite);
         lblSiteSilverMinVal->setObjectName(QString::fromUtf8("lblSiteSilverMinVal"));
         lblSiteSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblSiteSilverMinVal->setFont(font2);
+        lblSiteSilverMinVal->setFont(font3);
         lblSiteSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblSiteSilverMinVal->setMargin(-1);
         lblSiteSilverMinVal->setIndent(1);
@@ -3989,7 +4102,7 @@ public:
 
         lblWeatherPlatinumMin = new QLabel(tabWeather);
         lblWeatherPlatinumMin->setObjectName(QString::fromUtf8("lblWeatherPlatinumMin"));
-        lblWeatherPlatinumMin->setFont(font2);
+        lblWeatherPlatinumMin->setFont(font3);
         lblWeatherPlatinumMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherPlatinumMin->setMargin(-1);
         lblWeatherPlatinumMin->setIndent(0);
@@ -3999,7 +4112,7 @@ public:
         lblWeatherPlatinumMinVal = new QLabel(tabWeather);
         lblWeatherPlatinumMinVal->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinVal"));
         lblWeatherPlatinumMinVal->setMinimumSize(QSize(25, 0));
-        lblWeatherPlatinumMinVal->setFont(font2);
+        lblWeatherPlatinumMinVal->setFont(font3);
         lblWeatherPlatinumMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherPlatinumMinVal->setMargin(-1);
         lblWeatherPlatinumMinVal->setIndent(1);
@@ -4008,7 +4121,7 @@ public:
 
         lblWeatherGoldMin = new QLabel(tabWeather);
         lblWeatherGoldMin->setObjectName(QString::fromUtf8("lblWeatherGoldMin"));
-        lblWeatherGoldMin->setFont(font2);
+        lblWeatherGoldMin->setFont(font3);
         lblWeatherGoldMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMin->setMargin(-2);
         lblWeatherGoldMin->setIndent(0);
@@ -4018,7 +4131,7 @@ public:
         lblWeatherGoldMinVal = new QLabel(tabWeather);
         lblWeatherGoldMinVal->setObjectName(QString::fromUtf8("lblWeatherGoldMinVal"));
         lblWeatherGoldMinVal->setMinimumSize(QSize(25, 0));
-        lblWeatherGoldMinVal->setFont(font2);
+        lblWeatherGoldMinVal->setFont(font3);
         lblWeatherGoldMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMinVal->setMargin(-1);
         lblWeatherGoldMinVal->setIndent(1);
@@ -4027,7 +4140,7 @@ public:
 
         lblWeatherSilverMin = new QLabel(tabWeather);
         lblWeatherSilverMin->setObjectName(QString::fromUtf8("lblWeatherSilverMin"));
-        lblWeatherSilverMin->setFont(font2);
+        lblWeatherSilverMin->setFont(font3);
         lblWeatherSilverMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherSilverMin->setMargin(-2);
         lblWeatherSilverMin->setIndent(0);
@@ -4037,7 +4150,7 @@ public:
         lblWeatherSilverMinVal = new QLabel(tabWeather);
         lblWeatherSilverMinVal->setObjectName(QString::fromUtf8("lblWeatherSilverMinVal"));
         lblWeatherSilverMinVal->setMinimumSize(QSize(25, 0));
-        lblWeatherSilverMinVal->setFont(font2);
+        lblWeatherSilverMinVal->setFont(font3);
         lblWeatherSilverMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherSilverMinVal->setMargin(-1);
         lblWeatherSilverMinVal->setIndent(1);
@@ -4046,7 +4159,7 @@ public:
 
         lblWeatherBronzeMin = new QLabel(tabWeather);
         lblWeatherBronzeMin->setObjectName(QString::fromUtf8("lblWeatherBronzeMin"));
-        lblWeatherBronzeMin->setFont(font2);
+        lblWeatherBronzeMin->setFont(font3);
         lblWeatherBronzeMin->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherBronzeMin->setMargin(-2);
         lblWeatherBronzeMin->setIndent(0);
@@ -4056,7 +4169,7 @@ public:
         lblWeatherBronzeMinVal = new QLabel(tabWeather);
         lblWeatherBronzeMinVal->setObjectName(QString::fromUtf8("lblWeatherBronzeMinVal"));
         lblWeatherBronzeMinVal->setMinimumSize(QSize(25, 0));
-        lblWeatherBronzeMinVal->setFont(font2);
+        lblWeatherBronzeMinVal->setFont(font3);
         lblWeatherBronzeMinVal->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherBronzeMinVal->setMargin(-1);
         lblWeatherBronzeMinVal->setIndent(1);
@@ -4088,11 +4201,22 @@ public:
         tabStateVars->setObjectName(QString::fromUtf8("tabStateVars"));
         gridLayout_11 = new QGridLayout(tabStateVars);
         gridLayout_11->setObjectName(QString::fromUtf8("gridLayout_11"));
+        lblSVTotalPointsHeader = new QLabel(tabStateVars);
+        lblSVTotalPointsHeader->setObjectName(QString::fromUtf8("lblSVTotalPointsHeader"));
+        lblSVTotalPointsHeader->setFont(font1);
+
+        gridLayout_11->addWidget(lblSVTotalPointsHeader, 0, 1, 1, 1);
+
+        verticalSpacer = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
+
+        gridLayout_11->addItem(verticalSpacer, 4, 1, 1, 1);
+
         toolBoxStateVars = new QToolBox(tabStateVars);
         toolBoxStateVars->setObjectName(QString::fromUtf8("toolBoxStateVars"));
+        toolBoxStateVars->setEnabled(true);
         pageCrop = new QWidget();
         pageCrop->setObjectName(QString::fromUtf8("pageCrop"));
-        pageCrop->setGeometry(QRect(0, 0, 674, 383));
+        pageCrop->setGeometry(QRect(0, 0, 458, 383));
         gridLayout_14 = new QGridLayout(pageCrop);
         gridLayout_14->setObjectName(QString::fromUtf8("gridLayout_14"));
         gbxSVCrop = new QGroupBox(pageCrop);
@@ -4363,7 +4487,7 @@ public:
         lblWeatherGoldMinValSVCrop = new QLabel(gbxSVCrop);
         lblWeatherGoldMinValSVCrop->setObjectName(QString::fromUtf8("lblWeatherGoldMinValSVCrop"));
         lblWeatherGoldMinValSVCrop->setMinimumSize(QSize(25, 0));
-        lblWeatherGoldMinValSVCrop->setFont(font2);
+        lblWeatherGoldMinValSVCrop->setFont(font3);
         lblWeatherGoldMinValSVCrop->setAlignment(Qt::AlignCenter);
         lblWeatherGoldMinValSVCrop->setMargin(-1);
         lblWeatherGoldMinValSVCrop->setIndent(1);
@@ -4373,7 +4497,7 @@ public:
         lblWeatherPlatinumMinValSVCrop = new QLabel(gbxSVCrop);
         lblWeatherPlatinumMinValSVCrop->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinValSVCrop"));
         lblWeatherPlatinumMinValSVCrop->setMinimumSize(QSize(25, 0));
-        lblWeatherPlatinumMinValSVCrop->setFont(font2);
+        lblWeatherPlatinumMinValSVCrop->setFont(font3);
         lblWeatherPlatinumMinValSVCrop->setAlignment(Qt::AlignCenter);
         lblWeatherPlatinumMinValSVCrop->setMargin(-1);
         lblWeatherPlatinumMinValSVCrop->setIndent(1);
@@ -4383,7 +4507,7 @@ public:
         lblWeatherSilverMinValSVCrop = new QLabel(gbxSVCrop);
         lblWeatherSilverMinValSVCrop->setObjectName(QString::fromUtf8("lblWeatherSilverMinValSVCrop"));
         lblWeatherSilverMinValSVCrop->setMinimumSize(QSize(25, 0));
-        lblWeatherSilverMinValSVCrop->setFont(font2);
+        lblWeatherSilverMinValSVCrop->setFont(font3);
         lblWeatherSilverMinValSVCrop->setAlignment(Qt::AlignCenter);
         lblWeatherSilverMinValSVCrop->setMargin(-1);
         lblWeatherSilverMinValSVCrop->setIndent(1);
@@ -4393,7 +4517,7 @@ public:
         lblWeatherBronzeMinValSVCrop = new QLabel(gbxSVCrop);
         lblWeatherBronzeMinValSVCrop->setObjectName(QString::fromUtf8("lblWeatherBronzeMinValSVCrop"));
         lblWeatherBronzeMinValSVCrop->setMinimumSize(QSize(25, 0));
-        lblWeatherBronzeMinValSVCrop->setFont(font2);
+        lblWeatherBronzeMinValSVCrop->setFont(font3);
         lblWeatherBronzeMinValSVCrop->setAlignment(Qt::AlignCenter);
         lblWeatherBronzeMinValSVCrop->setMargin(-1);
         lblWeatherBronzeMinValSVCrop->setIndent(1);
@@ -4402,7 +4526,7 @@ public:
 
         lblWeatherBronzeMinSVCrop = new QLabel(gbxSVCrop);
         lblWeatherBronzeMinSVCrop->setObjectName(QString::fromUtf8("lblWeatherBronzeMinSVCrop"));
-        lblWeatherBronzeMinSVCrop->setFont(font2);
+        lblWeatherBronzeMinSVCrop->setFont(font3);
         lblWeatherBronzeMinSVCrop->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherBronzeMinSVCrop->setMargin(0);
         lblWeatherBronzeMinSVCrop->setIndent(0);
@@ -4411,7 +4535,7 @@ public:
 
         lblWeatherSilverMinSVCrop = new QLabel(gbxSVCrop);
         lblWeatherSilverMinSVCrop->setObjectName(QString::fromUtf8("lblWeatherSilverMinSVCrop"));
-        lblWeatherSilverMinSVCrop->setFont(font2);
+        lblWeatherSilverMinSVCrop->setFont(font3);
         lblWeatherSilverMinSVCrop->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherSilverMinSVCrop->setMargin(0);
         lblWeatherSilverMinSVCrop->setIndent(0);
@@ -4420,7 +4544,7 @@ public:
 
         lblWeatherGoldMinSVCrop = new QLabel(gbxSVCrop);
         lblWeatherGoldMinSVCrop->setObjectName(QString::fromUtf8("lblWeatherGoldMinSVCrop"));
-        lblWeatherGoldMinSVCrop->setFont(font2);
+        lblWeatherGoldMinSVCrop->setFont(font3);
         lblWeatherGoldMinSVCrop->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMinSVCrop->setMargin(0);
         lblWeatherGoldMinSVCrop->setIndent(0);
@@ -4429,7 +4553,7 @@ public:
 
         lblWeatherPlatinumMinSVCrop = new QLabel(gbxSVCrop);
         lblWeatherPlatinumMinSVCrop->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinSVCrop"));
-        lblWeatherPlatinumMinSVCrop->setFont(font2);
+        lblWeatherPlatinumMinSVCrop->setFont(font3);
         lblWeatherPlatinumMinSVCrop->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherPlatinumMinSVCrop->setMargin(0);
         lblWeatherPlatinumMinSVCrop->setIndent(0);
@@ -4473,10 +4597,10 @@ public:
 
         gridLayout_14->addWidget(gbxSVCrop, 1, 0, 1, 1);
 
-        toolBoxStateVars->addItem(pageCrop, icon, QString::fromUtf8("Crop"));
+        toolBoxStateVars->addItem(pageCrop, QString::fromUtf8("Crop"));
         pageSoil = new QWidget();
         pageSoil->setObjectName(QString::fromUtf8("pageSoil"));
-        pageSoil->setGeometry(QRect(0, 0, 674, 383));
+        pageSoil->setGeometry(QRect(0, 0, 516, 383));
         gridLayout_12 = new QGridLayout(pageSoil);
         gridLayout_12->setObjectName(QString::fromUtf8("gridLayout_12"));
         gbxSVSoil = new QGroupBox(pageSoil);
@@ -4776,7 +4900,7 @@ public:
         gridLayoutSVSoilRankLvls->setObjectName(QString::fromUtf8("gridLayoutSVSoilRankLvls"));
         lblWeatherPlatinumMinSVSoil = new QLabel(gbxSVSoil);
         lblWeatherPlatinumMinSVSoil->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinSVSoil"));
-        lblWeatherPlatinumMinSVSoil->setFont(font2);
+        lblWeatherPlatinumMinSVSoil->setFont(font3);
         lblWeatherPlatinumMinSVSoil->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherPlatinumMinSVSoil->setMargin(0);
         lblWeatherPlatinumMinSVSoil->setIndent(0);
@@ -4786,7 +4910,7 @@ public:
         lblWeatherPlatinumMinValSVSoil = new QLabel(gbxSVSoil);
         lblWeatherPlatinumMinValSVSoil->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinValSVSoil"));
         lblWeatherPlatinumMinValSVSoil->setMinimumSize(QSize(25, 0));
-        lblWeatherPlatinumMinValSVSoil->setFont(font2);
+        lblWeatherPlatinumMinValSVSoil->setFont(font3);
         lblWeatherPlatinumMinValSVSoil->setAlignment(Qt::AlignCenter);
         lblWeatherPlatinumMinValSVSoil->setMargin(-1);
         lblWeatherPlatinumMinValSVSoil->setIndent(1);
@@ -4796,7 +4920,7 @@ public:
         lblWeatherGoldMinValSVSoil = new QLabel(gbxSVSoil);
         lblWeatherGoldMinValSVSoil->setObjectName(QString::fromUtf8("lblWeatherGoldMinValSVSoil"));
         lblWeatherGoldMinValSVSoil->setMinimumSize(QSize(25, 0));
-        lblWeatherGoldMinValSVSoil->setFont(font2);
+        lblWeatherGoldMinValSVSoil->setFont(font3);
         lblWeatherGoldMinValSVSoil->setAlignment(Qt::AlignCenter);
         lblWeatherGoldMinValSVSoil->setMargin(-1);
         lblWeatherGoldMinValSVSoil->setIndent(1);
@@ -4805,7 +4929,7 @@ public:
 
         lblWeatherGoldMinSVSoil = new QLabel(gbxSVSoil);
         lblWeatherGoldMinSVSoil->setObjectName(QString::fromUtf8("lblWeatherGoldMinSVSoil"));
-        lblWeatherGoldMinSVSoil->setFont(font2);
+        lblWeatherGoldMinSVSoil->setFont(font3);
         lblWeatherGoldMinSVSoil->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMinSVSoil->setMargin(0);
         lblWeatherGoldMinSVSoil->setIndent(0);
@@ -4814,7 +4938,7 @@ public:
 
         lblWeatherSilverMinSVSoil = new QLabel(gbxSVSoil);
         lblWeatherSilverMinSVSoil->setObjectName(QString::fromUtf8("lblWeatherSilverMinSVSoil"));
-        lblWeatherSilverMinSVSoil->setFont(font2);
+        lblWeatherSilverMinSVSoil->setFont(font3);
         lblWeatherSilverMinSVSoil->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherSilverMinSVSoil->setMargin(0);
         lblWeatherSilverMinSVSoil->setIndent(0);
@@ -4823,7 +4947,7 @@ public:
 
         lblWeatherBronzeMinSVSoil = new QLabel(gbxSVSoil);
         lblWeatherBronzeMinSVSoil->setObjectName(QString::fromUtf8("lblWeatherBronzeMinSVSoil"));
-        lblWeatherBronzeMinSVSoil->setFont(font2);
+        lblWeatherBronzeMinSVSoil->setFont(font3);
         lblWeatherBronzeMinSVSoil->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherBronzeMinSVSoil->setMargin(0);
         lblWeatherBronzeMinSVSoil->setIndent(0);
@@ -4833,7 +4957,7 @@ public:
         lblWeatherSilverMinValSVSoil = new QLabel(gbxSVSoil);
         lblWeatherSilverMinValSVSoil->setObjectName(QString::fromUtf8("lblWeatherSilverMinValSVSoil"));
         lblWeatherSilverMinValSVSoil->setMinimumSize(QSize(25, 0));
-        lblWeatherSilverMinValSVSoil->setFont(font2);
+        lblWeatherSilverMinValSVSoil->setFont(font3);
         lblWeatherSilverMinValSVSoil->setAlignment(Qt::AlignCenter);
         lblWeatherSilverMinValSVSoil->setMargin(-1);
         lblWeatherSilverMinValSVSoil->setIndent(1);
@@ -4843,7 +4967,7 @@ public:
         lblWeatherBronzeMinValSVSoil = new QLabel(gbxSVSoil);
         lblWeatherBronzeMinValSVSoil->setObjectName(QString::fromUtf8("lblWeatherBronzeMinValSVSoil"));
         lblWeatherBronzeMinValSVSoil->setMinimumSize(QSize(25, 0));
-        lblWeatherBronzeMinValSVSoil->setFont(font2);
+        lblWeatherBronzeMinValSVSoil->setFont(font3);
         lblWeatherBronzeMinValSVSoil->setAlignment(Qt::AlignCenter);
         lblWeatherBronzeMinValSVSoil->setMargin(-1);
         lblWeatherBronzeMinValSVSoil->setIndent(1);
@@ -4866,12 +4990,10 @@ public:
 
         gridLayout_12->addWidget(gbxSVSoil, 0, 0, 1, 1);
 
-        QIcon icon1;
-        icon1.addFile(QString::fromUtf8(":/platinum.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolBoxStateVars->addItem(pageSoil, icon1, QString::fromUtf8("Soil"));
+        toolBoxStateVars->addItem(pageSoil, QString::fromUtf8("Soil"));
         surfaceFluxesPage = new QWidget();
         surfaceFluxesPage->setObjectName(QString::fromUtf8("surfaceFluxesPage"));
-        surfaceFluxesPage->setGeometry(QRect(0, 0, 674, 377));
+        surfaceFluxesPage->setGeometry(QRect(0, 0, 444, 349));
         gridLayout_15 = new QGridLayout(surfaceFluxesPage);
         gridLayout_15->setObjectName(QString::fromUtf8("gridLayout_15"));
         gbxSVSurfaceFluxes = new QGroupBox(surfaceFluxesPage);
@@ -5115,9 +5237,9 @@ public:
         gridLayoutSVSurfaceFluxesRankLvls->setObjectName(QString::fromUtf8("gridLayoutSVSurfaceFluxesRankLvls"));
         lblWeatherPlatinumMinSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherPlatinumMinSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinSVSurfaceFluxes"));
-        lblWeatherPlatinumMinSVSurfaceFluxes->setFont(font2);
+        lblWeatherPlatinumMinSVSurfaceFluxes->setFont(font3);
         lblWeatherPlatinumMinSVSurfaceFluxes->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblWeatherPlatinumMinSVSurfaceFluxes->setMargin(-1);
+        lblWeatherPlatinumMinSVSurfaceFluxes->setMargin(0);
         lblWeatherPlatinumMinSVSurfaceFluxes->setIndent(0);
 
         gridLayoutSVSurfaceFluxesRankLvls->addWidget(lblWeatherPlatinumMinSVSurfaceFluxes, 0, 0, 1, 1);
@@ -5125,7 +5247,7 @@ public:
         lblWeatherPlatinumMinValSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherPlatinumMinValSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinValSVSurfaceFluxes"));
         lblWeatherPlatinumMinValSVSurfaceFluxes->setMinimumSize(QSize(25, 0));
-        lblWeatherPlatinumMinValSVSurfaceFluxes->setFont(font2);
+        lblWeatherPlatinumMinValSVSurfaceFluxes->setFont(font3);
         lblWeatherPlatinumMinValSVSurfaceFluxes->setAlignment(Qt::AlignCenter);
         lblWeatherPlatinumMinValSVSurfaceFluxes->setMargin(-1);
         lblWeatherPlatinumMinValSVSurfaceFluxes->setIndent(1);
@@ -5135,7 +5257,7 @@ public:
         lblWeatherGoldMinValSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherGoldMinValSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherGoldMinValSVSurfaceFluxes"));
         lblWeatherGoldMinValSVSurfaceFluxes->setMinimumSize(QSize(25, 0));
-        lblWeatherGoldMinValSVSurfaceFluxes->setFont(font2);
+        lblWeatherGoldMinValSVSurfaceFluxes->setFont(font3);
         lblWeatherGoldMinValSVSurfaceFluxes->setAlignment(Qt::AlignCenter);
         lblWeatherGoldMinValSVSurfaceFluxes->setMargin(-1);
         lblWeatherGoldMinValSVSurfaceFluxes->setIndent(1);
@@ -5144,7 +5266,7 @@ public:
 
         lblWeatherGoldMinSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherGoldMinSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherGoldMinSVSurfaceFluxes"));
-        lblWeatherGoldMinSVSurfaceFluxes->setFont(font2);
+        lblWeatherGoldMinSVSurfaceFluxes->setFont(font3);
         lblWeatherGoldMinSVSurfaceFluxes->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMinSVSurfaceFluxes->setMargin(-2);
         lblWeatherGoldMinSVSurfaceFluxes->setIndent(0);
@@ -5153,18 +5275,18 @@ public:
 
         lblWeatherSilverMinSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherSilverMinSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherSilverMinSVSurfaceFluxes"));
-        lblWeatherSilverMinSVSurfaceFluxes->setFont(font2);
+        lblWeatherSilverMinSVSurfaceFluxes->setFont(font3);
         lblWeatherSilverMinSVSurfaceFluxes->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblWeatherSilverMinSVSurfaceFluxes->setMargin(-2);
+        lblWeatherSilverMinSVSurfaceFluxes->setMargin(0);
         lblWeatherSilverMinSVSurfaceFluxes->setIndent(0);
 
         gridLayoutSVSurfaceFluxesRankLvls->addWidget(lblWeatherSilverMinSVSurfaceFluxes, 0, 2, 1, 1);
 
         lblWeatherBronzeMinSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherBronzeMinSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherBronzeMinSVSurfaceFluxes"));
-        lblWeatherBronzeMinSVSurfaceFluxes->setFont(font2);
+        lblWeatherBronzeMinSVSurfaceFluxes->setFont(font3);
         lblWeatherBronzeMinSVSurfaceFluxes->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
-        lblWeatherBronzeMinSVSurfaceFluxes->setMargin(-2);
+        lblWeatherBronzeMinSVSurfaceFluxes->setMargin(0);
         lblWeatherBronzeMinSVSurfaceFluxes->setIndent(0);
 
         gridLayoutSVSurfaceFluxesRankLvls->addWidget(lblWeatherBronzeMinSVSurfaceFluxes, 0, 3, 1, 1);
@@ -5172,7 +5294,7 @@ public:
         lblWeatherSilverMinValSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherSilverMinValSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherSilverMinValSVSurfaceFluxes"));
         lblWeatherSilverMinValSVSurfaceFluxes->setMinimumSize(QSize(25, 0));
-        lblWeatherSilverMinValSVSurfaceFluxes->setFont(font2);
+        lblWeatherSilverMinValSVSurfaceFluxes->setFont(font3);
         lblWeatherSilverMinValSVSurfaceFluxes->setAlignment(Qt::AlignCenter);
         lblWeatherSilverMinValSVSurfaceFluxes->setMargin(-1);
         lblWeatherSilverMinValSVSurfaceFluxes->setIndent(1);
@@ -5182,7 +5304,7 @@ public:
         lblWeatherBronzeMinValSVSurfaceFluxes = new QLabel(gbxSVSurfaceFluxes);
         lblWeatherBronzeMinValSVSurfaceFluxes->setObjectName(QString::fromUtf8("lblWeatherBronzeMinValSVSurfaceFluxes"));
         lblWeatherBronzeMinValSVSurfaceFluxes->setMinimumSize(QSize(25, 0));
-        lblWeatherBronzeMinValSVSurfaceFluxes->setFont(font2);
+        lblWeatherBronzeMinValSVSurfaceFluxes->setFont(font3);
         lblWeatherBronzeMinValSVSurfaceFluxes->setAlignment(Qt::AlignCenter);
         lblWeatherBronzeMinValSVSurfaceFluxes->setMargin(-1);
         lblWeatherBronzeMinValSVSurfaceFluxes->setIndent(1);
@@ -5227,12 +5349,10 @@ public:
 
         gridLayout_15->addWidget(gbxSVSurfaceFluxes, 1, 0, 1, 1);
 
-        QIcon icon2;
-        icon2.addFile(QString::fromUtf8(":/bronze.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolBoxStateVars->addItem(surfaceFluxesPage, icon2, QString::fromUtf8("Surface Fluxes"));
+        toolBoxStateVars->addItem(surfaceFluxesPage, QString::fromUtf8("Surface Fluxes"));
         pageObservations = new QWidget();
         pageObservations->setObjectName(QString::fromUtf8("pageObservations"));
-        pageObservations->setGeometry(QRect(0, 0, 674, 377));
+        pageObservations->setGeometry(QRect(0, 0, 679, 394));
         gridLayout_16 = new QGridLayout(pageObservations);
         gridLayout_16->setObjectName(QString::fromUtf8("gridLayout_16"));
         gbxSVObservations = new QGroupBox(pageObservations);
@@ -5262,7 +5382,7 @@ public:
         gridLayoutSVObservationsRankLvls->setObjectName(QString::fromUtf8("gridLayoutSVObservationsRankLvls"));
         lblWeatherPlatinumMinSVObservations = new QLabel(gbxSVObservations);
         lblWeatherPlatinumMinSVObservations->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinSVObservations"));
-        lblWeatherPlatinumMinSVObservations->setFont(font2);
+        lblWeatherPlatinumMinSVObservations->setFont(font3);
         lblWeatherPlatinumMinSVObservations->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherPlatinumMinSVObservations->setMargin(-1);
         lblWeatherPlatinumMinSVObservations->setIndent(0);
@@ -5272,7 +5392,7 @@ public:
         lblWeatherPlatinumMinValSVObservations = new QLabel(gbxSVObservations);
         lblWeatherPlatinumMinValSVObservations->setObjectName(QString::fromUtf8("lblWeatherPlatinumMinValSVObservations"));
         lblWeatherPlatinumMinValSVObservations->setMinimumSize(QSize(25, 0));
-        lblWeatherPlatinumMinValSVObservations->setFont(font2);
+        lblWeatherPlatinumMinValSVObservations->setFont(font3);
         lblWeatherPlatinumMinValSVObservations->setAlignment(Qt::AlignCenter);
         lblWeatherPlatinumMinValSVObservations->setMargin(-1);
         lblWeatherPlatinumMinValSVObservations->setIndent(1);
@@ -5282,7 +5402,7 @@ public:
         lblWeatherGoldMinValSVObservations = new QLabel(gbxSVObservations);
         lblWeatherGoldMinValSVObservations->setObjectName(QString::fromUtf8("lblWeatherGoldMinValSVObservations"));
         lblWeatherGoldMinValSVObservations->setMinimumSize(QSize(25, 0));
-        lblWeatherGoldMinValSVObservations->setFont(font2);
+        lblWeatherGoldMinValSVObservations->setFont(font3);
         lblWeatherGoldMinValSVObservations->setAlignment(Qt::AlignCenter);
         lblWeatherGoldMinValSVObservations->setMargin(-1);
         lblWeatherGoldMinValSVObservations->setIndent(1);
@@ -5291,7 +5411,7 @@ public:
 
         lblWeatherGoldMinSVObservations = new QLabel(gbxSVObservations);
         lblWeatherGoldMinSVObservations->setObjectName(QString::fromUtf8("lblWeatherGoldMinSVObservations"));
-        lblWeatherGoldMinSVObservations->setFont(font2);
+        lblWeatherGoldMinSVObservations->setFont(font3);
         lblWeatherGoldMinSVObservations->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherGoldMinSVObservations->setMargin(-2);
         lblWeatherGoldMinSVObservations->setIndent(0);
@@ -5300,7 +5420,7 @@ public:
 
         lblWeatherSilverMinSVObservations = new QLabel(gbxSVObservations);
         lblWeatherSilverMinSVObservations->setObjectName(QString::fromUtf8("lblWeatherSilverMinSVObservations"));
-        lblWeatherSilverMinSVObservations->setFont(font2);
+        lblWeatherSilverMinSVObservations->setFont(font3);
         lblWeatherSilverMinSVObservations->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherSilverMinSVObservations->setMargin(-2);
         lblWeatherSilverMinSVObservations->setIndent(0);
@@ -5309,7 +5429,7 @@ public:
 
         lblWeatherBronzeMinSVObservations = new QLabel(gbxSVObservations);
         lblWeatherBronzeMinSVObservations->setObjectName(QString::fromUtf8("lblWeatherBronzeMinSVObservations"));
-        lblWeatherBronzeMinSVObservations->setFont(font2);
+        lblWeatherBronzeMinSVObservations->setFont(font3);
         lblWeatherBronzeMinSVObservations->setAlignment(Qt::AlignRight|Qt::AlignTrailing|Qt::AlignVCenter);
         lblWeatherBronzeMinSVObservations->setMargin(-2);
         lblWeatherBronzeMinSVObservations->setIndent(0);
@@ -5319,7 +5439,7 @@ public:
         lblWeatherSilverMinValSVObservations = new QLabel(gbxSVObservations);
         lblWeatherSilverMinValSVObservations->setObjectName(QString::fromUtf8("lblWeatherSilverMinValSVObservations"));
         lblWeatherSilverMinValSVObservations->setMinimumSize(QSize(25, 0));
-        lblWeatherSilverMinValSVObservations->setFont(font2);
+        lblWeatherSilverMinValSVObservations->setFont(font3);
         lblWeatherSilverMinValSVObservations->setAlignment(Qt::AlignCenter);
         lblWeatherSilverMinValSVObservations->setMargin(-1);
         lblWeatherSilverMinValSVObservations->setIndent(1);
@@ -5329,7 +5449,7 @@ public:
         lblWeatherBronzeMinValSVObservations = new QLabel(gbxSVObservations);
         lblWeatherBronzeMinValSVObservations->setObjectName(QString::fromUtf8("lblWeatherBronzeMinValSVObservations"));
         lblWeatherBronzeMinValSVObservations->setMinimumSize(QSize(25, 0));
-        lblWeatherBronzeMinValSVObservations->setFont(font2);
+        lblWeatherBronzeMinValSVObservations->setFont(font3);
         lblWeatherBronzeMinValSVObservations->setAlignment(Qt::AlignCenter);
         lblWeatherBronzeMinValSVObservations->setMargin(-1);
         lblWeatherBronzeMinValSVObservations->setIndent(1);
@@ -5518,11 +5638,36 @@ public:
 
         gridLayout_16->addWidget(gbxSVObservations, 0, 0, 1, 1);
 
-        QIcon icon3;
-        icon3.addFile(QString::fromUtf8(":/silver.png"), QSize(), QIcon::Normal, QIcon::Off);
-        toolBoxStateVars->addItem(pageObservations, icon3, QString::fromUtf8("Observations"));
+        toolBoxStateVars->addItem(pageObservations, QString::fromUtf8("Observations"));
+        pageElevation = new QWidget();
+        pageElevation->setObjectName(QString::fromUtf8("pageElevation"));
+        pageElevation->setGeometry(QRect(0, 0, 100, 30));
+        toolBoxStateVars->addItem(pageElevation, QString::fromUtf8("Eelvation"));
 
-        gridLayout_11->addWidget(toolBoxStateVars, 0, 0, 1, 1);
+        gridLayout_11->addWidget(toolBoxStateVars, 0, 0, 7, 1);
+
+        lblSVTotalPoints = new QLabel(tabStateVars);
+        lblSVTotalPoints->setObjectName(QString::fromUtf8("lblSVTotalPoints"));
+        lblSVTotalPoints->setFont(font1);
+        lblSVTotalPoints->setAlignment(Qt::AlignCenter);
+
+        gridLayout_11->addWidget(lblSVTotalPoints, 1, 1, 1, 1);
+
+        lblSVMedalCombined = new QLabel(tabStateVars);
+        lblSVMedalCombined->setObjectName(QString::fromUtf8("lblSVMedalCombined"));
+        lblSVMedalCombined->setMinimumSize(QSize(50, 50));
+        lblSVMedalCombined->setMaximumSize(QSize(50, 50));
+        lblSVMedalCombined->setFont(font1);
+        lblSVMedalCombined->setScaledContents(true);
+        lblSVMedalCombined->setAlignment(Qt::AlignCenter);
+
+        gridLayout_11->addWidget(lblSVMedalCombined, 2, 1, 1, 1);
+
+        lblSVRankOverall = new QLabel(tabStateVars);
+        lblSVRankOverall->setObjectName(QString::fromUtf8("lblSVRankOverall"));
+        lblSVRankOverall->setAlignment(Qt::AlignCenter);
+
+        gridLayout_11->addWidget(lblSVRankOverall, 3, 1, 1, 1);
 
         tabWidgetDataClassification->addTab(tabStateVars, QString());
         tabInfo = new QWidget();
@@ -5540,105 +5685,26 @@ public:
         splitter->addWidget(tabWidgetDataClassification);
         textEditSide = new QTextEdit(splitter);
         textEditSide->setObjectName(QString::fromUtf8("textEditSide"));
-        QSizePolicy sizePolicy5(QSizePolicy::Preferred, QSizePolicy::Expanding);
-        sizePolicy5.setHorizontalStretch(0);
-        sizePolicy5.setVerticalStretch(0);
-        sizePolicy5.setHeightForWidth(textEditSide->sizePolicy().hasHeightForWidth());
-        textEditSide->setSizePolicy(sizePolicy5);
+        textEditSide->setEnabled(true);
+        sizePolicy.setHeightForWidth(textEditSide->sizePolicy().hasHeightForWidth());
+        textEditSide->setSizePolicy(sizePolicy);
         splitter->addWidget(textEditSide);
 
-        gridLayout_28->addWidget(splitter, 0, 0, 1, 1);
-
-        verticalLayout_2 = new QVBoxLayout();
-        verticalLayout_2->setObjectName(QString::fromUtf8("verticalLayout_2"));
-        horizontalLayout = new QHBoxLayout();
-        horizontalLayout->setObjectName(QString::fromUtf8("horizontalLayout"));
-        cbDatasets = new QComboBox(MadDataClassification);
-        cbDatasets->setObjectName(QString::fromUtf8("cbDatasets"));
-        cbDatasets->setEnabled(true);
-        cbDatasets->setModelColumn(0);
-
-        horizontalLayout->addWidget(cbDatasets);
-
-        cbRankedDatasets = new QComboBox(MadDataClassification);
-        cbRankedDatasets->setObjectName(QString::fromUtf8("cbRankedDatasets"));
-
-        horizontalLayout->addWidget(cbRankedDatasets);
-
-        cbThemes = new QComboBox(MadDataClassification);
-        cbThemes->setObjectName(QString::fromUtf8("cbThemes"));
-
-        horizontalLayout->addWidget(cbThemes);
-
-
-        verticalLayout_2->addLayout(horizontalLayout);
-
-        horizontalLayoutNameDescription = new QHBoxLayout();
-        horizontalLayoutNameDescription->setObjectName(QString::fromUtf8("horizontalLayoutNameDescription"));
-        lblDataSetName = new QLabel(MadDataClassification);
-        lblDataSetName->setObjectName(QString::fromUtf8("lblDataSetName"));
-
-        horizontalLayoutNameDescription->addWidget(lblDataSetName);
-
-        leDatasetName = new QLineEdit(MadDataClassification);
-        leDatasetName->setObjectName(QString::fromUtf8("leDatasetName"));
-
-        horizontalLayoutNameDescription->addWidget(leDatasetName);
-
-        lblDescription = new QLabel(MadDataClassification);
-        lblDescription->setObjectName(QString::fromUtf8("lblDescription"));
-
-        horizontalLayoutNameDescription->addWidget(lblDescription);
-
-        leDescription = new QLineEdit(MadDataClassification);
-        leDescription->setObjectName(QString::fromUtf8("leDescription"));
-        leDescription->setEnabled(true);
-
-        horizontalLayoutNameDescription->addWidget(leDescription);
-
-
-        verticalLayout_2->addLayout(horizontalLayoutNameDescription);
-
-        horizontalLayoutTedLoadSave = new QHBoxLayout();
-        horizontalLayoutTedLoadSave->setObjectName(QString::fromUtf8("horizontalLayoutTedLoadSave"));
-        textEditBottom = new QTextEdit(MadDataClassification);
-        textEditBottom->setObjectName(QString::fromUtf8("textEditBottom"));
-
-        horizontalLayoutTedLoadSave->addWidget(textEditBottom);
-
-        verticalLayoutLoadSave = new QVBoxLayout();
-        verticalLayoutLoadSave->setObjectName(QString::fromUtf8("verticalLayoutLoadSave"));
-        pbLoad = new QPushButton(MadDataClassification);
-        pbLoad->setObjectName(QString::fromUtf8("pbLoad"));
-
-        verticalLayoutLoadSave->addWidget(pbLoad);
-
-        pbSave = new QPushButton(MadDataClassification);
-        pbSave->setObjectName(QString::fromUtf8("pbSave"));
-        pbSave->setEnabled(false);
-
-        verticalLayoutLoadSave->addWidget(pbSave);
-
-
-        horizontalLayoutTedLoadSave->addLayout(verticalLayoutLoadSave);
-
-
-        verticalLayout_2->addLayout(horizontalLayoutTedLoadSave);
-
-
-        gridLayout_28->addLayout(verticalLayout_2, 1, 0, 1, 1);
+        gridLayout_10->addWidget(splitter, 0, 0, 1, 6);
 
 #ifndef QT_NO_SHORTCUT
-        lblDataSetName->setBuddy(leDatasetName);
         lblDescription->setBuddy(leDescription);
+        lblDataSetName->setBuddy(leDatasetName);
 #endif // QT_NO_SHORTCUT
 
         retranslateUi(MadDataClassification);
+        QObject::connect(cbDatasets, SIGNAL(currentIndexChanged(QString)), leDatasetName, SLOT(setText(QString)));
+        QObject::connect(leDescription, SIGNAL(textChanged(QString)), textEditBottom, SLOT(append(QString)));
 
-        tabWidgetDataClassification->setCurrentIndex(7);
+        cbDatasets->setCurrentIndex(0);
+        tabWidgetDataClassification->setCurrentIndex(0);
         toolBoxStateVars->setCurrentIndex(3);
         toolBoxStateVars->layout()->setSpacing(0);
-        cbDatasets->setCurrentIndex(0);
 
 
         QMetaObject::connectSlotsByName(MadDataClassification);
@@ -5647,34 +5713,51 @@ public:
     void retranslateUi(QDialog *MadDataClassification)
     {
         MadDataClassification->setWindowTitle(QApplication::translate("MadDataClassification", "Dataset Quality Classification", 0, QApplication::UnicodeUTF8));
-        lblVariety->setText(QApplication::translate("MadDataClassification", "Variety", 0, QApplication::UnicodeUTF8));
-        lblIrrigation->setText(QApplication::translate("MadDataClassification", "Irrigation", 0, QApplication::UnicodeUTF8));
-        lblTillage->setText(QApplication::translate("MadDataClassification", "Tillage", 0, QApplication::UnicodeUTF8));
-        lblCultivationGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
-        lblSowing->setText(QApplication::translate("MadDataClassification", "Sowing", 0, QApplication::UnicodeUTF8));
-        lblCultivationGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblYield->setText(QApplication::translate("MadDataClassification", "Yield", 0, QApplication::UnicodeUTF8));
+        lblRankOverall->setText(QApplication::translate("MadDataClassification", "Gold", 0, QApplication::UnicodeUTF8));
+        lblDescription->setText(QApplication::translate("MadDataClassification", "Description", 0, QApplication::UnicodeUTF8));
+        pbLoad->setText(QApplication::translate("MadDataClassification", "Load", 0, QApplication::UnicodeUTF8));
+        pbSave->setText(QApplication::translate("MadDataClassification", "Save", 0, QApplication::UnicodeUTF8));
+        lblDataSetName->setText(QApplication::translate("MadDataClassification", "Dataset Name", 0, QApplication::UnicodeUTF8));
+        lblUsername->setText(QApplication::translate("MadDataClassification", "Username:", 0, QApplication::UnicodeUTF8));
+        lblMedalOverall->setText(QString());
+        cbDatasets->clear();
+        cbDatasets->insertItems(0, QStringList()
+         << QApplication::translate("MadDataClassification", "Select Dataset", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "CMAP", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "I-COADS", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "CRU TS 2.0", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Dai", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "HadISST", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Hulme (CRU)", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Jones (CRU) Air Temperature", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Jones (CRU) SLP", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Kaplan (SLP)", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Kaplan (SST)", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Lucas and Waliser Satellite ECT-Corrected OLR", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "NCAR Sea Level Pressure", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "NCEP/NCAR Reanalysis", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Reynold Reconstructed SST", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation (OI) SST", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Smith and Reynolds Extended Reconstructed SST (ERSST)", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Other/New", 0, QApplication::UnicodeUTF8)
+        );
+        cbRankedDatasets->clear();
+        cbRankedDatasets->insertItems(0, QStringList()
+         << QApplication::translate("MadDataClassification", "Ranked Datasets", 0, QApplication::UnicodeUTF8)
+        );
+        cbThemes->clear();
+        cbThemes->insertItems(0, QStringList()
+         << QApplication::translate("MadDataClassification", "Select Theme", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "CropM", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "LiveM", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "TradeM", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Climate", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadDataClassification", "Other", 0, QApplication::UnicodeUTF8)
+        );
+        lblEmail->setText(QApplication::translate("MadDataClassification", "Email:", 0, QApplication::UnicodeUTF8));
         lblFertilisationRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblCultivationSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblSowingRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblFertilisation->setText(QApplication::translate("MadDataClassification", "Fertilisation", 0, QApplication::UnicodeUTF8));
-        lblVarietyRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblSeedDensityRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblCultivationSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblHarvest->setText(QApplication::translate("MadDataClassification", "Harvest", 0, QApplication::UnicodeUTF8));
-        lblCultivationPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
-        lblYieldRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblIrrigationRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblCultivationBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
-        lblHarvestRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblCultivationBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblCultivationPlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSeedDensity->setText(QApplication::translate("MadDataClassification", "Seed Density", 0, QApplication::UnicodeUTF8));
-        lblCombinedTotal->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblCombined->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
-        lblRankingCultivation->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
-        lblMedalCultivation->setText(QString());
-        gbxCultivation->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxManagement->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         chbxHarvest->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Check if Minimum Data</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -5767,14 +5850,40 @@ public:
 #ifndef QT_NO_TOOLTIP
         hsldrYield->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of weight points</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
+        lblVariety->setText(QApplication::translate("MadDataClassification", "Variety", 0, QApplication::UnicodeUTF8));
+        lblVarietyRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblSowing->setText(QApplication::translate("MadDataClassification", "Sowing", 0, QApplication::UnicodeUTF8));
+        lblYieldRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblTillageRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabCultivation), QApplication::translate("MadDataClassification", "Cultivation", 0, QApplication::UnicodeUTF8));
+        lblHarvestRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblFertilisation->setText(QApplication::translate("MadDataClassification", "Fertilisation", 0, QApplication::UnicodeUTF8));
+        lblSowingRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblHarvest->setText(QApplication::translate("MadDataClassification", "Harvest", 0, QApplication::UnicodeUTF8));
+        lblCombinedTotal->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblCombined->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
+        lblYield->setText(QApplication::translate("MadDataClassification", "Yield", 0, QApplication::UnicodeUTF8));
+        lblIrrigationRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblSeedDensity->setText(QApplication::translate("MadDataClassification", "Seed Density", 0, QApplication::UnicodeUTF8));
+        lblSeedDensityRating->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblIrrigation->setText(QApplication::translate("MadDataClassification", "Irrigation", 0, QApplication::UnicodeUTF8));
+        lblTillage->setText(QApplication::translate("MadDataClassification", "Tillage", 0, QApplication::UnicodeUTF8));
+        lblManagementPlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
+        lblManagementGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
+        lblManagementSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
+        lblManagementBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
+        lblManagementPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblManagementGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblManagementSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblManagementBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblRankingManagement->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
+        lblMedalManagement->setText(QString());
+        tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabManagement), QApplication::translate("MadDataClassification", "Management", 0, QApplication::UnicodeUTF8));
         lblEarEmergencePhenology->setText(QApplication::translate("MadDataClassification", "Ear Emergence", 0, QApplication::UnicodeUTF8));
         lblPhenologyBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
         lblCombinedPhenology->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
         lblEmergenceRatingPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblPhenologyBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
-        lblPhenologySilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblPhenologyBronzeMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
+        lblPhenologySilverMinVal->setText(QApplication::translate("MadDataClassification", "11", 0, QApplication::UnicodeUTF8));
         lblYellowRipenessRatingPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblEarEmergenceRatingPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblPhenologyGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
@@ -5782,11 +5891,11 @@ public:
         lblEmergencePhenology->setText(QApplication::translate("MadDataClassification", "Emergence", 0, QApplication::UnicodeUTF8));
         lblRankingPhenology->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalPhenology->setText(QString());
-        lblPhenologyGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblPhenologyGoldMinVal->setText(QApplication::translate("MadDataClassification", "11", 0, QApplication::UnicodeUTF8));
         lblYellowRipenessPhenology->setText(QApplication::translate("MadDataClassification", "Yellow Ripeness", 0, QApplication::UnicodeUTF8));
         lblFloweringRatingPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblCombinedTotalPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        gbxPhenology->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxPhenology->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         hsldrEmergencePhenology->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of weight points</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -5846,13 +5955,13 @@ public:
 #ifndef QT_NO_TOOLTIP
         sbEmergencePhenology->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of observations</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
-        lblPhenologyPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblPhenologyPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "14", 0, QApplication::UnicodeUTF8));
         lblStemElongationRatingPhenology->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblPhenologyPlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
         lblStemElongationPhenology->setText(QApplication::translate("MadDataClassification", "Stem Elongation", 0, QApplication::UnicodeUTF8));
         lblFloweringPhenology->setText(QApplication::translate("MadDataClassification", "Flowering", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabPhenology), QApplication::translate("MadDataClassification", "Phenology", 0, QApplication::UnicodeUTF8));
-        gbxPrevCrop->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxPrevCrop->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         sbIrrigationPrevCrop->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of observations</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -5951,23 +6060,23 @@ public:
         lblRankingPrevCrop->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalPrevCrop->setText(QString());
         lblPrevCropPlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblPrevCropPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblPrevCropPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "11", 0, QApplication::UnicodeUTF8));
         lblPrevCropGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblPrevCropGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblPrevCropGoldMinVal->setText(QApplication::translate("MadDataClassification", "11", 0, QApplication::UnicodeUTF8));
         lblPrevCropSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblPrevCropSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblPrevCropSilverMinVal->setText(QApplication::translate("MadDataClassification", "10", 0, QApplication::UnicodeUTF8));
         lblPrevCropBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblPrevCropBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblPrevCropBronzeMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabPrevCrop), QApplication::translate("MadDataClassification", "Prev. Crop", 0, QApplication::UnicodeUTF8));
         lblRankingInitialValues->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalInitialValues->setText(QString());
         lblInitialValuesBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblInitialValuesSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblInitialValuesBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblInitialValuesSilverMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
+        lblInitialValuesBronzeMinVal->setText(QApplication::translate("MadDataClassification", "4", 0, QApplication::UnicodeUTF8));
         lblInitialValuesGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
         lblInitialValuesSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblInitialValuesGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
-        gbxInitialValues->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        lblInitialValuesGoldMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
+        gbxInitialValues->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         chbxSoilMoistureInitialValues->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Check if Minimum Data</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -6004,7 +6113,7 @@ public:
         lblNMinRatingInitialValues->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblCombinedInitialValues->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
         lblOverallRatingInitialValues->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblInitialValuesPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblInitialValuesPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabInitialValues), QApplication::translate("MadDataClassification", "Initial Values", 0, QApplication::UnicodeUTF8));
         lblHydrCondCurveRatingSoil->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblHydrCondCurveSoil->setText(QApplication::translate("MadDataClassification", "Hydr. Cond. Curve", 0, QApplication::UnicodeUTF8));
@@ -6015,14 +6124,14 @@ public:
         lblPfCurveSoil->setText(QApplication::translate("MadDataClassification", "pf Curve", 0, QApplication::UnicodeUTF8));
         lblRankingSoil->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalSoil->setText(QString());
-        lblSoilPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblSoilPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "40", 0, QApplication::UnicodeUTF8));
         lblSoilGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSoilGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblSoilGoldMinVal->setText(QApplication::translate("MadDataClassification", "29", 0, QApplication::UnicodeUTF8));
         lblSoilSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSoilSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblSoilSilverMinVal->setText(QApplication::translate("MadDataClassification", "14", 0, QApplication::UnicodeUTF8));
         lblSoilBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSoilBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
-        gbxSoil->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        lblSoilBronzeMinVal->setText(QApplication::translate("MadDataClassification", "5", 0, QApplication::UnicodeUTF8));
+        gbxSoil->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         chbxPfCurveSoil->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Check if Minimum Data</p></body></html>", 0, QApplication::UnicodeUTF8));
 #endif // QT_NO_TOOLTIP
@@ -6128,7 +6237,7 @@ public:
         lblPhSoil->setText(QApplication::translate("MadDataClassification", "pH", 0, QApplication::UnicodeUTF8));
         lblPhRatingSoil->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabSoil), QApplication::translate("MadDataClassification", "Soil", 0, QApplication::UnicodeUTF8));
-        gbxSite->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxSite->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         lblExampleSite->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
 #ifndef QT_NO_TOOLTIP
         sbLatitudeSite->setToolTip(QApplication::translate("MadDataClassification", "<html><head/><body><p>Number of observations</p></body></html>", 0, QApplication::UnicodeUTF8));
@@ -6172,9 +6281,9 @@ public:
         lblMedalSite->setText(QString());
         lblSitePlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
         lblSiteGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSitePlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblSitePlatinumMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         lblSiteBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSiteBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblSiteBronzeMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         lblLatitudeSite->setText(QApplication::translate("MadDataClassification", "Latitude", 0, QApplication::UnicodeUTF8));
         lblLatitudeRatingSite->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblLongitudeSite->setText(QApplication::translate("MadDataClassification", "Longitude", 0, QApplication::UnicodeUTF8));
@@ -6183,11 +6292,11 @@ public:
         lblAltitudeRatingSite->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblCombinedSite->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
         lblSiteSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblSiteGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblSiteGoldMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         lblOverallRatingSite->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblSiteSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblSiteSilverMinVal->setText(QApplication::translate("MadDataClassification", "8", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabSite), QApplication::translate("MadDataClassification", "Site", 0, QApplication::UnicodeUTF8));
-        gbxWeather->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxWeather->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         lblExampleWeather->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
         cbExamplesWeather->clear();
         cbExamplesWeather->insertItems(0, QStringList()
@@ -6320,17 +6429,18 @@ public:
         lblRankingWeather->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalWeather->setText(QString());
         lblWeatherPlatinumMin->setText(QApplication::translate("MadDataClassification", "Platinum Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
+        lblWeatherPlatinumMinVal->setText(QApplication::translate("MadDataClassification", "30", 0, QApplication::UnicodeUTF8));
         lblWeatherGoldMin->setText(QApplication::translate("MadDataClassification", "Gold Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherGoldMinVal->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblWeatherGoldMinVal->setText(QApplication::translate("MadDataClassification", "30", 0, QApplication::UnicodeUTF8));
         lblWeatherSilverMin->setText(QApplication::translate("MadDataClassification", "Silver Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherSilverMinVal->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
+        lblWeatherSilverMinVal->setText(QApplication::translate("MadDataClassification", "20", 0, QApplication::UnicodeUTF8));
         lblWeatherBronzeMin->setText(QApplication::translate("MadDataClassification", "Bronze Minimum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherBronzeMinVal->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblWeatherBronzeMinVal->setText(QApplication::translate("MadDataClassification", "10", 0, QApplication::UnicodeUTF8));
         lblLeafWetnessRatingWeather->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblSoilTempRatingWeather->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabWeather), QApplication::translate("MadDataClassification", "Weather", 0, QApplication::UnicodeUTF8));
-        gbxSVCrop->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        lblSVTotalPointsHeader->setText(QApplication::translate("MadDataClassification", "SV Total Pts", 0, QApplication::UnicodeUTF8));
+        gbxSVCrop->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         lblCombinedSVCrop->setText(QApplication::translate("MadDataClassification", "Combined:", 0, QApplication::UnicodeUTF8));
         lblSVCropPointsHeader->setText(QApplication::translate("MadDataClassification", "Points", 0, QApplication::UnicodeUTF8));
         chbxSVCropAGrBiomass->setText(QApplication::translate("MadDataClassification", "a.gr. biomass", 0, QApplication::UnicodeUTF8));
@@ -6351,10 +6461,10 @@ public:
         chbxSVCropWeightOrgans->setText(QApplication::translate("MadDataClassification", "weight organs", 0, QApplication::UnicodeUTF8));
         chbxSVCropRootBiomass->setText(QApplication::translate("MadDataClassification", "root biomass", 0, QApplication::UnicodeUTF8));
         lblSVCropWeightOrgansPoints->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
-        lblWeatherGoldMinValSVCrop->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
-        lblWeatherPlatinumMinValSVCrop->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
-        lblWeatherSilverMinValSVCrop->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblWeatherBronzeMinValSVCrop->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblWeatherGoldMinValSVCrop->setText(QApplication::translate("MadDataClassification", "20", 0, QApplication::UnicodeUTF8));
+        lblWeatherPlatinumMinValSVCrop->setText(QApplication::translate("MadDataClassification", "35", 0, QApplication::UnicodeUTF8));
+        lblWeatherSilverMinValSVCrop->setText(QApplication::translate("MadDataClassification", "5", 0, QApplication::UnicodeUTF8));
+        lblWeatherBronzeMinValSVCrop->setText(QApplication::translate("MadDataClassification", "1", 0, QApplication::UnicodeUTF8));
         lblWeatherBronzeMinSVCrop->setText(QApplication::translate("MadDataClassification", "Bronze: ", 0, QApplication::UnicodeUTF8));
         lblWeatherSilverMinSVCrop->setText(QApplication::translate("MadDataClassification", "Silver: ", 0, QApplication::UnicodeUTF8));
         lblWeatherGoldMinSVCrop->setText(QApplication::translate("MadDataClassification", "Gold: ", 0, QApplication::UnicodeUTF8));
@@ -6371,7 +6481,7 @@ public:
         );
         lblExampleSVCrop->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
         toolBoxStateVars->setItemText(toolBoxStateVars->indexOf(pageCrop), QApplication::translate("MadDataClassification", "Crop", 0, QApplication::UnicodeUTF8));
-        gbxSVSoil->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxSVSoil->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         chbxSVSoilPressureHeads->setText(QApplication::translate("MadDataClassification", "pressure heads", 0, QApplication::UnicodeUTF8));
         chbxSVSoilWaterFluxBottomRoot->setText(QApplication::translate("MadDataClassification", "water flux bottom root", 0, QApplication::UnicodeUTF8));
         chbxSVSoilNMin->setText(QApplication::translate("MadDataClassification", "Nmin", 0, QApplication::UnicodeUTF8));
@@ -6389,13 +6499,13 @@ public:
         lblMedalSVSoil->setText(QString());
         lblRankingSVSoil->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblWeatherPlatinumMinSVSoil->setText(QApplication::translate("MadDataClassification", "Platinum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherPlatinumMinValSVSoil->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
-        lblWeatherGoldMinValSVSoil->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblWeatherPlatinumMinValSVSoil->setText(QApplication::translate("MadDataClassification", "35", 0, QApplication::UnicodeUTF8));
+        lblWeatherGoldMinValSVSoil->setText(QApplication::translate("MadDataClassification", "20", 0, QApplication::UnicodeUTF8));
         lblWeatherGoldMinSVSoil->setText(QApplication::translate("MadDataClassification", "Gold: ", 0, QApplication::UnicodeUTF8));
         lblWeatherSilverMinSVSoil->setText(QApplication::translate("MadDataClassification", "Silver: ", 0, QApplication::UnicodeUTF8));
         lblWeatherBronzeMinSVSoil->setText(QApplication::translate("MadDataClassification", "Bronze: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherSilverMinValSVSoil->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblWeatherBronzeMinValSVSoil->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblWeatherSilverMinValSVSoil->setText(QApplication::translate("MadDataClassification", "5", 0, QApplication::UnicodeUTF8));
+        lblWeatherBronzeMinValSVSoil->setText(QApplication::translate("MadDataClassification", "1", 0, QApplication::UnicodeUTF8));
         cbExamplesSVSoil->clear();
         cbExamplesSVSoil->insertItems(0, QStringList()
          << QApplication::translate("MadDataClassification", "Examples", 0, QApplication::UnicodeUTF8)
@@ -6406,7 +6516,7 @@ public:
         );
         lblExampleSVSoil->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
         toolBoxStateVars->setItemText(toolBoxStateVars->indexOf(pageSoil), QApplication::translate("MadDataClassification", "Soil", 0, QApplication::UnicodeUTF8));
-        gbxSVSurfaceFluxes->setTitle(QApplication::translate("MadDataClassification", "Edit", 0, QApplication::UnicodeUTF8));
+        gbxSVSurfaceFluxes->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         cbExamplesSVSurfaceFluxes->clear();
         cbExamplesSVSurfaceFluxes->insertItems(0, QStringList()
          << QApplication::translate("MadDataClassification", "Examples", 0, QApplication::UnicodeUTF8)
@@ -6434,18 +6544,18 @@ public:
         lblCombinedSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Combined", 0, QApplication::UnicodeUTF8));
         lblOverallRatingSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblWeatherPlatinumMinSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Platinum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherPlatinumMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
-        lblWeatherGoldMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblWeatherPlatinumMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "35", 0, QApplication::UnicodeUTF8));
+        lblWeatherGoldMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "20", 0, QApplication::UnicodeUTF8));
         lblWeatherGoldMinSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Gold: ", 0, QApplication::UnicodeUTF8));
         lblWeatherSilverMinSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Silver: ", 0, QApplication::UnicodeUTF8));
         lblWeatherBronzeMinSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Bronze: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherSilverMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblWeatherBronzeMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblWeatherSilverMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "5", 0, QApplication::UnicodeUTF8));
+        lblWeatherBronzeMinValSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "1", 0, QApplication::UnicodeUTF8));
         lblRankingSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblMedalSVSurfaceFluxes->setText(QString());
         lblExampleSVSurfaceFluxes->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
         toolBoxStateVars->setItemText(toolBoxStateVars->indexOf(surfaceFluxesPage), QApplication::translate("MadDataClassification", "Surface Fluxes", 0, QApplication::UnicodeUTF8));
-        gbxSVObservations->setTitle(QApplication::translate("MadDataClassification", "edit", 0, QApplication::UnicodeUTF8));
+        gbxSVObservations->setTitle(QApplication::translate("MadDataClassification", "Complete", 0, QApplication::UnicodeUTF8));
         cbExamplesSVObservations->clear();
         cbExamplesSVObservations->insertItems(0, QStringList()
          << QApplication::translate("MadDataClassification", "Examples", 0, QApplication::UnicodeUTF8)
@@ -6456,13 +6566,13 @@ public:
         );
         lblMedalSVObservations->setText(QString());
         lblWeatherPlatinumMinSVObservations->setText(QApplication::translate("MadDataClassification", "Platinum: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherPlatinumMinValSVObservations->setText(QApplication::translate("MadDataClassification", "24", 0, QApplication::UnicodeUTF8));
-        lblWeatherGoldMinValSVObservations->setText(QApplication::translate("MadDataClassification", "23", 0, QApplication::UnicodeUTF8));
+        lblWeatherPlatinumMinValSVObservations->setText(QApplication::translate("MadDataClassification", "35", 0, QApplication::UnicodeUTF8));
+        lblWeatherGoldMinValSVObservations->setText(QApplication::translate("MadDataClassification", "20", 0, QApplication::UnicodeUTF8));
         lblWeatherGoldMinSVObservations->setText(QApplication::translate("MadDataClassification", "Gold: ", 0, QApplication::UnicodeUTF8));
         lblWeatherSilverMinSVObservations->setText(QApplication::translate("MadDataClassification", "Silver: ", 0, QApplication::UnicodeUTF8));
         lblWeatherBronzeMinSVObservations->setText(QApplication::translate("MadDataClassification", "Bronze: ", 0, QApplication::UnicodeUTF8));
-        lblWeatherSilverMinValSVObservations->setText(QApplication::translate("MadDataClassification", "22", 0, QApplication::UnicodeUTF8));
-        lblWeatherBronzeMinValSVObservations->setText(QApplication::translate("MadDataClassification", "21", 0, QApplication::UnicodeUTF8));
+        lblWeatherSilverMinValSVObservations->setText(QApplication::translate("MadDataClassification", "5", 0, QApplication::UnicodeUTF8));
+        lblWeatherBronzeMinValSVObservations->setText(QApplication::translate("MadDataClassification", "1", 0, QApplication::UnicodeUTF8));
         lblRankingSVObservations->setText(QApplication::translate("MadDataClassification", "Platinum", 0, QApplication::UnicodeUTF8));
         lblSVObservationsPestsOrDiseasesPoints->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         chbxSVObservationsDamages->setText(QApplication::translate("MadDataClassification", "Damages", 0, QApplication::UnicodeUTF8));
@@ -6480,47 +6590,12 @@ public:
         lblOverallRatingSVObservations->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
         lblExampleSVObservations->setText(QApplication::translate("MadDataClassification", "Example", 0, QApplication::UnicodeUTF8));
         toolBoxStateVars->setItemText(toolBoxStateVars->indexOf(pageObservations), QApplication::translate("MadDataClassification", "Observations", 0, QApplication::UnicodeUTF8));
+        toolBoxStateVars->setItemText(toolBoxStateVars->indexOf(pageElevation), QApplication::translate("MadDataClassification", "Eelvation", 0, QApplication::UnicodeUTF8));
+        lblSVTotalPoints->setText(QApplication::translate("MadDataClassification", "0", 0, QApplication::UnicodeUTF8));
+        lblSVMedalCombined->setText(QString());
+        lblSVRankOverall->setText(QApplication::translate("MadDataClassification", "Rank", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabStateVars), QApplication::translate("MadDataClassification", "State Vars", 0, QApplication::UnicodeUTF8));
         tabWidgetDataClassification->setTabText(tabWidgetDataClassification->indexOf(tabInfo), QApplication::translate("MadDataClassification", "Info", 0, QApplication::UnicodeUTF8));
-        cbDatasets->clear();
-        cbDatasets->insertItems(0, QStringList()
-         << QApplication::translate("MadDataClassification", "Select Dataset", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "CMAP", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "I-COADS", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "CRU TS 2.0", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Dai", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "HadISST", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Hulme (CRU)", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Jones (CRU) Air Temperature", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Jones (CRU) SLP", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Kaplan (SLP)", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Kaplan (SST)", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Lucas and Waliser Satellite ECT-Corrected OLR", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "NCAR Sea Level Pressure", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "NCEP/NCAR Reanalysis", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Reynold Reconstructed SST", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation (OI) SST", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Smith and Reynolds Extended Reconstructed SST (ERSST)", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Other/New", 0, QApplication::UnicodeUTF8)
-        );
-        cbRankedDatasets->clear();
-        cbRankedDatasets->insertItems(0, QStringList()
-         << QApplication::translate("MadDataClassification", "Ranked Datasets", 0, QApplication::UnicodeUTF8)
-        );
-        cbThemes->clear();
-        cbThemes->insertItems(0, QStringList()
-         << QApplication::translate("MadDataClassification", "Select Theme", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "CropM", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "LiveM", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "TradeM", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Climate", 0, QApplication::UnicodeUTF8)
-         << QApplication::translate("MadDataClassification", "Other", 0, QApplication::UnicodeUTF8)
-        );
-        lblDataSetName->setText(QApplication::translate("MadDataClassification", "Dataset Name", 0, QApplication::UnicodeUTF8));
-        lblDescription->setText(QApplication::translate("MadDataClassification", "Description", 0, QApplication::UnicodeUTF8));
-        pbLoad->setText(QApplication::translate("MadDataClassification", "Load", 0, QApplication::UnicodeUTF8));
-        pbSave->setText(QApplication::translate("MadDataClassification", "Save", 0, QApplication::UnicodeUTF8));
     } // retranslateUi
 
 };
