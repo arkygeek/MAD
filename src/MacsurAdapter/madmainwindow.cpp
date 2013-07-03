@@ -318,7 +318,7 @@ static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
 void MadMainWindow::subIterate()
 {
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2());
-  QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(model());
+  QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2);
 
   pm = new QStandardItemModel(this);
   if (!pm)
