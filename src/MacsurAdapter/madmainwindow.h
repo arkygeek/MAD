@@ -72,6 +72,7 @@ class MadMainWindow : public QMainWindow, private Ui::MadMainWindow
   void setModelText(QString theModelText);
   void setUserName(const QString& theUserName);
 
+  void subIterate();
 private:
     MadDataClassification *mpMadDataClassification;
     MadTextDisplayForm *mpMadTextDisplayForm;
@@ -87,6 +88,7 @@ private:
     //
     QList<QStringList> csv;
     QStandardItemModel *mpModel;
+    QStandardItemModel *mpModel2;
     QList<QStandardItem*> mStandardItemList;
 
     /**

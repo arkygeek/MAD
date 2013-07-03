@@ -282,6 +282,97 @@ void MadMainWindow::on_comboBox_currentIndexChanged(const QString &theSelection)
   }
 }
 
+// a class to build a xml
+//   mpModel = new QStandardItemModel(this);
+
+static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
+{
+  QStandardItemModel *pm = thepQStdItem->model();
+  QList<QStandardItem*> myReturnList;
+  QModelIndex myIndex = thepQStdItem->index();\
+
+  if (!myIndex.isValid())
+  {
+    return myReturnList;
+  }
+
+  if (thepQStdItem->rowCount() == 0)
+  {
+    return myReturnList;
+  }
+
+  for (int e = 0; e < thepQStdItem->rowCount(); ++e)
+  {
+    QModelIndex si = pm->index(e,thepQStdItem->column(),myIndex);
+    QStandardItem *iz = pm->itemFromIndex(si);
+    if (iz)
+    {
+      myReturnList << iz;
+    }
+  }
+
+  return myReturnList;
+}
+
+
+void MadMainWindow::subIterate()
+{
+  //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2());
+  QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(model());
+
+  pm = new QStandardItemModel(this);
+  if (!pm)
+  {
+    return;
+  }
+
+  QStringList myLine;
+  int myRw = 0;
+  int myCw = 0;
+  int myCtot = 0;
+  const int cools = pm->columnCount();
+  const int rows = pm->rowCount();
+  qDebug() << "-- iter ---------------------------------------------------------";
+  for (int i = 0; i < cools; ++i)
+  {
+    const QString htxt = pm->headerData(i,Qt::Horizontal,Qt::DisplayRole).toString();
+    const QString htxt1 = pm->headerData(i,Qt::Vertical,Qt::DisplayRole).toString();
+    myLine << qMax(htxt,htxt1);
+  }
+
+  QList<QStandardItem*> MyList;
+
+  for (int e = 0; e < rows; ++e)
+  {
+    QStandardItem *ix_1 = pm->item(e,0);
+    QStandardItem *ix_2 = pm->item(e,1);
+    MyList.clear();
+    MyList = childList(ix_1);
+    myCtot = MyList.size();
+    int level = 0;
+
+    qDebug() << "# lev." << level <<" line " << e << " txt " << ix_1->text() << " child " << myCtot;
+
+    if (myCtot !=0)
+    {
+
+      level++;
+      foreach (QStandardItem *ix,MyList)
+      {
+        MyList.clear();
+        myCtot = 0;
+        MyList = childList(ix);
+        myCtot = MyList.size();
+
+        qDebug() << "# lev." << level <<" line " << e << " txt " << ix->text() << " child " << myCtot;
+
+      } // end foreach
+    } // end if
+  } // end for (int e = 0; e < rows; ++e)
+
+  qDebug() << "-- iter ---------------------------------------------------------";
+}
+
 void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
 {
   mpModel = new QStandardItemModel(this);
@@ -351,3 +442,6 @@ void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
         theTemporary.append(theCharacter);
     }
 }
+
+// http://www.qtcentre.org/threads/15572-How-can-I-traverse-all-of-the-items-in-a-QStandardItemModel
+
