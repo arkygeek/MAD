@@ -86,10 +86,10 @@ private:
     //
     // the CSV stuff
     //
-    QList<QStringList> csv;
+    //QList<QStringList> mCsv;
     QStandardItemModel *mpModel;
-    QStandardItemModel *mpModel2;
-    QList<QStandardItem*> mStandardItemList;
+    //QStandardItemModel *mpModel2;
+    QList<QStandardItem*> mpStandardItemList;
 
     /**
      * @brief loadTextFile to display in the 'about' text display on main page

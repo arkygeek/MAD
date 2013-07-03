@@ -1,0 +1,56 @@
+<Item Dataset="##12##" Subset="##13##" Group="##14##" SubGroup="##15##">
+  <Variable Variable_Name ="##1##">
+      <Code_Display>##3##</Code_Display>
+      <Code_Query>##5##</Code_Query>
+      <Variable_Order>##6##</Variable_Order>
+      <Description>##8##</Description>
+      <Unit_or_type>##9##</Unit_or_type>
+      <Data_type>##10##</Data_type>
+      <Data_length>##11##</Data_length>
+      <Set_group_order>##16##</Set_group_order>
+      <Hash_calc>##17##</Hash_calc>
+      <Version_or_questions>##18##</Version_or_questions>
+      <Display_Label>##19##</Display_Label>
+      <Code_synon>##20##</Code_synon>
+      <MinVal>##21##</MinVal>
+      <MaxVal>##22##</MaxVal>
+      <DSSAT_var>##23##</DSSAT_var>
+      <ICASA_standard>##24##</ICASA_standard>
+      <AgMIP_data_entry>##25##</AgMIP_data_entry>
+      <AgMIP-rating>##26##</AgMIP-rating>
+      <DSSAT-rating>##27##</DSSAT-rating>
+      <APSIM-rating>##28##</APSIM-rating>
+      <CropSyst>##29##</CropSyst>
+  </Variable>
+</Item>
+
+------
+<Item Dataset="##12##" Subset="##13##" Group="##14##" SubGroup="##15##">
+  <Variable Variable_Name ="##1##">
+      <Name_Length>##2##</Name_Length>
+      <Code_Display>##3##</Code_Display>
+      <Code_length>##4##</Code_length>
+      <Code_Query>##5##</Code_Query>
+      <Variable_Order>##6##</Variable_Order>
+      <Variable_Key>##7##</Variable_Key>
+      <Description>##8##</Description>
+      <Unit_or_type>##9##</Unit_or_type>
+      <Data_type>##10##</Data_type>
+      <Data_length>##11##</Data_length>
+      <Set_group_order>##16##</Set_group_order>
+      <Hash_calc>##17##</Hash_calc>
+      <Version_or_questions>##18##</Version_or_questions>
+      <Display_Label>##19##</Display_Label>
+      <Code_synon>##20##</Code_synon>
+      <MinVal>##21##</MinVal>
+      <MaxVal>##22##</MaxVal>
+      <DSSAT_var>##23##</DSSAT_var>
+      <ICASA_standard>##24##</ICASA_standard>
+      <AgMIP_data_entry>##25##</AgMIP_data_entry>
+      <AgMIP-rating>##26##</AgMIP-rating>
+      <DSSAT-rating>##27##</DSSAT-rating>
+      <APSIM-rating>##28##</APSIM-rating>
+      <CropSyst>##29##</CropSyst>
+  </Variable>
+</Item>
+------

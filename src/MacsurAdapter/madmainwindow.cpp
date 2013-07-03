@@ -322,52 +322,58 @@ void MadMainWindow::subIterate()
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2());
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel);
 
-  mpModel = new QStandardItemModel(this);
+  //mpModel = new QStandardItemModel(this);
   if (!mpModel)
   {
     return;
   }
 
   QStringList myLine;
-  int myRw = 0;
-  int myCw = 0;
-  int myCtot = 0;
-  const int cools = mpModel->columnCount();
-  const int rows = mpModel->rowCount();
+  //int myRw = 0;
+  //int myCw = 0;
+  int myChildTotal = 0;
+  const int myColumnCount = mpModel->columnCount();
+  const int myRowCount = mpModel->rowCount();
   qDebug() << "-- iter ---------------------------------------------------------";
-  for (int i = 0; i < cools; ++i)
+  for (int myIterator = 0; myIterator < myColumnCount; ++myIterator)
   {
-    const QString htxt = mpModel->headerData(i,Qt::Horizontal,Qt::DisplayRole).toString();
-    const QString htxt1 = mpModel->headerData(i,Qt::Vertical,Qt::DisplayRole).toString();
-    myLine << qMax(htxt,htxt1);
+    const QString myHeaderText1 = mpModel->headerData( myIterator,
+                                              Qt::Horizontal,
+                                              Qt::DisplayRole ).toString();
+    const QString myHeaderText2 = mpModel->headerData( myIterator,
+                                               Qt::Vertical,
+                                               Qt::DisplayRole).toString();
+    myLine << qMax(myHeaderText1,myHeaderText2);
   }
 
   QList<QStandardItem*> MyList;
 
-  for (int e = 0; e < rows; ++e)
+  for (int myForIterator = 0; myForIterator < myRowCount; ++myForIterator)
   {
-    QStandardItem *ix_1 = mpModel->item(e,0);
-    QStandardItem *ix_2 = mpModel->item(e,1);
+    QStandardItem *mypIndex_1 = mpModel->item(myForIterator,2);
+    //QStandardItem *mypIndex_2 = mpModel->item(myForIterator,12);
     MyList.clear();
-    MyList = childList(ix_1);
-    myCtot = MyList.size();
-    int level = 0;
+    MyList = childList(mypIndex_1);
+    myChildTotal = MyList.size();
+    int myTreeLevel = 0;
 
-    qDebug() << "# lev." << level <<" line " << e << " txt " << ix_1->text() << " child " << myCtot;
+    qDebug() << "# lev. " << myTreeLevel <<" line "
+             << myForIterator << " txt " << mypIndex_1->text()
+             << " child " << myChildTotal;
 
-    if (myCtot !=0)
+    if (myChildTotal !=0)
     {
-
-      level++;
-      foreach (QStandardItem *ix,MyList)
+      myTreeLevel++;
+      foreach (QStandardItem *mypForEachIndex,MyList)
       {
         MyList.clear();
-        myCtot = 0;
-        MyList = childList(ix);
-        myCtot = MyList.size();
+        myChildTotal = 0;
+        MyList = childList(mypForEachIndex);
+        myChildTotal = MyList.size();
 
-        qDebug() << "# lev." << level <<" line " << e << " txt " << ix->text() << " child " << myCtot;
-
+        qDebug() << "# lev." << myTreeLevel <<" line "
+                 << myForIterator << " txt "
+                 << mypForEachIndex->text() << " child " << myChildTotal;
       } // end foreach
     } // end if
   } // end for (int e = 0; e < rows; ++e)
@@ -418,31 +424,158 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
       } // end else
     } // end while
   } // end if
+
+  subIterate();
+
+  int myIndexRow = 0;
+  int myIndexColumn = 12;
+  //QModelIndex mpModel->(myIndexRow, myIndexColumn);
+
+  //need to sort the data using columns 12,13,14,15 to put into tree
+
+  //QModelIndex  Dataset,Subset,Group,Sub-group
+
+  QList<QString> myDataSetList;
+  QList<QString> mySubSetList;
+  QList<QString> myGroupList;
+  QList<QString> mySubGroupList;
+
+  QTreeWidget myTree;
+  myTree.setColumnCount(5);
+
+  int myRowCount = mpModel->rowCount();
+
+  QString myDataSetHolder = mpModel->item(0, 11)->text();
+  QString mySubSetHolder = mpModel->item(0, 12)->text();
+  QString myGroupHolder = mpModel->item(0, 13)->text();
+  QString mySubGroupHolder = mpModel->item(0, 14)->text();
+
+  //QTreeWidgetItem myTreeItem;
+  //treeWidget->setHeader(QHeaderView(mpModel->text( 0, 11)));
+  //myTreeItem mySubSetHolder;
+  //myTreeItem myGroupHolder;
+  //myTreeItem mySubGroupHolder;
+
+
+  // below verifies proper row count is happening - just for testing
+
+  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
+  {
+    QString myConvertedValue = QString::number(myLoopCounter);
+    tedVariableMapping->append(myConvertedValue);
+
+    if (myDataSetHolder == mpModel->item(myLoopCounter, 11)->text())
+    {
+      // the value is the same, do not make new parent entry
+      tedVariableMapping->append("DataSet is the same, do not make new parent");
+    }
+    else
+    {
+      // the value is new, so DO make a new parent entry
+      tedVariableMapping->append("DataSet is different, make new child");
+      myDataSetHolder = mpModel->item(myLoopCounter, 11)->text();
+    }
+    if (mySubSetHolder == mpModel->item(myLoopCounter, 12)->text())
+    {
+      // the value is the same, do not make new child entry
+      tedVariableMapping->append("  SubSet is the same, do not make new child");
+
+    }
+    else
+    {
+      // the value is new, so DO make a new child entry
+      tedVariableMapping->append("  SubSet is different, make new child");
+      mySubSetHolder = mpModel->item(myLoopCounter, 12)->text();
+    }
+    if (myGroupHolder == mpModel->item(myLoopCounter, 13)->text())
+    {
+      // the value is the same, do not make new grand child entry
+      tedVariableMapping->append("    Group is the same, do not make new grand child");
+
+    }
+    else
+    {
+      // the value is new, so DO make a new grand child entry
+      tedVariableMapping->append("    Group is different, make new grand child");
+      myGroupHolder = mpModel->item(myLoopCounter, 13)->text();
+    }
+    if (mySubGroupHolder == mpModel->item(myLoopCounter, 14)->text())
+    {
+      // the value is the same, do not make new grand grand child entry
+      tedVariableMapping->append("      SubGroup is the same, do not make new grand grand child");
+
+    }
+    else
+    {
+      // the value is new, so DO make a new grand grand child entry
+      tedVariableMapping->append("      SubGroup is different, make new grand grand child");
+      mySubGroupHolder = mpModel->item(myLoopCounter, 14)->text();
+      //treeWidget->childAt()
+    }
+
+
+    myDataSetList.append(mpModel->item(myLoopCounter, 11)->text());
+    mySubSetList.append(mpModel->item(myLoopCounter, 12)->text());
+    myGroupList.append(mpModel->item(myLoopCounter, 13)->text());
+    mySubGroupList.append(mpModel->item(myLoopCounter, 14)->text());
+
+
+
+    tedVariableMapping->append(mpModel->item(myLoopCounter, 11)->text());
+    tedVariableMapping->append(mpModel->item(myLoopCounter, 12)->text());
+    tedVariableMapping->append(mpModel->item(myLoopCounter, 13)->text());
+    tedVariableMapping->append(mpModel->item(myLoopCounter, 14)->text());
+
+  }
+  treeViewVariables->setModel(mpModel);
+
+
+  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
+
+
+  pFilterModel->setSourceModel(mpModel);
+
+  QTreeView *pFilteredView = new QTreeView;
+  pFilterModel->setFilterKeyColumn(11);
+  pFilterModel->sort(11);
+  //pFilterModel->removeColumns(1, 10);
+
+  treeViewVariables->setModel(pFilterModel);
 }
 
 void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
 {
-    if(theTemporary.count("\"")%2 == 0)
+  if(theTemporary.count("\"")%2 == 0)
+  {
+    //if (theTemp.size() == 0 && theCharacter != ',') //problem with line endings
+    //    return;
+    if (theTemporary.startsWith( QChar('\"'))
+       &&
+       theTemporary.endsWith( QChar('\"') ) )
     {
-        //if (theTemp.size() == 0 && theCharacter != ',') //problem with line endings
-        //    return;
-        if (theTemporary.startsWith( QChar('\"')) && theTemporary.endsWith( QChar('\"') ) )
-        {
-             theTemporary.remove( QRegExp("^\"") );
-             theTemporary.remove( QRegExp("\"$") );
-        }
-        //TODO this might fail if there are 4 or more reapeating double quotes
-        theTemporary.replace("\"\"", "\"");
-        QStandardItem *mypItem = new QStandardItem(theTemporary);
-        mStandardItemList.append(mypItem);
-        if (theCharacter != QChar(',')) {
-            mpModel->appendRow(mStandardItemList);
-            mStandardItemList.clear();
-        }
-        theTemporary.clear();
-    } else {
-        theTemporary.append(theCharacter);
+       theTemporary.remove( QRegExp("^\"") );
+       theTemporary.remove( QRegExp("\"$") );
     }
+
+    //TODO this might fail if there are 4 or more reapeating double quotes
+    theTemporary.replace("\"\"", "\"");
+
+    QStandardItem *mypItem = new QStandardItem(theTemporary);
+
+    mpStandardItemList.append(mypItem);
+
+    if (theCharacter != QChar(','))
+    {
+      mpModel->appendRow(mpStandardItemList);
+      mpStandardItemList.clear();
+    }
+
+    theTemporary.clear();
+  }
+  else
+  {
+    theTemporary.append(theCharacter);
+  }
 }
 
 
