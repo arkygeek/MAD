@@ -283,11 +283,13 @@ void MadMainWindow::on_comboBox_currentIndexChanged(const QString &theSelection)
 }
 
 // a class to build a xml
-//   mpModel = new QStandardItemModel(this);
+// basded on this example:
+// http://www.qtcentre.org/threads/15572-How-can-I-traverse-all-of-the-items-in-a-QStandardItemModel
+
 
 static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
 {
-  QStandardItemModel *pm = thepQStdItem->model();
+  QStandardItemModel *mypModel = thepQStdItem->model();
   QList<QStandardItem*> myReturnList;
   QModelIndex myIndex = thepQStdItem->index();\
 
@@ -303,8 +305,8 @@ static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
 
   for (int e = 0; e < thepQStdItem->rowCount(); ++e)
   {
-    QModelIndex si = pm->index(e,thepQStdItem->column(),myIndex);
-    QStandardItem *iz = pm->itemFromIndex(si);
+    QModelIndex si = mypModel->index(e,thepQStdItem->column(),myIndex);
+    QStandardItem *iz = mypModel->itemFromIndex(si);
     if (iz)
     {
       myReturnList << iz;
@@ -318,10 +320,10 @@ static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
 void MadMainWindow::subIterate()
 {
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2());
-  QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2);
+  //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel);
 
-  pm = new QStandardItemModel(this);
-  if (!pm)
+  mpModel = new QStandardItemModel(this);
+  if (!mpModel)
   {
     return;
   }
@@ -330,13 +332,13 @@ void MadMainWindow::subIterate()
   int myRw = 0;
   int myCw = 0;
   int myCtot = 0;
-  const int cools = pm->columnCount();
-  const int rows = pm->rowCount();
+  const int cools = mpModel->columnCount();
+  const int rows = mpModel->rowCount();
   qDebug() << "-- iter ---------------------------------------------------------";
   for (int i = 0; i < cools; ++i)
   {
-    const QString htxt = pm->headerData(i,Qt::Horizontal,Qt::DisplayRole).toString();
-    const QString htxt1 = pm->headerData(i,Qt::Vertical,Qt::DisplayRole).toString();
+    const QString htxt = mpModel->headerData(i,Qt::Horizontal,Qt::DisplayRole).toString();
+    const QString htxt1 = mpModel->headerData(i,Qt::Vertical,Qt::DisplayRole).toString();
     myLine << qMax(htxt,htxt1);
   }
 
@@ -344,8 +346,8 @@ void MadMainWindow::subIterate()
 
   for (int e = 0; e < rows; ++e)
   {
-    QStandardItem *ix_1 = pm->item(e,0);
-    QStandardItem *ix_2 = pm->item(e,1);
+    QStandardItem *ix_1 = mpModel->item(e,0);
+    QStandardItem *ix_2 = mpModel->item(e,1);
     MyList.clear();
     MyList = childList(ix_1);
     myCtot = MyList.size();
@@ -443,5 +445,4 @@ void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
     }
 }
 
-// http://www.qtcentre.org/threads/15572-How-can-I-traverse-all-of-the-items-in-a-QStandardItemModel
 
