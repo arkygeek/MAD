@@ -23,6 +23,8 @@
 #define MADVARIABLEMANAGER_H
 
 #include <QtGlobal>
+#include <QStandardItemModel>
+#include <QSortFilterProxyModel>
 
 #if QT_VERSION >= 0x050000
 #include <QtWidgets/QDialog>
@@ -42,8 +44,25 @@ public:
   explicit MadVariableManager(QWidget *parent = 0);
   ~MadVariableManager();
   
+  void loadCsvFile(const QString &theFileToLoad);
+  void checkString(QString &theTemporary, QChar theCharacter);
+private slots:
+  void on_cbSelectFile_currentIndexChanged(const QString &theSelection);
+
 private:
   Ui::MadVariableManager *ui;
+
+  QString mModelText;
+  QSortFilterProxyModel *pFilterModel;
+
+  //
+  // the CSV stuff
+  //
+  QList<QStringList> mCsv;
+  QStandardItemModel *mpModelFromCsv;
+  //QStandardItemModel *mpModel2;
+  QList<QStandardItem*> mpStandardItemList;
+
 };
 
 #endif // MADVARIABLEMANAGER_H

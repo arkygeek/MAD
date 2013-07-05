@@ -32,6 +32,8 @@
 #include "gui/maddataclassification.h"
 #include "gui/madtextdisplayform.h"
 #include "gui/madlogindialog.h"
+#include "gui/madvariablemanager.h"
+
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
@@ -47,9 +49,6 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
                         + QString("$Revision$").replace("$",""));
 
   //QxtCsvModel myQxtCsvModel;
-
-
-
 
   //connect ( pbLogin, SIGNAL ( valueChanged(int) ), this, SLOT ( slotAcceptUserLogin() ));
 }
@@ -415,7 +414,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
       else if (myTextStream.atEnd())
       {
         myTemp.append(myCharacter);
-        checkString(myTemp);
+        checkString(myTemp, myCharacter);
       }
 
       else
@@ -463,7 +462,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   {
     QString myConvertedValue = QString::number(myLoopCounter);
     tedVariableMapping->append(myConvertedValue);
-
+/*
     if (myDataSetHolder == mpModel->item(myLoopCounter, 11)->text())
     {
       // the value is the same, do not make new parent entry
@@ -512,7 +511,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
       mySubGroupHolder = mpModel->item(myLoopCounter, 14)->text();
       //treeWidget->childAt()
     }
-
+*/
 
     myDataSetList.append(mpModel->item(myLoopCounter, 11)->text());
     mySubSetList.append(mpModel->item(myLoopCounter, 12)->text());
@@ -521,10 +520,10 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
 
 
 
-    tedVariableMapping->append(mpModel->item(myLoopCounter, 11)->text());
-    tedVariableMapping->append(mpModel->item(myLoopCounter, 12)->text());
-    tedVariableMapping->append(mpModel->item(myLoopCounter, 13)->text());
-    tedVariableMapping->append(mpModel->item(myLoopCounter, 14)->text());
+    //tedVariableMapping->append(mpModel->item(myLoopCounter, 11)->text());
+    //tedVariableMapping->append(mpModel->item(myLoopCounter, 12)->text());
+    //tedVariableMapping->append(mpModel->item(myLoopCounter, 13)->text());
+    //tedVariableMapping->append(mpModel->item(myLoopCounter, 14)->text());
 
   }
   treeViewVariables->setModel(mpModel);
@@ -578,4 +577,10 @@ void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
   }
 }
 
+void MadMainWindow::on_pbManageVariablesList_clicked()
+{
+  //  MadLoginDialog* myMadLoginDialog = new MadLoginDialog( this );
+  MadVariableManager* mypMadVariableManager = new MadVariableManager( this );
+  mypMadVariableManager->exec();
 
+}
