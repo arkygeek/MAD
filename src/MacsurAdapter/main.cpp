@@ -33,84 +33,40 @@
 #include <ApplicationServices/ApplicationServices.h>
 #endif
 
-/*  Local includes
- *
- ***********
- *  NOTE!  *
- **************************************************************
- *  you must specify the relative path if not located in src  *
- *  example:  #include "gui/theHeader.h"                    *
- **************************************************************/
 #include "madmainwindow.h"
-#include "lib/madversion.h"
 
 int main(int argc, char *argv[])
 {
     QApplication a(argc, argv);
 
-#ifdef Q_WS_WIN
-    //for windows lets use plastique syle!
+#ifdef Q_WS_WIN   // lets windows use plastique syle
   QApplication::setStyle(new QPlastiqueStyle);
 #endif
 
 #ifdef Q_OS_MACX
   QString bundledQtCore(QCoreApplication::applicationDirPath().append
                         ("/lib/QtCore.framework"));
+
+  /* Test to determine if this program was started on Mac OS X by double-clicking
+  * the application bundle rather then from a command line. If clicked, argv[1]
+  * contains a process serial number in the form -psn_0_1234567. Don't process
+  * the command line arguments in this case because argv[1] confuses the processing.
+  */
   if (QFile::exists(bundledQtCore))
   {
-    QCoreApplication::setLibraryPaths
-        (QStringList(QCoreApplication::applicationDirPath()));
+    QCoreApplication::setLibraryPaths(QStringList
+                                      (QCoreApplication::applicationDirPath())
+                                     );
   }
 #endif
 
     MadMainWindow w;
     w.show();
-    
     return a.exec();
 }
 
-/* Test to determine if this program was started on Mac OS X by double-clicking
- * the application bundle rather then from a command line. If clicked, argv[1]
- * contains a process serial number in the form -psn_0_1234567. Don't process
- * the command line arguments in this case because argv[1] confuses the processing.
- */
+
 bool bundleclicked(int argc, char *argv[])
 {
   return ( argc > 1 && memcmp(argv[1], "-psn_", 5) == 0 );
 }
-
-/*
- * Some notes about code documentation and how to
- * effectively use regular comments and doxygen
- *
- * only document the interface in the header files:
- * don't talk about how the function does something,
- * tell only what it does.
- *
- * If you want to explain the actual implementation,
- * put some relevant (normal) comments in the source file.
- *
- * A starting place for Doxygen is here:
- * www.stack.nl/~dimitri/doxygen/manual/docblocks.html#cppblock
- *
- ***********************
- *  One thing to note  *
- *****************************************************************************
- * To document a member of a C++ class, you must also document the class     *
- * itself. The same holds for namespaces.                                    *
- *                                                                           *
- * To document a global C function, typedef, enum or preprocessor definition *
- * you must first document the file that contains it (usually this will be a *
- * header file, because that file contains the information that is exported  *
- * to other source files).                                                   *
- *                                                                           *
- * Let's repeat that, because it is often overlooked:                        *
- * to document global objects (functions, typedefs, enum, macros, etc),      *
- * you must document the file in which they are defined.                     *
- *                                                                           *
- * In other words, there must at least be a                                  *
- *  / * !   \ file  * /   or a  / **  @file  * /    line in this file.       *
- *                                                                           *
- *****************************************************************************
- *
- */

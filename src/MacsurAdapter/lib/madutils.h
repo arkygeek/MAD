@@ -36,6 +36,7 @@ class QStringList;
 #include <QString>
 #include <QStringList>
 #include <QColumnView>
+#include <QStandardItemModel>
 
 
 class MadUtils
@@ -155,6 +156,14 @@ public:
      */
     static QString xmlDecode(QString theString);
 
+    /**
+     * @brief csvDecode
+     * @param theString
+     * @return
+     */
+    QStandardItemModel &csvDecodeToQSIModel(const QString theFileToLoad);
+
+
     /** @brief getStandardCss
      * Get the standard style sheet for reports. Typically this will be
      * used like this:
@@ -177,6 +186,10 @@ public:
     QString saveFile();
 
 private:
+  void checkString(QString &theTemporary, QChar theCharacter);
+  //QStandardItemModel *mpModel;
+  QList<QStandardItem*> mpStandardItemList;
+  QStandardItemModel *mpModelFromCsv;
 
 };
 

@@ -34,6 +34,7 @@
 #include <QVector>
 #include <QtXml>
 #include <QString>
+#include <QStandardItemModel>
 
 #include <QFileDialog>
 //#ifdef Q_OS_MACX
@@ -123,6 +124,9 @@ MadUtils::ModelMap MadUtils::getAvailableModels()
   return myMap;
 }
 
+
+
+
 bool MadUtils::createTextFile(QString theFileName, QString theData)
 {
     //create the txt file
@@ -155,6 +159,179 @@ QString MadUtils::xmlDecode(QString theString)
   theString = theString.replace("&amp;","&");
   return theString;
 }
+
+void MadUtils::checkString(QString &theTemporary, QChar theCharacter)
+{
+  if(theTemporary.count("\"")%2 == 0)
+  {
+    //if (theTemporary.size() == 0 && theCharacter != ',') //problem with line endings
+       //theTemporary.remove(QChar(','));
+       //return;
+    if (theTemporary.startsWith( QChar('\"'))
+       &&
+       theTemporary.endsWith( QChar('\"') ) )
+    {
+       theTemporary.remove( QRegExp("^\"") );
+       theTemporary.remove( QRegExp("\"$") );
+    }
+
+    //TODO this might fail if there are 4 or more reapeating double quotes
+    theTemporary.replace("\"\"", "\"");
+
+    QStandardItem *mypItem = new QStandardItem(theTemporary);
+
+    mpStandardItemList.append(mypItem);
+
+    if (theCharacter != QChar(','))
+    {
+      mpModelFromCsv->appendRow(mpStandardItemList);
+      mpStandardItemList.clear();
+    }
+
+    theTemporary.clear();
+  }
+  else
+  {
+    theTemporary.append(theCharacter);
+  }
+}
+
+static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
+{
+  QStandardItemModel *mypModel = thepQStdItem->model();
+  QList<QStandardItem*> myReturnList;
+  QModelIndex myIndex = thepQStdItem->index();\
+
+  if (!myIndex.isValid())
+  {
+    return myReturnList;
+  }
+
+  if (thepQStdItem->rowCount() == 0)
+  {
+    return myReturnList;
+  }
+
+  for (int e = 0; e < thepQStdItem->rowCount(); ++e)
+  {
+    QModelIndex si = mypModel->index(e,thepQStdItem->column(),myIndex);
+    QStandardItem *iz = mypModel->itemFromIndex(si);
+    if (iz)
+    {
+      myReturnList << iz;
+    }
+  }
+
+  return myReturnList;
+}
+
+QStandardItemModel& MadUtils::csvDecodeToQSIModel
+                              (const QString theFileToLoad)
+{
+  QStandardItemModel *mypModel;// = new QStandardItemModel(this);
+  //tblvVariables->setModel(mpModel);
+  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
+
+  QFile myFile (myFileName);
+  if (myFile.open(QIODevice::ReadOnly))
+  {
+    QString data = myFile.readAll();
+
+    //remove all Carriage Returns
+    data.remove( QRegExp("\r") );
+
+    QString myTemp;
+    QChar myCharacter;
+    QTextStream myTextStream(&data);
+
+    while (!myTextStream.atEnd())
+    {
+      myTextStream >> myCharacter;
+      if (myCharacter == ',')
+      {
+        checkString(myTemp, myCharacter);
+      }
+
+      else if (myCharacter == '\n')
+      {
+        checkString(myTemp, myCharacter);
+      }
+
+      else if (myTextStream.atEnd())
+      {
+        myTemp.append(myCharacter);
+        checkString(myTemp, myCharacter);
+      }
+
+      else
+      {
+        myTemp.append(myCharacter);
+      } // end else
+    } // end while
+  } // end if
+
+  //
+  // now we subIterate
+  //
+
+  QStringList myLine;
+
+  int myChildTotal = 0;
+  const int myColumnCount = mypModel->columnCount();
+  const int myRowCount = mypModel->rowCount();
+  qDebug() << "-- iter ---------------------------------------------------------";
+  for (int myIterator = 0; myIterator < myColumnCount; ++myIterator)
+  {
+    const QString myHeaderText1 = mypModel->headerData( myIterator,
+                                              Qt::Horizontal,
+                                              Qt::DisplayRole ).toString();
+    const QString myHeaderText2 = mypModel->headerData( myIterator,
+                                               Qt::Vertical,
+                                               Qt::DisplayRole).toString();
+    myLine << qMax(myHeaderText1,myHeaderText2);
+  }
+
+  QList<QStandardItem*> MyList;
+
+
+
+  for (int myForIterator = 0; myForIterator < myRowCount; ++myForIterator)
+  {
+    QStandardItem *mypIndex_1 = mypModel->item(myForIterator,2);
+    //QStandardItem *mypIndex_2 = mpModel->item(myForIterator,12);
+    MyList.clear();
+    MyList = childList(mypIndex_1);
+    myChildTotal = MyList.size();
+    int myTreeLevel = 0;
+
+    qDebug() << "# lev. " << myTreeLevel <<" line "
+             << myForIterator << " txt " << mypIndex_1->text()
+             << " child " << myChildTotal;
+
+    if (myChildTotal !=0)
+    {
+      myTreeLevel++;
+      foreach (QStandardItem *mypForEachIndex,MyList)
+      {
+        MyList.clear();
+        myChildTotal = 0;
+        MyList = childList(mypForEachIndex);
+        myChildTotal = MyList.size();
+
+        qDebug() << "# lev." << myTreeLevel <<" line "
+                 << myForIterator << " txt "
+                 << mypForEachIndex->text() << " child " << myChildTotal;
+      } // end foreach
+    } // end if
+  } // end for (int e = 0; e < rows; ++e)
+
+  qDebug() << "-- iter ---------------------------------------------------------";
+
+
+  return *mypModel;
+
+}
+
 
 QString MadUtils::getStandardCss()
 {

@@ -320,16 +320,15 @@ void MadMainWindow::subIterate()
 {
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel2());
   //QStandardItemModel *pm = qobject_cast<QStandardItemModel *>(mpModel);
-
   //mpModel = new QStandardItemModel(this);
+
   if (!mpModel)
   {
     return;
   }
 
   QStringList myLine;
-  //int myRw = 0;
-  //int myCw = 0;
+
   int myChildTotal = 0;
   const int myColumnCount = mpModel->columnCount();
   const int myRowCount = mpModel->rowCount();
