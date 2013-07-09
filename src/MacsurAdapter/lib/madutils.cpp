@@ -175,7 +175,7 @@ void MadUtils::checkString(QString &theTemporary, QChar theCharacter)
        theTemporary.remove( QRegExp("\"$") );
     }
 
-    //TODO this might fail if there are 4 or more reapeating double quotes
+    //TODO this might fail if there are 4 or more repeating double quotes
     theTemporary.replace("\"\"", "\"");
 
     QStandardItem *mypItem = new QStandardItem(theTemporary);
@@ -225,12 +225,15 @@ static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
   return myReturnList;
 }
 
-QStandardItemModel& MadUtils::csvDecodeToQSIModel
-                              (const QString theFileToLoad)
+void MadUtils::csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel *thepModel)
 {
-  QStandardItemModel *mypModel;// = new QStandardItemModel(this);
-  //tblvVariables->setModel(mpModel);
-  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
+  //QStandardItemModel *mypModel = thepModel;
+
+  /*TODO the line below needs to be changed to be switched for the
+   *     line following it that is commented out
+   */
+  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv"; // this is for testing only
+  //QStrign myFileName = theFileToLoad; // this should be uncommented after testing
 
   QFile myFile (myFileName);
   if (myFile.open(QIODevice::ReadOnly))
@@ -277,15 +280,15 @@ QStandardItemModel& MadUtils::csvDecodeToQSIModel
   QStringList myLine;
 
   int myChildTotal = 0;
-  const int myColumnCount = mypModel->columnCount();
-  const int myRowCount = mypModel->rowCount();
+  const int myColumnCount = thepModel->columnCount();
+  const int myRowCount = thepModel->rowCount();
   qDebug() << "-- iter ---------------------------------------------------------";
   for (int myIterator = 0; myIterator < myColumnCount; ++myIterator)
   {
-    const QString myHeaderText1 = mypModel->headerData( myIterator,
+    const QString myHeaderText1 = thepModel->headerData( myIterator,
                                               Qt::Horizontal,
                                               Qt::DisplayRole ).toString();
-    const QString myHeaderText2 = mypModel->headerData( myIterator,
+    const QString myHeaderText2 = thepModel->headerData( myIterator,
                                                Qt::Vertical,
                                                Qt::DisplayRole).toString();
     myLine << qMax(myHeaderText1,myHeaderText2);
@@ -297,7 +300,7 @@ QStandardItemModel& MadUtils::csvDecodeToQSIModel
 
   for (int myForIterator = 0; myForIterator < myRowCount; ++myForIterator)
   {
-    QStandardItem *mypIndex_1 = mypModel->item(myForIterator,2);
+    QStandardItem *mypIndex_1 = thepModel->item(myForIterator,2);
     //QStandardItem *mypIndex_2 = mpModel->item(myForIterator,12);
     MyList.clear();
     MyList = childList(mypIndex_1);
@@ -321,14 +324,11 @@ QStandardItemModel& MadUtils::csvDecodeToQSIModel
         qDebug() << "# lev." << myTreeLevel <<" line "
                  << myForIterator << " txt "
                  << mypForEachIndex->text() << " child " << myChildTotal;
-      } // end foreach
-    } // end if
-  } // end for (int e = 0; e < rows; ++e)
+      } //end foreach
+    } //end if
+  } //end for (int e=0;e<rows;++e)
 
   qDebug() << "-- iter ---------------------------------------------------------";
-
-
-  return *mypModel;
 
 }
 

@@ -38,6 +38,7 @@
 #include "gui/maddataclassification.h" //needed if non-modal
 #include "gui/madtextdisplayform.h" //needed if non-modal
 #include "lib/mad.h"
+#include "lib/madutils.h"
 
 //Doxygen stuff
 /** @file lib/mad.h */

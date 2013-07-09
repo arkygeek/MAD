@@ -33,6 +33,7 @@
 #include "gui/madtextdisplayform.h"
 #include "gui/madlogindialog.h"
 #include "gui/madvariablemanager.h"
+#include "lib/madutils.h"
 
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
@@ -385,53 +386,8 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   tblvVariables->setModel(mpModel);
   QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
 
-  QFile myFile (myFileName);
-  if (myFile.open(QIODevice::ReadOnly))
-  {
-    QString data = myFile.readAll();
+  MadUtils::csvDecodeToQSIModel(myFileName, *mpModel);
 
-    //remove all Carriage Returns
-    data.remove( QRegExp("\r") );
-
-    QString myTemp;
-    QChar myCharacter;
-    QTextStream myTextStream(&data);
-
-    while (!myTextStream.atEnd())
-    {
-      myTextStream >> myCharacter;
-      if (myCharacter == ',')
-      {
-        checkString(myTemp, myCharacter);
-      }
-
-      else if (myCharacter == '\n')
-      {
-        checkString(myTemp, myCharacter);
-      }
-
-      else if (myTextStream.atEnd())
-      {
-        myTemp.append(myCharacter);
-        checkString(myTemp, myCharacter);
-      }
-
-      else
-      {
-        myTemp.append(myCharacter);
-      } // end else
-    } // end while
-  } // end if
-
-  subIterate();
-
-  int myIndexRow = 0;
-  int myIndexColumn = 12;
-  //QModelIndex mpModel->(myIndexRow, myIndexColumn);
-
-  //need to sort the data using columns 12,13,14,15 to put into tree
-
-  //QModelIndex  Dataset,Subset,Group,Sub-group
 
   QList<QString> myDataSetList;
   QList<QString> mySubSetList;
@@ -448,12 +404,6 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   QString myGroupHolder = mpModel->item(0, 13)->text();
   QString mySubGroupHolder = mpModel->item(0, 14)->text();
 
-  //QTreeWidgetItem myTreeItem;
-  //treeWidget->setHeader(QHeaderView(mpModel->text( 0, 11)));
-  //myTreeItem mySubSetHolder;
-  //myTreeItem myGroupHolder;
-  //myTreeItem mySubGroupHolder;
-
 
   // below verifies proper row count is happening - just for testing
 
@@ -461,7 +411,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
   {
     QString myConvertedValue = QString::number(myLoopCounter);
     tedVariableMapping->append(myConvertedValue);
-/*
+
     if (myDataSetHolder == mpModel->item(myLoopCounter, 11)->text())
     {
       // the value is the same, do not make new parent entry
@@ -510,7 +460,7 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
       mySubGroupHolder = mpModel->item(myLoopCounter, 14)->text();
       //treeWidget->childAt()
     }
-*/
+
 
     myDataSetList.append(mpModel->item(myLoopCounter, 11)->text());
     mySubSetList.append(mpModel->item(myLoopCounter, 12)->text());
@@ -555,7 +505,7 @@ void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
        theTemporary.remove( QRegExp("\"$") );
     }
 
-    //TODO this might fail if there are 4 or more reapeating double quotes
+    //TODO this might fail if there are 4 or more repeating double quotes
     theTemporary.replace("\"\"", "\"");
 
     QStandardItem *mypItem = new QStandardItem(theTemporary);

@@ -57,7 +57,7 @@ void MadVariableManager::checkString(QString &theTemporary, QChar theCharacter)
        theTemporary.remove( QRegExp("\"$") );
     }
 
-    //TODO this might fail if there are 4 or more reapeating double quotes
+    //TODO this might fail if there are 4 or more repeating double quotes
     theTemporary.replace("\"\"", "\"");
 
     QStandardItem *mypItem = new QStandardItem(theTemporary);
