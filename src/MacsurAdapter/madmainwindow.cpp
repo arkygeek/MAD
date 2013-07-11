@@ -372,89 +372,102 @@ void MadMainWindow::subIterate()
 
 void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
 {
-  mpModel = new QStandardItemModel();
-  tblvVariables->setModel(mpModel);
-  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
+  MadCsvReader* myMadCsvReaderDialog = new MadCsvReader( this );
+  //QStringList myUsernameList;
+  //myUsernameList << "Jason" << "Martin" << "Katharina";
+  //myMadLoginDialog->setUsernamesList(myUsernameList);
+  //connect (myMadLoginDialog,
+  //          SIGNAL (acceptLogin (QString&, QString&,int&) ),
+  //          this,
+  //          SLOT (slotAcceptUserLogin (QString&, QString&) )
+  //        );
 
-  //MadUtils::csvDecodeToQSIModel(myFileName, mpModel);
+  myMadCsvReaderDialog->exec();
+  //myMadCsvReaderDialog->
 
-  QList<QString> myDataSetList;
-  QList<QString> mySubSetList;
-  QList<QString> myGroupList;
-  QList<QString> mySubGroupList;
+//  mpModel = new QStandardItemModel();
+//  tblvVariables->setModel(mpModel);
+//  QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
 
-  QTreeWidget myTree;
-  myTree.setColumnCount(5);
+//  //MadUtils::csvDecodeToQSIModel(myFileName, mpModel);
 
-  int myRowCount = mpModel->rowCount();
+//  QList<QString> myDataSetList;
+//  QList<QString> mySubSetList;
+//  QList<QString> myGroupList;
+//  QList<QString> mySubGroupList;
 
-  QString myDataSetHolder = mpModel->item(0, 11)->text();
-  QString mySubSetHolder = mpModel->item(0, 12)->text();
-  QString myGroupHolder = mpModel->item(0, 13)->text();
-  QString mySubGroupHolder = mpModel->item(0, 14)->text();
+//  QTreeWidget myTree;
+//  myTree.setColumnCount(5);
 
+//  int myRowCount = mpModel->rowCount();
 
-  // below verifies proper row count is happening - just for testing
-
-  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
-  {
-    QString myConvertedValue = QString::number(myLoopCounter);
-    tedVariableMapping->append(myConvertedValue);
-
-    if (myDataSetHolder == mpModel->item(myLoopCounter, 11)->text())
-    {
-      // the value is the same, do not make new parent entry
-      tedVariableMapping->append("DataSet is the same, do not make new parent");
-    }
-    else
-    {
-      // the value is new, so DO make a new parent entry
-      tedVariableMapping->append("DataSet is different, make new child");
-      myDataSetHolder = mpModel->item(myLoopCounter, 11)->text();
-    }
-    if (mySubSetHolder == mpModel->item(myLoopCounter, 12)->text())
-    {
-      // the value is the same, do not make new child entry
-      tedVariableMapping->append("  SubSet is the same, do not make new child");
-
-    }
-    else
-    {
-      // the value is new, so DO make a new child entry
-      tedVariableMapping->append("  SubSet is different, make new child");
-      mySubSetHolder = mpModel->item(myLoopCounter, 12)->text();
-    }
-    if (myGroupHolder == mpModel->item(myLoopCounter, 13)->text())
-    {
-      // the value is the same, do not make new grand child entry
-      tedVariableMapping->append("    Group is the same, do not make new grand child");
-
-    }
-    else
-    {
-      // the value is new, so DO make a new grand child entry
-      tedVariableMapping->append("    Group is different, make new grand child");
-      myGroupHolder = mpModel->item(myLoopCounter, 13)->text();
-    }
-    if (mySubGroupHolder == mpModel->item(myLoopCounter, 14)->text())
-    {
-      // the value is the same, do not make new grand grand child entry
-      tedVariableMapping->append("      SubGroup is the same, do not make new grand grand child");
-
-    }
-    else
-    {
-      // the value is new, so DO make a new grand grand child entry
-      tedVariableMapping->append("      SubGroup is different, make new grand grand child");
-      mySubGroupHolder = mpModel->item(myLoopCounter, 14)->text();
-      //treeWidget->childAt()
-    }
+//  QString myDataSetHolder = mpModel->item(0, 11)->text();
+//  QString mySubSetHolder = mpModel->item(0, 12)->text();
+//  QString myGroupHolder = mpModel->item(0, 13)->text();
+//  QString mySubGroupHolder = mpModel->item(0, 14)->text();
 
 
-    myDataSetList.append(mpModel->item(myLoopCounter, 11)->text());
-    mySubSetList.append(mpModel->item(myLoopCounter, 12)->text());
-    myGroupList.append(mpModel->item(myLoopCounter, 13)->text());
-    mySubGroupList.append(mpModel->item(myLoopCounter, 14)->text());
+//  // below verifies proper row count is happening - just for testing
+
+//  for (int myLoopCounter = 0; myLoopCounter < myRowCount; myLoopCounter++)
+//  {
+//    QString myConvertedValue = QString::number(myLoopCounter);
+//    tedVariableMapping->append(myConvertedValue);
+
+//    if (myDataSetHolder == mpModel->item(myLoopCounter, 11)->text())
+//    {
+//      // the value is the same, do not make new parent entry
+//      tedVariableMapping->append("DataSet is the same, do not make new parent");
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new parent entry
+//      tedVariableMapping->append("DataSet is different, make new child");
+//      myDataSetHolder = mpModel->item(myLoopCounter, 11)->text();
+//    }
+//    if (mySubSetHolder == mpModel->item(myLoopCounter, 12)->text())
+//    {
+//      // the value is the same, do not make new child entry
+//      tedVariableMapping->append("  SubSet is the same, do not make new child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new child entry
+//      tedVariableMapping->append("  SubSet is different, make new child");
+//      mySubSetHolder = mpModel->item(myLoopCounter, 12)->text();
+//    }
+//    if (myGroupHolder == mpModel->item(myLoopCounter, 13)->text())
+//    {
+//      // the value is the same, do not make new grand child entry
+//      tedVariableMapping->append("    Group is the same, do not make new grand child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new grand child entry
+//      tedVariableMapping->append("    Group is different, make new grand child");
+//      myGroupHolder = mpModel->item(myLoopCounter, 13)->text();
+//    }
+//    if (mySubGroupHolder == mpModel->item(myLoopCounter, 14)->text())
+//    {
+//      // the value is the same, do not make new grand grand child entry
+//      tedVariableMapping->append("      SubGroup is the same, do not make new grand grand child");
+
+//    }
+//    else
+//    {
+//      // the value is new, so DO make a new grand grand child entry
+//      tedVariableMapping->append("      SubGroup is different, make new grand grand child");
+//      mySubGroupHolder = mpModel->item(myLoopCounter, 14)->text();
+//      //treeWidget->childAt()
+//    }
+
+
+//    myDataSetList.append(mpModel->item(myLoopCounter, 11)->text());
+//    mySubSetList.append(mpModel->item(myLoopCounter, 12)->text());
+//    myGroupList.append(mpModel->item(myLoopCounter, 13)->text());
+//    mySubGroupList.append(mpModel->item(myLoopCounter, 14)->text());
 
 
 
@@ -464,21 +477,21 @@ void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
     //tedVariableMapping->append(mpModel->item(myLoopCounter, 14)->text());
 
   }
-  treeViewVariables->setModel(mpModel);
+//  treeViewVariables->setModel(mpModel);
 
 
-  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
+//  QSortFilterProxyModel *pFilterModel = new QSortFilterProxyModel(this);
 
 
-  pFilterModel->setSourceModel(mpModel);
+//  pFilterModel->setSourceModel(mpModel);
 
-  QTreeView *pFilteredView = new QTreeView;
-  pFilterModel->setFilterKeyColumn(11);
-  pFilterModel->sort(11);
-  //pFilterModel->removeColumns(1, 10);
+//  QTreeView *pFilteredView = new QTreeView;
+//  pFilterModel->setFilterKeyColumn(11);
+//  pFilterModel->sort(11);
+//  //pFilterModel->removeColumns(1, 10);
 
-  treeViewVariables->setModel(pFilterModel);
-}
+//  treeViewVariables->setModel(pFilterModel);
+//}
 
 void MadMainWindow::checkString(QString &theTemporary, QChar theCharacter)
 {

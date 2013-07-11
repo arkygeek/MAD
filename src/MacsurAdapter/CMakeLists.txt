@@ -49,6 +49,7 @@ set ( MacsurAdapter_HDRS
         gui/maddataclassification.h
         gui/madlogindialog.h
         gui/madvariablemanager.h
+        gui/madcsvreader.h
         )
 
 set ( MacsurAdapter_SRCS
@@ -60,7 +61,6 @@ set ( MacsurAdapter_SRCS
         lib/madserialisable.cpp
         lib/madguid.cpp
         lib/maddataset.cpp
-        lib/madcsv.cpp
         lib/dataclassification/madsubcategory.cpp
         lib/dataclassification/maddataclassificationmanagement.cpp
         lib/dataclassification/maddataclassificationinitialvalues.cpp
@@ -79,6 +79,7 @@ set ( MacsurAdapter_SRCS
         gui/maddataclassification.cpp
         gui/madlogindialog.cpp
         gui/madvariablemanager.cpp
+        gui/madcsvreader.cpp
         )
 
 set ( MacsurAdapter_UIS
@@ -86,6 +87,7 @@ set ( MacsurAdapter_UIS
         gui/maddataclassificationbase.ui
         gui/madtextdisplayformbase.ui
         gui/madvariablemanagerbase.ui
+        gui/madcsvreaderbase.ui
         )
 QT4_WRAP_UI(UIS ${MacsurAdapter_UIS})
 
@@ -100,6 +102,7 @@ set ( MacsurAdapter_MOCS
         gui/madtextdisplayform.h
         gui/madvariablemanager.h
         gui/madlogindialog.h
+        gui/madcsvreader.h
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 

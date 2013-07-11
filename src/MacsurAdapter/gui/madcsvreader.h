@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madcsvreader.h created: 11/07/2013                                    *
- *   Class info: MadCsvReader                                               *
+ *   File:  madcsvreader.h created: 11/07/2013                             *
+ *   Class info: MadCsvReader                                              *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -28,6 +28,13 @@
 #include <QtGui/QDialog>
 #endif
 
+#include <QFile>
+#include <QFileDialog>
+#include <QTextStream>
+#include <QDebug>
+#include <QString>
+#include <QStandardItemModel>
+
 namespace Ui {
   class MadCsvReader;
 }
@@ -40,8 +47,15 @@ public:
   explicit MadCsvReader(QWidget *parent = 0);
   ~MadCsvReader();
   
+private slots:
+  void on_pbSelectFile_clicked();
+  void checkTheString(QString &theQString, QChar theQChar = 0);
+
 private:
   Ui::MadCsvReader *ui;
+  QList<QStringList> mCsvQList;
+  QStandardItemModel *mpQSIModel;
+  QList<QStandardItem*> mQListOfQStandardItems;
 };
 
 #endif // MADCSVREADER_H
