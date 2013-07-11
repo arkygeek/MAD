@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'madmainwindowbase.ui'
 **
-** Created: Wed Jul 3 15:26:41 2013
+** Created: Thu Jul 11 06:58:33 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -118,7 +118,7 @@ public:
     QComboBox *comboBox_2;
     QPushButton *pbRemoveMapping;
     QSpacerItem *horizontalSpacer;
-    QPushButton *pushButton_2;
+    QPushButton *pbManageVariablesList;
     QWidget *tabData;
     QGridLayout *gridLayout_5;
     QTextBrowser *txtbrwsData;
@@ -483,10 +483,10 @@ public:
 
         gridLayout_8->addItem(horizontalSpacer, 1, 0, 1, 1);
 
-        pushButton_2 = new QPushButton(tabVariables);
-        pushButton_2->setObjectName(QString::fromUtf8("pushButton_2"));
+        pbManageVariablesList = new QPushButton(tabVariables);
+        pbManageVariablesList->setObjectName(QString::fromUtf8("pbManageVariablesList"));
 
-        gridLayout_8->addWidget(pushButton_2, 1, 1, 1, 1);
+        gridLayout_8->addWidget(pbManageVariablesList, 1, 1, 1, 1);
 
         tabwidMainWin->addTab(tabVariables, QString());
         tabData = new QWidget();
@@ -542,7 +542,7 @@ public:
 
         retranslateUi(MadMainWindow);
 
-        tabwidMainWin->setCurrentIndex(0);
+        tabwidMainWin->setCurrentIndex(3);
         modelNameComboBox->setCurrentIndex(0);
 
 
@@ -654,7 +654,7 @@ public:
          << QApplication::translate("MadMainWindow", "STICS", 0, QApplication::UnicodeUTF8)
         );
         pbRemoveMapping->setText(QApplication::translate("MadMainWindow", "Remove", 0, QApplication::UnicodeUTF8));
-        pushButton_2->setText(QApplication::translate("MadMainWindow", "Manage Variables List", 0, QApplication::UnicodeUTF8));
+        pbManageVariablesList->setText(QApplication::translate("MadMainWindow", "Manage Variables List", 0, QApplication::UnicodeUTF8));
         tabwidMainWin->setTabText(tabwidMainWin->indexOf(tabVariables), QApplication::translate("MadMainWindow", "Variables", 0, QApplication::UnicodeUTF8));
         modelNameComboBox->clear();
         modelNameComboBox->insertItems(0, QStringList()
