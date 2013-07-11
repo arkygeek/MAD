@@ -161,7 +161,7 @@ public:
      * @param theString
      * @return
      */
-    void csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel *thepModel);
+    void csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel &thepModel);
 
     /** @brief getStandardCss
      * Get the standard style sheet for reports. Typically this will be

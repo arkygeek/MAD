@@ -40,7 +40,8 @@ SOURCES += main.cpp\
     lib/dataclassification/maddataclassificationweather.cpp \
     lib/maddataset.cpp \
     gui/madlogindialog.cpp \
-    gui/madvariablemanager.cpp
+    gui/madvariablemanager.cpp \
+    lib/madcsv.cpp
 
 
 HEADERS  += madmainwindow.h \
@@ -68,7 +69,8 @@ HEADERS  += madmainwindow.h \
     lib/dataclassification/maddataclassificationweather.h \
     lib/maddataset.h \
     gui/madlogindialog.h \
-    gui/madvariablemanager.h
+    gui/madvariablemanager.h \
+    lib/madcsv.h
 
 
 FORMS    += madmainwindowbase.ui \

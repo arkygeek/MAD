@@ -48,10 +48,6 @@ MadMainWindow::MadMainWindow(QWidget *parent) :
   // this file (madmainform.cpp)
   lblVersion->setText(QString("Version: %1").arg(VERSION)+ " "
                         + QString("$Revision$").replace("$",""));
-
-  //QxtCsvModel myQxtCsvModel;
-
-  //connect ( pbLogin, SIGNAL ( valueChanged(int) ), this, SLOT ( slotAcceptUserLogin() ));
 }
 
 QString MadMainWindow::modelText() const
@@ -80,12 +76,6 @@ void MadMainWindow::changeEvent(QEvent *e)
         break;
     }
 }
-
-
-//void MadMainWindow::loadModels(MadModelMap *theModelMap);
-//{
-  //
-//}
 
 void MadMainWindow::on_pbClassification_clicked()
 {
@@ -382,12 +372,11 @@ void MadMainWindow::subIterate()
 
 void MadMainWindow::loadCsvFile(const QString &theFileToLoad)
 {
-  mpModel = new QStandardItemModel(this);
+  mpModel = new QStandardItemModel();
   tblvVariables->setModel(mpModel);
   QString myFileName = "://agmip/agmip/" + theFileToLoad + ".csv";
 
-  MadUtils::csvDecodeToQSIModel(myFileName, *mpModel);
-
+  //MadUtils::csvDecodeToQSIModel(myFileName, mpModel);
 
   QList<QString> myDataSetList;
   QList<QString> mySubSetList;

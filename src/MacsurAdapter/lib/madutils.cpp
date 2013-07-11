@@ -225,7 +225,7 @@ static QList<QStandardItem*> childList( QStandardItem *thepQStdItem )
   return myReturnList;
 }
 
-void MadUtils::csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel *thepModel)
+void MadUtils::csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel &thepModel)
 {
   //QStandardItemModel *mypModel = thepModel;
 
@@ -280,15 +280,15 @@ void MadUtils::csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel *th
   QStringList myLine;
 
   int myChildTotal = 0;
-  const int myColumnCount = thepModel->columnCount();
-  const int myRowCount = thepModel->rowCount();
+  const int myColumnCount = thepModel.columnCount();
+  const int myRowCount = thepModel.rowCount();
   qDebug() << "-- iter ---------------------------------------------------------";
   for (int myIterator = 0; myIterator < myColumnCount; ++myIterator)
   {
-    const QString myHeaderText1 = thepModel->headerData( myIterator,
+    const QString myHeaderText1 = thepModel.headerData( myIterator,
                                               Qt::Horizontal,
                                               Qt::DisplayRole ).toString();
-    const QString myHeaderText2 = thepModel->headerData( myIterator,
+    const QString myHeaderText2 = thepModel.headerData( myIterator,
                                                Qt::Vertical,
                                                Qt::DisplayRole).toString();
     myLine << qMax(myHeaderText1,myHeaderText2);
@@ -300,7 +300,7 @@ void MadUtils::csvDecodeToQSIModel(QString theFileToLoad, QStandardItemModel *th
 
   for (int myForIterator = 0; myForIterator < myRowCount; ++myForIterator)
   {
-    QStandardItem *mypIndex_1 = thepModel->item(myForIterator,2);
+    QStandardItem *mypIndex_1 = thepModel.item(myForIterator,2);
     //QStandardItem *mypIndex_2 = mpModel->item(myForIterator,12);
     MyList.clear();
     MyList = childList(mypIndex_1);

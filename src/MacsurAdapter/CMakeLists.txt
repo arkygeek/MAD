@@ -31,6 +31,7 @@ set ( MacsurAdapter_HDRS
         lib/madserialisable.h
         lib/madguid.h
         lib/maddataset.h
+        lib/madcsv.h
         lib/dataclassification/madsubcategory.h
         lib/dataclassification/maddataclassificationmanagement.h
         lib/dataclassification/maddataclassificationinitialvalues.h
@@ -59,6 +60,7 @@ set ( MacsurAdapter_SRCS
         lib/madserialisable.cpp
         lib/madguid.cpp
         lib/maddataset.cpp
+        lib/madcsv.cpp
         lib/dataclassification/madsubcategory.cpp
         lib/dataclassification/maddataclassificationmanagement.cpp
         lib/dataclassification/maddataclassificationinitialvalues.cpp
