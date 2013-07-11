@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  madcsv.h created: 11/07/2013                                    *
- *   Class info: MadCsv                                               *
+ *   File:  madcsvreader.h created: 11/07/2013                                    *
+ *   Class info: MadCsvReader                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,13 +19,29 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef MADCSV_H
-#define MADCSV_H
+#ifndef MADCSVREADER_H
+#define MADCSVREADER_H
 
-class MadCsv
+#if QT_VERSION >= 0x050000
+#include <QtWidgets/QDialog>
+#else
+#include <QtGui/QDialog>
+#endif
+
+namespace Ui {
+  class MadCsvReader;
+}
+
+class MadCsvReader : public QDialog
 {
+  Q_OBJECT
+  
 public:
-  MadCsv();
+  explicit MadCsvReader(QWidget *parent = 0);
+  ~MadCsvReader();
+  
+private:
+  Ui::MadCsvReader *ui;
 };
 
-#endif // MADCSV_H
+#endif // MADCSVREADER_H

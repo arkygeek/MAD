@@ -41,7 +41,8 @@ SOURCES += main.cpp\
     lib/maddataset.cpp \
     gui/madlogindialog.cpp \
     gui/madvariablemanager.cpp \
-    lib/madcsv.cpp
+    gui/madcsvreader.cpp
+
 
 
 HEADERS  += madmainwindow.h \
@@ -70,13 +71,14 @@ HEADERS  += madmainwindow.h \
     lib/maddataset.h \
     gui/madlogindialog.h \
     gui/madvariablemanager.h \
-    lib/madcsv.h
+    gui/madcsvreader.h
 
 
 FORMS    += madmainwindowbase.ui \
     gui/maddataclassificationbase.ui \
     gui/madtextdisplayformbase.ui \
-    gui/madvariablemanagerbase.ui
+    gui/madvariablemanagerbase.ui \
+    gui/madcsvreaderbase.ui
 
 RESOURCES += \
     resources/resources.qrc
