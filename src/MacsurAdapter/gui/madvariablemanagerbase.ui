@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>641</width>
-    <height>429</height>
+    <width>844</width>
+    <height>631</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -47,36 +47,123 @@
        <string>Explore</string>
       </attribute>
       <layout class="QGridLayout" name="gridLayout_3">
-       <item row="0" column="1">
-        <widget class="QComboBox" name="cbSelectColumn">
-         <item>
-          <property name="text">
-           <string>Select Column</string>
+       <item row="3" column="3">
+        <spacer name="verticalSpacerExplore">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item row="11" column="3">
+        <widget class="QComboBox" name="cbExploreFilterColumn"/>
+       </item>
+       <item row="1" column="0" rowspan="14" colspan="3">
+        <widget class="QSplitter" name="splitter">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <widget class="QTableView" name="tblvwFullDataSetExplore">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Complete data set&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
           </property>
-         </item>
+         </widget>
+         <widget class="QTreeView" name="trvwFilteredDataSetExplore">
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Sorted/Filtered data set&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+         </widget>
         </widget>
        </item>
-       <item row="1" column="2">
-        <widget class="QPushButton" name="pbKeywordFilter">
+       <item row="2" column="3">
+        <widget class="QPushButton" name="pbDisplayData">
          <property name="text">
-          <string>Keyword Filter</string>
+          <string>Display Data</string>
          </property>
         </widget>
        </item>
-       <item row="0" column="2">
-        <widget class="QComboBox" name="cbSelectFilter">
+       <item row="7" column="3">
+        <widget class="QLabel" name="lblExploreFilterSyntax">
+         <property name="text">
+          <string>Filter Syntax:</string>
+         </property>
+         <property name="buddy">
+          <cstring>cbExploreFilterSyntax</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="3">
+        <widget class="QComboBox" name="cbExploreSelectHeader">
          <item>
           <property name="text">
-           <string>Select Filter</string>
+           <string>Select Header</string>
           </property>
          </item>
         </widget>
        </item>
-       <item row="1" column="0" colspan="2">
-        <widget class="QLineEdit" name="ledKeyword"/>
+       <item row="1" column="3">
+        <widget class="QPushButton" name="pbDisplayHeaders">
+         <property name="text">
+          <string>Display Headers</string>
+         </property>
+        </widget>
+       </item>
+       <item row="5" column="3">
+        <widget class="QLabel" name="lblExploreFilterPattern">
+         <property name="text">
+          <string>Filter Pattern:</string>
+         </property>
+         <property name="buddy">
+          <cstring>ledFilterPattern</cstring>
+         </property>
+        </widget>
+       </item>
+       <item row="8" column="3">
+        <widget class="QComboBox" name="cbExploreFilterSyntax">
+         <item>
+          <property name="text">
+           <string>Regular Expression</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Wildcard</string>
+          </property>
+         </item>
+         <item>
+          <property name="text">
+           <string>Fixed String</string>
+          </property>
+         </item>
+        </widget>
+       </item>
+       <item row="12" column="3">
+        <widget class="QCheckBox" name="chbxExploreCaseSensFilter">
+         <property name="text">
+          <string>Case Sensitive Filter</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
+       </item>
+       <item row="13" column="3">
+        <widget class="QCheckBox" name="chbxExploreCaseSensSorting">
+         <property name="text">
+          <string>Case Sensitive Sorting</string>
+         </property>
+         <property name="checked">
+          <bool>true</bool>
+         </property>
+        </widget>
        </item>
        <item row="0" column="0">
-        <widget class="QComboBox" name="cbSelectFile">
+        <widget class="QComboBox" name="cbExploreSelectFile">
          <item>
           <property name="text">
            <string>Select File</string>
@@ -129,8 +216,68 @@
          </item>
         </widget>
        </item>
-       <item row="2" column="0" colspan="3">
-        <widget class="QTableView" name="tbvwExplore"/>
+       <item row="0" column="1">
+        <layout class="QHBoxLayout" name="horizontalLayoutExplore">
+         <item>
+          <widget class="QLineEdit" name="ledExploreHeaderChar">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
+           <property name="maximumSize">
+            <size>
+             <width>40</width>
+             <height>16777215</height>
+            </size>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="pbExploreSetHeaderChar">
+           <property name="text">
+            <string>Set Header Char</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerExplore">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item row="6" column="3">
+        <widget class="QLineEdit" name="ledFilterPattern">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string/>
+         </property>
+        </widget>
+       </item>
+       <item row="10" column="3">
+        <widget class="QLabel" name="lblExploreFilterColumn">
+         <property name="text">
+          <string>Filter Column:</string>
+         </property>
+         <property name="buddy">
+          <cstring>cbExploreFilterColumn</cstring>
+         </property>
+        </widget>
        </item>
       </layout>
      </widget>
@@ -283,8 +430,8 @@
    <slot>accept()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>248</x>
-     <y>254</y>
+     <x>524</x>
+     <y>626</y>
     </hint>
     <hint type="destinationlabel">
      <x>157</x>
@@ -299,8 +446,8 @@
    <slot>reject()</slot>
    <hints>
     <hint type="sourcelabel">
-     <x>316</x>
-     <y>260</y>
+     <x>592</x>
+     <y>626</y>
     </hint>
     <hint type="destinationlabel">
      <x>286</x>

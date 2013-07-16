@@ -81,7 +81,7 @@ void MadVariableManager::checkString(QString &theTemporary, QChar theCharacter)
 void MadVariableManager::loadCsvFile(const QString &theFileToLoad)
 {
   mpModelFromCsv = new QStandardItemModel(this);
-  ui->tbvwExplore->setModel(mpModelFromCsv);
+  ui->tblvwFullDataSetExplore->setModel(mpModelFromCsv);
   QString myFileName = "://agmip/agmip/" + theFileToLoad;// + ".csv";
 
   QFile myFile (myFileName);
@@ -243,4 +243,10 @@ void MadVariableManager::loadCsvFile(const QString &theFileToLoad)
 void MadVariableManager::on_cbSelectFile_currentIndexChanged(const QString &theSelection)
 {
     loadCsvFile(theSelection);
+}
+
+void MadVariableManager::on_pbSetHeaderChar_clicked()
+{
+  // set Header character
+  // if ( theFirstCharOfTheLine == theUserSuppliedChar ) { itIsAHeader; populate comboBox;}
 }

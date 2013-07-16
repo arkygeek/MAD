@@ -5,9 +5,11 @@
 #-------------------------------------------------
 
 QT       +=  xml
-CONFIG   += qxt
-QXT      += core
-
+CONFIG   += release
+macx {
+     QMAKE_INFO_PLIST = Info.plist
+     ICON = mad.icns
+}
 lessThan(QT_MAJOR_VERSION, 5): QT += webkit core gui
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets webkitwidgets

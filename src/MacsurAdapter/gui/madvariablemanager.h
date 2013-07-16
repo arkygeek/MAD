@@ -49,6 +49,8 @@ public:
 private slots:
   void on_cbSelectFile_currentIndexChanged(const QString &theSelection);
 
+  void on_pbSetHeaderChar_clicked();
+
 private:
   Ui::MadVariableManager *ui;
 
