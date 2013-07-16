@@ -1,0 +1,5 @@
+all files are created with NSIS 2.46 (partly with the help of NSIS Editor 1.010)
+
+try1	simple example (like exmaple1)
+try2	try1 plus uninstaller (like example2)
+try3	try2 with modern UI (http://nsis.sourceforge.net/Examples/Modern%20UI/Basic.nsi)
