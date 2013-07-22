@@ -6,19 +6,34 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>712</width>
-    <height>462</height>
+    <width>785</width>
+    <height>750</height>
    </rect>
   </property>
   <property name="windowTitle">
    <string>MACSUR Model Adapter</string>
   </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
   <widget class="QWidget" name="centralWidget">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+     <horstretch>1</horstretch>
+     <verstretch>1</verstretch>
+    </sizepolicy>
+   </property>
    <layout class="QGridLayout" name="gridLayout_4">
-    <item row="1" column="0">
+    <item row="0" column="0">
      <widget class="QTabWidget" name="tabwidMainWin">
+      <property name="sizePolicy">
+       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+        <horstretch>1</horstretch>
+        <verstretch>1</verstretch>
+       </sizepolicy>
+      </property>
       <property name="currentIndex">
-       <number>3</number>
+       <number>0</number>
       </property>
       <widget class="QWidget" name="tabMain">
        <attribute name="title">
@@ -26,94 +41,28 @@
        </attribute>
        <layout class="QGridLayout" name="gridLayout_2">
         <item row="0" column="1">
-         <widget class="QComboBox" name="cbAboutMain">
-          <item>
-           <property name="text">
-            <string>About</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>CropM</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>LiveM</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>TradeM</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Credits</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPlainTextEdit" name="plainTextEdit">
-          <property name="font">
-           <font>
-            <pointsize>10</pointsize>
-           </font>
-          </property>
-          <property name="plainText">
-           <string>This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
-
-It provides a common platform to describe, evaluate and integrate models and datasets.
-
-It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
-          </property>
-         </widget>
-        </item>
-        <item row="0" column="0" rowspan="2">
          <layout class="QVBoxLayout" name="verticalLayout">
           <item>
-           <widget class="QLabel" name="lblGraphicMain">
-            <property name="maximumSize">
-             <size>
-              <width>200</width>
-              <height>140</height>
-             </size>
+           <widget class="QPushButton" name="pbLogin">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
             </property>
             <property name="text">
-             <string/>
-            </property>
-            <property name="pixmap">
-             <pixmap resource="resources/resources.qrc">:/newMACSURLogoTransparentFull.png</pixmap>
-            </property>
-            <property name="scaledContents">
-             <bool>true</bool>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
-            </property>
-            <property name="openExternalLinks">
-             <bool>false</bool>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLabel" name="lblVersion">
-            <property name="font">
-             <font>
-              <pointsize>10</pointsize>
-             </font>
-            </property>
-            <property name="text">
-             <string>Version Label</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+             <string>Login</string>
             </property>
            </widget>
           </item>
           <item>
            <widget class="QLabel" name="lblLoginStatus">
+            <property name="sizePolicy">
+             <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+              <horstretch>0</horstretch>
+              <verstretch>0</verstretch>
+             </sizepolicy>
+            </property>
             <property name="text">
              <string>Please Login</string>
             </property>
@@ -122,45 +71,294 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
             </property>
            </widget>
           </item>
-          <item>
-           <spacer name="verticalSpacer">
+         </layout>
+        </item>
+        <item row="0" column="2" rowspan="2">
+         <layout class="QGridLayout" name="gridLayout_13">
+          <item row="0" column="0" colspan="2">
+           <spacer name="horizontalSpacer_5">
             <property name="orientation">
-             <enum>Qt::Vertical</enum>
+             <enum>Qt::Horizontal</enum>
             </property>
             <property name="sizeHint" stdset="0">
              <size>
-              <width>20</width>
-              <height>40</height>
+              <width>228</width>
+              <height>20</height>
              </size>
             </property>
            </spacer>
           </item>
-          <item>
-           <widget class="QPushButton" name="pbLogin">
-            <property name="text">
-             <string>Login</string>
-            </property>
+          <item row="0" column="2">
+           <widget class="QComboBox" name="cbAboutMain">
+            <item>
+             <property name="text">
+              <string>About</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>CropM</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>LiveM</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>TradeM</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Credits</string>
+             </property>
+            </item>
            </widget>
           </item>
-          <item>
-           <widget class="QLabel" name="label">
+          <item row="1" column="0" colspan="3">
+           <widget class="QPlainTextEdit" name="plainTextEdit">
             <property name="font">
              <font>
-              <pointsize>8</pointsize>
+              <pointsize>10</pointsize>
              </font>
             </property>
-            <property name="layoutDirection">
-             <enum>Qt::LeftToRight</enum>
-            </property>
-            <property name="text">
-             <string>© Jason Jorgenson 2013</string>
-            </property>
-            <property name="alignment">
-             <set>Qt::AlignCenter</set>
+            <property name="plainText">
+             <string>This software is intended to simplify model integration between the CropM, LiveM, and TradeM themes.
+
+It provides a common platform to describe, evaluate and integrate models and datasets.
+
+It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
             </property>
            </widget>
           </item>
          </layout>
+        </item>
+        <item row="1" column="1">
+         <spacer name="horizontalSpacer_4">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>197</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item row="2" column="0" colspan="3">
+         <widget class="QWebView" name="webView">
+          <property name="url">
+           <url>
+            <string>http://www.macsur.eu/</string>
+           </url>
+          </property>
+          <property name="zoomFactor">
+           <double>0.750000000000000</double>
+          </property>
+         </widget>
+        </item>
+        <item row="0" column="0">
+         <widget class="QLabel" name="lblGraphicMain">
+          <property name="maximumSize">
+           <size>
+            <width>200</width>
+            <height>140</height>
+           </size>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="pixmap">
+           <pixmap resource="resources/resources.qrc">:/newMACSURLogoTransparentFull.png</pixmap>
+          </property>
+          <property name="scaledContents">
+           <bool>true</bool>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+          <property name="openExternalLinks">
+           <bool>false</bool>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0">
+         <widget class="QLabel" name="lblVersion">
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="text">
+           <string>Version Label</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0" colspan="3">
+         <widget class="QLabel" name="label">
+          <property name="font">
+           <font>
+            <pointsize>8</pointsize>
+           </font>
+          </property>
+          <property name="layoutDirection">
+           <enum>Qt::LeftToRight</enum>
+          </property>
+          <property name="text">
+           <string>© Jason Jorgenson 2013</string>
+          </property>
+          <property name="alignment">
+           <set>Qt::AlignCenter</set>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </widget>
+      <widget class="QWidget" name="tabData">
+       <attribute name="title">
+        <string>Data</string>
+       </attribute>
+       <layout class="QGridLayout" name="gridLayout_5">
+        <item row="0" column="0" colspan="3">
+         <widget class="QTextBrowser" name="txtbrwsData"/>
+        </item>
+        <item row="1" column="2">
+         <widget class="QPushButton" name="pbClassification">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>140</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="text">
+           <string>Classification</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="2">
+         <widget class="QComboBox" name="modelNameComboBox">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="currentIndex">
+           <number>0</number>
+          </property>
+          <property name="modelColumn">
+           <number>0</number>
+          </property>
+          <item>
+           <property name="text">
+            <string>Select Dataset</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CMAP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>I-COADS</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>CRU TS 2.0</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Dai</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>HadISST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Hulme (CRU)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jones (CRU) Air Temperature</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Jones (CRU) SLP</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Kaplan (SLP)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Kaplan (SST)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NCAR Sea Level Pressure</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>NCEP/NCAR Reanalysis</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynold Reconstructed SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynolds Optimum Interpolation (OI) SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Smith and Reynolds Extended Reconstructed SLP (ERSLP)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
+           </property>
+          </item>
+          <item>
+           <property name="text">
+            <string>Other</string>
+           </property>
+          </item>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -168,166 +366,145 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
        <attribute name="title">
         <string>Models</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_12">
+       <layout class="QGridLayout" name="gridLayout_11">
         <item row="0" column="0" colspan="2">
-         <widget class="QSplitter" name="splitter_2">
+         <widget class="QSplitter" name="splitterModelTab">
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QVBoxLayout" name="vLayout">
+          <widget class="QTreeWidget" name="treeWidgetModelTab">
+           <property name="maximumSize">
+            <size>
+             <width>256</width>
+             <height>16777215</height>
+            </size>
+           </property>
+           <column>
+            <property name="text">
+             <string>Models</string>
+            </property>
+            <property name="font">
+             <font>
+              <pointsize>10</pointsize>
+              <weight>75</weight>
+              <bold>true</bold>
+             </font>
+            </property>
+           </column>
+           <item>
+            <property name="text">
+             <string>Crop Models</string>
+            </property>
             <item>
-             <widget class="QLabel" name="lblCurrentInventory">
-              <property name="text">
-               <string>Current AgMIP Translators</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
+             <property name="text">
+              <string>SUCROS</string>
+             </property>
             </item>
             <item>
-             <widget class="QListView" name="lvwCurrentInventoryModels"/>
+             <property name="text">
+              <string>WOFOST</string>
+             </property>
             </item>
             <item>
-             <widget class="QGroupBox" name="grpbxWhatToShow">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select desired info to display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="title">
-               <string>Select what to show</string>
-              </property>
-              <layout class="QGridLayout" name="gridLayout">
-               <item row="0" column="0">
-                <widget class="QCheckBox" name="chbxRunCommand">
-                 <property name="toolTip">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="text">
-                  <string>Run Command</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="1" column="0">
-                <widget class="QCheckBox" name="chbxParameters">
-                 <property name="toolTip">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="text">
-                  <string>Parameters</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="2" column="0">
-                <widget class="QCheckBox" name="chbxInputData">
-                 <property name="toolTip">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="text">
-                  <string>Input Files</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-               <item row="3" column="0">
-                <widget class="QCheckBox" name="chbxOutputFiles">
-                 <property name="toolTip">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="whatsThis">
-                  <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-                 </property>
-                 <property name="text">
-                  <string>Output Files</string>
-                 </property>
-                 <property name="checked">
-                  <bool>true</bool>
-                 </property>
-                </widget>
-               </item>
-              </layout>
-             </widget>
+             <property name="text">
+              <string>GLAM</string>
+             </property>
             </item>
-           </layout>
+           </item>
+           <item>
+            <property name="text">
+             <string>Livestock Models</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>AnnuGro</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>Wadiscape</string>
+             </property>
+            </item>
+           </item>
+           <item>
+            <property name="text">
+             <string>Trade Models</string>
+            </property>
+            <item>
+             <property name="text">
+              <string>CAPRI</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MAGNET</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>AGMEMOD</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>SIAT</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>A4SMOD</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>EPIC</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>FARMDSS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>PASMA</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>FAMOS</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>IGEM</string>
+             </property>
+            </item>
+            <item>
+             <property name="text">
+              <string>MODAM</string>
+             </property>
+            </item>
+           </item>
           </widget>
-          <widget class="QWidget" name="layoutWidget">
-           <layout class="QGridLayout" name="gridLayout_11">
-            <item row="0" column="0">
-             <widget class="QLabel" name="lblModelSpecs">
-              <property name="text">
-               <string>AgMIP DOMES</string>
-              </property>
-              <property name="alignment">
-               <set>Qt::AlignCenter</set>
-              </property>
-             </widget>
-            </item>
-            <item row="1" column="0" colspan="2">
-             <widget class="QTextEdit" name="tedModelSpecsModel"/>
-            </item>
-            <item row="2" column="0">
-             <widget class="QPushButton" name="pbViewAsText">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>View as Text</string>
-              </property>
-             </widget>
-            </item>
-            <item row="2" column="1">
-             <widget class="QPushButton" name="pbViewAsHtml">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>View as HTML</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="0">
-             <widget class="QPushButton" name="pbExportCsv">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>Export CSV</string>
-              </property>
-             </widget>
-            </item>
-            <item row="3" column="1">
-             <widget class="QPushButton" name="pbTableView">
-              <property name="toolTip">
-               <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
-              </property>
-              <property name="text">
-               <string>Table View</string>
-              </property>
-             </widget>
-            </item>
-           </layout>
+          <widget class="QTextEdit" name="tedModelSpecsModel">
+           <property name="sizePolicy">
+            <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+             <horstretch>0</horstretch>
+             <verstretch>0</verstretch>
+            </sizepolicy>
+           </property>
           </widget>
          </widget>
         </item>
         <item row="1" column="0">
          <widget class="QPushButton" name="pushButton">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Manage Models</string>
           </property>
@@ -338,13 +515,231 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
           <property name="orientation">
            <enum>Qt::Horizontal</enum>
           </property>
+          <property name="sizeType">
+           <enum>QSizePolicy::MinimumExpanding</enum>
+          </property>
           <property name="sizeHint" stdset="0">
            <size>
-            <width>497</width>
+            <width>40</width>
             <height>20</height>
            </size>
           </property>
          </spacer>
+        </item>
+        <item row="2" column="0" colspan="2">
+         <widget class="QGroupBox" name="grpbxWhatToShow">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Fixed">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="font">
+           <font>
+            <pointsize>10</pointsize>
+           </font>
+          </property>
+          <property name="toolTip">
+           <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Select desired info to display&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+          </property>
+          <property name="title">
+           <string>Select what to show</string>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="1" column="0" rowspan="2">
+            <widget class="QCheckBox" name="chbxInputData">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all input files required for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Input Files</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QCheckBox" name="chbxRunCommand">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of the run command for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Run Command</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QCheckBox" name="chbxParameters">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all parameters for the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Parameters</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="2" rowspan="2">
+            <widget class="QPushButton" name="pbViewAsHtml">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>View as HTML</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="2">
+            <widget class="QPushButton" name="pbExportCsv">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Export CSV</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="3" rowspan="2">
+            <widget class="QPushButton" name="pbViewAsText">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>View as Text</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="3">
+            <widget class="QPushButton" name="pbTableView">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Details of selection opens in a new text window&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Table View</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1" rowspan="2">
+            <widget class="QCheckBox" name="chbxOutputFiles">
+             <property name="sizePolicy">
+              <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+               <horstretch>1</horstretch>
+               <verstretch>0</verstretch>
+              </sizepolicy>
+             </property>
+             <property name="font">
+              <font>
+               <pointsize>10</pointsize>
+              </font>
+             </property>
+             <property name="toolTip">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="whatsThis">
+              <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Provides maximum detail of all output files created by the model selected above.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+             </property>
+             <property name="text">
+              <string>Output Files</string>
+             </property>
+             <property name="checked">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -352,54 +747,89 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
        <attribute name="title">
         <string>Glossary</string>
        </attribute>
-       <layout class="QGridLayout" name="gridLayout_7">
+       <layout class="QGridLayout" name="gridLayout_6">
         <item row="0" column="0" colspan="2">
-         <layout class="QGridLayout" name="gridLayout_6">
-          <item row="0" column="0">
-           <widget class="QLineEdit" name="leGlossarySearch"/>
-          </item>
-          <item row="0" column="1">
-           <widget class="QPushButton" name="pbGlossarySearch">
-            <property name="text">
-             <string>Search</string>
-            </property>
-           </widget>
-          </item>
-          <item row="1" column="0" colspan="2">
-           <widget class="QTextBrowser" name="tbrGlossary"/>
-          </item>
-         </layout>
+         <widget class="QLineEdit" name="leGlossarySearch">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>1</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
         </item>
-        <item row="1" column="0" colspan="2">
-         <layout class="QHBoxLayout" name="horizontalLayout">
-          <item>
-           <widget class="QLabel" name="lblTermTabGlossary">
-            <property name="text">
-             <string>Term</string>
-            </property>
-           </widget>
-          </item>
-          <item>
-           <widget class="QLineEdit" name="ledAddTermTerm"/>
-          </item>
-          <item>
-           <widget class="QPushButton" name="pbGlossaryAddTerm">
-            <property name="text">
-             <string>Add Term</string>
-            </property>
-           </widget>
-          </item>
-         </layout>
+        <item row="0" column="3">
+         <widget class="QPushButton" name="pbGlossarySearch">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Minimum" vsizetype="Fixed">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Search</string>
+          </property>
+         </widget>
+        </item>
+        <item row="1" column="0" colspan="4">
+         <widget class="QTextBrowser" name="tbrGlossary"/>
         </item>
         <item row="2" column="0">
+         <widget class="QLabel" name="lblTermTabGlossary">
+          <property name="text">
+           <string>Term</string>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="1">
+         <widget class="QLineEdit" name="ledAddTermTerm">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>16</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="3" column="0">
          <widget class="QLabel" name="lblGlossaryDefn">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
           <property name="text">
            <string>Def'n</string>
           </property>
          </widget>
         </item>
-        <item row="2" column="1">
-         <widget class="QLineEdit" name="leGlossaryDefinition"/>
+        <item row="3" column="1">
+         <widget class="QLineEdit" name="leGlossaryDefinition">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
+            <horstretch>16</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+         </widget>
+        </item>
+        <item row="2" column="3" rowspan="2">
+         <widget class="QPushButton" name="pbGlossaryAddTerm">
+          <property name="sizePolicy">
+           <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+            <horstretch>0</horstretch>
+            <verstretch>0</verstretch>
+           </sizepolicy>
+          </property>
+          <property name="text">
+           <string>Add
+Term</string>
+          </property>
+          <property name="checkable">
+           <bool>false</bool>
+          </property>
+         </widget>
         </item>
        </layout>
       </widget>
@@ -579,136 +1009,6 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
         </item>
        </layout>
       </widget>
-      <widget class="QWidget" name="tabData">
-       <attribute name="title">
-        <string>Data</string>
-       </attribute>
-       <layout class="QGridLayout" name="gridLayout_5">
-        <item row="0" column="0" colspan="2">
-         <widget class="QTextBrowser" name="txtbrwsData"/>
-        </item>
-        <item row="1" column="0">
-         <widget class="QComboBox" name="modelNameComboBox">
-          <property name="enabled">
-           <bool>true</bool>
-          </property>
-          <property name="currentIndex">
-           <number>0</number>
-          </property>
-          <property name="modelColumn">
-           <number>0</number>
-          </property>
-          <item>
-           <property name="text">
-            <string>Select Dataset</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>CMAP</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>I-COADS</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>CRU TS 2.0</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Dai</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>HadISST</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Hulme (CRU)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Jones (CRU) Air Temperature</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Jones (CRU) SLP</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Kaplan (SLP)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Kaplan (SST)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Lucas and Waliser Satellite ECT-Corrected OLR</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NCAR Sea Level Pressure</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>NCEP/NCAR Reanalysis</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Reynold Reconstructed SST</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Reynolds Optimum Interpolation (OI) SST</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Reynolds Optimum Interpolation Ver. 2 (OI.v2) SST</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Smith and Reynolds Extended Reconstructed SLP (ERSLP)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Smith and Reynolds Extended Reconstructed SST (ERSST)</string>
-           </property>
-          </item>
-          <item>
-           <property name="text">
-            <string>Other</string>
-           </property>
-          </item>
-         </widget>
-        </item>
-        <item row="1" column="1">
-         <widget class="QPushButton" name="pbClassification">
-          <property name="text">
-           <string>Classification</string>
-          </property>
-         </widget>
-        </item>
-       </layout>
-      </widget>
      </widget>
     </item>
    </layout>
@@ -718,7 +1018,7 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>712</width>
+     <width>785</width>
      <height>22</height>
     </rect>
    </property>
@@ -758,6 +1058,13 @@ It is open source (GPL V.3) and written in C++/Qt (v4.8)</string>
   </action>
  </widget>
  <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>QWebView</class>
+   <extends>QWidget</extends>
+   <header>QtWebKitWidgets/QWebView</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="resources/resources.qrc"/>
  </resources>

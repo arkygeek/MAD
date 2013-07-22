@@ -33,6 +33,7 @@
 #include "gui/madtextdisplayform.h"
 #include "gui/madlogindialog.h"
 #include "gui/madvariablemanager.h"
+#include "gui/madmodelmanager.h"
 #include "lib/madutils.h"
 
 
@@ -534,4 +535,11 @@ void MadMainWindow::on_pbManageVariablesList_clicked()
   MadVariableManager* mypMadVariableManager = new MadVariableManager( this );
   mypMadVariableManager->exec();
 
+}
+
+void MadMainWindow::on_pushButton_clicked()
+{
+  // open model manager
+  MadModelManager* mypMadModelManager = new MadModelManager( this );
+  mypMadModelManager->exec();
 }
