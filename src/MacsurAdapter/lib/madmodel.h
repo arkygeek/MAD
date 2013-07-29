@@ -32,9 +32,7 @@
 #ifndef MADMODEL_H
 #define MADMODEL_H
 
-/**
- *
- */
+
 // forward declarations
 class QString;
 
@@ -56,31 +54,31 @@ class QString;
 class MadModel : public MadSerialisable, public MadGuid
 {
 public:
-    /** Constructor . */
-    MadModel();
-    /** Destructor . */
-    //~MadModel();
-    /** copy constructor */
-    MadModel(const MadModel& theModel);
-    /** Assignement operator */
-    MadModel& operator = (const MadModel& theModel);
+  /** Constructor . */
+  MadModel();
+  /** Destructor . */
+  //~MadModel();
+  /** copy constructor */
+  MadModel(const MadModel& theModel);
+  /** Assignement operator */
+  MadModel& operator = (const MadModel& theModel);
 
-      //
-      // Accessors
-      //
+  //
+  // Accessors
+  //
 
-    /** The name of this model */
-    QString name() const;
-    /** The description of this model */
-    QString description() const;
+  /** The name of this model */
+  QString name() const;
+  /** The description of this model */
+  QString description() const;
 
-    /** The image file associated with the model */
-    QString imageFile() const;
+  /** The image file associated with the model */
+  QString imageFile() const;
 
 
-    //
-    // Mutators
-    //
+  //
+  // Mutators
+  //
 
   /** Set the modelName
    * @see name()

@@ -23,7 +23,6 @@
 #include "madmodel.h"
 #include "madutils.h"
 
-
 //Qt includes
 #include <QString>
 #include <QDomDocument>
@@ -42,7 +41,6 @@ MadModel::MadModel() : MadSerialisable(), MadGuid()
 //}
 
 // copy constructor
-
 MadModel::MadModel(const MadModel &theModel)
 {
     mName=theModel.name();

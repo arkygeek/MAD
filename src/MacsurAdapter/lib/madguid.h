@@ -35,9 +35,6 @@ public:
     /**   Constructor  */
     MadGuid();
 
-    /**   Destructor   */
-    //virtual ~MadGuid(); //throws a compiler error
-
     /** Retrieve the GUID */
     QString guid() const;
 

@@ -62,4 +62,33 @@
         <file>agmip/measured_data.csv</file>
         <file>agmip/management_info.csv</file>
     </qresource>
+    <qresource prefix="/graphics">
+        <file>graphics/ButtonDarkPurpleRaised.png</file>
+        <file>graphics/ButtonDarkPurplePressed.png</file>
+        <file>graphics/ButtonPinkRaised.png</file>
+        <file>graphics/BlueButtonRaised.png</file>
+        <file>graphics/BlueButtonPushed.png</file>
+        <file>graphics/ButtonPinkPressed.png</file>
+        <file>graphics/ButtonPurpleRaised.png</file>
+        <file>graphics/ButtonPurplePressed.png</file>
+        <file>graphics/ButtonOrangeRaised.png</file>
+        <file>graphics/buttonRedRaised.png</file>
+        <file>graphics/buttonRed.png</file>
+        <file>graphics/ButtonRedPressed.png</file>
+        <file>graphics/ButtonOrangePressed.png</file>
+        <file>graphics/ButtonGreenRaised.png</file>
+        <file>graphics/ButtonGreenPressed.png</file>
+        <file>graphics/ButtonPurple.png</file>
+        <file>graphics/books.png</file>
+        <file>graphics/insertLink128.png</file>
+        <file>graphics/insertLink256.png</file>
+        <file>graphics/insertObject.png</file>
+        <file>graphics/functionPurple.png</file>
+        <file>graphics/fewerRed.png</file>
+        <file>graphics/addBlue.png</file>
+        <file>graphics/edit-clear-locationbar-rtl-1.png</file>
+        <file>graphics/removeGreen.png</file>
+        <file>graphics/folders.png</file>
+        <file>graphics/blocks.png</file>
+    </qresource>
 </RCC>

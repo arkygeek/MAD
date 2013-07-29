@@ -1,887 +1,1139 @@
 // !$*UTF8*$!
 {
-       archiveVersion = 1;
-       classes = {
-       };
-       objectVersion = 46;
-       objects = {
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
 
 /* Begin PBXAggregateTarget section */
-              B62C8F16537B4CF3969BA5F0 /* ALL_BUILD */ = {
-                     isa = PBXAggregateTarget;
-                     buildConfigurationList = 5B2F58773351470C812EF26E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
-                     buildPhases = (
-                            7A1E62752BF842DA898DC7CF /* CMake Rules */,
-                     );
-                     dependencies = (
-                            4B04EB701A614176AD1A1AFA /* PBXTargetDependency */,
-                            96D16DE879844226969ABE35 /* PBXTargetDependency */,
-                     );
-                     name = ALL_BUILD;
-                     productName = ALL_BUILD;
-              };
-              2E7649C2833943C6AEFD5973 /* ZERO_CHECK */ = {
-                     isa = PBXAggregateTarget;
-                     buildConfigurationList = CC08DA256A1443C18750898A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
-                     buildPhases = (
-                            26FDAD206E4C4010B17720E8 /* CMake Rules */,
-                     );
-                     dependencies = (
-                     );
-                     name = ZERO_CHECK;
-                     productName = ZERO_CHECK;
-              };
+		2E7649C2833943C6AEFD5973 /* ZERO_CHECK */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = B3A5793042104F7DA9F8D707 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */;
+			buildPhases = (
+				84E2157FC84948609B073660 /* CMake Rules */,
+			);
+			dependencies = (
+			);
+			name = ZERO_CHECK;
+			productName = ZERO_CHECK;
+		};
+		B62C8F16537B4CF3969BA5F0 /* ALL_BUILD */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = C66C1221C6914BD5A06B4620 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */;
+			buildPhases = (
+				946D780FC55D424CB2716193 /* CMake Rules */,
+			);
+			dependencies = (
+				0221867392BB465582FD531E /* PBXTargetDependency */,
+				693E63FF8A674C53803DFD32 /* PBXTargetDependency */,
+			);
+			name = ALL_BUILD;
+			productName = ALL_BUILD;
+		};
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
-138324D5A02C470497F00416 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp */ = {isa = PBXBuildFile; fileRef = A549E3A4729D4F819F77D995 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-A2B44133B8594FDFBDE7891D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp */ = {isa = PBXBuildFile; fileRef = 019EB44DF1D14A56B75F7BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-ED2A1F010B7A498A8293407D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp */ = {isa = PBXBuildFile; fileRef = 0EF70E9B97314296B0CC3D6A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-8311CD1B1F5B4ACFB6E65C56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp */ = {isa = PBXBuildFile; fileRef = 372521D7169746EE91ABEA6F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-57CBAEA09A6242CBBA1D6F62 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp */ = {isa = PBXBuildFile; fileRef = FFA067D3799645E5BE986544 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-952F7A8EE4764D78AA827104 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp */ = {isa = PBXBuildFile; fileRef = F0E08FF1915A4536A94A785E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-B6473F5F7EAB4031A09375CC /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp */ = {isa = PBXBuildFile; fileRef = BCCB575AD5C04256B7561B5F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-4358FBD30AE041DAB220A195 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddataset.cpp */ = {isa = PBXBuildFile; fileRef = 28E250E7BC594F7B9D99DD3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddataset.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-893BDF9837AD4657A60EB340 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madcsv.cpp */ = {isa = PBXBuildFile; fileRef = 8051AAE14A09448584132EC5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madcsv.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-4C2349C23D7E460F900BDDFF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/madsubcategory.cpp */ = {isa = PBXBuildFile; fileRef = ED4C067FD4DF4CDF9D48F9C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/madsubcategory.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-21170C302DAB481798594889 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationmanagement.cpp */ = {isa = PBXBuildFile; fileRef = 394F0E4DD22F48E3B0AAF2A4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationmanagement.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-41A777C1C988480FBDF5BD02 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationinitialvalues.cpp */ = {isa = PBXBuildFile; fileRef = 6F49505787C840AF9B64C7B9 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationinitialvalues.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-C2F1998E99964FD5AB58926B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationphenology.cpp */ = {isa = PBXBuildFile; fileRef = CF629513D5064B5AB9486E73 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationphenology.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-805A67E808EB4962B11A2EAB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationprevcrop.cpp */ = {isa = PBXBuildFile; fileRef = F290987727CE4CDE93D62BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationprevcrop.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-94BE25283A9040C7A91675A3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsitedata.cpp */ = {isa = PBXBuildFile; fileRef = 4CB2F6E138A44307B93507F3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsitedata.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-A92A94D5FA8F49798619C50E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsoil.cpp */ = {isa = PBXBuildFile; fileRef = D3DF2DD85EDC4232A4F3FF31 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsoil.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-6F896FB304094638BBC32A17 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationweather.cpp */ = {isa = PBXBuildFile; fileRef = 8DE496BBB1054E17B4C5F105 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationweather.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-77535C03D68A43179EDA45F4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madstatevars.cpp */ = {isa = PBXBuildFile; fileRef = 5425C6B675724B10BC064743 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madstatevars.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-6B3556A6124B4EB5A9F3DA50 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvcrop.cpp */ = {isa = PBXBuildFile; fileRef = 634165F8AF1B456594C5B266 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvcrop.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-4261B956382E4BE9AC077855 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvobservations.cpp */ = {isa = PBXBuildFile; fileRef = 4F0FBC835D384524A8A336FF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvobservations.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-957A135CF82A4D3987B3D9C1 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsoil.cpp */ = {isa = PBXBuildFile; fileRef = 77589D363B464D759F40A10C /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsoil.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-929E40741C1E4B73B8875D3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsurfacefluxes.cpp */ = {isa = PBXBuildFile; fileRef = 767AC19D27F44C3BA5708F3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsurfacefluxes.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-D27A6C45B09C4B009D2DBECD /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp */ = {isa = PBXBuildFile; fileRef = DE95478689F9487DBC3380D0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-DD9B0601E78A46C4A071BB6A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp */ = {isa = PBXBuildFile; fileRef = 6A7E3D3412644E5D845DA476 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-0846037820F14411A98BA5B3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.cpp */ = {isa = PBXBuildFile; fileRef = 0230EDCFFBC745A78DA11BF4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-CCDAA817546246F4B182327E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanager.cpp */ = {isa = PBXBuildFile; fileRef = 8BC84D6B94E745058CC43EF7 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanager.cpp */; settings = { COMPILER_FLAGS = ""; }; };
-244430D13F234666834B2EFA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h */ = {isa = PBXBuildFile; fileRef = 3E6ABFDF06EE4A80BC9E2CDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h */; settings = { COMPILER_FLAGS = ""; }; };
-06CE7EC2BDE84BB393553C19 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h */ = {isa = PBXBuildFile; fileRef = 9F9DF178592D49AA957F7B8E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h */; settings = { COMPILER_FLAGS = ""; }; };
-849526820C9640948C705B78 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h */ = {isa = PBXBuildFile; fileRef = 6E0842BD8E324624B9D092B3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h */; settings = { COMPILER_FLAGS = ""; }; };
-04B9EB74A16D49089773E6EE /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h */ = {isa = PBXBuildFile; fileRef = 858F535F8BCD4D2FA1F5A2E0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h */; settings = { COMPILER_FLAGS = ""; }; };
-85E15AB5E78F46CCAAA2CAA8 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx */ = {isa = PBXBuildFile; fileRef = 40EB3CA334B741708DC9188F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-84BE429E666D4CF3B7DECEF9 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx */ = {isa = PBXBuildFile; fileRef = F3E145004DB44DDBB571E5D2 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-476ADB2CD7924517AE0D782B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx */ = {isa = PBXBuildFile; fileRef = 034E02119811464C857AB39E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-B15604B7A1A5425AB5135117 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx */ = {isa = PBXBuildFile; fileRef = 4A2D104A26274F268652DD55 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-D1E58D8BEBFC4EE99B77CF72 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx */ = {isa = PBXBuildFile; fileRef = CB0450C4ED4D48C093BEDFA5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-C28606B2CC044D59A5E85BC8 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx */ = {isa = PBXBuildFile; fileRef = 45228C2372CE4AAB970882DC /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx */; settings = { COMPILER_FLAGS = ""; }; };
-7958B15DB1D3447A94D8C713 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */ = {isa = PBXBuildFile; fileRef = 75B7728995C54FACBE0D0B56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */; settings = { COMPILER_FLAGS = ""; }; };
-8405E85781CD40668EA726A4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui */ = {isa = PBXBuildFile; fileRef = 4A7511A38CCB414C88A4C6BB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui */; settings = { COMPILER_FLAGS = ""; }; };
-8CEE120A7E3D49D68FC3D835 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui */ = {isa = PBXBuildFile; fileRef = 5A800649F6E24D869411AF2E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui */; settings = { COMPILER_FLAGS = ""; }; };
-9B6A09226CEE42E19939AF16 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui */ = {isa = PBXBuildFile; fileRef = FC3F1D729E3649BEB3EA0134 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui */; settings = { COMPILER_FLAGS = ""; }; };
-9FADF9AFB06C4E1CA2AE5EEF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui */ = {isa = PBXBuildFile; fileRef = 406A084E19244200B0807FA1 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui */; settings = { COMPILER_FLAGS = ""; }; };
-3D5CD47DEE1C43CE833B26BE /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc */ = {isa = PBXBuildFile; fileRef = 0A1479C846B945418E68D681 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc */; settings = { COMPILER_FLAGS = ""; }; };
-BE7611669EEE4D5AA6600779 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx.rule */ = {isa = PBXBuildFile; fileRef = A6DF57BDBDCF4462A781677B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx.rule */; settings = { COMPILER_FLAGS = ""; }; };
-4D35C3E451B04066B0930164 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx.rule */ = {isa = PBXBuildFile; fileRef = E9CA729381894CE9850957C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx.rule */; settings = { COMPILER_FLAGS = ""; }; };
-F1F284CE244A4CA49956EC11 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx.rule */ = {isa = PBXBuildFile; fileRef = AB167125E5F74D1E9418B167 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx.rule */; settings = { COMPILER_FLAGS = ""; }; };
-47233D0D65464D1CA1D70FBB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx.rule */ = {isa = PBXBuildFile; fileRef = 5F623E0E7E6547D29A22A261 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx.rule */; settings = { COMPILER_FLAGS = ""; }; };
-E138FBA6EB9E4584947F4707 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx.rule */ = {isa = PBXBuildFile; fileRef = 1E9D2D3F029F436393DD599D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx.rule */; settings = { COMPILER_FLAGS = ""; }; };
+		0040D7BEE52A4639B94460AF /* madmodel.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 703BBC419AD2496DB16209B5 /* madmodel.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		158BEED168BD4BDF831BD309 /* moc_madcsvreader.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 93F98381834C416BB38FBCDA /* moc_madcsvreader.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		1AACA22F41BD44AFB6760A6C /* maddataclassificationinitialvalues.cpp in Sources */ = {isa = PBXBuildFile; fileRef = E0CF978A0E9F4CCD8C7B958E /* maddataclassificationinitialvalues.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		1DC273D96B6F43EF8B5E42CD /* maddata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = AC06277CB56E4D0ABACBBA57 /* maddata.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		1F67CA84FAEB4F8FA1727972 /* maddataclassificationsoil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 09BA657B74DF41CD9B276257 /* maddataclassificationsoil.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		1FB81C2F197643C58CC66B3F /* madsubcategory.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9ECE0B3140004128A4581D83 /* madsubcategory.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		266849B9458F44468DFA745B /* moc_madlogindialog.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 789E61832FB5472F99A91F52 /* moc_madlogindialog.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		33B071F44638469EA94E7049 /* maddataclassificationmanagement.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3DDA9817201143AAAD184EAA /* maddataclassificationmanagement.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		3B55B28D2999486B8F379E41 /* madmainwindow.cpp in Sources */ = {isa = PBXBuildFile; fileRef = B68A4EBBFDFC46799CEA40E9 /* madmainwindow.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		526D5CCBBC5B4448A5916E88 /* madmodelmanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0AF8BE430BEC403AB743A29A /* madmodelmanager.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		65BDFCC645A740BC97833109 /* maddataclassificationweather.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FE7B43229D0F4F14A11D3AE0 /* maddataclassificationweather.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		6A08490A482341C995447A9F /* moc_madmodelmanager.cxx in Sources */ = {isa = PBXBuildFile; fileRef = A6002594CFBB4A68BB95AC58 /* moc_madmodelmanager.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		885C6C792F4640CA830A0E5B /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0920552EFE8542D98FD35589 /* main.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		8921AA4B72604FCCB27B9FC1 /* maddataclassificationphenology.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 0821C2AF0B234E8F88D8BBBD /* maddataclassificationphenology.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		8DE9B9E9B2B641E191C31EE2 /* madstatevars.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 347CDDE0B17B48ED8EF9AF23 /* madstatevars.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		922A3EB8C0794FF6A4C222F0 /* madcsvreader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = DE918EE0E87240FE83D0B459 /* madcsvreader.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		941F3D389FD4413D8DBA088B /* maddataclassificationprevcrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = F5C2DDB35E5E4C4C9E3C04E5 /* maddataclassificationprevcrop.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		A0A474F9452645B585168C63 /* maddataclassification.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9669B8D3E14244CC828A0AAE /* maddataclassification.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		A1A51A36986A4427BC4DC15E /* madlogindialog.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9045D0147141430582252D74 /* madlogindialog.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		A29FEAAE18D544A4B6041BAE /* madutils.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8EF9441D69D54B8381026121 /* madutils.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		B0A15308470541E59BE13C92 /* madvariablemanager.cpp in Sources */ = {isa = PBXBuildFile; fileRef = C7AA2E005FDB49DCB1CD1C03 /* madvariablemanager.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		B0BB95D11DB443EFB0FF2337 /* madguid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8E22C21CA12441AE84C594D3 /* madguid.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		B5729282B4884A46A3D7FB05 /* moc_madvariablemanager.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 80CD83F7121F4D99A4843679 /* moc_madvariablemanager.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		B63D3CD6084B422AAC668A21 /* madsvsoil.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 1E1C13032DED4139987041D6 /* madsvsoil.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		B9D5D1F4DFB0495489D84069 /* moc_maddataclassification.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 81FED1EB4D2A42AB99D61D6D /* moc_maddataclassification.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		BA8E04878E2A4FC6864DA403 /* maddataclassificationsitedata.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 704E86EBF6254245A76A8126 /* maddataclassificationsitedata.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		BEF79E83B0734585B843AF93 /* madsvobservations.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 896306F5E5A44066BD9974FD /* madsvobservations.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		C2FFB455365A4A1CB37D3E66 /* madsvsurfacefluxes.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 8FE315EADF484952825A731F /* madsvsurfacefluxes.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		C5B7D21B51DE46DCA682FF38 /* qrc_resources.cxx in Sources */ = {isa = PBXBuildFile; fileRef = F93F53F1F83D4E369B432448 /* qrc_resources.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		D857074D9A3B4F0EAF1F37C3 /* moc_madtextdisplayform.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 73CC310E2072406C9DFA8F10 /* moc_madtextdisplayform.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		DF7C5729F82C4F44AD161959 /* madtextdisplayform.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 28214360D819423DB8A503AE /* madtextdisplayform.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		E7C61905F2B74001964E4E66 /* moc_madmainwindow.cxx in Sources */ = {isa = PBXBuildFile; fileRef = 8CE0E1C75621442C8D103BA8 /* moc_madmainwindow.cxx */; settings = {COMPILER_FLAGS = ""; }; };
+		E8B8135F8C2E4144BD2BE913 /* madsvcrop.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4840270E90B049BB8E770FE7 /* madsvcrop.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		FC4EBA1DF0B849C6BE6D43F1 /* maddataset.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 9254A17694454CA18D013DCE /* maddataset.cpp */; settings = {COMPILER_FLAGS = ""; }; };
+		FD320A44C22D4778995A959D /* madserialisable.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 46E34A1F2D964885BA79C09F /* madserialisable.cpp */; settings = {COMPILER_FLAGS = ""; }; };
 /* End PBXBuildFile section */
 
-/* Begin PBXBuildStyle section */
-              54B3579AD93A4FD8B246A857 /*  */ = {
-                     isa = PBXBuildStyle;
-              };
-              50CF34FA9EA040F8901FC7EF /* Debug */ = {
-                     isa = PBXBuildStyle;
-                     buildSettings = {
-                            COPY_PHASE_STRIP = NO;
-                     };
-                     name = Debug;
-              };
-              12DA1B397C16435FBD5A1189 /* Release */ = {
-                     isa = PBXBuildStyle;
-                     buildSettings = {
-                            COPY_PHASE_STRIP = NO;
-                     };
-                     name = Release;
-              };
-              C440BAC9B4B644069FB6B6FC /* MinSizeRel */ = {
-                     isa = PBXBuildStyle;
-                     buildSettings = {
-                            COPY_PHASE_STRIP = NO;
-                     };
-                     name = MinSizeRel;
-              };
-              8FC2E488E8094BD490B901C3 /* RelWithDebInfo */ = {
-                     isa = PBXBuildStyle;
-                     buildSettings = {
-                            COPY_PHASE_STRIP = NO;
-                     };
-                     name = RelWithDebInfo;
-              };
-/* End PBXBuildStyle section */
-
 /* Begin PBXContainerItemProxy section */
-              10023951BC9645A98BD3C536 /* PBXContainerItemProxy */ = {
-                     isa = PBXContainerItemProxy;
-                     containerPortal = B992ED2B372546A08D35D2B3 /* Project object */;
-                     proxyType = 1;
-                     remoteGlobalIDString = 2E7649C2833943C6AEFD5973;
-                     remoteInfo = ZERO_CHECK;
-              };
-              6B4496124D2E4C908A488DFC /* PBXContainerItemProxy */ = {
-                     isa = PBXContainerItemProxy;
-                     containerPortal = B992ED2B372546A08D35D2B3 /* Project object */;
-                     proxyType = 1;
-                     remoteGlobalIDString = 9D33F07BC93442319E4CDFF4;
-                     remoteInfo = MacsurAdapter;
-              };
+		81C65BA1026043608D283FED /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B992ED2B372546A08D35D2B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 2E7649C2833943C6AEFD5973;
+			remoteInfo = ZERO_CHECK;
+		};
+		8484DD57617947B0999C338F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = B992ED2B372546A08D35D2B3 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 9D33F07BC93442319E4CDFF4;
+			remoteInfo = MacsurAdapter;
+		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-75B7728995C54FACBE0D0B56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.text"; name = "CMakeLists.txt"; path = "CMakeLists.txt"; sourceTree = SOURCE_ROOT; };
-A549E3A4729D4F819F77D995 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "main.cpp"; path = "main.cpp"; sourceTree = SOURCE_ROOT; };
-019EB44DF1D14A56B75F7BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madmainwindow.cpp"; path = "madmainwindow.cpp"; sourceTree = SOURCE_ROOT; };
-0EF70E9B97314296B0CC3D6A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madmodel.cpp"; path = "lib/madmodel.cpp"; sourceTree = SOURCE_ROOT; };
-372521D7169746EE91ABEA6F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madutils.cpp"; path = "lib/madutils.cpp"; sourceTree = SOURCE_ROOT; };
-FFA067D3799645E5BE986544 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddata.cpp"; path = "lib/maddata.cpp"; sourceTree = SOURCE_ROOT; };
-F0E08FF1915A4536A94A785E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madserialisable.cpp"; path = "lib/madserialisable.cpp"; sourceTree = SOURCE_ROOT; };
-BCCB575AD5C04256B7561B5F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madguid.cpp"; path = "lib/madguid.cpp"; sourceTree = SOURCE_ROOT; };
-28E250E7BC594F7B9D99DD3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddataset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataset.cpp"; path = "lib/maddataset.cpp"; sourceTree = SOURCE_ROOT; };
-8051AAE14A09448584132EC5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madcsv.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madcsv.cpp"; path = "lib/madcsv.cpp"; sourceTree = SOURCE_ROOT; };
-ED4C067FD4DF4CDF9D48F9C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/madsubcategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madsubcategory.cpp"; path = "lib/dataclassification/madsubcategory.cpp"; sourceTree = SOURCE_ROOT; };
-394F0E4DD22F48E3B0AAF2A4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationmanagement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationmanagement.cpp"; path = "lib/dataclassification/maddataclassificationmanagement.cpp"; sourceTree = SOURCE_ROOT; };
-6F49505787C840AF9B64C7B9 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationinitialvalues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationinitialvalues.cpp"; path = "lib/dataclassification/maddataclassificationinitialvalues.cpp"; sourceTree = SOURCE_ROOT; };
-CF629513D5064B5AB9486E73 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationphenology.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationphenology.cpp"; path = "lib/dataclassification/maddataclassificationphenology.cpp"; sourceTree = SOURCE_ROOT; };
-F290987727CE4CDE93D62BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationprevcrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationprevcrop.cpp"; path = "lib/dataclassification/maddataclassificationprevcrop.cpp"; sourceTree = SOURCE_ROOT; };
-4CB2F6E138A44307B93507F3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsitedata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationsitedata.cpp"; path = "lib/dataclassification/maddataclassificationsitedata.cpp"; sourceTree = SOURCE_ROOT; };
-D3DF2DD85EDC4232A4F3FF31 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsoil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationsoil.cpp"; path = "lib/dataclassification/maddataclassificationsoil.cpp"; sourceTree = SOURCE_ROOT; };
-8DE496BBB1054E17B4C5F105 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationweather.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassificationweather.cpp"; path = "lib/dataclassification/maddataclassificationweather.cpp"; sourceTree = SOURCE_ROOT; };
-5425C6B675724B10BC064743 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madstatevars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madstatevars.cpp"; path = "lib/dataclassification/statevars/madstatevars.cpp"; sourceTree = SOURCE_ROOT; };
-634165F8AF1B456594C5B266 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvcrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madsvcrop.cpp"; path = "lib/dataclassification/statevars/madsvcrop.cpp"; sourceTree = SOURCE_ROOT; };
-4F0FBC835D384524A8A336FF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvobservations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madsvobservations.cpp"; path = "lib/dataclassification/statevars/madsvobservations.cpp"; sourceTree = SOURCE_ROOT; };
-77589D363B464D759F40A10C /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsoil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madsvsoil.cpp"; path = "lib/dataclassification/statevars/madsvsoil.cpp"; sourceTree = SOURCE_ROOT; };
-767AC19D27F44C3BA5708F3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsurfacefluxes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madsvsurfacefluxes.cpp"; path = "lib/dataclassification/statevars/madsvsurfacefluxes.cpp"; sourceTree = SOURCE_ROOT; };
-DE95478689F9487DBC3380D0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "maddataclassification.cpp"; path = "gui/maddataclassification.cpp"; sourceTree = SOURCE_ROOT; };
-6A7E3D3412644E5D845DA476 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madtextdisplayform.cpp"; path = "gui/madtextdisplayform.cpp"; sourceTree = SOURCE_ROOT; };
-0230EDCFFBC745A78DA11BF4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madlogindialog.cpp"; path = "gui/madlogindialog.cpp"; sourceTree = SOURCE_ROOT; };
-8BC84D6B94E745058CC43EF7 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "madvariablemanager.cpp"; path = "gui/madvariablemanager.cpp"; sourceTree = SOURCE_ROOT; };
-3E6ABFDF06EE4A80BC9E2CDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "ui_madmainwindowbase.h"; path = "buildXcode/ui_madmainwindowbase.h"; sourceTree = SOURCE_ROOT; };
-9F9DF178592D49AA957F7B8E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "ui_maddataclassificationbase.h"; path = "buildXcode/ui_maddataclassificationbase.h"; sourceTree = SOURCE_ROOT; };
-6E0842BD8E324624B9D092B3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "ui_madtextdisplayformbase.h"; path = "buildXcode/ui_madtextdisplayformbase.h"; sourceTree = SOURCE_ROOT; };
-858F535F8BCD4D2FA1F5A2E0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.c.h"; name = "ui_madvariablemanagerbase.h"; path = "buildXcode/ui_madvariablemanagerbase.h"; sourceTree = SOURCE_ROOT; };
-40EB3CA334B741708DC9188F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "qrc_resources.cxx"; path = "buildXcode/qrc_resources.cxx"; sourceTree = SOURCE_ROOT; };
-F3E145004DB44DDBB571E5D2 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "moc_madmainwindow.cxx"; path = "buildXcode/moc_madmainwindow.cxx"; sourceTree = SOURCE_ROOT; };
-034E02119811464C857AB39E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "moc_maddataclassification.cxx"; path = "buildXcode/gui/moc_maddataclassification.cxx"; sourceTree = SOURCE_ROOT; };
-4A2D104A26274F268652DD55 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "moc_madtextdisplayform.cxx"; path = "buildXcode/gui/moc_madtextdisplayform.cxx"; sourceTree = SOURCE_ROOT; };
-CB0450C4ED4D48C093BEDFA5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "moc_madvariablemanager.cxx"; path = "buildXcode/gui/moc_madvariablemanager.cxx"; sourceTree = SOURCE_ROOT; };
-45228C2372CE4AAB970882DC /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = "sourcecode.cpp.cpp"; name = "moc_madlogindialog.cxx"; path = "buildXcode/gui/moc_madlogindialog.cxx"; sourceTree = SOURCE_ROOT; };
-4A7511A38CCB414C88A4C6BB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "madmainwindowbase.ui"; path = "madmainwindowbase.ui"; sourceTree = SOURCE_ROOT; };
-5A800649F6E24D869411AF2E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "maddataclassificationbase.ui"; path = "gui/maddataclassificationbase.ui"; sourceTree = SOURCE_ROOT; };
-FC3F1D729E3649BEB3EA0134 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "madtextdisplayformbase.ui"; path = "gui/madtextdisplayformbase.ui"; sourceTree = SOURCE_ROOT; };
-406A084E19244200B0807FA1 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "madvariablemanagerbase.ui"; path = "gui/madvariablemanagerbase.ui"; sourceTree = SOURCE_ROOT; };
-0A1479C846B945418E68D681 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "resources.qrc"; path = "resources/resources.qrc"; sourceTree = SOURCE_ROOT; };
-A6DF57BDBDCF4462A781677B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "moc_madmainwindow.cxx.rule"; path = "buildXcode/moc_madmainwindow.cxx.rule"; sourceTree = SOURCE_ROOT; };
-E9CA729381894CE9850957C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "moc_maddataclassification.cxx.rule"; path = "buildXcode/gui/moc_maddataclassification.cxx.rule"; sourceTree = SOURCE_ROOT; };
-AB167125E5F74D1E9418B167 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "moc_madtextdisplayform.cxx.rule"; path = "buildXcode/gui/moc_madtextdisplayform.cxx.rule"; sourceTree = SOURCE_ROOT; };
-5F623E0E7E6547D29A22A261 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "moc_madvariablemanager.cxx.rule"; path = "buildXcode/gui/moc_madvariablemanager.cxx.rule"; sourceTree = SOURCE_ROOT; };
-1E9D2D3F029F436393DD599D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = "moc_madlogindialog.cxx.rule"; path = "buildXcode/gui/moc_madlogindialog.cxx.rule"; sourceTree = SOURCE_ROOT; };
-02BD39BE2A48456990D05C28 /* MacsurAdapter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = MacsurAdapter; refType = 0; sourceTree = BUILT_PRODUCTS_DIR; };
+		068B3F812BD541C9927B2107 /* moc_madvariablemanager.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madvariablemanager.cxx.rule; path = buildXcode/gui/moc_madvariablemanager.cxx.rule; sourceTree = SOURCE_ROOT; };
+		06EB389713C4460FB79925AA /* ui_madcsvreaderbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_madcsvreaderbase.h; path = buildXcode/ui_madcsvreaderbase.h; sourceTree = SOURCE_ROOT; };
+		0821C2AF0B234E8F88D8BBBD /* maddataclassificationphenology.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationphenology.cpp; path = lib/dataclassification/maddataclassificationphenology.cpp; sourceTree = SOURCE_ROOT; };
+		0920552EFE8542D98FD35589 /* main.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		09BA657B74DF41CD9B276257 /* maddataclassificationsoil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationsoil.cpp; path = lib/dataclassification/maddataclassificationsoil.cpp; sourceTree = SOURCE_ROOT; };
+		0AF8BE430BEC403AB743A29A /* madmodelmanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madmodelmanager.cpp; path = gui/madmodelmanager.cpp; sourceTree = SOURCE_ROOT; };
+		12254CDCB1EE43E2B680B59B /* moc_madtextdisplayform.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madtextdisplayform.cxx.rule; path = buildXcode/gui/moc_madtextdisplayform.cxx.rule; sourceTree = SOURCE_ROOT; };
+		1E1C13032DED4139987041D6 /* madsvsoil.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsvsoil.cpp; path = lib/dataclassification/statevars/madsvsoil.cpp; sourceTree = SOURCE_ROOT; };
+		28214360D819423DB8A503AE /* madtextdisplayform.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madtextdisplayform.cpp; path = gui/madtextdisplayform.cpp; sourceTree = SOURCE_ROOT; };
+		2D73538B1FED48E8B33AA87D /* madmainwindowbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; path = madmainwindowbase.ui; sourceTree = SOURCE_ROOT; };
+		347CDDE0B17B48ED8EF9AF23 /* madstatevars.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madstatevars.cpp; path = lib/dataclassification/statevars/madstatevars.cpp; sourceTree = SOURCE_ROOT; };
+		3DDA9817201143AAAD184EAA /* maddataclassificationmanagement.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationmanagement.cpp; path = lib/dataclassification/maddataclassificationmanagement.cpp; sourceTree = SOURCE_ROOT; };
+		3EE286078F0842DDB840A49C /* ui_madmainwindowbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_madmainwindowbase.h; path = buildXcode/ui_madmainwindowbase.h; sourceTree = SOURCE_ROOT; };
+		417DF9553DEA4F3199DDB265 /* ui_madvariablemanagerbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_madvariablemanagerbase.h; path = buildXcode/ui_madvariablemanagerbase.h; sourceTree = SOURCE_ROOT; };
+		46E34A1F2D964885BA79C09F /* madserialisable.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madserialisable.cpp; path = lib/madserialisable.cpp; sourceTree = SOURCE_ROOT; };
+		4811227F005B4DAAAB5C0C2B /* moc_madcsvreader.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madcsvreader.cxx.rule; path = buildXcode/gui/moc_madcsvreader.cxx.rule; sourceTree = SOURCE_ROOT; };
+		4840270E90B049BB8E770FE7 /* madsvcrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsvcrop.cpp; path = lib/dataclassification/statevars/madsvcrop.cpp; sourceTree = SOURCE_ROOT; };
+		4C6ED2A4AAFF49639BCFE153 /* CMakeLists.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.text; path = CMakeLists.txt; sourceTree = SOURCE_ROOT; };
+		4EE1C42E7EF64C7EB2772FDB /* moc_madmainwindow.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madmainwindow.cxx.rule; path = buildXcode/moc_madmainwindow.cxx.rule; sourceTree = SOURCE_ROOT; };
+		666CF37FFA7A4595B7E9914C /* MacsurAdapter */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; path = MacsurAdapter; sourceTree = BUILT_PRODUCTS_DIR; };
+		67329F6FAF664449BA8205BA /* ui_maddataclassificationbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_maddataclassificationbase.h; path = buildXcode/ui_maddataclassificationbase.h; sourceTree = SOURCE_ROOT; };
+		703BBC419AD2496DB16209B5 /* madmodel.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madmodel.cpp; path = lib/madmodel.cpp; sourceTree = SOURCE_ROOT; };
+		704E86EBF6254245A76A8126 /* maddataclassificationsitedata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationsitedata.cpp; path = lib/dataclassification/maddataclassificationsitedata.cpp; sourceTree = SOURCE_ROOT; };
+		714FEC4856DB4B2391AAF844 /* moc_maddataclassification.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_maddataclassification.cxx.rule; path = buildXcode/gui/moc_maddataclassification.cxx.rule; sourceTree = SOURCE_ROOT; };
+		73CC310E2072406C9DFA8F10 /* moc_madtextdisplayform.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madtextdisplayform.cxx; path = buildXcode/gui/moc_madtextdisplayform.cxx; sourceTree = SOURCE_ROOT; };
+		789E61832FB5472F99A91F52 /* moc_madlogindialog.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madlogindialog.cxx; path = buildXcode/gui/moc_madlogindialog.cxx; sourceTree = SOURCE_ROOT; };
+		80CD83F7121F4D99A4843679 /* moc_madvariablemanager.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madvariablemanager.cxx; path = buildXcode/gui/moc_madvariablemanager.cxx; sourceTree = SOURCE_ROOT; };
+		81FED1EB4D2A42AB99D61D6D /* moc_maddataclassification.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_maddataclassification.cxx; path = buildXcode/gui/moc_maddataclassification.cxx; sourceTree = SOURCE_ROOT; };
+		837B6198765549748F9F4CF1 /* ui_madmodelmanagerbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_madmodelmanagerbase.h; path = buildXcode/ui_madmodelmanagerbase.h; sourceTree = SOURCE_ROOT; };
+		83B54B17E628411BBCE894A2 /* resources.qrc */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = resources.qrc; path = resources/resources.qrc; sourceTree = SOURCE_ROOT; };
+		8524A6C0EB484FBA9FCB0D97 /* madcsvreaderbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = madcsvreaderbase.ui; path = gui/madcsvreaderbase.ui; sourceTree = SOURCE_ROOT; };
+		896306F5E5A44066BD9974FD /* madsvobservations.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsvobservations.cpp; path = lib/dataclassification/statevars/madsvobservations.cpp; sourceTree = SOURCE_ROOT; };
+		8A0F19C94CD54DF995499E4B /* moc_madlogindialog.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madlogindialog.cxx.rule; path = buildXcode/gui/moc_madlogindialog.cxx.rule; sourceTree = SOURCE_ROOT; };
+		8CE0E1C75621442C8D103BA8 /* moc_madmainwindow.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madmainwindow.cxx; path = buildXcode/moc_madmainwindow.cxx; sourceTree = SOURCE_ROOT; };
+		8E22C21CA12441AE84C594D3 /* madguid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madguid.cpp; path = lib/madguid.cpp; sourceTree = SOURCE_ROOT; };
+		8EF9441D69D54B8381026121 /* madutils.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madutils.cpp; path = lib/madutils.cpp; sourceTree = SOURCE_ROOT; };
+		8FE315EADF484952825A731F /* madsvsurfacefluxes.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsvsurfacefluxes.cpp; path = lib/dataclassification/statevars/madsvsurfacefluxes.cpp; sourceTree = SOURCE_ROOT; };
+		9045D0147141430582252D74 /* madlogindialog.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madlogindialog.cpp; path = gui/madlogindialog.cpp; sourceTree = SOURCE_ROOT; };
+		9254A17694454CA18D013DCE /* maddataset.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataset.cpp; path = lib/maddataset.cpp; sourceTree = SOURCE_ROOT; };
+		93F98381834C416BB38FBCDA /* moc_madcsvreader.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madcsvreader.cxx; path = buildXcode/gui/moc_madcsvreader.cxx; sourceTree = SOURCE_ROOT; };
+		9669B8D3E14244CC828A0AAE /* maddataclassification.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassification.cpp; path = gui/maddataclassification.cpp; sourceTree = SOURCE_ROOT; };
+		96A21766646C4A5F9B779D0B /* madvariablemanagerbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = madvariablemanagerbase.ui; path = gui/madvariablemanagerbase.ui; sourceTree = SOURCE_ROOT; };
+		9B42A06FD6864FCE9E47034C /* moc_madmodelmanager.cxx.rule */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = moc_madmodelmanager.cxx.rule; path = buildXcode/gui/moc_madmodelmanager.cxx.rule; sourceTree = SOURCE_ROOT; };
+		9ECE0B3140004128A4581D83 /* madsubcategory.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madsubcategory.cpp; path = lib/dataclassification/madsubcategory.cpp; sourceTree = SOURCE_ROOT; };
+		A6002594CFBB4A68BB95AC58 /* moc_madmodelmanager.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = moc_madmodelmanager.cxx; path = buildXcode/gui/moc_madmodelmanager.cxx; sourceTree = SOURCE_ROOT; };
+		AC06277CB56E4D0ABACBBA57 /* maddata.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddata.cpp; path = lib/maddata.cpp; sourceTree = SOURCE_ROOT; };
+		B68A4EBBFDFC46799CEA40E9 /* madmainwindow.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = madmainwindow.cpp; sourceTree = SOURCE_ROOT; };
+		BA8D5F0888EE421CA2098F74 /* ui_madtextdisplayformbase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ui_madtextdisplayformbase.h; path = buildXcode/ui_madtextdisplayformbase.h; sourceTree = SOURCE_ROOT; };
+		C7AA2E005FDB49DCB1CD1C03 /* madvariablemanager.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madvariablemanager.cpp; path = gui/madvariablemanager.cpp; sourceTree = SOURCE_ROOT; };
+		C83B571EEF65425FBC4F36DF /* madtextdisplayformbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = madtextdisplayformbase.ui; path = gui/madtextdisplayformbase.ui; sourceTree = SOURCE_ROOT; };
+		D40D4B4A7A8F48D08F031F83 /* madmodelmanagerbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = madmodelmanagerbase.ui; path = gui/madmodelmanagerbase.ui; sourceTree = SOURCE_ROOT; };
+		D619C0D82FA3420184467C38 /* maddataclassificationbase.ui */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode; name = maddataclassificationbase.ui; path = gui/maddataclassificationbase.ui; sourceTree = SOURCE_ROOT; };
+		DE918EE0E87240FE83D0B459 /* madcsvreader.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = madcsvreader.cpp; path = gui/madcsvreader.cpp; sourceTree = SOURCE_ROOT; };
+		E0CF978A0E9F4CCD8C7B958E /* maddataclassificationinitialvalues.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationinitialvalues.cpp; path = lib/dataclassification/maddataclassificationinitialvalues.cpp; sourceTree = SOURCE_ROOT; };
+		F5C2DDB35E5E4C4C9E3C04E5 /* maddataclassificationprevcrop.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationprevcrop.cpp; path = lib/dataclassification/maddataclassificationprevcrop.cpp; sourceTree = SOURCE_ROOT; };
+		F93F53F1F83D4E369B432448 /* qrc_resources.cxx */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = qrc_resources.cxx; path = buildXcode/qrc_resources.cxx; sourceTree = SOURCE_ROOT; };
+		FE7B43229D0F4F14A11D3AE0 /* maddataclassificationweather.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; name = maddataclassificationweather.cpp; path = lib/dataclassification/maddataclassificationweather.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXGroup section */
-              4D2EE34B8A26481EB8CA6A1C  = {
-                     isa = PBXGroup;
-                     children = (
-                            8500A095B7A04F159DE9C96A /* Sources */,
-                            711A320A925245E3890FEC4E /* Resources */,
-                            20D3B80C3E984F949BBB4C6D /* Products */,
-                     );
-                     sourceTree = "<group>";
-              };
-              8500A095B7A04F159DE9C96A /* Sources */ = {
-                     isa = PBXGroup;
-                     children = (
-                            E6C84700962940D898FD3626 /* ALL_BUILD */,
-                            A9920CB5DD96445CAC5BC70A /* MacsurAdapter */,
-                            1236E04CC3B94EEDA2CB90E9 /* ZERO_CHECK */,
-                     );
-                     name = Sources;
-                     sourceTree = "<group>";
-              };
-              711A320A925245E3890FEC4E /* Resources */ = {
-                     isa = PBXGroup;
-                     children = (
-                     );
-                     name = Resources;
-                     sourceTree = "<group>";
-              };
-              E6C84700962940D898FD3626 /* ALL_BUILD */ = {
-                     isa = PBXGroup;
-                     children = (
-                            95C10A511B454D22A9ECC608 /* CMake Rules */,
-                            75B7728995C54FACBE0D0B56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */,
-                     );
-                     name = ALL_BUILD;
-                     sourceTree = "<group>";
-              };
-              95C10A511B454D22A9ECC608 /* CMake Rules */ = {
-                     isa = PBXGroup;
-                     children = (
-                     );
-                     name = "CMake Rules";
-                     sourceTree = "<group>";
-              };
-              A9920CB5DD96445CAC5BC70A /* MacsurAdapter */ = {
-                     isa = PBXGroup;
-                     children = (
-                            37F762DA21D44A75B6303A83 /* Source Files */,
-                            33CC3640C8D64341B08A9AD7 /* Header Files */,
-                            7586CA52F06F43DF9EEE71FC /* CMake Rules */,
-                            75B7728995C54FACBE0D0B56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */,
-                            4A7511A38CCB414C88A4C6BB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindowbase.ui */,
-                            5A800649F6E24D869411AF2E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassificationbase.ui */,
-                            FC3F1D729E3649BEB3EA0134 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayformbase.ui */,
-                            406A084E19244200B0807FA1 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui */,
-                            0A1479C846B945418E68D681 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc */,
-                     );
-                     name = MacsurAdapter;
-                     sourceTree = "<group>";
-              };
-              37F762DA21D44A75B6303A83 /* Source Files */ = {
-                     isa = PBXGroup;
-                     children = (
-                            A549E3A4729D4F819F77D995 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp */,
-                            019EB44DF1D14A56B75F7BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp */,
-                            0EF70E9B97314296B0CC3D6A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp */,
-                            372521D7169746EE91ABEA6F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp */,
-                            FFA067D3799645E5BE986544 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp */,
-                            F0E08FF1915A4536A94A785E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp */,
-                            BCCB575AD5C04256B7561B5F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp */,
-                            28E250E7BC594F7B9D99DD3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddataset.cpp */,
-                            8051AAE14A09448584132EC5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madcsv.cpp */,
-                            ED4C067FD4DF4CDF9D48F9C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/madsubcategory.cpp */,
-                            394F0E4DD22F48E3B0AAF2A4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationmanagement.cpp */,
-                            6F49505787C840AF9B64C7B9 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationinitialvalues.cpp */,
-                            CF629513D5064B5AB9486E73 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationphenology.cpp */,
-                            F290987727CE4CDE93D62BDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationprevcrop.cpp */,
-                            4CB2F6E138A44307B93507F3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsitedata.cpp */,
-                            D3DF2DD85EDC4232A4F3FF31 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsoil.cpp */,
-                            8DE496BBB1054E17B4C5F105 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationweather.cpp */,
-                            5425C6B675724B10BC064743 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madstatevars.cpp */,
-                            634165F8AF1B456594C5B266 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvcrop.cpp */,
-                            4F0FBC835D384524A8A336FF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvobservations.cpp */,
-                            77589D363B464D759F40A10C /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsoil.cpp */,
-                            767AC19D27F44C3BA5708F3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsurfacefluxes.cpp */,
-                            DE95478689F9487DBC3380D0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp */,
-                            6A7E3D3412644E5D845DA476 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp */,
-                            0230EDCFFBC745A78DA11BF4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.cpp */,
-                            8BC84D6B94E745058CC43EF7 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanager.cpp */,
-                            40EB3CA334B741708DC9188F /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx */,
-                            F3E145004DB44DDBB571E5D2 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx */,
-                            034E02119811464C857AB39E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx */,
-                            4A2D104A26274F268652DD55 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx */,
-                            CB0450C4ED4D48C093BEDFA5 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx */,
-                            45228C2372CE4AAB970882DC /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx */,
-                     );
-                     name = "Source Files";
-                     sourceTree = "<group>";
-              };
-              33CC3640C8D64341B08A9AD7 /* Header Files */ = {
-                     isa = PBXGroup;
-                     children = (
-                            3E6ABFDF06EE4A80BC9E2CDA /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h */,
-                            9F9DF178592D49AA957F7B8E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h */,
-                            6E0842BD8E324624B9D092B3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h */,
-                            858F535F8BCD4D2FA1F5A2E0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h */,
-                     );
-                     name = "Header Files";
-                     sourceTree = "<group>";
-              };
-              7586CA52F06F43DF9EEE71FC /* CMake Rules */ = {
-                     isa = PBXGroup;
-                     children = (
-                            A6DF57BDBDCF4462A781677B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx.rule */,
-                            E9CA729381894CE9850957C0 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx.rule */,
-                            AB167125E5F74D1E9418B167 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx.rule */,
-                            5F623E0E7E6547D29A22A261 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx.rule */,
-                            1E9D2D3F029F436393DD599D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx.rule */,
-                     );
-                     name = "CMake Rules";
-                     sourceTree = "<group>";
-              };
-              1236E04CC3B94EEDA2CB90E9 /* ZERO_CHECK */ = {
-                     isa = PBXGroup;
-                     children = (
-                            7C6D436C9AB84EE8BDCD0116 /* CMake Rules */,
-                            75B7728995C54FACBE0D0B56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/CMakeLists.txt */,
-                     );
-                     name = ZERO_CHECK;
-                     sourceTree = "<group>";
-              };
-              7C6D436C9AB84EE8BDCD0116 /* CMake Rules */ = {
-                     isa = PBXGroup;
-                     children = (
-                     );
-                     name = "CMake Rules";
-                     sourceTree = "<group>";
-              };
-              20D3B80C3E984F949BBB4C6D /* Products */ = {
-                     isa = PBXGroup;
-                     children = (
-                            02BD39BE2A48456990D05C28 /* MacsurAdapter */,
-                     );
-                     name = Products;
-                     sourceTree = "<group>";
-              };
+		2478575E89F24B74AC9E71E6 /* ZERO_CHECK */ = {
+			isa = PBXGroup;
+			children = (
+				EBD3D28F12E24BAAA7B09EED /* CMake Rules */,
+				4C6ED2A4AAFF49639BCFE153 /* CMakeLists.txt */,
+			);
+			name = ZERO_CHECK;
+			sourceTree = "<group>";
+		};
+		3B8AC4BDC3004ADBBE29642A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				666CF37FFA7A4595B7E9914C /* MacsurAdapter */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		55125DAEB6D841A7ADB43128 = {
+			isa = PBXGroup;
+			children = (
+				BFECC9B9EC764E2AB8C46A01 /* Sources */,
+				B852B79234704D34A07A9B41 /* Resources */,
+				3B8AC4BDC3004ADBBE29642A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		64118D92C5E54CEF8C4E47F1 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+				4EE1C42E7EF64C7EB2772FDB /* moc_madmainwindow.cxx.rule */,
+				714FEC4856DB4B2391AAF844 /* moc_maddataclassification.cxx.rule */,
+				12254CDCB1EE43E2B680B59B /* moc_madtextdisplayform.cxx.rule */,
+				068B3F812BD541C9927B2107 /* moc_madvariablemanager.cxx.rule */,
+				8A0F19C94CD54DF995499E4B /* moc_madlogindialog.cxx.rule */,
+				4811227F005B4DAAAB5C0C2B /* moc_madcsvreader.cxx.rule */,
+				9B42A06FD6864FCE9E47034C /* moc_madmodelmanager.cxx.rule */,
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		7F0DC4FEDFD44DD8BFC53CFD /* Source Files */ = {
+			isa = PBXGroup;
+			children = (
+				0920552EFE8542D98FD35589 /* main.cpp */,
+				B68A4EBBFDFC46799CEA40E9 /* madmainwindow.cpp */,
+				703BBC419AD2496DB16209B5 /* madmodel.cpp */,
+				8EF9441D69D54B8381026121 /* madutils.cpp */,
+				AC06277CB56E4D0ABACBBA57 /* maddata.cpp */,
+				46E34A1F2D964885BA79C09F /* madserialisable.cpp */,
+				8E22C21CA12441AE84C594D3 /* madguid.cpp */,
+				9254A17694454CA18D013DCE /* maddataset.cpp */,
+				9ECE0B3140004128A4581D83 /* madsubcategory.cpp */,
+				3DDA9817201143AAAD184EAA /* maddataclassificationmanagement.cpp */,
+				E0CF978A0E9F4CCD8C7B958E /* maddataclassificationinitialvalues.cpp */,
+				0821C2AF0B234E8F88D8BBBD /* maddataclassificationphenology.cpp */,
+				F5C2DDB35E5E4C4C9E3C04E5 /* maddataclassificationprevcrop.cpp */,
+				704E86EBF6254245A76A8126 /* maddataclassificationsitedata.cpp */,
+				09BA657B74DF41CD9B276257 /* maddataclassificationsoil.cpp */,
+				FE7B43229D0F4F14A11D3AE0 /* maddataclassificationweather.cpp */,
+				347CDDE0B17B48ED8EF9AF23 /* madstatevars.cpp */,
+				4840270E90B049BB8E770FE7 /* madsvcrop.cpp */,
+				896306F5E5A44066BD9974FD /* madsvobservations.cpp */,
+				1E1C13032DED4139987041D6 /* madsvsoil.cpp */,
+				8FE315EADF484952825A731F /* madsvsurfacefluxes.cpp */,
+				9669B8D3E14244CC828A0AAE /* maddataclassification.cpp */,
+				28214360D819423DB8A503AE /* madtextdisplayform.cpp */,
+				9045D0147141430582252D74 /* madlogindialog.cpp */,
+				C7AA2E005FDB49DCB1CD1C03 /* madvariablemanager.cpp */,
+				DE918EE0E87240FE83D0B459 /* madcsvreader.cpp */,
+				0AF8BE430BEC403AB743A29A /* madmodelmanager.cpp */,
+				F93F53F1F83D4E369B432448 /* qrc_resources.cxx */,
+				8CE0E1C75621442C8D103BA8 /* moc_madmainwindow.cxx */,
+				81FED1EB4D2A42AB99D61D6D /* moc_maddataclassification.cxx */,
+				73CC310E2072406C9DFA8F10 /* moc_madtextdisplayform.cxx */,
+				80CD83F7121F4D99A4843679 /* moc_madvariablemanager.cxx */,
+				789E61832FB5472F99A91F52 /* moc_madlogindialog.cxx */,
+				93F98381834C416BB38FBCDA /* moc_madcsvreader.cxx */,
+				A6002594CFBB4A68BB95AC58 /* moc_madmodelmanager.cxx */,
+			);
+			name = "Source Files";
+			sourceTree = "<group>";
+		};
+		8C33AB2F9174428FAB3413FD /* MacsurAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				7F0DC4FEDFD44DD8BFC53CFD /* Source Files */,
+				B5260F510DD44BA3B9FB6C2F /* Header Files */,
+				64118D92C5E54CEF8C4E47F1 /* CMake Rules */,
+				4C6ED2A4AAFF49639BCFE153 /* CMakeLists.txt */,
+				2D73538B1FED48E8B33AA87D /* madmainwindowbase.ui */,
+				D619C0D82FA3420184467C38 /* maddataclassificationbase.ui */,
+				C83B571EEF65425FBC4F36DF /* madtextdisplayformbase.ui */,
+				96A21766646C4A5F9B779D0B /* madvariablemanagerbase.ui */,
+				8524A6C0EB484FBA9FCB0D97 /* madcsvreaderbase.ui */,
+				D40D4B4A7A8F48D08F031F83 /* madmodelmanagerbase.ui */,
+				83B54B17E628411BBCE894A2 /* resources.qrc */,
+			);
+			name = MacsurAdapter;
+			sourceTree = "<group>";
+		};
+		AE6D4D2D6B1E49FDB1933082 /* ALL_BUILD */ = {
+			isa = PBXGroup;
+			children = (
+				B00BF5F3E04544EBA57780E3 /* CMake Rules */,
+				4C6ED2A4AAFF49639BCFE153 /* CMakeLists.txt */,
+			);
+			name = ALL_BUILD;
+			sourceTree = "<group>";
+		};
+		B00BF5F3E04544EBA57780E3 /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
+		B5260F510DD44BA3B9FB6C2F /* Header Files */ = {
+			isa = PBXGroup;
+			children = (
+				3EE286078F0842DDB840A49C /* ui_madmainwindowbase.h */,
+				67329F6FAF664449BA8205BA /* ui_maddataclassificationbase.h */,
+				BA8D5F0888EE421CA2098F74 /* ui_madtextdisplayformbase.h */,
+				417DF9553DEA4F3199DDB265 /* ui_madvariablemanagerbase.h */,
+				06EB389713C4460FB79925AA /* ui_madcsvreaderbase.h */,
+				837B6198765549748F9F4CF1 /* ui_madmodelmanagerbase.h */,
+			);
+			name = "Header Files";
+			sourceTree = "<group>";
+		};
+		B852B79234704D34A07A9B41 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		BFECC9B9EC764E2AB8C46A01 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				AE6D4D2D6B1E49FDB1933082 /* ALL_BUILD */,
+				8C33AB2F9174428FAB3413FD /* MacsurAdapter */,
+				2478575E89F24B74AC9E71E6 /* ZERO_CHECK */,
+			);
+			name = Sources;
+			sourceTree = "<group>";
+		};
+		EBD3D28F12E24BAAA7B09EED /* CMake Rules */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "CMake Rules";
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-              9D33F07BC93442319E4CDFF4 /* MacsurAdapter */ = {
-                     isa = PBXNativeTarget;
-                     buildConfigurationList = D9C82D55063E4B979F0BB689 /* Build configuration list for PBXNativeTarget "MacsurAdapter" */;
-                     buildPhases = (
-                            3B59D1BA2B2740ABB01D24B9 /* CMake Rules */,
-                            18F88D62D0F84DE695314CD0 /* Sources */,
-                            9900B76101234E23940D8675 /* CMake PostBuild Rules */,
-                     );
-                     buildRules = (
-                     );
-                     dependencies = (
-                            4B04EB701A614176AD1A1AFA /* PBXTargetDependency */,
-                     );
-                     name = MacsurAdapter;
-                     productName = MacsurAdapter;
-                     productReference = 02BD39BE2A48456990D05C28 /* MacsurAdapter */;
-                     productType = "com.apple.product-type.tool";
-              };
+		9D33F07BC93442319E4CDFF4 /* MacsurAdapter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 249A5ED2EFDF46EBAD651097 /* Build configuration list for PBXNativeTarget "MacsurAdapter" */;
+			buildPhases = (
+				ABE53202B6A74D6B908C6A8C /* CMake Rules */,
+				A1D8B3B41F3D466DA8317A52 /* Sources */,
+				7671C271A1EB484B81BE231A /* CMake PostBuild Rules */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				0221867392BB465582FD531E /* PBXTargetDependency */,
+			);
+			name = MacsurAdapter;
+			productName = MacsurAdapter;
+			productReference = 666CF37FFA7A4595B7E9914C /* MacsurAdapter */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
-              B992ED2B372546A08D35D2B3 /* Project object */ = {
-                     isa = PBXProject;
-                     attributes = {
-                            BuildIndependentTargetsInParallel = YES;
-                     };
-                     buildConfigurationList = EC896B689AC94DA8BB652544 /* Build configuration list for PBXProject  "MacsurAdapter" */;
-                     buildSettings = {
-                     };
-                     buildStyles = (
-                            50CF34FA9EA040F8901FC7EF /* Debug */,
-                            12DA1B397C16435FBD5A1189 /* Release */,
-                            C440BAC9B4B644069FB6B6FC /* MinSizeRel */,
-                            8FC2E488E8094BD490B901C3 /* RelWithDebInfo */,
-                     );
-                     compatibilityVersion = "Xcode 3.2";
-                     hasScannedForEncodings = 0;
-                     mainGroup = 4D2EE34B8A26481EB8CA6A1C;
-                     projectDirPath = "..";
-                     projectRoot = "";
-                     targets = (
-                            B62C8F16537B4CF3969BA5F0 /* ALL_BUILD */,
-                            9D33F07BC93442319E4CDFF4 /* MacsurAdapter */,
-                            2E7649C2833943C6AEFD5973 /* ZERO_CHECK */,
-                     );
-              };
+		B992ED2B372546A08D35D2B3 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = YES;
+				LastUpgradeCheck = 0460;
+			};
+			buildConfigurationList = DA6EB3377E0443158E66086F /* Build configuration list for PBXProject "MacsurAdapter" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 55125DAEB6D841A7ADB43128;
+			projectDirPath = ..;
+			projectRoot = "";
+			targets = (
+				B62C8F16537B4CF3969BA5F0 /* ALL_BUILD */,
+				9D33F07BC93442319E4CDFF4 /* MacsurAdapter */,
+				2E7649C2833943C6AEFD5973 /* ZERO_CHECK */,
+			);
+		};
 /* End PBXProject section */
 
 /* Begin PBXShellScriptBuildPhase section */
-              D9BD4E0659AE4F89A56CBC3B /*  */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     inputPaths = (
-                     );
-                     outputPaths = (
-                     );
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "# shell script goes here
-exit 0";
-                     showEnvVarsInLog = 0;
-              };
-              7A1E62752BF842DA898DC7CF /* CMake Rules */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     name = "CMake Rules";
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
-                     showEnvVarsInLog = 0;
-              };
-              3B59D1BA2B2740ABB01D24B9 /* CMake Rules */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     name = "CMake Rules";
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/MacsurAdapter_cmakeRulesBuildPhase.make$CONFIGURATION all";
-                     showEnvVarsInLog = 0;
-              };
-              9900B76101234E23940D8675 /* CMake PostBuild Rules */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     name = "CMake PostBuild Rules";
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/MacsurAdapter_postBuildPhase.make$CONFIGURATION all";
-                     showEnvVarsInLog = 0;
-              };
-              D025FF513B8746928D1E6FCA /*  */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     inputPaths = (
-                     );
-                     outputPaths = (
-                     );
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "# shell script goes here
-exit 0";
-                     showEnvVarsInLog = 0;
-              };
-              26FDAD206E4C4010B17720E8 /* CMake Rules */ = {
-                     isa = PBXShellScriptBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                     );
-                     name = "CMake Rules";
-                     runOnlyForDeploymentPostprocessing = 0;
-                     shellPath = /bin/sh;
-                     shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
-                     showEnvVarsInLog = 0;
-              };
+		7671C271A1EB484B81BE231A /* CMake PostBuild Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake PostBuild Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/MacsurAdapter_postBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		84E2157FC84948609B073660 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ZERO_CHECK_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		946D780FC55D424CB2716193 /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/ALL_BUILD_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
+		ABE53202B6A74D6B908C6A8C /* CMake Rules */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			name = "CMake Rules";
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "make -C /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -f /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/CMakeScripts/MacsurAdapter_cmakeRulesBuildPhase.make$CONFIGURATION all";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
-              18F88D62D0F84DE695314CD0 /* Sources */ = {
-                     isa = PBXSourcesBuildPhase;
-                     buildActionMask = 2147483647;
-                     files = (
-                            138324D5A02C470497F00416 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/main.cpp */,
-                            A2B44133B8594FDFBDE7891D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/madmainwindow.cpp */,
-                            ED2A1F010B7A498A8293407D /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madmodel.cpp */,
-                            8311CD1B1F5B4ACFB6E65C56 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madutils.cpp */,
-                            57CBAEA09A6242CBBA1D6F62 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddata.cpp */,
-                            952F7A8EE4764D78AA827104 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madserialisable.cpp */,
-                            B6473F5F7EAB4031A09375CC /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madguid.cpp */,
-                            4358FBD30AE041DAB220A195 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/maddataset.cpp */,
-                            893BDF9837AD4657A60EB340 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/madcsv.cpp */,
-                            4C2349C23D7E460F900BDDFF /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/madsubcategory.cpp */,
-                            21170C302DAB481798594889 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationmanagement.cpp */,
-                            41A777C1C988480FBDF5BD02 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationinitialvalues.cpp */,
-                            C2F1998E99964FD5AB58926B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationphenology.cpp */,
-                            805A67E808EB4962B11A2EAB /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationprevcrop.cpp */,
-                            94BE25283A9040C7A91675A3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsitedata.cpp */,
-                            A92A94D5FA8F49798619C50E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationsoil.cpp */,
-                            6F896FB304094638BBC32A17 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/maddataclassificationweather.cpp */,
-                            77535C03D68A43179EDA45F4 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madstatevars.cpp */,
-                            6B3556A6124B4EB5A9F3DA50 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvcrop.cpp */,
-                            4261B956382E4BE9AC077855 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvobservations.cpp */,
-                            957A135CF82A4D3987B3D9C1 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsoil.cpp */,
-                            929E40741C1E4B73B8875D3A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/lib/dataclassification/statevars/madsvsurfacefluxes.cpp */,
-                            D27A6C45B09C4B009D2DBECD /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/maddataclassification.cpp */,
-                            DD9B0601E78A46C4A071BB6A /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madtextdisplayform.cpp */,
-                            0846037820F14411A98BA5B3 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.cpp */,
-                            CCDAA817546246F4B182327E /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanager.cpp */,
-                            85E15AB5E78F46CCAAA2CAA8 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx */,
-                            84BE429E666D4CF3B7DECEF9 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx */,
-                            476ADB2CD7924517AE0D782B /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx */,
-                            B15604B7A1A5425AB5135117 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx */,
-                            D1E58D8BEBFC4EE99B77CF72 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx */,
-                            C28606B2CC044D59A5E85BC8 /* /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx */,
-                     );
-                     runOnlyForDeploymentPostprocessing = 0;
-              };
+		A1D8B3B41F3D466DA8317A52 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				885C6C792F4640CA830A0E5B /* main.cpp in Sources */,
+				3B55B28D2999486B8F379E41 /* madmainwindow.cpp in Sources */,
+				0040D7BEE52A4639B94460AF /* madmodel.cpp in Sources */,
+				A29FEAAE18D544A4B6041BAE /* madutils.cpp in Sources */,
+				1DC273D96B6F43EF8B5E42CD /* maddata.cpp in Sources */,
+				FD320A44C22D4778995A959D /* madserialisable.cpp in Sources */,
+				B0BB95D11DB443EFB0FF2337 /* madguid.cpp in Sources */,
+				FC4EBA1DF0B849C6BE6D43F1 /* maddataset.cpp in Sources */,
+				1FB81C2F197643C58CC66B3F /* madsubcategory.cpp in Sources */,
+				33B071F44638469EA94E7049 /* maddataclassificationmanagement.cpp in Sources */,
+				1AACA22F41BD44AFB6760A6C /* maddataclassificationinitialvalues.cpp in Sources */,
+				8921AA4B72604FCCB27B9FC1 /* maddataclassificationphenology.cpp in Sources */,
+				941F3D389FD4413D8DBA088B /* maddataclassificationprevcrop.cpp in Sources */,
+				BA8E04878E2A4FC6864DA403 /* maddataclassificationsitedata.cpp in Sources */,
+				1F67CA84FAEB4F8FA1727972 /* maddataclassificationsoil.cpp in Sources */,
+				65BDFCC645A740BC97833109 /* maddataclassificationweather.cpp in Sources */,
+				8DE9B9E9B2B641E191C31EE2 /* madstatevars.cpp in Sources */,
+				E8B8135F8C2E4144BD2BE913 /* madsvcrop.cpp in Sources */,
+				BEF79E83B0734585B843AF93 /* madsvobservations.cpp in Sources */,
+				B63D3CD6084B422AAC668A21 /* madsvsoil.cpp in Sources */,
+				C2FFB455365A4A1CB37D3E66 /* madsvsurfacefluxes.cpp in Sources */,
+				A0A474F9452645B585168C63 /* maddataclassification.cpp in Sources */,
+				DF7C5729F82C4F44AD161959 /* madtextdisplayform.cpp in Sources */,
+				A1A51A36986A4427BC4DC15E /* madlogindialog.cpp in Sources */,
+				B0A15308470541E59BE13C92 /* madvariablemanager.cpp in Sources */,
+				922A3EB8C0794FF6A4C222F0 /* madcsvreader.cpp in Sources */,
+				526D5CCBBC5B4448A5916E88 /* madmodelmanager.cpp in Sources */,
+				C5B7D21B51DE46DCA682FF38 /* qrc_resources.cxx in Sources */,
+				E7C61905F2B74001964E4E66 /* moc_madmainwindow.cxx in Sources */,
+				B9D5D1F4DFB0495489D84069 /* moc_maddataclassification.cxx in Sources */,
+				D857074D9A3B4F0EAF1F37C3 /* moc_madtextdisplayform.cxx in Sources */,
+				B5729282B4884A46A3D7FB05 /* moc_madvariablemanager.cxx in Sources */,
+				266849B9458F44468DFA745B /* moc_madlogindialog.cxx in Sources */,
+				158BEED168BD4BDF831BD309 /* moc_madcsvreader.cxx in Sources */,
+				6A08490A482341C995447A9F /* moc_madmodelmanager.cxx in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-              4B04EB701A614176AD1A1AFA /* PBXTargetDependency */ = {
-                     isa = PBXTargetDependency;
-                     target = 2E7649C2833943C6AEFD5973 /* ZERO_CHECK */;
-                     targetProxy = 10023951BC9645A98BD3C536 /* PBXContainerItemProxy */;
-              };
-              96D16DE879844226969ABE35 /* PBXTargetDependency */ = {
-                     isa = PBXTargetDependency;
-                     target = 9D33F07BC93442319E4CDFF4 /* MacsurAdapter */;
-                     targetProxy = 6B4496124D2E4C908A488DFC /* PBXContainerItemProxy */;
-              };
+		0221867392BB465582FD531E /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 2E7649C2833943C6AEFD5973 /* ZERO_CHECK */;
+			targetProxy = 81C65BA1026043608D283FED /* PBXContainerItemProxy */;
+		};
+		693E63FF8A674C53803DFD32 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 9D33F07BC93442319E4CDFF4 /* MacsurAdapter */;
+			targetProxy = 8484DD57617947B0999C338F /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-              78C142F60109496B856BADAE /* Debug */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-                            ONLY_ACTIVE_ARCH = YES;
-                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
-                     };
-                     name = Debug;
-              };
-              B1186D8A37FB4F77B86B5346 /* Release */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-                            ONLY_ACTIVE_ARCH = YES;
-                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
-                     };
-                     name = Release;
-              };
-              7DB7EC8EE0E64245BF166BEB /* MinSizeRel */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-                            ONLY_ACTIVE_ARCH = YES;
-                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
-                     };
-                     name = MinSizeRel;
-              };
-              3D719D21ABF8427C9FF00CE3 /* RelWithDebInfo */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
-                            ONLY_ACTIVE_ARCH = YES;
-                            SDKROOT = "/Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
-                     };
-                     name = RelWithDebInfo;
-              };
-              FB3415E32E4C48C0A2CE0B19 /* Debug */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Debug;
-              };
-              ADBD5F7A7521437BAF2C2493 /* Release */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Release;
-              };
-              BBF947E4991B483683553D44 /* MinSizeRel */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = MinSizeRel;
-              };
-              DFAB3B1EC8514FD1BD1747D0 /* RelWithDebInfo */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ALL_BUILD;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = RelWithDebInfo;
-              };
-              F96580BC9DED4067BC6A689D /* Debug */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            EXECUTABLE_PREFIX = "";
-                            EXECUTABLE_SUFFIX = "";
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            LIBRARY_SEARCH_PATHS = "";
-                            OTHER_CFLAGS = "     -Wall";
-                            OTHER_CPLUSPLUSFLAGS = "     -Wall";
-                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework QtCore -framework QtGui -framework QtCore -framework QtGui -framework QtXml -framework QtWebKit";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = MacsurAdapter;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Debug;
-              };
-              0068B1466EAB4AC18A84C507 /* Release */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            EXECUTABLE_PREFIX = "";
-                            EXECUTABLE_SUFFIX = "";
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 3;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            LIBRARY_SEARCH_PATHS = "";
-                            OTHER_CFLAGS = "    -DNDEBUG   -Wall";
-                            OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -Wall";
-                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework QtCore -framework QtGui -framework QtCore -framework QtGui -framework QtXml -framework QtWebKit";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = MacsurAdapter;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Release;
-              };
-              587A3A095F4E478AAA6B8698 /* MinSizeRel */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            EXECUTABLE_PREFIX = "";
-                            EXECUTABLE_SUFFIX = "";
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = s;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            LIBRARY_SEARCH_PATHS = "";
-                            OTHER_CFLAGS = "    -DNDEBUG   -Wall";
-                            OTHER_CPLUSPLUSFLAGS = "    -DNDEBUG   -Wall";
-                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework QtCore -framework QtGui -framework QtCore -framework QtGui -framework QtXml -framework QtWebKit";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = MacsurAdapter;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = MinSizeRel;
-              };
-              1FF862B2AD3540869C83925F /* RelWithDebInfo */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            EXECUTABLE_PREFIX = "";
-                            EXECUTABLE_SUFFIX = "";
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 2;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            LIBRARY_SEARCH_PATHS = "";
-                            OTHER_CFLAGS = "       -DNDEBUG   -Wall";
-                            OTHER_CPLUSPLUSFLAGS = "       -DNDEBUG   -Wall";
-                            OTHER_LDFLAGS = "  -Wl,-search_paths_first -Wl,-headerpad_max_install_names -framework QtCore -framework QtGui -framework QtCore -framework QtGui -framework QtXml -framework QtWebKit";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = MacsurAdapter;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = RelWithDebInfo;
-              };
-              7D67E4D2C65044E388ACE551 /* Debug */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Debug;
-              };
-              504A927DF6004405BDA558D4 /* Release */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = Release;
-              };
-              E46688FAF89046E29C7508A9 /* MinSizeRel */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = MinSizeRel;
-              };
-              166F8ED2517E4F6AB461DE52 /* RelWithDebInfo */ = {
-                     isa = XCBuildConfiguration;
-                     buildSettings = {
-                            FRAMEWORK_SEARCH_PATHS = (/Library/Frameworks, );
-                            GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
-                            GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
-                            GCC_OPTIMIZATION_LEVEL = 0;
-                            GCC_PREPROCESSOR_DEFINITIONS = ("'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'", QT_WEBKIT_LIB, QT_GUI_LIB, QT_CORE_LIB, QT_NO_DEBUG, );
-                            GCC_SYMBOLS_PRIVATE_EXTERN = NO;
-                            HEADER_SEARCH_PATHS = ("/Library/Frameworks/QtWebKit.framework/Headers", "/Library/Frameworks/QtGui.framework/Headers", "/Library/Frameworks/QtCore.framework/Headers", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter", "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode", "/Library/Frameworks/QtXml.framework/Headers", );
-                            INSTALL_PATH = "";
-                            OTHER_CFLAGS = "   -Wall";
-                            OTHER_LDFLAGS = "";
-                            OTHER_REZFLAGS = "";
-                            PRODUCT_NAME = ZERO_CHECK;
-                            SECTORDER_FLAGS = "";
-                            SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
-                            USE_HEADERMAP = NO;
-                            WARNING_CFLAGS = ("-Wmost", "-Wno-four-char-constants", "-Wno-unknown-pragmas", );
-                     };
-                     name = RelWithDebInfo;
-              };
+		1C5CDB313B4240738ECFCF30 /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		22AAF09A507A47F2B7AEE47F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		2F5FA962038147479E441A88 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		481ECF610ECA43EE8DB1E39E /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtXml,
+					"-framework",
+					QtWebKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MacsurAdapter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		52C1A23CE0F74C5388A7A375 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 2;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtXml,
+					"-framework",
+					QtWebKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MacsurAdapter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		582995D536954A35949FB679 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		6798036E8C984353A9B420AE /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
+			};
+			name = MinSizeRel;
+		};
+		69541012D15749B0A1C64BD4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
+			};
+			name = Release;
+		};
+		6A0E463568EB4F67A367ADDD /* MinSizeRel */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ALL_BUILD;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = MinSizeRel;
+		};
+		84823B6CF32B4CAB98CF21EB /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
+			};
+			name = Debug;
+		};
+		B68095D356474A0F97EE1CC3 /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = /Applications/Xcode.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.8.sdk;
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/build";
+			};
+			name = RelWithDebInfo;
+		};
+		DA956FAC465542E99EC3A3E4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		DC169E683B734CE9BD4C619E /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
+		E08C62BC94E64BDE98E1947A /* RelWithDebInfo */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				COMBINE_HIDPI_IMAGES = YES;
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = "";
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = ZERO_CHECK;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = RelWithDebInfo;
+		};
+		E7331814481C412E82824490 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = YES;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-Wall",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtXml,
+					"-framework",
+					QtWebKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MacsurAdapter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Debug;
+		};
+		ED97B57F9C0F45009FAB444B /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				EXECUTABLE_PREFIX = "";
+				EXECUTABLE_SUFFIX = "";
+				FRAMEWORK_SEARCH_PATHS = /Library/Frameworks;
+				GCC_GENERATE_DEBUGGING_SYMBOLS = NO;
+				GCC_INLINES_ARE_PRIVATE_EXTERN = NO;
+				GCC_OPTIMIZATION_LEVEL = 3;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"'CMAKE_INTDIR=\"$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)\"'",
+					QT_WEBKIT_LIB,
+					QT_GUI_LIB,
+					QT_CORE_LIB,
+					QT_NO_DEBUG,
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				HEADER_SEARCH_PATHS = (
+					/Library/Frameworks/QtWebKit.framework/Headers,
+					/Library/Frameworks/QtGui.framework/Headers,
+					/Library/Frameworks/QtCore.framework/Headers,
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter",
+					"/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode",
+					/Library/Frameworks/QtXml.framework/Headers,
+				);
+				INSTALL_PATH = "";
+				LIBRARY_SEARCH_PATHS = "";
+				OTHER_CFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_CPLUSPLUSFLAGS = (
+					"-DNDEBUG",
+					"-Wall",
+				);
+				OTHER_LDFLAGS = (
+					"-Wl,-search_paths_first",
+					"-Wl,-headerpad_max_install_names",
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtCore,
+					"-framework",
+					QtGui,
+					"-framework",
+					QtXml,
+					"-framework",
+					QtWebKit,
+				);
+				OTHER_REZFLAGS = "";
+				PRODUCT_NAME = MacsurAdapter;
+				SECTORDER_FLAGS = "";
+				SYMROOT = "/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode";
+				USE_HEADERMAP = NO;
+				WARNING_CFLAGS = (
+					"-Wmost",
+					"-Wno-four-char-constants",
+					"-Wno-unknown-pragmas",
+				);
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-              EC896B689AC94DA8BB652544 /* Build configuration list for PBXProject  "MacsurAdapter" */ = {
-                     isa = XCConfigurationList;
-                     buildConfigurations = (
-                            78C142F60109496B856BADAE /* Debug */,
-                            B1186D8A37FB4F77B86B5346 /* Release */,
-                            7DB7EC8EE0E64245BF166BEB /* MinSizeRel */,
-                            3D719D21ABF8427C9FF00CE3 /* RelWithDebInfo */,
-                     );
-                     defaultConfigurationIsVisible = 0;
-                     defaultConfigurationName = Debug;
-              };
-              5B2F58773351470C812EF26E /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
-                     isa = XCConfigurationList;
-                     buildConfigurations = (
-                            FB3415E32E4C48C0A2CE0B19 /* Debug */,
-                            ADBD5F7A7521437BAF2C2493 /* Release */,
-                            BBF947E4991B483683553D44 /* MinSizeRel */,
-                            DFAB3B1EC8514FD1BD1747D0 /* RelWithDebInfo */,
-                     );
-                     defaultConfigurationIsVisible = 0;
-                     defaultConfigurationName = Debug;
-              };
-              D9C82D55063E4B979F0BB689 /* Build configuration list for PBXNativeTarget "MacsurAdapter" */ = {
-                     isa = XCConfigurationList;
-                     buildConfigurations = (
-                            F96580BC9DED4067BC6A689D /* Debug */,
-                            0068B1466EAB4AC18A84C507 /* Release */,
-                            587A3A095F4E478AAA6B8698 /* MinSizeRel */,
-                            1FF862B2AD3540869C83925F /* RelWithDebInfo */,
-                     );
-                     defaultConfigurationIsVisible = 0;
-                     defaultConfigurationName = Debug;
-              };
-              CC08DA256A1443C18750898A /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
-                     isa = XCConfigurationList;
-                     buildConfigurations = (
-                            7D67E4D2C65044E388ACE551 /* Debug */,
-                            504A927DF6004405BDA558D4 /* Release */,
-                            E46688FAF89046E29C7508A9 /* MinSizeRel */,
-                            166F8ED2517E4F6AB461DE52 /* RelWithDebInfo */,
-                     );
-                     defaultConfigurationIsVisible = 0;
-                     defaultConfigurationName = Debug;
-              };
+		249A5ED2EFDF46EBAD651097 /* Build configuration list for PBXNativeTarget "MacsurAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				E7331814481C412E82824490 /* Debug */,
+				ED97B57F9C0F45009FAB444B /* Release */,
+				481ECF610ECA43EE8DB1E39E /* MinSizeRel */,
+				52C1A23CE0F74C5388A7A375 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		B3A5793042104F7DA9F8D707 /* Build configuration list for PBXAggregateTarget "ZERO_CHECK" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DA956FAC465542E99EC3A3E4 /* Debug */,
+				DC169E683B734CE9BD4C619E /* Release */,
+				1C5CDB313B4240738ECFCF30 /* MinSizeRel */,
+				E08C62BC94E64BDE98E1947A /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		C66C1221C6914BD5A06B4620 /* Build configuration list for PBXAggregateTarget "ALL_BUILD" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				22AAF09A507A47F2B7AEE47F /* Debug */,
+				582995D536954A35949FB679 /* Release */,
+				6A0E463568EB4F67A367ADDD /* MinSizeRel */,
+				2F5FA962038147479E441A88 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		DA6EB3377E0443158E66086F /* Build configuration list for PBXProject "MacsurAdapter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				84823B6CF32B4CAB98CF21EB /* Debug */,
+				69541012D15749B0A1C64BD4 /* Release */,
+				6798036E8C984353A9B420AE /* MinSizeRel */,
+				B68095D356474A0F97EE1CC3 /* RelWithDebInfo */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
 /* End XCConfigurationList section */
-       };
-       rootObject = B992ED2B372546A08D35D2B3;
+	};
+	rootObject = B992ED2B372546A08D35D2B3 /* Project object */;
 }

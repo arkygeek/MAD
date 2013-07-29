@@ -50,6 +50,7 @@ set ( MacsurAdapter_HDRS
         gui/madlogindialog.h
         gui/madvariablemanager.h
         gui/madcsvreader.h
+        gui/madmodelmanager.h
         )
 
 set ( MacsurAdapter_SRCS
@@ -80,6 +81,8 @@ set ( MacsurAdapter_SRCS
         gui/madlogindialog.cpp
         gui/madvariablemanager.cpp
         gui/madcsvreader.cpp
+        gui/madmodelmanager.cpp
+
         )
 
 set ( MacsurAdapter_UIS
@@ -88,6 +91,8 @@ set ( MacsurAdapter_UIS
         gui/madtextdisplayformbase.ui
         gui/madvariablemanagerbase.ui
         gui/madcsvreaderbase.ui
+        gui/madmodelmanagerbase.ui
+
         )
 QT4_WRAP_UI(UIS ${MacsurAdapter_UIS})
 
@@ -103,6 +108,8 @@ set ( MacsurAdapter_MOCS
         gui/madvariablemanager.h
         gui/madlogindialog.h
         gui/madcsvreader.h
+        gui/madmodelmanager.h
+
         )
 QT4_WRAP_CPP(MOCS ${MacsurAdapter_MOCS})
 

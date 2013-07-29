@@ -6,7 +6,7 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>926</width>
+    <width>1080</width>
     <height>642</height>
    </rect>
   </property>
@@ -15,19 +15,47 @@
   </property>
   <layout class="QGridLayout" name="gridLayout">
    <item row="0" column="0">
-    <widget class="QSplitter" name="splitter">
+    <widget class="QSplitter" name="splitterHorizTriple">
      <property name="orientation">
       <enum>Qt::Horizontal</enum>
      </property>
-     <widget class="QTextEdit" name="textEdit">
-      <property name="sizePolicy">
-       <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
-        <horstretch>0</horstretch>
-        <verstretch>0</verstretch>
-       </sizepolicy>
+     <widget class="QSplitter" name="vSplitterLeftSide">
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
       </property>
+      <widget class="QTextEdit" name="tedTemp">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>0</verstretch>
+        </sizepolicy>
+       </property>
+      </widget>
+      <widget class="QListWidget" name="listwidVarList">
+       <property name="sizePolicy">
+        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+         <horstretch>0</horstretch>
+         <verstretch>1</verstretch>
+        </sizepolicy>
+       </property>
+       <item>
+        <property name="text">
+         <string>a</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>b</string>
+        </property>
+       </item>
+       <item>
+        <property name="text">
+         <string>c</string>
+        </property>
+       </item>
+      </widget>
      </widget>
-     <widget class="QTextBrowser" name="textBrowser">
+     <widget class="QTextBrowser" name="txbrDetails">
       <property name="sizePolicy">
        <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
         <horstretch>5</horstretch>
@@ -39,88 +67,115 @@
 &lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
 p, li { white-space: pre-wrap; }
 &lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'Lucida Grande'; font-size:13pt; font-weight:400; font-style:normal;&quot;&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Note:&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Hatted symbols are potential rates that can be calculated as a function of the&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// environment alone. Un-hatted symbols represent actual rates. &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;RCGro is a model for simulation of sap flow dynamics and stem diameter variations in individual trees.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Whole-tree leaf transpiration is used as the only input.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Constant capacitance of the storage tissues (electrical analogue approach).&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Radial stem growth based on Lockhart's equation for irreversible cell expansion.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;- Constant soil water potential&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-------------------------------&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -------------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Carbohydrate supply&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Steppe K., De Pauw D.J.W., Lemeur R. and Vanrolleghem P.A. (2006). A mathematical model linking tree sap flow dynamics to daily stem diameter fluctuations and radial stem growth. Tree Physiology, 26(3), 257-273.&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;(http://dx.doi.org/10.1093/treephys/26.3.257)&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Response to light and temperature of gross photosynthesis (Eq. 14)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;h_L = alpha * L / ( gamma + L )&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;h_T = 1 - kappa * ( T - T_star ) * ( T - T_star )&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;p_st = h_L * h_T&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential daily gross photosynthesis (Eq. 13)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;p_hat = p_st * photoperiod * lambda * C&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;-------------------------------&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential maintenance respiration (Eq. 8)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;m_hat = m_0 * exp( theta * T )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential daily supply of carbohydrate (Eq. 6)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;sigma_hat = p_hat - m_hat&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -----------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Supply limitation&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -----------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// --------------------------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Initial section (calculated once at the start of a simulation)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// --------------------------------------------------------------&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Ratio of non-structural reserve to structural matter (Eq. 10)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;phi_L = phi_0 + xi * L&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Thickness of the storage compartment (Eq. 18)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Empirical relationship taken from GÃ©nard et al. (2001)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;initial( d_S ) = a * ( 1 - exp( -b * initial( D_outer ) ) )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential supply limited structural growth (Eq. 7)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;s_hat_supply = sigma_hat * epsilon / ( 1 + phi_L )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Initial value of the inner stem segment (Eq. 15)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;initial( D_inner ) = initial( D_outer ) - 2 * initial( d_S )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Growth respiration (Eq. 3)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;g_hat_supply = ( 1 - epsilon ) * s_hat_supply / epsilon&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Assumed proportional to the water potential of the root xylem&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// For night time conditions (after Fanjul and Rosher (1984)) (Eq. 44)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;initial( Psi_S_stem_p ) = Beta * ( Psi_X_roots - Psi_X_stem_Psi_S_stem_p_0 )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Required minimum non-structural carbohydrate at dawn (Eq. 4)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;r_hat_supply = ( phi_0 + xi * L ) * s_hat_supply / epsilon&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// ------------------------------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Equations (calculated at each solver step)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// ------------------------------------------&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Reserve as a fraction of structure&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;r_s = r_hat_supply / s_hat_supply&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// --- Water transport submodel ---&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -----------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Demand limitation&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -----------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Calculate the water potentials of the storage compartments (Eq. 13)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Psi_S_stem = Psi_X_roots + W_stem / C_stem&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Psi_S_crown = Psi_X_roots + W_crown / C_crown&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential demand for structural growth (Eq. 9)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;s_hat_demand = s_0 * exp( zeta * T )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Calculation of the exchange resistance between the xylem and the storage compartment (Eq. 41)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// This is iversely proportional to the radial hydraulic conductivity L&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;A = pi() * D_inner * l&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;R_S = 1.0 / ( A * Rho_w * L ) &lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Growth respiration (Eq. 3)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;g_hat_demand = ( 1 - epsilon ) * s_hat_demand / epsilon&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Water exchange between the xylem and the storage compartment of the stem (Eq. 11)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;deriv( W_stem ) = ( R_X + R_S ) &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                  / ( ( R_X + R_S ) * ( R_X + 2.0 * R_S ) - ( R_S * R_S ) )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                  * ( Psi_X_roots  + ( ( R_S / ( R_X + R_S ) ) - 2.0 ) * Psi_S_stem&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                  + ( 1.0 - ( R_S / ( R_X + R_S ) ) ) * Psi_S_crown &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                  - E * R_X * R_S / ( R_X + R_S ) )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;f_stem = deriv( W_stem )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Required minimum non-structural carbohydrate at dawn (Eq. 4)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;r_hat_demand = ( phi_0 + xi * L ) * s_hat_demand / epsilon&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Stem xylem water potential (Eq. 8)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Psi_X_stem = deriv( W_stem ) * R_S + Psi_S_stem&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Potential demand for carbohydrate (Eq. 5)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;delta_hat = s_hat_demand + g_hat_demand + r_hat_demand&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Water exchange between the xylem and the storage compartment of the crown (Eq. 9)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;deriv( W_crown ) = ( Psi_X_stem - Psi_S_crown - R_X * E ) / ( R_X + R_S )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;f_crown = deriv( W_crown )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Inhibition of gross photosynthesis (Eq. 11)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;//i = beta * ( p_hat - delta_hat )&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;i = beta * ( sigma_hat - delta_hat )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Crown xylem water potential (Eq. 8)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Psi_X_crown = deriv( W_crown ) * R_S + Psi_S_crown&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Excess carbohydrate (Eq. 12)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;e = ( 1 - beta ) * i / beta&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Vertical water transport between the roots and the stem (Eq. 1)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;F_stem = ( Psi_X_roots - Psi_X_stem ) / R_X&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Vertical water transport between the stem and the crown (Eq. 2)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;F_crown = ( Psi_X_stem - Psi_X_crown ) / R_X&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Reserve plus excess carbohydrate as a fraction of structure&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;re_s = ( r_hat_demand + e ) / s_hat_demand&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// --- Stem diameter submodel ---&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -------------------&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Growth rate and NSC&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// -------------------&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Volume of the storage compartment (assuming d_S much smaller than D_inner) (Eq. 17)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;V_stem = pi() * d_S * D_inner * l&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Unified expression for structural growth (Eq. 7)&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;s = if ( s_hat_supply &amp;lt; s_hat_demand; s_hat_supply; s_hat_demand )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Change in pressure potential resulting from the flow of water in and out of the&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// stem storage compartment (Eq. 36)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;deriv( Psi_S_stem_p ) = deriv( W_stem ) * Epsilon_0 * Psi_S_stem_p * D_outer &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                        / ( Rho_w * V_stem )&lt;/p&gt;
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Nonstructural carbohydrate is the maximum of supply and demand limited calculations&lt;/p&gt;
-&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;nsc = if ( r_s &amp;lt; re_s; re_s; r_s )&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Check for growth&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;if ( Psi_S_stem_p &amp;gt; Gamma )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;{&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  // Stem diameter variation due to elastic changes and growth (Eq. 30)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  deriv( D_outer ) = 2.0 * d_S * deriv( Psi_S_stem_p ) / ( Epsilon_0 * Psi_S_stem_p * D_outer ) &lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;                     + ( d_S * Phi * ( Psi_S_stem_p - Gamma ) / ( b * ( a - d_S ) ) )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;}&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;else&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;{&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  // Stem diameter variation due to elastic changes only (Eq. 31)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;  deriv( D_outer ) = 2.0 * d_S * deriv( Psi_S_stem_p ) / ( Epsilon_0 * Psi_S_stem_p * D_outer )&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;}&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Bulk elastic modulus (Eq. 20)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Epsilon = Epsilon_0 * Psi_S_stem_p * D_outer&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Osmotic water potential component (Eq. 37)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;Psi_S_stem_o = Psi_S_stem_p - Psi_S_stem&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Thickness change of the storage compartment (Eq. 32)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;deriv( d_S ) = a * b * exp( -b * D_outer ) * deriv( D_outer )&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;// Inner diameter variation (Eq. 33)&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;deriv( D_inner ) = deriv( D_outer ) - 2.0 * deriv( d_S )&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
       </property>
      </widget>
      <widget class="QWidget" name="layoutWidget">
-      <layout class="QVBoxLayout" name="verticalLayout">
+      <layout class="QVBoxLayout" name="verticalLayoutRightSide">
        <item>
-        <widget class="QTreeWidget" name="treeWidget_2">
+        <widget class="QTreeWidget" name="twidDetails">
          <property name="sizePolicy">
           <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
            <horstretch>3</horstretch>
@@ -129,8 +184,11 @@ p, li { white-space: pre-wrap; }
          </property>
          <property name="font">
           <font>
-           <pointsize>11</pointsize>
+           <pointsize>13</pointsize>
           </font>
+         </property>
+         <property name="acceptDrops">
+          <bool>true</bool>
          </property>
          <property name="autoFillBackground">
           <bool>false</bool>
@@ -147,20 +205,26 @@ p, li { white-space: pre-wrap; }
          <property name="verticalScrollBarPolicy">
           <enum>Qt::ScrollBarAsNeeded</enum>
          </property>
+         <property name="defaultDropAction">
+          <enum>Qt::CopyAction</enum>
+         </property>
          <property name="alternatingRowColors">
           <bool>false</bool>
          </property>
          <property name="iconSize">
           <size>
-           <width>10</width>
-           <height>10</height>
+           <width>12</width>
+           <height>12</height>
           </size>
+         </property>
+         <property name="textElideMode">
+          <enum>Qt::ElideNone</enum>
          </property>
          <property name="verticalScrollMode">
           <enum>QAbstractItemView::ScrollPerPixel</enum>
          </property>
          <property name="indentation">
-          <number>10</number>
+          <number>14</number>
          </property>
          <property name="rootIsDecorated">
           <bool>true</bool>
@@ -171,24 +235,32 @@ p, li { white-space: pre-wrap; }
          <property name="animated">
           <bool>true</bool>
          </property>
+         <property name="columnCount">
+          <number>2</number>
+         </property>
          <attribute name="headerVisible">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="headerCascadingSectionResizes">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="headerDefaultSectionSize">
+          <number>230</number>
+         </attribute>
+         <attribute name="headerHighlightSections">
+          <bool>false</bool>
+         </attribute>
+         <attribute name="headerShowSortIndicator" stdset="0">
           <bool>false</bool>
          </attribute>
          <column>
           <property name="text">
            <string>Specifics</string>
           </property>
-          <property name="font">
-           <font>
-            <pointsize>11</pointsize>
-           </font>
-          </property>
-          <property name="background">
-           <color>
-            <red>209</red>
-            <green>226</green>
-            <blue>209</blue>
-           </color>
+         </column>
+         <column>
+          <property name="text">
+           <string>Add</string>
           </property>
          </column>
          <item>
@@ -220,6 +292,16 @@ p, li { white-space: pre-wrap; }
             </color>
            </brush>
           </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
+          </property>
+          <property name="flags">
+           <set>ItemIsSelectable|ItemIsEnabled</set>
+          </property>
           <item>
            <property name="text">
             <string>t</string>
@@ -243,6 +325,16 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonPinkRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonPinkPressed.png</normalon>:/graphics/graphics/ButtonPinkRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
+           <property name="flags">
+            <set>ItemIsSelectable|ItemIsDragEnabled|ItemIsDropEnabled|ItemIsUserCheckable</set>
+           </property>
           </item>
          </item>
          <item>
@@ -264,6 +356,13 @@ p, li { white-space: pre-wrap; }
              <blue>24</blue>
             </color>
            </brush>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
           </property>
           <item>
            <property name="text">
@@ -288,6 +387,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/buttonRedRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonRedPressed.png</normalon>:/graphics/graphics/buttonRedRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
          </item>
          <item>
@@ -309,6 +415,13 @@ p, li { white-space: pre-wrap; }
              <blue>1</blue>
             </color>
            </brush>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
           </property>
           <item>
            <property name="text">
@@ -332,6 +445,13 @@ p, li { white-space: pre-wrap; }
             <iconset theme="Orange" resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -357,6 +477,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -380,6 +507,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -405,6 +539,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -428,6 +569,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -453,6 +601,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -476,6 +631,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -501,6 +663,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -524,6 +693,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -549,6 +725,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonOrangeRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonOrangePressed.png</normalon>:/graphics/graphics/ButtonOrangeRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
          </item>
          <item>
@@ -570,6 +753,13 @@ p, li { white-space: pre-wrap; }
              <blue>159</blue>
             </color>
            </brush>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
           </property>
           <item>
            <property name="text">
@@ -594,6 +784,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonDarkPurpleRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonDarkPurplePressed.png</normalon>:/graphics/graphics/ButtonDarkPurpleRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
          </item>
          <item>
@@ -613,6 +810,13 @@ p, li { white-space: pre-wrap; }
              <blue>198</blue>
             </color>
            </brush>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
           </property>
           <item>
            <property name="text">
@@ -636,6 +840,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -661,6 +872,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -684,6 +902,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -709,6 +934,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -732,6 +964,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -757,6 +996,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -781,6 +1027,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/BlueButtonRaised.png</normaloff>
              <normalon>:/graphics/graphics/BlueButtonPushed.png</normalon>:/graphics/graphics/BlueButtonRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
          </item>
          <item>
@@ -802,6 +1055,13 @@ p, li { white-space: pre-wrap; }
              <blue>60</blue>
             </color>
            </brush>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+          <property name="icon">
+           <iconset resource="../resources/resources.qrc">
+            <normaloff>:/graphics/graphics/addBlue.png</normaloff>:/graphics/graphics/addBlue.png</iconset>
           </property>
           <item>
            <property name="text">
@@ -825,6 +1085,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonGreenRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonGreenPressed.png</normalon>:/graphics/graphics/ButtonGreenRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -850,6 +1117,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonGreenRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonGreenPressed.png</normalon>:/graphics/graphics/ButtonGreenRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -873,6 +1147,13 @@ p, li { white-space: pre-wrap; }
             <iconset resource="../resources/resources.qrc">
              <normaloff>:/graphics/graphics/ButtonGreenRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonGreenPressed.png</normalon>:/graphics/graphics/ButtonGreenRaised.png</iconset>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
            </property>
           </item>
           <item>
@@ -898,6 +1179,13 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonGreenRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonGreenPressed.png</normalon>:/graphics/graphics/ButtonGreenRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
           <item>
            <property name="text">
@@ -922,12 +1210,19 @@ p, li { white-space: pre-wrap; }
              <normaloff>:/graphics/graphics/ButtonGreenRaised.png</normaloff>
              <normalon>:/graphics/graphics/ButtonGreenPressed.png</normalon>:/graphics/graphics/ButtonGreenRaised.png</iconset>
            </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="icon">
+            <iconset resource="../resources/resources.qrc">
+             <normaloff>:/graphics/graphics/removeGreen.png</normaloff>:/graphics/graphics/removeGreen.png</iconset>
+           </property>
           </item>
          </item>
         </widget>
        </item>
        <item>
-        <widget class="QGroupBox" name="groupBox_3">
+        <widget class="QGroupBox" name="grbxDetails">
          <property name="title">
           <string/>
          </property>
@@ -936,9 +1231,9 @@ p, li { white-space: pre-wrap; }
          </property>
          <layout class="QVBoxLayout" name="verticalLayout_2">
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout">
+           <layout class="QHBoxLayout" name="horizontalLayoutName">
             <item>
-             <widget class="QLabel" name="label_4">
+             <widget class="QLabel" name="lblName">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Fixed" vsizetype="Preferred">
                 <horstretch>0</horstretch>
@@ -954,12 +1249,12 @@ p, li { white-space: pre-wrap; }
                <string>Name</string>
               </property>
               <property name="buddy">
-               <cstring>lineEdit_4</cstring>
+               <cstring>ledName</cstring>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_4">
+             <widget class="QLineEdit" name="ledName">
               <property name="sizePolicy">
                <sizepolicy hsizetype="Expanding" vsizetype="Fixed">
                 <horstretch>4</horstretch>
@@ -971,9 +1266,9 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_2">
+           <layout class="QHBoxLayout" name="horizontalLayoutUnit">
             <item>
-             <widget class="QLabel" name="label_3">
+             <widget class="QLabel" name="lblUnit">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -983,12 +1278,12 @@ p, li { white-space: pre-wrap; }
                <string>Unit</string>
               </property>
               <property name="buddy">
-               <cstring>lineEdit_3</cstring>
+               <cstring>ledUnit</cstring>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_3">
+             <widget class="QLineEdit" name="ledUnit">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -997,7 +1292,7 @@ p, li { white-space: pre-wrap; }
              </widget>
             </item>
             <item>
-             <widget class="QLabel" name="label_5">
+             <widget class="QLabel" name="lblStatusIcon">
               <property name="maximumSize">
                <size>
                 <width>20</width>
@@ -1020,7 +1315,7 @@ p, li { white-space: pre-wrap; }
           <item>
            <layout class="QHBoxLayout" name="horizontalLayout_3">
             <item>
-             <widget class="QLabel" name="label">
+             <widget class="QLabel" name="lblInitialValue">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -1030,12 +1325,12 @@ p, li { white-space: pre-wrap; }
                <string>Initial Value</string>
               </property>
               <property name="buddy">
-               <cstring>lineEdit</cstring>
+               <cstring>ledInitialValue</cstring>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit">
+             <widget class="QLineEdit" name="ledInitialValue">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -1046,9 +1341,9 @@ p, li { white-space: pre-wrap; }
            </layout>
           </item>
           <item>
-           <layout class="QHBoxLayout" name="horizontalLayout_4">
+           <layout class="QHBoxLayout" name="horizontalLayoutDescription">
             <item>
-             <widget class="QLabel" name="label_2">
+             <widget class="QLabel" name="lblDescription">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>
@@ -1058,12 +1353,12 @@ p, li { white-space: pre-wrap; }
                <string>Description</string>
               </property>
               <property name="buddy">
-               <cstring>lineEdit_2</cstring>
+               <cstring>ledDescription</cstring>
               </property>
              </widget>
             </item>
             <item>
-             <widget class="QLineEdit" name="lineEdit_2">
+             <widget class="QLineEdit" name="ledDescription">
               <property name="font">
                <font>
                 <pointsize>11</pointsize>

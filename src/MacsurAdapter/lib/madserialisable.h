@@ -50,47 +50,44 @@ class QString;
 class MadSerialisable
 {
 public:    
-    /**
-     * @brief MadSerialisable Constructor
-     */
-    MadSerialisable();
+  /**
+    * @brief MadSerialisable Constructor
+    */
+  MadSerialisable();
 
-    /** Desctructor . */
-    //virtual ~MadSerialisable();
+  /**
+    * @brief toXml
+    * Write this object to xml and return result as qstring (virtual)
+    * @return
+    */
+  virtual QString toXml()=0;
 
-    /**
-     * @brief toXml
-     * Write this object to xml and return result as qstring (virtual)
-     * @return
-     */
-    virtual QString toXml()=0;
+  /**
+    * @brief toXmlFile writes object to xml and return result (virtual qstring)
+    * We provide a basic default implementation where given a file name,
+    * we will write the serialised xml to that file.
+    * Internally it uses toXml() method so that must be properly implemented.
+    * @see toXml()
+    * @param theFileName
+    * @return QString (virtual)
+    */
+  virtual bool toXmlFile(const QString theFileName);
 
-    /**
-     * @brief toXmlFile writes object to xml and return result (virtual qstring)
-     * We provide a basic default implementation where given a file name,
-     * we will write the serialised xml to that file.
-     * Internally it uses toXml() method so that must be properly implemented.
-     * @see toXml()
-     * @param theFileName
-     * @return QString (virtual)
-     */
-    virtual bool toXmlFile(const QString theFileName);
+  /**
+    * @brief fromXml Read this object from xml
+    * @param theXml
+    * @return result as true for success, false for failure (virtual)
+    */
+  virtual bool fromXml(const QString theXml)=0;
 
-    /**
-     * @brief fromXml Read this object from xml
-     * @param theXml
-     * @return result as true for success, false for failure (virtual)
-     */
-    virtual bool fromXml(const QString theXml)=0;
-
-    /**
-     * @brief fromXmlFile Read this object from xml in a file
-     * @see fromXmlFile()
-     * Internally it uses fromXml(QString) so that must be properly implemented
-     * @param theFileName
-     * @return result as true for success, false for failure.
-     */
-    virtual bool fromXmlFile(const QString theFileName);
+  /**
+    * @brief fromXmlFile Read this object from xml in a file
+    * @see fromXmlFile()
+    * Internally it uses fromXml(QString) so that must be properly implemented
+    * @param theFileName
+    * @return result as true for success, false for failure.
+    */
+  virtual bool fromXmlFile(const QString theFileName);
 };
 
 #endif // MADSERIALISABLE_H

@@ -36,7 +36,6 @@
 #include "gui/madmodelmanager.h"
 #include "lib/madutils.h"
 
-
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
 {

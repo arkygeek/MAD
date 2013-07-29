@@ -1,7 +1,7 @@
 /********************************************************************************
 ** Form generated from reading UI file 'madvariablemanagerbase.ui'
 **
-** Created: Thu Jul 11 06:58:33 2013
+** Created: Mon Jul 29 13:52:28 2013
 **      by: Qt User Interface Compiler version 4.8.4
 **
 ** WARNING! All changes made in this file will be lost when recompiling UI file!
@@ -14,18 +14,23 @@
 #include <QtGui/QAction>
 #include <QtGui/QApplication>
 #include <QtGui/QButtonGroup>
+#include <QtGui/QCheckBox>
 #include <QtGui/QComboBox>
 #include <QtGui/QDialog>
 #include <QtGui/QDialogButtonBox>
 #include <QtGui/QGridLayout>
+#include <QtGui/QHBoxLayout>
 #include <QtGui/QHeaderView>
 #include <QtGui/QLabel>
 #include <QtGui/QLineEdit>
 #include <QtGui/QPushButton>
+#include <QtGui/QSpacerItem>
+#include <QtGui/QSplitter>
 #include <QtGui/QTabWidget>
 #include <QtGui/QTableView>
 #include <QtGui/QTextBrowser>
 #include <QtGui/QToolBox>
+#include <QtGui/QTreeView>
 #include <QtGui/QWidget>
 
 QT_BEGIN_NAMESPACE
@@ -39,12 +44,26 @@ public:
     QTabWidget *tabWidget;
     QWidget *tabExplore;
     QGridLayout *gridLayout_3;
-    QComboBox *cbSelectColumn;
-    QPushButton *pbKeywordFilter;
-    QComboBox *cbSelectFilter;
-    QLineEdit *ledKeyword;
-    QComboBox *cbSelectFile;
-    QTableView *tbvwExplore;
+    QSpacerItem *verticalSpacerExplore;
+    QComboBox *cbExploreFilterColumn;
+    QSplitter *splitter;
+    QTableView *tblvwFullDataSetExplore;
+    QTreeView *trvwFilteredDataSetExplore;
+    QPushButton *pbDisplayData;
+    QLabel *lblExploreFilterSyntax;
+    QComboBox *cbExploreSelectHeader;
+    QPushButton *pbDisplayHeaders;
+    QLabel *lblExploreFilterPattern;
+    QComboBox *cbExploreFilterSyntax;
+    QCheckBox *chbxExploreCaseSensFilter;
+    QCheckBox *chbxExploreCaseSensSorting;
+    QComboBox *cbExploreSelectFile;
+    QHBoxLayout *horizontalLayoutExplore;
+    QLineEdit *ledExploreHeaderChar;
+    QPushButton *pbExploreSetHeaderChar;
+    QSpacerItem *horizontalSpacerExplore;
+    QLineEdit *ledFilterPattern;
+    QLabel *lblExploreFilterColumn;
     QWidget *tabMgmtInfo;
     QGridLayout *gridLayout_2;
     QPushButton *pbSearchMgmtInfoTab;
@@ -66,7 +85,7 @@ public:
     {
         if (MadVariableManager->objectName().isEmpty())
             MadVariableManager->setObjectName(QString::fromUtf8("MadVariableManager"));
-        MadVariableManager->resize(641, 429);
+        MadVariableManager->resize(844, 631);
         gridLayout = new QGridLayout(MadVariableManager);
         gridLayout->setObjectName(QString::fromUtf8("gridLayout"));
         lblListUpdated = new QLabel(MadVariableManager);
@@ -91,35 +110,113 @@ public:
         tabExplore->setObjectName(QString::fromUtf8("tabExplore"));
         gridLayout_3 = new QGridLayout(tabExplore);
         gridLayout_3->setObjectName(QString::fromUtf8("gridLayout_3"));
-        cbSelectColumn = new QComboBox(tabExplore);
-        cbSelectColumn->setObjectName(QString::fromUtf8("cbSelectColumn"));
+        verticalSpacerExplore = new QSpacerItem(20, 40, QSizePolicy::Minimum, QSizePolicy::Expanding);
 
-        gridLayout_3->addWidget(cbSelectColumn, 0, 1, 1, 1);
+        gridLayout_3->addItem(verticalSpacerExplore, 3, 3, 1, 1);
 
-        pbKeywordFilter = new QPushButton(tabExplore);
-        pbKeywordFilter->setObjectName(QString::fromUtf8("pbKeywordFilter"));
+        cbExploreFilterColumn = new QComboBox(tabExplore);
+        cbExploreFilterColumn->setObjectName(QString::fromUtf8("cbExploreFilterColumn"));
 
-        gridLayout_3->addWidget(pbKeywordFilter, 1, 2, 1, 1);
+        gridLayout_3->addWidget(cbExploreFilterColumn, 11, 3, 1, 1);
 
-        cbSelectFilter = new QComboBox(tabExplore);
-        cbSelectFilter->setObjectName(QString::fromUtf8("cbSelectFilter"));
+        splitter = new QSplitter(tabExplore);
+        splitter->setObjectName(QString::fromUtf8("splitter"));
+        splitter->setOrientation(Qt::Vertical);
+        tblvwFullDataSetExplore = new QTableView(splitter);
+        tblvwFullDataSetExplore->setObjectName(QString::fromUtf8("tblvwFullDataSetExplore"));
+        splitter->addWidget(tblvwFullDataSetExplore);
+        trvwFilteredDataSetExplore = new QTreeView(splitter);
+        trvwFilteredDataSetExplore->setObjectName(QString::fromUtf8("trvwFilteredDataSetExplore"));
+        splitter->addWidget(trvwFilteredDataSetExplore);
 
-        gridLayout_3->addWidget(cbSelectFilter, 0, 2, 1, 1);
+        gridLayout_3->addWidget(splitter, 1, 0, 14, 3);
 
-        ledKeyword = new QLineEdit(tabExplore);
-        ledKeyword->setObjectName(QString::fromUtf8("ledKeyword"));
+        pbDisplayData = new QPushButton(tabExplore);
+        pbDisplayData->setObjectName(QString::fromUtf8("pbDisplayData"));
 
-        gridLayout_3->addWidget(ledKeyword, 1, 0, 1, 2);
+        gridLayout_3->addWidget(pbDisplayData, 2, 3, 1, 1);
 
-        cbSelectFile = new QComboBox(tabExplore);
-        cbSelectFile->setObjectName(QString::fromUtf8("cbSelectFile"));
+        lblExploreFilterSyntax = new QLabel(tabExplore);
+        lblExploreFilterSyntax->setObjectName(QString::fromUtf8("lblExploreFilterSyntax"));
 
-        gridLayout_3->addWidget(cbSelectFile, 0, 0, 1, 1);
+        gridLayout_3->addWidget(lblExploreFilterSyntax, 7, 3, 1, 1);
 
-        tbvwExplore = new QTableView(tabExplore);
-        tbvwExplore->setObjectName(QString::fromUtf8("tbvwExplore"));
+        cbExploreSelectHeader = new QComboBox(tabExplore);
+        cbExploreSelectHeader->setObjectName(QString::fromUtf8("cbExploreSelectHeader"));
 
-        gridLayout_3->addWidget(tbvwExplore, 2, 0, 1, 3);
+        gridLayout_3->addWidget(cbExploreSelectHeader, 0, 3, 1, 1);
+
+        pbDisplayHeaders = new QPushButton(tabExplore);
+        pbDisplayHeaders->setObjectName(QString::fromUtf8("pbDisplayHeaders"));
+
+        gridLayout_3->addWidget(pbDisplayHeaders, 1, 3, 1, 1);
+
+        lblExploreFilterPattern = new QLabel(tabExplore);
+        lblExploreFilterPattern->setObjectName(QString::fromUtf8("lblExploreFilterPattern"));
+
+        gridLayout_3->addWidget(lblExploreFilterPattern, 5, 3, 1, 1);
+
+        cbExploreFilterSyntax = new QComboBox(tabExplore);
+        cbExploreFilterSyntax->setObjectName(QString::fromUtf8("cbExploreFilterSyntax"));
+
+        gridLayout_3->addWidget(cbExploreFilterSyntax, 8, 3, 1, 1);
+
+        chbxExploreCaseSensFilter = new QCheckBox(tabExplore);
+        chbxExploreCaseSensFilter->setObjectName(QString::fromUtf8("chbxExploreCaseSensFilter"));
+        chbxExploreCaseSensFilter->setChecked(true);
+
+        gridLayout_3->addWidget(chbxExploreCaseSensFilter, 12, 3, 1, 1);
+
+        chbxExploreCaseSensSorting = new QCheckBox(tabExplore);
+        chbxExploreCaseSensSorting->setObjectName(QString::fromUtf8("chbxExploreCaseSensSorting"));
+        chbxExploreCaseSensSorting->setChecked(true);
+
+        gridLayout_3->addWidget(chbxExploreCaseSensSorting, 13, 3, 1, 1);
+
+        cbExploreSelectFile = new QComboBox(tabExplore);
+        cbExploreSelectFile->setObjectName(QString::fromUtf8("cbExploreSelectFile"));
+
+        gridLayout_3->addWidget(cbExploreSelectFile, 0, 0, 1, 1);
+
+        horizontalLayoutExplore = new QHBoxLayout();
+        horizontalLayoutExplore->setObjectName(QString::fromUtf8("horizontalLayoutExplore"));
+        ledExploreHeaderChar = new QLineEdit(tabExplore);
+        ledExploreHeaderChar->setObjectName(QString::fromUtf8("ledExploreHeaderChar"));
+        QSizePolicy sizePolicy(QSizePolicy::Fixed, QSizePolicy::Fixed);
+        sizePolicy.setHorizontalStretch(0);
+        sizePolicy.setVerticalStretch(0);
+        sizePolicy.setHeightForWidth(ledExploreHeaderChar->sizePolicy().hasHeightForWidth());
+        ledExploreHeaderChar->setSizePolicy(sizePolicy);
+        ledExploreHeaderChar->setMaximumSize(QSize(40, 16777215));
+
+        horizontalLayoutExplore->addWidget(ledExploreHeaderChar);
+
+        pbExploreSetHeaderChar = new QPushButton(tabExplore);
+        pbExploreSetHeaderChar->setObjectName(QString::fromUtf8("pbExploreSetHeaderChar"));
+
+        horizontalLayoutExplore->addWidget(pbExploreSetHeaderChar);
+
+        horizontalSpacerExplore = new QSpacerItem(40, 20, QSizePolicy::Expanding, QSizePolicy::Minimum);
+
+        horizontalLayoutExplore->addItem(horizontalSpacerExplore);
+
+
+        gridLayout_3->addLayout(horizontalLayoutExplore, 0, 1, 1, 1);
+
+        ledFilterPattern = new QLineEdit(tabExplore);
+        ledFilterPattern->setObjectName(QString::fromUtf8("ledFilterPattern"));
+        QSizePolicy sizePolicy1(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        sizePolicy1.setHorizontalStretch(0);
+        sizePolicy1.setVerticalStretch(0);
+        sizePolicy1.setHeightForWidth(ledFilterPattern->sizePolicy().hasHeightForWidth());
+        ledFilterPattern->setSizePolicy(sizePolicy1);
+
+        gridLayout_3->addWidget(ledFilterPattern, 6, 3, 1, 1);
+
+        lblExploreFilterColumn = new QLabel(tabExplore);
+        lblExploreFilterColumn->setObjectName(QString::fromUtf8("lblExploreFilterColumn"));
+
+        gridLayout_3->addWidget(lblExploreFilterColumn, 10, 3, 1, 1);
 
         tabWidget->addTab(tabExplore, QString());
         tabMgmtInfo = new QWidget();
@@ -186,6 +283,11 @@ public:
 
         gridLayout->addWidget(tabWidget, 0, 0, 1, 2);
 
+#ifndef QT_NO_SHORTCUT
+        lblExploreFilterSyntax->setBuddy(cbExploreFilterSyntax);
+        lblExploreFilterPattern->setBuddy(ledFilterPattern);
+        lblExploreFilterColumn->setBuddy(cbExploreFilterColumn);
+#endif // QT_NO_SHORTCUT
 
         retranslateUi(MadVariableManager);
         QObject::connect(buttonBox, SIGNAL(accepted()), MadVariableManager, SLOT(accept()));
@@ -203,17 +305,30 @@ public:
     {
         MadVariableManager->setWindowTitle(QApplication::translate("MadVariableManager", "Dialog", 0, QApplication::UnicodeUTF8));
         lblListUpdated->setText(QApplication::translate("MadVariableManager", "ICASA Variable list last updated 19-June-2013", 0, QApplication::UnicodeUTF8));
-        cbSelectColumn->clear();
-        cbSelectColumn->insertItems(0, QStringList()
-         << QApplication::translate("MadVariableManager", "Select Column", 0, QApplication::UnicodeUTF8)
+#ifndef QT_NO_TOOLTIP
+        tblvwFullDataSetExplore->setToolTip(QApplication::translate("MadVariableManager", "<html><head/><body><p>Complete data set</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+#ifndef QT_NO_TOOLTIP
+        trvwFilteredDataSetExplore->setToolTip(QApplication::translate("MadVariableManager", "<html><head/><body><p>Sorted/Filtered data set</p></body></html>", 0, QApplication::UnicodeUTF8));
+#endif // QT_NO_TOOLTIP
+        pbDisplayData->setText(QApplication::translate("MadVariableManager", "Display Data", 0, QApplication::UnicodeUTF8));
+        lblExploreFilterSyntax->setText(QApplication::translate("MadVariableManager", "Filter Syntax:", 0, QApplication::UnicodeUTF8));
+        cbExploreSelectHeader->clear();
+        cbExploreSelectHeader->insertItems(0, QStringList()
+         << QApplication::translate("MadVariableManager", "Select Header", 0, QApplication::UnicodeUTF8)
         );
-        pbKeywordFilter->setText(QApplication::translate("MadVariableManager", "Keyword Filter", 0, QApplication::UnicodeUTF8));
-        cbSelectFilter->clear();
-        cbSelectFilter->insertItems(0, QStringList()
-         << QApplication::translate("MadVariableManager", "Select Filter", 0, QApplication::UnicodeUTF8)
+        pbDisplayHeaders->setText(QApplication::translate("MadVariableManager", "Display Headers", 0, QApplication::UnicodeUTF8));
+        lblExploreFilterPattern->setText(QApplication::translate("MadVariableManager", "Filter Pattern:", 0, QApplication::UnicodeUTF8));
+        cbExploreFilterSyntax->clear();
+        cbExploreFilterSyntax->insertItems(0, QStringList()
+         << QApplication::translate("MadVariableManager", "Regular Expression", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadVariableManager", "Wildcard", 0, QApplication::UnicodeUTF8)
+         << QApplication::translate("MadVariableManager", "Fixed String", 0, QApplication::UnicodeUTF8)
         );
-        cbSelectFile->clear();
-        cbSelectFile->insertItems(0, QStringList()
+        chbxExploreCaseSensFilter->setText(QApplication::translate("MadVariableManager", "Case Sensitive Filter", 0, QApplication::UnicodeUTF8));
+        chbxExploreCaseSensSorting->setText(QApplication::translate("MadVariableManager", "Case Sensitive Sorting", 0, QApplication::UnicodeUTF8));
+        cbExploreSelectFile->clear();
+        cbExploreSelectFile->insertItems(0, QStringList()
          << QApplication::translate("MadVariableManager", "Select File", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadVariableManager", "management_info.csv", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadVariableManager", "measured_data.csv", 0, QApplication::UnicodeUTF8)
@@ -225,6 +340,9 @@ public:
          << QApplication::translate("MadVariableManager", "other_codes.csv", 0, QApplication::UnicodeUTF8)
          << QApplication::translate("MadVariableManager", "pest_codes.csv", 0, QApplication::UnicodeUTF8)
         );
+        pbExploreSetHeaderChar->setText(QApplication::translate("MadVariableManager", "Set Header Char", 0, QApplication::UnicodeUTF8));
+        ledFilterPattern->setText(QString());
+        lblExploreFilterColumn->setText(QApplication::translate("MadVariableManager", "Filter Column:", 0, QApplication::UnicodeUTF8));
         tabWidget->setTabText(tabWidget->indexOf(tabExplore), QApplication::translate("MadVariableManager", "Explore", 0, QApplication::UnicodeUTF8));
         pbSearchMgmtInfoTab->setText(QApplication::translate("MadVariableManager", "Search", 0, QApplication::UnicodeUTF8));
         lblEnterText->setText(QApplication::translate("MadVariableManager", "Enter Text", 0, QApplication::UnicodeUTF8));

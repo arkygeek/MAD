@@ -75,7 +75,8 @@ HEADERS  += madmainwindow.h \
     gui/madlogindialog.h \
     gui/madvariablemanager.h \
     gui/madcsvreader.h \
-    gui/madmodelmanager.h
+    gui/madmodelmanager.h \
+    lib/overloads.h
 
 
 FORMS    += madmainwindowbase.ui \

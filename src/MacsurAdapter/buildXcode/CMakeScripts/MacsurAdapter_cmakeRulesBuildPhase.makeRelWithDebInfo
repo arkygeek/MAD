@@ -6,12 +6,16 @@ all: \
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_maddataclassificationbase.h\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madtextdisplayformbase.h\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h\
+	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madcsvreaderbase.h\
+	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmodelmanagerbase.h\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/moc_madmainwindow.cxx\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_maddataclassification.cxx\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madtextdisplayform.cxx\
 	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madvariablemanager.cxx\
-	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx
+	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx\
+	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madcsvreader.cxx\
+	/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madmodelmanager.cxx
 
 
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmainwindowbase.h: \
@@ -29,6 +33,14 @@ all: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui
 	/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madvariablemanagerbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madvariablemanagerbase.ui
+
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madcsvreaderbase.h: \
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madcsvreaderbase.ui
+	/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madcsvreaderbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madcsvreaderbase.ui
+
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmodelmanagerbase.h: \
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madmodelmanagerbase.ui
+	/Developer/Tools/Qt/uic -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/ui_madmodelmanagerbase.h /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madmodelmanagerbase.ui
 
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/MADCircle.png\
@@ -90,6 +102,33 @@ all: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/agmip/explanatory_notes.csv\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/agmip/measured_data.csv\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/agmip/management_info.csv\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonDarkPurpleRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonDarkPurplePressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonPinkRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/BlueButtonRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/BlueButtonPushed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonPinkPressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonPurpleRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonPurplePressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonOrangeRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/buttonRedRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/buttonRed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonRedPressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonOrangePressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonGreenRaised.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonGreenPressed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/ButtonPurple.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/books.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/insertLink128.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/insertLink256.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/insertObject.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/functionPurple.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/fewerRed.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/addBlue.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/edit-clear-locationbar-rtl-1.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/removeGreen.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/folders.png\
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/graphics/blocks.png\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/resources/resources.qrc.depends\
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc
 	/Developer/Tools/Qt/rcc -name resources -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/qrc_resources.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/resources/resources.qrc
@@ -113,3 +152,11 @@ all: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx: \
 /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.h
 	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madlogindialog.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madlogindialog.h
+
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madcsvreader.cxx: \
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madcsvreader.h
+	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madcsvreader.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madcsvreader.h
+
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madmodelmanager.cxx: \
+/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madmodelmanager.h
+	/Developer/Tools/Qt/moc -I/usr/include -F/Library/Frameworks -I/Library/Frameworks/QtWebKit.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter -I/Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtCore.framework/Headers -I/Library/Frameworks/QtGui.framework/Headers -I/Library/Frameworks/QtXml.framework/Headers -I/Library/Frameworks/QtWebKit.framework/Headers -DQT_WEBKIT_LIB -DQT_GUI_LIB -DQT_CORE_LIB -o /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/buildXcode/gui/moc_madmodelmanager.cxx /Users/arkygeek/QtProjects/macsur-adapter/src/MacsurAdapter/gui/madmodelmanager.h

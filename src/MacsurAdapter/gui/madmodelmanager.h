@@ -41,6 +41,8 @@ public:
   explicit MadModelManager(QWidget *parent = 0);
   ~MadModelManager();
   
+private slots:
+
 private:
   Ui::MadModelManager *ui;
 };

@@ -1,7 +1,7 @@
 /****************************************************************************
 ** Meta object code from reading C++ file 'madvariablemanager.h'
 **
-** Created: Thu Jul 11 06:58:33 2013
+** Created: Mon Jul 29 13:52:29 2013
 **      by: The Qt Meta Object Compiler version 63 (Qt 4.8.4)
 **
 ** WARNING! All changes made in this file will be lost!
@@ -23,7 +23,7 @@ static const uint qt_meta_data_MadVariableManager[] = {
        6,       // revision
        0,       // classname
        0,    0, // classinfo
-       1,   14, // methods
+       2,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -32,6 +32,7 @@ static const uint qt_meta_data_MadVariableManager[] = {
 
  // slots: signature, parameters, type, tag, flags
       33,   20,   19,   19, 0x08,
+      78,   19,   19,   19, 0x08,
 
        0        // eod
 };
@@ -39,6 +40,7 @@ static const uint qt_meta_data_MadVariableManager[] = {
 static const char qt_meta_stringdata_MadVariableManager[] = {
     "MadVariableManager\0\0theSelection\0"
     "on_cbSelectFile_currentIndexChanged(QString)\0"
+    "on_pbSetHeaderChar_clicked()\0"
 };
 
 void MadVariableManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, void **_a)
@@ -48,6 +50,7 @@ void MadVariableManager::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         MadVariableManager *_t = static_cast<MadVariableManager *>(_o);
         switch (_id) {
         case 0: _t->on_cbSelectFile_currentIndexChanged((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->on_pbSetHeaderChar_clicked(); break;
         default: ;
         }
     }
@@ -85,9 +88,9 @@ int MadVariableManager::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 1)
+        if (_id < 2)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 1;
+        _id -= 2;
     }
     return _id;
 }

@@ -21,31 +21,18 @@
 //Local includes
 #include "madguid.h"
 
-//Qt includes
+// Qt includes
 #include <QUuid>
-
 
 MadGuid::MadGuid()
 {
 }
 
-//MadGuid::~MadGuid() // gives error - improper use of implicitly declared...
-//{
-//}
-
-/**
- * @brief MadGuid::guid
- * @return
- */
 QString MadGuid::guid() const
 {
     return mGuid;
 }
 
-/**
- * @brief MadGuid::setGuid
- * @param theGuid
- */
 void MadGuid::setGuid(QString theGuid)
 {
     if (theGuid.isEmpty())

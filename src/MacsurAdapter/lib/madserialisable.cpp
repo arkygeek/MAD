@@ -17,18 +17,16 @@
  *   along with this program; if not, write to the                         *
  *   Free Software Foundation, Inc.,                                       *
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
- ***************************************************************************/
-
-// adapted from code originally written by Tim Sutton as per below:
-/***************************************************************************
+ ***************************************************************************
+ * adapted from code originally written by Tim Sutton as per below:
+ ***************************************************************************
                           LaSerialisable.cpp  -  description
                              -------------------
     begin                : March 2006
     copyright            : (C) 2003 by Tim Sutton
     email                : tim@linfiniti.com
- ***************************************************************************/
-
-/***************************************************************************
+ ***************************************************************************
+ ***************************************************************************
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
  *   it under the terms of the GNU General Public License as published by  *
@@ -49,10 +47,6 @@
 MadSerialisable::MadSerialisable()
 {
 }
-
-//MadSerialisable::~MadSerialisable()
-//{
-//}
 
 bool MadSerialisable::toXmlFile(const QString theFileName)
 {
