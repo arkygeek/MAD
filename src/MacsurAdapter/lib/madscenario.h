@@ -1,6 +1,6 @@
 /***************************************************************************
- *   File:  overloads.h created: 29/07/2013                                    *
- *   Class info:                                                *
+ *   File:  madscenario.h created: 29/07/2013                                    *
+ *   Class info: MadScenario                                               *
  *   Copyright (C) 2013 by: Jason S. Jorgenson                             *
  *                                                                         *
  *   This program is free software; you can redistribute it and/or modify  *
@@ -19,31 +19,20 @@
  *   59 Temple Place - Suite 330, Boston, MA  02111-1307, USA.             *
  ***************************************************************************/
 
-#ifndef OVERLOADS_H
-#define OVERLOADS_H
+#ifndef MADSCENARIO_H
+#define MADSCENARIO_H
 
-#include "madscenario.h"
-#include <QtCore>
+//Qt includes
+#include <QString>
 
-QDataStream &operator<<(QDataStream &out, const MadScenario &scenario);
-QDataStream &operator>>(QDataStream &in, MadScenario &scenario);
-
-QDataStream &operator<<(QDataStream &out, const MadScenario &scenario)
+class MadScenario
 {
-    //Write a scenario class to the stream
-    out << scenario.Age << scenario.Name << scenario.Sex << scenario.Married;
-    return out;
-}
+public:
+  QString name;
+  QString description;
+  QString organisation;
+  QString mainModel;
 
-QDataStream &operator>>(QDataStream &in, MadScenario &scenario)
-{
-    //Read in a scenario class
-    scenario = MadScenario();
-    in >> scenario.name
-       >> scenario.description
-       >> scenario.organisation
-       >> scenario.mainModel;
-    return in;
-}
+};
 
-#endif // OVERLOADS_H
+#endif // MADSCENARIO_H

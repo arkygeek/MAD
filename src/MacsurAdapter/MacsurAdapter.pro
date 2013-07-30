@@ -44,7 +44,8 @@ SOURCES += main.cpp\
     gui/madlogindialog.cpp \
     gui/madvariablemanager.cpp \
     gui/madcsvreader.cpp \
-    gui/madmodelmanager.cpp
+    gui/madmodelmanager.cpp \
+    lib/madscenario.cpp
 
 
 
@@ -76,7 +77,8 @@ HEADERS  += madmainwindow.h \
     gui/madvariablemanager.h \
     gui/madcsvreader.h \
     gui/madmodelmanager.h \
-    lib/overloads.h
+    lib/overloads.h \
+    lib/madscenario.h
 
 
 FORMS    += madmainwindowbase.ui \

@@ -35,6 +35,7 @@
 #include "gui/madvariablemanager.h"
 #include "gui/madmodelmanager.h"
 #include "lib/madutils.h"
+#include "lib/madscenario.h"
 
 MadMainWindow::MadMainWindow(QWidget *parent) :
     QMainWindow(parent)
